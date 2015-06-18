@@ -1,0 +1,63 @@
+diff --git a/menu_reference/menu_reference.module b/menu_reference/menu_reference.module
+index 1a447e0..65d4bd6 100644
+--- a/drupal/sites/all/modules/contrib/menu_reference/menu_reference.module
++++ b/drupal/sites/all/modules/contrib/menu_reference/menu_reference.module
+@@ -68,7 +68,7 @@ function menu_reference_field_formatter_info() {
+     'menu_reference_links' => array(
+       'label' => t('Rendered links'),
+       'field types' => array('menu_reference_link'),
+-      'settings' => array('link' => TRUE),
++      'settings' => array('link' => TRUE, 'tree' => FALSE),
+     ),
+   );
+ }
+@@ -88,6 +88,11 @@ function menu_reference_field_formatter_settings_form($field, $instance, $view_m
+         '#title' => t('Display menu item as link'),
+         '#default_value' => $settings['link'],
+       );
++      $element['tree'] = array(
++        '#type' => 'checkbox',
++        '#title' => t('Display entire menu tree'),
++        '#default_value' => $settings['tree'],
++      );
+ 
+       break;
+   }
+@@ -104,11 +109,12 @@ function menu_reference_field_formatter_settings_summary($field, $instance, $vie
+ 
+   switch ($display['type']) {
+     case 'menu_reference_links':
++      $menu_type = ($settings['tree']) ? 'trees' : 'items';
+       if ($settings['link']) {
+-        $summary = t('Menu items displayed as links.');
++        $summary = t('Menu ' . $menu_type . ' displayed as links.');
+       }
+       else {
+-        $summary = t('Menu items displayed as plain text.');
++        $summary = t('Menu ' . $menu_type . ' displayed as plain text.');
+       }
+       break;
+   }
+@@ -129,7 +135,21 @@ function menu_reference_field_formatter_view($entity_type, $entity, $field, $ins
+     case 'menu_reference_links':
+       foreach ($items as $delta => $item) {
+         $menu_link = menu_link_load($item['mlid']);
+-        $element[$delta]['#markup'] = $settings['link'] ? l($menu_link['title'], $menu_link['href'], $menu_link['options']) : check_plain($menu_link['title']);
++        if ($settings['tree']) {
++          // Output the entire menu tree.
++          $menu_tree = menu_tree_all_data($menu_link['menu_name'], $menu_link);
++          foreach ($menu_tree as $key => &$menu_item) {
++            if ($menu_item['link']['mlid'] != $item['mlid']) {
++              unset($menu_tree[$key]);
++            }
++          }
++          $menu_tree = menu_tree_output($menu_tree);
++          $element[$delta]['#markup'] = drupal_render($menu_tree);
++        }
++        else {
++          // Output the menu item by itself.
++          $element[$delta]['#markup'] = $settings['link'] ? l($menu_link['title'], $menu_link['href'], $menu_link['options']) : check_plain($menu_link['title']);
++        }
+       }
+       break;
+   }
