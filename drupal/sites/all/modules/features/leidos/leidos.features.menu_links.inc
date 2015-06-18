@@ -170,26 +170,6 @@ function leidos_menu_default_menu_links() {
     'weight' => -46,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_search:<nolink>
-  $menu_links['main-menu_search:<nolink>'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => '<nolink>',
-    'router_path' => '<nolink>',
-    'link_title' => 'Search',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Search Leidos.com',
-      ),
-      'identifier' => 'main-menu_search:<nolink>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-  );
   // Exported menu link: menu-engineering-navigation_-about-leidos-engineering:https://www.leidos.com/engineering/about-leidos-engineering
   $menu_links['menu-engineering-navigation_-about-leidos-engineering:https://www.leidos.com/engineering/about-leidos-engineering'] = array(
     'menu_name' => 'menu-engineering-navigation',
@@ -346,7 +326,6 @@ function leidos_menu_default_menu_links() {
   t('National Security');
   t('Newsroom');
   t('Projects');
-  t('Search');
 
 
   return $menu_links;
