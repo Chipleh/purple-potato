@@ -22,6 +22,7 @@ function leidos_field_default_field_instances() {
         'module' => 'menu_reference',
         'settings' => array(
           'link' => 1,
+          'tree' => 1,
         ),
         'type' => 'menu_reference_links',
         'weight' => 0,
@@ -31,6 +32,7 @@ function leidos_field_default_field_instances() {
         'module' => 'menu_reference',
         'settings' => array(
           'link' => 1,
+          'tree' => 1,
         ),
         'type' => 'menu_reference_links',
         'weight' => 0,
