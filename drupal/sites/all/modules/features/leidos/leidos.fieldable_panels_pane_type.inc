@@ -13,6 +13,14 @@ function leidos_default_fieldable_panels_pane_type() {
   $fieldable_panels_pane_type = new stdClass();
   $fieldable_panels_pane_type->disabled = FALSE; /* Edit this to true to make a default fieldable_panels_pane_type disabled initially */
   $fieldable_panels_pane_type->api_version = 1;
+  $fieldable_panels_pane_type->name = 'custom_breadcrumbs';
+  $fieldable_panels_pane_type->title = 'Custom Breadcrumbs';
+  $fieldable_panels_pane_type->description = '';
+  $export['custom_breadcrumbs'] = $fieldable_panels_pane_type;
+
+  $fieldable_panels_pane_type = new stdClass();
+  $fieldable_panels_pane_type->disabled = FALSE; /* Edit this to true to make a default fieldable_panels_pane_type disabled initially */
+  $fieldable_panels_pane_type->api_version = 1;
   $fieldable_panels_pane_type->name = 'elements_panel_pane';
   $fieldable_panels_pane_type->title = 'Elements Panel Pane';
   $fieldable_panels_pane_type->description = '';
