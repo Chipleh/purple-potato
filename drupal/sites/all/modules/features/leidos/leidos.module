@@ -5,3 +5,14 @@
  */
 
 include_once 'leidos.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ */
+function leidos_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['#entity_type']) && $form['#entity_type'] == 'fieldable_panels_pane') {
+    // Hide some unnecessary fields that clutter the IPE user interface.
+    $form['link']['#access'] = FALSE;
+    $form['view_mode']['#access'] = FALSE;
+  }
+}
