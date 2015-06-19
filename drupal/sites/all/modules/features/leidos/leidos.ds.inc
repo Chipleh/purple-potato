@@ -71,6 +71,69 @@ function leidos_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'field_collection_item|field_columns_list|default';
+  $ds_layout->entity_type = 'field_collection_item';
+  $ds_layout->bundle = 'field_columns_list';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_title_link',
+        1 => 'field_list_items',
+        2 => 'field_cta',
+      ),
+    ),
+    'fields' => array(
+      'field_title_link' => 'ds_content',
+      'field_list_items' => 'ds_content',
+      'field_cta' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['field_collection_item|field_columns_list|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'field_collection_item|field_columns_list|full';
+  $ds_layout->entity_type = 'field_collection_item';
+  $ds_layout->bundle = 'field_columns_list';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_title_link',
+        1 => 'field_list_items',
+        2 => 'field_cta',
+      ),
+    ),
+    'fields' => array(
+      'field_title_link' => 'ds_content',
+      'field_list_items' => 'ds_content',
+      'field_cta' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['field_collection_item|field_columns_list|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'field_collection_item|field_columns|default';
   $ds_layout->entity_type = 'field_collection_item';
   $ds_layout->bundle = 'field_columns';
@@ -239,6 +302,65 @@ function leidos_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['fieldable_panels_pane|link_columns|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'fieldable_panels_pane|list_columns|default';
+  $ds_layout->entity_type = 'fieldable_panels_pane';
+  $ds_layout->bundle = 'list_columns';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_columns_list',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'field_columns_list' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['fieldable_panels_pane|list_columns|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'fieldable_panels_pane|list_columns|full';
+  $ds_layout->entity_type = 'fieldable_panels_pane';
+  $ds_layout->bundle = 'list_columns';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_columns_list',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'field_columns_list' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['fieldable_panels_pane|list_columns|full'] = $ds_layout;
 
   return $export;
 }
