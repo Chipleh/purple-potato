@@ -13,17 +13,17 @@ function leidos_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_general|fieldable_panels_pane|custom_breadcrumbs|form';
+  $field_group->identifier = 'group_general|fieldable_panels_pane|content|form';
   $field_group->group_name = 'group_general';
   $field_group->entity_type = 'fieldable_panels_pane';
-  $field_group->bundle = 'custom_breadcrumbs';
+  $field_group->bundle = 'content';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'General info',
+    'label' => 'General Info',
     'weight' => '0',
     'children' => array(
-      0 => 'field_breadcrumb_link',
+      0 => 'field_freeform_html',
       1 => 'title',
     ),
     'format_type' => 'tab',
@@ -34,6 +34,35 @@ function leidos_field_group_info() {
         'classes' => 'group-general field-group-tab',
         'required_fields' => 1,
       ),
+    ),
+  );
+  $export['group_general|fieldable_panels_pane|content|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_general|fieldable_panels_pane|custom_breadcrumbs|form';
+  $field_group->group_name = 'group_general';
+  $field_group->entity_type = 'fieldable_panels_pane';
+  $field_group->bundle = 'custom_breadcrumbs';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Info',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_breadcrumb_link',
+      1 => 'title',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'label' => 'General Info',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-general field-group-tab',
+        'description' => '',
+      ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_general|fieldable_panels_pane|custom_breadcrumbs|form'] = $field_group;
@@ -65,6 +94,34 @@ function leidos_field_group_info() {
     ),
   );
   $export['group_general|fieldable_panels_pane|elements_panel_pane|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_general|fieldable_panels_pane|featured_news_panel|form';
+  $field_group->group_name = 'group_general';
+  $field_group->entity_type = 'fieldable_panels_pane';
+  $field_group->bundle = 'featured_news_panel';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Info',
+    'weight' => '0',
+    'children' => array(
+      0 => 'title',
+      1 => 'field_announcement_summary',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-general field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_general|fieldable_panels_pane|featured_news_panel|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -149,6 +206,115 @@ function leidos_field_group_info() {
     ),
   );
   $export['group_general|fieldable_panels_pane|list_columns|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_general|fieldable_panels_pane|page_header|form';
+  $field_group->group_name = 'group_general';
+  $field_group->entity_type = 'fieldable_panels_pane';
+  $field_group->bundle = 'page_header';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Info',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_summary',
+      1 => 'field_summary_cta',
+      2 => 'title',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-general field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_general|fieldable_panels_pane|page_header|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_general|node|project|form';
+  $field_group->group_name = 'group_general';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'project';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Info',
+    'weight' => '7',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_title_override',
+      2 => 'field_customer_name',
+      3 => 'field_intro_text',
+      4 => 'field_project_facts',
+      5 => 'field_quick_links',
+      6 => 'field_industry_rankings_awards',
+      7 => 'field_main_image',
+      8 => 'field_overview',
+      9 => 'field_project_image',
+      10 => 'field_image_description',
+      11 => 'field_featured',
+      12 => 'field_market',
+      13 => 'field_capabilities',
+      14 => 'field_point_of_contact',
+      15 => 'field_project_value',
+      16 => 'field_google_earth_link',
+      17 => 'field_contact_us',
+      18 => 'field_tags',
+      19 => 'field_lower_body_text',
+      20 => 'field_proof_point',
+      21 => 'field_overview_header',
+      22 => 'field_private_tag',
+      23 => 'field_project_date',
+      24 => 'title',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-general field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_general|node|project|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_hover|node|project|form';
+  $field_group->group_name = 'group_hover';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'project';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Hover Information',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_hover_title',
+      1 => 'field_hover_summary',
+      2 => 'field_hover_cta',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-hover field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_hover|node|project|form'] = $field_group;
 
   return $export;
 }

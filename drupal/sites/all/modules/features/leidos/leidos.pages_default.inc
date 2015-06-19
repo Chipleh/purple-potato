@@ -97,6 +97,54 @@ function leidos_default_page_manager_pages() {
     $display->content['new-83c04a74-92c0-4ef5-b028-84b06cc8d508'] = $pane;
     $display->panels['left_rail'][0] = 'new-83c04a74-92c0-4ef5-b028-84b06cc8d508';
     $pane = new stdClass();
+    $pane->pid = 'new-70cdf50f-bf78-45e5-b123-d13d9502310e';
+    $pane->panel = 'optional_inner_right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'announcements-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 1,
+      'items_per_page' => '2',
+      'path' => 'http://twitter.com',
+      'override_title' => 1,
+      'override_title_text' => 'NEWS AND EVENTS <a href="http://www.twitter.com">Follow Us On Twitter</a>',
+      'override_title_heading' => 'h2',
+      'link_to_view' => 0,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '70cdf50f-bf78-45e5-b123-d13d9502310e';
+    $display->content['new-70cdf50f-bf78-45e5-b123-d13d9502310e'] = $pane;
+    $display->panels['optional_inner_right_rail'][0] = 'new-70cdf50f-bf78-45e5-b123-d13d9502310e';
+    $pane = new stdClass();
+    $pane->pid = 'new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
+    $pane->panel = 'optional_inner_right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
+    $display->content['new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a'] = $pane;
+    $display->panels['optional_inner_right_rail'][1] = 'new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
+    $pane = new stdClass();
     $pane->pid = 'new-ff9e4b84-368b-44d0-b638-7cb817faa68a';
     $pane->panel = 'optional_rotator';
     $pane->type = 'views';
@@ -131,6 +179,27 @@ function leidos_default_page_manager_pages() {
     $pane->uuid = 'ff9e4b84-368b-44d0-b638-7cb817faa68a';
     $display->content['new-ff9e4b84-368b-44d0-b638-7cb817faa68a'] = $pane;
     $display->panels['optional_rotator'][0] = 'new-ff9e4b84-368b-44d0-b638-7cb817faa68a';
+    $pane = new stdClass();
+    $pane->pid = 'new-c76e9f57-696b-4505-9837-0fd0c9dd58b7';
+    $pane->panel = 'right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c76e9f57-696b-4505-9837-0fd0c9dd58b7';
+    $display->content['new-c76e9f57-696b-4505-9837-0fd0c9dd58b7'] = $pane;
+    $display->panels['right_rail'][0] = 'new-c76e9f57-696b-4505-9837-0fd0c9dd58b7';
     $pane = new stdClass();
     $pane->pid = 'new-0f586632-38d5-4f4d-bf16-d948a05c8fae';
     $pane->panel = 'top_banner';

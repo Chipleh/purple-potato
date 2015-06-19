@@ -5,10 +5,69 @@
  */
 
 /**
+ * Implements hook_ds_field_settings_info().
+ */
+function leidos_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'ds_views|announcements-panel_pane_1-fields|default';
+  $ds_fieldsetting->entity_type = 'ds_views';
+  $ds_fieldsetting->bundle = 'announcements-panel_pane_1-fields';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_announcement_date' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['ds_views|announcements-panel_pane_1-fields|default'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function leidos_ds_layout_settings_info() {
   $export = array();
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'ds_views|announcements-panel_pane_1-fields|default';
+  $ds_layout->entity_type = 'ds_views';
+  $ds_layout->bundle = 'announcements-panel_pane_1-fields';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_announcement_date',
+        1 => 'title',
+      ),
+    ),
+    'fields' => array(
+      'field_announcement_date' => 'ds_content',
+      'title' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['ds_views|announcements-panel_pane_1-fields|default'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
