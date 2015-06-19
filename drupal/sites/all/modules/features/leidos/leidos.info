@@ -61,6 +61,7 @@ features[field_base][] = field_rotator_link
 features[field_base][] = field_text
 features[field_base][] = field_title_link
 features[field_group][] = group_general|fieldable_panels_pane|custom_breadcrumbs|form
+features[field_group][] = group_general|fieldable_panels_pane|elements_panel_pane|form
 features[field_group][] = group_general|fieldable_panels_pane|left_navigation|form
 features[field_group][] = group_general|fieldable_panels_pane|link_columns|form
 features[field_group][] = group_general|fieldable_panels_pane|list_columns|form
