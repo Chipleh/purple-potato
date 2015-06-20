@@ -126,6 +126,34 @@ function leidos_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_general|fieldable_panels_pane|featured_projects_panel|form';
+  $field_group->group_name = 'group_general';
+  $field_group->entity_type = 'fieldable_panels_pane';
+  $field_group->bundle = 'featured_projects_panel';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Info',
+    'weight' => '0',
+    'children' => array(
+      0 => 'title',
+      1 => 'field_project_summary',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-general field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_general|fieldable_panels_pane|featured_projects_panel|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_general|fieldable_panels_pane|left_navigation|form';
   $field_group->group_name = 'group_general';
   $field_group->entity_type = 'fieldable_panels_pane';
@@ -247,7 +275,7 @@ function leidos_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'General Info',
-    'weight' => '7',
+    'weight' => '5',
     'children' => array(
       0 => 'body',
       1 => 'field_title_override',
@@ -298,7 +326,7 @@ function leidos_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Hover Information',
-    'weight' => '8',
+    'weight' => '6',
     'children' => array(
       0 => 'field_hover_title',
       1 => 'field_hover_summary',

@@ -248,10 +248,10 @@ function leidos_strongarm() {
           'weight' => '2',
         ),
         'title' => array(
-          'weight' => '8',
+          'weight' => '20',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'redirect' => array(
           'weight' => '0',

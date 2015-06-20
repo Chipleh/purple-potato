@@ -97,6 +97,54 @@ function leidos_default_page_manager_pages() {
     $display->content['new-83c04a74-92c0-4ef5-b028-84b06cc8d508'] = $pane;
     $display->panels['left_rail'][0] = 'new-83c04a74-92c0-4ef5-b028-84b06cc8d508';
     $pane = new stdClass();
+    $pane->pid = 'new-d20435e0-f9fc-4a3a-ad02-74927f3327b8';
+    $pane->panel = 'optional_inner_right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'projects-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link_to_view' => 0,
+      'more_link' => 0,
+      'items_per_page' => '10',
+      'path' => '',
+      'override_title' => 1,
+      'override_title_text' => 'FEATURED PROJECTS <a href="http://google.com">View All Projects</a>',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd20435e0-f9fc-4a3a-ad02-74927f3327b8';
+    $display->content['new-d20435e0-f9fc-4a3a-ad02-74927f3327b8'] = $pane;
+    $display->panels['optional_inner_right_rail'][0] = 'new-d20435e0-f9fc-4a3a-ad02-74927f3327b8';
+    $pane = new stdClass();
+    $pane->pid = 'new-8c26067a-793d-4e51-b3e0-3ad7f9d606e3';
+    $pane->panel = 'optional_inner_right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '8c26067a-793d-4e51-b3e0-3ad7f9d606e3';
+    $display->content['new-8c26067a-793d-4e51-b3e0-3ad7f9d606e3'] = $pane;
+    $display->panels['optional_inner_right_rail'][1] = 'new-8c26067a-793d-4e51-b3e0-3ad7f9d606e3';
+    $pane = new stdClass();
     $pane->pid = 'new-70cdf50f-bf78-45e5-b123-d13d9502310e';
     $pane->panel = 'optional_inner_right_rail';
     $pane->type = 'views_panes';
@@ -118,11 +166,11 @@ function leidos_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '70cdf50f-bf78-45e5-b123-d13d9502310e';
     $display->content['new-70cdf50f-bf78-45e5-b123-d13d9502310e'] = $pane;
-    $display->panels['optional_inner_right_rail'][0] = 'new-70cdf50f-bf78-45e5-b123-d13d9502310e';
+    $display->panels['optional_inner_right_rail'][2] = 'new-70cdf50f-bf78-45e5-b123-d13d9502310e';
     $pane = new stdClass();
     $pane->pid = 'new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
     $pane->panel = 'optional_inner_right_rail';
@@ -139,11 +187,11 @@ function leidos_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
     $display->content['new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a'] = $pane;
-    $display->panels['optional_inner_right_rail'][1] = 'new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
+    $display->panels['optional_inner_right_rail'][3] = 'new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
     $pane = new stdClass();
     $pane->pid = 'new-ff9e4b84-368b-44d0-b638-7cb817faa68a';
     $pane->panel = 'optional_rotator';

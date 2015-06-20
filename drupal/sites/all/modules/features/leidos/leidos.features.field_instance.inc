@@ -596,6 +596,91 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_project_summary-field_main_image'
+  $field_instances['field_collection_item-field_project_summary-field_main_image'] = array(
+    'bundle' => 'field_project_summary',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_main_image',
+    'label' => 'Main Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_project_summary-field_project_item'
+  $field_instances['field_collection_item-field_project_summary-field_project_item'] = array(
+    'bundle' => 'field_project_summary',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'node_reference',
+        'settings' => array(),
+        'type' => 'node_reference_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_project_item',
+    'label' => 'Project Item',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
   // 'fieldable_panels_pane-content-field_freeform_html'
   $field_instances['fieldable_panels_pane-content-field_freeform_html'] = array(
     'bundle' => 'content',
@@ -751,6 +836,45 @@ function leidos_field_default_field_instances() {
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_announcement_summary',
     'label' => 'Announcement Summary',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'fieldable_panels_pane-featured_projects_panel-field_project_summary'
+  $field_instances['fieldable_panels_pane-featured_projects_panel-field_project_summary'] = array(
+    'bundle' => 'featured_projects_panel',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => 1,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_project_summary',
+    'label' => 'Project Summary',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1342,7 +1466,7 @@ function leidos_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 10,
+      'weight' => 21,
     ),
   );
 
@@ -1380,7 +1504,7 @@ function leidos_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 18,
+      'weight' => 31,
     ),
   );
 
@@ -1427,7 +1551,7 @@ function leidos_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 22,
+      'weight' => 35,
     ),
   );
 
@@ -1468,7 +1592,7 @@ function leidos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 41,
     ),
   );
 
@@ -1515,7 +1639,7 @@ function leidos_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 16,
+      'weight' => 29,
     ),
   );
 
@@ -1573,7 +1697,7 @@ function leidos_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 21,
+      'weight' => 34,
     ),
   );
 
@@ -1756,7 +1880,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 15,
+      'weight' => 28,
     ),
   );
 
@@ -1797,7 +1921,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 15,
+      'weight' => 27,
     ),
   );
 
@@ -1838,7 +1962,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 42,
     ),
   );
 
@@ -1879,7 +2003,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 24,
+      'weight' => 37,
     ),
   );
 
@@ -1930,7 +2054,7 @@ function leidos_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 16,
+      'weight' => 22,
     ),
   );
 
@@ -1968,7 +2092,7 @@ function leidos_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 17,
+      'weight' => 30,
     ),
   );
 
@@ -2009,7 +2133,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 13,
+      'weight' => 40,
     ),
   );
 
@@ -2050,7 +2174,7 @@ function leidos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 38,
     ),
   );
 
@@ -2091,7 +2215,7 @@ function leidos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 19,
+      'weight' => 32,
     ),
   );
 
@@ -2132,7 +2256,7 @@ function leidos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 25,
     ),
   );
 
@@ -2186,7 +2310,7 @@ function leidos_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 7,
+      'weight' => 43,
     ),
   );
 
@@ -2227,7 +2351,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 13,
+      'weight' => 23,
     ),
   );
 
@@ -2278,7 +2402,7 @@ function leidos_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 14,
+      'weight' => 26,
     ),
   );
 
@@ -2319,7 +2443,7 @@ function leidos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 20,
+      'weight' => 33,
     ),
   );
 
@@ -2360,7 +2484,7 @@ function leidos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 39,
     ),
   );
 
@@ -2401,7 +2525,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 14,
+      'weight' => 24,
     ),
   );
 
@@ -2439,7 +2563,7 @@ function leidos_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 23,
+      'weight' => 36,
     ),
   );
 
@@ -2480,7 +2604,7 @@ function leidos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 40,
     ),
   );
 
@@ -2672,6 +2796,8 @@ function leidos_field_default_field_instances() {
   t('Private Tag');
   t('Project Date');
   t('Project Facts');
+  t('Project Item');
+  t('Project Summary');
   t('Project Value');
   t('Proof Point or Web Page Title');
   t('Quick Links');
