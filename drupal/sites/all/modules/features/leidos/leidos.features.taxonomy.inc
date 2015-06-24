@@ -105,7 +105,7 @@ function leidos_taxonomy_default_vocabularies() {
       'name' => 'Project Type',
       'machine_name' => 'project_type',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

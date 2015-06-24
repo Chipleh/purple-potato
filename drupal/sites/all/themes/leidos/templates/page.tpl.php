@@ -172,8 +172,10 @@
   <?php endif; ?>
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
-
-    <?php if ($breadcrumb): ?>
+          
+    <?php //Breadcrumbs hidden on pages by default (can be added as blocks) ?>      
+    <?php //if ($breadcrumb): ?>
+    <?php if (false): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
     <?php endif; ?>
 
