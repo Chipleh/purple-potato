@@ -2754,6 +2754,74 @@ function leidos_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-project_type-field_content'
+  $field_instances['taxonomy_term-project_type-field_content'] = array(
+    'bundle' => 'project_type',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_content',
+    'label' => 'Content',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-project_type-field_featured_subcategories'
+  $field_instances['taxonomy_term-project_type-field_featured_subcategories'] = array(
+    'bundle' => 'project_type',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_featured_subcategories',
+    'label' => 'Featured subcategories',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('About Content Item');
@@ -2769,9 +2837,11 @@ function leidos_field_default_field_instances() {
   t('Columns');
   t('Contact Information');
   t('Contact us');
+  t('Content');
   t('Customer Name');
   t('External Link');
   t('Featured');
+  t('Featured subcategories');
   t('Freeform Html');
   t('Google Earth Link');
   t('Header Title');

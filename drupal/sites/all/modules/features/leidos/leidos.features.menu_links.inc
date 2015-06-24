@@ -10,6 +10,26 @@
 function leidos_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: devel_entity-info:devel/entity/info
+  $menu_links['devel_entity-info:devel/entity/info'] = array(
+    'menu_name' => 'devel',
+    'link_path' => 'devel/entity/info',
+    'router_path' => 'devel/entity/info',
+    'link_title' => 'Entity info',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'View entity information across the whole site.',
+      ),
+      'identifier' => 'devel_entity-info:devel/entity/info',
+    ),
+    'module' => 'system',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 0,
+  );
   // Exported menu link: main-menu_about:https://www.leidos.com/about
   $menu_links['main-menu_about:https://www.leidos.com/about'] = array(
     'menu_name' => 'main-menu',
@@ -319,6 +339,7 @@ function leidos_menu_default_menu_links() {
   t('Careers');
   t('Contact Us');
   t('Engineering');
+  t('Entity info');
   t('Health');
   t('Investors');
   t('Leidos');

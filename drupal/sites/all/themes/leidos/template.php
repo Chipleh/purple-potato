@@ -71,6 +71,10 @@ function leidos_process_page(&$variables) {
     // Make sure the shortcut link is the first item in title_suffix.
     $variables['title_suffix']['add_or_remove_shortcut']['#weight'] = -100;
   }
+  //Remove default taxonomy no content message
+  if(isset($variables['theme_hook_suggestions'][0]) && $variables['theme_hook_suggestions'][0] == 'page__taxonomy' && isset($variables['page']['content']['system_main']['no_content'])) {
+    unset($variables['page']['content']['system_main']['no_content']);
+  }
 }
 
 /**
