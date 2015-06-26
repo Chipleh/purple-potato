@@ -141,6 +141,17 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Taxonomy term: Taxonomy Image */
+  $handler->display->display_options['fields']['field_taxonomy_image']['id'] = 'field_taxonomy_image';
+  $handler->display->display_options['fields']['field_taxonomy_image']['table'] = 'field_data_field_taxonomy_image';
+  $handler->display->display_options['fields']['field_taxonomy_image']['field'] = 'field_taxonomy_image';
+  $handler->display->display_options['fields']['field_taxonomy_image']['label'] = '';
+  $handler->display->display_options['fields']['field_taxonomy_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_taxonomy_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_taxonomy_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -149,12 +160,12 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-  /* Field: Taxonomy term: Term description */
-  $handler->display->display_options['fields']['description']['id'] = 'description';
-  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['description']['field'] = 'description';
-  $handler->display->display_options['fields']['description']['label'] = '';
-  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Short Summary */
+  $handler->display->display_options['fields']['field_short_summary']['id'] = 'field_short_summary';
+  $handler->display->display_options['fields']['field_short_summary']['table'] = 'field_data_field_short_summary';
+  $handler->display->display_options['fields']['field_short_summary']['field'] = 'field_short_summary';
+  $handler->display->display_options['fields']['field_short_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_short_summary']['element_label_colon'] = FALSE;
   /* Field: Taxonomy term: Featured subcategories */
   $handler->display->display_options['fields']['field_featured_subcategories']['id'] = 'field_featured_subcategories';
   $handler->display->display_options['fields']['field_featured_subcategories']['table'] = 'field_data_field_featured_subcategories';
@@ -175,7 +186,11 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="https://www.leidos.com/engineering/advanced-communications-systems">Visit Services</a>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Visit Services';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['path'] = 'engineering/[name]';
+  $handler->display->display_options['fields']['nothing']['alter']['replace_spaces'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
   $handler->display->display_options['fields']['nothing']['element_class'] = 'visit-services';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
