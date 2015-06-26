@@ -82,10 +82,10 @@ function leidos_default_page_manager_pages() {
     $display->content['new-813fec8e-c79b-4794-be62-99ba9ffb57e2'] = $pane;
     $display->panels['right_rail'][0] = 'new-813fec8e-c79b-4794-be62-99ba9ffb57e2';
     $pane = new stdClass();
-    $pane->pid = 'new-2d4469c5-a653-4706-9f2e-0169e6d5918d';
+    $pane->pid = 'new-cc1f0e6c-6ae2-4e29-b6aa-22b2052e2999';
     $pane->panel = 'right_rail';
     $pane->type = 'views';
-    $pane->subtype = 'capa';
+    $pane->subtype = 'capabilities';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -113,9 +113,9 @@ function leidos_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '2d4469c5-a653-4706-9f2e-0169e6d5918d';
-    $display->content['new-2d4469c5-a653-4706-9f2e-0169e6d5918d'] = $pane;
-    $display->panels['right_rail'][1] = 'new-2d4469c5-a653-4706-9f2e-0169e6d5918d';
+    $pane->uuid = 'cc1f0e6c-6ae2-4e29-b6aa-22b2052e2999';
+    $display->content['new-cc1f0e6c-6ae2-4e29-b6aa-22b2052e2999'] = $pane;
+    $display->panels['right_rail'][1] = 'new-cc1f0e6c-6ae2-4e29-b6aa-22b2052e2999';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
