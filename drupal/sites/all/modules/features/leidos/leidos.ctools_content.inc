@@ -19,7 +19,7 @@ function leidos_default_ctools_custom_content() {
   $content->category = 'Optional Theme Elements';
   $content->settings = array(
     'admin_title' => 'Theme Banner',
-    'title' => 'Theme Banner',
+    'title' => '',
     'body' => '<div id="theme_banner"></div>',
     'format' => 'full_html',
     'substitute' => 1,

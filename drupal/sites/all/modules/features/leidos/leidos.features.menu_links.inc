@@ -311,21 +311,399 @@ function leidos_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
+  // Exported menu link: menu-footer---main-menu_leidos--2015-leidos:https://www.leidos.com/
+  $menu_links['menu-footer---main-menu_leidos--2015-leidos:https://www.leidos.com/'] = array(
+    'menu_name' => 'menu-footer---main-menu',
+    'link_path' => 'https://www.leidos.com/',
+    'router_path' => '',
+    'link_title' => 'Leidos © 2015 Leidos',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---main-menu_leidos--2015-leidos:https://www.leidos.com/',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---main-menu_privacy-policy:https://www.leidos.com/privacy
+  $menu_links['menu-footer---main-menu_privacy-policy:https://www.leidos.com/privacy'] = array(
+    'menu_name' => 'menu-footer---main-menu',
+    'link_path' => 'https://www.leidos.com/privacy',
+    'router_path' => '',
+    'link_title' => 'Privacy Policy',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---main-menu_privacy-policy:https://www.leidos.com/privacy',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---main-menu_search:https://www.leidos.com/search
+  $menu_links['menu-footer---main-menu_search:https://www.leidos.com/search'] = array(
+    'menu_name' => 'menu-footer---main-menu',
+    'link_path' => 'https://www.leidos.com/search',
+    'router_path' => '',
+    'link_title' => 'Search',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---main-menu_search:https://www.leidos.com/search',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---main-menu_site-map:https://www.leidos.com/sitemap
+  $menu_links['menu-footer---main-menu_site-map:https://www.leidos.com/sitemap'] = array(
+    'menu_name' => 'menu-footer---main-menu',
+    'link_path' => 'https://www.leidos.com/sitemap',
+    'router_path' => '',
+    'link_title' => 'Site Map',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---main-menu_site-map:https://www.leidos.com/sitemap',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---resources_for-alumni:http://www.leidos.com/alumni/
+  $menu_links['menu-footer---resources_for-alumni:http://www.leidos.com/alumni/'] = array(
+    'menu_name' => 'menu-footer---resources',
+    'link_path' => 'http://www.leidos.com/alumni/',
+    'router_path' => '',
+    'link_title' => 'For Alumni',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---resources_for-alumni:http://www.leidos.com/alumni/',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---resources_for-customers:https://www.leidos.com/customer
+  $menu_links['menu-footer---resources_for-customers:https://www.leidos.com/customer'] = array(
+    'menu_name' => 'menu-footer---resources',
+    'link_path' => 'https://www.leidos.com/customer',
+    'router_path' => '',
+    'link_title' => 'For Customers',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---resources_for-customers:https://www.leidos.com/customer',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---resources_for-employees:https://www.leidos.com/employees
+  $menu_links['menu-footer---resources_for-employees:https://www.leidos.com/employees'] = array(
+    'menu_name' => 'menu-footer---resources',
+    'link_path' => 'https://www.leidos.com/employees',
+    'router_path' => '',
+    'link_title' => 'For Employees',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---resources_for-employees:https://www.leidos.com/employees',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---resources_for-suppliers:https://www.leidos.com/suppliers
+  $menu_links['menu-footer---resources_for-suppliers:https://www.leidos.com/suppliers'] = array(
+    'menu_name' => 'menu-footer---resources',
+    'link_path' => 'https://www.leidos.com/suppliers',
+    'router_path' => '',
+    'link_title' => 'For Suppliers',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---resources_for-suppliers:https://www.leidos.com/suppliers',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -47,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---services_contact-us:https://www.leidos.com/contact
+  $menu_links['menu-footer---services_contact-us:https://www.leidos.com/contact'] = array(
+    'menu_name' => 'menu-footer---services',
+    'link_path' => 'https://www.leidos.com/contact',
+    'router_path' => '',
+    'link_title' => 'Contact us',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---services_contact-us:https://www.leidos.com/contact',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -46,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---services_federal-contract-vehicles:https://www.leidos.com/contractcenter
+  $menu_links['menu-footer---services_federal-contract-vehicles:https://www.leidos.com/contractcenter'] = array(
+    'menu_name' => 'menu-footer---services',
+    'link_path' => 'https://www.leidos.com/contractcenter',
+    'router_path' => '',
+    'link_title' => 'Federal Contract Vehicles',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---services_federal-contract-vehicles:https://www.leidos.com/contractcenter',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -47,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---services_products:https://www.leidos.com/products
+  $menu_links['menu-footer---services_products:https://www.leidos.com/products'] = array(
+    'menu_name' => 'menu-footer---services',
+    'link_path' => 'https://www.leidos.com/products',
+    'router_path' => '',
+    'link_title' => 'Products',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---services_products:https://www.leidos.com/products',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---services_research--development:https://www.leidos.com/industries/technologies
+  $menu_links['menu-footer---services_research--development:https://www.leidos.com/industries/technologies'] = array(
+    'menu_name' => 'menu-footer---services',
+    'link_path' => 'https://www.leidos.com/industries/technologies',
+    'router_path' => '',
+    'link_title' => 'Research & Development',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---services_research--development:https://www.leidos.com/industries/technologies',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---services_services:https://www.leidos.com/industries/services
+  $menu_links['menu-footer---services_services:https://www.leidos.com/industries/services'] = array(
+    'menu_name' => 'menu-footer---services',
+    'link_path' => 'https://www.leidos.com/industries/services',
+    'router_path' => '',
+    'link_title' => 'Services',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---services_services:https://www.leidos.com/industries/services',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---social-media_connect-on-facebook:http://facebook.com/LeidosInc
+  $menu_links['menu-footer---social-media_connect-on-facebook:http://facebook.com/LeidosInc'] = array(
+    'menu_name' => 'menu-footer---social-media',
+    'link_path' => 'http://facebook.com/LeidosInc',
+    'router_path' => '',
+    'link_title' => 'Connect on Facebook',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---social-media_connect-on-facebook:http://facebook.com/LeidosInc',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---social-media_connect-on-google:http://plus.google.com/u/0/111000986426684144411/posts
+  $menu_links['menu-footer---social-media_connect-on-google:http://plus.google.com/u/0/111000986426684144411/posts'] = array(
+    'menu_name' => 'menu-footer---social-media',
+    'link_path' => 'http://plus.google.com/u/0/111000986426684144411/posts',
+    'router_path' => '',
+    'link_title' => 'Connect on Google+',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---social-media_connect-on-google:http://plus.google.com/u/0/111000986426684144411/posts',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -46,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---social-media_connect-on-linkedin:http://linkedin.com/company/leidos
+  $menu_links['menu-footer---social-media_connect-on-linkedin:http://linkedin.com/company/leidos'] = array(
+    'menu_name' => 'menu-footer---social-media',
+    'link_path' => 'http://linkedin.com/company/leidos',
+    'router_path' => '',
+    'link_title' => 'Connect on LinkedIn',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---social-media_connect-on-linkedin:http://linkedin.com/company/leidos',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---social-media_connect-on-twitter:http://twitter.com/leidosinc
+  $menu_links['menu-footer---social-media_connect-on-twitter:http://twitter.com/leidosinc'] = array(
+    'menu_name' => 'menu-footer---social-media',
+    'link_path' => 'http://twitter.com/leidosinc',
+    'router_path' => '',
+    'link_title' => 'Connect on Twitter',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---social-media_connect-on-twitter:http://twitter.com/leidosinc',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-footer---social-media_connect-on-youtube:http://www.youtube.com/leidosinc
+  $menu_links['menu-footer---social-media_connect-on-youtube:http://www.youtube.com/leidosinc'] = array(
+    'menu_name' => 'menu-footer---social-media',
+    'link_path' => 'http://www.youtube.com/leidosinc',
+    'router_path' => '',
+    'link_title' => 'Connect on Youtube',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-footer---social-media_connect-on-youtube:http://www.youtube.com/leidosinc',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -47,
+    'customized' => 1,
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t(' About Leidos Engineering');
   t('About');
   t('Capabilities');
   t('Careers');
+  t('Connect on Facebook');
+  t('Connect on Google+');
+  t('Connect on LinkedIn');
+  t('Connect on Twitter');
+  t('Connect on Youtube');
   t('Contact Us');
+  t('Contact us');
   t('Engineering');
+  t('Federal Contract Vehicles');
+  t('For Alumni');
+  t('For Customers');
+  t('For Employees');
+  t('For Suppliers');
   t('Health');
   t('Investors');
   t('Leidos');
+  t('Leidos © 2015 Leidos');
   t('Markets');
   t('National Security');
   t('Newsroom');
+  t('Privacy Policy');
+  t('Products');
   t('Projects');
+  t('Research & Development');
+  t('Search');
+  t('Services');
+  t('Site Map');
 
 
   return $menu_links;
