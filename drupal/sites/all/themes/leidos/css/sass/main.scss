@@ -1,1 +1,9 @@
+//******** Compass reset ********//
+@import "compass/reset";
+
+//******** Configs / Mixins / Extends ********//
+@import "config",
+        "mixins";
+
+//******** Core ********//
 @import "partials/**/*";
