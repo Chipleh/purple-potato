@@ -20,7 +20,7 @@ function leidos_default_ctools_custom_content() {
   $content->settings = array(
     'admin_title' => 'Theme Banner',
     'title' => '',
-    'body' => '<div id="theme_banner"></div>',
+    'body' => '<div id="theme-banner-div"></div>',
     'format' => 'full_html',
     'substitute' => 1,
   );
