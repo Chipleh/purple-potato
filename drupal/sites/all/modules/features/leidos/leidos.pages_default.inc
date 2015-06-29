@@ -166,6 +166,14 @@ function leidos_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'title' => array(
+          'value' => 'Engineering | [site:name]',
+        ),
+      ),
+    ),
   );
   $display = new panels_display();
   $display->layout = 'flexible:industry_template';
@@ -183,7 +191,7 @@ function leidos_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Engineering';
+  $display->title = '';
   $display->uuid = 'd1b0671d-842b-49ed-ae2a-6c8d679265e4';
   $display->content = array();
   $display->panels = array();
@@ -363,7 +371,33 @@ function leidos_default_page_manager_pages() {
     $display->content['new-c76e9f57-696b-4505-9837-0fd0c9dd58b7'] = $pane;
     $display->panels['right_rail'][0] = 'new-c76e9f57-696b-4505-9837-0fd0c9dd58b7';
     $pane = new stdClass();
-    $pane->pid = 'new-0f586632-38d5-4f4d-bf16-d948a05c8fae';
+    $pane->pid = 'new-25dd046a-f03f-4e65-bcce-7437dc7b8a0d';
+    $pane->panel = 'top_banner';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h1',
+      'class' => '',
+      'id' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Engineering',
+      'override_title_heading' => 'h1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '25dd046a-f03f-4e65-bcce-7437dc7b8a0d';
+    $display->content['new-25dd046a-f03f-4e65-bcce-7437dc7b8a0d'] = $pane;
+    $display->panels['top_banner'][0] = 'new-25dd046a-f03f-4e65-bcce-7437dc7b8a0d';
+    $pane = new stdClass();
+    $pane->pid = 'new-3bcca798-d077-4f53-9155-fd631af788bd';
     $pane->panel = 'top_banner';
     $pane->type = 'custom';
     $pane->subtype = 'theme_banner';
@@ -382,12 +416,12 @@ function leidos_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '0f586632-38d5-4f4d-bf16-d948a05c8fae';
-    $display->content['new-0f586632-38d5-4f4d-bf16-d948a05c8fae'] = $pane;
-    $display->panels['top_banner'][0] = 'new-0f586632-38d5-4f4d-bf16-d948a05c8fae';
-  $display->hide_title = PANELS_TITLE_FIXED;
+    $pane->uuid = '3bcca798-d077-4f53-9155-fd631af788bd';
+    $display->content['new-3bcca798-d077-4f53-9155-fd631af788bd'] = $pane;
+    $display->panels['top_banner'][1] = 'new-3bcca798-d077-4f53-9155-fd631af788bd';
+  $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
