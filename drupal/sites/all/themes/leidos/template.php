@@ -22,7 +22,7 @@ function leidos_preprocess_html(&$variables) {
   }
 
   // Leidos Stylesheet
-  drupal_add_css(path_to_theme() . '/css/main.css', array('group' => CSS_THEME);
+  drupal_add_css(path_to_theme() . '/css/main.css', array('group' => CSS_THEME));
 
   // Add conditional stylesheets for IE
   drupal_add_css(path_to_theme() . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
