@@ -1,11 +1,186 @@
-/* line 1, /Users/kkashou/Sites/rhino/css/sass/partials/_header.scss */
-header {
-  background: green;
+/*************************
+*   Config
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/***** compass set *****/
+/***** primary colors *****/
+/**
+ *  @colors monochrome
+ */
+/**
+ *  @colors leidos colors
+ */
+/**
+ *  @colors generic colors
+ */
+/***** fonts *****/
+@font-face {
+  font-family: "AvenirLT-Book";
+  src: url("/sites/all/themes/leidos/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix") format("eot"), url("/sites/all/themes/leidos/fonts/939cba03-5b40-4d01-9bc5-7589eca863db.woff") format("woff"), url("/sites/all/themes/leidos/fonts/849bc5b9-a2ff-4343-977b-26ba8bd24a60.ttf") format("truetype"), url("/sites/all/themes/leidos/fonts/f67fa3b5-c1d1-488f-8e60-a828b9ad56a4.svg#f67fa3b5-c1d1-488f-8e60-a828b9ad56a4") format("svg");
+}
+@font-face {
+  font-family: "AvenirLT-Black";
+  src: url("/sites/all/themes/leidos/fonts/a24b3f55-c8c8-41a1-a77e-7cdf417d82f6.eot?#iefix") format("eot"), url("/sites/all/themes/leidos/fonts/5a05cf7f-f332-456f-ae67-d8c26e0d35b3.woff") format("woff"), url("/sites/all/themes/leidos/fonts/c33278bc-988e-440b-b4be-6acc095e6044.ttf") format("truetype"), url("/sites/all/themes/leidos/fonts/7bdad4a5-289b-42f9-b6fa-c5883b9e9f23.svg#7bdad4a5-289b-42f9-b6fa-c5883b9e9f23") format("svg");
+}
+/***** page *****/
+/* body */
+/* line 54, sass/_config.scss */
+html,
+body {
+  color: #646464;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  height: 100%;
 }
 
-/* line 1, /Users/kkashou/Sites/rhino/css/sass/partials/_nav.scss */
-nav {
-  background: pink;
+/* headers */
+/* line 64, sass/_config.scss */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #1F1646;
+  font-family: "AvenirLT-Book", Arial, sans-serif;
+  font-weight: normal;
 }
+
+/* line 74, sass/_config.scss */
+h1 {
+  font-size: 40px;
+}
+
+/* links */
+/* line 95, sass/_config.scss */
+a {
+  color: #850F88;
+}
+/* line 98, sass/_config.scss */
+a:hover {
+  color: #1F1646;
+  text-decoration: none;
+}
+
+/*************************
+*   Mixins
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  */
+/*************************
+*   Body Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* main wrapper */
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
+/*************************
+*   Footer Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* footer wrapper */
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
+/*************************
+*   Header Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* header */
+/* line 11, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_header.scss */
+#header {
+  background: #fff;
+  border-top: 5px solid #850F88;
+  border-bottom: 1px solid #D0D0D0;
+  height: 120px;
+}
+
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
+/*************************
+*   Layout Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* line 10, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+#page-wrapper {
+  height: 100%;
+}
+
+/* line 14, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+#page {
+  height: 100%;
+}
+
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
+/*************************
+*   Miscellaneous Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* x */
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
+/*************************
+*   Navigation Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* x */
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
+/*************************
+*   Temporary Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* x */
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
+/*************************
+*   Navigation Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* x */
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
 
 /*# sourceMappingURL=main.css.map */
