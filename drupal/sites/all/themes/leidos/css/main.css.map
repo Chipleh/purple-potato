@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,MAAO;EACL,UAAU,EAAE,KAAK;;;;ACDnB,GAAI;EACF,UAAU,EAAE,IAAI",
+"sources": ["sass/partials/_header.scss","sass/partials/_nav.scss"],
+"names": [],
+"file": "main.css"
+}
