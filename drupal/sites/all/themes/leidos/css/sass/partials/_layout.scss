@@ -8,12 +8,42 @@
 /*  elements
 **************************************************/
 #page-wrapper {
-	height: 100%;
+	min-width: auto;
 }
 
+/* page */
 #page {
 	height: 100%;
 }
+
+/* max page width settings & drupal margin corrections */
+#header,
+#main-wrapper,
+#footer-wrapper {
+	div.section {
+		@extend %max-width;
+	}
+}
+#main-wrapper {
+	#main {
+		@extend %max-width;
+		margin-top: 0;
+
+		#content {
+			@extend %max-width;
+			.tabs {
+				margin-bottom: 0;
+			}
+			.content {
+				margin-top: 0;
+			}
+		}	
+	}
+}
+#footer-columns {
+	@extend %max-width;
+}
+
 
 
 /*  tablet

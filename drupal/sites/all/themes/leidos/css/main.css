@@ -64,6 +64,29 @@ a:hover {
 }
 
 /*************************
+*   Extends
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* page width */
+/* line 11, sass/_extends.scss */
+#header div.section,
+#main-wrapper div.section,
+#footer-wrapper div.section, #main-wrapper #main, #main-wrapper #main #content, #footer-columns {
+  max-width: 1230px;
+  min-width: auto;
+  width: auto;
+}
+
+/* header */
+/* line 18, sass/_extends.scss */
+#header, #header .section {
+  height: 86px;
+}
+
+/*************************
 *   Mixins
 *   Rhino Hooton
 *   6/29/15
@@ -77,6 +100,11 @@ a:hover {
 /*  elements
 **************************************************/
 /* main wrapper */
+/* line 11, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_body.scss */
+#main-wrapper {
+  background: #E8E8E8;
+}
+
 /*  tablet
 **************************************************/
 /*  mobile
@@ -89,6 +117,11 @@ a:hover {
 /*  elements
 **************************************************/
 /* footer wrapper */
+/* line 11, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_footer.scss */
+#footer-wrapper {
+  background: #E8E8E8;
+}
+
 /*  tablet
 **************************************************/
 /*  mobile
@@ -106,7 +139,20 @@ a:hover {
   background: #fff;
   border-top: 5px solid #850F88;
   border-bottom: 1px solid #D0D0D0;
-  height: 120px;
+  height: 86px;
+  background: pink;
+}
+/* line 22, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_header.scss */
+#header .section #name-and-slogan {
+  display: none;
+}
+/* line 26, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_header.scss */
+#header .section .region-header {
+  float: right;
+}
+/* line 30, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_header.scss */
+#header .section #main-menu {
+  float: left;
 }
 
 /*  tablet
@@ -122,12 +168,27 @@ a:hover {
 **************************************************/
 /* line 10, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
 #page-wrapper {
+  min-width: auto;
+}
+
+/* page */
+/* line 15, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+#page {
   height: 100%;
 }
 
-/* line 14, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
-#page {
-  height: 100%;
+/* max page width settings & drupal margin corrections */
+/* line 28, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+#main-wrapper #main {
+  margin-top: 0;
+}
+/* line 34, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+#main-wrapper #main #content .tabs {
+  margin-bottom: 0;
+}
+/* line 37, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+#main-wrapper #main #content .content {
+  margin-top: 0;
 }
 
 /*  tablet

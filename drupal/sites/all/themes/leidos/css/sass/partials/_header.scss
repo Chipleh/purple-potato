@@ -9,10 +9,28 @@
 **************************************************/
 /* header */
 #header {
+	@extend %header-data;
 	background: $color-white;
 	border-top: 5px solid $color-leidos-purple-light;
 	border-bottom: 1px solid $color-gray-medium-light;
-	height: 120px;
+	height: 86px;
+	background: pink;
+
+	.section {
+		@extend %header-data;
+
+		#name-and-slogan {
+			display: none;
+		}
+
+		.region-header {
+			float: right;
+		}
+
+		#main-menu {
+			float: left;
+		}
+	}
 }
 
 
