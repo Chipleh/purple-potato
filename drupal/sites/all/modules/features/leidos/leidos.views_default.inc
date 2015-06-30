@@ -22,6 +22,7 @@ function leidos_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -32,11 +33,17 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = 'View All »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<a href="http://www.google.com">View All</a>';
   /* Field: Field: Announcement Date */
   $handler->display->display_options['fields']['field_announcement_date']['id'] = 'field_announcement_date';
   $handler->display->display_options['fields']['field_announcement_date']['table'] = 'field_data_field_announcement_date';
@@ -64,11 +71,11 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_external_link']['label'] = '';
   $handler->display->display_options['fields']['field_external_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_external_link']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Field: Announcement Date (field_announcement_date) */
+  $handler->display->display_options['sorts']['field_announcement_date_value']['id'] = 'field_announcement_date_value';
+  $handler->display->display_options['sorts']['field_announcement_date_value']['table'] = 'field_data_field_announcement_date';
+  $handler->display->display_options['sorts']['field_announcement_date_value']['field'] = 'field_announcement_date_value';
+  $handler->display->display_options['sorts']['field_announcement_date_value']['order'] = 'DESC';
   /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
@@ -182,6 +189,29 @@ function leidos_views_default_views() {
 
   /* Display: Full View Announcements */
   $handler = $view->new_display('panel_pane', 'Full View Announcements', 'full_view_announcements_pane');
+  $handler->display->display_options['argument_input'] = array(
+    'term_node_tid_depth' => array(
+      'type' => 'user',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Has taxonomy term ID (with depth)',
+    ),
+  );
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: Full View Announcements - Mobile */
+  $handler = $view->new_display('panel_pane', 'Full View Announcements - Mobile', 'full_view_announcements_pane_mobile');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'load_more';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['advance']['content_class'] = '.view-content';
+  $handler->display->display_options['pager']['options']['advance']['pager_selector'] = '.pager-load-more';
+  $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['argument_input'] = array(
     'term_node_tid_depth' => array(
       'type' => 'user',

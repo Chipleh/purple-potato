@@ -528,7 +528,30 @@ function leidos_default_page_manager_pages() {
     $display->content['new-51ede2e4-d308-45f4-b86c-275c9bd9b4fa'] = $pane;
     $display->panels['left_rail'][0] = 'new-51ede2e4-d308-45f4-b86c-275c9bd9b4fa';
     $pane = new stdClass();
-    $pane->pid = 'new-5c3c676b-63f1-4cc9-ad50-12488207e75b';
+    $pane->pid = 'new-f6515a72-5f7f-4ec3-94c0-997b084eef04';
+    $pane->panel = 'right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'announcements-full_view_announcements_pane_mobile';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'term_node_tid_depth' => '10',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f6515a72-5f7f-4ec3-94c0-997b084eef04';
+    $display->content['new-f6515a72-5f7f-4ec3-94c0-997b084eef04'] = $pane;
+    $display->panels['right_rail'][0] = 'new-f6515a72-5f7f-4ec3-94c0-997b084eef04';
+    $pane = new stdClass();
+    $pane->pid = 'new-56be10b7-f199-4a7f-9061-7addd853794c';
     $pane->panel = 'right_rail';
     $pane->type = 'views_panes';
     $pane->subtype = 'announcements-full_view_announcements_pane';
@@ -545,11 +568,11 @@ function leidos_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '5c3c676b-63f1-4cc9-ad50-12488207e75b';
-    $display->content['new-5c3c676b-63f1-4cc9-ad50-12488207e75b'] = $pane;
-    $display->panels['right_rail'][0] = 'new-5c3c676b-63f1-4cc9-ad50-12488207e75b';
+    $pane->uuid = '56be10b7-f199-4a7f-9061-7addd853794c';
+    $display->content['new-56be10b7-f199-4a7f-9061-7addd853794c'] = $pane;
+    $display->panels['right_rail'][1] = 'new-56be10b7-f199-4a7f-9061-7addd853794c';
     $pane = new stdClass();
     $pane->pid = 'new-35d295b0-0cdf-42ed-9f85-8c4ae9620641';
     $pane->panel = 'top_banner';
