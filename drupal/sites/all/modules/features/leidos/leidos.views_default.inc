@@ -192,6 +192,7 @@ function leidos_views_default_views() {
       'label' => 'Content: Has taxonomy term ID (with depth)',
     ),
   );
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['announcements'] = $view;
 
   $view = new view();
@@ -548,6 +549,7 @@ function leidos_views_default_views() {
 
   /* Display: Full View Projects */
   $handler = $view->new_display('panel_pane', 'Full View Projects', 'full_view_projects_pane');
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['projects'] = $view;
 
   $view = new view();
