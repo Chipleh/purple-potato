@@ -44,7 +44,7 @@ function leidos_ds_field_settings_info() {
       'formatter_settings' => array(
         'show_title' => 0,
         'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:8:{s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:14:"items_per_page";s:2:"10";s:4:"path";s:0:"";s:9:"arguments";a:1:{s:19:"term_node_tid_depth";s:18:"%taxonomy_term:tid";}s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:11:"views_panes";s:7:"subtype";s:21:"projects-panel_pane_1";}',
+        'ctools' => 'a:3:{s:4:"conf";a:8:{s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:14:"items_per_page";s:1:"2";s:4:"path";s:0:"";s:9:"arguments";a:1:{s:19:"term_node_tid_depth";s:18:"%taxonomy_term:tid";}s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:11:"views_panes";s:7:"subtype";s:31:"projects-featured_projects_pane";}',
         'load_terms' => 0,
         'ft' => array(),
       ),
@@ -522,6 +522,7 @@ function leidos_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'hide_sidebars' => 0,
   );
   $export['taxonomy_term|project_type|default'] = $ds_layout;
 
