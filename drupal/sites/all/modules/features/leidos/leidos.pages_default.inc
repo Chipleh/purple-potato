@@ -687,6 +687,25 @@ function leidos_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-41e6b801-d748-4588-a723-be36a16ded78';
+    $pane->panel = 'right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'projects-full_view_projects_pane_mobile';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '41e6b801-d748-4588-a723-be36a16ded78';
+    $display->content['new-41e6b801-d748-4588-a723-be36a16ded78'] = $pane;
+    $display->panels['right_rail'][0] = 'new-41e6b801-d748-4588-a723-be36a16ded78';
+    $pane = new stdClass();
     $pane->pid = 'new-e94626a8-5e56-457d-b45a-4404e33ee41a';
     $pane->panel = 'right_rail';
     $pane->type = 'views_panes';
@@ -700,11 +719,11 @@ function leidos_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'e94626a8-5e56-457d-b45a-4404e33ee41a';
     $display->content['new-e94626a8-5e56-457d-b45a-4404e33ee41a'] = $pane;
-    $display->panels['right_rail'][0] = 'new-e94626a8-5e56-457d-b45a-4404e33ee41a';
+    $display->panels['right_rail'][1] = 'new-e94626a8-5e56-457d-b45a-4404e33ee41a';
     $pane = new stdClass();
     $pane->pid = 'new-ea6f2ef6-6665-44e8-9ff4-3aeca5ddada1';
     $pane->panel = 'top_banner';
