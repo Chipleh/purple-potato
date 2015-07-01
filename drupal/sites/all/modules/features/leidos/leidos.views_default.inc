@@ -678,6 +678,23 @@ function leidos_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Rotator Image */
+  $handler->display->display_options['fields']['field_rotator_image']['id'] = 'field_rotator_image';
+  $handler->display->display_options['fields']['field_rotator_image']['table'] = 'field_data_field_rotator_image';
+  $handler->display->display_options['fields']['field_rotator_image']['field'] = 'field_rotator_image';
+  $handler->display->display_options['fields']['field_rotator_image']['label'] = '';
+  $handler->display->display_options['fields']['field_rotator_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_rotator_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_rotator_image']['settings'] = array(
+    'image_style' => 'flexslider_full',
+    'image_link' => '',
+  );
+  /* Field: Content: Hide Information Box */
+  $handler->display->display_options['fields']['field_hide_information_box']['id'] = 'field_hide_information_box';
+  $handler->display->display_options['fields']['field_hide_information_box']['table'] = 'field_data_field_hide_information_box';
+  $handler->display->display_options['fields']['field_hide_information_box']['field'] = 'field_hide_information_box';
+  $handler->display->display_options['fields']['field_hide_information_box']['label'] = '';
+  $handler->display->display_options['fields']['field_hide_information_box']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -691,17 +708,13 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Rotator Image */
-  $handler->display->display_options['fields']['field_rotator_image']['id'] = 'field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image']['table'] = 'field_data_field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image']['field'] = 'field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image']['label'] = '';
-  $handler->display->display_options['fields']['field_rotator_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_rotator_image']['settings'] = array(
-    'image_style' => 'flexslider_full',
-    'image_link' => '',
-  );
+  /* Field: Content: Rotator Link */
+  $handler->display->display_options['fields']['field_rotator_link']['id'] = 'field_rotator_link';
+  $handler->display->display_options['fields']['field_rotator_link']['table'] = 'field_data_field_rotator_link';
+  $handler->display->display_options['fields']['field_rotator_link']['field'] = 'field_rotator_link';
+  $handler->display->display_options['fields']['field_rotator_link']['label'] = '';
+  $handler->display->display_options['fields']['field_rotator_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_rotator_link']['click_sort_column'] = 'url';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

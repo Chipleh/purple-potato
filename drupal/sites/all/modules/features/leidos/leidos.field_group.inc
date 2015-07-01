@@ -318,6 +318,36 @@ function leidos_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_general|node|rotator|form';
+  $field_group->group_name = 'group_general';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'rotator';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Info',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_rotator_image',
+      1 => 'field_rotator_link',
+      2 => 'field_hide_information_box',
+      3 => 'title',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-general field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_general|node|rotator|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_hover|node|project|form';
   $field_group->group_name = 'group_hover';
   $field_group->entity_type = 'node';

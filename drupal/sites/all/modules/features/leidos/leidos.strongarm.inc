@@ -271,19 +271,19 @@ function leidos_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '4',
-        ),
-        'metatags' => array(
-          'weight' => '7',
-        ),
-        'title' => array(
-          'weight' => '0',
-        ),
-        'path' => array(
           'weight' => '5',
         ),
+        'metatags' => array(
+          'weight' => '8',
+        ),
+        'title' => array(
+          'weight' => '1',
+        ),
+        'path' => array(
+          'weight' => '6',
+        ),
         'redirect' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'display' => array(),
