@@ -169,23 +169,58 @@
 
 /* search */
 .block-leidos-custom-search {
-	background: $color-white;
+	// top: 92px;
+	background: $color-gray-light;
+	border-bottom: 1px solid $color-gray-medium-light;
 	display: block;
+	height:unquote("calc(")$search-height unquote("+ 62px)"); // adjusted to compensate for padding
 	left:0;
 	position: absolute;
-	top: -87px;
-	transition: top .5s ease-in-out;
-	z-index: 1; 
+	top: -49px;
+	transition: top .5s cubic-bezier(.40, .0, .40, 1);
+	z-index: 1;
 
 	&.active {
-		background: $color-white;
-		top: 87px;
+		top: 92px;
+	}
+
+	h2 {
+		display: none;
 	}
 
 	.content {
-		#search_leidos_website {
-			padding: 40px 0px 23px;
+		height:unquote("calc(")$search-height unquote("+ 62px)"); // adjusted to compensate for padding
 
+		#search_leidos_website {
+			@extend %max-width;
+			height: $search-height;
+			padding: 40px 0px 22px;
+
+			input[type="text"] {
+				background: url("../images/searchbox-search-glass.png") no-repeat 50px 10px $color-gray-light;
+				border: none;
+				color: $color-gray-medium-light;
+				font-family: "AvenirLT-Book", Arial, sans-serif;
+				font-size: 70px;
+				height: $search-height;
+				line-height: $search-height;
+				margin: 0;
+				outline: none;
+				padding: 0 0 0 120px;
+				position: relative;
+
+				&:focus {
+					background-position: 50px -92px;
+				}
+			}
+
+			input[type="submit"] {
+				display: none;
+			}
+
+			button[type="cancel"] {
+				display: none;
+			}
 		}
 	}
 }
