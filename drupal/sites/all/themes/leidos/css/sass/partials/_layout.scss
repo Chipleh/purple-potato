@@ -8,22 +8,47 @@
 /*  elements
 **************************************************/
 #page-wrapper {
-	min-width: auto;
+	@extend %full-width;
 }
 
 /* page */
 #page {
-	height: 100%;
+	@extend %full-width;
 }
 
-/* max page width settings & drupal margin corrections */
+/*  max page width settings & margin corrections
+**************************************************/
+/* shared */
 #header,
 #main-wrapper,
 #footer-wrapper {
 	div.section {
-		@extend %max-width;
+		@extend %full-width;
 	}
 }
+
+/* header specific */
+#header {
+	.section {
+		.region-header {
+			@extend %full-width;
+
+			#block-system-main-menu {
+				@extend %max-width;
+			}
+
+			#block-block-1 {
+				@extend %full-width;
+	
+				#search_leidos_website {
+					@extend %max-width;
+				}
+			}
+		}
+	}
+}
+
+/* header specific */
 #main-wrapper {
 	#main {
 		@extend %max-width;
@@ -40,6 +65,8 @@
 		}	
 	}
 }
+
+/* header specific */
 #footer-columns {
 	@extend %max-width;
 }

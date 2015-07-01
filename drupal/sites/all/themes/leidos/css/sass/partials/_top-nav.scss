@@ -7,7 +7,171 @@
 
 /*  elements
 **************************************************/
-/* x */
+/* main menu */
+#block-system-main-menu {
+	@extend %header-data;
+	border: none;
+	display: block;
+	position: relative;
+	float: none;
+	z-index: 2;
+
+	&:after {
+		@extend %header-data;
+		background: $color-gray-light;
+		content: "";
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		right: -500%;
+		top: 0;
+		width: 500%;
+	}
+
+	h2 {
+		display: none;
+	}
+
+	.content {
+		ul {
+			position: relative;
+			width: 100%;
+
+			li {
+				diplay: block;
+				float:left;
+				margin: 0 0.75%;
+
+				&.first {
+					margin-left: 0;
+
+					a {
+						background: url(../images/leidos-logo.png) no-repeat center center;
+						color: transparent;
+						font-size: 0;
+						width: 170px;
+
+						&:hover {
+							background: url(../images/leidos-logo.png) no-repeat center center;							
+						}
+					}
+				}
+
+				&:nth-child(6),
+				&:nth-child(7),
+				&:nth-child(8) {
+					a {
+						color: $color-gray-dark;
+						font-size: 11px;
+						line-height: 112px;
+					}
+				}
+
+				&:nth-child(8) {
+					margin-right: 0;
+				}
+
+				&.last {
+					margin: 0;
+					overflow: hidden;
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 128px;
+
+					&:after {
+						background: $color-gray-light;
+						border: 1px solid $color-gray-medium-light;
+						content: "";
+						display: block;
+						height: 200px;
+						left: 12px;
+						overflow: hidden;
+						position: absolute;
+						top: 0;
+						transform: rotate(27deg);
+						width: 300px;
+						z-index: 1;
+					}
+
+					span {
+						@extend %header-data;
+						color: transparent;
+						cursor: pointer;
+						display: block;
+						font-size: 0;
+						padding: 0;
+						position: relative;
+						text-align: right;
+						text-transform: uppercase;
+						z-index: 2;
+
+						&:before {
+							background: url("../images/search-glass.png") no-repeat center top transparent;
+							content: '';
+							height: 24px;
+							left: 50%;
+							position: absolute;
+							top: calc(50% - 6px);
+							width: 24px;
+							z-index: -1;
+						}
+
+						&:hover,
+						.active {
+							&:before {
+								background-position: center bottom;
+							}
+						}
+						
+					}
+				}
+
+				a {
+					@extend %header-data;
+					color: $color-leidos-purple-dark;
+					display: block;
+					font-family: "AvenirLT-Black", Arial, sans-serif;
+					font-size: 16px;
+					line-height: 108px;
+					padding: 0;
+					text-transform: uppercase;
+
+					&:hover,
+					&.active {
+						color: $color-leidos-purple-light;
+					}
+
+					&.active {
+						background: none, url("../images/nav-arrow.svg") no-repeat 50% 0;
+					}							
+				}
+			}
+		}
+	}
+}
+
+/* search */
+#block-block-1 {
+	background: white;
+	display: block;
+	position: absolute;
+	top: 87px;
+	left:0;
+	z-index: 1;
+	// transition: top .5s ease-in-out;
+
+	&.active {
+		background: red;
+	}
+
+	.content {
+		#search_leidos_website {
+			padding: 40px 0px 23px;
+
+		}
+	}
+}
 
 
 /*  tablet

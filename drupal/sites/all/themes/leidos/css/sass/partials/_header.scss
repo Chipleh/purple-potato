@@ -13,36 +13,18 @@
 	background: $color-white;
 	border-top: 5px solid $color-leidos-purple-light;
 	border-bottom: 1px solid $color-gray-medium-light;
-	height: 86px;
-	background: pink;
 
 	.section {
 		@extend %header-data;
 
+		// slogan unused, hiding element
 		#name-and-slogan {
 			display: none;
 		}
 
 		.region-header {
-			float: right;
-		}
-
-		#main-menu {
-			float: left;
+			@extend %header-data;
+			float: none;
 		}
 	}
-}
-
-
-/*  tablet
-**************************************************/
-@media only screen and (min-width: 721px) and (max-width: 960px) {
-
-}
-
-
-/*  mobile
-**************************************************/
-@media only screen and (max-width: 720px) {
-
 }
