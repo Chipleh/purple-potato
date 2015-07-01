@@ -1,0 +1,5 @@
+scssDir: css/sass/
+cssDir: css/
+
+jsSrcDir: js/scripts/
+jsConcatDir: js/

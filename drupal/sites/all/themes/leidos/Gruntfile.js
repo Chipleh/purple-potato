@@ -1,51 +1,90 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     "use strict";
 
-    require('time-grunt')(grunt);
-    require('load-grunt-tasks')(grunt, {
-        pattern: ['grunt-*']
-    });
+  ////////////////////////
+  // Load Config
+  ////////////////////////
 
-    // Project configuration.
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+  var config = grunt.file.readYAML("Gruntconfig.yml");
 
-        compass: {
-            dist: {
-                options: {
-                    config: 'config.rb',
-                    sassDir: 'css/sass',
-                    cssDir: 'css'
-                }
-            }
-        },
+  ////////////////////////
+  // Load Tasks
+  ////////////////////////
 
-        watch: {
-            css: {
-                files: 'css/sass/**/*.scss',
-                tasks: ['compass','autoprefixer']
-            }
-        },
+  require('load-grunt-tasks')(grunt);
 
-        autoprefixer: {
+  ////////////////////////
+  // Configure Tasks
+  ////////////////////////
+
+  grunt.initConfig({
+    // Compass - https://github.com/gruntjs/
+    compass: {
+        dist: {
             options: {
-                browsers: ['last 2 version', 'ie 8', 'ie 9'],
-                map: true
-            },
-            // all: {
-            //     files: [{
-            //         expand: true,
-            //         src: 'css/*.css',
-            //         dest: ''
-            //     }]
-            // }
-            thisisus: {
-                src: 'css/thisisus.css',
-                dest: 'css/thisisus.css'
+                config: 'config.rb',
+                sassDir: 'css/sass',
+                cssDir: 'css'
             }
-        },
-    });
+        }
+    },
 
-    // Define Tasks
+    // Auto Prefixer - https://github.com/gruntjs/
+    autoprefixer: {
+        options: {
+            browsers: ['last 2 version', 'ie 8', 'ie 9'],
+            map: true
+        },
+        all: {
+            files: [{
+                expand: true,
+                src: 'css/*.css',
+                dest: ''
+            }]
+        }
+    },
+
+    // Concat - https://github.com/gruntjs/grunt-contrib-concat
+    concat: {
+      options: {
+      },
+      dist: {
+        src: config.jsSrcDir + '*.js',
+        dest: config.jsConcatDir + 'scripts.js',
+      },
+    },
+
+    // jsHint - https://github.com/gruntjs/grunt-contrib-jshint
+    jshint: {
+      options: {
+        "eqnull": true,
+      },
+      all: [
+        'Gruntfile.js',
+        config.jsSrcDir + "*.js"
+      ]
+    },
+
+    // Watch - https://github.com/gruntjs/
+    watch: {
+        css: {
+            files: 'css/sass/**/*.scss',
+            tasks: ['compass','autoprefixer']
+        },
+        js: {
+            files: 'js/scripts/*.js',
+            tasks: ['concat','jshint'],
+            options: {
+              spawn: true
+            }
+        }
+    },
+  });
+
+  ////////////////////////
+  // Register New Tasks
+  ////////////////////////
+
     grunt.registerTask('default', ['watch']);
+
 };
