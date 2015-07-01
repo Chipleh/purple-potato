@@ -141,7 +141,9 @@ function leidos_preprocess_block(&$variables) {
  * Implements theme_menu_tree().
  */
 function leidos_menu_tree($variables) {
-  return '<ul class="menu clearfix">' . $variables['tree'] . '</ul>';
+  // Check for children menus and assign 'parent' or 'no-children'.
+  $parent = (strpos($variables['tree'], '<ul')) ? 'parent-menu' : 'no-children';
+  return '<ul class="menu clearfix ' . $parent . '">' . $variables['tree'] . '</ul>';
 }
 
 /**
