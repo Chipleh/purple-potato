@@ -169,19 +169,20 @@
 
 /* search */
 .block-leidos-custom-search {
-	// top: 92px;
 	background: $color-gray-light;
 	border-bottom: 1px solid $color-gray-medium-light;
 	display: block;
 	height:unquote("calc(")$search-height unquote("+ 62px)"); // adjusted to compensate for padding
 	left:0;
 	position: absolute;
-	top: -49px;
+	top: 92px;
+	// top: -49px;
 	transition: top .5s cubic-bezier(.40, .0, .40, 1);
 	z-index: 1;
 
 	&.active {
-		top: 92px;
+		// top: 92px;
+		top: -49px;
 	}
 
 	h2 {
@@ -195,6 +196,7 @@
 			@extend %max-width;
 			height: $search-height;
 			padding: 40px 0px 22px;
+			position: relative;
 
 			input[type="text"] {
 				background: url("../images/searchbox-search-glass.png") no-repeat 50px 10px $color-gray-light;
@@ -208,6 +210,7 @@
 				outline: none;
 				padding: 0 0 0 120px;
 				position: relative;
+				width: 67%;
 
 				&:focus {
 					background-position: 50px -92px;
@@ -215,11 +218,39 @@
 			}
 
 			input[type="submit"] {
+				border: 0;
+				cursor: pointer;
+				display: block;
+				height: $search-height;
+				outline: none;
+				padding: 0;
+				position: absolute;
+				right:unquote("calc(")$search-height unquote("+ 40px)"); // adjusted to compensate for cancel button
+				top: 40px;
+				width: $search-height;
+
 				display: none;
+
+				&:hover {
+				}
 			}
 
 			button[type="cancel"] {
-				display: none;
+				background: url("../images/searchbox-cancel.png") no-repeat center 14px $color-gray-light;
+				border: 0;
+				cursor: pointer;
+				display: block;
+				height: $search-height;
+				outline: none;
+				padding: 0;
+				position: absolute;
+				right: 20px;
+				top: 40px;
+				width: $search-height;
+
+				&:hover {
+					background-position: center -88px;					
+				}
 			}
 		}
 	}
