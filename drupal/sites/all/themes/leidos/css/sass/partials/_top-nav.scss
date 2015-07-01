@@ -10,10 +10,10 @@
 /* main menu */
 #block-system-main-menu {
 	@extend %header-data;
-	border: none;
-	display: block;
+	background: $color-white;
+	border-bottom: 1px solid $color-gray-medium-light;
+	border-top: 5px solid $color-leidos-purple-light;
 	position: relative;
-	float: none;
 	z-index: 2;
 
 	&:after {
@@ -23,9 +23,10 @@
 		display: block;
 		overflow: hidden;
 		position: absolute;
-		right: -500%;
+		right: -450%;
 		top: 0;
 		width: 500%;
+		z-index: 1;
 	}
 
 	h2 {
@@ -33,6 +34,15 @@
 	}
 
 	.content {
+		@extend %header-data;
+		@extend %max-width;
+		background: $color-white;
+		border: none;
+		display: block;
+		float: none;
+		position: relative;
+		z-index: 2;
+
 		ul {
 			position: relative;
 			width: 100%;
@@ -118,7 +128,7 @@
 						}
 
 						&:hover,
-						.active {
+						&.active {
 							&:before {
 								background-position: center bottom;
 							}
@@ -158,17 +168,18 @@
 }
 
 /* search */
-#block-block-1 {
-	background: white;
+.block-leidos-custom-search {
+	background: $color-white;
 	display: block;
-	position: absolute;
-	top: 87px;
 	left:0;
-	z-index: 1;
-	// transition: top .5s ease-in-out;
+	position: absolute;
+	top: -87px;
+	transition: top .5s ease-in-out;
+	z-index: 1; 
 
 	&.active {
-		background: red;
+		background: $color-white;
+		top: 87px;
 	}
 
 	.content {

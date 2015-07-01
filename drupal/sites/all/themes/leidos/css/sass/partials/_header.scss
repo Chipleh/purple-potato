@@ -9,13 +9,11 @@
 **************************************************/
 /* header */
 #header {
-	@extend %header-data;
+	height:unquote("calc(")$header-height unquote("+ 5px)"); // adjusted to compensate for the border
 	background: $color-white;
-	border-top: 5px solid $color-leidos-purple-light;
-	border-bottom: 1px solid $color-gray-medium-light;
 
 	.section {
-		@extend %header-data;
+		height:unquote("calc(")$header-height unquote("+ 5px)"); // adjusted to compensate for the border
 
 		// slogan unused, hiding element
 		#name-and-slogan {
@@ -23,7 +21,7 @@
 		}
 
 		.region-header {
-			@extend %header-data;
+			height:unquote("calc(")$header-height unquote("+ 5px)"); // adjusted to compensate for the border
 			float: none;
 		}
 	}

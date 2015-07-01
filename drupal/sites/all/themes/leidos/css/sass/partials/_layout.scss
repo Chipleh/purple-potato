@@ -29,12 +29,13 @@
 
 /* header specific */
 #header {
+	@extend %full-width;
 	.section {
 		.region-header {
 			@extend %full-width;
 
 			#block-system-main-menu {
-				@extend %max-width;
+				@extend %full-width;
 			}
 
 			#block-block-1 {
