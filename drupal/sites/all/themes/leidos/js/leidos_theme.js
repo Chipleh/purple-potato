@@ -15,13 +15,17 @@ function getUrlParameter(sParam)
   
 //Leidos custom styles on ready
 jQuery(document).ready(function($) {
+  
   //If custom show all link exists - proceed with changes
   if($("#custom-view-all-link").length != 0) {
     
-    $('#custom-view-all-link').attr('href', 'javascript:void;');
+    //Remove View All if no pager present
+    if($(".pager").length == 0) {
+      $("#custom-view-all-link").remove();
+    }
     
+    $('#custom-view-all-link').attr('href', 'javascript:void;');
     $('.views-widget-per-page').remove();
-
     $('#custom-view-all-link').click(function(){
       
       var url_q = (location.search == '') ? '?' : ''; 
