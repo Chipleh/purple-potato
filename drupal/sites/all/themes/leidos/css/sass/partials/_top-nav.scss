@@ -146,6 +146,12 @@
 						background: none, url("../images/nav-arrow.svg") no-repeat 50% 0;
 					}							
 				}
+
+				&.expanded {
+					.menu {
+						display: none;
+					}
+				}
 			}
 		}
 	}

@@ -1,22 +1,13 @@
 module.exports = function(grunt) {
     "use strict";
 
-  ////////////////////////
   // Load Config
-  ////////////////////////
-
   var config = grunt.file.readYAML("Gruntconfig.yml");
 
-  ////////////////////////
   // Load Tasks
-  ////////////////////////
-
   require('load-grunt-tasks')(grunt);
 
-  ////////////////////////
   // Configure Tasks
-  ////////////////////////
-
   grunt.initConfig({
     // Compass - https://github.com/gruntjs/
     compass: {
@@ -72,19 +63,16 @@ module.exports = function(grunt) {
             tasks: ['compass','autoprefixer']
         },
         js: {
-            files: 'js/scripts/*.js',
+            files: 'js/scripts/**/*.js',
             tasks: ['concat','jshint'],
             options: {
-              spawn: true
+              spawn: true,
             }
         }
     },
   });
 
-  ////////////////////////
   // Register New Tasks
-  ////////////////////////
-
     grunt.registerTask('default', ['watch']);
 
 };
