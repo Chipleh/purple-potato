@@ -1,3 +1,6 @@
+//	Search Box JS
+//	Rhino Hooton
+//	6/29/15
 jQuery(document).ready(function() {
 
 	var searchBox = jQuery('li.last span.nolink');
@@ -18,3 +21,33 @@ jQuery(document).ready(function() {
 	});
 
 });
+
+
+//	Side Nav JS
+//	Rhino Hooton
+//	6/29/15
+jQuery(document).ready(function() {
+
+
+
+});
+
+
+//	Top Nav JS
+//	Rhino Hooton
+//	6/29/15
+jQuery(document).ready(function() {
+
+	jQuery(".expanded a").hover(
+		function() {
+			jQuery(this).parent(".expanded").toggleClass("hover");
+		}
+	);
+	jQuery(".no-children").hover(
+		function() {
+			jQuery(this).parent(".expanded").toggleClass("hover");
+		}
+	);
+
+});
+

@@ -5,9 +5,8 @@
 /************************/
 
 
-/*  elements
+/*  main menu
 **************************************************/
-/* main menu */
 #block-system-main-menu {
 	@extend %header-data;
 	background: $color-white;
@@ -43,7 +42,7 @@
 		position: relative;
 		z-index: 2;
 
-		ul {
+		.parent-menu {
 			position: relative;
 			width: 100%;
 
@@ -51,6 +50,10 @@
 				diplay: block;
 				float:left;
 				margin: 0 0.75%;
+
+				&.expanded {
+					position: relative
+				}
 
 				&.first {
 					margin-left: 0;
@@ -81,6 +84,7 @@
 					margin-right: 0;
 				}
 
+				/* search glass in main nav */
 				&.last {
 					margin: 0;
 					overflow: hidden;
@@ -157,9 +161,27 @@
 					}							
 				}
 
-				&.expanded {
-					.menu {
+				/* sub menus */
+				.no-children {
+					background: red;
+					display: block;
+					height: 0px;
+					left: 0;
+					overflow: hidden;
+					position: absolute;
+					top: $header-height;
+					transition: all .25s cubic-bezier(.40, .0, .40, 1);
+					width: 100px;
+
+					li {
 						display: none;
+					}
+				}
+
+				&.hover {
+					.no-children {
+						height: 200px;
+						background: blue;
 					}
 				}
 			}
@@ -167,7 +189,8 @@
 	}
 }
 
-/* search */
+/*  search box
+**************************************************/
 .block-leidos-custom-search {
 	background: $color-gray-light;
 	border-bottom: 1px solid $color-gray-medium-light;
@@ -175,14 +198,14 @@
 	height:unquote("calc(")$search-height unquote("+ 62px)"); // adjusted to compensate for padding
 	left:0;
 	position: absolute;
-	top: 92px;
-	// top: -49px;
+	// top: 92px;
+	top: -49px;
 	transition: top .5s cubic-bezier(.40, .0, .40, 1);
 	z-index: 1;
 
 	&.active {
-		// top: 92px;
-		top: -49px;
+		top: 92px;
+		// top: -49px;
 	}
 
 	h2 {

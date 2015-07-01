@@ -1,3 +1,6 @@
+//	Search Box JS
+//	Rhino Hooton
+//	6/29/15
 jQuery(document).ready(function() {
 
 	var searchBox = jQuery('li.last span.nolink');
@@ -18,3 +21,4 @@ jQuery(document).ready(function() {
 	});
 
 });
+
