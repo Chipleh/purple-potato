@@ -90,7 +90,7 @@ function leidos_default_panels_layout() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '2',
-        'class' => '',
+        'class' => 'top-banner',
         'hide_empty' => 1,
       ),
       6 => array(
@@ -109,7 +109,7 @@ function leidos_default_panels_layout() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '6',
-        'class' => '',
+        'class' => 'left-navigation-menu',
         'hide_empty' => 1,
       ),
       7 => array(
@@ -139,7 +139,7 @@ function leidos_default_panels_layout() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '7',
-        'class' => '',
+        'class' => 'optional-rotator',
         'hide_empty' => 1,
       ),
       'right_rail' => array(
@@ -148,7 +148,7 @@ function leidos_default_panels_layout() {
         'width' => 50,
         'width_type' => '%',
         'parent' => '8',
-        'class' => '',
+        'class' => 'page-content',
         'hide_empty' => 0,
       ),
       'optional_inner_right_rail' => array(
@@ -157,7 +157,7 @@ function leidos_default_panels_layout() {
         'width' => 50,
         'width_type' => '%',
         'parent' => '8',
-        'class' => '',
+        'class' => 'optional-right-rail',
         'hide_empty' => 1,
       ),
     ),

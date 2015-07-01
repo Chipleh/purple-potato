@@ -810,6 +810,14 @@ function leidos_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'title' => array(
+          'value' => 'Panes Demo | [site:name]',
+        ),
+      ),
+    ),
   );
   $display = new panels_display();
   $display->layout = 'flexible:industry_template';
@@ -962,6 +970,27 @@ function leidos_default_page_manager_pages() {
     $pane->uuid = 'cd351336-c5b1-4db7-ac29-3f2119fa482c';
     $display->content['new-cd351336-c5b1-4db7-ac29-3f2119fa482c'] = $pane;
     $display->panels['right_rail'][1] = 'new-cd351336-c5b1-4db7-ac29-3f2119fa482c';
+    $pane = new stdClass();
+    $pane->pid = 'new-a4efaebb-153f-436c-a0c5-e4c52a678f0e';
+    $pane->panel = 'right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:13';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'a4efaebb-153f-436c-a0c5-e4c52a678f0e';
+    $display->content['new-a4efaebb-153f-436c-a0c5-e4c52a678f0e'] = $pane;
+    $display->panels['right_rail'][2] = 'new-a4efaebb-153f-436c-a0c5-e4c52a678f0e';
     $pane = new stdClass();
     $pane->pid = 'new-6c4377f2-c9da-4d9f-b2ee-d2c26c0346f7';
     $pane->panel = 'top_banner';
