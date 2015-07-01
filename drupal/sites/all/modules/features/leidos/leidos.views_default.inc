@@ -256,6 +256,12 @@ function leidos_views_default_views() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Taxonomy term: Hover Text */
+  $handler->display->display_options['fields']['field_hover_text']['id'] = 'field_hover_text';
+  $handler->display->display_options['fields']['field_hover_text']['table'] = 'field_data_field_hover_text';
+  $handler->display->display_options['fields']['field_hover_text']['field'] = 'field_hover_text';
+  $handler->display->display_options['fields']['field_hover_text']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_text']['element_label_colon'] = FALSE;
   /* Field: Taxonomy term: Taxonomy Image */
   $handler->display->display_options['fields']['field_taxonomy_image']['id'] = 'field_taxonomy_image';
   $handler->display->display_options['fields']['field_taxonomy_image']['table'] = 'field_data_field_taxonomy_image';
@@ -281,7 +287,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_short_summary']['field'] = 'field_short_summary';
   $handler->display->display_options['fields']['field_short_summary']['label'] = '';
   $handler->display->display_options['fields']['field_short_summary']['element_label_colon'] = FALSE;
-  /* Field: Taxonomy term: Featured subcategories */
+  /* Field: Taxonomy term: Featured subcapabilities */
   $handler->display->display_options['fields']['field_featured_subcategories']['id'] = 'field_featured_subcategories';
   $handler->display->display_options['fields']['field_featured_subcategories']['table'] = 'field_data_field_featured_subcategories';
   $handler->display->display_options['fields']['field_featured_subcategories']['field'] = 'field_featured_subcategories';
@@ -328,7 +334,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'project_type' => 'project_type',
+    'capabilities' => 'capabilities',
   );
   /* Filter criterion: Taxonomy term: Parent term */
   $handler->display->display_options['filters']['parent']['id'] = 'parent';
@@ -423,7 +429,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'project_type' => 'project_type',
+    'capabilities' => 'capabilities',
   );
   /* Filter criterion: Taxonomy term: Parent term */
   $handler->display->display_options['filters']['parent']['id'] = 'parent';

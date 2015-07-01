@@ -2798,9 +2798,9 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-project_type-field_content'
-  $field_instances['taxonomy_term-project_type-field_content'] = array(
-    'bundle' => 'project_type',
+  // Exported field_instance: 'taxonomy_term-capabilities-field_content'
+  $field_instances['taxonomy_term-capabilities-field_content'] = array(
+    'bundle' => 'capabilities',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -2810,7 +2810,7 @@ function leidos_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 5,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2829,14 +2829,14 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-project_type-field_featured_subcategories'
-  $field_instances['taxonomy_term-project_type-field_featured_subcategories'] = array(
-    'bundle' => 'project_type',
+  // 'taxonomy_term-capabilities-field_featured_subcategories'
+  $field_instances['taxonomy_term-capabilities-field_featured_subcategories'] = array(
+    'bundle' => 'capabilities',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -2846,13 +2846,13 @@ function leidos_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 6,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_featured_subcategories',
-    'label' => 'Featured subcategories',
+    'label' => 'Featured subcapabilities',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2862,22 +2862,135 @@ function leidos_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-project_type-field_short_summary'
-  $field_instances['taxonomy_term-project_type-field_short_summary'] = array(
-    'bundle' => 'project_type',
+  // Exported field_instance: 'taxonomy_term-capabilities-field_hide_hover'
+  $field_instances['taxonomy_term-capabilities-field_hide_hover'] = array(
+    'bundle' => 'capabilities',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 9,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_hide_hover',
+    'label' => 'Hide Hover',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-capabilities-field_hide_preview_box'
+  $field_instances['taxonomy_term-capabilities-field_hide_preview_box'] = array(
+    'bundle' => 'capabilities',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 8,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_hide_preview_box',
+    'label' => 'Hide Preview Box',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-capabilities-field_hover_text'
+  $field_instances['taxonomy_term-capabilities-field_hover_text'] = array(
+    'bundle' => 'capabilities',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_hover_text',
+    'label' => 'Hover Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-capabilities-field_short_summary'
+  $field_instances['taxonomy_term-capabilities-field_short_summary'] = array(
+    'bundle' => 'capabilities',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2896,21 +3009,25 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-project_type-field_taxonomy_image'
-  $field_instances['taxonomy_term-project_type-field_taxonomy_image'] = array(
-    'bundle' => 'project_type',
+  // Exported field_instance: 'taxonomy_term-capabilities-field_taxonomy_image'
+  $field_instances['taxonomy_term-capabilities-field_taxonomy_image'] = array(
+    'bundle' => 'capabilities',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2945,7 +3062,7 @@ function leidos_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -2968,13 +3085,16 @@ function leidos_field_default_field_instances() {
   t('Customer Name');
   t('External Link');
   t('Featured');
-  t('Featured subcategories');
+  t('Featured subcapabilities');
   t('Freeform Html');
   t('Google Earth Link');
   t('Header Title');
+  t('Hide Hover');
   t('Hide Information Box');
+  t('Hide Preview Box');
   t('Hover Cta');
   t('Hover Summary');
+  t('Hover Text');
   t('Hover Title');
   t('Image');
   t('Image Description');
