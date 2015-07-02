@@ -360,8 +360,9 @@ function leidos_field_group_info() {
     'children' => array(
       0 => 'field_content',
       1 => 'field_taxonomy_image',
-      2 => 'name',
-      3 => 'description',
+      2 => 'field_color_scheme',
+      3 => 'name',
+      4 => 'description',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -378,6 +379,36 @@ function leidos_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_general|taxonomy_term|theme_colors|form';
+  $field_group->group_name = 'group_general';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'theme_colors';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Info',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_bottom_color',
+      1 => 'field_top_color',
+      2 => 'name',
+      3 => 'description',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-general field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_general|taxonomy_term|theme_colors|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_hover_info|taxonomy_term|capabilities|form';
   $field_group->group_name = 'group_hover_info';
   $field_group->entity_type = 'taxonomy_term';
@@ -386,10 +417,11 @@ function leidos_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Hover Info',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(
       0 => 'field_hover_text',
       1 => 'field_hide_hover',
+      2 => 'field_hover_shape',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -443,11 +475,12 @@ function leidos_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Preview Box Info',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_featured_subcategories',
       1 => 'field_short_summary',
       2 => 'field_hide_preview_box',
+      3 => 'field_preview_image_hover_text',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

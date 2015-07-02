@@ -32,6 +32,43 @@ function leidos_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'taxonomy_term|capabilities|default';
+  $ds_fieldsetting->entity_type = 'taxonomy_term';
+  $ds_fieldsetting->bundle = 'capabilities';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'featured_projects' => array(
+      'weight' => '7',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:8:{s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:14:"items_per_page";s:1:"2";s:4:"path";s:0:"";s:9:"arguments";a:1:{s:19:"term_node_tid_depth";s:18:"%taxonomy_term:tid";}s:14:"override_title";i:1;s:19:"override_title_text";s:67:"FEATURED PROJECTS <a href="http://google.com">View All Projects</a>";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:11:"views_panes";s:7:"subtype";s:31:"projects-featured_projects_pane";}',
+        'load_terms' => 0,
+        'ft' => array(),
+      ),
+    ),
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'more_link' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_taxonomy_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['taxonomy_term|capabilities|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'taxonomy_term|project_type|default';
   $ds_fieldsetting->entity_type = 'taxonomy_term';
   $ds_fieldsetting->bundle = 'project_type';
@@ -482,6 +519,57 @@ function leidos_ds_layout_settings_info() {
     'layout_disable_css' => FALSE,
   );
   $export['fieldable_panels_pane|list_columns|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'taxonomy_term|capabilities|default';
+  $ds_layout->entity_type = 'taxonomy_term';
+  $ds_layout->bundle = 'capabilities';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'panels-flexible:industry_template';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'top_banner' => array(
+        0 => 'title',
+      ),
+      'right_rail' => array(
+        1 => 'field_short_summary',
+        2 => 'field_taxonomy_image',
+        3 => 'description',
+        4 => 'more_link',
+        5 => 'field_content',
+        6 => 'field_featured_subcategories',
+      ),
+      'optional_inner_right_rail' => array(
+        7 => 'featured_projects',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'top_banner',
+      'field_short_summary' => 'right_rail',
+      'field_taxonomy_image' => 'right_rail',
+      'description' => 'right_rail',
+      'more_link' => 'right_rail',
+      'field_content' => 'right_rail',
+      'field_featured_subcategories' => 'right_rail',
+      'featured_projects' => 'optional_inner_right_rail',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'top_banner' => 'div',
+      'left_rail' => 'div',
+      'optional_rotator' => 'div',
+      'right_rail' => 'div',
+      'optional_inner_right_rail' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'hide_sidebars' => 0,
+  );
+  $export['taxonomy_term|capabilities|default'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

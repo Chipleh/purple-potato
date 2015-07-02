@@ -2798,6 +2798,38 @@ function leidos_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-capabilities-field_color_scheme'
+  $field_instances['taxonomy_term-capabilities-field_color_scheme'] = array(
+    'bundle' => 'capabilities',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_color_scheme',
+    'label' => 'Color Scheme',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-capabilities-field_content'
   $field_instances['taxonomy_term-capabilities-field_content'] = array(
     'bundle' => 'capabilities',
@@ -2829,7 +2861,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 15,
     ),
   );
 
@@ -2862,7 +2894,7 @@ function leidos_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -2943,6 +2975,42 @@ function leidos_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-capabilities-field_hover_shape'
+  $field_instances['taxonomy_term-capabilities-field_hover_shape'] = array(
+    'bundle' => 'capabilities',
+    'default_value' => array(
+      0 => array(
+        'value' => 'full_square',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 11,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_hover_shape',
+    'label' => 'Hover Shape',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-capabilities-field_hover_text'
   $field_instances['taxonomy_term-capabilities-field_hover_text'] = array(
     'bundle' => 'capabilities',
@@ -2974,7 +3042,43 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-capabilities-field_preview_image_hover_text'
+  $field_instances['taxonomy_term-capabilities-field_preview_image_hover_text'] = array(
+    'bundle' => 'capabilities',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_preview_image_hover_text',
+    'label' => 'Preview Image Hover Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 7,
     ),
   );
 
@@ -3009,7 +3113,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -3062,7 +3166,77 @@ function leidos_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-theme_colors-field_bottom_color'
+  $field_instances['taxonomy_term-theme_colors-field_bottom_color'] = array(
+    'bundle' => 'theme_colors',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_bottom_color',
+    'label' => 'Bottom Color',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-theme_colors-field_top_color'
+  $field_instances['taxonomy_term-theme_colors-field_top_color'] = array(
+    'bundle' => 'theme_colors',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_top_color',
+    'label' => 'Top Color',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
     ),
   );
 
@@ -3075,9 +3249,11 @@ function leidos_field_default_field_instances() {
   t('Announcement Type');
   t('Authors');
   t('Body');
+  t('Bottom Color');
   t('Breadcrumb Link');
   t('CTA');
   t('Capabilities');
+  t('Color Scheme');
   t('Columns');
   t('Contact Information');
   t('Contact us');
@@ -3093,6 +3269,7 @@ function leidos_field_default_field_instances() {
   t('Hide Information Box');
   t('Hide Preview Box');
   t('Hover Cta');
+  t('Hover Shape');
   t('Hover Summary');
   t('Hover Text');
   t('Hover Title');
@@ -3111,6 +3288,7 @@ function leidos_field_default_field_instances() {
   t('Overview');
   t('Overview Header');
   t('Point of Contact');
+  t('Preview Image Hover Text');
   t('Private Tag');
   t('Project Date');
   t('Project Facts');
@@ -3129,6 +3307,7 @@ function leidos_field_default_field_instances() {
   t('Text');
   t('Title Override');
   t('Title link');
+  t('Top Color');
 
   return $field_instances;
 }

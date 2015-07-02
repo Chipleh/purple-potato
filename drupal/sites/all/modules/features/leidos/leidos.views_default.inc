@@ -256,6 +256,44 @@ function leidos_views_default_views() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Taxonomy term: Color Scheme (field_color_scheme) */
+  $handler->display->display_options['relationships']['field_color_scheme_tid']['id'] = 'field_color_scheme_tid';
+  $handler->display->display_options['relationships']['field_color_scheme_tid']['table'] = 'field_data_field_color_scheme';
+  $handler->display->display_options['relationships']['field_color_scheme_tid']['field'] = 'field_color_scheme_tid';
+  /* Field: Taxonomy term: Bottom Color */
+  $handler->display->display_options['fields']['field_bottom_color']['id'] = 'field_bottom_color';
+  $handler->display->display_options['fields']['field_bottom_color']['table'] = 'field_data_field_bottom_color';
+  $handler->display->display_options['fields']['field_bottom_color']['field'] = 'field_bottom_color';
+  $handler->display->display_options['fields']['field_bottom_color']['relationship'] = 'field_color_scheme_tid';
+  $handler->display->display_options['fields']['field_bottom_color']['label'] = '';
+  $handler->display->display_options['fields']['field_bottom_color']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Top Color */
+  $handler->display->display_options['fields']['field_top_color']['id'] = 'field_top_color';
+  $handler->display->display_options['fields']['field_top_color']['table'] = 'field_data_field_top_color';
+  $handler->display->display_options['fields']['field_top_color']['field'] = 'field_top_color';
+  $handler->display->display_options['fields']['field_top_color']['relationship'] = 'field_color_scheme_tid';
+  $handler->display->display_options['fields']['field_top_color']['label'] = '';
+  $handler->display->display_options['fields']['field_top_color']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Taxonomy term: Hide Hover */
+  $handler->display->display_options['fields']['field_hide_hover']['id'] = 'field_hide_hover';
+  $handler->display->display_options['fields']['field_hide_hover']['table'] = 'field_data_field_hide_hover';
+  $handler->display->display_options['fields']['field_hide_hover']['field'] = 'field_hide_hover';
+  $handler->display->display_options['fields']['field_hide_hover']['label'] = '';
+  $handler->display->display_options['fields']['field_hide_hover']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Hover Shape */
+  $handler->display->display_options['fields']['field_hover_shape']['id'] = 'field_hover_shape';
+  $handler->display->display_options['fields']['field_hover_shape']['table'] = 'field_data_field_hover_shape';
+  $handler->display->display_options['fields']['field_hover_shape']['field'] = 'field_hover_shape';
+  $handler->display->display_options['fields']['field_hover_shape']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_shape']['element_label_colon'] = FALSE;
   /* Field: Taxonomy term: Hover Text */
   $handler->display->display_options['fields']['field_hover_text']['id'] = 'field_hover_text';
   $handler->display->display_options['fields']['field_hover_text']['table'] = 'field_data_field_hover_text';
@@ -273,14 +311,18 @@ function leidos_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Taxonomy term: Hide Preview Box */
+  $handler->display->display_options['fields']['field_hide_preview_box']['id'] = 'field_hide_preview_box';
+  $handler->display->display_options['fields']['field_hide_preview_box']['table'] = 'field_data_field_hide_preview_box';
+  $handler->display->display_options['fields']['field_hide_preview_box']['field'] = 'field_hide_preview_box';
+  $handler->display->display_options['fields']['field_hide_preview_box']['label'] = '';
+  $handler->display->display_options['fields']['field_hide_preview_box']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Preview Image Hover Text */
+  $handler->display->display_options['fields']['field_preview_image_hover_text']['id'] = 'field_preview_image_hover_text';
+  $handler->display->display_options['fields']['field_preview_image_hover_text']['table'] = 'field_data_field_preview_image_hover_text';
+  $handler->display->display_options['fields']['field_preview_image_hover_text']['field'] = 'field_preview_image_hover_text';
+  $handler->display->display_options['fields']['field_preview_image_hover_text']['label'] = '';
+  $handler->display->display_options['fields']['field_preview_image_hover_text']['element_label_colon'] = FALSE;
   /* Field: Taxonomy term: Short Summary */
   $handler->display->display_options['fields']['field_short_summary']['id'] = 'field_short_summary';
   $handler->display->display_options['fields']['field_short_summary']['table'] = 'field_data_field_short_summary';

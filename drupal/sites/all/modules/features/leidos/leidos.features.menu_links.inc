@@ -1068,7 +1068,49 @@ function leidos_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 1,
+    'weight' => -50,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+  );
+  // Exported menu link: menu-engineering-navigation_articles--publications:https://www.leidos.com/engineering/articles
+  $menu_links['menu-engineering-navigation_articles--publications:https://www.leidos.com/engineering/articles'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/articles',
+    'router_path' => '',
+    'link_title' => 'Articles & Publications',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_articles--publications:https://www.leidos.com/engineering/articles',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
     'weight' => 0,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_newsroom:https://www.leidos.com/engineering/newsroom',
+  );
+  // Exported menu link: menu-engineering-navigation_awards:https://www.leidos.com/engineering/awards
+  $menu_links['menu-engineering-navigation_awards:https://www.leidos.com/engineering/awards'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/awards',
+    'router_path' => '',
+    'link_title' => 'Awards',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_awards:https://www.leidos.com/engineering/awards',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -48,
     'customized' => 1,
     'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
   );
@@ -1132,6 +1174,111 @@ function leidos_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
+  // Exported menu link: menu-engineering-navigation_government:https://www.leidos.com/engineering/markets/government
+  $menu_links['menu-engineering-navigation_government:https://www.leidos.com/engineering/markets/government'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/markets/government',
+    'router_path' => '',
+    'link_title' => 'Government',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_government:https://www.leidos.com/engineering/markets/government',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -46,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+  );
+  // Exported menu link: menu-engineering-navigation_industry-rankings:https://www.leidos.com/engineering/industry-rankings
+  $menu_links['menu-engineering-navigation_industry-rankings:https://www.leidos.com/engineering/industry-rankings'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/industry-rankings',
+    'router_path' => '',
+    'link_title' => 'Industry Rankings',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_industry-rankings:https://www.leidos.com/engineering/industry-rankings',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -49,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+  );
+  // Exported menu link: menu-engineering-navigation_leadership:https://www.leidos.com/engineering/leadership
+  $menu_links['menu-engineering-navigation_leadership:https://www.leidos.com/engineering/leadership'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/leadership',
+    'router_path' => '',
+    'link_title' => 'Leadership',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_leadership:https://www.leidos.com/engineering/leadership',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+  );
+  // Exported menu link: menu-engineering-navigation_lenders-and-developers:https://www.leidos.com/engineering/markets/lenders-developers
+  $menu_links['menu-engineering-navigation_lenders-and-developers:https://www.leidos.com/engineering/markets/lenders-developers'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/markets/lenders-developers',
+    'router_path' => '',
+    'link_title' => 'Lenders and Developers',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_lenders-and-developers:https://www.leidos.com/engineering/markets/lenders-developers',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -47,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+  );
+  // Exported menu link: menu-engineering-navigation_manufacturing--industrial:https://www.leidos.com/engineering/markets/manufacturing-and-industrial
+  $menu_links['menu-engineering-navigation_manufacturing--industrial:https://www.leidos.com/engineering/markets/manufacturing-and-industrial'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/markets/manufacturing-and-industrial',
+    'router_path' => '',
+    'link_title' => 'Manufacturing & Industrial',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_manufacturing--industrial:https://www.leidos.com/engineering/markets/manufacturing-and-industrial',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -49,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+  );
   // Exported menu link: menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets
   $menu_links['menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets'] = array(
     'menu_name' => 'menu-engineering-navigation',
@@ -1147,7 +1294,7 @@ function leidos_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 1,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
@@ -1167,10 +1314,73 @@ function leidos_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 1,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 1,
     'weight' => -46,
     'customized' => 1,
+  );
+  // Exported menu link: menu-engineering-navigation_office-locations:https://www.leidos.com/engineering/engineering-office-locations
+  $menu_links['menu-engineering-navigation_office-locations:https://www.leidos.com/engineering/engineering-office-locations'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/engineering-office-locations',
+    'router_path' => '',
+    'link_title' => 'Office Locations',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_office-locations:https://www.leidos.com/engineering/engineering-office-locations',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+  );
+  // Exported menu link: menu-engineering-navigation_oil-gas--chemicals:https://www.leidos.com/engineering/markets/oil-gas
+  $menu_links['menu-engineering-navigation_oil-gas--chemicals:https://www.leidos.com/engineering/markets/oil-gas'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/markets/oil-gas',
+    'router_path' => '',
+    'link_title' => 'Oil, Gas & Chemicals',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_oil-gas--chemicals:https://www.leidos.com/engineering/markets/oil-gas',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -48,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+  );
+  // Exported menu link: menu-engineering-navigation_our-engineering-legacy:https://www.leidos.com/engineering/ourlegacy
+  $menu_links['menu-engineering-navigation_our-engineering-legacy:https://www.leidos.com/engineering/ourlegacy'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/ourlegacy',
+    'router_path' => '',
+    'link_title' => 'Our Engineering Legacy',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_our-engineering-legacy:https://www.leidos.com/engineering/ourlegacy',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
   );
   // Exported menu link: menu-engineering-navigation_projects:https://www.leidos.com/engineering/projects
   $menu_links['menu-engineering-navigation_projects:https://www.leidos.com/engineering/projects'] = array(
@@ -1191,6 +1401,27 @@ function leidos_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
+  );
+  // Exported menu link: menu-engineering-navigation_utilities:https://www.leidos.com/engineering/markets/utilities
+  $menu_links['menu-engineering-navigation_utilities:https://www.leidos.com/engineering/markets/utilities'] = array(
+    'menu_name' => 'menu-engineering-navigation',
+    'link_path' => 'https://www.leidos.com/engineering/markets/utilities',
+    'router_path' => '',
+    'link_title' => 'Utilities',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-engineering-navigation_utilities:https://www.leidos.com/engineering/markets/utilities',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => -50,
+    'customized' => 1,
+    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
   );
   // Exported menu link: menu-footer---main-menu_leidos--2015-leidos:https://www.leidos.com/
   $menu_links['menu-footer---main-menu_leidos--2015-leidos:https://www.leidos.com/'] = array(
@@ -1554,9 +1785,11 @@ function leidos_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('About Leidos Engineering');
+  t(' About Leidos Engineering');
   t('About');
   t('Advanced Communications Systems');
+  t('Articles & Publications');
+  t('Awards');
   t('Border & Transportation Security');
   t('Business / Financial Advisory');
   t('Cancer & AIDS Research');
@@ -1587,24 +1820,31 @@ function leidos_menu_default_menu_links() {
   t('For Customers');
   t('For Employees');
   t('For Suppliers');
+  t('Government');
   t('Health');
   t('Health IT');
   t('Healthcare Quality & Cost');
   t('Industry News & Events');
+  t('Industry Rankings');
   t('Investors');
   t('Leadership');
   t('Legacy');
   t('Leidos');
   t('Leidos Companies');
   t('Leidos © 2015 Leidos');
+  t('Lenders and Developers');
   t('Life Sciences');
   t('Life at Leidos');
   t('Logistics');
+  t('Manufacturing & Industrial');
   t('Markets');
   t('Multimedia');
   t('National Security');
   t('Newsroom');
+  t('Office Locations');
+  t('Oil, Gas & Chemicals');
   t('Opportunities');
+  t('Our Engineering Legacy');
   t('Pay & Benefits');
   t('Power Grid Engineering');
   t('Privacy Policy');
@@ -1621,6 +1861,7 @@ function leidos_menu_default_menu_links() {
   t('Smart Grid');
   t('Stock Data');
   t('Systems Integration / Controls');
+  t('Utilities');
   t('Utility Security');
   t('Vision, Mission, Values');
 

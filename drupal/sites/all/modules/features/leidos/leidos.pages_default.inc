@@ -41,6 +41,14 @@ function leidos_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'title' => array(
+          'value' => 'Engineering - Capabilities | [site:name]',
+        ),
+      ),
+    ),
   );
   $display = new panels_display();
   $display->layout = 'flexible:industry_template';
@@ -60,6 +68,29 @@ function leidos_default_page_manager_pages() {
   $display->uuid = 'af13ff70-0c6f-40ea-9328-aa6a613aefc5';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-ade7f177-29d9-4ca9-a28d-9796d6ce1fa3';
+    $pane->panel = 'left_rail';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-engineering-navigation';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'ade7f177-29d9-4ca9-a28d-9796d6ce1fa3';
+    $display->content['new-ade7f177-29d9-4ca9-a28d-9796d6ce1fa3'] = $pane;
+    $display->panels['left_rail'][0] = 'new-ade7f177-29d9-4ca9-a28d-9796d6ce1fa3';
     $pane = new stdClass();
     $pane->pid = 'new-813fec8e-c79b-4794-be62-99ba9ffb57e2';
     $pane->panel = 'right_rail';
@@ -116,7 +147,58 @@ function leidos_default_page_manager_pages() {
     $pane->uuid = 'cc1f0e6c-6ae2-4e29-b6aa-22b2052e2999';
     $display->content['new-cc1f0e6c-6ae2-4e29-b6aa-22b2052e2999'] = $pane;
     $display->panels['right_rail'][1] = 'new-cc1f0e6c-6ae2-4e29-b6aa-22b2052e2999';
-  $display->hide_title = PANELS_TITLE_FIXED;
+    $pane = new stdClass();
+    $pane->pid = 'new-a3b6da74-f9de-42e4-b38c-102722f10294';
+    $pane->panel = 'top_banner';
+    $pane->type = 'custom';
+    $pane->subtype = 'theme_banner';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a3b6da74-f9de-42e4-b38c-102722f10294';
+    $display->content['new-a3b6da74-f9de-42e4-b38c-102722f10294'] = $pane;
+    $display->panels['top_banner'][0] = 'new-a3b6da74-f9de-42e4-b38c-102722f10294';
+    $pane = new stdClass();
+    $pane->pid = 'new-aa2e4072-23a3-47bd-a934-8d8fc22b98fb';
+    $pane->panel = 'top_banner';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h1',
+      'class' => '',
+      'id' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Engineering - Capabilities',
+      'override_title_heading' => 'h1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'aa2e4072-23a3-47bd-a934-8d8fc22b98fb';
+    $display->content['new-aa2e4072-23a3-47bd-a934-8d8fc22b98fb'] = $pane;
+    $display->panels['top_banner'][1] = 'new-aa2e4072-23a3-47bd-a934-8d8fc22b98fb';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
