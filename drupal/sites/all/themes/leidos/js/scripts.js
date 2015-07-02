@@ -4,7 +4,7 @@
 jQuery(document).ready(function() {
 
 	var searchBox = jQuery('li.last span.nolink');
-	var cancelButton = jQuery('#search_leidos_website button[type=cancel]');
+	var cancelButton = jQuery('#search_leidos_website span');
 	var searchForm = jQuery('div.block-leidos-custom-search');
 
 	// search click

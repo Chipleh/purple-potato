@@ -28,6 +28,12 @@
 	height: $header-height;
 }
 
+/* hide text */
+%hide-text {
+	font-size: 0;
+	color: transparent;
+}
+
 
 /*  tablet
 **************************************************/

@@ -99,6 +99,7 @@ h5 {
 /* links */
 a {
 	color: $color-leidos-purple-light;
+	transition: all .5s ease;
 
 	&:hover {
 		color: $color-leidos-purple-dark;

@@ -55,21 +55,50 @@
 					position: relative
 				}
 
+				/* menu sections */
+				a {
+					@extend %header-data;
+					color: $color-leidos-purple-dark;
+					display: block;
+					font-family: "AvenirLT-Black", Arial, sans-serif;
+					font-size: 16px;
+					line-height: 108px;
+					outline: none;
+					padding: 0;
+					position: relative;
+					text-transform: uppercase;
+
+					&:hover,
+					&.active {
+						color: $color-leidos-purple-light;
+					}
+
+					&.active {
+						background: none, url("../images/nav-arrow.svg") no-repeat 50% 0;
+					}							
+				}
+
+				/* header logo */
 				&.first {
 					margin-left: 0;
 
 					a {
+						@extend %hide-text;
 						background: url(../images/leidos-logo.png) no-repeat center center;
-						color: transparent;
-						font-size: 0;
 						width: 170px;
 
 						&:hover {
-							background: url(../images/leidos-logo.png) no-repeat center center;							
+							background: url(../images/leidos-logo.png) no-repeat center center;
+
+							&:before,
+							&:after {
+								display: none;
+							}						
 						}
 					}
 				}
 
+				/* small menu sections */
 				&:nth-child(6),
 				&:nth-child(7),
 				&:nth-child(8) {
@@ -84,7 +113,7 @@
 					margin-right: 0;
 				}
 
-				/* search glass in main nav */
+				/* search glass menu section */
 				&.last {
 					margin: 0;
 					overflow: hidden;
@@ -110,10 +139,9 @@
 
 					span {
 						@extend %header-data;
-						color: transparent;
+						@extend %hide-text;
 						cursor: pointer;
 						display: block;
-						font-size: 0;
 						padding: 0;
 						position: relative;
 						text-align: right;
@@ -141,53 +169,148 @@
 					}
 				}
 
-				a {
-					@extend %header-data;
-					color: $color-leidos-purple-dark;
-					display: block;
-					font-family: "AvenirLT-Black", Arial, sans-serif;
-					font-size: 16px;
-					line-height: 108px;
-					padding: 0;
-					text-transform: uppercase;
-
-					&:hover,
-					&.active {
-						color: $color-leidos-purple-light;
-					}
-
-					&.active {
-						background: none, url("../images/nav-arrow.svg") no-repeat 50% 0;
-					}							
-				}
-
-				/* sub menus */
+				/***** sub menus *****/
 				.no-children {
-					background: red;
+					background: $color-gray-light;
+					border-left: 1px solid $color-gray-medium-light;
+					border-right: 1px solid $color-gray-medium-light;
 					display: block;
-					height: 0px;
-					left: 0;
+					left: -10px;
+					max-height: 0px;
 					overflow: hidden;
 					position: absolute;
 					top: $header-height;
 					transition: all .25s cubic-bezier(.40, .0, .40, 1);
-					width: 100px;
+					width: 200px;
+					z-index: 1;
 
 					li {
-						display: none;
+						display: block;
+						float: none;
+						margin: 0;
+						overflow: hidden;
+						padding: 0;
+						position: relative;
+						width: auto;
+
+						a {
+							background: none;
+							color: transparent;
+							display: block;
+							font-family: Arial, Helvetica, sans-serif;
+							font-size: 12px;
+							height: auto;
+							line-height: normal;
+							margin: 10px 30px;
+							padding: 0;
+							position: relative;
+							text-transform: none;
+							width: auto;
+
+							&:hover {
+								background: none;
+							}
+
+							&:before,
+							&:after {
+								display: none;
+							}
+
+							&:nth-child(6),
+							&:nth-child(7),
+							&:nth-child(8) {
+								a {
+									font-size: 12px;
+									line-height: normal;
+								}
+							}
+						}
+
+						&:before,
+						&:after {
+							display: none;
+						}
+
+						&.first {
+							a {
+								margin-top: 20px;
+							}
+						}
+
+						&.last {
+							a {
+								margin-bottom: 20px;
+							}
+						}
 					}
 				}
 
 				&.hover {
+					a {
+						&:before,
+						&:after {
+							position: absolute;
+							top: 0;
+							height: $header-height;
+							width: 5px;
+							background: $color-white;
+							content: "";
+							background: url("../images/tab-shadows.png") no-repeat transparent;
+						}
+
+						&:before {
+							left: -14px;
+							background-position: left bottom;
+						}
+
+						&:after {
+							right: -14px;
+							background-position: right bottom;
+						}							
+					}
+
 					.no-children {
-						height: 200px;
-						background: blue;
+						background: $color-white;
+						border-bottom: 1px solid $color-gray-medium-light;
+						max-height: 500px;
+						z-index: 2;
+
+						li {
+							a {
+								color: $color-leidos-purple-light;
+
+								&:before {
+									background: none;
+									content: '\25e6';
+									display: block;
+									height: 24px;
+									left: -24px;
+									line-height: 24px;
+									opacity: 0;
+									position: absolute;
+									text-align: center;
+									top: calc(50% - 12px);
+									transition: opacity .5s ease;
+									width: 24px;
+									z-index: -1;
+								}
+
+								&:hover {
+									color: $color-leidos-purple-dark;
+
+									&:before {
+										opacity: 1;
+									}
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 	}
 }
+
 
 /*  search box
 **************************************************/
@@ -222,7 +345,7 @@
 			position: relative;
 
 			input[type="text"] {
-				background: url("../images/searchbox-search-glass.png") no-repeat 50px 10px $color-gray-light;
+				background: url("../images/searchbox-search-glass.png") no-repeat 50px -92px $color-gray-light;
 				border: none;
 				color: $color-gray-medium-light;
 				font-family: "AvenirLT-Book", Arial, sans-serif;
@@ -236,29 +359,36 @@
 				width: 67%;
 
 				&:focus {
-					background-position: 50px -92px;
+					background-position: 50px 10px;
 				}
 			}
 
 			input[type="submit"] {
+				background: $color-gray-medium-light;
+				border-radius: 40px;
 				border: 0;
+				color: $color-gray-light;
 				cursor: pointer;
-				display: block;
-				height: $search-height;
+				display: none;
+				font-family: "AvenirLT-Black",Arial,sans-serif;
+				font-size: 16px;
+				height: unquote("calc(")$search-height unquote("- 44px)");
+				margin: 0;
 				outline: none;
 				padding: 0;
 				position: absolute;
-				right:unquote("calc(")$search-height unquote("+ 40px)"); // adjusted to compensate for cancel button
-				top: 40px;
-				width: $search-height;
-
-				display: none;
+				right:unquote("calc(")$search-height unquote("+ 40px)");
+				text-transform: uppercase;
+				top: 59px;
+				width: 126px;
 
 				&:hover {
+					background: $color-leidos-purple-dark;
 				}
 			}
 
-			button[type="cancel"] {
+			span {
+				@extend %hide-text;
 				background: url("../images/searchbox-cancel.png") no-repeat center 14px $color-gray-light;
 				border: 0;
 				cursor: pointer;
