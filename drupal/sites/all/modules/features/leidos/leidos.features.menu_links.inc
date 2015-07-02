@@ -1554,7 +1554,7 @@ function leidos_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t(' About Leidos Engineering');
+  t('About Leidos Engineering');
   t('About');
   t('Advanced Communications Systems');
   t('Border & Transportation Security');
