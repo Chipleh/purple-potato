@@ -81,7 +81,10 @@ function leidos_process_page(&$variables) {
     $variables['title_suffix']['add_or_remove_shortcut']['#weight'] = -100;
   }
   //Remove default taxonomy no content message
-  if(isset($variables['theme_hook_suggestions'][0]) && $variables['theme_hook_suggestions'][0] == 'page__taxonomy' && isset($variables['page']['content']['system_main']['no_content'])) {
+  if (isset($variables['theme_hook_suggestions'][0]) &&
+    $variables['theme_hook_suggestions'][0] == 'page__taxonomy' &&
+    isset($variables['page']['content']['system_main']['no_content'])
+  ) {
     unset($variables['page']['content']['system_main']['no_content']);
   }
 }
@@ -165,7 +168,7 @@ function leidos_field__taxonomy_term_reference($variables) {
   $output .= '</ul>';
 
   // Render the top-level DIV.
-  $output = '<div class="' . $variables['classes'] . (!in_array('clearfix', $variables['classes_array']) ? ' clearfix' : '') . '"' . $variables['attributes'] .'>' . $output . '</div>';
+  $output = '<div class="' . $variables['classes'] . (!in_array('clearfix', $variables['classes_array']) ? ' clearfix' : '') . '"' . $variables['attributes'] . '>' . $output . '</div>';
 
   return $output;
 }
