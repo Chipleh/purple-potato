@@ -284,7 +284,6 @@ features[menu_links][] = main-menu_stock-data:http://investors.leidos.com/phoeni
 features[menu_links][] = main-menu_systems-integration--controls:https://www.leidos.com/engineering/systems-integration-controls
 features[menu_links][] = main-menu_utility-security:https://www.leidos.com/engineering/utility-security
 features[menu_links][] = main-menu_vision-mission-values:https://www.leidos.com/about/mission
-features[menu_links][] = menu-engineering-navigation_-about-leidos-engineering:https://www.leidos.com/engineering/about-leidos-engineering
 features[menu_links][] = menu-engineering-navigation_articles--publications:https://www.leidos.com/engineering/articles
 features[menu_links][] = menu-engineering-navigation_awards:https://www.leidos.com/engineering/awards
 features[menu_links][] = menu-engineering-navigation_capabilities:https://www.leidos.com/engineering/capabilities

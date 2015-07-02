@@ -1051,27 +1051,6 @@ function leidos_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
   );
-  // Exported menu link: menu-engineering-navigation_-about-leidos-engineering:https://www.leidos.com/engineering/about-leidos-engineering
-  $menu_links['menu-engineering-navigation_-about-leidos-engineering:https://www.leidos.com/engineering/about-leidos-engineering'] = array(
-    'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/about-leidos-engineering',
-    'router_path' => '',
-    'link_title' => ' About Leidos Engineering',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'About Leidos Engineering',
-      ),
-      'identifier' => 'menu-engineering-navigation_-about-leidos-engineering:https://www.leidos.com/engineering/about-leidos-engineering',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 1,
-    'weight' => -50,
-    'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
-  );
   // Exported menu link: menu-engineering-navigation_articles--publications:https://www.leidos.com/engineering/articles
   $menu_links['menu-engineering-navigation_articles--publications:https://www.leidos.com/engineering/articles'] = array(
     'menu_name' => 'menu-engineering-navigation',
@@ -1785,7 +1764,6 @@ function leidos_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t(' About Leidos Engineering');
   t('About');
   t('Advanced Communications Systems');
   t('Articles & Publications');
