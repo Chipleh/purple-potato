@@ -30,16 +30,16 @@
 
     <div id="header"><div class="section clearfix">
       <?php if ($site_name || $site_slogan): ?>
-        <div id="name-and-slogan"<?php print ($hide_site_name && $hide_site_slogan) ? ' class="element-invisible"' : ''; } ?>>
+        <div id="name-and-slogan"<?php print ($hide_site_name && $hide_site_slogan) ? ' class="element-invisible"' : ''; ?>>
           <?php if ($site_name): ?>
-            <div id="site-name"<?php print ($hide_site_name) ? ' class="element-invisible"' : ''; } ?>>
+            <div id="site-name"<?php print ($hide_site_name) ? ' class="element-invisible"' : ''; ?>>
               <strong>
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
               </strong>
             </div>
           <?php endif; ?>
           <?php if ($site_slogan): ?>
-            <div id="site-slogan"<?php print ($hide_site_slogan) ? ' class="element-invisible"' : ''; } ?>>
+            <div id="site-slogan"<?php print ($hide_site_slogan) ? ' class="element-invisible"' : ''; ?>>
               <?php print $site_slogan; ?>
             </div>
           <?php endif; ?>
