@@ -207,6 +207,122 @@ function leidos_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'capabilities_view';
+  $page->task = 'page';
+  $page->admin_title = 'Capabilities View';
+  $page->admin_description = '';
+  $page->path = 'panes-demo/capabilities-view';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_capabilities_view__panel_context_147f1afa-60be-487d-9e84-cba64a554c22';
+  $handler->task = 'page';
+  $handler->subtask = 'capabilities_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible:industry_template';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top_banner' => NULL,
+      'left_rail' => NULL,
+      'optional_rotator' => NULL,
+      'right_rail' => NULL,
+      'optional_inner_right_rail' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'c378387f-cad9-4bcd-815f-97e4ec34b842';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-4e00a5b5-983e-4eb5-a0ce-bc9e207627ac';
+    $pane->panel = 'left_rail';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-pane-testing';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4e00a5b5-983e-4eb5-a0ce-bc9e207627ac';
+    $display->content['new-4e00a5b5-983e-4eb5-a0ce-bc9e207627ac'] = $pane;
+    $display->panels['left_rail'][0] = 'new-4e00a5b5-983e-4eb5-a0ce-bc9e207627ac';
+    $pane = new stdClass();
+    $pane->pid = 'new-4ab38c50-2810-4efc-b2f5-2c9814c4b121';
+    $pane->panel = 'right_rail';
+    $pane->type = 'views';
+    $pane->subtype = 'capabilities';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4ab38c50-2810-4efc-b2f5-2c9814c4b121';
+    $display->content['new-4ab38c50-2810-4efc-b2f5-2c9814c4b121'] = $pane;
+    $display->panels['right_rail'][0] = 'new-4ab38c50-2810-4efc-b2f5-2c9814c4b121';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['capabilities_view'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'engineering';
   $page->task = 'page';
   $page->admin_title = 'Engineering';
@@ -769,6 +885,29 @@ function leidos_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-521ebcd1-5b86-41dc-b87c-456c48558cce';
+    $pane->panel = 'left_rail';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-engineering-navigation';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '521ebcd1-5b86-41dc-b87c-456c48558cce';
+    $display->content['new-521ebcd1-5b86-41dc-b87c-456c48558cce'] = $pane;
+    $display->panels['left_rail'][0] = 'new-521ebcd1-5b86-41dc-b87c-456c48558cce';
+    $pane = new stdClass();
     $pane->pid = 'new-41e6b801-d748-4588-a723-be36a16ded78';
     $pane->panel = 'right_rail';
     $pane->type = 'views_panes';
@@ -862,11 +1001,677 @@ function leidos_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'featured_projects_view_panel_pane';
+  $page->task = 'page';
+  $page->admin_title = 'Featured Projects View Panel Pane';
+  $page->admin_description = '';
+  $page->path = 'panes-demo/featured-projects-view-panel-pane';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_featured_projects_view_panel_pane__panel_context_115cbc27-fdba-4a64-a586-c26579caa9bf';
+  $handler->task = 'page';
+  $handler->subtask = 'featured_projects_view_panel_pane';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible:industry_template';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top_banner' => NULL,
+      'left_rail' => NULL,
+      'optional_rotator' => NULL,
+      'right_rail' => NULL,
+      'optional_inner_right_rail' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'c378387f-cad9-4bcd-815f-97e4ec34b842';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-d2a31c74-f946-4127-be9c-ea357d4fdea2';
+    $pane->panel = 'left_rail';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-pane-testing';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd2a31c74-f946-4127-be9c-ea357d4fdea2';
+    $display->content['new-d2a31c74-f946-4127-be9c-ea357d4fdea2'] = $pane;
+    $display->panels['left_rail'][0] = 'new-d2a31c74-f946-4127-be9c-ea357d4fdea2';
+    $pane = new stdClass();
+    $pane->pid = 'new-0bd3aff4-3c3e-47e4-b824-44aecc224bb9';
+    $pane->panel = 'right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'projects-full_view_projects_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '0bd3aff4-3c3e-47e4-b824-44aecc224bb9';
+    $display->content['new-0bd3aff4-3c3e-47e4-b824-44aecc224bb9'] = $pane;
+    $display->panels['right_rail'][0] = 'new-0bd3aff4-3c3e-47e4-b824-44aecc224bb9';
+    $pane = new stdClass();
+    $pane->pid = 'new-37848043-01f0-4ac7-8536-fcfa5d4169b3';
+    $pane->panel = 'right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'projects-full_view_projects_pane_mobile';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '37848043-01f0-4ac7-8536-fcfa5d4169b3';
+    $display->content['new-37848043-01f0-4ac7-8536-fcfa5d4169b3'] = $pane;
+    $display->panels['right_rail'][1] = 'new-37848043-01f0-4ac7-8536-fcfa5d4169b3';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['featured_projects_view_panel_pane'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'link_columns_panel_pane';
+  $page->task = 'page';
+  $page->admin_title = 'Link Columns Panel Pane';
+  $page->admin_description = 'Engineering landing page';
+  $page->path = 'panes-demo/link-columns-panel-pane';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Engineering',
+    'name' => 'main-menu',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_link_columns_panel_pane__panel_context_fd1dd8b4-35a7-4fdb-bf10-7820332c4caf';
+  $handler->task = 'page';
+  $handler->subtask = 'link_columns_panel_pane';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Engineering Panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'title' => array(
+          'value' => 'Engineering | [site:name]',
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible:industry_template';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+      'right_rail' => NULL,
+      'optional_inner_right_rail' => NULL,
+      'optional_rotator' => NULL,
+      'top_banner' => NULL,
+      'left_rail' => NULL,
+      'optional_navigation_menu' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'd1b0671d-842b-49ed-ae2a-6c8d679265e4';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-d287903c-d934-43d4-aa91-66aa82881f3f';
+    $pane->panel = 'left_rail';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-pane-testing';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd287903c-d934-43d4-aa91-66aa82881f3f';
+    $display->content['new-d287903c-d934-43d4-aa91-66aa82881f3f'] = $pane;
+    $display->panels['left_rail'][0] = 'new-d287903c-d934-43d4-aa91-66aa82881f3f';
+    $pane = new stdClass();
+    $pane->pid = 'new-9bbc6740-84e5-46f7-a92b-a6f793edba52';
+    $pane->panel = 'right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:15';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '9bbc6740-84e5-46f7-a92b-a6f793edba52';
+    $display->content['new-9bbc6740-84e5-46f7-a92b-a6f793edba52'] = $pane;
+    $display->panels['right_rail'][0] = 'new-9bbc6740-84e5-46f7-a92b-a6f793edba52';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['link_columns_panel_pane'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'list_columns_panel_pane';
+  $page->task = 'page';
+  $page->admin_title = 'List Columns Panel Pane';
+  $page->admin_description = 'Engineering landing page';
+  $page->path = 'panes-demo/list-columns-panel-pane';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Engineering',
+    'name' => 'main-menu',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_list_columns_panel_pane__panel_context_3fd12276-7bb9-4bd5-b3a4-2e5585b93577';
+  $handler->task = 'page';
+  $handler->subtask = 'list_columns_panel_pane';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Engineering Panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'title' => array(
+          'value' => 'Engineering | [site:name]',
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible:industry_template';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+      'right_rail' => NULL,
+      'optional_inner_right_rail' => NULL,
+      'optional_rotator' => NULL,
+      'top_banner' => NULL,
+      'left_rail' => NULL,
+      'optional_navigation_menu' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'd1b0671d-842b-49ed-ae2a-6c8d679265e4';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-d287903c-d934-43d4-aa91-66aa82881f3f';
+    $pane->panel = 'left_rail';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-pane-testing';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd287903c-d934-43d4-aa91-66aa82881f3f';
+    $display->content['new-d287903c-d934-43d4-aa91-66aa82881f3f'] = $pane;
+    $display->panels['left_rail'][0] = 'new-d287903c-d934-43d4-aa91-66aa82881f3f';
+    $pane = new stdClass();
+    $pane->pid = 'new-2b4db588-0bfa-43f5-acb9-282acf784e9e';
+    $pane->panel = 'right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:16';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2b4db588-0bfa-43f5-acb9-282acf784e9e';
+    $display->content['new-2b4db588-0bfa-43f5-acb9-282acf784e9e'] = $pane;
+    $display->panels['right_rail'][0] = 'new-2b4db588-0bfa-43f5-acb9-282acf784e9e';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['list_columns_panel_pane'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'newsroom_view_panel_pane';
+  $page->task = 'page';
+  $page->admin_title = 'Newsroom View Panel Pane';
+  $page->admin_description = '';
+  $page->path = 'panes-demo/newsroom-view-panel-pane';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_newsroom_view_panel_pane__panel_context_bcb243b0-da90-4a0f-a544-61731b3061ad';
+  $handler->task = 'page';
+  $handler->subtask = 'newsroom_view_panel_pane';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible:industry_template';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top_banner' => NULL,
+      'left_rail' => NULL,
+      'optional_rotator' => NULL,
+      'right_rail' => NULL,
+      'optional_inner_right_rail' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'c378387f-cad9-4bcd-815f-97e4ec34b842';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-4ce269ac-03b3-43f1-82ef-7dec7bd7f1c4';
+    $pane->panel = 'left_rail';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-pane-testing';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4ce269ac-03b3-43f1-82ef-7dec7bd7f1c4';
+    $display->content['new-4ce269ac-03b3-43f1-82ef-7dec7bd7f1c4'] = $pane;
+    $display->panels['left_rail'][0] = 'new-4ce269ac-03b3-43f1-82ef-7dec7bd7f1c4';
+    $pane = new stdClass();
+    $pane->pid = 'new-30953293-ec01-4980-a541-499c593558a7';
+    $pane->panel = 'right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'announcements-full_view_announcements_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'term_node_tid_depth' => '',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '30953293-ec01-4980-a541-499c593558a7';
+    $display->content['new-30953293-ec01-4980-a541-499c593558a7'] = $pane;
+    $display->panels['right_rail'][0] = 'new-30953293-ec01-4980-a541-499c593558a7';
+    $pane = new stdClass();
+    $pane->pid = 'new-7a12d159-0346-4c10-98f0-7d1a1310c817';
+    $pane->panel = 'right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'announcements-full_view_announcements_pane_mobile';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'term_node_tid_depth' => '',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '7a12d159-0346-4c10-98f0-7d1a1310c817';
+    $display->content['new-7a12d159-0346-4c10-98f0-7d1a1310c817'] = $pane;
+    $display->panels['right_rail'][1] = 'new-7a12d159-0346-4c10-98f0-7d1a1310c817';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['newsroom_view_panel_pane'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'newsroom_view_rail_panel_panes';
+  $page->task = 'page';
+  $page->admin_title = 'Newsroom View Rail Panel Panes';
+  $page->admin_description = 'Engineering landing page';
+  $page->path = 'panes-demo/newsroom-view-rail-panel-pane';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Engineering',
+    'name' => 'main-menu',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_newsroom_view_rail_panel_panes__panel_context_b7f445bd-dae5-4e18-bd2b-c5346658aa86';
+  $handler->task = 'page';
+  $handler->subtask = 'newsroom_view_rail_panel_panes';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Engineering Panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'title' => array(
+          'value' => 'Engineering | [site:name]',
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible:industry_template';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+      'right_rail' => NULL,
+      'optional_inner_right_rail' => NULL,
+      'optional_rotator' => NULL,
+      'top_banner' => NULL,
+      'left_rail' => NULL,
+      'optional_navigation_menu' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'd1b0671d-842b-49ed-ae2a-6c8d679265e4';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-551dfb85-e551-4c5a-bde8-99af199b2343';
+    $pane->panel = 'left_rail';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-pane-testing';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '551dfb85-e551-4c5a-bde8-99af199b2343';
+    $display->content['new-551dfb85-e551-4c5a-bde8-99af199b2343'] = $pane;
+    $display->panels['left_rail'][0] = 'new-551dfb85-e551-4c5a-bde8-99af199b2343';
+    $pane = new stdClass();
+    $pane->pid = 'new-27875490-e983-4183-8668-c924822f44bc';
+    $pane->panel = 'optional_inner_right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'announcements-featured_announcements_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link_to_view' => 0,
+      'more_link' => 0,
+      'items_per_page' => '2',
+      'path' => '',
+      'arguments' => array(
+        'term_node_tid_depth' => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'NEWS AND EVENTS <a href="http://www.twitter.com">Follow Us On Twitter</a>',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '27875490-e983-4183-8668-c924822f44bc';
+    $display->content['new-27875490-e983-4183-8668-c924822f44bc'] = $pane;
+    $display->panels['optional_inner_right_rail'][0] = 'new-27875490-e983-4183-8668-c924822f44bc';
+    $pane = new stdClass();
+    $pane->pid = 'new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
+    $pane->panel = 'optional_inner_right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
+    $display->content['new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a'] = $pane;
+    $display->panels['optional_inner_right_rail'][1] = 'new-aefe8e06-6fd1-4eec-93e9-055a98b20c2a';
+    $pane = new stdClass();
+    $pane->pid = 'new-c76e9f57-696b-4505-9837-0fd0c9dd58b7';
+    $pane->panel = 'right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c76e9f57-696b-4505-9837-0fd0c9dd58b7';
+    $display->content['new-c76e9f57-696b-4505-9837-0fd0c9dd58b7'] = $pane;
+    $display->panels['right_rail'][0] = 'new-c76e9f57-696b-4505-9837-0fd0c9dd58b7';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['newsroom_view_rail_panel_panes'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'panes_demo_page';
   $page->task = 'page';
   $page->admin_title = 'Panes Demo Page';
   $page->admin_description = '';
-  $page->path = 'panes_demo';
+  $page->path = 'panes-demo';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -920,24 +1725,13 @@ function leidos_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-e3d7ca1b-aae7-4555-8821-02b11680a949';
+    $pane->pid = 'new-51bd140d-e8c1-40d2-b9b8-6c2a9ce74a13';
     $pane->panel = 'left_rail';
-    $pane->type = 'menu_tree';
-    $pane->subtype = 'menu-engineering-navigation';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-pane-testing';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'parent' => 'menu-engineering-navigation:0',
-      'title_link' => 0,
-      'admin_title' => '',
-      'level' => '1',
-      'follow' => 0,
-      'depth' => '0',
-      'depth_relative' => 0,
-      'expanded' => 0,
-      'sort' => 0,
-      'menu_name' => 'menu-engineering-navigation',
-      'parent_mlid' => '0',
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
@@ -950,71 +1744,14 @@ function leidos_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'e3d7ca1b-aae7-4555-8821-02b11680a949';
-    $display->content['new-e3d7ca1b-aae7-4555-8821-02b11680a949'] = $pane;
-    $display->panels['left_rail'][0] = 'new-e3d7ca1b-aae7-4555-8821-02b11680a949';
+    $pane->uuid = '51bd140d-e8c1-40d2-b9b8-6c2a9ce74a13';
+    $display->content['new-51bd140d-e8c1-40d2-b9b8-6c2a9ce74a13'] = $pane;
+    $display->panels['left_rail'][0] = 'new-51bd140d-e8c1-40d2-b9b8-6c2a9ce74a13';
     $pane = new stdClass();
-    $pane->pid = 'new-5481a672-7c68-4d3d-a040-4ccec8b7488a';
-    $pane->panel = 'optional_inner_right_rail';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'projects-full_view_projects_pane';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '5481a672-7c68-4d3d-a040-4ccec8b7488a';
-    $display->content['new-5481a672-7c68-4d3d-a040-4ccec8b7488a'] = $pane;
-    $display->panels['optional_inner_right_rail'][0] = 'new-5481a672-7c68-4d3d-a040-4ccec8b7488a';
-    $pane = new stdClass();
-    $pane->pid = 'new-349c07ea-dcb1-4567-bd50-ac3556c69fc2';
-    $pane->panel = 'optional_inner_right_rail';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'projects-full_view_projects_pane_mobile';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '349c07ea-dcb1-4567-bd50-ac3556c69fc2';
-    $display->content['new-349c07ea-dcb1-4567-bd50-ac3556c69fc2'] = $pane;
-    $display->panels['optional_inner_right_rail'][1] = 'new-349c07ea-dcb1-4567-bd50-ac3556c69fc2';
-    $pane = new stdClass();
-    $pane->pid = 'new-7d7e7c9d-d760-46fa-862b-7d9b775a2c3a';
-    $pane->panel = 'optional_rotator';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'rotators-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '7d7e7c9d-d760-46fa-862b-7d9b775a2c3a';
-    $display->content['new-7d7e7c9d-d760-46fa-862b-7d9b775a2c3a'] = $pane;
-    $display->panels['optional_rotator'][0] = 'new-7d7e7c9d-d760-46fa-862b-7d9b775a2c3a';
-    $pane = new stdClass();
-    $pane->pid = 'new-48947b64-9543-4632-8776-643e640a8853';
+    $pane->pid = 'new-6dacc05f-b285-4460-84de-bfa5e0aa9568';
     $pane->panel = 'right_rail';
     $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:11';
+    $pane->subtype = 'fpid:14';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1028,76 +1765,9 @@ function leidos_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '48947b64-9543-4632-8776-643e640a8853';
-    $display->content['new-48947b64-9543-4632-8776-643e640a8853'] = $pane;
-    $display->panels['right_rail'][0] = 'new-48947b64-9543-4632-8776-643e640a8853';
-    $pane = new stdClass();
-    $pane->pid = 'new-cd351336-c5b1-4db7-ac29-3f2119fa482c';
-    $pane->panel = 'right_rail';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:12';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'full',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = 'cd351336-c5b1-4db7-ac29-3f2119fa482c';
-    $display->content['new-cd351336-c5b1-4db7-ac29-3f2119fa482c'] = $pane;
-    $display->panels['right_rail'][1] = 'new-cd351336-c5b1-4db7-ac29-3f2119fa482c';
-    $pane = new stdClass();
-    $pane->pid = 'new-a4efaebb-153f-436c-a0c5-e4c52a678f0e';
-    $pane->panel = 'right_rail';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:13';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'full',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = 'a4efaebb-153f-436c-a0c5-e4c52a678f0e';
-    $display->content['new-a4efaebb-153f-436c-a0c5-e4c52a678f0e'] = $pane;
-    $display->panels['right_rail'][2] = 'new-a4efaebb-153f-436c-a0c5-e4c52a678f0e';
-    $pane = new stdClass();
-    $pane->pid = 'new-6c4377f2-c9da-4d9f-b2ee-d2c26c0346f7';
-    $pane->panel = 'top_banner';
-    $pane->type = 'custom';
-    $pane->subtype = 'theme_banner';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '',
-      'format' => 'filtered_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '6c4377f2-c9da-4d9f-b2ee-d2c26c0346f7';
-    $display->content['new-6c4377f2-c9da-4d9f-b2ee-d2c26c0346f7'] = $pane;
-    $display->panels['top_banner'][0] = 'new-6c4377f2-c9da-4d9f-b2ee-d2c26c0346f7';
+    $pane->uuid = '6dacc05f-b285-4460-84de-bfa5e0aa9568';
+    $display->content['new-6dacc05f-b285-4460-84de-bfa5e0aa9568'] = $pane;
+    $display->panels['right_rail'][0] = 'new-6dacc05f-b285-4460-84de-bfa5e0aa9568';
     $pane = new stdClass();
     $pane->pid = 'new-9bc380dd-e890-49ff-a0b3-83cb52da6d53';
     $pane->panel = 'top_banner';
@@ -1119,16 +1789,190 @@ function leidos_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '9bc380dd-e890-49ff-a0b3-83cb52da6d53';
     $display->content['new-9bc380dd-e890-49ff-a0b3-83cb52da6d53'] = $pane;
-    $display->panels['top_banner'][1] = 'new-9bc380dd-e890-49ff-a0b3-83cb52da6d53';
+    $display->panels['top_banner'][0] = 'new-9bc380dd-e890-49ff-a0b3-83cb52da6d53';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-6c4377f2-c9da-4d9f-b2ee-d2c26c0346f7';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['panes_demo_page'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'projects_view_rail_panel_pane';
+  $page->task = 'page';
+  $page->admin_title = 'Projects View Rail Panel Pane';
+  $page->admin_description = 'Engineering landing page';
+  $page->path = 'panes-demo/projects-view-rail-panel-pane';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Engineering',
+    'name' => 'main-menu',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_projects_view_rail_panel_pane__panel_context_69b52238-5aac-4ccc-9e15-33c9ed607185';
+  $handler->task = 'page';
+  $handler->subtask = 'projects_view_rail_panel_pane';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Engineering Panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'title' => array(
+          'value' => 'Engineering | [site:name]',
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible:industry_template';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+      'right_rail' => NULL,
+      'optional_inner_right_rail' => NULL,
+      'optional_rotator' => NULL,
+      'top_banner' => NULL,
+      'left_rail' => NULL,
+      'optional_navigation_menu' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'd1b0671d-842b-49ed-ae2a-6c8d679265e4';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-d287903c-d934-43d4-aa91-66aa82881f3f';
+    $pane->panel = 'left_rail';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-pane-testing';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd287903c-d934-43d4-aa91-66aa82881f3f';
+    $display->content['new-d287903c-d934-43d4-aa91-66aa82881f3f'] = $pane;
+    $display->panels['left_rail'][0] = 'new-d287903c-d934-43d4-aa91-66aa82881f3f';
+    $pane = new stdClass();
+    $pane->pid = 'new-9887f85a-0270-44de-9b7e-17c32676b37f';
+    $pane->panel = 'optional_inner_right_rail';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'projects-featured_projects_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link_to_view' => 0,
+      'more_link' => 0,
+      'items_per_page' => '2',
+      'path' => '',
+      'arguments' => array(
+        'term_node_tid_depth' => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'FEATURED PROJECTS <a href="http://google.com">View All Projects</a>',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '9887f85a-0270-44de-9b7e-17c32676b37f';
+    $display->content['new-9887f85a-0270-44de-9b7e-17c32676b37f'] = $pane;
+    $display->panels['optional_inner_right_rail'][0] = 'new-9887f85a-0270-44de-9b7e-17c32676b37f';
+    $pane = new stdClass();
+    $pane->pid = 'new-8c26067a-793d-4e51-b3e0-3ad7f9d606e3';
+    $pane->panel = 'optional_inner_right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '8c26067a-793d-4e51-b3e0-3ad7f9d606e3';
+    $display->content['new-8c26067a-793d-4e51-b3e0-3ad7f9d606e3'] = $pane;
+    $display->panels['optional_inner_right_rail'][1] = 'new-8c26067a-793d-4e51-b3e0-3ad7f9d606e3';
+    $pane = new stdClass();
+    $pane->pid = 'new-c76e9f57-696b-4505-9837-0fd0c9dd58b7';
+    $pane->panel = 'right_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c76e9f57-696b-4505-9837-0fd0c9dd58b7';
+    $display->content['new-c76e9f57-696b-4505-9837-0fd0c9dd58b7'] = $pane;
+    $display->panels['right_rail'][0] = 'new-c76e9f57-696b-4505-9837-0fd0c9dd58b7';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['projects_view_rail_panel_pane'] = $page;
 
   return $pages;
 

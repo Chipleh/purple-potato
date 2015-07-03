@@ -1762,6 +1762,146 @@ function leidos_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
+  // Exported menu link: menu-pane-testing_capabilities-view:panes-demo/capabilities-view
+  $menu_links['menu-pane-testing_capabilities-view:panes-demo/capabilities-view'] = array(
+    'menu_name' => 'menu-pane-testing',
+    'link_path' => 'panes-demo/capabilities-view',
+    'router_path' => 'panes-demo',
+    'link_title' => 'Capabilities View',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-pane-testing_capabilities-view:panes-demo/capabilities-view',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-pane-testing_featured-projects-view-panel-pane:panes-demo/featured-projects-view-panel-pane
+  $menu_links['menu-pane-testing_featured-projects-view-panel-pane:panes-demo/featured-projects-view-panel-pane'] = array(
+    'menu_name' => 'menu-pane-testing',
+    'link_path' => 'panes-demo/featured-projects-view-panel-pane',
+    'router_path' => 'panes-demo/featured-projects-view-panel-pane',
+    'link_title' => 'Featured Projects View Panel Pane',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-pane-testing_featured-projects-view-panel-pane:panes-demo/featured-projects-view-panel-pane',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-pane-testing_link-columns-panel-pane:panes-demo/link-columns-panel-pane
+  $menu_links['menu-pane-testing_link-columns-panel-pane:panes-demo/link-columns-panel-pane'] = array(
+    'menu_name' => 'menu-pane-testing',
+    'link_path' => 'panes-demo/link-columns-panel-pane',
+    'router_path' => 'panes-demo',
+    'link_title' => 'Link Columns Panel Pane',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-pane-testing_link-columns-panel-pane:panes-demo/link-columns-panel-pane',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-pane-testing_list-columns-panel-pane:panes-demo/list-columns-panel-pane
+  $menu_links['menu-pane-testing_list-columns-panel-pane:panes-demo/list-columns-panel-pane'] = array(
+    'menu_name' => 'menu-pane-testing',
+    'link_path' => 'panes-demo/list-columns-panel-pane',
+    'router_path' => 'panes-demo/list-columns-panel-pane',
+    'link_title' => 'List Columns Panel Pane',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-pane-testing_list-columns-panel-pane:panes-demo/list-columns-panel-pane',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-pane-testing_newsroom-view-panel-pane:panes-demo/newsroom-view-panel-pane
+  $menu_links['menu-pane-testing_newsroom-view-panel-pane:panes-demo/newsroom-view-panel-pane'] = array(
+    'menu_name' => 'menu-pane-testing',
+    'link_path' => 'panes-demo/newsroom-view-panel-pane',
+    'router_path' => 'panes-demo/newsroom-view-panel-pane',
+    'link_title' => 'Newsroom View Panel Pane',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-pane-testing_newsroom-view-panel-pane:panes-demo/newsroom-view-panel-pane',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-pane-testing_newsroom-view-rail-panel-panes:panes-demo/newsroom-view-rail-panel-pane
+  $menu_links['menu-pane-testing_newsroom-view-rail-panel-panes:panes-demo/newsroom-view-rail-panel-pane'] = array(
+    'menu_name' => 'menu-pane-testing',
+    'link_path' => 'panes-demo/newsroom-view-rail-panel-pane',
+    'router_path' => 'panes-demo/newsroom-view-rail-panel-pane',
+    'link_title' => 'Newsroom View Rail Panel Panes',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-pane-testing_newsroom-view-rail-panel-panes:panes-demo/newsroom-view-rail-panel-pane',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-pane-testing_projects-view-rail-panel-panes:panes-demo/projects-view-rail-panel-pane
+  $menu_links['menu-pane-testing_projects-view-rail-panel-panes:panes-demo/projects-view-rail-panel-pane'] = array(
+    'menu_name' => 'menu-pane-testing',
+    'link_path' => 'panes-demo/projects-view-rail-panel-pane',
+    'router_path' => 'panes-demo/projects-view-rail-panel-pane',
+    'link_title' => 'Projects View Rail Panel Panes',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-pane-testing_projects-view-rail-panel-panes:panes-demo/projects-view-rail-panel-pane',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
@@ -1772,6 +1912,7 @@ function leidos_menu_default_menu_links() {
   t('Business / Financial Advisory');
   t('Cancer & AIDS Research');
   t('Capabilities');
+  t('Capabilities View');
   t('Careers');
   t('Carrers FAQs');
   t('Command & Control');
@@ -1791,6 +1932,7 @@ function leidos_menu_default_menu_links() {
   t('Energy Management');
   t('Engineering');
   t('Environment');
+  t('Featured Projects View Panel Pane');
   t('Features');
   t('Federal Contract Vehicles');
   t('Federal Cyber');
@@ -1813,12 +1955,16 @@ function leidos_menu_default_menu_links() {
   t('Lenders and Developers');
   t('Life Sciences');
   t('Life at Leidos');
+  t('Link Columns Panel Pane');
+  t('List Columns Panel Pane');
   t('Logistics');
   t('Manufacturing & Industrial');
   t('Markets');
   t('Multimedia');
   t('National Security');
   t('Newsroom');
+  t('Newsroom View Panel Pane');
+  t('Newsroom View Rail Panel Panes');
   t('Office Locations');
   t('Oil, Gas & Chemicals');
   t('Opportunities');
@@ -1828,6 +1974,7 @@ function leidos_menu_default_menu_links() {
   t('Privacy Policy');
   t('Products');
   t('Projects');
+  t('Projects View Rail Panel Panes');
   t('Public Health');
   t('Quarterly Earnings');
   t('Ranking & Awards');

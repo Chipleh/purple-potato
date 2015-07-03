@@ -146,7 +146,7 @@ function leidos_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -188,7 +188,7 @@ function leidos_field_default_field_instances() {
         'module' => 'node_reference',
         'settings' => array(),
         'type' => 'node_reference_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -689,7 +689,7 @@ function leidos_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1755,7 +1755,7 @@ function leidos_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 46,
     ),
   );
 
@@ -1798,7 +1798,7 @@ function leidos_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 45,
     ),
   );
 
@@ -1811,10 +1811,10 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 20,
+        'type' => 'link_default',
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1829,17 +1829,34 @@ function leidos_field_default_field_instances() {
     'label' => 'Hover Title',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
       'user_register_form' => FALSE,
+      'validate_url' => 1,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 6,
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 44,
     ),
   );
 

@@ -448,9 +448,9 @@ function leidos_field_group_info() {
     'label' => 'Hover Information',
     'weight' => '6',
     'children' => array(
-      0 => 'field_hover_title',
-      1 => 'field_hover_summary',
-      2 => 'field_hover_cta',
+      0 => 'field_hover_summary',
+      1 => 'field_hover_cta',
+      2 => 'field_hover_title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

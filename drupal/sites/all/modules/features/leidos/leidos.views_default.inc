@@ -138,6 +138,10 @@ function leidos_views_default_views() {
 
   /* Display: Featured Announcements */
   $handler = $view->new_display('panel_pane', 'Featured Announcements', 'featured_announcements_pane');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -589,16 +593,34 @@ function leidos_views_default_views() {
     3 => 0,
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'project_type';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'capabilities';
+  $handler->display->display_options['filters']['tid']['error_message'] = FALSE;
 
   /* Display: Featured Projects */
   $handler = $view->new_display('panel_pane', 'Featured Projects', 'featured_projects_pane');
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Field: Main Image */
+  $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['label'] = '';
+  $handler->display->display_options['fields']['field_main_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_main_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -656,6 +678,45 @@ function leidos_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['label'] = 'Custom View All (Works with javascript in leidos_theme.js)';
   $handler->display->display_options['footer']['area_text_custom']['content'] = '<a id="custom-view-all-link" href="#" onclick="load_show_all()">View All »</a>';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Field: Main Image */
+  $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['label'] = '';
+  $handler->display->display_options['fields']['field_main_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_main_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Content: Hover Title */
+  $handler->display->display_options['fields']['field_hover_title']['id'] = 'field_hover_title';
+  $handler->display->display_options['fields']['field_hover_title']['table'] = 'field_data_field_hover_title';
+  $handler->display->display_options['fields']['field_hover_title']['field'] = 'field_hover_title';
+  $handler->display->display_options['fields']['field_hover_title']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hover_title']['click_sort_column'] = 'url';
+  /* Field: Content: Hover Summary */
+  $handler->display->display_options['fields']['field_hover_summary']['id'] = 'field_hover_summary';
+  $handler->display->display_options['fields']['field_hover_summary']['table'] = 'field_data_field_hover_summary';
+  $handler->display->display_options['fields']['field_hover_summary']['field'] = 'field_hover_summary';
+  $handler->display->display_options['fields']['field_hover_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_summary']['element_label_colon'] = FALSE;
+  /* Field: Content: Hover Cta */
+  $handler->display->display_options['fields']['field_hover_cta']['id'] = 'field_hover_cta';
+  $handler->display->display_options['fields']['field_hover_cta']['table'] = 'field_data_field_hover_cta';
+  $handler->display->display_options['fields']['field_hover_cta']['field'] = 'field_hover_cta';
+  $handler->display->display_options['fields']['field_hover_cta']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_cta']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hover_cta']['click_sort_column'] = 'url';
   $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: Full View Projects - Mobile */
@@ -674,6 +735,45 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['advance']['content_class'] = '.view-content';
   $handler->display->display_options['pager']['options']['advance']['pager_selector'] = '.pager-load-more';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Field: Main Image */
+  $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['label'] = '';
+  $handler->display->display_options['fields']['field_main_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_main_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Content: Hover Title */
+  $handler->display->display_options['fields']['field_hover_title']['id'] = 'field_hover_title';
+  $handler->display->display_options['fields']['field_hover_title']['table'] = 'field_data_field_hover_title';
+  $handler->display->display_options['fields']['field_hover_title']['field'] = 'field_hover_title';
+  $handler->display->display_options['fields']['field_hover_title']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hover_title']['click_sort_column'] = 'url';
+  /* Field: Content: Hover Summary */
+  $handler->display->display_options['fields']['field_hover_summary']['id'] = 'field_hover_summary';
+  $handler->display->display_options['fields']['field_hover_summary']['table'] = 'field_data_field_hover_summary';
+  $handler->display->display_options['fields']['field_hover_summary']['field'] = 'field_hover_summary';
+  $handler->display->display_options['fields']['field_hover_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_summary']['element_label_colon'] = FALSE;
+  /* Field: Content: Hover Cta */
+  $handler->display->display_options['fields']['field_hover_cta']['id'] = 'field_hover_cta';
+  $handler->display->display_options['fields']['field_hover_cta']['table'] = 'field_data_field_hover_cta';
+  $handler->display->display_options['fields']['field_hover_cta']['field'] = 'field_hover_cta';
+  $handler->display->display_options['fields']['field_hover_cta']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_cta']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hover_cta']['click_sort_column'] = 'url';
   $handler->display->display_options['inherit_panels_path'] = '1';
   $export['projects'] = $view;
 
