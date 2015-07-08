@@ -24,64 +24,64 @@ function leidos_default_panels_layout() {
         'type' => 'row',
         'contains' => 'column',
         'children' => array(
-          0 => 1,
+          0 => 'industry_container',
         ),
         'parent' => NULL,
       ),
-      1 => array(
+      'industry_container' => array(
         'type' => 'column',
         'width' => 100,
         'width_type' => '%',
         'parent' => 'canvas',
         'children' => array(
-          0 => 2,
-          1 => 3,
+          0 => 'top',
+          1 => 'content_container',
         ),
-        'class' => '',
+        'class' => 'industry-container',
         'hide_empty' => 0,
       ),
-      2 => array(
+      'top' => array(
         'type' => 'row',
         'contains' => 'region',
         'children' => array(
           0 => 'top_banner',
         ),
-        'parent' => '1',
-        'class' => '',
+        'parent' => 'industry_container',
+        'class' => 'top',
         'hide_empty' => 1,
       ),
-      3 => array(
+      'content_container' => array(
         'type' => 'row',
         'contains' => 'column',
         'children' => array(
-          0 => 4,
-          1 => 5,
+          0 => 'content_left',
+          1 => 'content_right',
         ),
-        'parent' => '1',
-        'class' => '',
+        'parent' => 'industry_container',
+        'class' => 'content-container',
         'hide_empty' => 0,
       ),
-      4 => array(
+      'content_left' => array(
         'type' => 'column',
         'width' => 50,
         'width_type' => '%',
-        'parent' => '3',
+        'parent' => 'content_container',
         'children' => array(
-          0 => 6,
+          0 => 'left_container',
         ),
-        'class' => '',
+        'class' => 'content-left',
         'hide_empty' => 0,
       ),
-      5 => array(
+      'content_right' => array(
         'type' => 'column',
         'width' => 50,
         'width_type' => '%',
-        'parent' => '3',
+        'parent' => 'content_container',
         'children' => array(
-          0 => 7,
-          1 => 8,
+          0 => 'top_right',
+          1 => 'right_container',
         ),
-        'class' => '',
+        'class' => 'right-container',
         'hide_empty' => 0,
       ),
       'top_banner' => array(
@@ -89,18 +89,18 @@ function leidos_default_panels_layout() {
         'title' => 'Top Banner',
         'width' => 100,
         'width_type' => '%',
-        'parent' => '2',
+        'parent' => 'top',
         'class' => 'top-banner',
         'hide_empty' => 1,
       ),
-      6 => array(
+      'left_container' => array(
         'type' => 'row',
         'contains' => 'region',
         'children' => array(
           0 => 'left_rail',
         ),
-        'parent' => '4',
-        'class' => '',
+        'parent' => 'content_left',
+        'class' => 'left-container',
         'hide_empty' => 0,
       ),
       'left_rail' => array(
@@ -108,29 +108,29 @@ function leidos_default_panels_layout() {
         'title' => 'Navigation Menu',
         'width' => 100,
         'width_type' => '%',
-        'parent' => '6',
+        'parent' => 'left_container',
         'class' => 'left-navigation-menu',
         'hide_empty' => 1,
       ),
-      7 => array(
+      'top_right' => array(
         'type' => 'row',
         'contains' => 'region',
         'children' => array(
           0 => 'optional_rotator',
         ),
-        'parent' => '5',
-        'class' => '',
+        'parent' => 'content_right',
+        'class' => 'top-right',
         'hide_empty' => 1,
       ),
-      8 => array(
+      'right_container' => array(
         'type' => 'row',
         'contains' => 'region',
         'children' => array(
           0 => 'right_rail',
           1 => 'optional_inner_right_rail',
         ),
-        'parent' => '5',
-        'class' => '',
+        'parent' => 'content-right',
+        'class' => 'right-container',
         'hide_empty' => 0,
       ),
       'optional_rotator' => array(
@@ -138,7 +138,7 @@ function leidos_default_panels_layout() {
         'title' => 'Optional Rotator',
         'width' => 100,
         'width_type' => '%',
-        'parent' => '7',
+        'parent' => 'right_container',
         'class' => 'optional-rotator',
         'hide_empty' => 1,
       ),
@@ -147,8 +147,8 @@ function leidos_default_panels_layout() {
         'title' => 'Page Content',
         'width' => 50,
         'width_type' => '%',
-        'parent' => '8',
-        'class' => 'page-content',
+        'parent' => 'right_container',
+        'class' => 'right-rail',
         'hide_empty' => 0,
       ),
       'optional_inner_right_rail' => array(
@@ -156,7 +156,7 @@ function leidos_default_panels_layout() {
         'title' => 'Optional Right Rail',
         'width' => 50,
         'width_type' => '%',
-        'parent' => '8',
+        'parent' => 'right_container',
         'class' => 'optional-right-rail',
         'hide_empty' => 1,
       ),
