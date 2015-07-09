@@ -45,7 +45,7 @@
 	}
 }
 
-/* header specific */
+/* body specific */
 #main-wrapper,
 #main,
 #content {
@@ -63,7 +63,38 @@
 	}
 }
 
-/* header specific */
+#content {
+	.section,
+	.content {
+		padding: 0;
+
+		.top {
+			.top-banner {
+				@extend %full-width;
+			}
+		}
+
+		.content-container {
+			@extend %max-width;
+
+			.content-left {
+				width: 330px;
+
+				.inside {
+					padding: 0;
+					margin: 0;
+				}
+			} 
+
+			.right-container {
+				float: right;
+				width: calc(100% - 330px);
+			}
+		}
+	}
+}
+
+/* footer specific */
 #footer-columns {
 	@extend %max-width;
 }
@@ -73,12 +104,54 @@
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
+	#content {
+		.section,
+		.content {
+			.content-container {
+				.content-left {
+					float: none;
+					margin: 0;
+					max-width: 100%;
+					min-width: auto;
+					width: 100%;
+				} 
 
+				.right-container {
+					float: none;
+					margin: 0;
+					max-width: 100%;
+					min-width: auto;
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
+	#content {
+		.section,
+		.content {
+			.content-container {
+				.content-left {
+					float: none;
+					margin: 0;
+					max-width: 100%;
+					min-width: auto;
+					width: 100%;
+				} 
 
+				.right-container {
+					float: none;
+					margin: 0;
+					max-width: 100%;
+					min-width: auto;
+					width: 100%;
+				}
+			}
+		}
+	}
 }
