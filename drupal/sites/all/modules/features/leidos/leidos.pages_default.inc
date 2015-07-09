@@ -1127,7 +1127,7 @@ function leidos_default_page_manager_pages() {
   $page->path = 'panes-demo/link-columns-panel-pane';
   $page->access = array();
   $page->menu = array(
-    'type' => 'normal',
+    'type' => 'none',
     'title' => 'Engineering',
     'name' => 'main-menu',
     'weight' => '0',
@@ -1250,7 +1250,7 @@ function leidos_default_page_manager_pages() {
   $page->path = 'panes-demo/list-columns-panel-pane';
   $page->access = array();
   $page->menu = array(
-    'type' => 'normal',
+    'type' => 'none',
     'title' => 'Engineering',
     'name' => 'main-menu',
     'weight' => '0',
@@ -1500,7 +1500,7 @@ function leidos_default_page_manager_pages() {
   $page->path = 'panes-demo/newsroom-view-rail-panel-pane';
   $page->access = array();
   $page->menu = array(
-    'type' => 'normal',
+    'type' => 'none',
     'title' => 'Engineering',
     'name' => 'main-menu',
     'weight' => '0',
@@ -1810,7 +1810,7 @@ function leidos_default_page_manager_pages() {
   $page->path = 'panes-demo/projects-view-rail-panel-pane';
   $page->access = array();
   $page->menu = array(
-    'type' => 'normal',
+    'type' => 'none',
     'title' => 'Engineering',
     'name' => 'main-menu',
     'weight' => '0',
