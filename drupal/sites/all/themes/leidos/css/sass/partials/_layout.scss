@@ -46,20 +46,20 @@
 }
 
 /* header specific */
-#main-wrapper {
-	#main {
-		@extend %max-width;
-		margin-top: 0;
+#main-wrapper,
+#main,
+#content {
+	@extend %full-width;
+	margin-top: 0;
 
-		#content {
-			@extend %max-width;
-			.tabs {
-				margin-bottom: 0;
-			}
-			.content {
-				margin-top: 0;
-			}
-		}	
+		.section {
+		.tabs {
+			margin-bottom: 0;
+		}
+
+		.content {
+			margin-top: 0;
+		}
 	}
 }
 

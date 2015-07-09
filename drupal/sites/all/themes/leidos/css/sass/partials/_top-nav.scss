@@ -180,7 +180,7 @@
 					overflow: hidden;
 					position: absolute;
 					top: $header-height;
-					transition: all .25s cubic-bezier(.40, .0, .40, 1);
+					transition: all .25s ease 0s;
 					width: 200px;
 					z-index: 1;
 
@@ -245,17 +245,18 @@
 					}
 				}
 
+				&:hover,
 				&.hover {
 					a {
 						&:before,
 						&:after {
+							background: $color-white;
+							background: url("../images/tab-shadows.png") no-repeat transparent;
+							content: "";
+							height: $header-height;
 							position: absolute;
 							top: 0;
-							height: $header-height;
 							width: 5px;
-							background: $color-white;
-							content: "";
-							background: url("../images/tab-shadows.png") no-repeat transparent;
 						}
 
 						&:before {
@@ -272,6 +273,7 @@
 					.no-children {
 						background: $color-white;
 						border-bottom: 1px solid $color-gray-medium-light;
+						display: block;
 						max-height: 500px;
 						z-index: 2;
 
@@ -321,9 +323,8 @@
 	height:unquote("calc(")$search-height unquote("+ 62px)"); // adjusted to compensate for padding
 	left:0;
 	position: absolute;
-	// top: 92px;
 	top: -49px;
-	transition: top .5s cubic-bezier(.40, .0, .40, 1);
+	transition: top .5s ease 0s;
 	z-index: 1;
 
 	&.active {

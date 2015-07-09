@@ -13,21 +13,24 @@
 /**
  *  @colors monochrome
  */
-$color-white: #fff;
-$color-gray-light: #E8E8E8; // backgrounds
-$color-gray-medium-light: #D0D0D0; // borders & light copy
-$color-gray-medium-dark: #646464; // dark copy
-$color-gray-dark: #777; // header links
 $color-black: #000;
+$color-gray-dark: #777; // header links
+$color-gray-light: #E8E8E8; // backgrounds
+$color-gray-medium-dark: #646464; // dark copy
+$color-gray-medium-light: #D0D0D0; // borders & light copy
+$color-white: #fff;
 /**
  *  @colors leidos colors
  */
+$color-leidos-purple-dark: #1F1646; // hover & headers
 $color-leidos-purple-light: #850F88; // links
 $color-leidos-purple-medium: #8B8B8B;
-$color-leidos-purple-dark: #1F1646; // hover & headers
 /**
  *  @colors generic colors
  */
+$color-leidos-purple-soft-dark: #cbbdcd; // left nav bottom border
+$color-leidos-purple-soft-light: #dfd1e0; // left nav background
+$color-leidos-purple-soft-medium: #dbcddd; // left nav top border
 $color-mustard: #867429;
 
 

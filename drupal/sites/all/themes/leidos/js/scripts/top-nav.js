@@ -3,16 +3,19 @@
 //	6/29/15
 jQuery(document).ready(function() {
 
-	jQuery(".expanded a").hover(
+	var menuAnchor = jQuery(".parent-menu > li a");
+	var menuSubMenu = jQuery(".parent-menu > li .no-children");
+
+	// desktop
+	jQuery(menuAnchor).hover(
 		function() {
-			jQuery(this).parent(".expanded").toggleClass("hover");
-		}
-	);
-	jQuery(".no-children").hover(
-		function() {
-			jQuery(this).parent(".expanded").toggleClass("hover");
+			jQuery(this).parent("li").toggleClass("hover");
 		}
 	);
 
+	jQuery("menuSubMenu").hover(
+		function() {
+			jQuery(this).parent("li").toggleClass("hover");
+		}
+	);
 });
-

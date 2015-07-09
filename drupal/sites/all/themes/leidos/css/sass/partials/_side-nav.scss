@@ -7,7 +7,145 @@
 
 /*  elements
 **************************************************/
-/* x */
+/*  */
+.left-navigation-menu {
+	position: relative;
+	width: 100%;
+
+	h2 {
+		display: none;
+	}
+
+	.parent-menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 500%;
+
+		&:before {
+			background: transparent url("../images/left-nav-side-shadow.png") no-repeat scroll right 0px;
+			content: "";
+			height: 305px;
+			pointer-events: none;
+			position: absolute;
+			right: 0px;
+			top: -50px;
+			width: 35px;
+			z-index: 4;
+		}
+
+		li {
+			diplay: block;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			transition: all .25s ease 0s;
+			width: 100%;
+			z-index: 1;
+
+			&:before {
+				background: transparent url("../images/left-nav-shadow.png") no-repeat scroll right bottom;
+				bottom: -30px;
+				content: "";
+				height: 30px;
+				opacity: 0;
+				pointer-events: none;
+				position: absolute;
+				right: 0px;
+				transition: opacity .25s ease 0s;
+				width: 271px;
+			}
+
+			&:after {
+				clear: both;
+				content: "";
+				display: block;
+				height: 0;
+				overflow: hidden; 
+			}
+
+			/* menu sections */
+			> a {
+				border-bottom: 1px solid $color-gray-medium-light;
+				border-right: 5px solid $color-gray-light;
+				border-top: 1px solid $color-white;
+				clear: both;
+				color: $color-leidos-purple-dark;
+				display: block;
+				float: right;
+				font-family: "AvenirLT-Black", Arial, sans-serif;
+				font-size: 12px;
+				line-height: auto;
+				outline: none;
+				padding: 17px 20px 17px 400%;
+				position: relative;
+				text-transform: uppercase;
+				width: 145px;
+			}
+
+			&:hover,
+			&.hover,
+			.active {
+				background: $color-white;
+				z-index: 3;
+
+				&:before {
+					opacity: 1;
+				}
+
+				> a {
+					border-right: 5px solid $color-leidos-purple-light;
+					color: $color-leidos-purple-light;
+				}
+
+				.no-children {
+					max-height: 1000px;
+				}
+			}
+
+			/***** sub menus *****/
+			.no-children {
+				background: $color-leidos-purple-soft-light;
+				clear: both;
+				display: block;
+				margin: 0;
+				max-height: 0px;
+				overflow: hidden;
+				padding: 0;
+				transition: all .25s ease 0s;
+				width: 100%;
+				z-index: 1;
+
+				li {
+					background: transparent;
+
+					&:before {
+						display: none;
+					}
+
+					a {
+						border-bottom: 1px solid $color-leidos-purple-soft-dark;
+						border-right: 0;
+						border-top: 1px solid $color-leidos-purple-soft-medium;
+						color: $color-leidos-purple-dark;
+						font-size: 11px;
+						width: 135px;
+
+						&:hover,
+						.active {
+							border-bottom: 1px solid $color-white;
+							color: $color-leidos-purple-light;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 
 /*  tablet

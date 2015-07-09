@@ -9,9 +9,63 @@
 **************************************************/
 /* main wrapper */
 #main-wrapper {
-	background: $color-white;
+	background: $color-gray-light;
 	z-index: 5;
 	position: relative;
+}
+
+#content {
+	.section,
+	.content {
+		padding: 0;
+
+		/* page headline & banner */
+		.top {
+			background: pink;
+			padding: 0;
+
+			display: none; // waiting to do banner
+
+			.top-banner {
+				@extend %full-width;
+
+				.pane-title {
+				}
+
+				.pane-content {
+				}
+
+				.panel-separator {
+				}
+
+				.theme-banner-div {
+				}
+			}
+		}
+
+		/* core content wrapper */
+		.content-container {
+			@extend %max-width;
+			background: $color-gray-light;
+
+			/* left nav */
+			.content-left {
+				width: 330px;
+
+				.inside {
+					padding: 0;
+					margin: 0;
+				}
+			} 
+
+			/* page body */
+			.right-container {
+				background: blue;
+				float: right;
+				width: calc(100% - 330px);
+			}
+		}
+	}
 }
 
 
