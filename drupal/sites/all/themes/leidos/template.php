@@ -146,7 +146,11 @@ function leidos_preprocess_block(&$variables) {
 function leidos_menu_tree($variables) {
   // Check for children menus and assign 'parent' or 'no-children'.
   $parent = (strpos($variables['tree'], '<ul')) ? 'parent-menu' : 'no-children';
-  return '<ul class="menu clearfix ' . $parent . '">' . $variables['tree'] . '</ul>';
+  $tree = '<ul class="menu clearfix ' . $parent . '">' . $variables['tree'] . '</ul>';
+  if ($parent) {
+    $tree = '<span></span>' . $tree;
+  }
+  return $tree;
 }
 
 /**
