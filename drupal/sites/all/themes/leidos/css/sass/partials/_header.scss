@@ -28,3 +28,34 @@
 		}
 	}
 }
+
+
+
+
+/*  tablet
+**************************************************/
+@media only screen and (min-width: 721px) and (max-width: 960px) {
+	#header {
+		height:unquote("calc(")$header-height-mt unquote("+ 5px)"); // adjusted to compensate for the border
+
+		.section {
+			height:unquote("calc(")$header-height-mt unquote("+ 5px)"); // adjusted to compensate for the border
+
+			// slogan unused, hiding element
+			#name-and-slogan {
+				display: none;
+			}
+
+			.region-header {
+				height:unquote("calc(")$header-height-mt unquote("+ 5px)"); // adjusted to compensate for the border
+			}
+		}
+	}
+}
+
+
+/*  mobile
+**************************************************/
+@media only screen and (max-width: 720px) {
+
+}
