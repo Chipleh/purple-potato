@@ -10,276 +10,276 @@
 function leidos_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu_about:https://www.leidos.com/about
-  $menu_links['main-menu_about:https://www.leidos.com/about'] = array(
+  // Exported menu link: main-menu_about:about
+  $menu_links['main-menu_about:about'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/about',
+    'link_path' => 'about',
     'router_path' => '',
     'link_title' => 'About',
     'options' => array(
       'attributes' => array(
         'title' => 'About',
       ),
-      'identifier' => 'main-menu_about:https://www.leidos.com/about',
+      'identifier' => 'main-menu_about:about',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_about:https://www.leidos.com/natsec#main
-  $menu_links['main-menu_about:https://www.leidos.com/natsec#main'] = array(
+  // Exported menu link: main-menu_about:natsec#main
+  $menu_links['main-menu_about:natsec#main'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/natsec#main',
+    'link_path' => 'natsec#main',
     'router_path' => '',
     'link_title' => 'About',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_about:https://www.leidos.com/natsec#main',
+      'identifier' => 'main-menu_about:natsec#main',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -45,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_national-security:https://www.leidos.com/natsec',
+    'parent_identifier' => 'main-menu_:natsec',
   );
-  // Exported menu link: main-menu_advanced-communications-systems:https://www.leidos.com/engineering/advanced-communications-systems
-  $menu_links['main-menu_advanced-communications-systems:https://www.leidos.com/engineering/advanced-communications-systems'] = array(
+  // Exported menu link: main-menu_advanced-communications-systems:engineering/advanced-communications-systems
+  $menu_links['main-menu_advanced-communications-systems:engineering/advanced-communications-systems'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/engineering/advanced-communications-systems',
-    'router_path' => '',
+    'link_path' => 'engineering/advanced-communications-systems',
+    'router_path' => 'engineering',
     'link_title' => 'Advanced Communications Systems',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_advanced-communications-systems:https://www.leidos.com/engineering/advanced-communications-systems',
+      'identifier' => 'main-menu_advanced-communications-systems:engineering/advanced-communications-systems',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
     'parent_identifier' => 'main-menu_engineering:engineering',
   );
-  // Exported menu link: main-menu_border--transportation-security:https://www.leidos.com/natsec/homeland-security/border-security
-  $menu_links['main-menu_border--transportation-security:https://www.leidos.com/natsec/homeland-security/border-security'] = array(
+  // Exported menu link: main-menu_border--transportation-security:natsec/homeland-security/border-security
+  $menu_links['main-menu_border--transportation-security:natsec/homeland-security/border-security'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/natsec/homeland-security/border-security',
+    'link_path' => 'natsec/homeland-security/border-security',
     'router_path' => '',
     'link_title' => 'Border & Transportation Security',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_border--transportation-security:https://www.leidos.com/natsec/homeland-security/border-security',
+      'identifier' => 'main-menu_border--transportation-security:natsec/homeland-security/border-security',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -46,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_national-security:https://www.leidos.com/natsec',
+    'parent_identifier' => 'main-menu_:natsec',
   );
-  // Exported menu link: main-menu_business--financial-advisory:https://www.leidos.com/engineering/business-and-financial-advisory
-  $menu_links['main-menu_business--financial-advisory:https://www.leidos.com/engineering/business-and-financial-advisory'] = array(
+  // Exported menu link: main-menu_business--financial-advisory:engineering/business-and-financial-advisory
+  $menu_links['main-menu_business--financial-advisory:engineering/business-and-financial-advisory'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/engineering/business-and-financial-advisory',
-    'router_path' => '',
+    'link_path' => 'engineering/business-and-financial-advisory',
+    'router_path' => 'engineering',
     'link_title' => 'Business / Financial Advisory',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_business--financial-advisory:https://www.leidos.com/engineering/business-and-financial-advisory',
+      'identifier' => 'main-menu_business--financial-advisory:engineering/business-and-financial-advisory',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -42,
     'customized' => 1,
     'parent_identifier' => 'main-menu_engineering:engineering',
   );
-  // Exported menu link: main-menu_cancer--aids-research:https://www.leidos.com/health/life-sciences/cancer-hiv
-  $menu_links['main-menu_cancer--aids-research:https://www.leidos.com/health/life-sciences/cancer-hiv'] = array(
+  // Exported menu link: main-menu_cancer--aids-research:health/life-sciences/cancer-hiv
+  $menu_links['main-menu_cancer--aids-research:health/life-sciences/cancer-hiv'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/health/life-sciences/cancer-hiv',
+    'link_path' => 'health/life-sciences/cancer-hiv',
     'router_path' => '',
     'link_title' => 'Cancer & AIDS Research',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_cancer--aids-research:https://www.leidos.com/health/life-sciences/cancer-hiv',
+      'identifier' => 'main-menu_cancer--aids-research:health/life-sciences/cancer-hiv',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -46,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_health:https://www.leidos.com/health',
+    'parent_identifier' => 'main-menu_:health',
   );
-  // Exported menu link: main-menu_capabilities:https://www.leidos.com/capabilities
-  $menu_links['main-menu_capabilities:https://www.leidos.com/capabilities'] = array(
+  // Exported menu link: main-menu_capabilities:capabilities
+  $menu_links['main-menu_capabilities:capabilities'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/capabilities',
+    'link_path' => 'capabilities',
     'router_path' => '',
     'link_title' => 'Capabilities',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_capabilities:https://www.leidos.com/capabilities',
+      'identifier' => 'main-menu_capabilities:capabilities',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
-  // Exported menu link: main-menu_careers:https://www.leidos.com/careers
-  $menu_links['main-menu_careers:https://www.leidos.com/careers'] = array(
+  // Exported menu link: main-menu_careers:careers
+  $menu_links['main-menu_careers:careers'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/careers',
+    'link_path' => 'careers',
     'router_path' => '',
     'link_title' => 'Careers',
     'options' => array(
       'attributes' => array(
         'title' => 'Careers',
       ),
-      'identifier' => 'main-menu_careers:https://www.leidos.com/careers',
+      'identifier' => 'main-menu_careers:careers',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_carrers-faqs:https://www.leidos.com/careers/faqs
-  $menu_links['main-menu_carrers-faqs:https://www.leidos.com/careers/faqs'] = array(
+  // Exported menu link: main-menu_carrers-faqs:careers/faqs
+  $menu_links['main-menu_carrers-faqs:careers/faqs'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/careers/faqs',
+    'link_path' => 'careers/faqs',
     'router_path' => '',
     'link_title' => 'Carrers FAQs',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_carrers-faqs:https://www.leidos.com/careers/faqs',
+      'identifier' => 'main-menu_carrers-faqs:careers/faqs',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_careers:https://www.leidos.com/careers',
+    'parent_identifier' => 'main-menu_:careers',
   );
-  // Exported menu link: main-menu_command--control:https://www.leidos.com/natsec/dominance
-  $menu_links['main-menu_command--control:https://www.leidos.com/natsec/dominance'] = array(
+  // Exported menu link: main-menu_command--control:natsec/dominance
+  $menu_links['main-menu_command--control:natsec/dominance'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/natsec/dominance',
+    'link_path' => 'natsec/dominance',
     'router_path' => '',
     'link_title' => 'Command & Control',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_command--control:https://www.leidos.com/natsec/dominance',
+      'identifier' => 'main-menu_command--control:natsec/dominance',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_national-security:https://www.leidos.com/natsec',
+    'parent_identifier' => 'main-menu_:natsec',
   );
-  // Exported menu link: main-menu_commercial-cyber:https://www.leidos.com/commercialcyber
-  $menu_links['main-menu_commercial-cyber:https://www.leidos.com/commercialcyber'] = array(
+  // Exported menu link: main-menu_commercial-cyber:commercialcyber
+  $menu_links['main-menu_commercial-cyber:commercialcyber'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/commercialcyber',
+    'link_path' => 'commercialcyber',
     'router_path' => '',
     'link_title' => 'Commercial Cyber',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_commercial-cyber:https://www.leidos.com/commercialcyber',
+      'identifier' => 'main-menu_commercial-cyber:commercialcyber',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_national-security:https://www.leidos.com/natsec',
+    'parent_identifier' => 'main-menu_:natsec',
   );
-  // Exported menu link: main-menu_commitment-to-quality:https://www.leidos.com/about/quality
-  $menu_links['main-menu_commitment-to-quality:https://www.leidos.com/about/quality'] = array(
+  // Exported menu link: main-menu_commitment-to-quality:about/quality
+  $menu_links['main-menu_commitment-to-quality:about/quality'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/about/quality',
+    'link_path' => 'about/quality',
     'router_path' => '',
     'link_title' => 'Commitment to Quality',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_commitment-to-quality:https://www.leidos.com/about/quality',
+      'identifier' => 'main-menu_commitment-to-quality:about/quality',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -43,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
-  // Exported menu link: main-menu_contact:https://www.leidos.com/contact
-  $menu_links['main-menu_contact:https://www.leidos.com/contact'] = array(
+  // Exported menu link: main-menu_contact:contact
+  $menu_links['main-menu_contact:contact'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/contact',
+    'link_path' => 'contact',
     'router_path' => '',
     'link_title' => 'Contact',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_contact:https://www.leidos.com/contact',
+      'identifier' => 'main-menu_contact:contact',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -41,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
   // Exported menu link: main-menu_corporate-governance:http://investors.leidos.com/phoenix.zhtml?c=193857&p=irol-govhighlights
   $menu_links['main-menu_corporate-governance:http://investors.leidos.com/phoenix.zhtml?c=193857&p=irol-govhighlights'] = array(
@@ -302,63 +302,63 @@ function leidos_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_investors:http://investors.leidos.com/',
   );
-  // Exported menu link: main-menu_corporate-responsibility:https://www.leidos.com/about/corporate-responsibility
-  $menu_links['main-menu_corporate-responsibility:https://www.leidos.com/about/corporate-responsibility'] = array(
+  // Exported menu link: main-menu_corporate-responsibility:about/corporate-responsibility
+  $menu_links['main-menu_corporate-responsibility:about/corporate-responsibility'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/about/corporate-responsibility',
+    'link_path' => 'about/corporate-responsibility',
     'router_path' => '',
     'link_title' => 'Corporate Responsibility',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_corporate-responsibility:https://www.leidos.com/about/corporate-responsibility',
+      'identifier' => 'main-menu_corporate-responsibility:about/corporate-responsibility',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -44,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
-  // Exported menu link: main-menu_designbuild--epc:https://www.leidos.com/engineering/designbuild
-  $menu_links['main-menu_designbuild--epc:https://www.leidos.com/engineering/designbuild'] = array(
+  // Exported menu link: main-menu_designbuild--epc:engineering/designbuild
+  $menu_links['main-menu_designbuild--epc:engineering/designbuild'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/engineering/designbuild',
-    'router_path' => '',
+    'link_path' => 'engineering/designbuild',
+    'router_path' => 'engineering',
     'link_title' => 'DesignBuild / EPC',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_designbuild--epc:https://www.leidos.com/engineering/designbuild',
+      'identifier' => 'main-menu_designbuild--epc:engineering/designbuild',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -44,
     'customized' => 1,
     'parent_identifier' => 'main-menu_engineering:engineering',
   );
-  // Exported menu link: main-menu_energy-management:https://www.leidos.com/engineering/energy-management
-  $menu_links['main-menu_energy-management:https://www.leidos.com/engineering/energy-management'] = array(
+  // Exported menu link: main-menu_energy-management:engineering/energy-management
+  $menu_links['main-menu_energy-management:engineering/energy-management'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/engineering/energy-management',
-    'router_path' => '',
+    'link_path' => 'engineering/energy-management',
+    'router_path' => 'engineering',
     'link_title' => 'Energy Management',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_energy-management:https://www.leidos.com/engineering/energy-management',
+      'identifier' => 'main-menu_energy-management:engineering/energy-management',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
@@ -385,172 +385,172 @@ function leidos_menu_default_menu_links() {
     'weight' => -43,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_environment:https://www.leidos.com/engineering/environment
-  $menu_links['main-menu_environment:https://www.leidos.com/engineering/environment'] = array(
+  // Exported menu link: main-menu_environment:engineering/environment
+  $menu_links['main-menu_environment:engineering/environment'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/engineering/environment',
-    'router_path' => '',
+    'link_path' => 'engineering/environment',
+    'router_path' => 'engineering',
     'link_title' => 'Environment',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_environment:https://www.leidos.com/engineering/environment',
+      'identifier' => 'main-menu_environment:engineering/environment',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -43,
     'customized' => 1,
     'parent_identifier' => 'main-menu_engineering:engineering',
   );
-  // Exported menu link: main-menu_features:https://www.leidos.com/newsroom/features
-  $menu_links['main-menu_features:https://www.leidos.com/newsroom/features'] = array(
+  // Exported menu link: main-menu_features:newsroom/features
+  $menu_links['main-menu_features:newsroom/features'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/newsroom/features',
+    'link_path' => 'newsroom/features',
     'router_path' => '',
     'link_title' => 'Features',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_features:https://www.leidos.com/newsroom/features',
+      'identifier' => 'main-menu_features:newsroom/features',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_newsroom:https://www.leidos.com/newsroom',
+    'parent_identifier' => 'main-menu_:newsroom',
   );
-  // Exported menu link: main-menu_federal-contract-vehicles:https://www.leidos.com/contractcenter
-  $menu_links['main-menu_federal-contract-vehicles:https://www.leidos.com/contractcenter'] = array(
+  // Exported menu link: main-menu_federal-contract-vehicles:contractcenter
+  $menu_links['main-menu_federal-contract-vehicles:contractcenter'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/contractcenter',
+    'link_path' => 'contractcenter',
     'router_path' => '',
     'link_title' => 'Federal Contract Vehicles',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_federal-contract-vehicles:https://www.leidos.com/contractcenter',
+      'identifier' => 'main-menu_federal-contract-vehicles:contractcenter',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -45,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
-  // Exported menu link: main-menu_federal-cyber:https://www.leidos.com/cybersecurity_new
-  $menu_links['main-menu_federal-cyber:https://www.leidos.com/cybersecurity_new'] = array(
+  // Exported menu link: main-menu_federal-cyber:cybersecurity_new
+  $menu_links['main-menu_federal-cyber:cybersecurity_new'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/cybersecurity_new',
+    'link_path' => 'cybersecurity_new',
     'router_path' => '',
     'link_title' => 'Federal Cyber',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_federal-cyber:https://www.leidos.com/cybersecurity_new',
+      'identifier' => 'main-menu_federal-cyber:cybersecurity_new',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_national-security:https://www.leidos.com/natsec',
+    'parent_identifier' => 'main-menu_:natsec',
   );
-  // Exported menu link: main-menu_health-it:https://www.leidos.com/health/healthIT
-  $menu_links['main-menu_health-it:https://www.leidos.com/health/healthIT'] = array(
+  // Exported menu link: main-menu_health-it:health/healthIT
+  $menu_links['main-menu_health-it:health/healthIT'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/health/healthIT',
+    'link_path' => 'health/healthIT',
     'router_path' => '',
     'link_title' => 'Health IT',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_health-it:https://www.leidos.com/health/healthIT',
+      'identifier' => 'main-menu_health-it:health/healthIT',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_health:https://www.leidos.com/health',
+    'parent_identifier' => 'main-menu_:health',
   );
-  // Exported menu link: main-menu_health:https://www.leidos.com/health
-  $menu_links['main-menu_health:https://www.leidos.com/health'] = array(
+  // Exported menu link: main-menu_health:health
+  $menu_links['main-menu_health:health'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/health',
+    'link_path' => 'health',
     'router_path' => '',
     'link_title' => 'Health',
     'options' => array(
       'attributes' => array(
         'title' => 'Health',
       ),
-      'identifier' => 'main-menu_health:https://www.leidos.com/health',
+      'identifier' => 'main-menu_health:health',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
     'weight' => -44,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_healthcare-quality--cost:https://www.leidos.com/health/healthservices
-  $menu_links['main-menu_healthcare-quality--cost:https://www.leidos.com/health/healthservices'] = array(
+  // Exported menu link: main-menu_healthcare-quality--cost:health/healthservices
+  $menu_links['main-menu_healthcare-quality--cost:health/healthservices'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/health/healthservices',
+    'link_path' => 'health/healthservices',
     'router_path' => '',
     'link_title' => 'Healthcare Quality & Cost',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_healthcare-quality--cost:https://www.leidos.com/health/healthservices',
+      'identifier' => 'main-menu_healthcare-quality--cost:health/healthservices',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_health:https://www.leidos.com/health',
+    'parent_identifier' => 'main-menu_:health',
   );
-  // Exported menu link: main-menu_industry-news--events:https://www.leidos.com/newsroom/events
-  $menu_links['main-menu_industry-news--events:https://www.leidos.com/newsroom/events'] = array(
+  // Exported menu link: main-menu_industry-news--events:newsroom/events
+  $menu_links['main-menu_industry-news--events:newsroom/events'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/newsroom/events',
+    'link_path' => 'newsroom/events',
     'router_path' => '',
     'link_title' => 'Industry News & Events',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_industry-news--events:https://www.leidos.com/newsroom/events',
+      'identifier' => 'main-menu_industry-news--events:newsroom/events',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_newsroom:https://www.leidos.com/newsroom',
+    'parent_identifier' => 'main-menu_:newsroom',
   );
   // Exported menu link: main-menu_investors:http://investors.leidos.com/
   $menu_links['main-menu_investors:http://investors.leidos.com/'] = array(
@@ -572,68 +572,68 @@ function leidos_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_leadership:https://www.leidos.com/about/org
-  $menu_links['main-menu_leadership:https://www.leidos.com/about/org'] = array(
+  // Exported menu link: main-menu_leadership:about/org
+  $menu_links['main-menu_leadership:about/org'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/about/org',
+    'link_path' => 'about/org',
     'router_path' => '',
     'link_title' => 'Leadership',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_leadership:https://www.leidos.com/about/org',
+      'identifier' => 'main-menu_leadership:about/org',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
-  // Exported menu link: main-menu_legacy:https://www.leidos.com/about/history
-  $menu_links['main-menu_legacy:https://www.leidos.com/about/history'] = array(
+  // Exported menu link: main-menu_legacy:about/history
+  $menu_links['main-menu_legacy:about/history'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/about/history',
+    'link_path' => 'about/history',
     'router_path' => '',
     'link_title' => 'Legacy',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_legacy:https://www.leidos.com/about/history',
+      'identifier' => 'main-menu_legacy:about/history',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -46,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
-  // Exported menu link: main-menu_leidos-companies:https://www.leidos.com/about/companies
-  $menu_links['main-menu_leidos-companies:https://www.leidos.com/about/companies'] = array(
+  // Exported menu link: main-menu_leidos-companies:about/companies
+  $menu_links['main-menu_leidos-companies:about/companies'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/about/companies',
+    'link_path' => 'about/companies',
     'router_path' => '',
     'link_title' => 'Leidos Companies',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_leidos-companies:https://www.leidos.com/about/companies',
+      'identifier' => 'main-menu_leidos-companies:about/companies',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
   // Exported menu link: main-menu_leidos:http://www.leidos.com
   $menu_links['main-menu_leidos:http://www.leidos.com'] = array(
@@ -655,213 +655,213 @@ function leidos_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_life-at-leidos:https://www.leidos.com/careers/life
-  $menu_links['main-menu_life-at-leidos:https://www.leidos.com/careers/life'] = array(
+  // Exported menu link: main-menu_life-at-leidos:careers/life
+  $menu_links['main-menu_life-at-leidos:careers/life'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/careers/life',
+    'link_path' => 'careers/life',
     'router_path' => '',
     'link_title' => 'Life at Leidos',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_life-at-leidos:https://www.leidos.com/careers/life',
+      'identifier' => 'main-menu_life-at-leidos:careers/life',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_careers:https://www.leidos.com/careers',
+    'parent_identifier' => 'main-menu_:careers',
   );
-  // Exported menu link: main-menu_life-sciences:https://www.leidos.com/health/life-sciences
-  $menu_links['main-menu_life-sciences:https://www.leidos.com/health/life-sciences'] = array(
+  // Exported menu link: main-menu_life-sciences:health/life-sciences
+  $menu_links['main-menu_life-sciences:health/life-sciences'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/health/life-sciences',
+    'link_path' => 'health/life-sciences',
     'router_path' => '',
     'link_title' => 'Life Sciences',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_life-sciences:https://www.leidos.com/health/life-sciences',
+      'identifier' => 'main-menu_life-sciences:health/life-sciences',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_health:https://www.leidos.com/health',
+    'parent_identifier' => 'main-menu_:health',
   );
-  // Exported menu link: main-menu_logistics:https://www.leidos.com/logistics
-  $menu_links['main-menu_logistics:https://www.leidos.com/logistics'] = array(
+  // Exported menu link: main-menu_logistics:logistics
+  $menu_links['main-menu_logistics:logistics'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/logistics',
+    'link_path' => 'logistics',
     'router_path' => '',
     'link_title' => 'Logistics',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_logistics:https://www.leidos.com/logistics',
+      'identifier' => 'main-menu_logistics:logistics',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_national-security:https://www.leidos.com/natsec',
+    'parent_identifier' => 'main-menu_:natsec',
   );
-  // Exported menu link: main-menu_multimedia:https://www.leidos.com/newsroom/media
-  $menu_links['main-menu_multimedia:https://www.leidos.com/newsroom/media'] = array(
+  // Exported menu link: main-menu_multimedia:newsroom/media
+  $menu_links['main-menu_multimedia:newsroom/media'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/newsroom/media',
+    'link_path' => 'newsroom/media',
     'router_path' => '',
     'link_title' => 'Multimedia',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_multimedia:https://www.leidos.com/newsroom/media',
+      'identifier' => 'main-menu_multimedia:newsroom/media',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_newsroom:https://www.leidos.com/newsroom',
+    'parent_identifier' => 'main-menu_:newsroom',
   );
-  // Exported menu link: main-menu_national-security:https://www.leidos.com/natsec
-  $menu_links['main-menu_national-security:https://www.leidos.com/natsec'] = array(
+  // Exported menu link: main-menu_national-security:natsec
+  $menu_links['main-menu_national-security:natsec'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/natsec',
+    'link_path' => 'natsec',
     'router_path' => '',
     'link_title' => 'National Security',
     'options' => array(
       'attributes' => array(
         'title' => 'National Security',
       ),
-      'identifier' => 'main-menu_national-security:https://www.leidos.com/natsec',
+      'identifier' => 'main-menu_national-security:natsec',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
     'weight' => -45,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_newsroom:https://www.leidos.com/newsroom
-  $menu_links['main-menu_newsroom:https://www.leidos.com/newsroom'] = array(
+  // Exported menu link: main-menu_newsroom:newsroom
+  $menu_links['main-menu_newsroom:newsroom'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/newsroom',
+    'link_path' => 'newsroom',
     'router_path' => '',
     'link_title' => 'Newsroom',
     'options' => array(
       'attributes' => array(
         'title' => 'Newsroom',
       ),
-      'identifier' => 'main-menu_newsroom:https://www.leidos.com/newsroom',
+      'identifier' => 'main-menu_newsroom:newsroom',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
     'weight' => -46,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_opportunities:https://www.leidos.com/careers/opportunities
-  $menu_links['main-menu_opportunities:https://www.leidos.com/careers/opportunities'] = array(
+  // Exported menu link: main-menu_opportunities:careers/opportunities
+  $menu_links['main-menu_opportunities:careers/opportunities'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/careers/opportunities',
+    'link_path' => 'careers/opportunities',
     'router_path' => '',
     'link_title' => 'Opportunities',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_opportunities:https://www.leidos.com/careers/opportunities',
+      'identifier' => 'main-menu_opportunities:careers/opportunities',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_careers:https://www.leidos.com/careers',
+    'parent_identifier' => 'main-menu_:careers',
   );
-  // Exported menu link: main-menu_pay--benefits:https://www.leidos.com/careers#pay-benefits
-  $menu_links['main-menu_pay--benefits:https://www.leidos.com/careers#pay-benefits'] = array(
+  // Exported menu link: main-menu_pay--benefits:careers#pay-benefits
+  $menu_links['main-menu_pay--benefits:careers#pay-benefits'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/careers#pay-benefits',
+    'link_path' => 'careers#pay-benefits',
     'router_path' => '',
     'link_title' => 'Pay & Benefits',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_pay--benefits:https://www.leidos.com/careers#pay-benefits',
+      'identifier' => 'main-menu_pay--benefits:careers#pay-benefits',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_careers:https://www.leidos.com/careers',
+    'parent_identifier' => 'main-menu_:careers',
   );
-  // Exported menu link: main-menu_power-grid-engineering:https://www.leidos.com/engineering/power-grid
-  $menu_links['main-menu_power-grid-engineering:https://www.leidos.com/engineering/power-grid'] = array(
+  // Exported menu link: main-menu_power-grid-engineering:engineering/power-grid
+  $menu_links['main-menu_power-grid-engineering:engineering/power-grid'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/engineering/power-grid',
-    'router_path' => '',
+    'link_path' => 'engineering/power-grid',
+    'router_path' => 'engineering',
     'link_title' => 'Power Grid Engineering',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_power-grid-engineering:https://www.leidos.com/engineering/power-grid',
+      'identifier' => 'main-menu_power-grid-engineering:engineering/power-grid',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
     'parent_identifier' => 'main-menu_engineering:engineering',
   );
-  // Exported menu link: main-menu_public-health:https://www.leidos.com/health/publichealth
-  $menu_links['main-menu_public-health:https://www.leidos.com/health/publichealth'] = array(
+  // Exported menu link: main-menu_public-health:health/publichealth
+  $menu_links['main-menu_public-health:health/publichealth'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/health/publichealth',
+    'link_path' => 'health/publichealth',
     'router_path' => '',
     'link_title' => 'Public Health',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_public-health:https://www.leidos.com/health/publichealth',
+      'identifier' => 'main-menu_public-health:health/publichealth',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_health:https://www.leidos.com/health',
+    'parent_identifier' => 'main-menu_:health',
   );
   // Exported menu link: main-menu_quarterly-earnings:http://investors.leidos.com/phoenix.zhtml?c=193857&p=quarterlyearnings
   $menu_links['main-menu_quarterly-earnings:http://investors.leidos.com/phoenix.zhtml?c=193857&p=quarterlyearnings'] = array(
@@ -884,26 +884,26 @@ function leidos_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_investors:http://investors.leidos.com/',
   );
-  // Exported menu link: main-menu_ranking--awards:https://www.leidos.com/about/rankings-awards
-  $menu_links['main-menu_ranking--awards:https://www.leidos.com/about/rankings-awards'] = array(
+  // Exported menu link: main-menu_ranking--awards:about/rankings-awards
+  $menu_links['main-menu_ranking--awards:about/rankings-awards'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/about/rankings-awards',
+    'link_path' => 'about/rankings-awards',
     'router_path' => '',
     'link_title' => 'Ranking & Awards',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_ranking--awards:https://www.leidos.com/about/rankings-awards',
+      'identifier' => 'main-menu_ranking--awards:about/rankings-awards',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -42,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
   // Exported menu link: main-menu_search:<nolink>
   $menu_links['main-menu_search:<nolink>'] = array(
@@ -946,21 +946,21 @@ function leidos_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_investors:http://investors.leidos.com/',
   );
-  // Exported menu link: main-menu_smart-grid:https://www.leidos.com/engineering/smart-grid/
-  $menu_links['main-menu_smart-grid:https://www.leidos.com/engineering/smart-grid/'] = array(
+  // Exported menu link: main-menu_smart-grid:engineering/smart-grid/
+  $menu_links['main-menu_smart-grid:engineering/smart-grid/'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/engineering/smart-grid/',
-    'router_path' => '',
+    'link_path' => 'engineering/smart-grid/',
+    'router_path' => 'engineering',
     'link_title' => 'Smart Grid',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_smart-grid:https://www.leidos.com/engineering/smart-grid/',
+      'identifier' => 'main-menu_smart-grid:engineering/smart-grid/',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -46,
@@ -988,495 +988,495 @@ function leidos_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_investors:http://investors.leidos.com/',
   );
-  // Exported menu link: main-menu_systems-integration--controls:https://www.leidos.com/engineering/systems-integration-controls
-  $menu_links['main-menu_systems-integration--controls:https://www.leidos.com/engineering/systems-integration-controls'] = array(
+  // Exported menu link: main-menu_systems-integration--controls:engineering/systems-integration-controls
+  $menu_links['main-menu_systems-integration--controls:engineering/systems-integration-controls'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/engineering/systems-integration-controls',
-    'router_path' => '',
+    'link_path' => 'engineering/systems-integration-controls',
+    'router_path' => 'engineering',
     'link_title' => 'Systems Integration / Controls',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_systems-integration--controls:https://www.leidos.com/engineering/systems-integration-controls',
+      'identifier' => 'main-menu_systems-integration--controls:engineering/systems-integration-controls',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
     'parent_identifier' => 'main-menu_engineering:engineering',
   );
-  // Exported menu link: main-menu_utility-security:https://www.leidos.com/engineering/utility-security
-  $menu_links['main-menu_utility-security:https://www.leidos.com/engineering/utility-security'] = array(
+  // Exported menu link: main-menu_utility-security:engineering/utility-security
+  $menu_links['main-menu_utility-security:engineering/utility-security'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/engineering/utility-security',
-    'router_path' => '',
+    'link_path' => 'engineering/utility-security',
+    'router_path' => 'engineering',
     'link_title' => 'Utility Security',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_utility-security:https://www.leidos.com/engineering/utility-security',
+      'identifier' => 'main-menu_utility-security:engineering/utility-security',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -45,
     'customized' => 1,
     'parent_identifier' => 'main-menu_engineering:engineering',
   );
-  // Exported menu link: main-menu_vision-mission-values:https://www.leidos.com/about/mission
-  $menu_links['main-menu_vision-mission-values:https://www.leidos.com/about/mission'] = array(
+  // Exported menu link: main-menu_vision-mission-values:about/mission
+  $menu_links['main-menu_vision-mission-values:about/mission'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'https://www.leidos.com/about/mission',
+    'link_path' => 'about/mission',
     'router_path' => '',
     'link_title' => 'Vision, Mission, Values',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'main-menu_vision-mission-values:https://www.leidos.com/about/mission',
+      'identifier' => 'main-menu_vision-mission-values:about/mission',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_about:https://www.leidos.com/about',
+    'parent_identifier' => 'main-menu_:about',
   );
-  // Exported menu link: menu-engineering-navigation_articles--publications:https://www.leidos.com/engineering/articles
-  $menu_links['menu-engineering-navigation_articles--publications:https://www.leidos.com/engineering/articles'] = array(
+  // Exported menu link: menu-engineering-navigation_articles--publications:engineering/articles
+  $menu_links['menu-engineering-navigation_articles--publications:engineering/articles'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/articles',
-    'router_path' => '',
+    'link_path' => 'engineering/articles',
+    'router_path' => 'engineering',
     'link_title' => 'Articles & Publications',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_articles--publications:https://www.leidos.com/engineering/articles',
+      'identifier' => 'menu-engineering-navigation_articles--publications:engineering/articles',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => 0,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_newsroom:https://www.leidos.com/engineering/newsroom',
+    'parent_identifier' => 'menu-engineering-navigation_newsroom:engineering/newsroom',
   );
-  // Exported menu link: menu-engineering-navigation_awards:https://www.leidos.com/engineering/awards
-  $menu_links['menu-engineering-navigation_awards:https://www.leidos.com/engineering/awards'] = array(
+  // Exported menu link: menu-engineering-navigation_awards:engineering/awards
+  $menu_links['menu-engineering-navigation_awards:engineering/awards'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/awards',
-    'router_path' => '',
+    'link_path' => 'engineering/awards',
+    'router_path' => 'engineering',
     'link_title' => 'Awards',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_awards:https://www.leidos.com/engineering/awards',
+      'identifier' => 'menu-engineering-navigation_awards:engineering/awards',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+    'parent_identifier' => 'menu-engineering-navigation_engineering:engineering',
   );
-  // Exported menu link: menu-engineering-navigation_capabilities:https://www.leidos.com/engineering/capabilities
-  $menu_links['menu-engineering-navigation_capabilities:https://www.leidos.com/engineering/capabilities'] = array(
+  // Exported menu link: menu-engineering-navigation_capabilities:engineering/capabilities
+  $menu_links['menu-engineering-navigation_capabilities:engineering/capabilities'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/capabilities',
-    'router_path' => '',
+    'link_path' => 'engineering/capabilities',
+    'router_path' => 'engineering/capabilities',
     'link_title' => 'Capabilities',
     'options' => array(
       'attributes' => array(
         'title' => 'Capabilities',
       ),
-      'identifier' => 'menu-engineering-navigation_capabilities:https://www.leidos.com/engineering/capabilities',
+      'identifier' => 'menu-engineering-navigation_capabilities:engineering/capabilities',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-engineering-navigation_contact-us:https://www.leidos.com/engineering/engineering-office-locations
-  $menu_links['menu-engineering-navigation_contact-us:https://www.leidos.com/engineering/engineering-office-locations'] = array(
+  // Exported menu link: menu-engineering-navigation_contact-us:engineering/engineering-office-locations
+  $menu_links['menu-engineering-navigation_contact-us:engineering/engineering-office-locations'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/engineering-office-locations',
-    'router_path' => '',
+    'link_path' => 'engineering/engineering-office-locations',
+    'router_path' => 'engineering',
     'link_title' => 'Contact Us',
     'options' => array(
       'attributes' => array(
         'title' => 'Contact us',
       ),
-      'identifier' => 'menu-engineering-navigation_contact-us:https://www.leidos.com/engineering/engineering-office-locations',
+      'identifier' => 'menu-engineering-navigation_contact-us:engineering/engineering-office-locations',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -45,
     'customized' => 1,
   );
-  // Exported menu link: menu-engineering-navigation_engineering:https://www.leidos.com/engineering
-  $menu_links['menu-engineering-navigation_engineering:https://www.leidos.com/engineering'] = array(
+  // Exported menu link: menu-engineering-navigation_engineering:engineering
+  $menu_links['menu-engineering-navigation_engineering:engineering'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering',
-    'router_path' => '',
+    'link_path' => 'engineering',
+    'router_path' => 'engineering',
     'link_title' => 'Engineering',
     'options' => array(
       'attributes' => array(
         'title' => 'Engineering',
       ),
-      'identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+      'identifier' => 'menu-engineering-navigation_engineering:engineering',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: menu-engineering-navigation_government:https://www.leidos.com/engineering/markets/government
-  $menu_links['menu-engineering-navigation_government:https://www.leidos.com/engineering/markets/government'] = array(
+  // Exported menu link: menu-engineering-navigation_government:engineering/markets/government
+  $menu_links['menu-engineering-navigation_government:engineering/markets/government'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/markets/government',
-    'router_path' => '',
+    'link_path' => 'engineering/markets/government',
+    'router_path' => 'engineering',
     'link_title' => 'Government',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_government:https://www.leidos.com/engineering/markets/government',
+      'identifier' => 'menu-engineering-navigation_government:engineering/markets/government',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -46,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+    'parent_identifier' => 'menu-engineering-navigation_markets:engineering/markets',
   );
-  // Exported menu link: menu-engineering-navigation_industry-rankings:https://www.leidos.com/engineering/industry-rankings
-  $menu_links['menu-engineering-navigation_industry-rankings:https://www.leidos.com/engineering/industry-rankings'] = array(
+  // Exported menu link: menu-engineering-navigation_industry-rankings:engineering/industry-rankings
+  $menu_links['menu-engineering-navigation_industry-rankings:engineering/industry-rankings'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/industry-rankings',
-    'router_path' => '',
+    'link_path' => 'engineering/industry-rankings',
+    'router_path' => 'engineering',
     'link_title' => 'Industry Rankings',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_industry-rankings:https://www.leidos.com/engineering/industry-rankings',
+      'identifier' => 'menu-engineering-navigation_industry-rankings:engineering/industry-rankings',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+    'parent_identifier' => 'menu-engineering-navigation_engineering:engineering',
   );
-  // Exported menu link: menu-engineering-navigation_leadership:https://www.leidos.com/engineering/leadership
-  $menu_links['menu-engineering-navigation_leadership:https://www.leidos.com/engineering/leadership'] = array(
+  // Exported menu link: menu-engineering-navigation_leadership:engineering/leadership
+  $menu_links['menu-engineering-navigation_leadership:engineering/leadership'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/leadership',
-    'router_path' => '',
+    'link_path' => 'engineering/leadership',
+    'router_path' => 'engineering',
     'link_title' => 'Leadership',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_leadership:https://www.leidos.com/engineering/leadership',
+      'identifier' => 'menu-engineering-navigation_leadership:engineering/leadership',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => 0,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+    'parent_identifier' => 'menu-engineering-navigation_engineering:engineering',
   );
-  // Exported menu link: menu-engineering-navigation_lenders-and-developers:https://www.leidos.com/engineering/markets/lenders-developers
-  $menu_links['menu-engineering-navigation_lenders-and-developers:https://www.leidos.com/engineering/markets/lenders-developers'] = array(
+  // Exported menu link: menu-engineering-navigation_lenders-and-developers:engineering/markets/lenders-developers
+  $menu_links['menu-engineering-navigation_lenders-and-developers:engineering/markets/lenders-developers'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/markets/lenders-developers',
-    'router_path' => '',
+    'link_path' => 'engineering/markets/lenders-developers',
+    'router_path' => 'engineering',
     'link_title' => 'Lenders and Developers',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_lenders-and-developers:https://www.leidos.com/engineering/markets/lenders-developers',
+      'identifier' => 'menu-engineering-navigation_lenders-and-developers:engineering/markets/lenders-developers',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+    'parent_identifier' => 'menu-engineering-navigation_markets:engineering/markets',
   );
-  // Exported menu link: menu-engineering-navigation_manufacturing--industrial:https://www.leidos.com/engineering/markets/manufacturing-and-industrial
-  $menu_links['menu-engineering-navigation_manufacturing--industrial:https://www.leidos.com/engineering/markets/manufacturing-and-industrial'] = array(
+  // Exported menu link: menu-engineering-navigation_manufacturing--industrial:engineering/markets/manufacturing-and-industrial
+  $menu_links['menu-engineering-navigation_manufacturing--industrial:engineering/markets/manufacturing-and-industrial'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/markets/manufacturing-and-industrial',
-    'router_path' => '',
+    'link_path' => 'engineering/markets/manufacturing-and-industrial',
+    'router_path' => 'engineering',
     'link_title' => 'Manufacturing & Industrial',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_manufacturing--industrial:https://www.leidos.com/engineering/markets/manufacturing-and-industrial',
+      'identifier' => 'menu-engineering-navigation_manufacturing--industrial:engineering/markets/manufacturing-and-industrial',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+    'parent_identifier' => 'menu-engineering-navigation_markets:engineering/markets',
   );
-  // Exported menu link: menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets
-  $menu_links['menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets'] = array(
+  // Exported menu link: menu-engineering-navigation_markets:engineering/markets
+  $menu_links['menu-engineering-navigation_markets:engineering/markets'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/markets',
-    'router_path' => '',
+    'link_path' => 'engineering/markets',
+    'router_path' => 'engineering',
     'link_title' => 'Markets',
     'options' => array(
       'attributes' => array(
         'title' => 'Markets',
       ),
-      'identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+      'identifier' => 'menu-engineering-navigation_markets:engineering/markets',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: menu-engineering-navigation_newsroom:https://www.leidos.com/engineering/newsroom
-  $menu_links['menu-engineering-navigation_newsroom:https://www.leidos.com/engineering/newsroom'] = array(
+  // Exported menu link: menu-engineering-navigation_newsroom:engineering/newsroom
+  $menu_links['menu-engineering-navigation_newsroom:engineering/newsroom'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/newsroom',
-    'router_path' => '',
+    'link_path' => 'engineering/newsroom',
+    'router_path' => 'engineering/newsroom',
     'link_title' => 'Newsroom',
     'options' => array(
       'attributes' => array(
         'title' => 'Newsroom',
       ),
-      'identifier' => 'menu-engineering-navigation_newsroom:https://www.leidos.com/engineering/newsroom',
+      'identifier' => 'menu-engineering-navigation_newsroom:engineering/newsroom',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
     'weight' => -46,
     'customized' => 1,
   );
-  // Exported menu link: menu-engineering-navigation_office-locations:https://www.leidos.com/engineering/engineering-office-locations
-  $menu_links['menu-engineering-navigation_office-locations:https://www.leidos.com/engineering/engineering-office-locations'] = array(
+  // Exported menu link: menu-engineering-navigation_office-locations:engineering/engineering-office-locations
+  $menu_links['menu-engineering-navigation_office-locations:engineering/engineering-office-locations'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/engineering-office-locations',
-    'router_path' => '',
+    'link_path' => 'engineering/engineering-office-locations',
+    'router_path' => 'engineering',
     'link_title' => 'Office Locations',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_office-locations:https://www.leidos.com/engineering/engineering-office-locations',
+      'identifier' => 'menu-engineering-navigation_office-locations:engineering/engineering-office-locations',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => 0,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+    'parent_identifier' => 'menu-engineering-navigation_engineering:engineering',
   );
-  // Exported menu link: menu-engineering-navigation_oil-gas--chemicals:https://www.leidos.com/engineering/markets/oil-gas
-  $menu_links['menu-engineering-navigation_oil-gas--chemicals:https://www.leidos.com/engineering/markets/oil-gas'] = array(
+  // Exported menu link: menu-engineering-navigation_oil-gas--chemicals:engineering/markets/oil-gas
+  $menu_links['menu-engineering-navigation_oil-gas--chemicals:engineering/markets/oil-gas'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/markets/oil-gas',
-    'router_path' => '',
+    'link_path' => 'engineering/markets/oil-gas',
+    'router_path' => 'engineering',
     'link_title' => 'Oil, Gas & Chemicals',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_oil-gas--chemicals:https://www.leidos.com/engineering/markets/oil-gas',
+      'identifier' => 'menu-engineering-navigation_oil-gas--chemicals:engineering/markets/oil-gas',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+    'parent_identifier' => 'menu-engineering-navigation_markets:engineering/markets',
   );
-  // Exported menu link: menu-engineering-navigation_our-engineering-legacy:https://www.leidos.com/engineering/ourlegacy
-  $menu_links['menu-engineering-navigation_our-engineering-legacy:https://www.leidos.com/engineering/ourlegacy'] = array(
+  // Exported menu link: menu-engineering-navigation_our-engineering-legacy:engineering/ourlegacy
+  $menu_links['menu-engineering-navigation_our-engineering-legacy:engineering/ourlegacy'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/ourlegacy',
-    'router_path' => '',
+    'link_path' => 'engineering/ourlegacy',
+    'router_path' => 'engineering',
     'link_title' => 'Our Engineering Legacy',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_our-engineering-legacy:https://www.leidos.com/engineering/ourlegacy',
+      'identifier' => 'menu-engineering-navigation_our-engineering-legacy:engineering/ourlegacy',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => 0,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_engineering:https://www.leidos.com/engineering',
+    'parent_identifier' => 'menu-engineering-navigation_engineering:engineering',
   );
-  // Exported menu link: menu-engineering-navigation_projects:https://www.leidos.com/engineering/projects
-  $menu_links['menu-engineering-navigation_projects:https://www.leidos.com/engineering/projects'] = array(
+  // Exported menu link: menu-engineering-navigation_projects:engineering/projects
+  $menu_links['menu-engineering-navigation_projects:engineering/projects'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/projects',
-    'router_path' => '',
+    'link_path' => 'engineering/projects',
+    'router_path' => 'engineering/projects',
     'link_title' => 'Projects',
     'options' => array(
       'attributes' => array(
         'title' => 'Projects',
       ),
-      'identifier' => 'menu-engineering-navigation_projects:https://www.leidos.com/engineering/projects',
+      'identifier' => 'menu-engineering-navigation_projects:engineering/projects',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: menu-engineering-navigation_utilities:https://www.leidos.com/engineering/markets/utilities
-  $menu_links['menu-engineering-navigation_utilities:https://www.leidos.com/engineering/markets/utilities'] = array(
+  // Exported menu link: menu-engineering-navigation_utilities:engineering/markets/utilities
+  $menu_links['menu-engineering-navigation_utilities:engineering/markets/utilities'] = array(
     'menu_name' => 'menu-engineering-navigation',
-    'link_path' => 'https://www.leidos.com/engineering/markets/utilities',
-    'router_path' => '',
+    'link_path' => 'engineering/markets/utilities',
+    'router_path' => 'engineering',
     'link_title' => 'Utilities',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-engineering-navigation_utilities:https://www.leidos.com/engineering/markets/utilities',
+      'identifier' => 'menu-engineering-navigation_utilities:engineering/markets/utilities',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
-    'parent_identifier' => 'menu-engineering-navigation_markets:https://www.leidos.com/engineering/markets',
+    'parent_identifier' => 'menu-engineering-navigation_markets:engineering/markets',
   );
-  // Exported menu link: menu-footer---main-menu_leidos--2015-leidos:https://www.leidos.com/
-  $menu_links['menu-footer---main-menu_leidos--2015-leidos:https://www.leidos.com/'] = array(
+  // Exported menu link: menu-footer---main-menu_leidos--2015-leidos:
+  $menu_links['menu-footer---main-menu_leidos--2015-leidos:'] = array(
     'menu_name' => 'menu-footer---main-menu',
-    'link_path' => 'https://www.leidos.com/',
+    'link_path' => '',
     'router_path' => '',
     'link_title' => 'Leidos © 2015 Leidos',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---main-menu_leidos--2015-leidos:https://www.leidos.com/',
+      'identifier' => 'menu-footer---main-menu_leidos--2015-leidos:',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => 0,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---main-menu_privacy-policy:https://www.leidos.com/privacy
-  $menu_links['menu-footer---main-menu_privacy-policy:https://www.leidos.com/privacy'] = array(
+  // Exported menu link: menu-footer---main-menu_privacy-policy:privacy
+  $menu_links['menu-footer---main-menu_privacy-policy:privacy'] = array(
     'menu_name' => 'menu-footer---main-menu',
-    'link_path' => 'https://www.leidos.com/privacy',
+    'link_path' => 'privacy',
     'router_path' => '',
     'link_title' => 'Privacy Policy',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---main-menu_privacy-policy:https://www.leidos.com/privacy',
+      'identifier' => 'menu-footer---main-menu_privacy-policy:privacy',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---main-menu_search:https://www.leidos.com/search
-  $menu_links['menu-footer---main-menu_search:https://www.leidos.com/search'] = array(
+  // Exported menu link: menu-footer---main-menu_search:search
+  $menu_links['menu-footer---main-menu_search:search'] = array(
     'menu_name' => 'menu-footer---main-menu',
-    'link_path' => 'https://www.leidos.com/search',
-    'router_path' => '',
+    'link_path' => 'search',
+    'router_path' => 'search',
     'link_title' => 'Search',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---main-menu_search:https://www.leidos.com/search',
+      'identifier' => 'menu-footer---main-menu_search:search',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---main-menu_site-map:https://www.leidos.com/sitemap
-  $menu_links['menu-footer---main-menu_site-map:https://www.leidos.com/sitemap'] = array(
+  // Exported menu link: menu-footer---main-menu_site-map:sitemap
+  $menu_links['menu-footer---main-menu_site-map:sitemap'] = array(
     'menu_name' => 'menu-footer---main-menu',
-    'link_path' => 'https://www.leidos.com/sitemap',
+    'link_path' => 'sitemap',
     'router_path' => '',
     'link_title' => 'Site Map',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---main-menu_site-map:https://www.leidos.com/sitemap',
+      'identifier' => 'menu-footer---main-menu_site-map:sitemap',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
@@ -1502,161 +1502,161 @@ function leidos_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---resources_for-customers:https://www.leidos.com/customer
-  $menu_links['menu-footer---resources_for-customers:https://www.leidos.com/customer'] = array(
+  // Exported menu link: menu-footer---resources_for-customers:customer
+  $menu_links['menu-footer---resources_for-customers:customer'] = array(
     'menu_name' => 'menu-footer---resources',
-    'link_path' => 'https://www.leidos.com/customer',
+    'link_path' => 'customer',
     'router_path' => '',
     'link_title' => 'For Customers',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---resources_for-customers:https://www.leidos.com/customer',
+      'identifier' => 'menu-footer---resources_for-customers:customer',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---resources_for-employees:https://www.leidos.com/employees
-  $menu_links['menu-footer---resources_for-employees:https://www.leidos.com/employees'] = array(
+  // Exported menu link: menu-footer---resources_for-employees:employees
+  $menu_links['menu-footer---resources_for-employees:employees'] = array(
     'menu_name' => 'menu-footer---resources',
-    'link_path' => 'https://www.leidos.com/employees',
+    'link_path' => 'employees',
     'router_path' => '',
     'link_title' => 'For Employees',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---resources_for-employees:https://www.leidos.com/employees',
+      'identifier' => 'menu-footer---resources_for-employees:employees',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---resources_for-suppliers:https://www.leidos.com/suppliers
-  $menu_links['menu-footer---resources_for-suppliers:https://www.leidos.com/suppliers'] = array(
+  // Exported menu link: menu-footer---resources_for-suppliers:suppliers
+  $menu_links['menu-footer---resources_for-suppliers:suppliers'] = array(
     'menu_name' => 'menu-footer---resources',
-    'link_path' => 'https://www.leidos.com/suppliers',
+    'link_path' => 'suppliers',
     'router_path' => '',
     'link_title' => 'For Suppliers',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---resources_for-suppliers:https://www.leidos.com/suppliers',
+      'identifier' => 'menu-footer---resources_for-suppliers:suppliers',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---services_contact-us:https://www.leidos.com/contact
-  $menu_links['menu-footer---services_contact-us:https://www.leidos.com/contact'] = array(
+  // Exported menu link: menu-footer---services_contact-us:contact
+  $menu_links['menu-footer---services_contact-us:contact'] = array(
     'menu_name' => 'menu-footer---services',
-    'link_path' => 'https://www.leidos.com/contact',
+    'link_path' => 'contact',
     'router_path' => '',
     'link_title' => 'Contact us',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---services_contact-us:https://www.leidos.com/contact',
+      'identifier' => 'menu-footer---services_contact-us:contact',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -46,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---services_federal-contract-vehicles:https://www.leidos.com/contractcenter
-  $menu_links['menu-footer---services_federal-contract-vehicles:https://www.leidos.com/contractcenter'] = array(
+  // Exported menu link: menu-footer---services_federal-contract-vehicles:contractcenter
+  $menu_links['menu-footer---services_federal-contract-vehicles:contractcenter'] = array(
     'menu_name' => 'menu-footer---services',
-    'link_path' => 'https://www.leidos.com/contractcenter',
+    'link_path' => 'contractcenter',
     'router_path' => '',
     'link_title' => 'Federal Contract Vehicles',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---services_federal-contract-vehicles:https://www.leidos.com/contractcenter',
+      'identifier' => 'menu-footer---services_federal-contract-vehicles:contractcenter',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---services_products:https://www.leidos.com/products
-  $menu_links['menu-footer---services_products:https://www.leidos.com/products'] = array(
+  // Exported menu link: menu-footer---services_products:products
+  $menu_links['menu-footer---services_products:products'] = array(
     'menu_name' => 'menu-footer---services',
-    'link_path' => 'https://www.leidos.com/products',
+    'link_path' => 'products',
     'router_path' => '',
     'link_title' => 'Products',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---services_products:https://www.leidos.com/products',
+      'identifier' => 'menu-footer---services_products:products',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---services_research--development:https://www.leidos.com/industries/technologies
-  $menu_links['menu-footer---services_research--development:https://www.leidos.com/industries/technologies'] = array(
+  // Exported menu link: menu-footer---services_research--development:industries/technologies
+  $menu_links['menu-footer---services_research--development:industries/technologies'] = array(
     'menu_name' => 'menu-footer---services',
-    'link_path' => 'https://www.leidos.com/industries/technologies',
+    'link_path' => 'industries/technologies',
     'router_path' => '',
     'link_title' => 'Research & Development',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---services_research--development:https://www.leidos.com/industries/technologies',
+      'identifier' => 'menu-footer---services_research--development:industries/technologies',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-footer---services_services:https://www.leidos.com/industries/services
-  $menu_links['menu-footer---services_services:https://www.leidos.com/industries/services'] = array(
+  // Exported menu link: menu-footer---services_services:industries/services
+  $menu_links['menu-footer---services_services:industries/services'] = array(
     'menu_name' => 'menu-footer---services',
-    'link_path' => 'https://www.leidos.com/industries/services',
+    'link_path' => 'industries/services',
     'router_path' => '',
     'link_title' => 'Services',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-footer---services_services:https://www.leidos.com/industries/services',
+      'identifier' => 'menu-footer---services_services:industries/services',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
     'weight' => -50,

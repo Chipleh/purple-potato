@@ -212,7 +212,10 @@ function leidos_default_page_manager_pages() {
   $page->admin_title = 'Capabilities View';
   $page->admin_description = '';
   $page->path = 'panes-demo/capabilities-view';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -1006,7 +1009,10 @@ function leidos_default_page_manager_pages() {
   $page->admin_title = 'Featured Projects View Panel Pane';
   $page->admin_description = '';
   $page->path = 'panes-demo/featured-projects-view-panel-pane';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -1125,7 +1131,10 @@ function leidos_default_page_manager_pages() {
   $page->admin_title = 'Link Columns Panel Pane';
   $page->admin_description = 'Engineering landing page';
   $page->path = 'panes-demo/link-columns-panel-pane';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'none',
     'title' => 'Engineering',
@@ -1248,7 +1257,10 @@ function leidos_default_page_manager_pages() {
   $page->admin_title = 'List Columns Panel Pane';
   $page->admin_description = 'Engineering landing page';
   $page->path = 'panes-demo/list-columns-panel-pane';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'none',
     'title' => 'Engineering',
@@ -1371,7 +1383,10 @@ function leidos_default_page_manager_pages() {
   $page->admin_title = 'Newsroom View Panel Pane';
   $page->admin_description = '';
   $page->path = 'panes-demo/newsroom-view-panel-pane';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -1498,7 +1513,10 @@ function leidos_default_page_manager_pages() {
   $page->admin_title = 'Newsroom View Rail Panel Panes';
   $page->admin_description = 'Engineering landing page';
   $page->path = 'panes-demo/newsroom-view-rail-panel-pane';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'none',
     'title' => 'Engineering',
@@ -1672,7 +1690,10 @@ function leidos_default_page_manager_pages() {
   $page->admin_title = 'Panes Demo Page';
   $page->admin_description = '';
   $page->path = 'panes-demo';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -1808,7 +1829,10 @@ function leidos_default_page_manager_pages() {
   $page->admin_title = 'Projects View Rail Panel Pane';
   $page->admin_description = 'Engineering landing page';
   $page->path = 'panes-demo/projects-view-rail-panel-pane';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'none',
     'title' => 'Engineering',
