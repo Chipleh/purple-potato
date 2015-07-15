@@ -169,26 +169,26 @@ a:hover {
   /* left nav */
   /* page body */
 }
-/* line 54, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_body.scss */
-#content .section .content-container .right-container,
-#content .content .content-container .right-container {
-  display: none;
-}
 
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-  /* line 67, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_body.scss */
+  /* line 66, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_body.scss */
   #content .section,
   #content .content {
     /* core content wrapper */
   }
-  /* line 86, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_body.scss */
+  /* line 85, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_body.scss */
   #content .section .content-container,
   #content .content .content-container {
     background: #E8E8E8;
     /* left nav */
     /* page body */
+  }
+  /* line 94, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_body.scss */
+  #content .section .content-container .right-container,
+  #content .content .content-container .right-container {
+    display: none;
   }
 }
 /*  mobile
@@ -391,7 +391,7 @@ a:hover {
   display: none;
 }
 /* line 19, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu span {
+.left-navigation-menu .additional-control {
   background: #fff;
   border-bottom: 1px solid #D0D0D0;
   border-right: 0;
@@ -409,7 +409,7 @@ a:hover {
   width: calc(100% - 60px);
 }
 /* line 36, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu span:before {
+.left-navigation-menu .additional-control:before {
   background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
   background-size: 60% auto;
   content: "";
@@ -426,7 +426,7 @@ a:hover {
   z-index: 1;
 }
 /* line 51, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu span.mobile-drop-active:before {
+.left-navigation-menu .additional-control.mobile-drop-active:before {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -564,7 +564,7 @@ a:hover {
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
   /* line 197, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu span {
+  .left-navigation-menu .additional-control {
     display: block;
   }
   /* line 201, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -603,7 +603,7 @@ a:hover {
     width: calc(80% - 60px);
   }
   /* line 233, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded > span {
+  .left-navigation-menu .parent-menu li.expanded > .additional-control {
     background: transparent;
     border-bottom: 1px solid #D0D0D0;
     border-right: 0;
@@ -621,7 +621,7 @@ a:hover {
     z-index: 20;
   }
   /* line 250, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded > span:before {
+  .left-navigation-menu .parent-menu li.expanded > .additional-control:before {
     background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
     background-size: 60% auto;
     content: "";
@@ -638,7 +638,7 @@ a:hover {
     z-index: -1;
   }
   /* line 266, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active > span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active > .additional-control {
     position: relative;
     right: -100%;
     top: -54px;
@@ -646,14 +646,14 @@ a:hover {
     z-index: 11;
   }
   /* line 273, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active > span:before {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active > .additional-control:before {
     left: 30px;
     -webkit-transform: rotate(270deg);
         -ms-transform: rotate(270deg);
             transform: rotate(270deg);
   }
   /* line 280, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(2) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(2) .additional-control {
     top: calc(-54px * 2);
   }
   /* line 283, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -661,7 +661,7 @@ a:hover {
     top: calc(-54px * 1);
   }
   /* line 289, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(3) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(3) .additional-control {
     top: calc(-54px * 3);
   }
   /* line 292, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -669,7 +669,7 @@ a:hover {
     top: calc(-54px * 2);
   }
   /* line 298, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(4) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(4) .additional-control {
     top: calc(-54px * 4);
   }
   /* line 301, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -677,7 +677,7 @@ a:hover {
     top: calc(-54px * 3);
   }
   /* line 307, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(5) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(5) .additional-control {
     top: calc(-54px * 5);
   }
   /* line 310, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -685,7 +685,7 @@ a:hover {
     top: calc(-54px * 4);
   }
   /* line 316, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(6) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(6) .additional-control {
     top: calc(-54px * 6);
   }
   /* line 319, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -693,7 +693,7 @@ a:hover {
     top: calc(-54px * 5);
   }
   /* line 325, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(7) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(7) .additional-control {
     top: calc(-54px * 7);
   }
   /* line 328, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -701,7 +701,7 @@ a:hover {
     top: calc(-54px * 6);
   }
   /* line 334, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(8) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(8) .additional-control {
     top: calc(-54px * 8);
   }
   /* line 337, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -743,7 +743,7 @@ a:hover {
 **************************************************/
 @media only screen and (max-width: 720px) {
   /* line 394, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu span {
+  .left-navigation-menu .additional-control {
     display: block;
   }
   /* line 398, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -782,7 +782,7 @@ a:hover {
     width: calc(80% - 60px);
   }
   /* line 430, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded > span {
+  .left-navigation-menu .parent-menu li.expanded > .additional-control {
     background: transparent;
     border-bottom: 1px solid #D0D0D0;
     border-right: 0;
@@ -800,7 +800,7 @@ a:hover {
     z-index: 20;
   }
   /* line 447, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded > span:before {
+  .left-navigation-menu .parent-menu li.expanded > .additional-control:before {
     background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
     background-size: 60% auto;
     content: "";
@@ -817,7 +817,7 @@ a:hover {
     z-index: -1;
   }
   /* line 463, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active > span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active > .additional-control {
     position: relative;
     right: -100%;
     top: -54px;
@@ -825,14 +825,14 @@ a:hover {
     z-index: 11;
   }
   /* line 470, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active > span:before {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active > .additional-control:before {
     left: 30px;
     -webkit-transform: rotate(270deg);
         -ms-transform: rotate(270deg);
             transform: rotate(270deg);
   }
   /* line 477, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(2) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(2) .additional-control {
     top: calc(-54px * 2);
   }
   /* line 480, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -840,7 +840,7 @@ a:hover {
     top: calc(-54px * 1);
   }
   /* line 486, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(3) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(3) .additional-control {
     top: calc(-54px * 3);
   }
   /* line 489, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -848,7 +848,7 @@ a:hover {
     top: calc(-54px * 2);
   }
   /* line 495, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(4) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(4) .additional-control {
     top: calc(-54px * 4);
   }
   /* line 498, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -856,7 +856,7 @@ a:hover {
     top: calc(-54px * 3);
   }
   /* line 504, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(5) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(5) .additional-control {
     top: calc(-54px * 5);
   }
   /* line 507, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -864,7 +864,7 @@ a:hover {
     top: calc(-54px * 4);
   }
   /* line 513, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(6) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(6) .additional-control {
     top: calc(-54px * 6);
   }
   /* line 516, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -872,7 +872,7 @@ a:hover {
     top: calc(-54px * 5);
   }
   /* line 522, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(7) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(7) .additional-control {
     top: calc(-54px * 7);
   }
   /* line 525, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -880,7 +880,7 @@ a:hover {
     top: calc(-54px * 6);
   }
   /* line 531, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(8) span {
+  .left-navigation-menu .parent-menu li.expanded.mobile-active:nth-child(8) .additional-control {
     top: calc(-54px * 8);
   }
   /* line 534, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -944,9 +944,8 @@ a:hover {
   border-top: 5px solid #850F88;
   position: relative;
   z-index: 2;
-  display: none;
 }
-/* line 20, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 18, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu:after {
   background: #E8E8E8;
   content: "";
@@ -958,11 +957,75 @@ a:hover {
   width: 500%;
   z-index: 1;
 }
-/* line 33, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 31, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu h2 {
   display: none;
 }
-/* line 37, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 35, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+#block-system-main-menu .additional-control {
+  background: transparent url("../images/hamburger-bar.png") no-repeat scroll center center;
+  clear: both;
+  color: #1F1646;
+  cursor: pointer;
+  display: none;
+  font-family: "AvenirLT-Black", Arial, sans-serif;
+  font-size: 12px;
+  height: 78px;
+  line-height: auto;
+  outline: none;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+  width: 85px;
+  z-index: 21;
+}
+/* line 52, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+#block-system-main-menu .additional-control:before, #block-system-main-menu .additional-control:after {
+  background: transparent url("../images/hamburger-bar.png") no-repeat scroll center center;
+  content: "";
+  height: 25px;
+  position: absolute;
+  right: calc(50% - 25px);
+  transition: all .25s ease 0s;
+  transition: all .25s ease 0s;
+  width: 50px;
+  z-index: 1;
+}
+/* line 65, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+#block-system-main-menu .additional-control:before {
+  top: calc(50% - 27.5px);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+/* line 70, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+#block-system-main-menu .additional-control:after {
+  top: calc(50% - -2.5px);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+/* line 75, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+#block-system-main-menu .additional-control.mobile-drop-active {
+  background: none;
+}
+/* line 78, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+#block-system-main-menu .additional-control.mobile-drop-active:before, #block-system-main-menu .additional-control.mobile-drop-active:after {
+  top: calc(50% - 12.5px);
+}
+/* line 83, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+#block-system-main-menu .additional-control.mobile-drop-active:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/* line 87, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+#block-system-main-menu .additional-control.mobile-drop-active:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/* line 94, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content {
   background: #fff;
   border: none;
@@ -971,12 +1034,12 @@ a:hover {
   position: relative;
   z-index: 2;
 }
-/* line 47, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 104, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu {
   position: relative;
   width: 100%;
 }
-/* line 51, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 108, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li {
   diplay: block;
   float: left;
@@ -987,11 +1050,11 @@ a:hover {
   /* search glass menu section */
   /***** sub menus *****/
 }
-/* line 56, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 113, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.expanded {
   position: relative;
 }
-/* line 61, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 118, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li a {
   color: #1F1646;
   display: block;
@@ -1003,42 +1066,42 @@ a:hover {
   position: relative;
   text-transform: uppercase;
 }
-/* line 73, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 130, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li a:hover, #block-system-main-menu .content .parent-menu li a.active {
   color: #850F88;
 }
-/* line 78, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 135, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li a.active {
   background: none, url("../images/nav-arrow.svg") no-repeat 50% 0;
 }
-/* line 84, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 141, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.first {
   margin-left: 0;
 }
-/* line 87, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 144, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.first a {
   background: url(../images/leidos-logo.png) no-repeat center center;
   width: 170px;
 }
-/* line 92, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 149, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.first a:hover {
   background: url(../images/leidos-logo.png) no-repeat center center;
 }
-/* line 95, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 152, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.first a:hover:before, #block-system-main-menu .content .parent-menu li.first a:hover:after {
   display: none;
 }
-/* line 107, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 164, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:nth-child(6) a, #block-system-main-menu .content .parent-menu li:nth-child(7) a, #block-system-main-menu .content .parent-menu li:nth-child(8) a {
   color: #777;
   font-size: 11px;
   line-height: 112px;
 }
-/* line 114, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 171, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:nth-child(8) {
   margin-right: 0;
 }
-/* line 119, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 176, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.last {
   margin: 0;
   overflow: hidden;
@@ -1047,7 +1110,7 @@ a:hover {
   top: 0;
   width: 128px;
 }
-/* line 127, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 184, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.last:after {
   background: #E8E8E8;
   border: 1px solid #D0D0D0;
@@ -1064,7 +1127,7 @@ a:hover {
   width: 300px;
   z-index: 1;
 }
-/* line 142, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 199, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.last span {
   cursor: pointer;
   display: block;
@@ -1074,7 +1137,7 @@ a:hover {
   text-transform: uppercase;
   z-index: 2;
 }
-/* line 153, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 210, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.last span:before {
   background: url("../images/search-glass.png") no-repeat center top transparent;
   content: '';
@@ -1085,11 +1148,11 @@ a:hover {
   width: 24px;
   z-index: -1;
 }
-/* line 166, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 223, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.last span:hover:before, #block-system-main-menu .content .parent-menu li.last span.active:before {
   background-position: center bottom;
 }
-/* line 175, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 232, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children {
   background: #E8E8E8;
   border-left: 1px solid #D0D0D0;
@@ -1104,7 +1167,7 @@ a:hover {
   width: 200px;
   z-index: 1;
 }
-/* line 189, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 246, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li {
   display: block;
   float: none;
@@ -1114,7 +1177,7 @@ a:hover {
   position: relative;
   width: auto;
 }
-/* line 198, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 255, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li a {
   background: none;
   color: transparent;
@@ -1129,52 +1192,51 @@ a:hover {
   text-transform: none;
   width: auto;
 }
-/* line 212, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 269, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li a:hover {
   background: none;
 }
-/* line 216, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 273, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li a:before, #block-system-main-menu .content .parent-menu li .no-children li a:after {
   display: none;
 }
-/* line 224, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 281, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li a:nth-child(6) a, #block-system-main-menu .content .parent-menu li .no-children li a:nth-child(7) a, #block-system-main-menu .content .parent-menu li .no-children li a:nth-child(8) a {
   font-size: 12px;
   line-height: normal;
 }
-/* line 231, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 288, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li:before, #block-system-main-menu .content .parent-menu li .no-children li:after {
   display: none;
 }
-/* line 237, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 294, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li.first a {
   margin-top: 20px;
 }
-/* line 243, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 300, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li.last a {
   margin-bottom: 20px;
 }
-/* line 253, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 310, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover a:before, #block-system-main-menu .content .parent-menu li:hover a:after, #block-system-main-menu .content .parent-menu li.hover a:before, #block-system-main-menu .content .parent-menu li.hover a:after {
-  background: #fff;
-  background: url("../images/tab-shadows.png") no-repeat transparent;
+  background: url("../images/tab-shadows.png") no-repeat #fff;
   content: "";
   height: 86px;
   position: absolute;
   top: 0;
   width: 5px;
 }
-/* line 264, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 320, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover a:before, #block-system-main-menu .content .parent-menu li.hover a:before {
-  left: -14px;
   background-position: left bottom;
+  left: -14px;
 }
-/* line 269, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 325, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover a:after, #block-system-main-menu .content .parent-menu li.hover a:after {
-  right: -14px;
   background-position: right bottom;
+  right: -14px;
 }
-/* line 275, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 331, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children, #block-system-main-menu .content .parent-menu li.hover .no-children {
   background: #fff;
   border-bottom: 1px solid #D0D0D0;
@@ -1182,11 +1244,11 @@ a:hover {
   max-height: 500px;
   z-index: 2;
 }
-/* line 283, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 339, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children li a, #block-system-main-menu .content .parent-menu li.hover .no-children li a {
   color: #850F88;
 }
-/* line 286, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 342, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children li a:before, #block-system-main-menu .content .parent-menu li.hover .no-children li a:before {
   background: none;
   content: '\25e6';
@@ -1202,18 +1264,18 @@ a:hover {
   width: 24px;
   z-index: -1;
 }
-/* line 302, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 358, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children li a:hover, #block-system-main-menu .content .parent-menu li.hover .no-children li a:hover {
   color: #1F1646;
 }
-/* line 305, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 361, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children li a:hover:before, #block-system-main-menu .content .parent-menu li.hover .no-children li a:hover:before {
   opacity: 1;
 }
 
 /*  search box
 **************************************************/
-/* line 321, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 377, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search {
   background: #E8E8E8;
   border-bottom: 1px solid #D0D0D0;
@@ -1224,27 +1286,26 @@ a:hover {
   top: -49px;
   transition: top .5s ease 0s;
   z-index: 1;
-  display: none;
 }
-/* line 334, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
-.block-leidos-custom-search.active {
+/* line 388, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+.block-leidos-custom-search.search-active {
   top: 92px;
 }
-/* line 339, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 392, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search h2 {
   display: none;
 }
-/* line 343, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 396, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content {
   height: calc( 78px + 62px);
 }
-/* line 346, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 399, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website {
   height: 78px;
   padding: 40px 0px 22px;
   position: relative;
 }
-/* line 352, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 405, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website input[type="text"] {
   background: url("../images/searchbox-search-glass.png") no-repeat 50px -92px #E8E8E8;
   border: none;
@@ -1259,11 +1320,11 @@ a:hover {
   position: relative;
   width: 67%;
 }
-/* line 366, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 419, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website input[type="text"]:focus {
   background-position: 50px 10px;
 }
-/* line 371, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 424, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website input[type="submit"] {
   background: #D0D0D0;
   border-radius: 40px;
@@ -1283,11 +1344,11 @@ a:hover {
   top: 59px;
   width: 126px;
 }
-/* line 390, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 443, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website input[type="submit"]:hover {
   background: #1F1646;
 }
-/* line 395, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 448, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website span {
   background: url("../images/searchbox-cancel.png") no-repeat center 14px #E8E8E8;
   border: 0;
@@ -1301,7 +1362,7 @@ a:hover {
   top: 40px;
   width: 78px;
 }
-/* line 409, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+/* line 462, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website span:hover {
   background-position: center -88px;
 }
@@ -1309,27 +1370,360 @@ a:hover {
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-  /* line 422, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
-  #block-system-main-menu:after {
-    diplay: none;
+  /* line 500, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .additional-control {
+    display: block;
   }
-  /* line 444, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  /* line 505, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu {
+    background: #E8E8E8;
+    height: 100vh;
+    max-height: 0;
+    overflow: hidden;
+    padding-top: calc( 78px + 1px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all .25s ease 0s;
+    width: 100%;
+    z-index: 20;
+  }
+  /* line 518, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu.mobile-drop-active {
+    max-height: 1000px;
+    overflow: visible;
+  }
+  /* line 523, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li {
+    diplay: block;
+    float: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all .25s ease 0s;
+    width: 100%;
+    z-index: 1;
     /* menu sections */
     /* header logo */
     /* small menu sections */
     /* search glass menu section */
     /***** sub menus *****/
   }
+  /* line 536, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li:before {
+    background: transparent url("../images/left-nav-shadow.png") no-repeat scroll right bottom;
+    bottom: -30px;
+    content: "";
+    height: 30px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0px;
+    transition: opacity .25s ease 0s;
+    width: 271px;
+  }
+  /* line 549, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  /* line 562, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li a {
+    border-bottom: 1px solid #D0D0D0;
+    border-top: 1px solid #fff;
+    clear: left;
+    color: #1F1646;
+    display: block;
+    float: left;
+    font-family: "AvenirLT-Black", Arial, sans-serif;
+    font-size: 12px;
+    height: auto;
+    line-height: inherit;
+    outline: none;
+    padding: 17px 30px;
+    position: relative;
+    text-transform: uppercase;
+    width: calc(100% - 60px);
+  }
+  /* line 579, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li a:hover, #block-system-main-menu .content .parent-menu li a.active {
+    background: none;
+  }
+  /* line 583, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li a:hover:before, #block-system-main-menu .content .parent-menu li a:hover:after, #block-system-main-menu .content .parent-menu li a.active:before, #block-system-main-menu .content .parent-menu li a.active:after {
+    background: transparent;
+  }
+  /* line 595, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.first {
+    background-color: #fff;
+    height: 78px;
+    position: absolute;
+    top: 0;
+    border-bottom: 1px solid #D0D0D0;
+    transition: all .25s ease 0s;
+    right: 0;
+  }
+  /* line 605, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.first a {
+    margin: 0 auto;
+    float: none;
+    height: 78px;
+    padding: 0;
+    border: none;
+  }
+  /* line 615, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.first a:hover {
+    z-index: 3;
+  }
+  /* line 631, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li:nth-child(6) a, #block-system-main-menu .content .parent-menu li:nth-child(7) a, #block-system-main-menu .content .parent-menu li:nth-child(8) a {
+    color: #1F1646;
+    font-size: 12px;
+    line-height: inherit;
+  }
+  /* line 643, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded > a {
+    width: calc(80% - 60px);
+  }
+  /* line 647, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded > .additional-control {
+    background: transparent;
+    border-bottom: 1px solid #D0D0D0;
+    border-right: 0;
+    border-top: 1px solid #fff;
+    clear: right;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 0px;
+    height: 52px;
+    padding: 0;
+    position: relative;
+    width: 20%;
+    z-index: 20;
+  }
+  /* line 664, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded > .additional-control:before {
+    background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
+    background-size: 60% auto;
+    content: "";
+    height: 25px;
+    position: absolute;
+    right: 30px;
+    top: calc(50% - 12.5px);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    transition: -webkit-transform .25s ease 0s;
+    transition: transform .25s ease 0s;
+    width: 38px;
+    z-index: -1;
+  }
+  /* line 678, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded > .additional-control:after {
+    display: none;
+  }
+  /* line 684, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active > .additional-control {
+    position: relative;
+    right: -100%;
+    top: -54px;
+    width: 100%;
+    z-index: 11;
+  }
+  /* line 691, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active > .additional-control:before {
+    left: 30px;
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  /* line 698, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(2) .additional-control {
+    top: calc(-54px * 1 + 1px);
+  }
+  /* line 701, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(2) .no-children {
+    top: calc(-54px * 0 + 1px);
+  }
+  /* line 707, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(3) .additional-control {
+    top: calc(-54px * 2 + 1px);
+  }
+  /* line 710, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(3) .no-children {
+    top: calc(-54px * 1 + 1px);
+  }
+  /* line 716, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(4) .additional-control {
+    top: calc(-54px * 3 + 1px);
+  }
+  /* line 719, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(4) .no-children {
+    top: calc(-54px * 2 + 1px);
+  }
+  /* line 725, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(5) .additional-control {
+    top: calc(-54px * 4 + 1px);
+  }
+  /* line 728, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(5) .no-children {
+    top: calc(-54px * 3 + 1px);
+  }
+  /* line 734, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(6) .additional-control {
+    top: calc(-54px * 5 + 1px);
+  }
+  /* line 737, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(6) .no-children {
+    top: calc(-54px * 4 + 1px);
+  }
+  /* line 743, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(7) .additional-control {
+    top: calc(-54px * 6 + 1px);
+  }
+  /* line 746, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(7) .no-children {
+    top: calc(-54px * 5 + 1px);
+  }
+  /* line 752, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(8) .additional-control {
+    top: calc(-54px * 7 + 1px);
+  }
+  /* line 755, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(8) .no-children {
+    top: calc(-54px * 6 + 1px);
+  }
+  /* line 763, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.last {
+    right: 0;
+    top: 0;
+    width: 85px;
+    transition: all .25s ease 0s;
+  }
+  /* line 772, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.last:hover, #block-system-main-menu .content .parent-menu li.last.active {
+    background-color: transparent;
+  }
+  /* line 825, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li .no-children {
+    background: #dfd1e0;
+    clear: both;
+    display: none;
+    height: 100vh;
+    left: auto;
+    margin: 0;
+    max-height: 100vh;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 54px;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    transition: all .25s ease 0s;
+    width: 100%;
+    z-index: 10;
+  }
+  /* line 843, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li .no-children li {
+    background: transparent;
+  }
+  /* line 846, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li .no-children li:before {
+    display: none;
+  }
+  /* line 850, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li .no-children li.first, #block-system-main-menu .content .parent-menu li .no-children li.last {
+    height: auto;
+  }
+  /* line 854, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li .no-children li.first a, #block-system-main-menu .content .parent-menu li .no-children li.last a {
+    margin: 0;
+  }
+  /* line 859, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li .no-children li a {
+    border-bottom: 1px solid #cbbdcd;
+    border-right: 0;
+    border-top: 1px solid #dbcddd;
+    clear: left;
+    color: #1F1646;
+    display: block;
+    font-family: "AvenirLT-Black", Arial, sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding: 17px 30px;
+    width: calc(100% - 60px);
+    text-transform: uppercase;
+  }
+  /* line 873, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li .no-children li a:hover,
+  #block-system-main-menu .content .parent-menu li .no-children li a .active {
+    border-bottom: 1px solid #fff;
+    color: #850F88;
+  }
+  /* line 882, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li:hover, #block-system-main-menu .content .parent-menu li.hover, #block-system-main-menu .content .parent-menu li.active-trail {
+    background: #fff;
+    z-index: 1;
+  }
+  /* line 888, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li:hover:before, #block-system-main-menu .content .parent-menu li.hover:before, #block-system-main-menu .content .parent-menu li.active-trail:before {
+    opacity: 1;
+  }
+  /* line 894, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li:hover.first:before, #block-system-main-menu .content .parent-menu li:hover.last:before, #block-system-main-menu .content .parent-menu li.hover.first:before, #block-system-main-menu .content .parent-menu li.hover.last:before, #block-system-main-menu .content .parent-menu li.active-trail.first:before, #block-system-main-menu .content .parent-menu li.active-trail.last:before {
+    opacity: 0;
+  }
+  /* line 900, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li:hover a:before, #block-system-main-menu .content .parent-menu li:hover a:after, #block-system-main-menu .content .parent-menu li.hover a:before, #block-system-main-menu .content .parent-menu li.hover a:after, #block-system-main-menu .content .parent-menu li.active-trail a:before, #block-system-main-menu .content .parent-menu li.active-trail a:after {
+    background: transparent;
+  }
+  /* line 921, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li:hover .no-children, #block-system-main-menu .content .parent-menu li.hover .no-children, #block-system-main-menu .content .parent-menu li.active-trail .no-children {
+    height: 100vh;
+    max-height: 100vh;
+    background: #dfd1e0;
+  }
+  /* line 962, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.mobile-active .no-children {
+    opacity: 1;
+    display: block;
+    background: #dfd1e0;
+    height: 100vh;
+  }
+  /* line 971, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu.parent-shift {
+    right: 100%;
+  }
+  /* line 975, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu.parent-shift > li.first {
+    right: -100%;
+  }
+  /* line 979, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu.parent-shift > li.last {
+    right: -100%;
+  }
 
   /*  search box
   **************************************************/
-  /* line 714, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  /* line 991, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
   .block-leidos-custom-search {
-    display: none;
+    top: -57px;
+  }
+  /* line 1002, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  .block-leidos-custom-search.search-active {
+    top: 83px;
+  }
+  /* line 1038, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  .block-leidos-custom-search .content #search_leidos_website input[type="submit"] {
+    display: block;
   }
 }
 /*  mobile
 **************************************************/
-
 /*# sourceMappingURL=main.css.map */
