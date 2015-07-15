@@ -15,4 +15,13 @@ function leidos_form_alter(&$form, &$form_state, $form_id) {
     $form['link']['#access'] = FALSE;
     $form['view_mode']['#access'] = FALSE;
   }
+  elseif ($form_id == 'panels_panel_context_edit_choose') {
+    // Set the default panel layout to Industry Template, remove other layouts.
+    $form['categories']['#default_value'] = 'Industry-Template';
+    $form['layout']['Industry-Template']['flexible:industry_template']['#default_value'] = 'flexible:industry_template';
+    unset($form['categories']['#options']['Builders']);
+    unset($form['categories']['#options']['Columns-1']);
+    unset($form['categories']['#options']['Columns-2']);
+    unset($form['categories']['#options']['Columns-3']);
+  }
 }
