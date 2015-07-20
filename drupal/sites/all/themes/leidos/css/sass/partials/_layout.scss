@@ -14,6 +14,15 @@
 /* page */
 #page {
 	@extend %full-width;
+	overflow: hidden;
+
+	&:after {
+		clear: both;
+		content: "";
+		display: block;
+		height: 0;
+		overflow: hidden; 
+	}
 }
 
 /*  max page width settings & margin corrections

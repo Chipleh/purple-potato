@@ -148,7 +148,7 @@ function leidos_menu_tree($variables) {
   $parent = (strpos($variables['tree'], '<ul')) ? 'parent-menu' : 'no-children';
   $tree = '<ul class="menu clearfix ' . $parent . '">' . $variables['tree'] . '</ul>';
   if ($parent) {
-    $tree = '<span class="additional-control"></span>' . $tree;
+    $tree = '<span class="additional-control">Back</span><span class="additional-info">Test</span>' . $tree;
   }
   return $tree;
 }

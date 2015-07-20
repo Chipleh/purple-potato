@@ -7,7 +7,6 @@
 
 /*  elements
 **************************************************/
-/*  */
 .left-navigation-menu {
 	position: relative;
 	width: 100%;
@@ -52,6 +51,10 @@
 				transform: rotate(0deg);				
 			}
 		}
+	}
+
+	.additional-info {
+		display: none;
 	}
 
 	.parent-menu {
@@ -191,16 +194,33 @@
 
 /*  tablet
 **************************************************/
-@media only screen and (min-width: 721px) and (max-width: 960px) {
+@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
 	.left-navigation-menu {
 
 		.additional-control {
 			display: block;
+			color: $color-leidos-purple-dark;
+			transition: color .25s ease 0s;
+			cursor: pointer;
+
+			&.mobile-drop-active {
+				color: transparent;
+			}
 		}
 
 		.parent-menu {
-			background: $color-gray-light;
-			height: 100vh;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
+			background: #e8e8e8; /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OCUiIHN0b3AtY29sb3I9IiNkMWQxZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZThlOGU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+			background: -moz-linear-gradient(left,  #e8e8e8 95%, #d9d9d9 98%, #e8e8e8 101%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, right top, color-stop(95%,#e8e8e8), color-stop(98%,#d9d9d9), color-stop(101%,#e8e8e8)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* IE10+ */
+			background: linear-gradient(to right,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#e8e8e8',GradientType=1 ); /* IE6-8 */
+			height: 200vh;
 			max-height: 0;
 			overflow: hidden;
 			right: 0;
@@ -215,8 +235,21 @@
 			}
 
 			li {
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
+				background: #e8e8e8; /* Old browsers */
+				/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+				background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OCUiIHN0b3AtY29sb3I9IiNkMWQxZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZThlOGU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+				background: -moz-linear-gradient(left,  #e8e8e8 95%, #d9d9d9 98%, #e8e8e8 101%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, right top, color-stop(95%,#e8e8e8), color-stop(98%,#d9d9d9), color-stop(101%,#e8e8e8)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* IE10+ */
+				background: linear-gradient(to right,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#e8e8e8',GradientType=1 ); /* IE6-8 */
+
 				/* menu sections */
 				> a {
+					background: transparent;
 					border-right: 0;
 					clear: left;
 					display: block;
@@ -227,123 +260,241 @@
 
 				&.expanded {
 					> a {
-						width: calc(80% - 60px);
-					}
-
-					> .additional-control {
-						background: transparent;
-						border-bottom: 1px solid $color-gray-medium-light;
-						border-right: 0;
-						border-top: 1px solid $color-white;
-						clear: right;
-						color: transparent;
-						cursor: pointer;
-						display: block;
-						float: right;
-						font-size: 0px;
-						height: 52px;
-						padding: 0;
-						position: relative;
-						width: 20%;
-						z-index: 20;
-
-						&:before {
-							background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
-							background-size: 60% auto;
-							content: "";
-							height:25px;
-							position: absolute;
-							right: 30px;
-							top: calc(50% - 12.5px);
-							transform: rotate(90deg);
-							transition: transform .25s ease 0s;
-							width: 38px;
-							z-index: -1;
+							width: calc(80% - 60px);
 						}
-					}
 
-					&.mobile-active {
 						> .additional-control {
+							background: transparent;
+							border-bottom: 1px solid $color-gray-medium-light;
+							border-right: 0;
+							border-top: 1px solid $color-white;
+							clear: right;
+							color: transparent;
+							cursor: pointer;
+							display: block;
+							float: right;
+							font-size: 0px;
+							height: 52px;
+							padding: 0;
 							position: relative;
-							right: -100%;
-							top: -$side-nav-height;
-							width: 100%;
-							z-index: 11;
+							width: 20%;
+							z-index: 20;
 
 							&:before {
-								left: 30px;
-								transform: rotate(270deg);
+								background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
+								background-size: 60% auto;
+								content: "";
+								height:25px;
+								position: absolute;
+								right: 30px;
+								top: calc(50% - 12.5px);
+								transform: rotate(90deg);
+								transition: transform .25s ease 0s;
+								width: 38px;
+								z-index: -1;
+							}
+
+							&:after {
+								display: none;
 							}
 						}
 
-						&:nth-child(2) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 2)");
-							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 1)");
-							}
-						}
+						&.mobile-active {
+							> .additional-control {
+								/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
+								background: #e8e8e8; /* Old browsers */
+								/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+								background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OCUiIHN0b3AtY29sb3I9IiNkMWQxZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZThlOGU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+								background: -moz-linear-gradient(left,  #e8e8e8 95%, #d9d9d9 98%, #e8e8e8 101%); /* FF3.6+ */
+								background: -webkit-gradient(linear, left top, right top, color-stop(95%,#e8e8e8), color-stop(98%,#d9d9d9), color-stop(101%,#e8e8e8)); /* Chrome,Safari4+ */
+								background: -webkit-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* Chrome10+,Safari5.1+ */
+								background: -o-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* Opera 11.10+ */
+								background: -ms-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* IE10+ */
+								background: linear-gradient(to right,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* W3C */
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#e8e8e8',GradientType=1 ); /* IE6-8 */
+								clear: both;
+								color: $color-black;
+								float: none;
+								font-size: 14px;
+								height: auto;
+								padding: 17px 30px 17px 100px;
+								position: relative;
+								right: -100%;
+								top: -$side-nav-height;
+								width: calc(100% - 130px);
+								z-index: 11;
 
-						&:nth-child(3) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 3)");
+								&:before {
+									left: 30px;
+									transform: rotate(270deg);
+								}
 							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 2)");
-							}
-						}
 
-						&:nth-child(4) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 4)");
-							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 3)");
-							}
-						}
+							> .additional-info {
+								/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
+								background: #e8e8e8; /* Old browsers */
+								/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+								background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OCUiIHN0b3AtY29sb3I9IiNkMWQxZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZThlOGU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+								background: -moz-linear-gradient(left,  #e8e8e8 95%, #d9d9d9 98%, #e8e8e8 101%); /* FF3.6+ */
+								background: -webkit-gradient(linear, left top, right top, color-stop(95%,#e8e8e8), color-stop(98%,#d9d9d9), color-stop(101%,#e8e8e8)); /* Chrome,Safari4+ */
+								background: -webkit-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* Chrome10+,Safari5.1+ */
+								background: -o-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* Opera 11.10+ */
+								background: -ms-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* IE10+ */
+								background: linear-gradient(to right,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* W3C */
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#e8e8e8',GradientType=1 ); /* IE6-8 */
+								border-bottom: 1px solid $color-gray-medium-light;
+								border-top: 1px solid $color-white;
+								clear: both;
+								color: $color-black;
+								display: block;
+								font-family: "AvenirLT-Black", Arial, sans-serif;
+								font-size: 14px;
+								height: auto;
+								padding: 17px 30px 17px 100px;
+								position: relative;
+								right: -100%;
+								text-align: left;
+								top: -$side-nav-height;
+								width: calc(100% - 130px);
+								z-index: 11;
+								text-transform: uppercase;
 
-						&:nth-child(5) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 5)");
 							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 4)");
-							}
-						}
 
-						&:nth-child(6) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 6)");
+							&:nth-child(2) {
+								.additional-control {
+									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
+								}
+								.additional-info {
+									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
+								}
+								.no-children {
+									top:unquote("calc(")-$side-nav-height unquote("* 0 + 1px)");
+								}
 							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 5)");
-							}
-						}
 
-						&:nth-child(7) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 7)");
+							&:nth-child(3) {
+								.additional-control {
+									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
+								}
+								.additional-info {
+									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
+								}
+								.no-children {
+									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
+								}
 							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 6)");
-							}
-						}
 
-						&:nth-child(8) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 8)");
+							&:nth-child(4) {
+								.additional-control {
+									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
+								}
+								.additional-info {
+									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
+								}
+								.no-children {
+									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
+								}
 							}
+
+							&:nth-child(5) {
+								.additional-control {
+									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
+								}
+								.additional-info {
+									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
+								}
+								.no-children {
+									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
+								}
+							}
+
+							&:nth-child(6) {
+								.additional-control {
+									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
+								}
+								.additional-info {
+									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
+								}
+								.no-children {
+									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
+								}
+							}
+
+							&:nth-child(7) {
+								.additional-control {
+									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
+								}
+								.additional-info {
+									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
+								}
+								.no-children {
+									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
+								}
+							}
+
+							&:nth-child(8) {
+								.additional-control {
+									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
+								}
+								.additional-info {
+									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
+								}
+								.no-children {
+									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
+								}
+							}
+
+							&:nth-child(9) {
+								.additional-control {
+									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
+								}
+								.additional-info {
+									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
+								}
+								.no-children {
+									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
+								}
+							}
+
+							&:nth-child(10) {
+								.additional-control {
+									top:unquote("calc(")-$side-nav-height unquote("* 9 + 1px)");
+								}
+								.additional-info {
+									top:unquote("calc(")-$side-nav-height unquote("* 9 + 1px)");
+								}
+								.no-children {
+									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
+								}
+							}
+
 							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 7)");
+								li {
+									a {
+										padding: 17px 30px 17px 130px;
+										width: calc(100% - 160px)
+									}
+								}
 							}
 						}
-					}
 				}
 
 				&:hover,
 				&.hover,
 				&.active-trail {
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
+					background: #ffffff; /* Old browsers */
+					/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+					background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OCUiIHN0b3AtY29sb3I9IiNkMWQxZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZThlOGU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+					background: -moz-linear-gradient(left,  #ffffff 95%, #d9d9d9 98%, #ffffff 101%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, right top, color-stop(95%,#ffffff), color-stop(98%,#d9d9d9), color-stop(101%,#ffffff)); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(left,  #ffffff 95%,#d9d9d9 98%,#ffffff 101%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(left,  #ffffff 95%,#d9d9d9 98%,#ffffff 101%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(left,  #ffffff 95%,#d9d9d9 98%,#ffffff 101%); /* IE10+ */
+					background: linear-gradient(to right,  #ffffff 95%,#d9d9d9 98%,#ffffff 101%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 */
+
 					> a {
 						border-right: 0px;
 					}
@@ -358,8 +509,8 @@
 					position: absolute;
 					top: 0;
 					right: -100%;
-					padding-top: 54px;
-					height: 100vh;
+					padding-top: 114px;
+					height: 200vh;
 					background: $color-leidos-purple-soft-light;
 					z-index: 10;
 
@@ -389,195 +540,5 @@
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-	.left-navigation-menu {
 
-		.additional-control {
-			display: block;
-		}
-
-		.parent-menu {
-			background: $color-gray-light;
-			height: 100vh;
-			max-height: 0;
-			overflow: hidden;
-			right: 0;
-			top: auto;
-			transition: all .25s ease 0s;
-			width: 100%;
-			z-index: 10;
-
-			&.mobile-drop-active {
-				max-height: 1000px;
-				overflow: visible;
-			}
-
-			li {
-				/* menu sections */
-				> a {
-					border-right: 0;
-					clear: left;
-					display: block;
-					float: left;
-					padding: 17px 30px;
-					width: calc(100% - 60px);
-				}
-
-				&.expanded {
-					> a {
-						width: calc(80% - 60px);
-					}
-
-					> .additional-control {
-						background: transparent;
-						border-bottom: 1px solid $color-gray-medium-light;
-						border-right: 0;
-						border-top: 1px solid $color-white;
-						clear: right;
-						color: transparent;
-						cursor: pointer;
-						display: block;
-						float: right;
-						font-size: 0px;
-						height: 52px;
-						padding: 0;
-						position: relative;
-						width: 20%;
-						z-index: 20;
-
-						&:before {
-							background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
-							background-size: 60% auto;
-							content: "";
-							height:25px;
-							position: absolute;
-							right: 30px;
-							top: calc(50% - 12.5px);
-							transform: rotate(90deg);
-							transition: transform .25s ease 0s;
-							width: 38px;
-							z-index: -1;
-						}
-					}
-
-					&.mobile-active {
-						> .additional-control {
-							position: relative;
-							right: -100%;
-							top: -$side-nav-height;
-							width: 100%;
-							z-index: 11;
-
-							&:before {
-								left: 30px;
-								transform: rotate(270deg);
-							}
-						}
-
-						&:nth-child(2) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 2)");
-							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 1)");
-							}
-						}
-
-						&:nth-child(3) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 3)");
-							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 2)");
-							}
-						}
-
-						&:nth-child(4) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 4)");
-							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 3)");
-							}
-						}
-
-						&:nth-child(5) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 5)");
-							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 4)");
-							}
-						}
-
-						&:nth-child(6) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 6)");
-							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 5)");
-							}
-						}
-
-						&:nth-child(7) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 7)");
-							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 6)");
-							}
-						}
-
-						&:nth-child(8) {
-							.additional-control {
-								top:unquote("calc(")-$side-nav-height unquote("* 8)");
-							}
-							.no-children {
-								top:unquote("calc(")-$side-nav-height unquote("* 7)");
-							}
-						}
-					}
-				}
-
-				&:hover,
-				&.hover,
-				&.active-trail {
-					> a {
-						border-right: 0px;
-					}
-				}
-
-				/***** sub menus *****/
-				.no-children {
-					display: block;
-					opacity: 0;
-					max-height: 1000px;
-					transition: all .25s ease 0s;
-					position: absolute;
-					top: 0;
-					right: -100%;
-					padding-top: 54px;
-					height: 100vh;
-					background: $color-leidos-purple-soft-light;
-					z-index: 10;
-
-
-					li {
-						a {
-							width: calc(100% - 40px);
-						}
-					}
-				}
-
-				&.mobile-active {
-					.no-children {
-						opacity: 1;
-					}
-				}
-			}
-
-			&.parent-shift {
-				right: 100%;
-			}
-		}
-	}
 }
