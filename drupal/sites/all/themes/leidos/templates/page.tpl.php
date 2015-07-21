@@ -144,6 +144,10 @@
 
     <?php if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn'] || $page['footer_fourthcolumn']): ?>
       <div id="footer-columns" class="clearfix">
+        <div class="footer-logo">
+          <h3></h3>
+          <div class="copyright"><?php print t('&copy; @year Leidos', array('@year' => date('Y'))); ?></div>
+        </div>
         <?php print render($page['footer_firstcolumn']); ?>
         <?php print render($page['footer_secondcolumn']); ?>
         <?php print render($page['footer_thirdcolumn']); ?>
