@@ -45,15 +45,34 @@
 		.content-container {
 			background: $color-gray-light;
 
-			/* left nav */
-			.content-left {
-				// background: red;
-			}
+			.panels-flexible-column {
 
-			/* page body */
-			.right-container {
-				// background: blue;
-				display: none;
+				/* left nav */
+				&.content-left {
+					// background: red;
+				}
+
+				/* page body */
+				&.right-container {
+					// background: $color-white;
+					background: gold;
+					position: relative;
+
+					&:before {
+						background: $color-white;
+						content: "";
+						height:100%;
+						left: 100%;
+						position: absolute;
+						top: 0;
+						width: 500%;
+						z-index: -1;
+					}
+
+					.panels-flexible-column-inside {
+						padding: 0;
+					}
+				}
 			}
 		}
 	}
@@ -86,14 +105,17 @@
 		.content-container {
 			background: $color-gray-light;
 
-			/* left nav */
-			.content-left {
-				// overflow: hidden;
-			}
+			.panels-flexible-column {
 
-			/* page body */
-			.right-container {
-				// background: blue;
+				/* left nav */
+				&.content-left {
+					// overflow: hidden;
+				}
+
+				/* page body */
+				&.right-container {
+					// background: blue;
+				}
 			}
 		}
 	}

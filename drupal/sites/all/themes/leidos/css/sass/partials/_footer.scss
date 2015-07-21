@@ -13,6 +13,35 @@
 	border-top: 1px solid $color-gray-medium-light;
 	margin: 0;
 	padding: 20px 0;
+	color: $color-gray-medium-dark;
+
+	.footer-logo {
+		float: left;
+
+		h3 {
+			background: transparent url("../images/leidos-logo.png") no-repeat scroll center center / 100% auto;
+			display: inline-block;
+			height: 30px;
+			margin: 0 15px 0 0;
+			overflow: hidden;
+			padding: 0;
+			width: 110px;
+		}
+		.copyright {
+			display: inline-block;
+			height: 30px;
+			line-height: 47px;
+			margin: 0;		
+			overflow: hidden;
+			padding: 0;
+			width: 100px;
+		}
+	}
+
+	.menu-block-1 {
+		float: left;
+		clear: right;
+	}
 
 	.region-footer-firstcolumn,
 	.region-footer-secondcolumn {
@@ -37,7 +66,7 @@
 			}
 
 			ul {
-				margin: 15px 0;
+				margin: 19px 0px 11px 0px;
 				padding: 0;
 
 				li {
@@ -116,10 +145,13 @@
 							background-position: center bottom;
 						}
 					}
-
-
-
 				}
+			}
+		}
+
+		.menu-block-4 {
+			ul {
+				margin-top: 14px;
 			}
 		}
 	}
@@ -155,9 +187,16 @@
 			width: calc(100% - 40px);
 
 			#block-menu-block-1 {
-				ul {
-					width: 200px;
-					margin: 15px auto 0;
+				.footer-logo {
+					float: none;
+					margin: 0 auto;
+					width: 236px;
+				}
+
+				.menu-block-1 {
+					ul {
+						display: none;
+					}
 				}
 			}
 

@@ -86,18 +86,36 @@
 		.content-container {
 			@extend %max-width;
 
-			.content-left {
-				width: 330px;
+			.panels-flexible-column {
+				&.content-left {
+					width: 330px;
 
-				.inside {
-					padding: 0;
-					margin: 0;
+					.inside {
+						padding: 0;
+						margin: 0;
+					}
+				} 
+
+				&.right-container {
+					float: right;
+					width: calc(100% - 330px);
+
+					.panels-flexible-region {
+						&.right-rail {
+							background: green;
+							width: calc(100% - 290px);							
+						}
+
+						&.optional-right-rail {
+							background: yellow;
+							width: 270px;
+							padding-left: 20px;
+						}
+					}
 				}
-			} 
-
-			.right-container {
-				float: right;
-				width: calc(100% - 330px);
+			}
+			.panels-flexible-row {
+				padding: 0;
 			}
 		}
 	}
@@ -117,20 +135,22 @@
 		.section,
 		.content {
 			.content-container {
-				.content-left {
-					float: none;
-					margin: 0;
-					max-width: 100%;
-					min-width: auto;
-					width: 100%;
-				} 
+				.panels-flexible-column {
+					&.content-left {
+						float: none;
+						margin: 0;
+						max-width: 100%;
+						min-width: auto;
+						width: 100%;
+					} 
 
-				.right-container {
-					float: none;
-					margin: 0;
-					max-width: 100%;
-					min-width: auto;
-					width: 100%;
+					&.right-container {
+						float: none;
+						margin: 0;
+						max-width: 100%;
+						min-width: auto;
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -145,20 +165,22 @@
 		.section,
 		.content {
 			.content-container {
-				.content-left {
-					float: none;
-					margin: 0;
-					max-width: 100%;
-					min-width: auto;
-					width: 100%;
-				} 
+				.panels-flexible-column {
+					&.content-left {
+						float: none;
+						margin: 0;
+						max-width: 100%;
+						min-width: auto;
+						width: 100%;
+					} 
 
-				.right-container {
-					float: none;
-					margin: 0;
-					max-width: 100%;
-					min-width: auto;
-					width: 100%;
+					&.right-container {
+						float: none;
+						margin: 0;
+						max-width: 100%;
+						min-width: auto;
+						width: 100%;
+					}
 				}
 			}
 		}
