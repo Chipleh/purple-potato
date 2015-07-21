@@ -45,6 +45,17 @@ function leidos_process_html(&$variables) {
   }
 }
 
+
+/**
+ * Override or insert variables into the page template.
+ */
+function leidos_preprocess_page(&$variables) {
+  $display = panels_get_current_page_display();
+  if (isset($display->panels['optional_inner_right_rail'])) {
+    $variables['classes_array'][] = 'optional-right-rail';
+  }
+}
+
 /**
  * Override or insert variables into the page template.
  */
@@ -80,7 +91,7 @@ function leidos_process_page(&$variables) {
     // Make sure the shortcut link is the first item in title_suffix.
     $variables['title_suffix']['add_or_remove_shortcut']['#weight'] = -100;
   }
-  //Remove default taxonomy no content message
+  // Remove default taxonomy no content message.
   if (isset($variables['theme_hook_suggestions'][0]) &&
     $variables['theme_hook_suggestions'][0] == 'page__taxonomy' &&
     isset($variables['page']['content']['system_main']['no_content'])
