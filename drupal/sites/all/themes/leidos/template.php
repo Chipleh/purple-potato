@@ -138,6 +138,14 @@ function leidos_preprocess_block(&$variables) {
   if ($variables['block']->region == 'header') {
     $variables['title_attributes_array']['class'][] = 'element-invisible';
   }
+  // Add the footer logo div to the first block in the 'Footer - First column' region.
+  if ($variables['block']->region == 'footer_firstcolumn' && $variables['block']->delta == 1) {
+    $variables['content'] = '
+    <div class="footer-logo">
+      <h3></h3>
+      <div class="copyright">' . t('&copy; @year Leidos', array('@year' => date('Y'))) . '</div>
+    </div>' . $variables['content'];
+  }
 }
 
 /**
