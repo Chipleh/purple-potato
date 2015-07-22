@@ -8,11 +8,39 @@
 /*  elements
 **************************************************/
 /* x */
-.panels-flexible-region-industry_template-optional_rotator {
+.panels-flexible-region-industry_template-optional_rotator,
+.optional_rotator {
 	width: 100%;
 	height: 274px;
 	background: blue;
+	float: none;
+
+	.flexslider {
+		width: 100%;
+		height: 274px;
+		background: pink;
+		border: none;
+		border-radius: 0;
+		margin: 0;
+
+		ul {
+			left: 30px;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 30px
+		}
+
+		.flex-control-nav {
+			bottom: 20px;
+			color: transparent;
+			font-size: 0;
+			right: 20px;
+			text-align: right;
+		}
+	}
 }
+
 
 
 /*  tablet

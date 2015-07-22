@@ -103,13 +103,12 @@
 					.panels-flexible-region {
 						&.right-rail {
 							background: green;
-							width: calc(100% - 290px);							
+							width: calc(100% - 40px);
+							padding: 0 20px;
 						}
 
 						&.optional-right-rail {
-							background: yellow;
-							width: 270px;
-							padding-left: 20px;
+							display: none;
 						}
 					}
 				}
@@ -119,6 +118,33 @@
 			}
 		}
 	}
+}
+
+.with-secondary-menu {
+	#content {
+		.section,
+		.content {
+			.content-container {
+				.panels-flexible-column {
+					&.right-container {
+						.panels-flexible-region {
+							&.right-rail {
+								background: green;
+								width: calc(100% - 330px);
+							}
+
+							&.optional-right-rail {
+								background: yellow;
+								width: 270px;
+								padding-left: 20px;
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
 }
 
 /* footer specific */

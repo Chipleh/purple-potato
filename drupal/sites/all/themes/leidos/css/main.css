@@ -570,26 +570,40 @@ a:hover {
 #content .section .content-container .panels-flexible-column.right-container .panels-flexible-region.right-rail,
 #content .content .content-container .panels-flexible-column.right-container .panels-flexible-region.right-rail {
   background: green;
-  width: calc(100% - 290px);
+  width: calc(100% - 40px);
+  padding: 0 20px;
 }
-/* line 109, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+/* line 110, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
 #content .section .content-container .panels-flexible-column.right-container .panels-flexible-region.optional-right-rail,
 #content .content .content-container .panels-flexible-column.right-container .panels-flexible-region.optional-right-rail {
-  background: yellow;
-  width: 270px;
-  padding-left: 20px;
+  display: none;
 }
-/* line 117, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+/* line 116, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
 #content .section .content-container .panels-flexible-row,
 #content .content .content-container .panels-flexible-row {
   padding: 0;
+}
+
+/* line 131, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+.with-secondary-menu #content .section .content-container .panels-flexible-column.right-container .panels-flexible-region.right-rail,
+.with-secondary-menu #content .content .content-container .panels-flexible-column.right-container .panels-flexible-region.right-rail {
+  background: green;
+  width: calc(100% - 330px);
+}
+/* line 136, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+.with-secondary-menu #content .section .content-container .panels-flexible-column.right-container .panels-flexible-region.optional-right-rail,
+.with-secondary-menu #content .content .content-container .panels-flexible-column.right-container .panels-flexible-region.optional-right-rail {
+  background: yellow;
+  width: 270px;
+  padding-left: 20px;
+  display: block;
 }
 
 /* footer specific */
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-  /* line 139, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+  /* line 165, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
   #content .section .content-container .panels-flexible-column.content-left,
   #content .content .content-container .panels-flexible-column.content-left {
     float: none;
@@ -598,7 +612,7 @@ a:hover {
     min-width: auto;
     width: 100%;
   }
-  /* line 147, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+  /* line 173, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
   #content .section .content-container .panels-flexible-column.right-container,
   #content .content .content-container .panels-flexible-column.right-container {
     float: none;
@@ -611,7 +625,7 @@ a:hover {
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-  /* line 169, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+  /* line 195, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
   #content .section .content-container .panels-flexible-column.content-left,
   #content .content .content-container .panels-flexible-column.content-left {
     float: none;
@@ -620,7 +634,7 @@ a:hover {
     min-width: auto;
     width: 100%;
   }
-  /* line 177, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
+  /* line 203, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
   #content .section .content-container .panels-flexible-column.right-container,
   #content .content .content-container .panels-flexible-column.right-container {
     float: none;
@@ -651,10 +665,40 @@ a:hover {
 **************************************************/
 /* x */
 /* line 11, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_rotator.scss */
-.panels-flexible-region-industry_template-optional_rotator {
+.panels-flexible-region-industry_template-optional_rotator,
+.optional_rotator {
   width: 100%;
   height: 274px;
   background: blue;
+  float: none;
+}
+/* line 18, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_rotator.scss */
+.panels-flexible-region-industry_template-optional_rotator .flexslider,
+.optional_rotator .flexslider {
+  width: 100%;
+  height: 274px;
+  background: pink;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
+/* line 26, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_rotator.scss */
+.panels-flexible-region-industry_template-optional_rotator .flexslider ul,
+.optional_rotator .flexslider ul {
+  left: 30px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+}
+/* line 34, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_rotator.scss */
+.panels-flexible-region-industry_template-optional_rotator .flexslider .flex-control-nav,
+.optional_rotator .flexslider .flex-control-nav {
+  bottom: 20px;
+  color: transparent;
+  font-size: 0;
+  right: 20px;
+  text-align: right;
 }
 
 /*  tablet
