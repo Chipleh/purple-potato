@@ -120,36 +120,6 @@ function leidos_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'ds_views|announcements-panel_pane_1-fields|default';
-  $ds_layout->entity_type = 'ds_views';
-  $ds_layout->bundle = 'announcements-panel_pane_1-fields';
-  $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_1col';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_announcement_date',
-        1 => 'title',
-      ),
-    ),
-    'fields' => array(
-      'field_announcement_date' => 'ds_content',
-      'title' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-  );
-  $export['ds_views|announcements-panel_pane_1-fields|default'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
   $ds_layout->id = 'field_collection_item|field_column_links|default';
   $ds_layout->entity_type = 'field_collection_item';
   $ds_layout->bundle = 'field_column_links';
