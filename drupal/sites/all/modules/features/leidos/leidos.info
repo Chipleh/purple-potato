@@ -223,6 +223,7 @@ features[fieldable_panels_pane_type][] = left_navigation
 features[fieldable_panels_pane_type][] = link_columns
 features[fieldable_panels_pane_type][] = list_columns
 features[fieldable_panels_pane_type][] = page_header
+features[image][] = rotator
 features[menu_custom][] = main-menu
 features[menu_custom][] = menu-engineering-navigation
 features[menu_custom][] = menu-footer---main-menu

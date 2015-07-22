@@ -42,6 +42,30 @@ function leidos_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function leidos_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: rotator.
+  $styles['rotator'] = array(
+    'label' => 'rotator',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 900,
+          'height' => 274,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function leidos_node_info() {

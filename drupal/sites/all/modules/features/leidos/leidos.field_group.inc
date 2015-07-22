@@ -328,10 +328,11 @@ function leidos_field_group_info() {
     'label' => 'General Info',
     'weight' => '0',
     'children' => array(
-      0 => 'field_rotator_image',
-      1 => 'field_rotator_link',
-      2 => 'field_hide_information_box',
-      3 => 'title',
+      0 => 'body',
+      1 => 'field_rotator_image',
+      2 => 'field_rotator_link',
+      3 => 'field_hide_information_box',
+      4 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

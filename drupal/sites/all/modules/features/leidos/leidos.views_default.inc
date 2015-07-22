@@ -834,7 +834,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_rotator_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_rotator_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_rotator_image']['settings'] = array(
-    'image_style' => 'flexslider_full',
+    'image_style' => 'rotator',
     'image_link' => '',
   );
   /* Field: Content: Hide Information Box */
