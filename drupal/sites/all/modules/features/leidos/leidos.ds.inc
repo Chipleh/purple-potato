@@ -12,26 +12,6 @@ function leidos_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'ds_views|announcements-panel_pane_1-fields|default';
-  $ds_fieldsetting->entity_type = 'ds_views';
-  $ds_fieldsetting->bundle = 'announcements-panel_pane_1-fields';
-  $ds_fieldsetting->view_mode = 'default';
-  $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'field_announcement_date' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-  );
-  $export['ds_views|announcements-panel_pane_1-fields|default'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'taxonomy_term|capabilities|default';
   $ds_fieldsetting->entity_type = 'taxonomy_term';
   $ds_fieldsetting->bundle = 'capabilities';
