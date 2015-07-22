@@ -50,6 +50,8 @@
 				/* left nav */
 				&.content-left {
 					// background: red;
+					z-index: 2;
+					position: relative;
 				}
 
 				/* page body */
@@ -57,6 +59,7 @@
 					// background: $color-white;
 					background: gold;
 					position: relative;
+					z-index: 1;
 
 					&:before {
 						background: $color-white;
@@ -110,6 +113,7 @@
 				/* left nav */
 				&.content-left {
 					// overflow: hidden;
+					min-height: 54px;
 				}
 
 				/* page body */

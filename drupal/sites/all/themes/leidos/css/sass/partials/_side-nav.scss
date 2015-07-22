@@ -197,6 +197,7 @@
 **************************************************/
 @media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
 	.left-navigation-menu {
+		min-height: 54px;
 
 		.additional-control {
 			display: block;

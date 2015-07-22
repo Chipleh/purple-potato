@@ -10,25 +10,112 @@
 /* x */
 .panels-flexible-region-industry_template-optional_rotator,
 .optional_rotator {
-	width: 100%;
-	height: 274px;
 	background: blue;
 	float: none;
+	height: 274px;
+	width: 100%;
 
 	.flexslider {
-		width: 100%;
-		height: 274px;
 		background: pink;
-		border: none;
 		border-radius: 0;
+		border: none;
+		height: 274px;
 		margin: 0;
+		width: 100%;
 
 		ul {
-			left: 30px;
+			height: 274px;
+			left: 0px;
 			margin: 0;
 			padding: 0;
 			position: absolute;
-			top: 30px
+			top: 0px;
+			width: 100%;
+
+			li {
+				height: 274px;
+				overflow: hidden;
+				width: 100%;
+
+				.views-field-field-rotator-image {
+					height: 274px;
+					left: 0;
+					overflow: hidden;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: -1;
+
+					img {
+						height: 274px;
+						width: 960px;
+					}
+				}
+
+				.views-field-field-hide-information-box,
+				.views-field-title,
+				.views-field-body,
+				.views-field-field-rotator-link {
+					z-index: 1;
+				}
+
+				.views-field-field-hide-information-box {
+
+				}
+
+				.views-field-title {
+					color: $color-black;
+					font-family: "AvenirLT-Book", Arial, sans-serif;
+					font-size: 22px;
+					margin-top: 65px;
+					padding: 10px 20px 0 20px;
+					max-height: 66px;
+
+					a {
+						color: $color-black;
+					}
+				}
+
+				.views-field-body {
+					color: $color-black;
+					padding: 0 20px;
+					max-height: 74px;
+				}
+
+				.views-field-field-rotator-link {
+					padding: 0 20px 10px 20px;
+					max-height: 32px;
+
+					a {
+						background-color: $color-leidos-purple-light;
+						background-image: -o-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
+						background-image: -webkit-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
+						background-image: linear-gradient(to left, #7B1F7F 0%, #3B1363 100%);
+						color: $color-white;
+						font-family: "AvenirLT-Black", Arial, sans-serif;
+						font-size: 11px;
+						font-weight: normal;
+						margin: 0px;
+						padding: 8px 10px;
+						text-transform: uppercase;
+						display: block;
+						width: 90px;
+
+						&:hover {
+							color: $color-leidos-purple-soft-light;
+						}
+					}		
+				}
+
+				.views-field-title,
+				.views-field-body,
+				.views-field-field-rotator-link {
+					background: rgba(255, 255, 255, 0.5);
+					margin-left: 50px;
+					overflow: hidden;
+					width: 450px;
+				}
+			}
 		}
 
 		.flex-control-nav {
@@ -37,16 +124,72 @@
 			font-size: 0;
 			right: 20px;
 			text-align: right;
+			z-index: 2;
+
+			&.flex-control-paging {
+				 li {
+					 a {
+					 	background: $color-white;
+
+					 	&:hover,
+					 	&.flex-active {
+							background: $color-leidos-purple-dark;
+					 	}
+					 }
+				 }
+			}
+		}
+
+		.flex-direction-nav {
+			display: none;
 		}
 	}
 }
 
 
-
 /*  tablet
 **************************************************/
-@media only screen and (min-width: 721px) and (max-width: 960px) {
+@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
+	.panels-flexible-region-industry_template-optional_rotator,
+	.optional_rotator {
+		.flexslider {
+			ul {
+				li {
+					.views-field-title {
+						margin-top: 105px;
 
+						a {
+							display: block;
+							margin-bottom: 10px;
+						}
+					}
+
+					.views-field-body {
+						display: none;
+					}
+
+					.views-field-field-rotator-link {
+						a {
+							text-align: center;
+							width: calc(100% - 20px);
+						}		
+					}
+
+					.views-field-title,
+					.views-field-body,
+					.views-field-field-rotator-link {
+						margin-left: 20px;
+						width: calc(100% - 80px);
+					}
+				}
+			}
+
+			.flex-control-nav {
+				right: 0px;
+				text-align: center;
+			}
+		}
+	}
 }
 
 
