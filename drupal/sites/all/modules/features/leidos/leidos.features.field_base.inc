@@ -128,7 +128,7 @@ function leidos_field_default_field_bases() {
       ),
       'view' => array(
         'args' => array(),
-        'display_name' => 'references_1',
+        'display_name' => 'references',
         'view_name' => 'announcements',
       ),
     ),
@@ -1291,7 +1291,7 @@ function leidos_field_default_field_bases() {
       ),
       'view' => array(
         'args' => array(),
-        'display_name' => 'references_1',
+        'display_name' => 'references',
         'view_name' => 'projects',
       ),
     ),

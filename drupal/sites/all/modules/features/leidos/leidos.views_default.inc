@@ -180,7 +180,7 @@ function leidos_views_default_views() {
   );
 
   /* Display: References */
-  $handler = $view->new_display('references', 'References', 'references_1');
+  $handler = $view->new_display('references', 'References', 'references');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -659,7 +659,7 @@ function leidos_views_default_views() {
   );
 
   /* Display: References */
-  $handler = $view->new_display('references', 'References', 'references_1');
+  $handler = $view->new_display('references', 'References', 'references');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -883,7 +883,7 @@ function leidos_views_default_views() {
   );
 
   /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Content pane', 'rotator_pane');
   $export['rotators'] = $view;
 
   return $export;
