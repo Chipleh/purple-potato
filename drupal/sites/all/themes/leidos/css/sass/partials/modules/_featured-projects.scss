@@ -1,12 +1,42 @@
 /*************************
-*   Featured Projects Panel Styles
+*   Rotator Styles
 *   Rhino Hooton
 *   6/29/15
 /************************/
 
 
-/*  element
+/*  elements
 **************************************************/
+/* pane */
+.pane-projects-featured-projects-pane {
+	h2 {
+		@extend %side-bar-header;
+	}
+
+	.view-content {
+		.views-row {
+			display: block;
+			overflow: hidden;
+			margin-bottom: 20px;
+
+			.views-field-title {
+				float: right;
+				font-size: 11px;
+				font-weight: bold;
+				width: calc(100% - 145px);
+			}
+
+			.views-field-field-main-image {
+				float: left;
+				height: 73px;
+				width: 125px;
+				background: $color-gray-light;
+			}
+		}
+	}
+}
+
+/* panel */
 .pane-bundle-featured-projects-panel {
 	h2 {
 		@extend %side-bar-header;
@@ -50,6 +80,82 @@
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
+	/* pane */
+	.pane-projects-featured-projects-pane {
+		border-top: 1px solid $color-gray-medium-light;
+		padding-top: 20px;
+
+		h2 {
+			color: #1F1646;
+			font-family: "AvenirLT-Book",Arial,sans-serif;
+			font-size: 24px;
+			font-weight: normal;
+			margin-bottom: 20px;
+			margin-top: 0px;
+			text-transform: capitalize;
+
+			a {
+				display: block;
+			}
+		}
+
+		.view-content {
+			overflow: hidden;
+
+			.views-row {
+				display: block;
+				margin-bottom: 20px;
+				overflow: hidden;
+				width: 49%;
+				
+				&:nth-child(odd) {
+					clear: left;
+					float: left;
+				}
+
+				&:nth-child(even) {
+					clear: right;
+					float: right;
+				}
+
+				.views-field-title {
+					float: none;
+					font-size: 11px;
+					font-weight: bold;
+					width: auto;
+				}
+
+				.views-field-field-main-image {
+					background: $color-gray-light;
+					display: block;
+					float: none;
+					height: auto;
+					margin-bottom: 10px;
+					overflow: hidden;
+					position: relative;
+					width: 100%;
+
+					&:before {
+						content: "";
+						display: block;
+						padding-top: 60%;
+						position: relative;
+						width: 100%;
+					}
+
+					img {
+						position: absolute;
+						top:0;
+						left: 0;
+						height: auto;
+						width: 100%;						
+					}
+				}
+			}
+		}
+	}
+
+	/* panel */
 	.pane-bundle-featured-projects-panel {
 		border-top: 1px solid $color-gray-medium-light;
 		padding-top: 20px;
@@ -137,6 +243,71 @@
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
+	/* pane */
+	.pane-projects-featured-projects-pane {
+		border-top: 1px solid $color-gray-medium-light;
+		padding-top: 20px;
+
+		h2 {
+			color: #1F1646;
+			font-family: "AvenirLT-Book",Arial,sans-serif;
+			font-size: 24px;
+			font-weight: normal;
+			margin-bottom: 20px;
+			margin-top: 0px;
+			text-transform: capitalize;
+
+			a {
+				display: block;
+			}
+		}
+
+		.view-content {
+			overflow: hidden;
+
+			.views-row {
+				display: block;
+				margin-bottom: 20px;
+				overflow: hidden;
+				width: 100%;
+
+				.views-field-title {
+					float: none;
+					font-size: 11px;
+					font-weight: bold;
+					width: 100%;
+				}
+
+				.views-field-field-main-image {
+					background: $color-gray-light;
+					display: block;
+					float: none;
+					height: auto;
+					position: relative;
+					width: 100%;
+					margin-bottom: 10px;
+
+					&:before {
+						content: "";
+						display: block;
+						padding-top: 60%;
+						position: relative;
+						width: 100%;
+					}
+
+					img {
+						position: asbsolute;
+						top:0;
+						left: 0;
+						height: auto;
+						width: 100%;						
+					}
+				}
+			}
+		}
+	}
+
+	/* panel */
 	.pane-bundle-featured-projects-panel {
 		border-top: 1px solid $color-gray-medium-light;
 		padding-top: 20px;
