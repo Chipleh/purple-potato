@@ -34,6 +34,20 @@
 	color: transparent;
 }
 
+/* hide text */
+%side-bar-header {
+	color: $color-leidos-purple-dark;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0px 0px 10px;
+	text-transform: uppercase;
+
+	a {
+		text-transform: capitalize;
+		font-size: 11px;
+	}
+}
+
 
 /*  tablet
 **************************************************/

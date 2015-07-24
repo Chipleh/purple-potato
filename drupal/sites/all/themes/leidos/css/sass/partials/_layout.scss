@@ -25,6 +25,7 @@
 	}
 }
 
+
 /*  max page width settings & margin corrections
 **************************************************/
 /* shared */
@@ -101,8 +102,11 @@
 					width: calc(100% - 330px);
 
 					.panels-flexible-region {
+						.panels-flexible-region-inside {
+							padding: 0;
+						}
+
 						&.right-rail {
-							background: green;
 							width: calc(100% - 40px);
 							padding: 0 20px;
 						}
@@ -115,6 +119,7 @@
 			}
 			.panels-flexible-row {
 				padding: 0;
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -129,12 +134,14 @@
 					&.right-container {
 						.panels-flexible-region {
 							&.right-rail {
-								background: green;
 								width: calc(100% - 330px);
+
+								.panels-flexible-region-inside {
+									padding: 0;
+								}
 							}
 
 							&.optional-right-rail {
-								background: yellow;
 								width: 270px;
 								padding-left: 20px;
 								display: block;
@@ -147,6 +154,13 @@
 	}	
 }
 
+.panel-flexible {
+	.panel-separator {
+		display: block;
+		overflow: hidden;
+	}
+}
+
 /* footer specific */
 #footer-columns {
 	@extend %max-width;
@@ -156,7 +170,7 @@
 
 /*  tablet
 **************************************************/
-@media only screen and (min-width: 721px) and (max-width: 960px) {
+@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
 	#content {
 		.section,
 		.content {
@@ -181,34 +195,42 @@
 			}
 		}
 	}
+
+	.optional-right-rail {
+		#content {
+			.section,
+			.content {
+				.content-container {
+					.panels-flexible-column {
+						&.right-container {
+							.panels-flexible-region {
+								&.right-rail {
+									float: none;
+									width: calc(100% - 40px);
+									padding: 0 20px 20px;
+
+									.panels-flexible-region-inside {
+										padding: 0;
+									}
+								}
+
+								&.optional-right-rail {
+									float: none;
+									padding: 0 20px;
+									width: calc(100% - 40px);
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+
 }
 
 
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-	#content {
-		.section,
-		.content {
-			.content-container {
-				.panels-flexible-column {
-					&.content-left {
-						float: none;
-						margin: 0;
-						max-width: 100%;
-						min-width: auto;
-						width: 100%;
-					} 
-
-					&.right-container {
-						float: none;
-						margin: 0;
-						max-width: 100%;
-						min-width: auto;
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
 }

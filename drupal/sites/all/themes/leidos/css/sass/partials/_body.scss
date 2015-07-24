@@ -21,7 +21,6 @@
 
 		/* page headline & banner */
 		.top {
-			background: pink;
 			padding: 0;
 
 			display: none; // waiting to do banner
@@ -49,15 +48,13 @@
 
 				/* left nav */
 				&.content-left {
-					// background: red;
 					z-index: 2;
 					position: relative;
 				}
 
 				/* page body */
 				&.right-container {
-					// background: $color-white;
-					background: gold;
+					background: $color-white;
 					position: relative;
 					z-index: 1;
 
