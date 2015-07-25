@@ -7,8 +7,30 @@
 
 /*  elements
 **************************************************/
-/* x */
+/* hr */
+hr {
+	background: transparent url("../images/diagonal-repeat.png") repeat-x scroll left bottom;
+	border: 0px none;
+	clear: both;
+	display: block;
+	height: 0;
+	margin-top: 20px;
+	padding-bottom: 6px;
+	width: 100%;
+	overflow: hidden;
+}
 
+
+.field-collection-container {
+	border: none;
+	margin-bottom: 0px;
+
+	.field-items {
+		.field-item {
+			margin-bottom: 0px;
+		}
+	}
+}
 
 /*  tablet
 **************************************************/

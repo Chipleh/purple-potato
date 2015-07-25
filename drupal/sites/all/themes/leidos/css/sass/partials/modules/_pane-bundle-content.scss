@@ -8,16 +8,42 @@
 /*  elements
 **************************************************/
 /* x */
-.pane-bundle-content {
+.pane-bundle-content,
+.pane-bundle-elements-panel-pane {
 	margin-top: 20px;
 	line-height: 24px;
 
-	h2 {
+	h2,
+	.field-name-field-header-title {
 		font-family: "AvenirLT-Book", Arial, sans-serif;
 		font-weight: normal;
 		color: $color-leidos-purple-dark;
 		font-size: 24px;
-		margin-top: 0;
+		margin: 0 0 10px 0;
+	}
+
+	.pane-content {
+		.field-collection-view {
+			margin: 0 0 20px 0;
+			padding: 0 0 20px 0;
+			border-bottom: 1px solid $color-gray-medium-light;
+		}
+
+		.field-type-image {
+			background: $color-gray-light;
+			display: block;
+			float: left;
+			margin-right: 20px;
+			overflow: hidden;
+			position: relative;
+			width: 248px;
+			height: 221px;
+
+			img {
+				height: auto;
+				width: 100%;						
+			}
+		}
 	}
 }
 
