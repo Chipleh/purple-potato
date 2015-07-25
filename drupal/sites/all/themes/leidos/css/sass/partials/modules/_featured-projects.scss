@@ -9,6 +9,8 @@
 **************************************************/
 /* pane */
 .pane-projects-featured-projects-pane {
+	margin-top: 20px;
+
 	h2 {
 		@extend %side-bar-header;
 	}
@@ -38,6 +40,8 @@
 
 /* panel */
 .pane-bundle-featured-projects-panel {
+	margin-top: 20px;
+
 	h2 {
 		@extend %side-bar-header;
 	}

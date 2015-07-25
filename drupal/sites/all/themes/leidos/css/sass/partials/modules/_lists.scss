@@ -1,0 +1,74 @@
+/*************************
+*   Rotator Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+
+
+/*  elements
+**************************************************/
+/* x */
+.pane-bundle-list-columns {
+	margin-top: 20px;
+
+	h2 {
+		@extend %side-bar-header;
+	}
+
+	.pane-content {
+		.field-collection-container {
+			margin: 0;
+			border: none;
+
+			.field-collection-view {
+				padding: 0;
+				margin: 0 0 20px;
+				border: none;
+
+				.field-name-field-title-link {
+					font-size: 14px;
+
+					a {
+						color: $color-black;
+						margin-bottom: 5px;
+						display: block;
+					}
+				}
+
+				.field-name-field-list-items {
+					.field-item {
+						color: $color-black;
+						padding-left: 15px;
+						position: relative;
+						font-size: 11px;
+						margin-bottom: 5px;
+
+						&:before {
+							color: $color-leidos-purple-light;
+							content: '\2022';
+							display: block;
+							height: 10px;
+							left: 5px;
+							line-height: 10px;
+							position: absolute;
+							text-align: center;
+							top: calc(50% - 5px);
+							width: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*  tablet
+**************************************************/
+@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
+}
+
+
+/*  mobile
+**************************************************/
+@media only screen and (max-width: 720px) {
+}

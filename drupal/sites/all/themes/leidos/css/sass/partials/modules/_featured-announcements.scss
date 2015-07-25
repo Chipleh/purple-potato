@@ -11,6 +11,8 @@
 .pane-announcements-featured-announcements-pane,
 .pane-announcements-full-view-announcements-pane,
 .pane-announcements-full-view-announcements-pane-mobile {
+	margin-top: 20px;
+
 	h2 {
 		@extend %side-bar-header;
 	}
