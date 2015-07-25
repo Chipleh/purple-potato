@@ -2298,6 +2298,33 @@ hr {
 /*  elements
 **************************************************/
 /* x */
+/* line 12, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_breadcrumb.scss */
+.field-name-field-breadcrumb-link .field-label {
+  display: none;
+}
+/* line 16, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_breadcrumb.scss */
+.field-name-field-breadcrumb-link .field-items {
+  diplay: block;
+  overflow: hidden;
+}
+/* line 20, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_breadcrumb.scss */
+.field-name-field-breadcrumb-link .field-items .field-item {
+  float: left;
+  margin-right: 10px;
+}
+
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
+/*************************
+*   Rotator Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* x */
 /* line 11, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
 .pane-bundle-content,
 .pane-bundle-elements-panel-pane {
