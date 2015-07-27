@@ -108,15 +108,15 @@ function leidos_field_group_info() {
     'label' => 'General Info',
     'weight' => '0',
     'children' => array(
-      0 => 'title',
-      1 => 'field_announcement_summary',
+      0 => 'field_announcement_summary',
+      1 => 'title',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-general field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
