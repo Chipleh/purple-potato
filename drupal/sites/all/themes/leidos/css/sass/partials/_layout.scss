@@ -60,6 +60,7 @@
 #main,
 #content {
 	@extend %full-width;
+	background: $color-gray-light;
 	margin-top: 0;
 
 		.section {
