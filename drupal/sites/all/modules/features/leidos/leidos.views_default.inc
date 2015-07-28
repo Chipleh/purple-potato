@@ -270,14 +270,22 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_bottom_color']['field'] = 'field_bottom_color';
   $handler->display->display_options['fields']['field_bottom_color']['relationship'] = 'field_color_scheme_tid';
   $handler->display->display_options['fields']['field_bottom_color']['label'] = '';
+  $handler->display->display_options['fields']['field_bottom_color']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_bottom_color']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_bottom_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_bottom_color']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_bottom_color']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Top Color */
   $handler->display->display_options['fields']['field_top_color']['id'] = 'field_top_color';
   $handler->display->display_options['fields']['field_top_color']['table'] = 'field_data_field_top_color';
   $handler->display->display_options['fields']['field_top_color']['field'] = 'field_top_color';
   $handler->display->display_options['fields']['field_top_color']['relationship'] = 'field_color_scheme_tid';
   $handler->display->display_options['fields']['field_top_color']['label'] = '';
+  $handler->display->display_options['fields']['field_top_color']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_top_color']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_top_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_top_color']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_top_color']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -285,34 +293,54 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  $handler->display->display_options['fields']['name']['element_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Hide Hover */
   $handler->display->display_options['fields']['field_hide_hover']['id'] = 'field_hide_hover';
   $handler->display->display_options['fields']['field_hide_hover']['table'] = 'field_data_field_hide_hover';
   $handler->display->display_options['fields']['field_hide_hover']['field'] = 'field_hide_hover';
   $handler->display->display_options['fields']['field_hide_hover']['label'] = '';
+  $handler->display->display_options['fields']['field_hide_hover']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_hide_hover']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_hide_hover']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hide_hover']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_hide_hover']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Hover Shape */
   $handler->display->display_options['fields']['field_hover_shape']['id'] = 'field_hover_shape';
   $handler->display->display_options['fields']['field_hover_shape']['table'] = 'field_data_field_hover_shape';
   $handler->display->display_options['fields']['field_hover_shape']['field'] = 'field_hover_shape';
   $handler->display->display_options['fields']['field_hover_shape']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_shape']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_hover_shape']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_hover_shape']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hover_shape']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_hover_shape']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Hover Text */
   $handler->display->display_options['fields']['field_hover_text']['id'] = 'field_hover_text';
   $handler->display->display_options['fields']['field_hover_text']['table'] = 'field_data_field_hover_text';
   $handler->display->display_options['fields']['field_hover_text']['field'] = 'field_hover_text';
   $handler->display->display_options['fields']['field_hover_text']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_text']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_hover_text']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_hover_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hover_text']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_hover_text']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Taxonomy Image */
   $handler->display->display_options['fields']['field_taxonomy_image']['id'] = 'field_taxonomy_image';
   $handler->display->display_options['fields']['field_taxonomy_image']['table'] = 'field_data_field_taxonomy_image';
   $handler->display->display_options['fields']['field_taxonomy_image']['field'] = 'field_taxonomy_image';
   $handler->display->display_options['fields']['field_taxonomy_image']['label'] = '';
+  $handler->display->display_options['fields']['field_taxonomy_image']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_taxonomy_image']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_taxonomy_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_taxonomy_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_taxonomy_image']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_taxonomy_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_taxonomy_image']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'square_thumbnail',
     'image_link' => '',
   );
   /* Field: Taxonomy term: Hide Preview Box */
@@ -320,54 +348,53 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_hide_preview_box']['table'] = 'field_data_field_hide_preview_box';
   $handler->display->display_options['fields']['field_hide_preview_box']['field'] = 'field_hide_preview_box';
   $handler->display->display_options['fields']['field_hide_preview_box']['label'] = '';
+  $handler->display->display_options['fields']['field_hide_preview_box']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_hide_preview_box']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_hide_preview_box']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hide_preview_box']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_hide_preview_box']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Preview Image Hover Text */
   $handler->display->display_options['fields']['field_preview_image_hover_text']['id'] = 'field_preview_image_hover_text';
   $handler->display->display_options['fields']['field_preview_image_hover_text']['table'] = 'field_data_field_preview_image_hover_text';
   $handler->display->display_options['fields']['field_preview_image_hover_text']['field'] = 'field_preview_image_hover_text';
   $handler->display->display_options['fields']['field_preview_image_hover_text']['label'] = '';
+  $handler->display->display_options['fields']['field_preview_image_hover_text']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_preview_image_hover_text']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_preview_image_hover_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_preview_image_hover_text']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_preview_image_hover_text']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Short Summary */
   $handler->display->display_options['fields']['field_short_summary']['id'] = 'field_short_summary';
   $handler->display->display_options['fields']['field_short_summary']['table'] = 'field_data_field_short_summary';
   $handler->display->display_options['fields']['field_short_summary']['field'] = 'field_short_summary';
   $handler->display->display_options['fields']['field_short_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_short_summary']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_short_summary']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_short_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_short_summary']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_short_summary']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Featured subcapabilities */
   $handler->display->display_options['fields']['field_featured_subcategories']['id'] = 'field_featured_subcategories';
   $handler->display->display_options['fields']['field_featured_subcategories']['table'] = 'field_data_field_featured_subcategories';
   $handler->display->display_options['fields']['field_featured_subcategories']['field'] = 'field_featured_subcategories';
   $handler->display->display_options['fields']['field_featured_subcategories']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_subcategories']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_featured_subcategories']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_featured_subcategories']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_subcategories']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_featured_subcategories']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_featured_subcategories']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_featured_subcategories']['multi_type'] = 'ul';
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
-  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<div class="capabilities-includes">Includes:</div><div class="capabilities-projects">Projects</div><div class="capabilities-video-content">Video Content</div>';
-  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Visit Services';
-  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['nothing']['alter']['path'] = 'engineering/[name]';
-  $handler->display->display_options['fields']['nothing']['alter']['replace_spaces'] = TRUE;
-  $handler->display->display_options['fields']['nothing']['alter']['path_case'] = 'lower';
-  $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
-  $handler->display->display_options['fields']['nothing']['element_class'] = 'visit-services';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Taxonomy term: Term ID */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
   $handler->display->display_options['fields']['tid']['label'] = '';
-  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['element_type'] = '0';
+  $handler->display->display_options['fields']['tid']['element_label_type'] = '0';
   $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['tid']['separator'] = '';
   /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
