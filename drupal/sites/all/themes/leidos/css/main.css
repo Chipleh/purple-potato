@@ -2326,6 +2326,171 @@ hr {
 /*  elements
 **************************************************/
 /* x */
+/* line 11, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box {
+  height: 300px;
+  width: 30%;
+  display: block;
+  float: left;
+  margin: 1.5%;
+  position: relative;
+  transition: all .25s ease 0s;
+}
+
+/* first */
+/* line 23, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box:nth-child(3n - 2) {
+  clear: left;
+}
+
+/* line 27, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box:nth-child(3n - 2) .inner {
+  background: green;
+}
+
+/* line 31, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box:nth-child(3n - 2) .click-box-content {
+  left: -0%;
+}
+
+/* second */
+/* line 40, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box:nth-child(3n - 1) .inner {
+  background: purple;
+}
+
+/* line 44, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box:nth-child(3n - 1) .click-box-content {
+  left: -110%;
+}
+
+/* third */
+/* line 50, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box:nth-child(3n) {
+  clear: right;
+}
+
+/* line 54, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box:nth-child(3n) .inner {
+  background: blue;
+}
+
+/* line 58, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box:nth-child(3n) .click-box-content {
+  left: -220%;
+}
+
+/* line 62, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.inner {
+  height: 300px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 70, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.header-box {
+  background: yellow;
+  height: 60px;
+  display: table;
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  z-index: 2;
+  position: relative;
+}
+
+/* line 80, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.header-box h2 {
+  padding: 0;
+  margin: 0;
+  display: table-cell;
+  height: auto;
+  background: pink;
+  vertical-align: middle;
+}
+
+/* line 89, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box .slide-box-content {
+  cursor: pointer;
+  position: absolute;
+  top: -250px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 340px;
+  display: block;
+  overflow: hidden;
+  transition: all .25s ease 0s;
+}
+
+/* line 102, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box .slide-box-content:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 110, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box .slide-box-content:before {
+  background: red;
+  height: 1000px;
+  width: 1000px;
+  display: block;
+  content: '';
+  position: absolute;
+  top: -800px;
+  left: -300px;
+  -webkit-transform: rotate(70deg);
+      -ms-transform: rotate(70deg);
+          transform: rotate(70deg);
+  z-index: -1;
+}
+
+/* line 123, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.sliding-box .click-box-content {
+  background: teal;
+  position: absolute;
+  bottom: 0;
+  width: 320%;
+  height: 0px;
+  display: block;
+  overflow: hidden;
+  transition: all .25s ease 0s;
+}
+
+/* hover state */
+/* line 136, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.hover.sliding-box .slide-box-content,
+.open.sliding-box .slide-box-content {
+  top: 60px;
+}
+
+/* open state */
+/* line 142, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.open.sliding-box .click-box-content {
+  height: 280px;
+}
+
+/* line 145, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
+.open.sliding-box {
+  height: 600px;
+}
+
+/*  tablet
+**************************************************/
+/*  mobile
+**************************************************/
+/*************************
+*   Rotator Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* x */
 /* line 11, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
 .pane-bundle-content,
 .pane-bundle-elements-panel-pane {

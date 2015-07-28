@@ -1,0 +1,162 @@
+/*************************
+*   Rotator Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+
+
+/*  elements
+**************************************************/
+/* x */
+.sliding-box {
+	height: 300px;
+	width: 30%;
+	display: block;
+	float: left;
+	margin: 1.5%;
+	position: relative;
+	transition: all .25s ease 0s;
+}
+
+
+/* first */
+.sliding-box:nth-child(3n - 2) {
+	clear: left;
+}
+
+.sliding-box:nth-child(3n - 2) .inner {
+	background: green;
+}
+
+.sliding-box:nth-child(3n - 2) .click-box-content {
+	left: -0%;
+}
+
+
+/* second */
+.sliding-box:nth-child(3n - 1) {
+}
+
+.sliding-box:nth-child(3n - 1) .inner {
+	background: purple;
+}
+
+.sliding-box:nth-child(3n - 1) .click-box-content {
+	left: -110%;
+}
+
+
+/* third */
+.sliding-box:nth-child(3n) {
+	clear: right;
+}
+
+.sliding-box:nth-child(3n) .inner {
+	background: blue;
+}
+
+.sliding-box:nth-child(3n) .click-box-content {
+	left: -220%;
+}
+
+.inner {
+	height: 300px;
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.header-box {
+	background: yellow;
+	height: 60px;
+	display: table;
+	width: calc(100% - 40px);
+	padding: 0 20px;
+	z-index: 2;
+	position: relative;
+}
+
+.header-box h2 {
+	padding: 0;
+	margin: 0;
+	display: table-cell;
+	height: auto;
+	background: pink;
+	vertical-align: middle;
+}
+
+.sliding-box .slide-box-content {
+	cursor: pointer;
+	position: absolute;
+	top: -250px;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 340px;
+	display: block;
+	overflow: hidden;
+	transition: all .25s ease 0s;
+}
+
+.sliding-box .slide-box-content:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden; 
+}
+
+.sliding-box .slide-box-content:before {
+	background: red;
+	height: 1000px;
+	width: 1000px;
+	display: block;
+	content: '';
+	position: absolute;
+	top: -800px;
+	left: -300px;
+	transform: rotate(70deg);
+	z-index: -1;
+}
+
+.sliding-box .click-box-content {
+	background: teal;
+	position: absolute;
+	bottom: 0;
+	width: 320%;
+	height: 0px;
+	display: block;
+	overflow: hidden;
+	transition: all .25s ease 0s;
+}
+
+
+/* hover state */
+.hover.sliding-box .slide-box-content,
+.open.sliding-box .slide-box-content {
+	top: 60px;
+}
+
+/* open state */
+.open.sliding-box .click-box-content {
+	height: 280px;
+}
+.open.sliding-box {
+	height: 600px;
+}
+
+
+
+/*  tablet
+**************************************************/
+@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
+
+}
+
+
+/*  mobile
+**************************************************/
+@media only screen and (max-width: 720px) {
+
+}
