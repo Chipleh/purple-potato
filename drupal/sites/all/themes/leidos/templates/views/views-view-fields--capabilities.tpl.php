@@ -4,6 +4,7 @@
       <h2><?php print $fields['name']->content; ?></h2>
     </div>
     <div class="slide-box-content <?php print str_replace(' ', '-', strtolower($fields['field_hover_shape']->content)); ?>">
+      <div class="slide-box-content-bg"></div>
       <p><?php print $fields['field_hover_text']->content; ?></p>
     </div>
   </div>
