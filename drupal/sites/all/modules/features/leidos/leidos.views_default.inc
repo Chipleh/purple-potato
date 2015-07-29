@@ -427,8 +427,10 @@ function leidos_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Capabilities sort order';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'administer nodes';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -471,7 +473,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_taxonomy_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_taxonomy_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_taxonomy_image']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'square_thumbnail',
     'image_link' => '',
   );
   /* Field: Taxonomy term: Name */
