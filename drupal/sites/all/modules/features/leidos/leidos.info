@@ -21,6 +21,7 @@ dependencies[] = node_reference
 dependencies[] = number
 dependencies[] = page_manager
 dependencies[] = panels
+dependencies[] = panels_curator
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views_content
