@@ -2,16 +2,23 @@
 //	Rhino Hooton
 //	6/29/15
 jQuery(document).ready(function() {
-	jQuery('.sliding-box').hover(function() {
-		jQuery(this).toggleClass('hover');
+	// add hover state on mouse over
+	jQuery('.sliding-box .inner').hover(function() {
+		jQuery(this).parent('.sliding-box').toggleClass('hover');
 	});
 
-	jQuery('.sliding-box').on('click', function () {
-		if (jQuery(this).hasClass('open')) {
-			jQuery(this).removeClass('open');
+	// open slide box on content click
+	jQuery('.sliding-box .inner').on('click', function () {
+		if (jQuery(this).parent('.sliding-box').hasClass('open')) {
+			jQuery(this).parent('.sliding-box').removeClass('open');
 			return false;
 		}
 		jQuery('.open').removeClass('open');
-		jQuery(this).toggleClass('open');
+		jQuery(this).parent('.sliding-box').toggleClass('open');
+	});
+
+	// close slide box on close click
+	jQuery('.sliding-box .click-box-close').on('click', function () {
+		jQuery('.open').removeClass('open');
 	});
 });
