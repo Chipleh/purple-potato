@@ -538,7 +538,6 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '5, 8, 10, 20, 40, 60';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -596,7 +595,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['combine']['operator'] = 'word';
   $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
   $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
-  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Keyword';
+  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search';
   $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
   $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
@@ -613,7 +612,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Project Type';
   $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
   $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
@@ -624,6 +623,22 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'capabilities';
   $handler->display->display_options['filters']['tid']['error_message'] = FALSE;
+  /* Filter criterion: Content: Market (field_market) */
+  $handler->display->display_options['filters']['field_market_tid']['id'] = 'field_market_tid';
+  $handler->display->display_options['filters']['field_market_tid']['table'] = 'field_data_field_market';
+  $handler->display->display_options['filters']['field_market_tid']['field'] = 'field_market_tid';
+  $handler->display->display_options['filters']['field_market_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_market_tid']['expose']['operator_id'] = 'field_market_tid_op';
+  $handler->display->display_options['filters']['field_market_tid']['expose']['label'] = 'Market';
+  $handler->display->display_options['filters']['field_market_tid']['expose']['operator'] = 'field_market_tid_op';
+  $handler->display->display_options['filters']['field_market_tid']['expose']['identifier'] = 'field_market_tid';
+  $handler->display->display_options['filters']['field_market_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_market_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_market_tid']['vocabulary'] = 'market';
 
   /* Display: Featured Projects */
   $handler = $view->new_display('panel_pane', 'Featured Projects', 'featured_projects_pane');
@@ -701,12 +716,6 @@ function leidos_views_default_views() {
   /* Display: Full View Projects */
   $handler = $view->new_display('panel_pane', 'Full View Projects', 'full_view_projects_pane');
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Unfiltered text */
-  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
-  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['label'] = 'Custom View All (Works with javascript in leidos_theme.js)';
-  $handler->display->display_options['footer']['area_text_custom']['content'] = '<a id="custom-view-all-link" href="#" onclick="load_show_all()">View All »</a>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
