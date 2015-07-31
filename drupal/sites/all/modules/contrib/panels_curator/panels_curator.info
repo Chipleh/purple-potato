@@ -3,3 +3,10 @@ description = Provides content administration tools for panels panes buckets.
 core = 7.x
 package = Panels
 dependencies[] = panels
+
+; Information added by Drupal.org packaging script on 2015-07-31
+version = "7.x-1.0"
+core = "7.x"
+project = "panels_curator"
+datestamp = "1438381440"
+
