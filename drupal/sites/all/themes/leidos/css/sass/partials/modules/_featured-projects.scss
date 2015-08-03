@@ -1,5 +1,5 @@
 /*************************
-*   Rotator Styles
+*   Featured Projects Styles
 *   Rhino Hooton
 *   6/29/15
 /************************/
@@ -18,8 +18,8 @@
 	.view-content {
 		.views-row {
 			display: block;
-			overflow: hidden;
 			margin-bottom: 20px;
+			overflow: hidden;
 
 			.views-field-title {
 				float: right;
@@ -29,10 +29,10 @@
 			}
 
 			.views-field-field-main-image {
+				background: $color-gray-light;
 				float: left;
 				height: 73px;
 				width: 125px;
-				background: $color-gray-light;
 			}
 		}
 	}
@@ -48,18 +48,18 @@
 
 	.pane-content {
 		.field-collection-container {
-			margin: 0;
 			border: none;
+			margin: 0;
 
 			.field-item {
 				display: block;
-				overflow: hidden;
 				margin-bottom: 20px;
+				overflow: hidden;
 
 				.field-collection-view  {
+					border: none;
 					margin: 0;
 					padding: 0;
-					border: none;
 
 					.field-item {
 						float: right;
@@ -69,10 +69,10 @@
 					}
 
 					.field-type-image { 
+						background: $color-gray-light;
 						float: left;
 						height: 73px;
 						width: 125px;
-						background: $color-gray-light;
 					}
 				}
 			}
@@ -148,11 +148,11 @@
 					}
 
 					img {
+						height: auto;
+						left: 0;
 						position: absolute;
 						top:0;
-						left: 0;
-						height: auto;
-						width: 100%;						
+						width: 100%;
 					}
 				}
 			}
@@ -287,9 +287,9 @@
 					display: block;
 					float: none;
 					height: auto;
+					margin-bottom: 10px;
 					position: relative;
 					width: 100%;
-					margin-bottom: 10px;
 
 					&:before {
 						content: "";
@@ -300,11 +300,11 @@
 					}
 
 					img {
+						height: auto;
+						left: 0;
 						position: asbsolute;
 						top:0;
-						left: 0;
-						height: auto;
-						width: 100%;						
+						width: 100%;
 					}
 				}
 			}

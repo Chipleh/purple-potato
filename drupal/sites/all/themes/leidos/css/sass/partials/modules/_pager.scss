@@ -1,5 +1,5 @@
 /*************************
-*   Links Styles
+*   Pager Styles
 *   Rhino Hooton
 *   6/29/15
 /************************/
@@ -7,34 +7,18 @@
 
 /*  elements
 **************************************************/
-.pane-bundle-link-columns {
-	margin-top: 20px;
+.item-list {
+	.pager {
+		margin: 0;
+		padding: 0;
 
-	h2 {
-		@extend %side-bar-header;
-	}
-
-	.pane-content {
-		.field-collection-container {
-			border: none;
-			margin: 0;
-
-			.field-collection-view {
-				border: none;
-				margin: 0 0 20px;
-				padding: 0;
-
-				.field-name-field-title-link {
-					font-size: 11px;
-				}
-
-				.field-name-field-column-link {
-					font-size: 11px;
-				}
-			}
+		.pager-current {
+			background: $color-leidos-purple-light;
+			color: $color-white;
 		}
 	}
 }
+
 
 /*  tablet
 **************************************************/

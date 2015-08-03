@@ -7,7 +7,6 @@
 
 /*  elements
 **************************************************/
-/* x */
 .panels-flexible-region-industry_template-optional_rotator,
 .optional_rotator {
 	float: none;
@@ -66,8 +65,8 @@
 					font-family: "AvenirLT-Book", Arial, sans-serif;
 					font-size: 22px;
 					margin-top: 65px;
-					padding: 10px 20px 0 20px;
 					max-height: 66px;
+					padding: 10px 20px 0 20px;
 
 					a {
 						color: $color-black;
@@ -81,8 +80,8 @@
 				}
 
 				.views-field-field-rotator-link {
-					padding: 0 20px 10px 20px;
 					max-height: 32px;
+					padding: 0 20px 10px 20px;
 
 					a {
 						background-color: $color-leidos-purple-light;
@@ -90,13 +89,13 @@
 						background-image: -webkit-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
 						background-image: linear-gradient(to left, #7B1F7F 0%, #3B1363 100%);
 						color: $color-white;
+						display: block;
 						font-family: "AvenirLT-Black", Arial, sans-serif;
 						font-size: 11px;
 						font-weight: normal;
 						margin: 0px;
 						padding: 8px 10px;
 						text-transform: uppercase;
-						display: block;
 						width: 90px;
 
 						&:hover {
@@ -170,7 +169,7 @@
 						a {
 							text-align: center;
 							width: calc(100% - 20px);
-						}		
+						}
 					}
 
 					.views-field-title,

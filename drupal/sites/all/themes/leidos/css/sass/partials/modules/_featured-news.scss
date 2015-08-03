@@ -1,5 +1,5 @@
 /*************************
-*   Rotator Styles
+*   Featured News Styles
 *   Rhino Hooton
 *   6/29/15
 /************************/
@@ -7,7 +7,6 @@
 
 /*  elements
 **************************************************/
-/* x */
 .pane-bundle-featured-news-panel {
 	margin-top: 20px;
 
@@ -22,8 +21,8 @@
 		.field-items {
 			.field-item {
 				display: block;
-				overflow: hidden;
 				margin: 0;
+				overflow: hidden;
 
 				.field-collection-view {
 					border: none;
@@ -50,12 +49,10 @@
 /*  tablet
 **************************************************/
 @media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
-
 }
 
 
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-
 }

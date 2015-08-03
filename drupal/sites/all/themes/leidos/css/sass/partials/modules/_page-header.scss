@@ -1,5 +1,5 @@
 /*************************
-*   Rotator Styles
+*   Page Header Styles
 *   Rhino Hooton
 *   6/29/15
 /************************/
@@ -7,18 +7,17 @@
 
 /*  elements
 **************************************************/
-/* x */
 .pane-bundle-page-header {
-	margin: 20px 0;
-	line-height: 24px;
-	padding: 0 0 26px 0;
 	background: transparent url("../images/diagonal-repeat.png") repeat-x scroll left bottom;
+	line-height: 24px;
+	margin: 20px 0;
+	padding: 0 0 26px 0;
 
 	h2 {
-		font-family: "AvenirLT-Book", Arial, sans-serif;
-		font-weight: normal;
 		color: $color-leidos-purple-dark;
+		font-family: "AvenirLT-Book", Arial, sans-serif;
 		font-size: 24px;
+		font-weight: normal;
 		margin: 0 0 10px 0;
 	}
 }
