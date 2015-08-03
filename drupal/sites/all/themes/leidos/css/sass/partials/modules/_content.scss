@@ -56,4 +56,16 @@
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
+	.pane-bundle-content,
+	.pane-bundle-elements-panel-pane {
+		.pane-content {
+			.field-type-image {
+				float: none;
+				height: auto;
+				margin-right: 0px;
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+	}
 }

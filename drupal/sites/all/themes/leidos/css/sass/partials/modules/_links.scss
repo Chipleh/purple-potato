@@ -19,22 +19,49 @@
 			border: none;
 			margin: 0;
 
-			.field-collection-view {
-				border: none;
-				margin: 0 0 20px;
-				padding: 0;
+			.field-items {
+				.field-item {
+					background: red;
+					float: left;
+					width: 22%;
+					margin: 0 1.5%;
 
-				.field-name-field-title-link {
-					font-size: 11px;
-				}
 
-				.field-name-field-column-link {
-					font-size: 11px;
+
+					.field-collection-view {
+						border: none;
+						margin: 0 0 20px;
+						padding: 0;
+
+						.field-name-field-title-link {
+							font-size: 11px;
+						}
+
+						.field-name-field-column-link {
+							font-size: 11px;
+						}
+					}
 				}
 			}
 		}
 	}
 }
+
+// right rail
+.optional-right-rail {
+	.pane-bundle-link-columns {
+		.pane-content {
+			.field-collection-container {
+				.field-items {
+					.field-item {
+						background: blue;
+					}
+				}
+			}
+		}
+	}
+}
+
 
 /*  tablet
 **************************************************/
