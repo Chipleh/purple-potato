@@ -10,6 +10,16 @@
 function panels_curator_settings_form() {
   module_load_include('inc', 'ctools', 'includes/plugins');
   module_load_include('inc', 'panels', 'includes/plugins');
+  module_load_include('inc', 'panels', 'includes/common');
+  // Get all panel types.
+  $panels_renderer = new panels_renderer_editor;
+  $types = panels_common_get_allowed_types('');
+  $type_mapping = array();
+  foreach ($types as $group => $type) {
+    foreach ($type as $key => $panel) {
+      $type_mapping[$panel['title']] = array('group' => $group, 'panel' => $key);
+    }
+  }
   // Load all layouts and regions.
   $regions = array();
   $layouts = panels_get_layouts();
@@ -22,10 +32,7 @@ function panels_curator_settings_form() {
   $categories = variable_get('panels_curator_categories', '');
   $categories = array_filter(explode(',', $categories));
   if (empty($categories)) {
-    module_load_include('inc', 'panels', 'includes/common');
     // Default to panels default categories.
-    $panels_renderer = new panels_renderer_editor;
-    $types = panels_common_get_allowed_types('');
     $categories = $panels_renderer->get_categories($types);
     // Add 'Disabled' group.
     $categories['disabled'] = array(
@@ -41,6 +48,7 @@ function panels_curator_settings_form() {
   foreach ($option_keys as $value) {
     $options[$value] = $value;
   }
+
   $form['add'] = array(
     '#title' => t('Add a custom group'),
     '#type' => 'fieldset',
@@ -93,7 +101,33 @@ function panels_curator_settings_form() {
         '#default_value' => $key,
         '#value' => serialize($content),
       );
+      // Keep track of any new or un-categorized panels.
+      if (isset($type_mapping[$content['title']])) {
+        unset($type_mapping[$content['title']]);
+      }
     }
+  }
+
+  // Add any new or un-categorized panels.
+  foreach ($type_mapping as $key => $type) {
+    $group = 'disabled';
+    if (isset($form[$type['group']])) {
+      $group = $type['group'];
+    }
+    $panel_title = $types[$type['group']][$type['panel']]['title'];
+    $form[$group][$panel_title] = array(
+      '#title' => $panel_title,
+      '#type' => 'select',
+      '#options' => $options,
+      '#default_value' => $group,
+    );
+    // Store the serialized data in a hidden variable.
+    $form['hidden_' . $panel_title] = array(
+      '#title' => $panel_title,
+      '#type' => 'hidden',
+      '#default_value' => $group,
+      '#value' => serialize($types[$type['group']][$type['panel']]),
+    );
   }
 
   $form['#submit'][] = 'panels_curator_settings_form_submit';
