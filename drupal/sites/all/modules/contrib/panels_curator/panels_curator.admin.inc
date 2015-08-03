@@ -8,6 +8,17 @@
  * Custom settings for the Panels curator module.
  */
 function panels_curator_settings_form() {
+  module_load_include('inc', 'ctools', 'includes/plugins');
+  module_load_include('inc', 'panels', 'includes/plugins');
+  // Load all layouts and regions.
+  $regions = array();
+  $layouts = panels_get_layouts();
+  $display = panels_new_display();
+  foreach ($layouts as $layout) {
+    foreach (panels_get_regions($layout, $display) as $key => $region) {
+      $regions[$key] = $region . ' (' . $layout['title'] . ')';
+    }
+  }
   $categories = variable_get('panels_curator_categories', '');
   $categories = array_filter(explode(',', $categories));
   if (empty($categories)) {
@@ -52,6 +63,21 @@ function panels_curator_settings_form() {
       '#type' => 'fieldset',
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
+    );
+    // Region settings for this category/group.
+    $category['regions'] = variable_get('panels_curator_regions_' . $key, '');
+    $category['regions'] = explode(',', $category['regions']);
+    $form[$key][$key . '_region_container'] = array(
+      '#title' => t('Regions'),
+      '#type' => 'fieldset',
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    );
+    $form[$key][$key . '_region_container'][$key . '_regions'] = array(
+      '#title' => t('Regions'),
+      '#type' => 'checkboxes',
+      '#options' => $regions,
+      '#default_value' => isset($category['regions']) ? $category['regions'] : array(),
     );
     foreach ($category['content'] as $content) {
       $form[$key][$content['title']] = array(
@@ -140,6 +166,7 @@ function panels_curator_settings_form_submit($form, &$form_state) {
     variable_set('panels_curator_' . $key, serialize($mapping));
   }
   foreach ($category_groups as $group) {
+    // Update all category panels mappings.
     if (!isset($category_mappings[$group])) {
       $empty = array(
         'title' => $categories[$group]['title'],
@@ -147,5 +174,13 @@ function panels_curator_settings_form_submit($form, &$form_state) {
       );
       variable_set('panels_curator_' . $group, serialize($empty));
     }
+    // Update all category region mappings.
+    $region_mappings = array();
+    foreach ($form_state['input'][$group . '_regions'] as $key => $region) {
+      if (!empty($region)) {
+        $region_mappings[$key] = $region;
+      }
+    }
+    variable_set('panels_curator_regions_' . $group, implode(',', $region_mappings));
   }
 }
