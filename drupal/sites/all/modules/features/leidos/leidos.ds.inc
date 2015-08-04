@@ -205,6 +205,57 @@ function leidos_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|project|teaser';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'project';
+  $ds_fieldsetting->view_mode = 'teaser';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_main_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_hover_summary' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_hover_cta' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_hover_title' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['node|project|teaser'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'taxonomy_term|capabilities|default';
   $ds_fieldsetting->entity_type = 'taxonomy_term';
   $ds_fieldsetting->bundle = 'capabilities';
@@ -767,6 +818,124 @@ function leidos_ds_layout_settings_info() {
     'layout_disable_css' => FALSE,
   );
   $export['fieldable_panels_pane|list_columns|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|project|default';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'project';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'body',
+        1 => 'field_title_override',
+        2 => 'field_customer_name',
+        3 => 'field_intro_text',
+        4 => 'field_project_facts',
+        5 => 'field_quick_links',
+        6 => 'field_industry_rankings_awards',
+        7 => 'field_main_image',
+        8 => 'field_overview',
+        9 => 'field_project_image',
+        10 => 'field_image_description',
+        11 => 'field_featured',
+        12 => 'field_market',
+        13 => 'field_capabilities',
+        14 => 'field_point_of_contact',
+        15 => 'field_project_value',
+        16 => 'field_google_earth_link',
+        17 => 'field_contact_us',
+        18 => 'field_tags',
+        19 => 'field_lower_body_text',
+        20 => 'field_hover_summary',
+        21 => 'field_hover_cta',
+        22 => 'field_proof_point',
+        23 => 'field_overview_header',
+        24 => 'field_private_tag',
+        25 => 'field_project_date',
+        26 => 'field_hover_title',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'ds_content',
+      'field_title_override' => 'ds_content',
+      'field_customer_name' => 'ds_content',
+      'field_intro_text' => 'ds_content',
+      'field_project_facts' => 'ds_content',
+      'field_quick_links' => 'ds_content',
+      'field_industry_rankings_awards' => 'ds_content',
+      'field_main_image' => 'ds_content',
+      'field_overview' => 'ds_content',
+      'field_project_image' => 'ds_content',
+      'field_image_description' => 'ds_content',
+      'field_featured' => 'ds_content',
+      'field_market' => 'ds_content',
+      'field_capabilities' => 'ds_content',
+      'field_point_of_contact' => 'ds_content',
+      'field_project_value' => 'ds_content',
+      'field_google_earth_link' => 'ds_content',
+      'field_contact_us' => 'ds_content',
+      'field_tags' => 'ds_content',
+      'field_lower_body_text' => 'ds_content',
+      'field_hover_summary' => 'ds_content',
+      'field_hover_cta' => 'ds_content',
+      'field_proof_point' => 'ds_content',
+      'field_overview_header' => 'ds_content',
+      'field_private_tag' => 'ds_content',
+      'field_project_date' => 'ds_content',
+      'field_hover_title' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|project|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|project|teaser';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'project';
+  $ds_layout->view_mode = 'teaser';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_main_image',
+        2 => 'field_hover_title',
+        3 => 'field_hover_cta',
+        4 => 'field_hover_summary',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'field_main_image' => 'ds_content',
+      'field_hover_title' => 'ds_content',
+      'field_hover_cta' => 'ds_content',
+      'field_hover_summary' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'hide_page_title' => '0',
+    'page_option_title' => '',
+    'hide_sidebars' => 0,
+  );
+  $export['node|project|teaser'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
