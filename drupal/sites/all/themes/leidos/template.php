@@ -201,6 +201,7 @@ function leidos_field__taxonomy_term_reference($variables) {
  */
 function leidos_preprocess_field(&$variables) {
   if ($variables['element']['#field_name'] == 'field_rotator_slide') {
+    // Render the rotator instead of the slide nodes that are referenced.
     $arguments = array();
     foreach ($variables['items'] as $item) {
       $arguments[] = $item['#node']->nid;
@@ -213,5 +214,21 @@ function leidos_preprocess_field(&$variables) {
     $rotator->pre_execute();
     $rotator->execute();
     $variables['rotator'] = $rotator->render();
+  }
+  elseif ($variables['element']['#field_name'] == 'field_columns') {
+    // Custom classes for our field collection wrappers.
+    foreach ($variables['items'] as $key => &$item) {
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items']))
+      );
+    }
+  }
+  elseif ($variables['element']['#field_name'] == 'field_column_links') {
+    // Custom classes for our field collection wrappers.
+    foreach ($variables['items'] as $key => &$item) {
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column-section', 'column-section-' . $key)
+      );
+    }
   }
 }
