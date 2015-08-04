@@ -102,9 +102,9 @@ function leidos_node_info() {
       'help' => '',
     ),
     'rotator' => array(
-      'name' => t('Rotator'),
+      'name' => t('Rotator slide'),
       'base' => 'node_content',
-      'description' => t('Carousel rotator items'),
+      'description' => t('Carousel rotator slides'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
