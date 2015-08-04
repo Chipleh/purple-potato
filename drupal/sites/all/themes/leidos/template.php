@@ -215,6 +215,15 @@ function leidos_preprocess_field(&$variables) {
     $rotator->execute();
     $variables['rotator'] = $rotator->render();
   }
+  elseif ($variables['element']['#field_name'] == 'field_breadcrumb_link') {
+    // Add right arrow chevrons for breadcrumb links.
+    $total_links = count($variables['items']);
+    foreach ($variables['items'] as $key => &$item) {
+      if (($key + 1) < $total_links) {
+        $variables['items'][$key]['#element']['title'] .= ' &raquo;';
+      }
+    }
+  }
   elseif ($variables['element']['#field_name'] == 'field_columns') {
     // Custom classes for our field collection wrappers.
     foreach ($variables['items'] as $key => &$item) {
