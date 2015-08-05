@@ -182,6 +182,7 @@ features[field_instance][] = fieldable_panels_pane-link_columns-field_columns
 features[field_instance][] = fieldable_panels_pane-list_columns-field_columns_list
 features[field_instance][] = fieldable_panels_pane-page_header-field_summary
 features[field_instance][] = fieldable_panels_pane-page_header-field_summary_cta
+features[field_instance][] = fieldable_panels_pane-rotator-field_rotator_slide
 features[field_instance][] = node-announcement-body
 features[field_instance][] = node-announcement-field_announcement_date
 features[field_instance][] = node-announcement-field_announcement_type
