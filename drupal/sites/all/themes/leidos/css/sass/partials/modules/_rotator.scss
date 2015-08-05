@@ -7,10 +7,13 @@
 
 /*  elements
 **************************************************/
-.panels-flexible-region-industry_template-optional_rotator,
-.optional_rotator {
+.pane-bundle-rotator {
 	float: none;
 	width: 100%;
+
+	.pane-title {
+		display: none;
+	}
 
 	.flexslider {
 		border-radius: 0;
@@ -44,7 +47,7 @@
 
 					img {
 						height: 274px;
-						width: 960px;
+						width: 990px;
 					}
 				}
 

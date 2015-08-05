@@ -26,7 +26,7 @@
 
 				/* left nav */
 				&.content-left {
-					z-index: 2;
+					z-index: 3;
 					position: relative;
 				}
 
@@ -59,7 +59,7 @@
 
 /*  tablet
 **************************************************/
-@media only screen and (min-width: 721px) and (max-width: 960px) {
+@media only screen /* and (min-width: 721px) */ and (max-width: 960px) {
 	#content {
 		.section,
 		.content {
@@ -67,7 +67,6 @@
 			.content-container {
 				background: $color-gray-light;
 				position: relative;
-				z-index: 5;
 
 				.panels-flexible-column {
 
@@ -75,6 +74,7 @@
 					&.content-left {
 						// overflow: hidden;
 						min-height: 54px;
+						z-index: 30;
 					}
 
 					/* page body */

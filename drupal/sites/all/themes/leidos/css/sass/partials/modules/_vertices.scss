@@ -10,11 +10,10 @@
 **************************************************/
 #content {
 	.top {
-		background: yellow;
 		padding: 40px 0 0 0;
 		pointer-events: none;
 		position: relative;
-		z-index: 3;
+		z-index: 5;
 
 		.panels-flexible-region-industry_template-top_banner-inside {
 
@@ -33,20 +32,20 @@
 			}
 
 			.pane-page-title { 
-				display: block;
-				height: 200px;
+				display: table;
+				height: 100px;
 				left: 0;
 				position: absolute;
 				top: 0;
-				width: 100%;
+				width: 50%;
 
 				h1 {
 					@extend %max-width;
-					display: block;
-					height: 200px;
-					line-height: 110px;
-					padding: 0;
 					color: $color-white;
+					display: table-cell;
+					height: 100px;
+					padding: 0 0 0 20px;
+					vertical-align: middle;
 				}
 			}
 		}
@@ -88,9 +87,40 @@
 			position: absolute;
 			top: 54px;
 			width: 100%;
-			z-index: 10;
 
-			display: none;
+			.panels-flexible-region-industry_template-top_banner-inside {
+				.pane-page-title { 
+					h1 {
+						font-size: 25px;
+					}
+				}
+			}
+		}
+	}
+
+	.no-vertices {
+		.panels-flexible-column.content-left,
+		.panels-flexible-column.right-container {
+			padding-top: 0px;
+		}
+	}
+
+	.has-vertices {
+		.panels-flexible-column.content-left,
+		.panels-flexible-column.right-container {
+			padding-top: 0px;
+		}
+	}
+
+	.has-vertices {
+		&.has-rotator {
+			.panels-flexible-column.content-left {
+				padding-top: 0px;
+			}
+
+			.panels-flexible-column.right-container {
+				padding-top: 40px;
+			}
 		}
 	}
 }
@@ -99,4 +129,31 @@
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
+	#content {
+		.top {
+			.panels-flexible-region-industry_template-top_banner-inside {
+				#theme-banner-div {
+					background: transparent url("../images/vertices-subPage.png") no-repeat scroll center center / 100% 100px;
+					height: 100px;
+				}
+
+				.pane-page-title { 
+					height: 40px;
+
+					h1 {
+						height: 40px;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	.has-vertices {
+		&.has-rotator {
+			.panels-flexible-column.right-container {
+				padding-top: 20px;
+			}
+		}
+	}
 }
