@@ -8,56 +8,85 @@
 /*  elements
 **************************************************/
 .pane-bundle-link-columns {
-	margin-top: 20px;
+	clear: both;
+	display: block;
+	margin: 0 0 20px;
+	overflow: hidden;
 
 	h2 {
 		@extend %side-bar-header;
 	}
 
-	.pane-content {
-		.field-collection-container {
-			border: none;
-			margin: 0;
+	.columns-total-1  {
+		float: none;
+		margin: 0 1.5%;
+		width: calc(100% - 3%);
+	}
 
-			.field-items {
-				.field-item {
-					background: red;
-					float: left;
-					width: 22%;
-					margin: 0 1.5%;
+	.columns-total-2  {
+		margin: 0 1.5%;
+		width: 47%;
+	}
 
+	.columns-total-3  {
+		margin: 0 1.5%;
+		width: 30.3%;
+	}
 
+	.columns-total-4  {
+		margin: 0 1.5%;
+		width: 22%;
+	}
 
-					.field-collection-view {
-						border: none;
-						margin: 0 0 20px;
-						padding: 0;
+	.column  {
+		border: none;
+		float: left;
+		padding: 0;
 
-						.field-name-field-title-link {
-							font-size: 11px;
-						}
+		.entity-field-collection-item {
 
-						.field-name-field-column-link {
-							font-size: 11px;
+			.column-link-container {
+				margin-bottom: 20px;
+
+				a {
+					display: block;
+					font-size: 16px;
+					font-weight: 600;
+					margin-bottom: 10px;
+				}
+
+				ul {
+					padding: 0;
+					margin: 0;
+
+					li {
+						list-style: none;
+
+						a {
+							font-size: 13px;
+							color: $color-black;
+							margin-bottom: 0;
+							font-weight: 100;
+
+							&:hover {
+								color: $color-leidos-purple-light;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
-}
 
-// right rail
-.optional-right-rail {
-	.pane-bundle-link-columns {
-		.pane-content {
-			.field-collection-container {
-				.field-items {
-					.field-item {
-						background: blue;
-					}
-				}
-			}
+		.field-collection-view-final {
+			width: 100%;
+		}
+
+		.field-name-field-title-link {
+			font-size: 11px;
+		}
+
+		.field-name-field-column-link {
+			font-size: 11px;
 		}
 	}
 }
@@ -65,7 +94,34 @@
 
 /*  tablet
 **************************************************/
-@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
+@media only screen and (min-width: 721px) and (max-width: 960px) {
+	.pane-bundle-link-columns {
+		.columns-total-2  {
+			width: calc(50% - 3%);
+		}
+
+		.columns-total-3  {
+			width: calc(50% - 3%);
+		}
+
+		.columns-total-4  {
+			width: calc(50% - 3%);
+		}
+
+		.column  {
+			.entity-field-collection-item {
+				.column-link-container {
+					a {
+						margin: 0;
+					}
+
+					ul {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 }
 
 

@@ -3,10 +3,6 @@
 *   Rhino Hooton
 *   6/29/15
 /************************/
-panels-flexible-column
-panels-flexible-column-industry_template-content_left
-panels-flexible-column-first
-content-left
 
 /*  elements
 **************************************************/
@@ -21,27 +17,6 @@ content-left
 	.section,
 	.content {
 		padding: 0;
-
-		/* page headline & banner */
-		.top {
-			padding: 0;
-
-			display: none; // waiting to do banner
-
-			.top-banner {
-				.pane-title {
-				}
-
-				.pane-content {
-				}
-
-				.panel-separator {
-				}
-
-				.theme-banner-div {
-				}
-			}
-		}
 
 		/* core content wrapper */
 		.content-container {
@@ -85,45 +60,31 @@ content-left
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-#content {
-	.section,
-	.content {
-		.top {
-			.top-banner {
-				.pane-title {
-				}
+	#content {
+		.section,
+		.content {
+			/* core content wrapper */
+			.content-container {
+				background: $color-gray-light;
+				position: relative;
+				z-index: 5;
 
-				.pane-content {
-				}
+				.panels-flexible-column {
 
-				.panel-separator {
-				}
+					/* left nav */
+					&.content-left {
+						// overflow: hidden;
+						min-height: 54px;
+					}
 
-				.theme-banner-div {
-				}
-			}
-		}
-
-		/* core content wrapper */
-		.content-container {
-			background: $color-gray-light;
-
-			.panels-flexible-column {
-
-				/* left nav */
-				&.content-left {
-					// overflow: hidden;
-					min-height: 54px;
-				}
-
-				/* page body */
-				&.right-container {
-					// background: blue;
+					/* page body */
+					&.right-container {
+						// background: blue;
+					}
 				}
 			}
 		}
 	}
-}
 }
 
 

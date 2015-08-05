@@ -8,54 +8,74 @@
 /*  elements
 **************************************************/
 .pane-bundle-list-columns {
-	margin-top: 20px;
+	clear: both;
+	display: block;
+	margin: 0;
+	overflow: hidden;
 
 	h2 {
 		@extend %side-bar-header;
 	}
 
-	.pane-content {
-		.field-collection-container {
-			border: none;
+	.column-container {
+		border: none;
+		float: left;
+		height: 175px;
+		margin: 0 1.5% 20px;
+		padding: 0;
+		width: 17%;
+
+		.column-title {
+			font-size: 14px;
+			font-weight: 600;
+
+			a {
+				color: $color-black;
+				display: block;
+				margin-bottom: 5px;
+			}
+		}
+
+		.column-list {
 			margin: 0;
+			padding: 0;
 
-			.field-collection-view {
-				border: none;
-				margin: 0 0 20px;
-				padding: 0;
+			.column-list-item {
+				color: $color-black;
+				font-size: 11px;
+				list-style: none;
+				margin-bottom: 5px;
+				padding-left: 15px;
+				position: relative;
 
-				.field-name-field-title-link {
-					font-size: 14px;
-
-					a {
-						color: $color-black;
-						display: block;
-						margin-bottom: 5px;
-					}
+				&:before {
+					color: $color-leidos-purple-light;
+					content: '\2022';
+					display: block;
+					height: 10px;
+					left: 5px;
+					line-height: 10px;
+					position: absolute;
+					text-align: center;
+					top: calc(50% - 5px);
+					width: 5px;
 				}
+			}
+		}
 
-				.field-name-field-list-items {
-					.field-item {
-						color: $color-black;
-						font-size: 11px;
-						margin-bottom: 5px;
-						padding-left: 15px;
-						position: relative;
+		div {
+			a {
+				text-transform: capitalize;
+			}
+		}
 
-						&:before {
-							color: $color-leidos-purple-light;
-							content: '\2022';
-							display: block;
-							height: 10px;
-							left: 5px;
-							line-height: 10px;
-							position: absolute;
-							text-align: center;
-							top: calc(50% - 5px);
-							width: 5px;
-						}
-					}
-				}
+		@media only screen and (min-width: 961px) {
+			&:nth-child(5n - 4) {
+				clear: left;
+			}
+
+			&:nth-child(5n) {
+				clear: right;
 			}
 		}
 	}
@@ -63,11 +83,30 @@
 
 /*  tablet
 **************************************************/
-@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
+@media only screen and (min-width: 721px) and (max-width: 960px) {
+	.pane-bundle-list-columns {
+		.column-container {
+			width: 30%;
+
+			&:nth-child(3n - 2) {
+				clear: left;
+			}
+
+			&:nth-child(3n) {
+				clear: right;
+			}
+		}
+	}
 }
 
 
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
+	.pane-bundle-list-columns {
+		.column-container {
+			float: none;
+			width: 97%;
+		}
+	}
 }

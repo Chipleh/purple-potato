@@ -9,7 +9,10 @@
 **************************************************/
 .item-list {
 	.pager {
+		clear: both;
+		display: block;
 		margin: 0;
+		overflow: hidden;
 		padding: 0;
 
 		.pager-current {

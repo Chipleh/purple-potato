@@ -9,8 +9,11 @@
 **************************************************/
 .pane-bundle-page-header {
 	background: transparent url("../images/diagonal-repeat.png") repeat-x scroll left bottom;
+	clear: both;
+	display: block;
 	line-height: 24px;
-	margin: 20px 0;
+	margin: 0 0 20px;
+	overflow: hidden;
 	padding: 0 0 26px 0;
 
 	h2 {

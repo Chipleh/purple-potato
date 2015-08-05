@@ -9,7 +9,10 @@
 **************************************************/
 /* pane */
 .pane-projects-featured-projects-pane {
-	margin-top: 20px;
+	clear: both;
+	display: block;
+	margin: 0 0 20px;
+	overflow: hidden;
 
 	h2 {
 		@extend %side-bar-header;

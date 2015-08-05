@@ -1,0 +1,102 @@
+
+/*************************
+*   Verticies Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+
+
+/*  elements
+**************************************************/
+#content {
+	.top {
+		background: yellow;
+		padding: 40px 0 0 0;
+		pointer-events: none;
+		position: relative;
+		z-index: 3;
+
+		.panels-flexible-region-industry_template-top_banner-inside {
+
+			#theme-banner-div {
+				background: transparent url("../images/vertices-subPage.png") no-repeat scroll center center / 100% 200px;
+				display: block;
+				height: 200px;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+			.panel-separator {
+				display: none;
+			}
+
+			.pane-page-title { 
+				display: block;
+				height: 200px;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+
+				h1 {
+					@extend %max-width;
+					display: block;
+					height: 200px;
+					line-height: 110px;
+					padding: 0;
+					color: $color-white;
+				}
+			}
+		}
+	}
+}
+
+.no-vertices {
+	.panels-flexible-column.content-left,
+	.panels-flexible-column.right-container {
+		padding-top: 20px;
+	}
+}
+
+.has-vertices {
+	.panels-flexible-column.content-left,
+	.panels-flexible-column.right-container {
+		padding-top: 100px;
+	}
+}
+
+.has-vertices {
+	&.has-rotator {
+		.panels-flexible-column.content-left {
+			padding-top: 100px;
+		}
+
+		.panels-flexible-column.right-container {
+			padding-top: 0px;
+		}
+	}
+}
+
+/*  tablet
+**************************************************/
+@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
+	#content {
+		/* page headline & banner */
+		.top {
+			position: absolute;
+			top: 54px;
+			width: 100%;
+			z-index: 10;
+
+			display: none;
+		}
+	}
+}
+
+
+/*  mobile
+**************************************************/
+@media only screen and (max-width: 720px) {
+}

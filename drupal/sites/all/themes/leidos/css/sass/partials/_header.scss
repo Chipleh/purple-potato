@@ -12,7 +12,7 @@
 	background: $color-white;
 	height:unquote("calc(")$header-height unquote("+ 5px)"); // adjusted to compensate for the border
 	position: relative;
-	z-index: 10;
+	z-index: 20;
 
 	.section {
 		height:unquote("calc(")$header-height unquote("+ 5px)"); // adjusted to compensate for the border

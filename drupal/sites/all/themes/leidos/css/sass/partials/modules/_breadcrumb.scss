@@ -8,18 +8,26 @@
 
 /*  elements
 **************************************************/
-.field-name-field-breadcrumb-link {
-	.field-label {
-		display: none;
-	}
+.pane-bundle-custom-breadcrumbs {
+	clear: both;
+	display: block;
+	margin: 0 0 20px;
+	overflow: hidden;
+	padding: 0;
 
-	.field-items {
-		diplay: block;
-		overflow: hidden;
+	.breadcrumbs {
+		margin: 0;
+		padding: 0;
 
-		.field-item {
+		.breadcrumb {
 			float: left;
+			list-style: none;
 			margin-right: 10px;
+			padding: 0;
+
+			a {
+				font-size: 16px;
+			}
 		}
 	}
 }

@@ -90,7 +90,7 @@
 
 			.panels-flexible-column {
 				&.content-left {
-					width: 330px;
+					width: 240px;
 
 					.inside {
 						padding: 0;
@@ -99,8 +99,9 @@
 				} 
 
 				&.right-container {
+					// overflow: hidden;  commented for white right cover
 					float: right;
-					width: calc(100% - 330px);
+					width: calc(100% - 240px);
 
 					.panels-flexible-region {
 						.panels-flexible-region-inside {
@@ -113,7 +114,6 @@
 						}
 
 						&.optional-right-rail {
-							display: none;
 						}
 					}
 				}
@@ -126,6 +126,7 @@
 	}
 }
 
+.panels-ipe,
 .optional-right-rail {
 	#content {
 		.section,
@@ -135,6 +136,8 @@
 					&.right-container {
 						.panels-flexible-region {
 							&.right-rail {
+								border-right: 1px solid $color-gray-medium-light;
+								margin: 20px 0 0;
 								width: calc(100% - 330px);
 
 								.panels-flexible-region-inside {
@@ -143,9 +146,10 @@
 							}
 
 							&.optional-right-rail {
-								width: 270px;
+								width: 269px;
 								padding: 0 0 20px 20px;
 								display: block;
+								margin: 20px 0 0;
 							}
 						}
 					}
