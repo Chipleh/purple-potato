@@ -45,7 +45,6 @@ function leidos_process_html(&$variables) {
   }
 }
 
-
 /**
  * Override or insert variables into the page template.
  */
