@@ -54,6 +54,8 @@ function leidos_preprocess_page(&$variables) {
   if (isset($display->panels['optional_inner_right_rail'])) {
     $variables['classes_array'][] = 'optional-right-rail';
   }
+  // Add classes for vertices banner.
+  $variables['classes_array'][] = isset($display->panels['top_banner']) ? 'has-vertices' : 'no-vertices';
 }
 
 /**
