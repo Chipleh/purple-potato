@@ -85,6 +85,9 @@
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
 	.pane-bundle-list-columns {
+		margin-bottom: 20px;
+		// border-bottom: 1px solid $color-gray-medium-light;
+
 		.column-container {
 			width: 30%;
 
@@ -104,6 +107,8 @@
 **************************************************/
 @media only screen and (max-width: 720px) {
 	.pane-bundle-list-columns {
+	// border-bottom: 1px solid $color-gray-medium-light;
+
 		.column-container {
 			float: none;
 			width: 97%;

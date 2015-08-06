@@ -98,17 +98,13 @@
 		}
 	}
 
-	.no-vertices {
-		.panels-flexible-column.content-left,
-		.panels-flexible-column.right-container {
+	.has-vertices {
+		.panels-flexible-column.content-left {
 			padding-top: 0px;
 		}
-	}
 
-	.has-vertices {
-		.panels-flexible-column.content-left,
 		.panels-flexible-column.right-container {
-			padding-top: 0px;
+			padding-top: 170px;
 		}
 	}
 
@@ -119,7 +115,7 @@
 			}
 
 			.panels-flexible-column.right-container {
-				padding-top: 40px;
+				padding-top: 0px;
 			}
 		}
 	}
@@ -146,6 +142,16 @@
 					}
 				}
 			}
+		}
+	}
+
+	.has-vertices {
+		.panels-flexible-column.content-left {
+			padding-top: 0px;
+		}
+
+		.panels-flexible-column.right-container {
+			padding-top: 90px;
 		}
 	}
 
