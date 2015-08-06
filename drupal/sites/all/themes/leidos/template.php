@@ -217,28 +217,13 @@ function leidos_preprocess_field(&$variables) {
     // Render the rotator.
     $rotator = views_get_view('rotators');
     $rotator->set_display('rotator_pane');
-    $rotator->set_arguments(array(implode(',', $arguments)));
-    $rotator->set_items_per_page(count($arguments));
+    if (!empty($arguments)) {
+      $rotator->set_arguments(array(implode(',', $arguments)));
+      $rotator->set_items_per_page(count($arguments));
+    }
     $rotator->pre_execute();
     $rotator->execute();
     $variables['rotator'] = $rotator->render();
-  }
-  elseif ($variables['element']['#field_name'] == 'field_announcement') {
-    // Render the announcements view instead of the announcement nodes.
-    $arguments = array();
-    foreach ($variables['items'] as $item) {
-      $arguments[] = $item['#node']->nid;
-    }
-    // Render the announcements.
-    $announcements = views_get_view('announcements');
-    $announcements->set_display('featured_announcements_pane');
-    if (!empty($arguments)) {
-      $announcements->set_arguments(array(implode(',', $arguments)));
-      $announcements->set_items_per_page(count($arguments));
-    }
-    $announcements->pre_execute();
-    $announcements->execute();
-    $variables['announcements'] = $announcements->render();
   }
   elseif ($variables['element']['#field_name'] == 'field_project') {
     // Render the projects view instead of the project nodes.
@@ -256,6 +241,23 @@ function leidos_preprocess_field(&$variables) {
     $projects->pre_execute();
     $projects->execute();
     $variables['projects'] = $projects->render();
+  }
+  elseif ($variables['element']['#field_name'] == 'field_announcement') {
+    // Render the announcements view instead of the announcement nodes.
+    $arguments = array();
+    foreach ($variables['items'] as $item) {
+      $arguments[] = $item['#node']->nid;
+    }
+    // Render the announcements.
+    $announcements = views_get_view('announcements');
+    $announcements->set_display('featured_announcements_pane');
+    if (!empty($arguments)) {
+      $announcements->set_arguments(array(implode(',', $arguments)));
+      $announcements->set_items_per_page(count($arguments));
+    }
+    $announcements->pre_execute();
+    $announcements->execute();
+    $variables['announcements'] = $announcements->render();
   }
   elseif ($variables['element']['#field_name'] == 'field_breadcrumb_link') {
     // Add right arrow chevrons for breadcrumb links.
@@ -288,8 +290,28 @@ function leidos_preprocess_field(&$variables) {
  * Implements leidos_preprocess_panels_pane().
  */
 function leidos_preprocess_panels_pane(&$variables) {
-  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'featured_projects_panel') {
-    // Default announcement field to empty view for all announcements.
+  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'rotator') {
+    // Default rotator field to empty view for all slides.
+    if (!isset($variables['content']['field_rotator_slide'])) {
+      $variables['content']['field_rotator_slide'] = array(
+        '#theme' => 'field',
+        '#weight' => '2',
+        '#title' => 'Rotator slide',
+        '#access' => TRUE,
+        '#label_display' => 'hidden',
+        '#view_mode' => 'full',
+        '#language' => 'und',
+        '#field_name' => 'field_rotator_slide',
+        '#field_type' => 'node_reference',
+        '#field_translatable' => 0,
+        '#entity_type' => 'fieldable_panels_pane',
+        '#bundle' => 'rotator',
+        '#items' => array()
+      );
+    }
+  }
+  elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'featured_projects_panel') {
+    // Default announcement field to empty view for all projects.
     if (!isset($variables['content']['field_project'])) {
       $variables['content']['field_project'] = array(
         '#theme' => 'field',

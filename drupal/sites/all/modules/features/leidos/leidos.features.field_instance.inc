@@ -1031,7 +1031,7 @@ function leidos_field_default_field_instances() {
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_rotator_slide',
     'label' => 'Rotator slide',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
