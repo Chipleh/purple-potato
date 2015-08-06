@@ -96,19 +96,9 @@
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
 	.pane-bundle-link-columns {
-		.columns-total-2  {
-			width: calc(50% - 3%);
-		}
-
-		.columns-total-3  {
-			width: calc(50% - 3%);
-		}
-
-		.columns-total-4  {
-			width: calc(50% - 3%);
-		}
-
 		.column  {
+			width: calc(50% - 3%);
+
 			.entity-field-collection-item {
 				.column-link-container {
 					a {
@@ -128,4 +118,21 @@
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
+	.pane-bundle-link-columns {
+		.column  {
+			width: calc(100% - 3%);
+
+			.entity-field-collection-item {
+				.column-link-container {
+					a {
+						margin: 0;
+					}
+
+					ul {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 }
