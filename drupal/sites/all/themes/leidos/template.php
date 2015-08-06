@@ -223,6 +223,23 @@ function leidos_preprocess_field(&$variables) {
     $rotator->execute();
     $variables['rotator'] = $rotator->render();
   }
+  elseif ($variables['element']['#field_name'] == 'field_announcement') {
+    // Render the announcements instead of the announcement nodes.
+    $arguments = array();
+    foreach ($variables['items'] as $item) {
+      $arguments[] = $item['#node']->nid;
+    }
+    // Render the announcements.
+    $announcements = views_get_view('announcements');
+    $announcements->set_display('featured_announcements_pane');
+    if (!empty($arguments)) {
+      $announcements->set_arguments(array(implode(',', $arguments)));
+      $announcements->set_items_per_page(count($arguments));
+    }
+    $announcements->pre_execute();
+    $announcements->execute();
+    $variables['announcements'] = $announcements->render();
+  }
   elseif ($variables['element']['#field_name'] == 'field_breadcrumb_link') {
     // Add right arrow chevrons for breadcrumb links.
     $total_links = count($variables['items']);
@@ -245,6 +262,32 @@ function leidos_preprocess_field(&$variables) {
     foreach ($variables['items'] as $key => &$item) {
       $variables['items'][$key]['#attributes'] = array(
         'class' => array('column-section', 'column-section-' . $key)
+      );
+    }
+  }
+}
+
+/**
+ * Implements leidos_preprocess_panels_pane().
+ */
+function leidos_preprocess_panels_pane(&$variables) {
+  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'featured_news_panel') {
+    // Default announcement field to empty view for all announcements.
+    if (!isset($variables['content']['field_announcement'])) {
+      $variables['content']['field_announcement'] = array(
+        '#theme' => 'field',
+        '#weight' => '2',
+        '#title' => 'Announcement',
+        '#acces' => TRUE,
+        '#label_display' => 'hidden',
+        '#view_mode' => 'full',
+        '#language' => 'und',
+        '#field_name' => 'field_announcement',
+        '#field_type' => 'node_reference',
+        '#field_translatable' => '0',
+        '#entity_type' => 'fieldable_panels_pane',
+        '#bundle' => 'featured_news_panel',
+        '#items' => array()
       );
     }
   }
