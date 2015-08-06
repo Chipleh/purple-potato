@@ -549,7 +549,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Field: Main Image */
+  /* Field: Content: Main Image */
   $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
   $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
   $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
@@ -565,15 +565,15 @@ function leidos_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
-  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -647,14 +647,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '2';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Field: Main Image */
+  /* Field: Content: Main Image */
   $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
   $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
   $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
@@ -662,9 +655,16 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_main_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_main_image']['settings'] = array(
-    'image_style' => 'thumbnail',
+    'image_style' => 'project_small',
     'image_link' => '',
   );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -717,7 +717,7 @@ function leidos_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Full View Projects', 'full_view_projects_pane');
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Main Image */
+  /* Field: Content: Main Image */
   $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
   $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
   $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
@@ -817,7 +817,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['advance']['pager_selector'] = '.pager-load-more';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Main Image */
+  /* Field: Content: Main Image */
   $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
   $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
   $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';

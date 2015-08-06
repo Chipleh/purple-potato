@@ -224,7 +224,7 @@ function leidos_preprocess_field(&$variables) {
     $variables['rotator'] = $rotator->render();
   }
   elseif ($variables['element']['#field_name'] == 'field_announcement') {
-    // Render the announcements instead of the announcement nodes.
+    // Render the announcements view instead of the announcement nodes.
     $arguments = array();
     foreach ($variables['items'] as $item) {
       $arguments[] = $item['#node']->nid;
@@ -239,6 +239,23 @@ function leidos_preprocess_field(&$variables) {
     $announcements->pre_execute();
     $announcements->execute();
     $variables['announcements'] = $announcements->render();
+  }
+  elseif ($variables['element']['#field_name'] == 'field_project') {
+    // Render the projects view instead of the project nodes.
+    $arguments = array();
+    foreach ($variables['items'] as $item) {
+      $arguments[] = $item['#node']->nid;
+    }
+    // Render the announcements.
+    $projects = views_get_view('projects');
+    $projects->set_display('featured_projects_pane');
+    if (!empty($arguments)) {
+      $projects->set_arguments(array(implode(',', $arguments)));
+      $projects->set_items_per_page(count($arguments));
+    }
+    $projects->pre_execute();
+    $projects->execute();
+    $variables['projects'] = $projects->render();
   }
   elseif ($variables['element']['#field_name'] == 'field_breadcrumb_link') {
     // Add right arrow chevrons for breadcrumb links.
@@ -271,20 +288,40 @@ function leidos_preprocess_field(&$variables) {
  * Implements leidos_preprocess_panels_pane().
  */
 function leidos_preprocess_panels_pane(&$variables) {
-  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'featured_news_panel') {
+  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'featured_projects_panel') {
+    // Default announcement field to empty view for all announcements.
+    if (!isset($variables['content']['field_project'])) {
+      $variables['content']['field_project'] = array(
+        '#theme' => 'field',
+        '#weight' => '2',
+        '#title' => 'Project',
+        '#access' => TRUE,
+        '#label_display' => 'hidden',
+        '#view_mode' => 'full',
+        '#language' => 'und',
+        '#field_name' => 'field_project',
+        '#field_type' => 'node_reference',
+        '#field_translatable' => 0,
+        '#entity_type' => 'fieldable_panels_pane',
+        '#bundle' => 'featured_projects_panel',
+        '#items' => array()
+      );
+    }
+  }
+  elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'featured_news_panel') {
     // Default announcement field to empty view for all announcements.
     if (!isset($variables['content']['field_announcement'])) {
       $variables['content']['field_announcement'] = array(
         '#theme' => 'field',
         '#weight' => '2',
         '#title' => 'Announcement',
-        '#acces' => TRUE,
+        '#access' => TRUE,
         '#label_display' => 'hidden',
         '#view_mode' => 'full',
         '#language' => 'und',
         '#field_name' => 'field_announcement',
         '#field_type' => 'node_reference',
-        '#field_translatable' => '0',
+        '#field_translatable' => 0,
         '#entity_type' => 'fieldable_panels_pane',
         '#bundle' => 'featured_news_panel',
         '#items' => array()

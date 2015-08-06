@@ -463,91 +463,6 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_project_summary-field_main_image'
-  $field_instances['field_collection_item-field_project_summary-field_main_image'] = array(
-    'bundle' => 'field_project_summary',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'thumbnail',
-        ),
-        'type' => 'image',
-        'weight' => 1,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_main_image',
-    'label' => 'Main Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'media_generic',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-field_project_summary-field_project_item'
-  $field_instances['field_collection_item-field_project_summary-field_project_item'] = array(
-    'bundle' => 'field_project_summary',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'node_reference',
-        'settings' => array(),
-        'type' => 'node_reference_default',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_project_item',
-    'label' => 'Project Item',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance:
   // 'fieldable_panels_pane-content-field_freeform_html'
   $field_instances['fieldable_panels_pane-content-field_freeform_html'] = array(
     'bundle' => 'content',
@@ -770,8 +685,8 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-featured_projects_panel-field_project_summary'
-  $field_instances['fieldable_panels_pane-featured_projects_panel-field_project_summary'] = array(
+  // 'fieldable_panels_pane-featured_projects_panel-field_project'
+  $field_instances['fieldable_panels_pane-featured_projects_panel-field_project'] = array(
     'bundle' => 'featured_projects_panel',
     'default_value' => NULL,
     'deleted' => 0,
@@ -779,31 +694,84 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'node_reference',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => 1,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
+          'node_reference_view_mode' => 'teaser',
         ),
-        'type' => 'field_collection_view',
-        'weight' => 0,
+        'type' => 'node_reference_node',
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_project_summary',
-    'label' => 'Project Summary',
+    'field_name' => 'field_project',
+    'label' => 'Project',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
+      'module' => 'node_reference',
+      'settings' => array(
+        'autocomplete_match' => 'contains',
+        'autocomplete_path' => 'node_reference/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'node_reference_autocomplete',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'fieldable_panels_pane-featured_projects_panel-field_title_link'
+  $field_instances['fieldable_panels_pane-featured_projects_panel-field_title_link'] = array(
+    'bundle' => 'featured_projects_panel',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_title_link',
+    'label' => 'Title link',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
       'active' => 0,
-      'module' => 'field_collection',
+      'module' => 'link',
       'settings' => array(),
-      'type' => 'field_collection_embed',
+      'type' => 'link_field',
       'weight' => 2,
     ),
   );
@@ -3284,10 +3252,9 @@ function leidos_field_default_field_instances() {
   t('Point of Contact');
   t('Preview Image Hover Text');
   t('Private Tag');
+  t('Project');
   t('Project Date');
   t('Project Facts');
-  t('Project Item');
-  t('Project Summary');
   t('Project Value');
   t('Proof Point or Web Page Title');
   t('Quick Links');

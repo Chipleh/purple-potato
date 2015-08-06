@@ -1174,6 +1174,39 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_project'
+  $field_bases['field_project'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_project',
+    'indexes' => array(
+      'nid' => array(
+        0 => 'nid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'node_reference',
+    'settings' => array(
+      'referenceable_types' => array(
+        'announcement' => 0,
+        'article' => 0,
+        'page' => 0,
+        'panel' => 0,
+        'project' => 'project',
+        'rotator' => 0,
+      ),
+      'view' => array(
+        'args' => array(),
+        'display_name' => '',
+        'view_name' => '',
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'node_reference',
+  );
+
   // Exported field_base: 'field_project_date'
   $field_bases['field_project_date'] = array(
     'active' => 1,
@@ -1242,61 +1275,6 @@ function leidos_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'image',
-  );
-
-  // Exported field_base: 'field_project_item'
-  $field_bases['field_project_item'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_project_item',
-    'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'node_reference',
-    'settings' => array(
-      'referenceable_types' => array(
-        'announcement' => 0,
-        'article' => 0,
-        'page' => 0,
-        'panel' => 0,
-        'project' => 0,
-        'rotator' => 0,
-      ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => 'references',
-        'view_name' => 'projects',
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'node_reference',
-  );
-
-  // Exported field_base: 'field_project_summary'
-  $field_bases['field_project_summary'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_project_summary',
-    'indexes' => array(
-      'revision_id' => array(
-        0 => 'revision_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'field_collection',
-    'settings' => array(
-      'hide_blank_items' => 1,
-      'path' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'field_collection',
   );
 
   // Exported field_base: 'field_project_value'

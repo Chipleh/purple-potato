@@ -137,8 +137,9 @@ function leidos_field_group_info() {
     'label' => 'General Info',
     'weight' => '0',
     'children' => array(
-      0 => 'title',
-      1 => 'field_project_summary',
+      0 => 'field_project',
+      1 => 'title',
+      2 => 'field_title_link',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
