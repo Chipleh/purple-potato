@@ -43,7 +43,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Field: Field: Announcement Date */
+  /* Field: Content: Announcement Date */
   $handler->display->display_options['fields']['field_announcement_date']['id'] = 'field_announcement_date';
   $handler->display->display_options['fields']['field_announcement_date']['table'] = 'field_data_field_announcement_date';
   $handler->display->display_options['fields']['field_announcement_date']['field'] = 'field_announcement_date';
@@ -63,14 +63,14 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Field: External Link */
+  /* Field: Content: External Link */
   $handler->display->display_options['fields']['field_external_link']['id'] = 'field_external_link';
   $handler->display->display_options['fields']['field_external_link']['table'] = 'field_data_field_external_link';
   $handler->display->display_options['fields']['field_external_link']['field'] = 'field_external_link';
   $handler->display->display_options['fields']['field_external_link']['label'] = '';
   $handler->display->display_options['fields']['field_external_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_external_link']['click_sort_column'] = 'url';
-  /* Sort criterion: Field: Announcement Date (field_announcement_date) */
+  /* Sort criterion: Content: Announcement Date (field_announcement_date) */
   $handler->display->display_options['sorts']['field_announcement_date_value']['id'] = 'field_announcement_date_value';
   $handler->display->display_options['sorts']['field_announcement_date_value']['table'] = 'field_data_field_announcement_date';
   $handler->display->display_options['sorts']['field_announcement_date_value']['field'] = 'field_announcement_date_value';

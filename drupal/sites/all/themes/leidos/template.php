@@ -141,6 +141,12 @@ function leidos_preprocess_node(&$variables) {
   if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
     $variables['classes_array'][] = 'node-full';
   }
+  // External links for announcement title overrides on teaser view mode.
+  if ($variables['type'] == 'announcement' && $variables['view_mode'] == 'teaser') {
+    if (!empty($variables['node']->field_external_link[$variables['node']->language])) {
+      $variables['content']['title'][0]['#markup'] = l($variables['node']->title, $variables['node']->field_external_link[$variables['node']->language][0]['url']);
+    }
+  }
 }
 
 /**

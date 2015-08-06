@@ -108,8 +108,9 @@ function leidos_field_group_info() {
     'label' => 'General Info',
     'weight' => '0',
     'children' => array(
-      0 => 'field_announcement_summary',
+      0 => 'field_title_link',
       1 => 'title',
+      2 => 'field_announcement',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -291,6 +292,40 @@ function leidos_field_group_info() {
     ),
   );
   $export['group_general|fieldable_panels_pane|rotator|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_general|node|announcement|form';
+  $field_group->group_name = 'group_general';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'announcement';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Info',
+    'weight' => '0',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_industry',
+      2 => 'field_announcement_type',
+      3 => 'field_authors',
+      4 => 'field_announcement_date',
+      5 => 'field_external_link',
+      6 => 'field_contact_information',
+      7 => 'title',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-general field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_general|node|announcement|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
