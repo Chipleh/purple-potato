@@ -47,6 +47,21 @@ function leidos_views_api($module = NULL, $api = NULL) {
 function leidos_image_default_styles() {
   $styles = array();
 
+  // Exported image style: project_small.
+  $styles['project_small'] = array(
+    'label' => 'Project small',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 125,
+          'height' => 73,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: project_teaser.
   $styles['project_teaser'] = array(
     'label' => 'Project teaser',

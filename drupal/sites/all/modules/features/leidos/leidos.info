@@ -246,6 +246,7 @@ features[fieldable_panels_pane_type][] = page_header
 features[fieldable_panels_pane_type][] = rotator
 features[filter][] = filtered_html
 features[filter][] = full_html
+features[image][] = project_small
 features[image][] = project_teaser
 features[image][] = rotator
 features[menu_custom][] = main-menu
