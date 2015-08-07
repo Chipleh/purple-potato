@@ -733,12 +733,19 @@ hr {
   margin-bottom: 0px;
 }
 
-/* line 44, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* line 43, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+.node-teaser {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 49, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 .panels-flexible-industry_template-inside {
   position: relative;
 }
 
-/* line 49, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* line 54, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 .panel-flexible .panel-separator {
   padding: 0;
   margin: 0;
@@ -4803,7 +4810,7 @@ hr {
   }
   /* line 117, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_vertices.scss */
   .has-vertices.has-rotator .panels-flexible-column.right-container {
-    padding-top: 0px;
+    padding-top: 40px;
   }
 }
 /*  mobile
