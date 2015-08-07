@@ -79,12 +79,42 @@ function leidos_image_default_styles() {
 
   // Exported image style: rotator.
   $styles['rotator'] = array(
-    'label' => 'rotator',
+    'label' => 'Rotator desktop',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 990,
+          'height' => 274,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: rotator_mobile.
+  $styles['rotator_mobile'] = array(
+    'label' => 'Rotator mobile',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 720,
+          'height' => 274,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: rotator_tablet.
+  $styles['rotator_tablet'] = array(
+    'label' => 'Rotator tablet',
     'effects' => array(
       1 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 900,
+          'width' => 960,
           'height' => 274,
         ),
         'weight' => 1,
