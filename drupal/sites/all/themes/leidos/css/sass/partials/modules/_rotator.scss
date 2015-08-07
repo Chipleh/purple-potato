@@ -7,7 +7,8 @@
 
 /*  elements
 **************************************************/
-.pane-bundle-rotator {
+.pane-bundle-rotator,
+.optional-rotator {
 	float: none;
 	width: 100%;
 
@@ -36,7 +37,9 @@
 				overflow: hidden;
 				width: 100%;
 
-				.views-field-field-rotator-image {
+				.desktop-image,
+				.tablet-image,
+				.mobile-image {
 					height: 274px;
 					left: 0;
 					overflow: hidden;
@@ -44,10 +47,17 @@
 					top: 0;
 					width: 100%;
 					z-index: -1;
+					display: none;
 
 					img {
 						height: 274px;
 						width: 990px;
+					}
+				}
+
+				@media only screen and (max-width: 961px) {
+					.desktop-image {
+						display: block;
 					}
 				}
 
@@ -148,12 +158,16 @@
 
 /*  tablet
 **************************************************/
-@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
-	.panels-flexible-region-industry_template-optional_rotator,
+@media only screen and (min-width: 721px) and (max-width: 960px) {
+	.pane-bundle-rotator,
 	.optional_rotator {
 		.flexslider {
 			ul {
 				li {
+					.tablet-image {
+						display: block;
+					}
+
 					.views-field-title {
 						margin-top: 105px;
 
@@ -195,5 +209,48 @@
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
+	.pane-bundle-rotator,
+	.optional_rotator {
+		.flexslider {
+			ul {
+				li {
+					.mobile-image {
+						display: block;
+					}
 
+					.views-field-title {
+						margin-top: 105px;
+
+						a {
+							display: block;
+							margin-bottom: 10px;
+						}
+					}
+
+					.views-field-body {
+						display: none;
+					}
+
+					.views-field-field-rotator-link {
+						a {
+							text-align: center;
+							width: calc(100% - 20px);
+						}
+					}
+
+					.views-field-title,
+					.views-field-body,
+					.views-field-field-rotator-link {
+						margin-left: 20px;
+						width: calc(100% - 80px);
+					}
+				}
+			}
+
+			.flex-control-nav {
+				right: 0px;
+				text-align: center;
+			}
+		}
+	}
 }

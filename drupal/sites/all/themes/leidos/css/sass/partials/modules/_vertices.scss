@@ -89,9 +89,17 @@
 			width: 100%;
 
 			.panels-flexible-region-industry_template-top_banner-inside {
+				#theme-banner-div {
+					background: transparent url("../images/vertices-subPage.png") no-repeat scroll center center / 100% 100px;
+					height: 100px;
+				}
+
 				.pane-page-title { 
+					height: 40px;
+
 					h1 {
-						font-size: 25px;
+						height: 40px;
+						font-size: 16px;
 					}
 				}
 			}
@@ -115,7 +123,7 @@
 			}
 
 			.panels-flexible-column.right-container {
-				padding-top: 40px;
+				padding-top: 20px;
 			}
 		}
 	}
