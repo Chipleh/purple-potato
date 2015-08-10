@@ -21,6 +21,16 @@ function leidos_preprocess_html(&$variables) {
     $variables['classes_array'][] = 'footer-columns';
   }
 
+  // Add viewport meta tag.
+  $viewport = array(
+   '#tag' => 'meta',
+   '#attributes' => array(
+     'name' => 'viewport',
+     'content' => 'width=device-width, initial-scale=1',
+   ),
+  );
+  drupal_add_html_head($viewport, 'viewport');
+
   // Add conditional stylesheets for IE
   drupal_add_css(path_to_theme() . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
   drupal_add_css(path_to_theme() . '/css/ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 6', '!IE' => FALSE), 'preprocess' => FALSE));
