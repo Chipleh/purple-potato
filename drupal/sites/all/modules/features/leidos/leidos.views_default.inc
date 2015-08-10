@@ -33,7 +33,6 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = 'View All »';
   $handler->display->display_options['pager']['options']['tags']['first'] = '';
@@ -43,6 +42,13 @@ function leidos_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'There are no results matching the selected filters.';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Field: Content: Announcement Date */
   $handler->display->display_options['fields']['field_announcement_date']['id'] = 'field_announcement_date';
   $handler->display->display_options['fields']['field_announcement_date']['table'] = 'field_data_field_announcement_date';
@@ -108,7 +114,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['label'] = 'Keyword';
   $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
-  $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+  $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'search';
   $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -127,7 +133,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
+  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'category';
   $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -193,6 +199,7 @@ function leidos_views_default_views() {
   /* Display: Full View Announcements */
   $handler = $view->new_display('panel_pane', 'Full View Announcements', 'full_view_announcements_pane');
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Unfiltered text */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
@@ -220,7 +227,6 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['advance']['content_class'] = '.view-content';
   $handler->display->display_options['pager']['options']['advance']['pager_selector'] = '.pager-load-more';
@@ -528,6 +534,7 @@ function leidos_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -542,6 +549,13 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'There are no results matching the selected filters.';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -597,7 +611,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search';
   $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
-  $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+  $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'search';
   $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -614,7 +628,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Project Type';
   $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
+  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'type';
   $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -631,7 +645,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['field_market_tid']['expose']['operator_id'] = 'field_market_tid_op';
   $handler->display->display_options['filters']['field_market_tid']['expose']['label'] = 'Market';
   $handler->display->display_options['filters']['field_market_tid']['expose']['operator'] = 'field_market_tid_op';
-  $handler->display->display_options['filters']['field_market_tid']['expose']['identifier'] = 'field_market_tid';
+  $handler->display->display_options['filters']['field_market_tid']['expose']['identifier'] = 'market';
   $handler->display->display_options['filters']['field_market_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -943,55 +957,15 @@ function leidos_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Desktop image */
+  /* Field: Content: Rotator Image */
   $handler->display->display_options['fields']['field_rotator_image']['id'] = 'field_rotator_image';
   $handler->display->display_options['fields']['field_rotator_image']['table'] = 'field_data_field_rotator_image';
   $handler->display->display_options['fields']['field_rotator_image']['field'] = 'field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image']['ui_name'] = 'Desktop image';
   $handler->display->display_options['fields']['field_rotator_image']['label'] = '';
-  $handler->display->display_options['fields']['field_rotator_image']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_rotator_image']['element_class'] = 'desktop-image';
-  $handler->display->display_options['fields']['field_rotator_image']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_rotator_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rotator_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_rotator_image']['settings'] = array(
     'image_style' => 'rotator',
-    'image_link' => '',
-  );
-  /* Field: Tablet image */
-  $handler->display->display_options['fields']['field_rotator_image_1']['id'] = 'field_rotator_image_1';
-  $handler->display->display_options['fields']['field_rotator_image_1']['table'] = 'field_data_field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image_1']['field'] = 'field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image_1']['ui_name'] = 'Tablet image';
-  $handler->display->display_options['fields']['field_rotator_image_1']['label'] = '';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_class'] = 'tablet-image';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image_1']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_rotator_image_1']['settings'] = array(
-    'image_style' => 'rotator_tablet',
-    'image_link' => '',
-  );
-  /* Field: Mobile image */
-  $handler->display->display_options['fields']['field_rotator_image_2']['id'] = 'field_rotator_image_2';
-  $handler->display->display_options['fields']['field_rotator_image_2']['table'] = 'field_data_field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image_2']['field'] = 'field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image_2']['ui_name'] = 'Mobile image';
-  $handler->display->display_options['fields']['field_rotator_image_2']['label'] = '';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_class'] = 'mobile-image';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image_2']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_rotator_image_2']['settings'] = array(
-    'image_style' => 'rotator_mobile',
     'image_link' => '',
   );
   /* Field: Content: Hide Information Box */
