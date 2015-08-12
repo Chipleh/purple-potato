@@ -346,7 +346,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_taxonomy_image']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_taxonomy_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_taxonomy_image']['settings'] = array(
-    'image_style' => 'square_thumbnail',
+    'image_style' => 'capabilities',
     'image_link' => '',
   );
   /* Field: Taxonomy term: Hide Preview Box */
