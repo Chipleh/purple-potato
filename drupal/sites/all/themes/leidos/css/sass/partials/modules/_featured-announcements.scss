@@ -30,8 +30,8 @@
 			padding: 0 15px;
 		}
 
-		#edit-combine-wrapper,
-		#edit-tid-wrapper {
+		#edit-search-wrapper,
+		#edit-category-wrapper {
 			width: calc(50% - 45px);
 		}
 
@@ -39,8 +39,8 @@
 			width: 90px;
 		}
 
-		#edit-combine-wrapper,
-		#edit-tid-wrapper,
+		#edit-search-wrapper,
+		#edit-category-wrapper,
 		.views-submit-button {
 			float: left;
 			margin: 0;
@@ -189,14 +189,14 @@
 	.pane-announcements-full-view-announcements-pane,
 	.pane-announcements-full-view-announcements-pane-mobile {
 		.view-filters {
-			#edit-tid-wrapper {
+			#edit-category-wrapper {
 				display: block;
 				margin-bottom: 15px;
 				overflow: hidden;
 			}
 
-			#edit-combine-wrapper,
-			#edit-tid-wrapper,
+			#edit-search-wrapper,
+			#edit-category-wrapper,
 			.views-submit-button {
 				display: block;
 				float: none;

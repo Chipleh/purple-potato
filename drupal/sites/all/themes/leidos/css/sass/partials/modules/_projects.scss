@@ -22,17 +22,17 @@
 		background: $color-gray-light;
 		margin-bottom: 20px;
 		overflow: hidden;
-		padding: 20px 0;
+		padding: 10px 0 20px 0;
 
 		.views-exposed-widgets {
 			margin: 0;
 			padding: 0;
 		}
 
-		#edit-combine-wrapper,
-		#edit-tid-wrapper,
-		#edit-field-market-tid-wrapper {
-			margin: 0 15px 20px;
+		#edit-search-wrapper,
+		#edit-type-wrapper,
+		#edit-market-wrapper {
+			margin: 0 15px;
 			width: calc(29% - 30px);
 		}
 
@@ -40,9 +40,9 @@
 			width: 90px;
 		}
 
-		#edit-combine-wrapper,
-		#edit-tid-wrapper,
-		#edit-field-market-tid-wrapper {
+		#edit-search-wrapper,
+		#edit-type-wrapper,
+		#edit-market-wrapper {
 			float: left;
 			padding: 0;
 
@@ -235,7 +235,7 @@
 				&:nth-child(4n - 3),
 				&:nth-child(4n - 2) {
 					.hover-container {
-						right: -85%;
+						right: -100%;
 					}
 				}
 
@@ -243,7 +243,7 @@
 				&:nth-child(4n - 1),
 				&:nth-child(4n) {
 					.hover-container {
-						left: -85%;
+						left: -100%;
 					}
 				}
 			}
@@ -274,11 +274,11 @@
 }
 
 .pane-projects-full-view-projects-pane {
-	// display: block;
+	display: block;
 }
 
 .pane-projects-full-view-projects-pane-mobile {
-	// display: none;
+	display: none;
 }
 
 
@@ -289,15 +289,15 @@
 	.pane-projects-full-view-projects-pane,
 	.pane-projects-full-view-projects-pane-mobile {
 		.view-filters {
-			#edit-combine-wrapper,
-			#edit-tid-wrapper,
-			#edit-field-market-tid-wrapper {
+			#edit-search-wrapper,
+			#edit-type-wrapper,
+			#edit-market-wrapper {
 				width: calc(33.3% - 30px);
 			}
 
 			.views-submit-button {
 				float: right;
-				margin: 0 15px 0 0;
+				margin: 15px 15px 0 0;
 				padding: 0;
 			}
 		}
@@ -327,11 +327,11 @@
 	}
 
 	.pane-projects-full-view-projects-pane {
-		// display: none;
+		display: none;
 	}
 
 	.pane-projects-full-view-projects-pane-mobile {
-		// display: block;
+		display: block;
 	}
 }
 
@@ -343,9 +343,9 @@
 	.pane-projects-full-view-projects-pane,
 	.pane-projects-full-view-projects-pane-mobile {
 		.view-filters {
-			#edit-combine-wrapper,
-			#edit-tid-wrapper,
-			#edit-field-market-tid-wrapper {
+			#edit-search-wrapper,
+			#edit-type-wrapper,
+			#edit-market-wrapper {
 				display: block;
 				float: none;
 				margin: 0 15px;
@@ -353,7 +353,7 @@
 				width: calc(100% - 30px);
 			}
 
-			#edit-field-market-tid-wrapper {
+			#edit-market-wrapper {
 				margin: 0 15px 20px;
 			}
 
@@ -370,9 +370,9 @@
 
 		.view-content {
 			.views-row {
+				float: none;
 				height: 300px;
 				width: 97%;
-				float: none;
 
 				.hover-container {
 					display: none;
@@ -382,10 +382,10 @@
 	}
 
 	.pane-projects-full-view-projects-pane {
-		// display: none;
+		display: none;
 	}
 
 	.pane-projects-full-view-projects-pane-mobile {
-		// display: block;
+		display: block;
 	}
 }
