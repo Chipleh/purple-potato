@@ -33,7 +33,7 @@
 		#edit-tid-wrapper,
 		#edit-field-market-tid-wrapper {
 			margin: 0 15px 20px;
-			width: calc(33% - 30px);
+			width: calc(29% - 30px);
 		}
 
 		.views-submit-button {
@@ -89,7 +89,7 @@
 
 		.views-submit-button {
 			float: right;
-			margin-right: 15px;
+			margin: 32px 15px 0 0;
 			padding: 0;
 
 			input[type="submit"] {
@@ -132,7 +132,6 @@
 			.project-image {
 				a {
 					display: block;
-					margin-bottom: 15px;
 					overflow: hidden;
 
 					img {
@@ -146,24 +145,40 @@
 
 			.project-title {
 				display: block;
+				margin: 0;
 				max-height: 150px;
 				overflow: hidden;
-				margin: 0;
 
 				a {
-					font-size: 16px;
+					color: $color-leidos-purple-dark;
+					font-size: 12px;
 					font-weight: 600;
 				}
 			}
 
 			.hover-container {
 				background: $color-gray-light;
+				box-shadow: 0px 0px 3px $color-black;
 				opacity: 0;
+				padding: 10px;
 				position: absolute;
 				top: 20px;
 				transition: all .5s ease;
 				width: 175%;
 				z-index: 10;
+
+				&:after {
+					background: transparent url("../images/wedge.png") no-repeat scroll center center;
+					background-size: 20px 40px;
+					content: "";
+					height:40px;
+					position: absolute;
+					right: -20px;
+					top: 20px;
+					transition: all .5s ease;
+					width: 20px;
+					z-index: 1;
+				}
 
 				img {
 					background: $color-gray-light;
@@ -174,15 +189,25 @@
 
 				h4 {
 					margin: 0;
-					padding: 15px 20px;
+					padding: 5px 0;
+
+					a {
+						font-size: 12px;
+						font-weight: 600;
+					}
 				}
 
 				.hover-summary {
-					padding: 0 20px 15px;
+					font-size: 12px;
+					padding: 0;
+
+					p {
+						margin: 0;
+					}
 				}
 
 				.hover-cta {
-					padding: 0 20px 15px;
+					padding: 0 0 15px;
 				}
 			}
 
@@ -249,11 +274,11 @@
 }
 
 .pane-projects-full-view-projects-pane {
-	display: block;
+	// display: block;
 }
 
 .pane-projects-full-view-projects-pane-mobile {
-	display: none;
+	// display: none;
 }
 
 
@@ -263,6 +288,20 @@
 	.pane-projects,
 	.pane-projects-full-view-projects-pane,
 	.pane-projects-full-view-projects-pane-mobile {
+		.view-filters {
+			#edit-combine-wrapper,
+			#edit-tid-wrapper,
+			#edit-field-market-tid-wrapper {
+				width: calc(33.3% - 30px);
+			}
+
+			.views-submit-button {
+				float: right;
+				margin: 0 15px 0 0;
+				padding: 0;
+			}
+		}
+
 		.view-content {
 			.views-row {
 				height: 300px;
@@ -288,11 +327,11 @@
 	}
 
 	.pane-projects-full-view-projects-pane {
-		display: none;
+		// display: none;
 	}
 
 	.pane-projects-full-view-projects-pane-mobile {
-		display: block;
+		// display: block;
 	}
 }
 
@@ -343,10 +382,10 @@
 	}
 
 	.pane-projects-full-view-projects-pane {
-		display: none;
+		// display: none;
 	}
 
 	.pane-projects-full-view-projects-pane-mobile {
-		display: block;
+		// display: block;
 	}
 }
