@@ -52,6 +52,15 @@
 	}
 }
 
+/* clickable edit panel */
+#content {
+	.panels-ipe-editing {
+		.top {
+			pointer-events: inherent;
+		}
+	}
+}
+
 .no-vertices {
 	.panels-flexible-column.content-left,
 	.panels-flexible-column.right-container {
