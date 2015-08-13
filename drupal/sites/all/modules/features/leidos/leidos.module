@@ -14,6 +14,15 @@ function leidos_form_alter(&$form, &$form_state, $form_id) {
     // Hide some unnecessary fields that clutter the IPE user interface.
     $form['link']['#access'] = FALSE;
     $form['view_mode']['#access'] = FALSE;
+    // Custom "add another" button text for better clarity.
+    if ($form['#bundle'] == 'link_columns') {
+      $form['field_columns']['und']['add_more']['#value'] = t('Add another column');
+      foreach ($form['field_columns']['und'] as $key => &$column) {
+        if (isset($form['field_columns']['und'][$key]['field_column_links'])) {
+          $form['field_columns']['und'][$key]['field_column_links']['und']['add_more']['#value'] = t('Add another section');
+        }
+      }
+    }
   }
   elseif ($form_id == 'panels_panel_context_edit_choose') {
     // Set the default panel layout to Industry Template, remove other layouts.
