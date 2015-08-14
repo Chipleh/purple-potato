@@ -51,7 +51,7 @@ function leidos_field_default_field_instances() {
   $field_instances['field_collection_item-field_about_content_item-field_image'] = array(
     'bundle' => 'field_about_content_item',
     'deleted' => 0,
-    'description' => 'Recommended size: 244 x 244',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -72,11 +72,11 @@ function leidos_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => 'elements',
+      'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '2 MB',
-      'max_resolution' => '244x300',
-      'min_resolution' => '244x50',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3258,7 +3258,6 @@ function leidos_field_default_field_instances() {
   t('Project Value');
   t('Proof Point or Web Page Title');
   t('Quick Links');
-  t('Recommended size: 244 x 244');
   t('Recommended size: 900 x 274');
   t('Rotator Image');
   t('Rotator Link');
