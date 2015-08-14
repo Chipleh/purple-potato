@@ -14,11 +14,11 @@ function leidos_default_ctools_custom_content() {
   $content->disabled = FALSE; /* Edit this to true to make a default content disabled initially */
   $content->api_version = 1;
   $content->name = 'theme_banner';
-  $content->admin_title = 'Vertices';
+  $content->admin_title = 'Theme Banner';
   $content->admin_description = 'Banner that appears at the top of the page';
   $content->category = 'Optional Theme Elements';
   $content->settings = array(
-    'admin_title' => 'Vertices',
+    'admin_title' => 'Theme Banner',
     'title' => '',
     'body' => '<div id="theme-banner-div"></div>',
     'format' => 'full_html',
