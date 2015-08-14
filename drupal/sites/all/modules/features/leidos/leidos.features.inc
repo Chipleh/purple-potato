@@ -96,13 +96,21 @@ function leidos_image_default_styles() {
   $styles['rotator'] = array(
     'label' => 'Rotator desktop',
     'effects' => array(
-      3 => array(
-        'name' => 'image_scale_and_crop',
+      5 => array(
+        'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 990,
+          'width' => 900,
           'height' => 274,
+          'anchor' => 'center-center',
+          'disable_scale' => 0,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
   );
@@ -111,13 +119,21 @@ function leidos_image_default_styles() {
   $styles['rotator_mobile'] = array(
     'label' => 'Rotator mobile',
     'effects' => array(
-      2 => array(
-        'name' => 'image_scale_and_crop',
+      9 => array(
+        'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 720,
           'height' => 274,
+          'anchor' => 'center-center',
+          'disable_scale' => 0,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
   );
@@ -126,13 +142,21 @@ function leidos_image_default_styles() {
   $styles['rotator_tablet'] = array(
     'label' => 'Rotator tablet',
     'effects' => array(
-      1 => array(
-        'name' => 'image_scale_and_crop',
+      7 => array(
+        'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 960,
           'height' => 274,
+          'anchor' => 'center-center',
+          'disable_scale' => 0,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
   );

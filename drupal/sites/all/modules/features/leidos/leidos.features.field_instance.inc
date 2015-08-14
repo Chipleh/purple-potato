@@ -2689,6 +2689,13 @@ function leidos_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'rotator' => 'rotator',
+          'rotator_mobile' => 'rotator_mobile',
+          'rotator_tablet' => 'rotator_tablet',
+        ),
+      ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '2 MB',
