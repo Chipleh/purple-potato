@@ -184,9 +184,6 @@ function leidos_menu_tree($variables) {
   // Check for children menus and assign 'parent' or 'no-children'.
   $parent = (strpos($variables['tree'], '<ul')) ? 'parent-menu' : 'no-children';
   $tree = '<ul class="menu clearfix ' . $parent . '">' . $variables['tree'] . '</ul>';
-  if ($parent) {
-    $tree = '<span class="additional-control">Back</span><span class="additional-info"></span>' . $tree;
-  }
   return $tree;
 }
 
@@ -292,6 +289,13 @@ function leidos_preprocess_field(&$variables) {
       $variables['items'][$key]['#attributes'] = array(
         'class' => array('column-section', 'column-section-' . $key)
       );
+    }
+  }
+  elseif ($variables['element']['#field_name'] == 'field_menu') {
+    // Combine left navigation menu trees.
+    $variables['left_navigation'] = '';
+    foreach ($variables['items'] as $key => $item) {
+      $variables['left_navigation'] .= '<li>' . $item['#markup'] . '</li>';
     }
   }
 }
