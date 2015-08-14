@@ -225,6 +225,7 @@ features[field_instance][] = node-rotator-field_rotator_image
 features[field_instance][] = node-rotator-field_rotator_link
 features[field_instance][] = taxonomy_term-capabilities-field_color_scheme
 features[field_instance][] = taxonomy_term-capabilities-field_content
+features[field_instance][] = taxonomy_term-capabilities-field_cta
 features[field_instance][] = taxonomy_term-capabilities-field_featured_subcategories
 features[field_instance][] = taxonomy_term-capabilities-field_hide_hover
 features[field_instance][] = taxonomy_term-capabilities-field_hide_preview_box

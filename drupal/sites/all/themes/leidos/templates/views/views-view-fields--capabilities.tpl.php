@@ -23,7 +23,7 @@
       <span class="click-box-close"><a href="#">&nbsp;</a></span>
       <div class="click-box-summary"><?php print $fields['field_short_summary']->content; ?></div>
       <div class="click-box-subcategories"><?php print $fields['field_preview_image_hover_text']->content; ?></div>
-      <span class="click-box-services"><?php print l(t('Visit services'), 'taxonomy/term/' . $fields['tid']->raw); ?></span>
+      <span class="click-box-services"><?php print $fields['field_cta']->content; ?></span>
     </div>
   </div>
 </div>

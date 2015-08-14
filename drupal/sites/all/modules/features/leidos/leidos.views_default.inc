@@ -402,6 +402,17 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['tid']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['tid']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['tid']['separator'] = '';
+  /* Field: Field: CTA */
+  $handler->display->display_options['fields']['field_cta']['id'] = 'field_cta';
+  $handler->display->display_options['fields']['field_cta']['table'] = 'field_data_field_cta';
+  $handler->display->display_options['fields']['field_cta']['field'] = 'field_cta';
+  $handler->display->display_options['fields']['field_cta']['label'] = '';
+  $handler->display->display_options['fields']['field_cta']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_cta']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_cta']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_cta']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_cta']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_cta']['click_sort_column'] = 'url';
   /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
