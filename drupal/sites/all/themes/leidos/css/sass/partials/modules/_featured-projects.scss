@@ -83,6 +83,39 @@
 	}
 }
 
+/* right rail */
+.optional-right-rail {
+	.pane-bundle-featured-projects-panel {
+		margin-top: 20px;
+
+		h2 {
+			@extend %side-bar-header;
+		}
+
+		.pane-content {
+			.views-row  {
+				border: none;
+				margin: 0;
+				padding: 0;
+
+				.views-field-title {
+					float: right;
+					font-size: 11px;
+					font-weight: bold;
+					width: calc(100% - 145px);
+				}
+
+				.views-field-field-main-image { 
+					background: $color-gray-light;
+					float: left;
+					height: 73px;
+					width: 125px;
+				}
+			}
+		}
+	}
+}
+
 
 /*  tablet
 **************************************************/
