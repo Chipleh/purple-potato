@@ -968,7 +968,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Rotator Image */
+  /* Field: Desktop image */
   $handler->display->display_options['fields']['field_rotator_image']['id'] = 'field_rotator_image';
   $handler->display->display_options['fields']['field_rotator_image']['table'] = 'field_data_field_rotator_image';
   $handler->display->display_options['fields']['field_rotator_image']['field'] = 'field_rotator_image';
@@ -978,6 +978,8 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_rotator_image']['element_class'] = 'desktop-image';
   $handler->display->display_options['fields']['field_rotator_image']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_rotator_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_rotator_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_rotator_image']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rotator_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_rotator_image']['settings'] = array(
     'image_style' => 'rotator',
