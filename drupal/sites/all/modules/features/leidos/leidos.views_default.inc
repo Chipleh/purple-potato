@@ -196,8 +196,8 @@ function leidos_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'references_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
 
-  /* Display: Full View Announcements */
-  $handler = $view->new_display('panel_pane', 'Full View Announcements', 'full_view_announcements_pane');
+  /* Display: Announcements */
+  $handler = $view->new_display('panel_pane', 'Announcements', 'full_view_announcements_pane');
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
@@ -219,8 +219,8 @@ function leidos_views_default_views() {
   );
   $handler->display->display_options['inherit_panels_path'] = '1';
 
-  /* Display: Full View Announcements - Mobile */
-  $handler = $view->new_display('panel_pane', 'Full View Announcements - Mobile', 'full_view_announcements_pane_mobile');
+  /* Display: Announcements - Mobile */
+  $handler = $view->new_display('panel_pane', 'Announcements - Mobile', 'full_view_announcements_pane_mobile');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'load_more';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
@@ -738,8 +738,8 @@ function leidos_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'references_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
 
-  /* Display: Full View Projects */
-  $handler = $view->new_display('panel_pane', 'Full View Projects', 'full_view_projects_pane');
+  /* Display: Projects */
+  $handler = $view->new_display('panel_pane', 'Projects', 'full_view_projects_pane');
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Main Image */
@@ -826,8 +826,8 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   $handler->display->display_options['inherit_panels_path'] = '1';
 
-  /* Display: Full View Projects - Mobile */
-  $handler = $view->new_display('panel_pane', 'Full View Projects - Mobile', 'full_view_projects_pane_mobile');
+  /* Display: Projects - Mobile */
+  $handler = $view->new_display('panel_pane', 'Projects - Mobile', 'full_view_projects_pane_mobile');
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
