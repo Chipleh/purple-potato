@@ -38,3 +38,25 @@ function leidos_form_alter(&$form, &$form_state, $form_id) {
     unset($form['reusable']);
   }
 }
+
+/**
+ * Implements of hook_views_pre_render().
+ */
+function leidos_views_pre_render(&$view) {
+  // Re-order rotator slides based on specific order set in the panel.
+  if ($view->name == 'rotators' && !empty($view->args)) {
+    $slides = explode(',', $view->args[0]);
+    $slide_count = 0;
+    $results = array();
+    while ($slide_count < count($slides)) {
+      foreach ($view->result as $key => &$result) {
+        // Make sure the slide is the correct item for this slot in the order.
+        if (isset($slides[$slide_count]) && $result->nid == $slides[$slide_count]) {
+          $results[$slide_count] = $result;
+          $slide_count++;
+        }
+      }
+    }
+    $view->result = $results;
+  }
+}
