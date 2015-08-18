@@ -60,12 +60,13 @@ function leidos_process_html(&$variables) {
  */
 function leidos_preprocess_page(&$variables) {
   $display = panels_get_current_page_display();
-  if (isset($display->panels['optional_inner_right_rail'])) {
-    $variables['classes_array'][] = 'optional-right-rail';
+  if (isset($display->panels)) {
+    // Add classes for vertices banner.
+    $variables['classes_array'][] = isset($display->panels['top_banner']) ? 'has-vertices' : 'no-vertices';
+    $variables['classes_array'][] = isset($display->panels['left_rail']) ? 'has-left-nav' : 'no-left-nav';
+    $variables['classes_array'][] = isset($display->panels['optional_rotator']) ? 'has-rotator' : 'no-rotator';
+    $variables['classes_array'][] = isset($display->panels['optional_inner_right_rail']) ? 'optional-right-rail' : 'no-optional-right-rail';
   }
-  // Add classes for vertices banner.
-  $variables['classes_array'][] = isset($display->panels['top_banner']) ? 'has-vertices' : 'no-vertices';
-  $variables['classes_array'][] = isset($display->panels['optional_rotator']) ? 'has-rotator' : 'no-rotator';
 }
 
 /**
