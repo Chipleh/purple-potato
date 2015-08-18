@@ -38,7 +38,7 @@ function panels_curator_preprocess_panels_add_content_modal(&$vars) {
         $category = variable_get('panels_curator_' . $key, '');
         $category = unserialize($category);
         if (!empty($regions) && !in_array($vars['region'], $regions)) {
-        // Limit category groups to specific regions.
+          // Limit category groups to specific regions.
           continue;
         }
         elseif (!empty($category['content']) && $key != 'disabled') {
