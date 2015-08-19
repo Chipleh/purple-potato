@@ -185,6 +185,10 @@ function leidos_menu_tree($variables) {
   // Check for children menus and assign 'parent' or 'no-children'.
   $parent = (strpos($variables['tree'], '<ul')) ? 'parent-menu' : 'no-children';
   $tree = '<ul class="menu clearfix ' . $parent . '">' . $variables['tree'] . '</ul>';
+  // Do not add back button around the 'Left navigation' panel output.
+  if ($parent && $variables['theme_hook_original'] != 'menu_tree__menu_left_navigation') {
+    $tree = '<span class="additional-control">' . t('Back') . '</span><span class="additional-info"></span>' . $tree;
+  }
   return $tree;
 }
 
