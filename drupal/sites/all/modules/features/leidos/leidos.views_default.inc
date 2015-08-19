@@ -1024,27 +1024,56 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_hide_information_box']['table'] = 'field_data_field_hide_information_box';
   $handler->display->display_options['fields']['field_hide_information_box']['field'] = 'field_hide_information_box';
   $handler->display->display_options['fields']['field_hide_information_box']['label'] = '';
+  $handler->display->display_options['fields']['field_hide_information_box']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_hide_information_box']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Field: Content: Rotator Link */
   $handler->display->display_options['fields']['field_rotator_link']['id'] = 'field_rotator_link';
   $handler->display->display_options['fields']['field_rotator_link']['table'] = 'field_data_field_rotator_link';
   $handler->display->display_options['fields']['field_rotator_link']['field'] = 'field_rotator_link';
   $handler->display->display_options['fields']['field_rotator_link']['label'] = '';
+  $handler->display->display_options['fields']['field_rotator_link']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_rotator_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_rotator_link']['click_sort_column'] = 'url';
+  /* Field: Rotator content */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Rotator content';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="views-field views-field-field-hide-information-box">
+  <div class="field-content">[field_hide_information_box]</div>
+</div>
+<div class="views-field views-field-title">
+  <span class="field-content">[title]</span>
+</div>
+<div class="views-field views-field-body">
+  <div class="field-content">[body]</div>
+</div>
+<div class="views-field views-field-field-rotator-link">
+  <div class="field-content">[field_rotator_link]</div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
+  $handler->display->display_options['fields']['nothing']['element_class'] = 'rotator-content';
+  $handler->display->display_options['fields']['nothing']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
