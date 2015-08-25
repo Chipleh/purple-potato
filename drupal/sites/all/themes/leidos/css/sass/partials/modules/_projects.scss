@@ -173,7 +173,6 @@
 					content: "";
 					height:40px;
 					position: absolute;
-					right: -20px;
 					top: 20px;
 					transition: all .5s ease;
 					width: 20px;
@@ -235,7 +234,12 @@
 				&:nth-child(4n - 3),
 				&:nth-child(4n - 2) {
 					.hover-container {
-						right: -100%;
+						right: -175%;
+
+						&:after {
+							left: -20px;
+							transform: rotate(-180deg);
+						}
 					}
 				}
 
@@ -243,7 +247,11 @@
 				&:nth-child(4n - 1),
 				&:nth-child(4n) {
 					.hover-container {
-						left: -100%;
+						left: -175%;
+
+						&:after {
+							right: -20px;
+						}
 					}
 				}
 			}
@@ -315,6 +323,11 @@
 					/* first box */
 					&:nth-child(2n - 1) {
 						clear: left;
+
+						&:after {
+							left: -20px;
+							transform: rotate(-180deg);
+						}
 					}
 
 					/* last box */
