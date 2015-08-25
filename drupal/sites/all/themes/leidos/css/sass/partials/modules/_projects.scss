@@ -33,7 +33,22 @@
 		#edit-type-wrapper,
 		#edit-market-wrapper {
 			margin: 0 15px;
-			width: calc(29% - 30px);
+		}
+
+		@media only screen and (min-width: 1090px) {
+			#edit-search-wrapper,
+			#edit-type-wrapper,
+			#edit-market-wrapper {
+				width: calc(29% - 30px);
+			}
+		}
+
+		@media only screen and (min-width: 961px) and (max-width: 1089px) {
+			#edit-search-wrapper,
+			#edit-type-wrapper,
+			#edit-market-wrapper {
+				width: calc(29% - 36px);
+			}
 		}
 
 		.views-submit-button {
@@ -148,6 +163,7 @@
 				margin: 0;
 				max-height: 150px;
 				overflow: hidden;
+				line-height: 14px;
 
 				a {
 					color: $color-leidos-purple-dark;
