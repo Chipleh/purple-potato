@@ -303,7 +303,7 @@ function leidos_field_default_field_instances() {
     'bundle' => 'field_columns_list',
     'default_value' => array(
       0 => array(
-        'title' => 'Learn more',
+        'title' => 'Learn more »',
         'url' => '<front>',
       ),
     ),
