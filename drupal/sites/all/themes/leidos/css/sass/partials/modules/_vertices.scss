@@ -8,15 +8,14 @@
 
 /*  elements
 **************************************************/
+/* shared */
 #content {
 	.top {
-		padding: 40px 0 0 0;
 		pointer-events: none;
 		position: relative;
 		z-index: 5;
 
 		.panels-flexible-region-industry_template-top_banner-inside {
-
 			#theme-banner-div {
 				background: transparent url("../images/vertices-subPage.png") no-repeat scroll center center / 100% 200px;
 				display: block;
@@ -41,7 +40,6 @@
 
 				h1 {
 					@extend %max-width;
-					color: $color-white;
 					display: table-cell;
 					height: 100px;
 					padding: 0 0 0 20px;
@@ -52,30 +50,61 @@
 	}
 }
 
-/* clickable edit panel */
-#content {
-	.panels-ipe-editing {
+
+/* no vertices */
+.no-vertices {
+	#content {
 		.top {
-			pointer-events: inherent;
+			padding: 0;
+
+			.panels-flexible-region-industry_template-top_banner-inside {
+				.pane-page-title {
+					margin-left: calc(50% - 375px);
+
+					h1 {
+						color: $color-leidos-purple-dark;
+					}
+				}
+			}
+		}
+
+		.panels-flexible-column.content-left,
+		.panels-flexible-column.right-container {
+			padding-top: 100px;
 		}
 	}
-}
 
-.no-vertices {
-	.panels-flexible-column.content-left,
-	.panels-flexible-column.right-container {
-		padding-top: 20px;
+	&.no-title {
+		#content {
+			.panels-flexible-column.content-left,
+			.panels-flexible-column.right-container {
+				padding-top: 0px;
+			}
+		}		
 	}
 }
 
+/* vertices */
 .has-vertices {
-	.panels-flexible-column.content-left,
-	.panels-flexible-column.right-container {
-		padding-top: 100px;
-	}
-}
+	#content {
+		.top {
+			padding: 40px 0 0 0;
 
-.has-vertices {
+			.panels-flexible-region-industry_template-top_banner-inside {
+				.pane-page-title { 
+					h1 {
+						color: $color-white;
+					}
+				}
+			}
+		}
+
+		.panels-flexible-column.content-left,
+		.panels-flexible-column.right-container {
+			padding-top: 100px;
+		}
+	}
+
 	&.has-rotator {
 		.panels-flexible-column.content-left {
 			padding-top: 100px;
@@ -86,6 +115,17 @@
 		}
 	}
 }
+
+
+/* clickable edit panel */
+#content {
+	.panels-ipe-editing {
+		.top {
+			pointer-events: inherent;
+		}
+	}
+}
+
 
 /*  tablet
 **************************************************/
