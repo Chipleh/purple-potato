@@ -309,12 +309,12 @@ function leidos_preprocess_field(&$variables) {
       );
     }
   }
-  elseif ($variables['element']['#field_name'] == 'field_menu') {
-    // Combine left navigation menu trees.
-    $variables['left_navigation'] = '';
-    foreach ($variables['items'] as $key => $item) {
-      $variables['left_navigation'] .= '<li>' . $item['#markup'] . '</li>';
-    }
+  elseif ($variables['element']['#field_name'] == 'field_left_menu') {
+    $variables['items'][0]['#markup'] = '
+    <h2 class="pane-title"></h2>
+    <div class="pane-content">' .
+      $variables['items'][0]['#markup'] .
+    '</div>';
   }
 }
 
