@@ -126,6 +126,25 @@
 				}
 			}
 
+			.image-box {
+				display: block;
+				height: 240px;
+				overflow: hidden;
+				width: 100%;
+
+				img {
+					height: auto;
+					width: 100%;
+				}
+
+				@media only screen and (min-width: 961px) and (max-width: 1078px) {
+					img {
+						width: auto;
+						height: 100%;
+					}
+				}
+			}
+
 			.slide-box-content {
 				cursor: pointer;
 				display: block;
@@ -454,19 +473,15 @@
 @media only screen and (max-width: 720px) {
 	.pane-capabilities {
 		.sliding-box {
-			width: 97%;
-			float: none;
 			clear: both;
+			float: none;
+			margin-bottom: 20px;
+			width: 97%;
 
 			/* core box inner container */
 			.inner {
 				.slide-box-content {
 					display: none;
-
-					.slide-box-content-bg {
-						// top: -200px;
-						// width: 560px;
-					}
 				}
 			}
 
@@ -496,17 +511,6 @@
 					.click-box-services {
 						a {
 							width: calc(100% - 20px);
-						}
-					}
-				}
-			}
-
-			/* hover state */
-			&.hover {
-				.slide-box-content {
-					&.full-square {
-						.slide-box-content-bg {
-							// top: -60px;
 						}
 					}
 				}
