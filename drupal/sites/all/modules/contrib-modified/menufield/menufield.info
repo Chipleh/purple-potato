@@ -1,0 +1,10 @@
+name = Menu Field
+description = Implements a reference to a menu as a field.
+core = 7.x
+package = Fields
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "menufield"
+datestamp = "1380586728"
+
