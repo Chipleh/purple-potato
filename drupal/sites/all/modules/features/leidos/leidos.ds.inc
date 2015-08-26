@@ -774,11 +774,11 @@ function leidos_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_menu',
+        0 => 'field_left_menu',
       ),
     ),
     'fields' => array(
-      'field_menu' => 'ds_content',
+      'field_left_menu' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -789,6 +789,7 @@ function leidos_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'hide_sidebars' => 0,
   );
   $export['fieldable_panels_pane|left_navigation|default'] = $ds_layout;
 
@@ -802,11 +803,11 @@ function leidos_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_menu',
+        0 => 'field_left_menu',
       ),
     ),
     'fields' => array(
-      'field_menu' => 'ds_content',
+      'field_left_menu' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -817,6 +818,7 @@ function leidos_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'hide_sidebars' => 0,
   );
   $export['fieldable_panels_pane|left_navigation|full'] = $ds_layout;
 

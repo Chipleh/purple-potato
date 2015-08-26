@@ -776,8 +776,9 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-left_navigation-field_menu'
-  $field_instances['fieldable_panels_pane-left_navigation-field_menu'] = array(
+  // Exported field_instance:
+  // 'fieldable_panels_pane-left_navigation-field_left_menu'
+  $field_instances['fieldable_panels_pane-left_navigation-field_left_menu'] = array(
     'bundle' => 'left_navigation',
     'default_value' => NULL,
     'deleted' => 0,
@@ -785,27 +786,22 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'menu_reference',
-        'settings' => array(
-          'link' => 1,
-          'tree' => 1,
-        ),
-        'type' => 'menu_reference_links',
+        'module' => 'menufield',
+        'settings' => array(),
+        'type' => 'menufield_menuitems',
         'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'menu_reference',
-        'settings' => array(
-          'link' => 1,
-          'tree' => 1,
-        ),
-        'type' => 'menu_reference_links',
+        'module' => 'menufield',
+        'settings' => array(),
+        'type' => 'menufield_menuitems',
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_menu',
+    'field_name' => 'field_left_menu',
     'label' => 'Menu',
     'required' => 1,
     'settings' => array(
@@ -813,9 +809,9 @@ function leidos_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'menu_reference',
+      'module' => 'menufield',
       'settings' => array(),
-      'type' => 'menu_reference_select',
+      'type' => 'menufield_select',
       'weight' => 2,
     ),
   );

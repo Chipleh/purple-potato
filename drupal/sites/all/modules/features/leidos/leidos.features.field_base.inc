@@ -926,6 +926,25 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_left_menu'
+  $field_bases['field_left_menu'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_left_menu',
+    'indexes' => array(
+      'menureference' => array(
+        0 => 'menureference',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'menufield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'menufield_menureference',
+  );
+
   // Exported field_base: 'field_link'
   $field_bases['field_link'] = array(
     'active' => 1,
@@ -1041,36 +1060,6 @@ function leidos_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
-  );
-
-  // Exported field_base: 'field_menu'
-  $field_bases['field_menu'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_menu',
-    'indexes' => array(
-      'mlid' => array(
-        0 => 'mlid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'menu_reference',
-    'settings' => array(
-      'allowed_menus' => array(
-        'devel' => 0,
-        'features' => 0,
-        'main-menu' => 0,
-        'management' => 0,
-        'menu-left-navigation' => 'menu-left-navigation',
-        'navigation' => 0,
-        'user-menu' => 0,
-      ),
-      'language_visibility' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'menu_reference_link',
   );
 
   // Exported field_base: 'field_overview'

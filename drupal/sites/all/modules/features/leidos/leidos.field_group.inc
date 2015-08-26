@@ -168,6 +168,7 @@ function leidos_field_group_info() {
     'children' => array(
       0 => 'field_menu',
       1 => 'title',
+      2 => 'field_left_menu',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
