@@ -62,7 +62,7 @@ function leidos_preprocess_page(&$variables) {
   $display = panels_get_current_page_display();
   if (isset($display->panels)) {
     $vertices = 'no-vertices';
-    $has_title = 'no-title';
+    $title_class = 'no-title';
     // Add classes for vertices banner.
     if (isset($display->panels['top_banner'])) {
       foreach ($display->panels['top_banner'] as $pane) {
@@ -70,12 +70,18 @@ function leidos_preprocess_page(&$variables) {
           $vertices = 'has-vertices';
         }
         if (isset($display->content[$pane]->subtype) && $display->content[$pane]->subtype == 'page_title') {
-          $has_title = 'has-title';
+          $title_class = 'has-title';
+          if (!empty($display->content[$pane]->configuration['override_title'])) {
+            $title_class = 'has-title title-override';
+          }
+          else {
+            dpm($display->content[$pane]);
+          }
         }
       }
     }
     $variables['classes_array'][] = $vertices;
-    $variables['classes_array'][] = $has_title;
+    $variables['classes_array'][] = $title_class;
     $variables['classes_array'][] = isset($display->panels['left_rail']) ? 'has-left-nav' : 'no-left-nav';
     $variables['classes_array'][] = isset($display->panels['optional_rotator']) ? 'has-rotator' : 'no-rotator';
     $variables['classes_array'][] = isset($display->panels['optional_inner_right_rail']) ? 'optional-right-rail' : 'no-optional-right-rail';

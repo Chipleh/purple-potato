@@ -33,6 +33,13 @@ function leidos_form_alter(&$form, &$form_state, $form_id) {
     unset($form['categories']['#options']['Columns-2']);
     unset($form['categories']['#options']['Columns-3']);
   }
+  elseif ($form_id == 'ctools_page_title_content_type_edit_form') {
+    // Only allow h1 tags for override titles.
+    $form['override_title_heading']['#default_value'] = 'h1';
+    $form['override_title_heading']['#options'] = array(
+      'h1' => 'h1',
+    );
+  }
   if (isset($form['reusable'])) {
     // Remove reusability from panels.
     unset($form['reusable']);
