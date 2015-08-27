@@ -74,9 +74,6 @@ function leidos_preprocess_page(&$variables) {
           if (!empty($display->content[$pane]->configuration['override_title'])) {
             $title_class = 'has-title title-override';
           }
-          else {
-            dpm($display->content[$pane]);
-          }
         }
       }
     }

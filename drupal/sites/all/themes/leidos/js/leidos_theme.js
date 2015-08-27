@@ -41,6 +41,8 @@ jQuery(document).ready(function($) {
       $('#custom-view-all-link').remove();
     }
   }
+  // Add an id to the first ul item in the left navigation section.
+  $('.content-left ul.menu').first().attr('id', 'left-nav-menu');
 
 });  
 
