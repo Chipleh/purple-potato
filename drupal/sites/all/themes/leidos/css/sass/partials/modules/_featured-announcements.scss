@@ -160,6 +160,25 @@
 	}
 }
 
+.right-rail {
+	.pane-announcements-featured-announcements-pane,
+	.pane-announcements-full-view-announcements-pane,
+	.pane-announcements-full-view-announcements-pane-mobile {
+		.view-content {
+			.views-row {
+				.date-display-single {
+					font-size: 13px;
+					color: $color-leidos-purple-dark;
+				}
+
+				a {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}
+
 .pane-announcements-full-view-announcements-pane {
 	display: block;
 }

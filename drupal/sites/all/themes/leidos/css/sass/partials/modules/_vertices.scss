@@ -121,6 +121,23 @@
 	}
 }
 
+/* title override */
+.title-override {
+	#content {
+		/* page headline & banner */
+		.top {
+			.panels-flexible-region-industry_template-top_banner-inside {
+				.pane-page-title {
+					.pane-content {
+						h1 {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 /* clickable edit panel */
 #content {
