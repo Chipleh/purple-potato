@@ -33,7 +33,7 @@
 			.pane-page-title { 
 				display: table;
 				height: 100px;
-				left: 0;
+				margin-left: calc(50% - 568px);
 				position: absolute;
 				top: 0;
 				width: 50%;
@@ -150,6 +150,7 @@
 
 				.pane-page-title { 
 					height: 40px;
+					margin-left: 20px;
 
 					h1 {
 						height: 40px;
@@ -200,6 +201,7 @@
 
 				.pane-page-title { 
 					height: 40px;
+					margin-left: 20px;
 					margin-top: 2px;
 
 					h1 {
