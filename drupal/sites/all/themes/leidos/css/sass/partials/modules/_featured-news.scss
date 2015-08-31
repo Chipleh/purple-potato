@@ -17,32 +17,22 @@
 		@extend %side-bar-header;
 	}
 
-	.field-collection-container {
-		border: none;
-		margin: 0px;
+	.view-content {
+		.views-row {
+			border: none;
+			margin: 0 0 20px 0;
+			padding: 0;
+			line-height: 14px;
 
-		.field-items {
-			.field-item {
+			.date-display-single {
+				color: $color-gray-dark;
 				display: block;
-				margin: 0;
-				overflow: hidden;
+				font-size: 11px;
+			}
 
-				.field-collection-view {
-					border: none;
-					margin: 0 0 20px 0;
-					padding: 0;
-
-					.date-display-single {
-						color: $color-gray-dark;
-						display: block;
-						font-size: 11px;
-					}
-
-					a {
-						font-size: 11px;
-						display: block;
-					}
-				}
+			a {
+				font-size: 11px;
+				display: block;
 			}
 		}
 	}

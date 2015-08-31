@@ -3413,31 +3413,21 @@ hr {
   margin: 0 0 20px;
   overflow: hidden;
 }
-/* line 20, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
-.pane-bundle-featured-news-panel .field-collection-container {
-  border: none;
-  margin: 0px;
-}
-/* line 25, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
-.pane-bundle-featured-news-panel .field-collection-container .field-items .field-item {
-  display: block;
-  margin: 0;
-  overflow: hidden;
-}
-/* line 30, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
-.pane-bundle-featured-news-panel .field-collection-container .field-items .field-item .field-collection-view {
+/* line 21, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
+.pane-bundle-featured-news-panel .view-content .views-row {
   border: none;
   margin: 0 0 20px 0;
   padding: 0;
+  line-height: 14px;
 }
-/* line 35, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
-.pane-bundle-featured-news-panel .field-collection-container .field-items .field-item .field-collection-view .date-display-single {
+/* line 27, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
+.pane-bundle-featured-news-panel .view-content .views-row .date-display-single {
   color: #777;
   display: block;
   font-size: 11px;
 }
-/* line 41, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
-.pane-bundle-featured-news-panel .field-collection-container .field-items .field-item .field-collection-view a {
+/* line 33, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
+.pane-bundle-featured-news-panel .view-content .views-row a {
   font-size: 11px;
   display: block;
 }
