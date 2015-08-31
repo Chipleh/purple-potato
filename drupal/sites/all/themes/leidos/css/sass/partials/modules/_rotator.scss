@@ -69,6 +69,10 @@
 					position: absolute;
 					width: 450px;
 
+					&.hide-1 {
+						display: none;
+					}
+
 					.views-field-field-hide-information-box,
 					.views-field-title,
 					.views-field-body,

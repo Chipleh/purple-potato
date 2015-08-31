@@ -4964,6 +4964,11 @@ hr {
   width: 450px;
 }
 /* line 72, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+.pane-bundle-rotator .flexslider ul li .rotator-content.hide-1,
+.optional-rotator .flexslider ul li .rotator-content.hide-1 {
+  display: none;
+}
+/* line 76, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-field-hide-information-box,
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-title,
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-body,
@@ -4975,7 +4980,7 @@ hr {
   z-index: 1;
   overflow: hidden;
 }
-/* line 84, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 88, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-title,
 .optional-rotator .flexslider ul li .rotator-content .views-field-title {
   color: #000;
@@ -4984,30 +4989,30 @@ hr {
   max-height: 66px;
   padding: 10px 20px 0 20px;
 }
-/* line 91, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 95, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-title a,
 .optional-rotator .flexslider ul li .rotator-content .views-field-title a {
   color: #000;
 }
-/* line 96, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 100, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-body,
 .optional-rotator .flexslider ul li .rotator-content .views-field-body {
   color: #000;
   max-height: 74px;
   padding: 0 20px 20px 20px;
 }
-/* line 101, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 105, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-body p,
 .optional-rotator .flexslider ul li .rotator-content .views-field-body p {
   margin: 0;
 }
-/* line 106, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 110, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-field-rotator-link,
 .optional-rotator .flexslider ul li .rotator-content .views-field-field-rotator-link {
   max-height: 32px;
   padding: 0 20px 10px 20px;
 }
-/* line 110, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 114, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-field-rotator-link a,
 .optional-rotator .flexslider ul li .rotator-content .views-field-field-rotator-link a {
   background-color: #850F88;
@@ -5022,12 +5027,12 @@ hr {
   text-transform: uppercase;
   width: 90px;
 }
-/* line 125, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 129, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-field-rotator-link a:hover,
 .optional-rotator .flexslider ul li .rotator-content .views-field-field-rotator-link a:hover {
   color: #dfd1e0;
 }
-/* line 134, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 138, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider .flex-control-nav,
 .optional-rotator .flexslider .flex-control-nav {
   bottom: 20px;
@@ -5037,18 +5042,18 @@ hr {
   text-align: right;
   z-index: 2;
 }
-/* line 144, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 148, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider .flex-control-nav.flex-control-paging li a,
 .optional-rotator .flexslider .flex-control-nav.flex-control-paging li a {
   background: #fff;
 }
-/* line 147, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 151, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider .flex-control-nav.flex-control-paging li a:hover, .pane-bundle-rotator .flexslider .flex-control-nav.flex-control-paging li a.flex-active,
 .optional-rotator .flexslider .flex-control-nav.flex-control-paging li a:hover,
 .optional-rotator .flexslider .flex-control-nav.flex-control-paging li a.flex-active {
   background: #1F1646;
 }
-/* line 156, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 160, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider .flex-direction-nav,
 .optional-rotator .flexslider .flex-direction-nav {
   display: none;
@@ -5057,33 +5062,33 @@ hr {
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-  /* line 171, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 175, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .tablet-image,
   .optional-rotator .flexslider ul li .tablet-image {
     display: block;
   }
-  /* line 174, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 178, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .tablet-image img,
   .optional-rotator .flexslider ul li .tablet-image img {
     height: 274px;
     width: auto;
   }
-  /* line 180, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 184, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .rotator-content,
   .optional-rotator .flexslider ul li .rotator-content {
     bottom: 50px;
   }
-  /* line 183, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 187, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-title,
   .optional-rotator .flexslider ul li .rotator-content .views-field-title {
     padding: 10px 20px;
   }
-  /* line 187, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 191, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-body,
   .optional-rotator .flexslider ul li .rotator-content .views-field-body {
     display: none;
   }
-  /* line 194, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 198, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider .flex-control-nav,
   .optional-rotator .flexslider .flex-control-nav {
     left: 50px;
@@ -5094,41 +5099,41 @@ hr {
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-  /* line 212, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 216, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .mobile-image,
   .optional-rotator .flexslider ul li .mobile-image {
     display: block;
   }
-  /* line 215, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 219, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .mobile-image img,
   .optional-rotator .flexslider ul li .mobile-image img {
     height: 274px;
     width: auto;
   }
-  /* line 221, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 225, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .rotator-content,
   .optional-rotator .flexslider ul li .rotator-content {
     bottom: 50px;
     left: 20px;
     width: calc(100% - 40px);
   }
-  /* line 226, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 230, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-title,
   .optional-rotator .flexslider ul li .rotator-content .views-field-title {
     padding: 10px 20px;
   }
-  /* line 230, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 234, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-body,
   .optional-rotator .flexslider ul li .rotator-content .views-field-body {
     display: none;
   }
-  /* line 235, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 239, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider ul li .rotator-content .views-field-field-rotator-link a,
   .optional-rotator .flexslider ul li .rotator-content .views-field-field-rotator-link a {
     text-align: center;
     width: calc(100% - 20px);
   }
-  /* line 244, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+  /* line 248, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
   .pane-bundle-rotator .flexslider .flex-control-nav,
   .optional-rotator .flexslider .flex-control-nav {
     left: 20px;
