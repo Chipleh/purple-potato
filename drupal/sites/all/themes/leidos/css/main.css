@@ -4132,13 +4132,13 @@ hr {
 }
 /* line 32, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container .column-title a {
-  color: #850F88;
+  color: #1F1646;
   display: block;
   margin-bottom: 5px;
 }
 /* line 37, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container .column-title a:hover {
-  color: #1F1646;
+  color: #850F88;
 }
 /* line 43, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container .column-list {
