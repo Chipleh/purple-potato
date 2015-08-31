@@ -66,6 +66,15 @@
 					}
 				}
 			}
+
+			@media only screen and (min-width: 961px) and (max-width: 1230px) {
+				.panels-flexible-region-industry_template-top_banner-inside {
+					.pane-page-title {
+						margin-left: 0;
+						left: 240px;
+					}
+				}
+			}
 		}
 
 		.panels-flexible-column.content-left {
@@ -177,6 +186,19 @@
 		}
 	}
 
+	/* no vertices */
+	.no-vertices {
+		#content {
+			.top {
+				.panels-flexible-region-industry_template-top_banner-inside {
+					.pane-page-title {
+						margin-left: 20px;
+					}
+				}
+			}
+		}
+	}
+
 	/* vertices */
 	.has-vertices {
 		#content {
@@ -223,6 +245,19 @@
 					h1 {
 						height: 40px;
 						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	/* no vertices */
+	.no-vertices {
+		#content {
+			.top {
+				.panels-flexible-region-industry_template-top_banner-inside {
+					.pane-page-title {
+						margin-left: 20px;
 					}
 				}
 			}
