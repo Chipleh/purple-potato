@@ -30,12 +30,12 @@
 			font-weight: 600;
 
 			a {
-				color: $color-leidos-purple-light;
+				color: $color-leidos-purple-dark;
 				display: block;
 				margin-bottom: 5px;
 
 				&:hover {
-					color: $color-leidos-purple-dark;
+					color: $color-leidos-purple-light;
 				}
 			}
 		}
