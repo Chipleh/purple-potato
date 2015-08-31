@@ -137,10 +137,12 @@
 					width: 100%;
 				}
 
-				@media only screen and (min-width: 961px) and (max-width: 1078px) {
+				@media only screen and (min-width: 961px) {
 					img {
-						width: auto;
 						height: 100%;
+						position: relative;
+						right: 50%;
+						width: auto;
 					}
 				}
 			}
