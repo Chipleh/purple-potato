@@ -206,7 +206,7 @@
 			font-family: "AvenirLT-Book",Arial,sans-serif;
 			font-size: 24px;
 			font-weight: normal;
-			margin-bottom: 20px;
+			margin-bottom: 0px;
 			margin-top: 0px;
 			text-transform: capitalize;
 
@@ -272,6 +272,91 @@
 									width: 100%;
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* right rail */
+	.optional-right-rail {
+		.pane-bundle-featured-projects-panel {
+			border-top: 1px solid $color-gray-medium-light;
+			padding-top: 20px;
+
+			h2 {
+				color: $color-leidos-purple-dark;
+				font-family: "AvenirLT-Book";
+				font-size: 24px;
+				font-weight: normal;
+				margin-bottom: 0px;
+				margin-top: 0px;
+				text-transform: capitalize;
+
+				a {
+					display: block;
+				}
+			}
+
+			.pane-content {
+				overflow: hidden;
+
+				.field-type-link-field {
+					margin-bottom: 20px;
+				}
+
+				.views-row {
+					display: block;
+					margin-bottom: 20px;
+					overflow: hidden;
+					width: 49%;
+					
+					&:nth-child(odd) {
+						clear: left;
+						float: left;
+					}
+
+					&:nth-child(even) {
+						clear: right;
+						float: right;
+					}
+
+					&:nth-child(odd),
+					&:nth-child(even) {
+						.views-field-field-main-image {
+							background: $color-gray-light;
+							display: block;
+							float: none;
+							height: auto;
+							margin-bottom: 10px;
+							overflow: hidden;
+							position: relative;
+							width: 100%;
+
+							&:before {
+								content: "";
+								display: block;
+								padding-top: 60%;
+								position: relative;
+								width: 100%;
+							}
+
+							img {
+								height: auto;
+								left: 0;
+								position: absolute;
+								top:0;
+								width: 100%;
+							}
+						}
+
+						.views-field-title {
+							float: none;
+							font-size: 11px;
+							font-weight: bold;
+							margin: 0;
+							width: auto;
 						}
 					}
 				}
@@ -354,13 +439,11 @@
 		padding-top: 20px;
 
 		h2 {
-			color: #1F1646;
-			font-family: "AvenirLT-Book",Arial,sans-serif;
-			font-size: 24px;
+			color: $color-leidos-purple-dark;
+			font-size: 13px;
 			font-weight: normal;
-			margin-bottom: 20px;
-			margin-top: 0px;
-			text-transform: capitalize;
+			margin: 0px;
+			text-transform: uppercase;
 
 			a {
 				display: block;
@@ -369,6 +452,10 @@
 
 		.pane-content {
 			overflow: hidden;
+
+			.field-type-link-field {
+				margin-bottom: 20px;
+			}
 
 			.field-collection-container {
 				.field-item {
@@ -412,6 +499,76 @@
 								width: 100%;
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+
+	/* right rail */
+	.optional-right-rail {
+		.pane-bundle-featured-projects-panel {
+			border-top: 1px solid $color-gray-medium-light;
+			padding-top: 20px;
+
+			h2 {
+				color: $color-leidos-purple-dark;
+				font-size: 13px;
+				font-weight: normal;
+				margin: 0px;
+				text-transform: uppercase;
+
+				a {
+					display: block;
+				}
+			}
+
+			.pane-content {
+				overflow: hidden;
+
+				.field-type-link-field {
+					margin-bottom: 20px;
+				}
+
+				.views-row {
+					display: block;
+					margin-bottom: 20px;
+					overflow: hidden;
+					width: 100%;
+
+					.views-field-field-main-image {
+						background: $color-gray-light;
+						display: block;
+						float: none;
+						height: auto;
+						margin-bottom: 10px;
+						overflow: hidden;
+						position: relative;
+						width: 100%;
+
+						&:before {
+							content: "";
+							display: block;
+							padding-top: 60%;
+							position: relative;
+							width: 100%;
+						}
+
+						img {
+							height: auto;
+							left: 0;
+							position: absolute;
+							top:0;
+							width: 100%;
+						}
+					}
+
+					.views-field-title {
+						float: none;
+						font-size: 11px;
+						font-weight: bold;
+						margin: 0;
+						width: auto;
 					}
 				}
 			}

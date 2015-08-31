@@ -233,6 +233,29 @@
 		}	
 	}
 
+	.panels-ipe,
+	.optional-right-rail {
+		#content {
+			.section,
+			.content {
+				.content-container {
+					.panels-flexible-column {
+						&.right-container {
+							.panels-flexible-region {
+								&.right-rail {
+									padding-bottom: 0;
+								}
+
+								&.optional-right-rail {
+									margin: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
 }
 
 
