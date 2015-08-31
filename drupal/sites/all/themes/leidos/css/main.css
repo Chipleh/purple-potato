@@ -5089,7 +5089,7 @@ hr {
 /* clickable edit panel */
 /* line 144, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_vertices.scss */
 #content .panels-ipe-editing .top {
-  pointer-events: inherent;
+  pointer-events: inherit;
 }
 
 /*  tablet
