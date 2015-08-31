@@ -359,6 +359,21 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_hide_preview_box']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_hide_preview_box']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_hide_preview_box']['element_default_classes'] = FALSE;
+  /* Field: Taxonomy term: Preview image */
+  $handler->display->display_options['fields']['field_preview_image']['id'] = 'field_preview_image';
+  $handler->display->display_options['fields']['field_preview_image']['table'] = 'field_data_field_preview_image';
+  $handler->display->display_options['fields']['field_preview_image']['field'] = 'field_preview_image';
+  $handler->display->display_options['fields']['field_preview_image']['label'] = '';
+  $handler->display->display_options['fields']['field_preview_image']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_preview_image']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_preview_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_preview_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_preview_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_preview_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_preview_image']['settings'] = array(
+    'image_style' => 'capabilities',
+    'image_link' => '',
+  );
   /* Field: Taxonomy term: Preview Image Hover Text */
   $handler->display->display_options['fields']['field_preview_image_hover_text']['id'] = 'field_preview_image_hover_text';
   $handler->display->display_options['fields']['field_preview_image_hover_text']['table'] = 'field_data_field_preview_image_hover_text';
@@ -1058,13 +1073,13 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="views-field views-field-field-hide-information-box">
   <div class="field-content">[field_hide_information_box]</div>
-</div>
+</div>  
 <div class="views-field views-field-title">
   <span class="field-content">[title]</span>
-</div>
+</div>  
 <div class="views-field views-field-body">
   <div class="field-content">[body]</div>
-</div>
+</div>  
 <div class="views-field views-field-field-rotator-link">
   <div class="field-content">[field_rotator_link]</div>
 </div>';

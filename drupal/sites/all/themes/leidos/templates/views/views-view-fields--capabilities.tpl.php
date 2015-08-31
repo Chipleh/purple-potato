@@ -12,7 +12,7 @@
   </div>
   <div class="click-box-content">
     <div class="click-box-image">
-      <?php print $fields['field_taxonomy_image']->content; ?>
+      <?php print $fields['field_preview_image']->content; ?>
       <div class="click-box-image-caption-container">
         <div class="click-box-image-caption"><?php print $fields['field_preview_image_hover_text']->content; ?></div>
         <div class="click-box-image-additional-caption"><?php print $fields['field_preview_image_hover_text']->content; ?></div>
