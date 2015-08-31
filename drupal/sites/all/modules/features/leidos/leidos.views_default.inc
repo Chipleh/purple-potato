@@ -1041,6 +1041,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_hide_information_box']['label'] = '';
   $handler->display->display_options['fields']['field_hide_information_box']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_hide_information_box']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_hide_information_box']['type'] = 'list_key';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -1071,10 +1072,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Rotator content';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="views-field views-field-field-hide-information-box">
-  <div class="field-content">[field_hide_information_box]</div>
-</div>  
-<div class="views-field views-field-title">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="views-field views-field-title">
   <span class="field-content">[title]</span>
 </div>  
 <div class="views-field views-field-body">
@@ -1084,7 +1082,7 @@ function leidos_views_default_views() {
   <div class="field-content">[field_rotator_link]</div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
-  $handler->display->display_options['fields']['nothing']['element_class'] = 'rotator-content';
+  $handler->display->display_options['fields']['nothing']['element_class'] = 'rotator-content hide-[field_hide_information_box]';
   $handler->display->display_options['fields']['nothing']['element_label_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = '0';
