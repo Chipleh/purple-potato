@@ -976,8 +976,7 @@ hr {
   width: 135px;
 }
 /* line 195, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li .no-children li a:hover,
-.left-navigation-menu #left-nav-menu li .no-children li a .active {
+.left-navigation-menu #left-nav-menu li .no-children li a:hover, .left-navigation-menu #left-nav-menu li .no-children li a.active {
   border-bottom: 1px solid #fff;
   color: #850F88;
 }

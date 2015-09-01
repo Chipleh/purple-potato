@@ -193,7 +193,7 @@
 						width: 135px;
 
 						&:hover,
-						.active {
+						&.active {
 							border-bottom: 1px solid $color-white;
 							color: $color-leidos-purple-light;
 						}
