@@ -28,6 +28,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Apply »';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -228,6 +229,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
+  $handler->display->display_options['pager']['options']['more_button_empty_text'] = 'No more results';
   $handler->display->display_options['pager']['options']['advance']['content_class'] = '.view-content';
   $handler->display->display_options['pager']['options']['advance']['pager_selector'] = '.pager-load-more';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
@@ -566,6 +568,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Apply »';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '8';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -853,6 +856,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '4, 5, 10, 20, 40, 60';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
+  $handler->display->display_options['pager']['options']['more_button_empty_text'] = 'No more results';
   $handler->display->display_options['pager']['options']['advance']['content_class'] = '.view-content';
   $handler->display->display_options['pager']['options']['advance']['pager_selector'] = '.pager-load-more';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
