@@ -1001,11 +1001,12 @@
 	/*  search box
 	**************************************************/
 	.block-leidos-custom-search {
-		height: 200vh; // adjusted to compensate for padding
+		height: 0vh; // adjusted to compensate for padding
 		top: calc(-200vh + 57px);
 
 		&.search-active {
 			top: 83px;
+			height: 200vh; // adjusted to compensate for padding
 		}
 
 		.content {

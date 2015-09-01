@@ -2322,14 +2322,15 @@ hr {
   **************************************************/
   /* line 1003, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
   .block-leidos-custom-search {
-    height: 200vh;
+    height: 0vh;
     top: calc(-200vh + 57px);
   }
   /* line 1007, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
   .block-leidos-custom-search.search-active {
     top: 83px;
+    height: 200vh;
   }
-  /* line 1014, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  /* line 1015, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
   .block-leidos-custom-search .content #search_leidos_website input[type="text"] {
     background: none;
     background-color: #fff;
@@ -2342,11 +2343,11 @@ hr {
     padding: 0 20px 0 30px;
     width: calc(100% - 90px);
   }
-  /* line 1027, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  /* line 1028, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
   .block-leidos-custom-search .content #search_leidos_website input[type="submit"] {
     display: block;
   }
-  /* line 1031, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
+  /* line 1032, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_top-nav.scss */
   .block-leidos-custom-search .content #search_leidos_website span {
     display: none;
   }
