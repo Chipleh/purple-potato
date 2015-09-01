@@ -3767,7 +3767,7 @@ hr {
   /* line 354, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-projects.scss */
   .optional-right-rail .pane-bundle-featured-projects-panel .pane-content .views-row:nth-child(odd) .views-field-title, .optional-right-rail .pane-bundle-featured-projects-panel .pane-content .views-row:nth-child(even) .views-field-title {
     float: none;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
     margin: 0;
     width: auto;
@@ -3810,7 +3810,7 @@ hr {
   /* line 400, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-projects.scss */
   .pane-projects-featured-projects-pane .view-content .views-row .views-field-title {
     float: none;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
     width: 100%;
   }
