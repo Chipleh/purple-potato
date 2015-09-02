@@ -19,6 +19,19 @@
 		@extend %side-bar-header;
 	}
 
+	@media only screen and (min-width: 960px) {
+		h2 {
+			width: 135px;
+		}
+
+		.field-type-link-field {
+			position: absolute;
+			right: 0;
+			top: -30px;
+			width: 125px;
+		}
+	}
+
 	.view-filters {
 		background: $color-gray-light;
 		margin-bottom: 20px;
@@ -113,6 +126,8 @@
 	}
 
 	.view-content {
+		position: relative;
+
 		.views-row {
 			border-bottom: 1px solid $color-gray-medium-light;
 			display: block;

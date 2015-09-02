@@ -14,10 +14,6 @@
 	margin: 0 0 20px;
 	overflow: hidden;
 
-	h2 {
-		@extend %side-bar-header;
-	}
-
 	.view-content {
 		.views-row {
 			display: block;
@@ -49,7 +45,22 @@
 		@extend %side-bar-header;
 	}
 
+	@media only screen and (min-width: 960px) {
+		h2 {
+			width: 135px;
+		}
+
+		.field-type-link-field {
+			position: absolute;
+			right: 0;
+			top: -30px;
+			width: 125px;
+		}
+	}
+
 	.pane-content {
+		position: relative;
+
 		.field-collection-container {
 			border: none;
 			margin: 0;

@@ -17,7 +17,22 @@
 		@extend %side-bar-header;
 	}
 
-	.view-content {
+	@media only screen and (min-width: 960px) {
+		h2 {
+			width: 135px;
+		}
+
+		.field-type-link-field {
+			position: absolute;
+			right: 0;
+			top: -30px;
+			width: 125px;
+		}
+	}
+
+	.pane-content {
+		position: relative;
+
 		.views-row {
 			border: none;
 			margin: 0 0 20px 0;
