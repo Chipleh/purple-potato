@@ -316,6 +316,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_hide_hover']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_hide_hover']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_hide_hover']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_hide_hover']['type'] = 'list_key';
   /* Field: Taxonomy term: Hover Shape */
   $handler->display->display_options['fields']['field_hover_shape']['id'] = 'field_hover_shape';
   $handler->display->display_options['fields']['field_hover_shape']['table'] = 'field_data_field_hover_shape';
@@ -361,6 +362,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_hide_preview_box']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_hide_preview_box']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_hide_preview_box']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_hide_preview_box']['type'] = 'list_key';
   /* Field: Taxonomy term: Preview image */
   $handler->display->display_options['fields']['field_preview_image']['id'] = 'field_preview_image';
   $handler->display->display_options['fields']['field_preview_image']['table'] = 'field_data_field_preview_image';

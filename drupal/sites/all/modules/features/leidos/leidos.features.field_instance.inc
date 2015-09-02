@@ -3068,7 +3068,7 @@ function leidos_field_default_field_instances() {
   $field_instances['taxonomy_term-capabilities-field_preview_image'] = array(
     'bundle' => 'capabilities',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Recommended size 650x650',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3096,11 +3096,11 @@ function leidos_field_default_field_instances() {
           'rotator_tablet' => 0,
         ),
       ),
-      'file_directory' => '',
+      'file_directory' => 'capabilities',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
+      'max_resolution' => '750x750',
+      'min_resolution' => '650x650',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3112,6 +3112,7 @@ function leidos_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'default' => 0,
           'image' => 'image',
@@ -3199,7 +3200,7 @@ function leidos_field_default_field_instances() {
   $field_instances['taxonomy_term-capabilities-field_taxonomy_image'] = array(
     'bundle' => 'capabilities',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Recommended size 650x650',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3227,11 +3228,11 @@ function leidos_field_default_field_instances() {
           'rotator_tablet' => 0,
         ),
       ),
-      'file_directory' => '',
+      'file_directory' => 'capabilities',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
+      'max_resolution' => '750x750',
+      'min_resolution' => '650x650',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3382,6 +3383,7 @@ function leidos_field_default_field_instances() {
   t('Project Value');
   t('Proof Point or Web Page Title');
   t('Quick Links');
+  t('Recommended size 650x650');
   t('Recommended size: 244 x 244');
   t('Recommended size: 900 x 274');
   t('Rotator Image');
