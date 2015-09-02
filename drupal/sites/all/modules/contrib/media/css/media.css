@@ -11,7 +11,7 @@
   padding: 0;
 }
 
-.ui-dialog.media-wrapper {
+.panels-ipe .ui-dialog.media-wrapper {
   z-index: 2000 !important;
 }
 
