@@ -140,6 +140,7 @@
 							&.right-rail {
 								border-right: 1px solid $color-gray-medium-light;
 								margin: 20px 0 0;
+								min-height: calc(100vh - 358px);
 								width: calc(100% - 330px);
 
 								.panels-flexible-region-inside {
