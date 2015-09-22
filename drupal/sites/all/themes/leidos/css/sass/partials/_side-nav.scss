@@ -200,6 +200,12 @@
 					}
 				}
 			}
+
+			&.first {
+				> a {
+					border-top: none;
+				}
+			}
 		}
 	}
 }

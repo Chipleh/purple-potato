@@ -101,6 +101,7 @@
 				&.right-container {
 					// overflow: hidden;  commented for white right cover
 					float: right;
+					min-height: calc(100vh - 358px);
 					width: calc(100% - 240px);
 
 					.panels-flexible-region {
