@@ -141,29 +141,6 @@
 				width: 145px;
 			}
 
-			&:hover,
-			&.hover,
-			&.active-trail {
-				background: $color-white;
-				z-index: 3;
-
-				&:before {
-					opacity: 1;
-				}
-
-				> a {
-					border-right: 5px solid $color-leidos-purple-light;
-					color: $color-leidos-purple-light;
-				}
-			}
-
-			&:hover,
-			&.hover {
-				.no-children {
-					max-height: 1000px;
-				}
-			}
-
 			/***** sub menus *****/
 			.no-children {
 				background: $color-leidos-purple-soft-light;
@@ -204,6 +181,26 @@
 			&.first {
 				> a {
 					border-top: none;
+				}
+			}
+
+			&:hover,
+			&.hover,
+			&.active-trail {
+				background: $color-white;
+				z-index: 3;
+
+				&:before {
+					opacity: 1;
+				}
+
+				> a {
+					border-right: 5px solid $color-leidos-purple-light;
+					color: $color-leidos-purple-light;
+				}
+
+				.no-children {
+					max-height: 1000px;
 				}
 			}
 		}
