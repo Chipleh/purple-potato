@@ -330,10 +330,10 @@
 
 				.click-box-services {
 					a {
-						background-color: rgb(9,1,78);
-						@include filter-gradient(#09014e, #371868, horizontal);
-						$experimental-support-for-svg: true;
-						@include background-image(linear-gradient(left,  rgba(9,1,78,1) 0%,rgba(55,24,104,1) 100%));
+						background-color: #3B1363;
+						background-image: -o-linear-gradient(right, #3B1363 0%, #3B1363 100%);
+						background-image: -webkit-linear-gradient(right, #3B1363 0%, #3B1363 100%);
+						background-image: linear-gradient(to left, #3B1363 0%, #3B1363 100%);
 						color: $color-white;
 						display: block;
 						font-family: "AvenirLT-Black", Arial, sans-serif;
@@ -346,6 +346,9 @@
 						width: 90px;
 
 						&:hover {
+							background-image: -o-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
+							background-image: -webkit-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
+							background-image: linear-gradient(to left, #7B1F7F 0%, #3B1363 100%);
 							color: $color-leidos-purple-soft-light;
 						}
 					}

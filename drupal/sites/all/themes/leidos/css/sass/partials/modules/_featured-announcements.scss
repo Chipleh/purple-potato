@@ -101,10 +101,10 @@
 			}
 
 			input[type="submit"] {
-				background-color: $color-leidos-purple-light;
-				background-image: -o-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
-				background-image: -webkit-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
-				background-image: linear-gradient(to left, #7B1F7F 0%, #3B1363 100%);
+				background-color: #3B1363;
+				background-image: -o-linear-gradient(right, #3B1363 0%, #3B1363 100%);
+				background-image: -webkit-linear-gradient(right, #3B1363 0%, #3B1363 100%);
+				background-image: linear-gradient(to left, #3B1363 0%, #3B1363 100%);
 				border-radius: 0;
 				border: none;
 				color: $color-white;
@@ -119,6 +119,9 @@
 				width: 90px;
 
 				&:hover {
+					background-image: -o-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
+					background-image: -webkit-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
+					background-image: linear-gradient(to left, #7B1F7F 0%, #3B1363 100%);
 					color: $color-leidos-purple-soft-light;
 				}
 			}
