@@ -12,7 +12,7 @@
 	clear: both;
 	display: block;
 	margin: 0 0 20px;
-	overflow: hidden;
+	// overflow: hidden;
 
 	.sliding-box {
 		display: block;
@@ -111,9 +111,11 @@
 					font-size: 14px;
 					font-weight: 600;
 					height: auto;
+					letter-spacing: 0.5px;
+					line-height: 16px;
 					margin: 0;
 					padding: 0;
-					position: relative; 
+					position: relative;
 					text-transform: uppercase;
 					vertical-align: middle;
 					z-index: 2;
@@ -519,6 +521,8 @@
 
 			/* open state */
 			&.open {
+				margin-bottom: 20px;
+
 				.click-box-content {
 					padding: 0;
 					width: 110%;
