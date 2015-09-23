@@ -48,10 +48,6 @@ function leidos_form_alter(&$form, &$form_state, $form_id) {
     unset($form['override_title_heading']['#dependency']);
     unset($form['override_title_heading']['#dependency_type']);
   }
-  if (isset($form['reusable'])) {
-    // Remove reusability from panels.
-    unset($form['reusable']);
-  }
 }
 
 /**

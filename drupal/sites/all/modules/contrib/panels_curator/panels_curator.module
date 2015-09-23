@@ -51,6 +51,12 @@ function panels_curator_preprocess_panels_add_content_modal(&$vars) {
         }
       }
     }
+
+    // Include the re-usable category.
+    if (isset($vars['categories']['re-usable-content'])) {
+      $categories['re-usable-content'] = $vars['categories']['re-usable-content'];
+    }
+
     $vars['categories'] = $categories;
   }
   // Remove all category group links and rebuild from the new category list.
@@ -69,5 +75,17 @@ function panels_curator_preprocess_panels_add_content_modal(&$vars) {
 
     $url = $vars['renderer']->get_url('select-content', $vars['region'], $key);
     $vars['categories_array'][] = ctools_ajax_text_button($category_info['title'], $url, '', $class);
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function panels_curator_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['reusable'])) {
+    // Force re-usable panels into one group.
+    $form['reusable']['category']['#disabled'] = TRUE;
+    $form['reusable']['category']['#value'] = 'Re-usable content';
+    $form['reusable']['category']['#default_value'] = 'Re-usable content';
   }
 }
