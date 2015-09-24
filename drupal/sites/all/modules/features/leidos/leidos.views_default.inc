@@ -449,6 +449,11 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['parent']['id'] = 'parent';
   $handler->display->display_options['filters']['parent']['table'] = 'taxonomy_term_hierarchy';
   $handler->display->display_options['filters']['parent']['field'] = 'parent';
+  /* Filter criterion: Taxonomy term: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'termstatus';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
   $export['capabilities'] = $view;
 
   $view = new view();
