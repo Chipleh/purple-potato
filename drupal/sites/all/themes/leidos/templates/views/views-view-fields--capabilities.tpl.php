@@ -15,7 +15,7 @@
       <?php print $fields['field_preview_image']->content; ?>
       <div class="click-box-image-caption-container hide-<?php print $fields['field_hide_preview_box']->content; ?>">
         <div class="click-box-image-caption"><?php print $fields['field_preview_image_hover_text']->content; ?></div>
-        <div class="click-box-image-additional-caption"><?php print $fields['field_preview_image_hover_text']->content; ?></div>
+        <div class="click-box-image-additional-caption"><?php print $fields['field_preview_image_hover_sub']->content; ?></div>
       </div>
     </div>
     <div class="click-box-right">

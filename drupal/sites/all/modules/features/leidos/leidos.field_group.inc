@@ -549,6 +549,7 @@ function leidos_field_group_info() {
       3 => 'field_preview_image_hover_text',
       4 => 'field_cta',
       5 => 'field_preview_image',
+      6 => 'field_preview_image_hover_sub',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

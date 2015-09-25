@@ -2893,7 +2893,7 @@ function leidos_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -2926,7 +2926,7 @@ function leidos_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -3141,6 +3141,42 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'taxonomy_term-capabilities-field_preview_image_hover_sub'
+  $field_instances['taxonomy_term-capabilities-field_preview_image_hover_sub'] = array(
+    'bundle' => 'capabilities',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 15,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_preview_image_hover_sub',
+    'label' => 'Preview Image Hover Subtext',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance:
   // 'taxonomy_term-capabilities-field_preview_image_hover_text'
   $field_instances['taxonomy_term-capabilities-field_preview_image_hover_text'] = array(
     'bundle' => 'capabilities',
@@ -3207,7 +3243,7 @@ function leidos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -3390,6 +3426,7 @@ function leidos_field_default_field_instances() {
   t('Overview');
   t('Overview Header');
   t('Point of Contact');
+  t('Preview Image Hover Subtext');
   t('Preview Image Hover Text');
   t('Preview image');
   t('Private Tag');

@@ -388,6 +388,16 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_preview_image_hover_text']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_preview_image_hover_text']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_preview_image_hover_text']['element_default_classes'] = FALSE;
+  /* Field: Taxonomy term: Preview Image Hover Subtext */
+  $handler->display->display_options['fields']['field_preview_image_hover_sub']['id'] = 'field_preview_image_hover_sub';
+  $handler->display->display_options['fields']['field_preview_image_hover_sub']['table'] = 'field_data_field_preview_image_hover_sub';
+  $handler->display->display_options['fields']['field_preview_image_hover_sub']['field'] = 'field_preview_image_hover_sub';
+  $handler->display->display_options['fields']['field_preview_image_hover_sub']['label'] = '';
+  $handler->display->display_options['fields']['field_preview_image_hover_sub']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_preview_image_hover_sub']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_preview_image_hover_sub']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_preview_image_hover_sub']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_preview_image_hover_sub']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Short Summary */
   $handler->display->display_options['fields']['field_short_summary']['id'] = 'field_short_summary';
   $handler->display->display_options['fields']['field_short_summary']['table'] = 'field_data_field_short_summary';
