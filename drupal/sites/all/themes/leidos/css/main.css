@@ -2764,7 +2764,7 @@ hr {
 }
 /* line 307, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
 .pane-capabilities .sliding-box .click-box-content .click-box-right .click-box-close {
-  background: transparent url("../images/close-x.png") no-repeat scroll center center;
+  background: transparent url("../images/close-x.png") no-repeat scroll center center/60% auto;
   clear: right;
   cursor: pointer;
   display: block;
