@@ -70,7 +70,7 @@ function leidos_default_fieldable_panels_pane_type() {
   $fieldable_panels_pane_type->disabled = FALSE; /* Edit this to true to make a default fieldable_panels_pane_type disabled initially */
   $fieldable_panels_pane_type->api_version = 1;
   $fieldable_panels_pane_type->name = 'page_header';
-  $fieldable_panels_pane_type->title = 'Page Header';
+  $fieldable_panels_pane_type->title = 'Page Intro';
   $fieldable_panels_pane_type->description = '';
   $export['page_header'] = $fieldable_panels_pane_type;
 
