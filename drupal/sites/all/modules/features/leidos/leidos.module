@@ -37,8 +37,15 @@ function leidos_form_alter(&$form, &$form_state, $form_id) {
     unset($form['markup']);
     unset($form['id']);
     unset($form['class']);
+    $form['override_title']['#type'] = 'hidden';
+    $form['override_title']['#default_value'] = TRUE;
+    $form['override_title']['#value'] = TRUE;
+    $form['override_title_text']['#title'] = t('Title');
+    $form['override_title_text']['#required'] = TRUE;
     // Only allow h1 tags for override titles.
+    $form['override_title_heading']['#type'] = 'hidden';
     $form['override_title_heading']['#default_value'] = 'h1';
+    $form['override_title_heading']['#value'] = 'h1';
     $form['override_title_heading']['#options'] = array(
       'h1' => 'h1',
     );
