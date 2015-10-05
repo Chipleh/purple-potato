@@ -83,6 +83,13 @@ function leidos_preprocess_page(&$variables) {
     $variables['classes_array'][] = isset($display->panels['optional_rotator']) ? 'has-rotator' : 'no-rotator';
     $variables['classes_array'][] = isset($display->panels['optional_inner_right_rail']) ? 'optional-right-rail' : 'no-optional-right-rail';
   }
+  // Redirect taxonomy terms if needed.
+  if (arg(0) == 'taxonomy') {
+    $term = menu_get_item();
+    if (isset($term['page_arguments'][0]->field_redirect['und'][0]['display_url'])) {
+      drupal_goto($term['page_arguments'][0]->field_redirect['und'][0]['display_url']);
+    }
+  }
 }
 
 /**

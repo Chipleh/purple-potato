@@ -429,6 +429,7 @@ function leidos_field_group_info() {
       2 => 'field_color_scheme',
       3 => 'name',
       4 => 'description',
+      5 => 'field_redirect',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
