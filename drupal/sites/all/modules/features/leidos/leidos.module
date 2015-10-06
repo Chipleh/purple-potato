@@ -86,12 +86,15 @@ function leidos_views_pre_render(&$view) {
     $view->result = $results;
   }
   elseif ($view->name == 'capabilities' && !empty($view->args)) {
-    $sort_map = leidos_sort_capabilities($view->args);
-    $sorted = array();
-    foreach ($sort_map as $key => $sort) {
-      $sorted[$key] = $view->result[$sort];
+    if (!isset($view->sorted)) {
+      $sort_map = leidos_sort_capabilities($view->args);
+      $sorted = array();
+      foreach ($sort_map as $key => $sort) {
+        $sorted[$key] = $view->result[$sort];
+      }
+      $view->result = $sorted;
+      $view->sorted = TRUE;
     }
-    $view->result = $sorted;
   }
 }
 
