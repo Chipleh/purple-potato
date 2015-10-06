@@ -8,7 +8,7 @@
 /*  elements
 **************************************************/
 /* sliding box */
-.pane-capabilities {
+.pane-bundle-capabilities {
 	clear: both;
 	display: block;
 	margin: 0 0 20px;
@@ -411,7 +411,7 @@
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-	.pane-capabilities {
+	.pane-bundle-capabilities {
 		.sliding-box {
 			width: 47%;
 
@@ -475,7 +475,7 @@
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-	.pane-capabilities {
+	.pane-bundle-capabilities {
 		.sliding-box {
 			clear: both;
 			float: none;
