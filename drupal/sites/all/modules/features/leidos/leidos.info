@@ -246,6 +246,7 @@ features[field_instance][] = taxonomy_term-capabilities-field_short_summary
 features[field_instance][] = taxonomy_term-capabilities-field_taxonomy_image
 features[field_instance][] = taxonomy_term-theme_colors-field_bottom_color
 features[field_instance][] = taxonomy_term-theme_colors-field_top_color
+features[fieldable_panels_pane_type][] = capabilities
 features[fieldable_panels_pane_type][] = custom_breadcrumbs
 features[fieldable_panels_pane_type][] = elements_panel_pane
 features[fieldable_panels_pane_type][] = featured_news_panel
