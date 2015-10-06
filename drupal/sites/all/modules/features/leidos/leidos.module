@@ -61,20 +61,64 @@ function leidos_form_alter(&$form, &$form_state, $form_id) {
  * Implements of hook_views_pre_render().
  */
 function leidos_views_pre_render(&$view) {
-  // Re-order rotator slides based on specific order set in the panel.
-  if ($view->name == 'rotators' && !empty($view->args)) {
-    $slides = explode(',', $view->args[0]);
-    $slide_count = 0;
+  // Re-order rotator slides and capabilities based on specific order set in the panel.
+  if (
+    ($view->name == 'rotators' && !empty($view->args)) ||
+    ($view->name == 'capabilities_sort' && !empty($view->args))
+  ) {
+    $items = explode(',', $view->args[0]);
+    $item_count = 0;
     $results = array();
-    while ($slide_count < count($slides)) {
+    while ($item_count < count($items)) {
       foreach ($view->result as $key => &$result) {
-        // Make sure the slide is the correct item for this slot in the order.
-        if (isset($slides[$slide_count]) && $result->nid == $slides[$slide_count]) {
-          $results[$slide_count] = $result;
-          $slide_count++;
+        $result_id = (isset($result->nid)) ? $result->nid : $result->tid;
+        // Make sure the item is the correct item for this slot in the order.
+        if (isset($items[$item_count]) && $result_id == $items[$item_count]) {
+          $results[$item_count] = $result;
+          $item_count++;
         }
       }
     }
     $view->result = $results;
   }
+  elseif ($view->name == 'capabilities' && !empty($view->args)) {
+    $sort_map = leidos_sort_capabilities($view->args);
+    $sorted = array();
+    foreach ($sort_map as $key => $sort) {
+      $sorted[$key] = $view->result[$sort];
+    }
+    $view->result = $sorted;
+  }
+}
+
+/**
+ * Custom sort function for the capabilities section, since it is very memory exhaustive.
+ */
+function leidos_sort_capabilities($arguments = array()) {
+  // Render the capabilities view.
+  $sort = views_get_view('capabilities_sort');
+  $sort->set_display('page_1');
+  if (!empty($arguments)) {
+    $sort->set_arguments(array(implode(',', $arguments)));
+  }
+  $sort->pre_execute();
+  $sort->execute();
+  $pre_sort = $sort->result;
+  $sort->render();
+  $post_sort = $sort->result;
+  $count = 0;
+  $sort_map = array();
+  // Map the keys for pre-sort and post-sort results.
+  foreach ($post_sort as $post_key => $post_result) {
+    foreach ($pre_sort as $pre_key => $pre_result) {
+      if ($pre_result->tid == $post_result->tid) {
+        $sort_map[$count] = $pre_key;
+        unset($pre_sort[$pre_key]);
+        $count++;
+        break;
+      }
+    }
+  }
+  // Return the map for use by the capabilities view.
+  return $sort_map;
 }

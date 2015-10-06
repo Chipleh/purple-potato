@@ -260,6 +260,23 @@ function leidos_preprocess_field(&$variables) {
     $rotator->execute();
     $variables['rotator'] = $rotator->render();
   }
+  if ($variables['element']['#field_name'] == 'field_capabilities') {
+    // Render the capabilities view instead of the terms that are referenced.
+    $arguments = array();
+    foreach ($variables['items'] as $item) {
+      $arguments[] = $item['#term']->tid;
+    }
+    // Render the capabilities view.
+    $capabilities = views_get_view('capabilities');
+    $capabilities->set_display('default');
+    if (!empty($arguments)) {
+      $capabilities->set_arguments(array(implode(',', $arguments)));
+      //$capabilities->set_items_per_page(count($arguments));
+    }
+    $capabilities->pre_execute();
+    $capabilities->execute();
+    $variables['capabilities'] = $capabilities->render();
+  }
   elseif ($variables['element']['#field_name'] == 'field_project') {
     // Render the projects view instead of the project nodes.
     $arguments = array();
@@ -348,6 +365,26 @@ function leidos_preprocess_panels_pane(&$variables) {
         '#field_translatable' => 0,
         '#entity_type' => 'fieldable_panels_pane',
         '#bundle' => 'rotator',
+        '#items' => array()
+      );
+    }
+  }
+  elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'capabilities') {
+    // Default capabilities field to empty view.
+    if (!isset($variables['content']['field_capabilities'])) {
+      $variables['content']['field_capabilities'] = array(
+        '#theme' => 'field',
+        '#weight' => '0',
+        '#title' => 'Capabilities',
+        '#access' => TRUE,
+        '#label_display' => 'hidden',
+        '#view_mode' => 'full',
+        '#language' => 'und',
+        '#field_name' => 'field_capabilities',
+        '#field_type' => 'taxonomy_term_reference',
+        '#field_translatable' => 0,
+        '#entity_type' => 'fieldable_panels_pane',
+        '#bundle' => 'capabilities',
         '#items' => array()
       );
     }
