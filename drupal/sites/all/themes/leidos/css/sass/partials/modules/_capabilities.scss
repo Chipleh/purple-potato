@@ -305,11 +305,14 @@
 				}
 
 				.click-box-close {
-					background: transparent url("../images/close-x.png") no-repeat scroll center center / 60% auto;
+					// background: transparent url("../images/close-x.png") no-repeat scroll center center / 60% auto;
 					clear: right;
+					color: $color-capabilities;
 					cursor: pointer;
 					display: block;
 					float: right;
+					font-size: 17px;
+					font-weight: 600;
 					height: 37px;
 					width: 37px;
 				}
