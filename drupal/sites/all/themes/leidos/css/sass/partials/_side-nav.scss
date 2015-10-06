@@ -186,7 +186,7 @@
 
 			&:hover,
 			&.hover,
-			&.active-trail {
+			&.active-trail.active {
 				background: $color-white;
 				z-index: 3;
 
