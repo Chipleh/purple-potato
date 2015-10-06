@@ -470,6 +470,45 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'fieldable_panels_pane-capabilities-field_capabilities'
+  $field_instances['fieldable_panels_pane-capabilities-field_capabilities'] = array(
+    'bundle' => 'capabilities',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
+        ),
+        'type' => 'ds_taxonomy_view_mode',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_capabilities',
+    'label' => 'Capabilities',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'taxonomy_single_tag',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_single_tag_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
   // 'fieldable_panels_pane-content-field_freeform_html'
   $field_instances['fieldable_panels_pane-content-field_freeform_html'] = array(
     'bundle' => 'content',
