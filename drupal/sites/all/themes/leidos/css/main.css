@@ -1017,21 +1017,21 @@ hr {
   border-top: none;
 }
 /* line 187, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li:hover, .left-navigation-menu #left-nav-menu li.hover, .left-navigation-menu #left-nav-menu li.active-trail.active {
+.left-navigation-menu #left-nav-menu li:hover, .left-navigation-menu #left-nav-menu li.hover, .left-navigation-menu #left-nav-menu li.active-trail.expanded {
   background: #fff;
   z-index: 3;
 }
 /* line 193, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li:hover:before, .left-navigation-menu #left-nav-menu li.hover:before, .left-navigation-menu #left-nav-menu li.active-trail.active:before {
+.left-navigation-menu #left-nav-menu li:hover:before, .left-navigation-menu #left-nav-menu li.hover:before, .left-navigation-menu #left-nav-menu li.active-trail.expanded:before {
   opacity: 1;
 }
 /* line 197, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li:hover > a, .left-navigation-menu #left-nav-menu li.hover > a, .left-navigation-menu #left-nav-menu li.active-trail.active > a {
+.left-navigation-menu #left-nav-menu li:hover > a, .left-navigation-menu #left-nav-menu li.hover > a, .left-navigation-menu #left-nav-menu li.active-trail.expanded > a {
   border-right: 5px solid #850F88;
   color: #850F88;
 }
 /* line 202, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li:hover .no-children, .left-navigation-menu #left-nav-menu li.hover .no-children, .left-navigation-menu #left-nav-menu li.active-trail.active .no-children {
+.left-navigation-menu #left-nav-menu li:hover .no-children, .left-navigation-menu #left-nav-menu li.hover .no-children, .left-navigation-menu #left-nav-menu li.active-trail.expanded .no-children {
   max-height: 1000px;
 }
 
