@@ -217,7 +217,10 @@ function termstatus_query_term_access_alter(QueryAlterableInterface $query) {
         // instance.
         $query->leftjoin('termstatus', 'termstatus_' . $alias,
           $alias . '.tid = termstatus_' . $alias . '.tid');
-        $query->condition('termstatus_' . $alias . '.status', 1, '=');
+        $query->condition(db_or()
+          ->condition('termstatus_' . $alias . '.status', 1, '=')
+          ->isNull('termstatus_' . $alias . '.status')
+        );
       }
     }
   }
