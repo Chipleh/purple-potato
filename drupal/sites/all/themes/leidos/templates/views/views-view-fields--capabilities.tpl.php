@@ -20,7 +20,7 @@
     </div>
     <div class="click-box-right">
       <div class="click-box-title"><?php print $fields['name']->content; ?></div>
-      <span class="click-box-close"><a href="#">&nbsp;</a></span>
+      <span class="click-box-close"><a href="#">X</a></span>
       <div class="click-box-summary"><?php print $fields['field_short_summary']->content; ?></div>
       <div class="click-box-subcategories"><?php print $fields['field_featured_subcategories']->content; ?></div>
       <span class="click-box-services"><?php print !empty($fields['field_cta']->content) ? $fields['field_cta']->content : l(t('Visit services'), 'taxonomy/term/' . $fields['tid']->raw); ?></span>
