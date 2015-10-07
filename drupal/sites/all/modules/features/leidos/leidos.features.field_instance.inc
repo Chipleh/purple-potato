@@ -2011,7 +2011,7 @@ function leidos_field_default_field_instances() {
   $field_instances['node-project-field_main_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Recommended Image Size: 660 x 383 px',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2042,6 +2042,13 @@ function leidos_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'rotator' => 0,
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
+        ),
+      ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -3527,6 +3534,7 @@ function leidos_field_default_field_instances() {
   t('Project Value');
   t('Proof Point or Web Page Title');
   t('Quick Links');
+  t('Recommended Image Size: 660 x 383 px');
   t('Recommended size 650x650');
   t('Recommended size: 244 x 244');
   t('Recommended size: 900 x 274');
