@@ -1,0 +1,16 @@
+diff --git a/termstatus.module b/termstatus.module
+index 685c5fa..bae645f 100644
+--- a/termstatus.module
++++ b/termstatus.module
+@@ -219,7 +219,10 @@ function termstatus_query_term_access_alter(QueryAlterableInterface $query) {
+         // instance.
+         $query->leftjoin('termstatus', 'termstatus_' . $alias,
+           $alias . '.tid = termstatus_' . $alias . '.tid');
+-        $query->condition('termstatus_' . $alias . '.status', 1, '=');
++        $query->condition(db_or()
++          ->condition('termstatus_' . $alias . '.status', 1, '=')
++          ->isNull('termstatus_' . $alias . '.status')
++        );
+       }
+     }
+   }

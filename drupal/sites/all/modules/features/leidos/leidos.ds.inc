@@ -245,17 +245,6 @@ function leidos_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'node_link' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link text' => 'Learn more »',
-        'wrapper' => '',
-        'class' => '',
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|announcement|teaser'] = $ds_fieldsetting;
 
@@ -1027,13 +1016,11 @@ function leidos_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'field_announcement_date',
         1 => 'title',
-        2 => 'node_link',
       ),
     ),
     'fields' => array(
       'field_announcement_date' => 'ds_content',
       'title' => 'ds_content',
-      'node_link' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
