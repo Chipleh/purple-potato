@@ -45,10 +45,6 @@ function panels_curator_preprocess_panels_add_content_modal(&$vars) {
           // Only add groups that are not empty.
           $categories[$key] = $category;
         }
-        elseif ($key == 'root') {
-          // Unset root content if the root category is empty.
-          $vars['root_content'] = '';
-        }
       }
     }
 
