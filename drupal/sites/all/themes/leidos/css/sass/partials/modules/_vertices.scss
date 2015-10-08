@@ -41,9 +41,12 @@
 				h1 {
 					@extend %max-width;
 					display: table-cell;
+					font-size: 40px;
 					height: 100px;
 					padding: 0 0 0 20px;
+					position: relative;
 					vertical-align: middle;
+					z-index: 10;
 				}
 			}
 		}
