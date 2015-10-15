@@ -2437,14 +2437,14 @@ hr {
 /* line 22, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_breadcrumb.scss */
 .pane-bundle-custom-breadcrumbs .breadcrumbs .breadcrumb {
   float: left;
-  font-size: 16px;
+  font-size: 13px;
   list-style: none;
   margin-right: 10px;
   padding: 0;
 }
 /* line 29, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_breadcrumb.scss */
 .pane-bundle-custom-breadcrumbs .breadcrumbs .breadcrumb a {
-  font-size: 16px;
+  font-size: 13px;
 }
 
 /*  tablet
