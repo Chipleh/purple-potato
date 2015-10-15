@@ -32,9 +32,11 @@ a:hover,
 a:focus {
   color: #018fe2;
 }
+/*
 a:active {
   color: #23aeff;
 }
+*/
 .sidebar .block {
   background-color: #f6f6f2;
   border-color: #f9f9f9;
