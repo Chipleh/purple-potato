@@ -2537,7 +2537,7 @@ hr {
 .pane-bundle-capabilities .sliding-box .inner .header-box {
   background: #00778b;
   display: table;
-  height: 46px;
+  height: 55px;
   overflow: hidden;
   padding: 0 20px;
   position: relative;
@@ -2559,7 +2559,7 @@ hr {
   /* IE6-8 */
   content: '';
   display: block;
-  height: 46px;
+  height: 55px;
   left: 0;
   position: absolute;
   top: 0;
@@ -2574,7 +2574,7 @@ hr {
   font-size: 14px;
   font-weight: 600;
   height: auto;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   line-height: 20px;
   margin: 0;
   padding: 0;
@@ -2586,7 +2586,7 @@ hr {
 /* line 123, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
 .pane-bundle-capabilities .sliding-box .inner .header-box h2 span {
   display: block;
-  max-height: 46px;
+  max-height: 55px;
   overflow: hidden;
 }
 /* line 131, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_capabilities.scss */
