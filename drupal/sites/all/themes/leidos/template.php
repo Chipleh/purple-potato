@@ -207,7 +207,8 @@ function leidos_preprocess_block(&$variables) {
 function leidos_menu_tree($variables) {
   // Check for children menus and assign 'parent' or 'no-children'.
   $parent = (strpos($variables['tree'], '<ul')) ? 'parent-menu' : 'no-children';
-  $tree = '<ul class="menu clearfix ' . $parent . '">' . $variables['tree'] . '</ul>';
+  $active_parent = (strpos($variables['tree'], 'active') && strpos($variables['tree'], 'open-tree') === FALSE) ? 'open-tree' : '';
+  $tree = '<ul class="menu clearfix ' . $parent . ' ' . $active_parent . '">' . $variables['tree'] . '</ul>';
   // Do not add back button around the 'Left navigation' panel output.
   if ($parent) {
     $tree = '<span class="additional-control">' . t('Back') . '</span><span class="additional-info"></span>' . $tree;
