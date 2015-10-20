@@ -26,11 +26,11 @@ body.overlay {
   background-image: linear-gradient(top, #0779bf 0%, #48a9e4 100%);
 }
 a {
-  color: #0071B3;
+  color: #850F88;
 }
 a:hover,
 a:focus {
-  color: #018fe2;
+  color: #1F1646;
 }
 /*
 a:active {
