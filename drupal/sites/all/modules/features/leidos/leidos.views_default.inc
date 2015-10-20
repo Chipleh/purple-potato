@@ -720,7 +720,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_main_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_main_image']['settings'] = array(
-    'image_style' => 'project_small',
+    'image_style' => '',
     'image_link' => '',
   );
   /* Field: Content: Title */
