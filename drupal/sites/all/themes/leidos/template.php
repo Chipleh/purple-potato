@@ -34,13 +34,13 @@ function leidos_preprocess_html(&$variables) {
   // Add conditional stylesheets for IE
   drupal_add_css(path_to_theme() . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
   drupal_add_css(path_to_theme() . '/css/ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 6', '!IE' => FALSE), 'preprocess' => FALSE));
-  
+
   // Leidos stylesheet
   drupal_add_css(path_to_theme() . '/css/main.css', array('group' => CSS_THEME));
-  
+
   //Webdev compiled
   drupal_add_js(path_to_theme() . '/js/scripts.js', array('group' => JS_LIBRARY, 'weight' => 49));
-  
+
   //Leidos theme modifications
   drupal_add_js(path_to_theme() . '/js/leidos_theme.js', array('group' => JS_LIBRARY, 'weight' => 50));
 }
@@ -430,4 +430,40 @@ function leidos_preprocess_panels_pane(&$variables) {
       );
     }
   }
+}
+
+/**
+ * Implements hook_menu_link().
+ * @param array $variables
+ * @return string
+ */
+function leidos_menu_link__menu_engineering_navigation(array $variables) {
+  $element = $variables['element'];
+
+  // Process only the menu with no parent
+  if ($element['#original_link']['plid'] == 0) {
+    if (($key = array_search('active-trail', $element['#attributes']['class'])) !== false) {
+      unset($element['#attributes']['class'][$key]);
+    }
+
+    if ($element['#href'] == current_path()) {
+      $element['#attributes']['class'][] = 'active-trail-selected';
+    }
+    if ($element['#below']) {
+      foreach ($element['#below'] as $subitem) {
+        if ($subitem['#href'] == current_path()) {
+          $element['#attributes']['class'][] = 'active-trail';
+        }
+      }
+    }
+  }
+
+
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }

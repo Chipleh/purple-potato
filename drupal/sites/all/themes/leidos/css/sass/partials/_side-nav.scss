@@ -142,8 +142,18 @@
 
 				&.active {
 					// border-bottom: 1px solid $color-white;
-					// color: $color-leidos-purple-light;
-					color: $color-leidos-purple-dark;
+					color: $color-leidos-purple-light;
+					// color: $color-leidos-purple-dark;
+				}
+			}
+
+			&.active-trail-selected {
+				.active-trail {
+					&.active {
+						border-right: 5px solid $color-leidos-purple-light;
+						background: $color-white;
+						z-index: 3;						
+					}
 				}
 			}
 
@@ -194,7 +204,7 @@
 
 			&:hover,
 			&.hover,
-			&.open {
+			&.active-trail {
 				background: $color-white;
 				z-index: 3;
 
