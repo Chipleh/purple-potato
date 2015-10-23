@@ -128,7 +128,7 @@
 				border-right: 5px solid $color-gray-light;
 				border-top: 1px solid $color-white;
 				clear: both;
-				color: $color-leidos-purple-dark;
+				color: $color-leidos-purple-light;
 				display: block;
 				float: right;
 				font-family: "AvenirLT-Black", Arial, sans-serif;
@@ -139,6 +139,12 @@
 				position: relative;
 				text-transform: uppercase;
 				width: 145px;
+
+				&.active {
+					// border-bottom: 1px solid $color-white;
+					// color: $color-leidos-purple-light;
+					color: $color-leidos-purple-dark;
+				}
 			}
 
 			/***** sub menus *****/
@@ -165,14 +171,16 @@
 						border-bottom: 1px solid $color-leidos-purple-soft-dark;
 						border-right: 0;
 						border-top: 1px solid $color-leidos-purple-soft-medium;
-						color: $color-leidos-purple-dark;
+						// color: $color-leidos-purple-dark;
+						color: $color-leidos-purple-light;
 						font-size: 11px;
 						width: 135px;
 
 						&:hover,
 						&.active {
 							border-bottom: 1px solid $color-white;
-							color: $color-leidos-purple-light;
+							// color: $color-leidos-purple-light;
+							color: $color-leidos-purple-dark;
 						}
 					}
 				}
@@ -186,7 +194,7 @@
 
 			&:hover,
 			&.hover,
-			&.active-trail.expanded {
+			&.open {
 				background: $color-white;
 				z-index: 3;
 
@@ -196,7 +204,8 @@
 
 				> a {
 					border-right: 5px solid $color-leidos-purple-light;
-					color: $color-leidos-purple-light;
+					// color: $color-leidos-purple-light;
+					color: $color-leidos-purple-dark;
 				}
 
 				.no-children {
