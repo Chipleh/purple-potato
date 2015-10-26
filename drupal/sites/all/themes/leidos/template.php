@@ -451,7 +451,7 @@ function leidos_menu_link__menu_engineering_navigation(array $variables) {
     }
     if ($element['#below']) {
       foreach ($element['#below'] as $subitem) {
-        if ($subitem['#href'] == current_path()) {
+        if (isset($subitem['#href']) && $subitem['#href'] == current_path()) {
           $element['#attributes']['class'][] = 'active-trail';
         }
       }
