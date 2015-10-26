@@ -440,17 +440,24 @@ function leidos_preprocess_panels_pane(&$variables) {
 function leidos_menu_link__menu_engineering_navigation(array $variables) {
   $element = $variables['element'];
 
-  // Process only the menu with childs
-  if ($element['#below']) {
+  // Process only the menu with no parent
+  if ($element['#original_link']['plid'] == 0) {
     if (($key = array_search('active-trail', $element['#attributes']['class'])) !== false) {
       unset($element['#attributes']['class'][$key]);
     }
-    foreach ($element['#below'] as $subitem) {
-      if ($subitem['#href'] == current_path()) {
-        $element['#attributes']['class'][] = 'active-trail';
+
+    if ($element['#href'] == current_path()) {
+      $element['#attributes']['class'][] = 'active-trail-selected';
+    }
+    if ($element['#below']) {
+      foreach ($element['#below'] as $subitem) {
+        if ($subitem['#href'] == current_path()) {
+          $element['#attributes']['class'][] = 'active-trail';
+        }
       }
     }
   }
+
 
   $sub_menu = '';
 
