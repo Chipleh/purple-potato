@@ -439,6 +439,7 @@ function leidos_preprocess_panels_pane(&$variables) {
  */
 function leidos_menu_link(array $variables) {
   $element = $variables['element'];
+  
 
   // Process only the menu with no parent
   if ($element['#original_link']['plid'] == 0 && in_array($element['#theme'], array('menu_link__menu_left_navigation', 'menu_link__menu_engineering_navigation'))) {
@@ -448,6 +449,8 @@ function leidos_menu_link(array $variables) {
 
     if ($element['#href'] == current_path()) {
       $element['#attributes']['class'][] = 'active-trail-selected';
+      $element['#localized_options']['attributes']['class'] = array();
+      $element['#localized_options']['attributes']['class'][] = 'active-trail';
     }
     if ($element['#below']) {
       foreach ($element['#below'] as $subitem) {

@@ -29,7 +29,6 @@
 		background: -ms-linear-gradient(top,  #ffffff 50%,#e8e8e8 100%); /* IE10+ */
 		background: linear-gradient(to bottom,  #ffffff 50%,#e8e8e8 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-8 */
-
 		border-bottom: 1px solid $color-gray-medium-light;
 		border-right: 0;
 		border-top: 1px solid $color-white;
@@ -152,7 +151,7 @@
 					&.active {
 						border-right: 5px solid $color-leidos-purple-light;
 						background: $color-white;
-						z-index: 3;						
+						z-index: 3;
 					}
 				}
 			}
@@ -294,6 +293,16 @@
 					width: calc(100% - 60px);
 				}
 
+				&.active-trail-selected {
+					.active-trail {
+						&.active {
+							border-right: none;
+							background: transparent;
+							z-index: 3;
+						}
+					}
+				}
+
 				&.expanded {
 					> a {
 							width: calc(80% - 60px);
@@ -336,6 +345,8 @@
 						}
 
 						&.mobile-active {
+							z-index: 100;
+
 							> .additional-control {
 								/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
 								background: #e8e8e8; /* Old browsers */
@@ -411,97 +422,97 @@
 
 							&:nth-child(3) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
 								}
 							}
 
 							&:nth-child(4) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
 								}
 							}
 
 							&:nth-child(5) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
 								}
 							}
 
 							&:nth-child(6) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
 								}
 							}
 
 							&:nth-child(7) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
 								}
 							}
 
 							&:nth-child(8) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
 								}
 							}
 
 							&:nth-child(9) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 9 + 1px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 9 + 1px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
 								}
 							}
 
 							&:nth-child(10) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 9 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 10 + 1px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 9 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 10 + 1px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 9 + 1px)");
 								}
 							}
 
