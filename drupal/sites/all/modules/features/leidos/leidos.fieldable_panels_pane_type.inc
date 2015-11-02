@@ -14,7 +14,7 @@ function leidos_default_fieldable_panels_pane_type() {
   $fieldable_panels_pane_type->disabled = FALSE; /* Edit this to true to make a default fieldable_panels_pane_type disabled initially */
   $fieldable_panels_pane_type->api_version = 1;
   $fieldable_panels_pane_type->name = 'capabilities';
-  $fieldable_panels_pane_type->title = 'Capabilities';
+  $fieldable_panels_pane_type->title = 'Grid Layout';
   $fieldable_panels_pane_type->description = '';
   $export['capabilities'] = $fieldable_panels_pane_type;
 
