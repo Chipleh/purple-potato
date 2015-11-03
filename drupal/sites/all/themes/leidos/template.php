@@ -445,7 +445,10 @@ function leidos_menu_link(array $variables) {
     if (($key = array_search('active-trail', $element['#attributes']['class'])) !== false) {
       unset($element['#attributes']['class'][$key]);
     }
-
+    // Make sure all link items have a title.
+    if (empty($element['#localized_options']['attributes']['title'])) {
+      $element['#localized_options']['attributes']['title'] = $element['#title'];
+    }
     if ($element['#href'] == current_path()) {
       $element['#attributes']['class'][] = 'active-trail-selected';
       $element['#localized_options']['attributes']['class'] = array();
