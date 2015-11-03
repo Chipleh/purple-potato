@@ -1245,15 +1245,15 @@ hr {
   }
   /* line 412, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(2) .additional-control {
-    top: calc(-54px * 1 + 1px);
+    top: calc(-54px * 2 + 1px);
   }
   /* line 415, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(2) .additional-info {
-    top: calc(-54px * 1 + 1px);
+    top: calc(-54px * 2 + 1px);
   }
   /* line 418, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(2) .no-children {
-    top: calc(-54px * 0 + 1px);
+    top: calc(-54px * 1 + 1px);
   }
   /* line 424, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(3) .additional-control {

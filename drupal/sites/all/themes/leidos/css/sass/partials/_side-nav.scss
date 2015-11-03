@@ -410,13 +410,13 @@
 
 							&:nth-child(2) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 0 + 1px)");
+									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
 								}
 							}
 
