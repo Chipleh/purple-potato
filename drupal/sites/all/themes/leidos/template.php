@@ -439,7 +439,6 @@ function leidos_preprocess_panels_pane(&$variables) {
  */
 function leidos_menu_link(array $variables) {
   $element = $variables['element'];
-  
 
   // Process only the menu with no parent
   if ($element['#original_link']['plid'] == 0 && in_array($element['#theme'], array('menu_link__menu_left_navigation', 'menu_link__menu_engineering_navigation'))) {
