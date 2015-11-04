@@ -56,7 +56,7 @@ function leidos_taxonomy_default_vocabularies() {
       ),
     ),
     'capabilities' => array(
-      'name' => 'Capabilities',
+      'name' => 'Grid Layout',
       'machine_name' => 'capabilities',
       'description' => '',
       'hierarchy' => 0,
