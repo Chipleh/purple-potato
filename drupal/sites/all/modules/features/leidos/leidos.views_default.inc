@@ -250,7 +250,7 @@ function leidos_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
-  $view->human_name = 'Capabilities';
+  $view->human_name = 'Grid Layout';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -474,7 +474,7 @@ function leidos_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
-  $view->human_name = 'Capabilities Sort';
+  $view->human_name = 'Grid Layout Sort';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
