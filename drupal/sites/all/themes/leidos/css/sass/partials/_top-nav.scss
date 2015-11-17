@@ -672,9 +672,9 @@
 								background: -o-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* Opera 11.10+ */
 								background: -ms-linear-gradient(left,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* IE10+ */
 								background: linear-gradient(to right,  #e8e8e8 95%,#d9d9d9 98%,#e8e8e8 101%); /* W3C */
-								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#e8e8e8',GradientType=1 ); /* IE6-8 */
 								clear: both;
 								color: $color-black;
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#e8e8e8',GradientType=1 ); /* IE6-8 */
 								float: none;
 								font-size: 14px;
 								height: auto;
@@ -682,6 +682,7 @@
 								position: relative;
 								right: -100%;
 								top: -$side-nav-height;
+								white-space: nowrap;
 								width: calc(100% - 130px);
 								z-index: 11;
 
