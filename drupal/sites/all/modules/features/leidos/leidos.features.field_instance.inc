@@ -491,18 +491,15 @@ function leidos_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_capabilities',
-    'label' => 'Capabilities',
+    'label' => 'Grid items',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'taxonomy_single_tag',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
+      'settings' => array(),
       'type' => 'taxonomy_single_tag_autocomplete',
       'weight' => 2,
     ),
@@ -984,7 +981,7 @@ function leidos_field_default_field_instances() {
     'label' => 'Summary',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3514,6 +3511,7 @@ function leidos_field_default_field_instances() {
   t('Featured subcapabilities');
   t('Freeform Html');
   t('Google Earth Link');
+  t('Grid items');
   t('Header Title');
   t('Hide Hover');
   t('Hide Information Box');
