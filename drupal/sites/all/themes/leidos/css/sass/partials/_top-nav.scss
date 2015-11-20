@@ -65,11 +65,13 @@
 		&:before {
 			top: calc(50% - 22px);
 			transform: rotate(0deg);
+			-webkit-transform: rotate(0deg);
 		}
 
 		&:after {
 			top: calc(50% - 3px);
 			transform: rotate(0deg);
+			-webkit-transform: rotate(0deg);
 		}
 
 		&.mobile-drop-active {
@@ -82,10 +84,12 @@
 
 			&:before {
 				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
 			}
 
 			&:after {
 				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
 			}
 		}
 	}
@@ -195,6 +199,7 @@
 						position: absolute;
 						top: 0;
 						transform: rotate(27deg);
+						-webkit-transform: rotate(27deg);
 						width: 300px;
 						z-index: 1;
 					}
@@ -650,6 +655,7 @@
 								right: 30px;
 								top: calc(50% - 12.5px);
 								transform: rotate(90deg);
+								-webkit-transform: rotate(90deg);
 								transition: transform .25s ease 0s;
 								width: 38px;
 								z-index: -1;
@@ -689,6 +695,7 @@
 								&:before {
 									left: 30px;
 									transform: rotate(270deg);
+									-webkit-transform: rotate(270deg);
 								}
 							}
 
@@ -870,10 +877,12 @@
 
 								&:before {
 									transform: rotate(45deg);
+									-webkit-transform: rotate(45deg);
 								}
 
 								&:after {
 									transform: rotate(-45deg);
+									-webkit-transform: rotate(-45deg);
 								}
 							}
 						}

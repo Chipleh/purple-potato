@@ -33,6 +33,7 @@
 			position: absolute;
 			top: 286px;
 			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
 			transition: all .35s ease 0s;
 			width: 100px;
 			z-index: 10;
@@ -206,6 +207,7 @@
 					position: absolute;
 					top: -162px;
 					transform: rotate(-22deg);
+					-webkit-transform: rotate(-22deg);
 					transition: all .25s ease 0s;
 					width: 400px;
 					z-index: 1;

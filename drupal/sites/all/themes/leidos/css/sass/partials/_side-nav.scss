@@ -52,6 +52,7 @@
 			right: 30px;
 			top: calc(50% - 12.5px);
 			transform: rotate(180deg);
+			-webkit-transform: rotate(180deg);
 			transition: transform .25s ease 0s;
 			width: 38px;
 			z-index: 1;
@@ -59,7 +60,8 @@
 
 		&.mobile-drop-active {
 			&:before {
-				transform: rotate(0deg);				
+				transform: rotate(0deg);
+				-webkit-transform: rotate(0deg);	
 			}
 		}
 	}
@@ -334,6 +336,7 @@
 								right: 30px;
 								top: calc(50% - 12.5px);
 								transform: rotate(90deg);
+								-webkit-transform: rotate(90deg);
 								transition: transform .25s ease 0s;
 								width: 38px;
 								z-index: -1;
@@ -374,6 +377,7 @@
 								&:before {
 									left: 30px;
 									transform: rotate(270deg);
+									-webkit-transform: rotate(270deg);
 								}
 							}
 
