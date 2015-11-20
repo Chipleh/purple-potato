@@ -1,4 +1,4 @@
-<div class="sliding-box">
+<div class="sliding-box hide-<?php print $fields['field_hide_preview_box']->content; ?>">
   <div class="inner">
     <div class="header-box" style="background-color: <?php print $fields['field_top_color']->content; ?>;">
       <h2><span><?php print $fields['name']->content; ?></span></h2>
@@ -13,7 +13,7 @@
   <div class="click-box-content">
     <div class="click-box-image">
       <?php print $fields['field_preview_image']->content; ?>
-      <div class="click-box-image-caption-container hide-<?php print $fields['field_hide_preview_box']->content; ?>">
+      <div class="click-box-image-caption-container">
         <div class="click-box-image-caption"><?php print $fields['field_preview_image_hover_text']->content; ?></div>
         <div class="click-box-image-additional-caption"><?php print $fields['field_preview_image_hover_sub']->content; ?></div>
       </div>

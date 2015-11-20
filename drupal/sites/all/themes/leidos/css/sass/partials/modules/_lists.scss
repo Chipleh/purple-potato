@@ -26,7 +26,7 @@
 		width: 17%;
 
 		.column-title {
-			font-size: 14px;
+			font-size: 13px;
 			font-weight: 600;
 
 			a {
@@ -45,10 +45,10 @@
 			padding: 0;
 
 			.column-list-item {
-				color: $color-black;
-				font-size: 11px;
+				color: $color-gray-medium-dark;
+				font-size: 12px;
 				list-style: none;
-				margin-bottom: 5px;
+				margin-bottom: 15px;
 				padding-left: 15px;
 				position: relative;
 
@@ -70,6 +70,7 @@
 		div {
 			a {
 				text-transform: capitalize;
+				font-size: 13px;
 			}
 		}
 

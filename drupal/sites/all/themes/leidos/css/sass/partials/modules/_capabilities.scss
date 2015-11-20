@@ -33,6 +33,7 @@
 			position: absolute;
 			top: 286px;
 			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
 			transition: all .35s ease 0s;
 			width: 100px;
 			z-index: 10;
@@ -67,7 +68,6 @@
 
 		/* core box inner container */
 		.inner {
-			background: $color-gray-light;
 			display: block;
 			height: 286px;
 			overflow: hidden;
@@ -206,6 +206,7 @@
 					position: absolute;
 					top: -162px;
 					transform: rotate(-22deg);
+					-webkit-transform: rotate(-22deg);
 					transition: all .25s ease 0s;
 					width: 400px;
 					z-index: 1;
@@ -409,6 +410,22 @@
 				opacity: 1;
 				padding: 30px;
 				width: calc(320% - 60px);
+			}
+		}
+
+		&.hide-1 {
+			&:before {
+				display: none;
+			}
+
+			.inner {
+				.image-box {
+					cursor: initial;
+				}
+
+				.slide-box-content {
+					display: none;
+				}
 			}
 		}
 	}
