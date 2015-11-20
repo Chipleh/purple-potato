@@ -4185,9 +4185,9 @@ hr {
 /* line 56, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_links.scss */
 .pane-bundle-link-columns .column .entity-field-collection-item .column-link-container a {
   display: block;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 /* line 63, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_links.scss */
 .pane-bundle-link-columns .column .entity-field-collection-item .column-link-container ul {
@@ -4201,7 +4201,7 @@ hr {
 /* line 70, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_links.scss */
 .pane-bundle-link-columns .column .entity-field-collection-item .column-link-container ul li a {
   font-size: 13px;
-  color: #000;
+  color: #646464;
   margin-bottom: 0;
   font-weight: 100;
 }
