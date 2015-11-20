@@ -86,8 +86,7 @@
 
 					.views-field-title {
 						color: $color-black;
-						font-family: "AvenirLT-Book", Arial, sans-serif;
-						font-size: 22px;
+						font: 22px/1 AvenirLT-Medium, Arial, sans-serif;
 						max-height: 66px;
 						padding: 10px 20px 0 20px;
 
@@ -98,8 +97,9 @@
 
 					.views-field-body {
 						color: $color-black;
-						max-height: 76px;
+						font: 13px AvenirLT-Book, Arial, sans-serif;
 						margin: 0 20px 20px 20px;
+						max-height: 76px;
 						overflow: hidden;
 
 						p {

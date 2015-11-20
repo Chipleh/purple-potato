@@ -5134,22 +5134,22 @@ hr {
 .pane-bundle-rotator .flexslider .slides li .rotator-content .views-field-title,
 .optional-rotator .flexslider .slides li .rotator-content .views-field-title {
   color: #000;
-  font-family: "AvenirLT-Book", Arial, sans-serif;
-  font-size: 22px;
+  font: 22px/1 AvenirLT-Medium, Arial, sans-serif;
   max-height: 66px;
   padding: 10px 20px 0 20px;
 }
-/* line 94, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 93, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider .slides li .rotator-content .views-field-title a,
 .optional-rotator .flexslider .slides li .rotator-content .views-field-title a {
   color: #000;
 }
-/* line 99, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
+/* line 98, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
 .pane-bundle-rotator .flexslider .slides li .rotator-content .views-field-body,
 .optional-rotator .flexslider .slides li .rotator-content .views-field-body {
   color: #000;
-  max-height: 76px;
+  font: 13px AvenirLT-Book, Arial, sans-serif;
   margin: 0 20px 20px 20px;
+  max-height: 76px;
   overflow: hidden;
 }
 /* line 105, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_rotator.scss */
