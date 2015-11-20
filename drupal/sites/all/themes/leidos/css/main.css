@@ -4278,7 +4278,7 @@ hr {
 }
 /* line 28, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container .column-title {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 /* line 32, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
@@ -4298,10 +4298,10 @@ hr {
 }
 /* line 47, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container .column-list .column-list-item {
-  color: #000;
-  font-size: 11px;
+  color: #646464;
+  font-size: 12px;
   list-style: none;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   padding-left: 15px;
   position: relative;
 }
@@ -4321,13 +4321,14 @@ hr {
 /* line 71, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container div a {
   text-transform: capitalize;
+  font-size: 13px;
 }
 @media only screen and (min-width: 961px) {
-  /* line 77, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 78, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container:nth-child(5n - 4) {
     clear: left;
   }
-  /* line 81, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 82, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container:nth-child(5n) {
     clear: right;
   }
@@ -4336,15 +4337,15 @@ hr {
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-  /* line 94, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 95, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container {
     width: 30%;
   }
-  /* line 97, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 98, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container:nth-child(3n - 2) {
     clear: left;
   }
-  /* line 101, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 102, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container:nth-child(3n) {
     clear: right;
   }
@@ -4352,7 +4353,7 @@ hr {
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-  /* line 115, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 116, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container {
     float: none;
     height: auto;
