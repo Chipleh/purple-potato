@@ -68,7 +68,6 @@
 
 		/* core box inner container */
 		.inner {
-			background: $color-gray-light;
 			display: block;
 			height: 286px;
 			overflow: hidden;
@@ -411,6 +410,18 @@
 				opacity: 1;
 				padding: 30px;
 				width: calc(320% - 60px);
+			}
+		}
+
+		&.hide-1 {
+			&:before {
+				display: none;
+			}
+
+			.inner {
+				.slide-box-content {
+					display: none;
+				}
 			}
 		}
 	}
