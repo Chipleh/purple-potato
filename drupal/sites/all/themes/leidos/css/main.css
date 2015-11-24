@@ -78,40 +78,57 @@ h2 {
 h2.block-header {
   font-family: "AvenirLT-Black", Arial, sans-serif;
   font-size: 18px;
-  font-weight: 800;
-  margin: 0px 0px 20px;
   text-transform: uppercase;
 }
+/* line 111, sass/_config.scss */
+h2.block-header.pane-title {
+  margin: 0 0 20px;
+}
 
-/* line 115, sass/_config.scss */
+/* line 117, sass/_config.scss */
 h3 {
   font-size: 28px;
   font-weight: normal;
 }
 
-/* line 120, sass/_config.scss */
+/* line 122, sass/_config.scss */
 h4 {
   color: #850F88;
   font-size: 16px;
   line-height: 23px;
 }
 
-/* line 126, sass/_config.scss */
+/* line 128, sass/_config.scss */
 h5,
 h6 {
   font-family: sans-serif;
 }
 
 /* links */
-/* line 132, sass/_config.scss */
+/* line 134, sass/_config.scss */
 a {
   color: #850F88;
   transition: all .5s ease;
 }
-/* line 136, sass/_config.scss */
+/* line 138, sass/_config.scss */
 a:hover {
   color: #1F1646;
   text-decoration: none;
+}
+
+/* line 144, sass/_config.scss */
+hr {
+  border: 0;
+  clear: both;
+  position: relative;
+}
+/* line 149, sass/_config.scss */
+hr .simple {
+  background: none;
+  border-bottom: 1px solid #D0D0D0;
+  height: 0px;
+  margin: 18px 0 20px;
+  max-width: 100%;
 }
 
 /*************************
