@@ -33,6 +33,7 @@
 				color: $color-leidos-purple-dark;
 				display: block;
 				margin-bottom: 5px;
+				line-height:14px;
 
 				&:hover {
 					color: $color-leidos-purple-light;
@@ -51,6 +52,7 @@
 				margin-bottom: 15px;
 				padding-left: 15px;
 				position: relative;
+				line-height: 12px;
 
 				&:before {
 					color: $color-leidos-purple-light;
@@ -70,7 +72,7 @@
 		div {
 			a {
 				text-transform: capitalize;
-				font-size: 13px;
+				font-size: 12px;
 			}
 		}
 
