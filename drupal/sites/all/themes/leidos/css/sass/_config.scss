@@ -106,9 +106,11 @@ h2 {
 	&.block-header {
 		font-family: "AvenirLT-Black", Arial, sans-serif;
 		font-size: 18px;
-		font-weight: 800;
-		margin: 0px 0px 20px;
 		text-transform: uppercase;
+
+		&.pane-title {
+			margin: 0 0 20px;
+		}
 	}
 }
 
@@ -138,3 +140,18 @@ a {
 		text-decoration: none;
 	}
 }
+
+hr {
+	border: 0;
+	clear: both;
+	position: relative;
+
+	.simple {
+		background: none;
+		border-bottom: 1px solid $color-gray-medium-light;
+		height: 0px;
+		margin: 18px 0 20px;
+		max-width: 100%;
+	}
+}
+

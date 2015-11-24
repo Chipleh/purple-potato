@@ -121,11 +121,12 @@
 							font-family: "AvenirLT-Black", Arial, sans-serif;
 							font-size: 11px;
 							font-weight: normal;
+							line-height: 16px;
 							margin: 0px;
 							padding: 8px 10px;
+							text-align: center;
 							text-transform: uppercase;
 							width: 90px;
-							text-align: center;
 
 							&:hover {
 								background-image: -o-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
