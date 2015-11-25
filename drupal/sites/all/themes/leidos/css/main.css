@@ -4317,19 +4317,20 @@ hr {
 .pane-bundle-list-columns .column-container .column-title a {
   color: #1F1646;
   display: block;
-  margin-bottom: 5px;
+  font-size: 13px;
   line-height: 14px;
+  margin-bottom: 5px;
 }
-/* line 38, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+/* line 39, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container .column-title a:hover {
   color: #850F88;
 }
-/* line 44, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+/* line 45, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container .column-list {
   margin: 0;
   padding: 0;
 }
-/* line 48, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+/* line 49, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container .column-list .column-list-item {
   color: #646464;
   font-size: 12px;
@@ -4339,7 +4340,7 @@ hr {
   position: relative;
   line-height: 12px;
 }
-/* line 57, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+/* line 58, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container .column-list .column-list-item:before {
   color: #850F88;
   content: '\2022';
@@ -4352,17 +4353,17 @@ hr {
   top: calc(50% - 5px);
   width: 5px;
 }
-/* line 73, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+/* line 74, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
 .pane-bundle-list-columns .column-container div a {
   text-transform: capitalize;
   font-size: 12px;
 }
 @media only screen and (min-width: 961px) {
-  /* line 80, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 81, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container:nth-child(5n - 4) {
     clear: left;
   }
-  /* line 84, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 85, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container:nth-child(5n) {
     clear: right;
   }
@@ -4371,15 +4372,15 @@ hr {
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-  /* line 97, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 98, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container {
     width: 30%;
   }
-  /* line 100, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 101, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container:nth-child(3n - 2) {
     clear: left;
   }
-  /* line 104, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 105, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container:nth-child(3n) {
     clear: right;
   }
@@ -4387,7 +4388,7 @@ hr {
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-  /* line 118, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
+  /* line 119, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_lists.scss */
   .pane-bundle-list-columns .column-container {
     float: none;
     height: auto;
