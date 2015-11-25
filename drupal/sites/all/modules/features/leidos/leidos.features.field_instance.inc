@@ -2635,7 +2635,7 @@ function leidos_field_default_field_instances() {
     'bundle' => 'rotator',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Recommended Character Limit: 270 characters',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
