@@ -33,6 +33,13 @@
 	.pane-content {
 		position: relative;
 
+		.field-item {
+			a {
+				font-size: 11px;
+				display: block;
+			}
+		}
+
 		.views-row {
 			border: none;
 			margin: 0 0 20px 0;

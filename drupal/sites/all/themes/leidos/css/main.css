@@ -3572,20 +3572,25 @@ hr {
 .pane-bundle-featured-news-panel .pane-content {
   position: relative;
 }
-/* line 36, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
+/* line 37, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
+.pane-bundle-featured-news-panel .pane-content .field-item a {
+  font-size: 11px;
+  display: block;
+}
+/* line 43, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
 .pane-bundle-featured-news-panel .pane-content .views-row {
   border: none;
   margin: 0 0 20px 0;
   padding: 0;
   line-height: 14px;
 }
-/* line 42, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
+/* line 49, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
 .pane-bundle-featured-news-panel .pane-content .views-row .date-display-single {
   color: #777;
   display: block;
   font-size: 11px;
 }
-/* line 48, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
+/* line 55, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-news.scss */
 .pane-bundle-featured-news-panel .pane-content .views-row a {
   font-size: 11px;
   display: block;
