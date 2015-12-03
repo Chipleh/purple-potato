@@ -122,14 +122,6 @@ hr {
   clear: both;
   position: relative;
 }
-/* line 149, sass/_config.scss */
-hr .simple {
-  background: none;
-  border-bottom: 1px solid #D0D0D0;
-  height: 0px;
-  margin: 18px 0 20px;
-  max-width: 100%;
-}
 
 /*************************
 *   Extends
@@ -795,47 +787,55 @@ hr {
   width: 100%;
   overflow: hidden;
 }
+/* line 22, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+hr.simple {
+  background: none;
+  border-bottom: 1px solid #D0D0D0;
+  height: 0px;
+  margin: 18px 0 20px;
+  max-width: 100%;
+}
 
 /* resets */
-/* line 25, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* line 33, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 .panels-flexible-region-industry_template-optional_rotator {
   float: none;
   width: 100%;
 }
 
-/* line 30, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* line 38, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 .field-collection-view,
 .field-collection-container {
   border: none;
   margin: 0;
   padding: 0;
 }
-/* line 37, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* line 45, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 .field-collection-view .field-items .field-item,
 .field-collection-container .field-items .field-item {
   margin-bottom: 0px;
 }
 
-/* line 43, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* line 51, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 .node-teaser {
   border: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 49, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* line 57, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 .panels-flexible-industry_template-inside {
   position: relative;
 }
 
-/* line 54, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* line 62, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 .panel-flexible .panel-separator {
   padding: 0;
   margin: 0;
 }
 
 /* remove header */
-/* line 61, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* line 69, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 #page-title {
   display: none;
 }
