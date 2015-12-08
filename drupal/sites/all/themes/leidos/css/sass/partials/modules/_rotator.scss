@@ -87,7 +87,8 @@
 					.views-field-title {
 						color: $color-black;
 						font: 22px/1 AvenirLT-Medium, Arial, sans-serif;
-						max-height: 66px;
+						max-height: 68px;
+						min-height: 26px;
 						padding: 10px 20px 0 20px;
 
 						a {
@@ -117,7 +118,7 @@
 							background-image: -webkit-linear-gradient(right, #3B1363 0%, #3B1363 100%);
 							background-image: linear-gradient(to left, #3B1363 0%, #3B1363 100%);
 							color: $color-white;
-							display: block;
+							display: inline-block;
 							font-family: "AvenirLT-Black", Arial, sans-serif;
 							font-size: 11px;
 							font-weight: normal;
@@ -126,7 +127,8 @@
 							padding: 8px 10px;
 							text-align: center;
 							text-transform: uppercase;
-							width: 90px;
+							width: auto;
+							white-space: nowrap;
 
 							&:hover {
 								background-image: -o-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
