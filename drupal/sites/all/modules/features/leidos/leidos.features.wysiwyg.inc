@@ -117,6 +117,9 @@ function leidos_wysiwyg_default_profiles() {
           'Styles' => 1,
           'Table' => 1,
         ),
+        'drupal' => array(
+          'media' => 1,
+        ),
       ),
       'toolbarLocation' => 'top',
       'resize_enabled' => 1,

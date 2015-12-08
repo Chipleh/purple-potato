@@ -69,8 +69,8 @@ function leidos_image_default_styles() {
       2 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 125,
-          'height' => 73,
+          'width' => 660,
+          'height' => 383,
         ),
         'weight' => 1,
       ),
