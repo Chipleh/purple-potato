@@ -128,7 +128,7 @@
 				border-right: 5px solid $color-gray-light;
 				border-top: 1px solid $color-white;
 				clear: both;
-				color: $color-leidos-purple-light;
+				color: $color-leidos-purple-dark;
 				display: block;
 				float: right;
 				font-family: "AvenirLT-Black", Arial, sans-serif;
@@ -142,7 +142,7 @@
 
 				&.active {
 					// border-bottom: 1px solid $color-white;
-					color: $color-leidos-purple-light;
+					color: $color-leidos-purple-dark;
 					// color: $color-leidos-purple-dark;
 				}
 			}
