@@ -17,6 +17,7 @@ dependencies[] = image
 dependencies[] = link
 dependencies[] = list
 dependencies[] = media
+dependencies[] = media_wysiwyg
 dependencies[] = menu
 dependencies[] = menu_reference
 dependencies[] = menufield
