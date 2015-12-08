@@ -1042,7 +1042,7 @@ hr.simple {
   border-right: 5px solid #E8E8E8;
   border-top: 1px solid #fff;
   clear: both;
-  color: #850F88;
+  color: #1F1646;
   display: block;
   float: right;
   font-family: "AvenirLT-Black", Arial, sans-serif;
@@ -1056,7 +1056,7 @@ hr.simple {
 }
 /* line 143, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
 .left-navigation-menu #left-nav-menu li > a.active {
-  color: #850F88;
+  color: #1F1646;
 }
 /* line 152, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
 .left-navigation-menu #left-nav-menu li.active-trail-selected .active-trail.active {
