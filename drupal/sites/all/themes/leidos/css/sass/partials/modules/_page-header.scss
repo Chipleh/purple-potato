@@ -11,7 +11,7 @@
 	background: transparent url("../images/diagonal-repeat.png") repeat-x scroll left bottom;
 	clear: both;
 	display: block;
-	line-height: 24px;
+	line-height: 40px;
 	margin: 0 0 20px;
 	overflow: hidden;
 	padding: 0 0 26px 0;
@@ -19,9 +19,16 @@
 	h2 {
 		color: $color-leidos-purple-dark;
 		font-family: "AvenirLT-Book", Arial, sans-serif;
-		font-size: 24px;
+		font-size: 40px;
 		font-weight: normal;
 		margin: 0 0 10px 0;
+	}
+
+	p,
+	a {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		line-height: 26px;
 	}
 }
 
