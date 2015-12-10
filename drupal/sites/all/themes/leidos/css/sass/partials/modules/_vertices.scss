@@ -16,14 +16,24 @@
 		z-index: 5;
 
 		.panels-flexible-region-industry_template-top_banner-inside {
-			#theme-banner-div {
-				background: transparent url("../images/vertices-subPage.png") no-repeat scroll center center / 100% 200px;
+			#theme-banner-div-left {
+				background: transparent url("../images/vertices-subPage-left.png") no-repeat scroll left top / 100% 140px;
 				display: block;
-				height: 200px;
+				height: 140px;
 				left: 0;
 				position: absolute;
 				top: 0;
-				width: 100%;
+				width: 67.5872%;
+			}
+
+			#theme-banner-div-right {
+				background: transparent url("../images/vertices-subPage-right.png") no-repeat scroll right top / 100% 200px;
+				display: block;
+				height: 200px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 32.4127%;
 			}
 
 			.panel-separator {
