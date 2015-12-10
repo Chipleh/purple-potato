@@ -442,6 +442,17 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_cta']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_cta']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_cta']['click_sort_column'] = 'url';
+  /* Field: Taxonomy term: Redirect */
+  $handler->display->display_options['fields']['field_redirect']['id'] = 'field_redirect';
+  $handler->display->display_options['fields']['field_redirect']['table'] = 'field_data_field_redirect';
+  $handler->display->display_options['fields']['field_redirect']['field'] = 'field_redirect';
+  $handler->display->display_options['fields']['field_redirect']['label'] = '';
+  $handler->display->display_options['fields']['field_redirect']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_redirect']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_redirect']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_redirect']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_redirect']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_redirect']['type'] = 'link_plain';
   /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
