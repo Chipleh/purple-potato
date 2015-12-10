@@ -14,10 +14,17 @@
 		margin: 0;
 		overflow: hidden;
 		padding: 0;
+		font-size: 13px;
 
 		.pager-current {
 			background: $color-leidos-purple-light;
 			color: $color-white;
+		}
+
+		.pager-next,
+		.pager-last {
+			font-family: Arial, sans-serif;
+			font-size: 12px;
 		}
 	}
 }

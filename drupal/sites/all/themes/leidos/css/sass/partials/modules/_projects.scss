@@ -12,7 +12,7 @@
 .pane-projects-full-view-projects-pane-mobile {
 	clear: both;
 	display: block;
-	margin: 0 0 20px;
+	margin: 0 0 100px;
 
 	h2 {
 		@extend %side-bar-header;
@@ -92,8 +92,10 @@
 
 			label {
 				color: $color-black;
-				font-family: "AvenirLT-Book", Arial, sans-serif;
+				// font-family: "AvenirLT-Book", Arial, sans-serif;
+				font-family: Sans-Serif;
 				font-size: 12px;
+				font-weight: 100;
 			}
 
 			input[type="text"] {
@@ -117,13 +119,14 @@
 				color: $color-white;
 				display: block;
 				font-family: "AvenirLT-Black", Arial, sans-serif;
-				font-size: 11px;
+				font-size: 12px;
 				font-weight: normal;
 				margin: 0px;
 				padding: 8px 10px;
 				text-transform: uppercase;
 				transition: color .5s ease;
 				width: 90px;
+				line-height: 16px;
 
 				&:hover {
 					color: $color-leidos-purple-soft-light;
@@ -161,15 +164,16 @@
 
 			.project-title {
 				display: block;
+				line-height: 14px;
 				margin: 0;
 				max-height: 150px;
 				overflow: hidden;
-				line-height: 14px;
 
 				a {
-					font-size: 13px;
+					font-size: 12px;
 					font-weight: 600;
 					color: $color-leidos-purple-dark;
+					font-family: Arial, Helvetica, sans-serif;
 				}
 			}
 
@@ -205,20 +209,23 @@
 
 				h4 {
 					margin: 0;
-					padding: 5px 0;
+					padding: 5px 0 10px;
+					line-height: 16px;
 
 					a {
-						font-size: 13px;
+						font-size: 11px;
 						font-weight: 600;
+						font-family: sans-serif;
 					}
 				}
 
 				.hover-summary {
 					font-size: 12px;
-					padding: 0;
+					padding: 0 0 10px;
 
 					p {
 						margin: 0;
+						font-size: 11px;
 					}
 				}
 
@@ -230,6 +237,11 @@
 			&.hover {
 				overflow: visible;
 				z-index: 100;
+
+				a {
+					font-size: 11px;
+					font-weight: 100;
+				}
 
 				.hover-container {
 					opacity: 1;
