@@ -20,7 +20,7 @@ function leidos_default_ctools_custom_content() {
   $content->settings = array(
     'admin_title' => 'Vertices',
     'title' => '',
-    'body' => '<div id="theme-banner-div"></div>',
+    'body' => '<div id="theme-banner-div-left"></div><div id="theme-banner-div-right"></div>',
     'format' => 'full_html',
     'substitute' => 1,
   );
