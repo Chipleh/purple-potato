@@ -218,6 +218,7 @@ h3 {
 
 h4 {
 	color: $color-leidos-purple-light;
+	font-family: "Avenir LT W01 65 Medium", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 23px;
 }
@@ -225,6 +226,15 @@ h4 {
 h5,
 h6 {
 	font-family: sans-serif;
+	font-weight: 600;
+}
+
+h5 {
+	font-size: 13px;
+}
+
+h6 {
+	font-size: 11px;
 }
 
 /* links */
@@ -236,6 +246,10 @@ a {
 		color: $color-leidos-purple-dark;
 		text-decoration: none;
 	}
+}
+
+p {
+	line-height: 23px;
 }
 
 hr {
