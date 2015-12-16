@@ -1,4 +1,4 @@
-<?php if ($fields['field_hide_hover']->content && $fields['field_hide_hover']->content) { ?>
+<?php if ($fields['field_hide_hover']->content && $fields['field_hide_preview_box']->content) { ?>
   <a href="<?php print $fields['field_redirect']->content; ?>">
     <div class="sliding-box hide-<?php print $fields['field_hide_preview_box']->content; ?>">
       <div class="inner">
