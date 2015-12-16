@@ -54,8 +54,6 @@
 				var headingToSet = jQuery(this).prev("a").attr("title");
 				var headingRecipient = jQuery(this).siblings("span.additional-info");
 				jQuery(headingRecipient).text(headingToSet);
-				console.log(headingToSet);
-				console.log(headingRecipient);
 			});
 
 
