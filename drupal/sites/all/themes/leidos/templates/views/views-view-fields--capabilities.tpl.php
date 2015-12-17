@@ -1,14 +1,14 @@
 <?php if ($fields['field_hide_hover']->content && $fields['field_hide_preview_box']->content) { ?>
-  <a href="<?php print $fields['field_redirect']->content; ?>">
-    <div class="sliding-box hide-<?php print $fields['field_hide_preview_box']->content; ?>">
+  <div class="sliding-box hide-<?php print $fields['field_hide_preview_box']->content; ?>">
+    <a href="<?php print $fields['field_redirect']->content; ?>">
       <div class="inner">
         <div class="header-box" style="background-color: <?php print $fields['field_top_color']->content; ?>;">
           <h2><span><?php print $fields['name']->content; ?></span></h2>
         </div>
         <div class="image-box"><?php print $fields['field_taxonomy_image']->content; ?></div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 <?php } else { ?>
   <div class="sliding-box hide-<?php print $fields['field_hide_preview_box']->content; ?>">
     <div class="inner">

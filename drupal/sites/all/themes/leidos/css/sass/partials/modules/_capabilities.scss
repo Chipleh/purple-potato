@@ -430,20 +430,16 @@
 				}
 			}
 
-			.click-box-content {
-				display: none;
-			}
-		}
-	}
-
-	a {
-		.sliding-box {
-			&.hide-1 {
+			a {
 				.inner {
 					.image-box {
 						cursor: pointer;
 					}
 				}
+			}
+
+			.click-box-content {
+				display: none;
 			}
 		}
 	}
