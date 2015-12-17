@@ -164,7 +164,7 @@
 
 			.project-title {
 				display: block;
-				line-height: 14px;
+				line-height: 12px;
 				margin: 0;
 				max-height: 150px;
 				overflow: hidden;
@@ -224,6 +224,7 @@
 					font-size: 12px;
 					padding: 0 0 6px;
 					color: $color-black;
+					line-height: 14px;
 
 					p {
 						margin: 0;
