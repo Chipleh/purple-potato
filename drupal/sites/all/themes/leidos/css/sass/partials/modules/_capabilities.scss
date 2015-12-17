@@ -438,8 +438,12 @@
 
 	a {
 		.sliding-box {
-			.image-box {
-				cursor: pointer;
+			&.hide-1 {
+				.inner {
+					.image-box {
+						cursor: pointer;
+					}
+				}
 			}
 		}
 	}
