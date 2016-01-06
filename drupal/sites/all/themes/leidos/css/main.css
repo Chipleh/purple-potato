@@ -913,6 +913,11 @@ hr.simple {
   display: none;
 }
 
+/* line 75, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+p.subtext {
+  font-size: 11px;
+}
+
 /*  tablet
 **************************************************/
 /*  mobile
