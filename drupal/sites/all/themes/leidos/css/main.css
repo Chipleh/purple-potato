@@ -913,7 +913,8 @@ hr.simple {
   display: none;
 }
 
-/* line 75, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+/* subtext style for opten html use */
+/* line 76, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
 p.subtext {
   font-size: 11px;
 }
@@ -3106,6 +3107,7 @@ p.subtext {
   display: block;
   margin: 0 0 20px;
   overflow: hidden;
+  /* bullet styling */
 }
 /* line 17, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
 .pane-bundle-content .field-name-field-header-title,
@@ -3145,13 +3147,52 @@ p.subtext {
 .pane-bundle-elements-panel-pane p {
   line-height: 23px;
 }
+/* line 53, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
+.pane-bundle-content ul,
+.pane-bundle-content ol,
+.pane-bundle-elements-panel-pane ul,
+.pane-bundle-elements-panel-pane ol {
+  margin: 1em 0;
+  padding: 0 0 0.25em 2.5em;
+  /* LTR */
+  list-style: none;
+}
+/* line 59, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
+.pane-bundle-content ul li,
+.pane-bundle-content ol li,
+.pane-bundle-elements-panel-pane ul li,
+.pane-bundle-elements-panel-pane ol li {
+  position: relative;
+}
+/* line 65, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
+.pane-bundle-content ul li:before,
+.pane-bundle-elements-panel-pane ul li:before {
+  content: "\002022";
+  color: #850f88;
+  position: absolute;
+  left: -17px;
+}
+/* line 73, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
+.pane-bundle-content ol,
+.pane-bundle-elements-panel-pane ol {
+  counter-reset: li;
+}
+/* line 76, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
+.pane-bundle-content ol li:before,
+.pane-bundle-elements-panel-pane ol li:before {
+  content: counter(li) ".";
+  counter-increment: li;
+  color: #850f88;
+  position: absolute;
+  left: -22px;
+}
 
 /*  tablet
 **************************************************/
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-  /* line 66, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
+  /* line 99, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_content.scss */
   .pane-bundle-content .pane-content .field-type-image,
   .pane-bundle-elements-panel-pane .pane-content .field-type-image {
     float: none;
