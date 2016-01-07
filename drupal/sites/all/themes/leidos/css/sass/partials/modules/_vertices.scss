@@ -23,7 +23,7 @@
 				left: 0;
 				position: absolute;
 				top: 0;
-				width: 67.5872%;
+				width: 67.5%;
 			}
 
 			#theme-banner-div-right {
@@ -33,7 +33,7 @@
 				position: absolute;
 				right: 0;
 				top: 0;
-				width: 32.4127%;
+				width: 33.5%;
 			}
 
 			.panel-separator {
@@ -205,12 +205,12 @@
 				}
 
 				.pane-page-title { 
-					height: 40px;
+					height: 86px;
 					margin-left: 20px;
 
 					h1 {
-						height: 40px;
-						font-size: 16px;
+						height: 86px;
+						font-size: 22px;
 					}
 				}
 			}
@@ -268,16 +268,16 @@
 					height: 100px;
 				}
 
-				.pane-page-title { 
-					height: 40px;
-					margin-left: 20px;
-					margin-top: 2px;
+				// .pane-page-title { 
+				// 	height: 40px;
+				// 	margin-left: 20px;
+				// 	margin-top: 2px;
 
-					h1 {
-						height: 40px;
-						font-size: 16px;
-					}
-				}
+				// 	h1 {
+				// 		height: 40px;
+				// 		font-size: 16px;
+				// 	}
+				// }
 			}
 		}
 	}
