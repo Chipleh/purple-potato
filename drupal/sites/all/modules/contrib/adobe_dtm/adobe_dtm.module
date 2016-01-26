@@ -1,0 +1,221 @@
+<?php
+/**
+ * @file
+ * Hooks for Adobe DTM.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function adobe_dtm_menu() {
+  $items = array();
+
+  $items['admin/config/system/adobe-dtm'] = array(
+    'title' => 'Adobe DTM',
+    'description' => 'Configure <em>Adobe DTM</em>.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('adobe_dtm_settings'),
+    'file' => 'adobe_dtm.admin.inc',
+    'access arguments' => array('administer adobe dtm'),
+  );
+  return $items;
+}
+/**
+ * Implements hook_permission().
+ */
+function adobe_dtm_permission() {
+  return array(
+    'administer adobe dtm' => array(
+      'title' => t('Administer Adobe DTM'),
+      'description' => t('Administer Adobe DTM settings for Staging and Production environments.'),
+      'restrict access' => TRUE,
+    ),
+  );
+}
+/**
+ * Implements hook_forms().
+ */
+function adobe_dtm_forms($form_id, $arg) {
+  return array(
+    'adobe_dtm_settings' => array(
+      'callback' => 'adobe_dtm_settings',
+    ),
+  );
+}
+/**
+ * Implements hook_page_build().
+ *
+ * Inserts the main script tag via drupal_add_js() or drupal_add_html_head().
+ */
+function adobe_dtm_page_build(&$page) {
+  $environment = variable_get('adobe_dtm_environment', 'staging');
+  $script = adobe_dtm_script_src($environment);
+
+  // Do not include Adobe DTM script on admin pages.
+  if ($script && !path_is_admin(current_path())) {
+    // Add main script into <head>.
+    $placement = variable_get('adobe_dtm_placement', 'default');
+    if ($placement == 'default') {
+      drupal_add_js($script, array(
+        'type' => 'external',
+        'scope' => 'header',
+        'preprocess' => FALSE,
+        // Note this is the lowest-weighted group, 
+        // helping sort it before others.
+        'group' => JS_LIBRARY,
+        // This also contributes to sorting it before others.
+        'every_page' => TRUE,
+      ));
+    }
+    else {
+      $inline_script = <<<EOL
+        <!--// DTM //--><script id="adobe_dtm" type="text/javascript" src="$script"></script>\n
+EOL;
+      $element = array(
+        '#type' => 'markup',
+        '#markup' => $inline_script,
+      );
+      drupal_add_html_head($element, 'adobe_dtm');
+    }
+
+    // Add end-of-page snippet into page_bottom region.
+    // @see template_process_html()
+    drupal_add_js('_satellite.pageBottom();', array(
+      'type' => 'inline',
+      'scope' => 'footer',
+      // This group is not technically/semantically correct, but we use the
+      // highest-weighted option because we want this to go last.
+      'group' => JS_THEME,
+      'every_page' => TRUE,
+      'preprocess' => FALSE,
+    ));
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ *
+ * Make our 3 alter implementations below happen last (out of all modules'
+ * implementations), to give us maximum control over setting the weights of
+ * these scripts.
+ * NOTE: themes may implement these alter hooks too; those are outside the
+ * control of this hook, and so will always happen afterward.
+ */
+function adobe_dtm_module_implements_alter(&$impl, $hook) {
+  if (in_array($hook, array('js_alter', 'html_head_alter'))) {
+    $group = $impl['adobe_dtm'];
+    unset($impl['adobe_dtm']);
+    $impl['adobe_dtm'] = $group;
+  }
+}
+
+/**
+ * Implements hook_js_alter().
+ *
+ * Attempts to place main script first in <head>, if it was added by
+ * drupal_add_js().
+ *
+ * Attempts to place inline snippet _satellite.pageBottom() just before </body>.
+ */
+function adobe_dtm_js_alter(&$js) {
+
+  // This hook runs before sorting, so all we can do is ensure desired weights.
+  // Note that 'group' and 'every_page' flags apply *before* weight.
+  // @see drupal_sort_css_js()
+  $adobe_dtm_main_key = '';
+  $adobe_dtm_footer_key = '';
+  $lowest_weight = NULL;
+  $highest_weight = NULL;
+
+  foreach ($js as $key => $info) {
+    if (strpos($key, '//assets.adobedtm.com/') === 0) {
+      $adobe_dtm_main_key = $key;
+    }
+    elseif ($info['type'] == 'inline' && strpos($info['data'], '_satellite.pageBottom();') !== FALSE) {
+      $adobe_dtm_footer_key = $key;
+    }
+
+    if (is_null($lowest_weight)) {
+      $lowest_weight = $info['weight'];
+    }
+    elseif ($info['weight'] < $lowest_weight) {
+      $lowest_weight = $info['weight'];
+    }
+
+    if (is_null($highest_weight)) {
+      $highest_weight = $info['weight'];
+    }
+    elseif ($info['weight'] > $highest_weight) {
+      $highest_weight = $info['weight'];
+    }
+  }
+
+  if (!empty($adobe_dtm_main_key)) {
+    $js[$adobe_dtm_main_key]['weight'] = $lowest_weight - 100;
+  }
+
+  if (!empty($adobe_dtm_footer_key)) {
+    $js[$adobe_dtm_footer_key]['weight'] = $highest_weight + 100;
+  }
+
+}
+/**
+ * Implements hook_html_head_alter().
+ *
+ * Attempts to place main script first in <head>, if it was added by
+ * drupal_add_html_head().
+ */
+function adobe_dtm_html_head_alter(&$head) {
+
+  if (!empty($head['adobe_dtm'])) {
+    // JS should not typically be added here, but try to check and place our
+    // script above any others.
+    $lowest_weight = NULL;
+
+    foreach (element_children($head) as $key) {
+      $tag_info = $head[$key];
+      if (is_array($tag_info) &&
+        ((!empty($tag_info['#tag']) && $tag_info['#tag'] == 'script')
+        || (!empty($tag_info['#markup']) && strpos($tag_info['#markup'], '<script') !== FALSE))) {
+        // If #weight not set, it's considered to be 0.
+        // @see element_sort()
+        $weight = isset($tag_info['#weight']) ? $tag_info['#weight'] : 0;
+        if (is_null($lowest_weight)) {
+          $lowest_weight = $weight;
+        }
+        elseif ($weight < $lowest_weight) {
+          $lowest_weight = $weight;
+        }
+      }
+    }
+
+    $head['adobe_dtm']['#weight'] = $lowest_weight - 100;
+
+    // Force re-sort so new weight applies.
+    $head['#sorted'] = FALSE;
+  }
+
+}
+/**
+ * Return a <script> string configured for either the stage or production environment
+ */
+function adobe_dtm_script_src($environment) {
+  $script = '';
+  $adobe_dtm = variable_get('adobe_dtm_id', '');
+  $site_hash = variable_get('adobe_dtm_hash', '');
+  switch ($environment) {
+    case 'production':
+      if ($adobe_dtm && $site_hash) {
+        $script = '//assets.adobedtm.com/' . $adobe_dtm . '/satelliteLib-' . $site_hash . '.js';
+      }
+      break;
+
+    case 'staging':
+      if ($adobe_dtm && $site_hash) {
+        $script = '//assets.adobedtm.com/' . $adobe_dtm . '/satelliteLib-' . $site_hash . '-staging.js';
+      }
+      break;
+
+  }
+  return $script;
+}

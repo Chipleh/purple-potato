@@ -1,0 +1,70 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the adobe_dtm module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function adobe_dtm_requirements($phase) {
+  $environment = variable_get('adobe_dtm_environment', 'staging');
+  $requirements = array();
+  $t = get_t();
+  $adobe_dtm = variable_get('adobe_dtm_id', '');
+  $site_hash = variable_get('adobe_dtm_hash', '');
+  switch ($environment) {
+    case 'production':
+      if (empty($adobe_dtm)) {
+        $requirements['adobe_dtm']['description'] = $t('Adobe DTM is configured for the production environment, but no ID has been configured.');
+        $requirements['adobe_dtm']['value'] = 'Adobe DTM ID missing';
+      }
+      if (empty($site_hash)) {
+        $requirements['adobe_dtm']['description'] = $t('Adobe DTM is configured for the production environment, but no hash value has been configured.');
+        $requirements['adobe_dtm']['value'] = 'Adobe DTM hash missing';
+      }
+      break;
+
+    case 'staging':
+      if (empty($adobe_dtm)) {
+        $requirements['adobe_dtm']['description'] = $t('Adobe DTM is configured for the staging environment, but no ID has been configured.');
+        $requirements['adobe_dtm']['value'] = 'Adobe DTM ID missing';
+      }
+      if (empty($site_hash)) {
+        $requirements['adobe_dtm']['description'] = $t('Adobe DTM is configured for the staging environment, but no hash value has been configured.');
+        $requirements['adobe_dtm']['value'] = 'Adobe DTM hash missing';
+      }
+      break;
+  }
+  if ($requirements) {
+    $requirements['adobe_dtm']['title'] = $t('Adobe DTM');
+    $requirements['adobe_dtm']['severity'] = REQUIREMENT_WARNING;
+    $requirements['adobe_dtm']['description'] .= ' ' . $t('Please visit the !link page.', array('!link' => l($t('configuration'), 'admin/config/system/adobe-dtm')));
+  }
+  return $requirements;
+}
+/**
+ * Implements hook_uninstall().
+ */
+function adobe_dtm_uninstall() {
+  // Remove variables.
+  variable_del('adobe_dtm_id');
+  variable_del('adobe_dtm_hash');
+  variable_del('adobe_dtm_environment');
+  variable_del('adobe_dtm_placement');
+}
+/**
+ * Drops the differing dtm_id and dtm_hash for production and staging.
+ *
+ * According to Adobe, these are always the same in production and staging.
+ */
+function adobe_dtm_update_7101(&$sandbox) {
+  $dtm_id = variable_get('adobe_dtm_production_id', '');
+  $dtm_hash = variable_get('adobe_dtm_production_hash', '');
+  variable_set('adobe_dtm_id', $dtm_id);
+  variable_set('adobe_dtm_hash', $dtm_hash);
+  variable_del('adobe_dtm_production_id');
+  variable_del('adobe_dtm_production_hash');
+  variable_del('adobe_dtm_staging_id');
+  variable_del('adobe_dtm_staging_hash');
+}

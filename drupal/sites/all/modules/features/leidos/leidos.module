@@ -29,7 +29,6 @@ function leidos_form_alter(&$form, &$form_state, $form_id) {
     $form['categories']['#default_value'] = 'Industry-Template';
     $form['layout']['Industry-Template']['flexible:industry_template']['#default_value'] = 'flexible:industry_template';
     unset($form['categories']['#options']['Builders']);
-    unset($form['categories']['#options']['Columns-1']);
     unset($form['categories']['#options']['Columns-2']);
     unset($form['categories']['#options']['Columns-3']);
   }
@@ -129,3 +128,15 @@ function leidos_sort_capabilities($arguments = array()) {
   // Return the map for use by the capabilities view.
   return $sort_map;
 }
+
+/*
+function leidos_preprocess(&$vars, $hook) {
+  $element = $vars['elements'];
+  if ($element['#entity_type'] == 'fieldable_panels_pane') {
+    $entity_type = $element['#entity_type'];
+    $bundle = $element['#bundle'];
+    $view_mode = $element['#view_mode'];
+    //dpm($vars);
+  }
+}
+*/

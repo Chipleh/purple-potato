@@ -1,0 +1,5 @@
+name = Adobe DTM Module
+description = Administer Adobe DTM settings for Staging and Production environments
+core = 7.x
+package = Statistics
+configure = admin/config/system/adobe-dtm
