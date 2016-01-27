@@ -29,6 +29,7 @@ function panels_curator_settings_form() {
       $regions[$key] = $region . ' (' . $layout['title'] . ')';
     }
   }
+  $override = variable_get('panels_curator_override_displays', FALSE);
   $categories = variable_get('panels_curator_categories', '');
   $categories = array_filter(explode(',', $categories));
   if (empty($categories)) {
@@ -130,6 +131,18 @@ function panels_curator_settings_form() {
     );
   }
 
+  $form['default_displays'] = array(
+    '#title' => t('Default panelizer display templates'),
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+  );
+  $form['default_displays']['override_displays'] = array(
+    '#title' => t('Override panelizer default display automatically'),
+    '#description' => t('Checking this box will create a new display and panel duplicates for each new panelized node.'),
+    '#type' => 'checkbox',
+    '#default_value' => $override,
+  );
+
   $form['#submit'][] = 'panels_curator_settings_form_submit';
 
   return system_settings_form($form);
@@ -217,4 +230,5 @@ function panels_curator_settings_form_submit($form, &$form_state) {
     }
     variable_set('panels_curator_regions_' . $group, implode(',', $region_mappings));
   }
+  variable_set('panels_curator_override_displays', $form_state['values']['override_displays']);
 }
