@@ -115,6 +115,9 @@ function panels_curator_preprocess_page(&$vars) {
             if ($subtype == 'fpid') {
               // Clone the FPP object.
               $fpp = fieldable_panels_panes_load($fpid);
+              if (!isset($fpp->fpid)) {
+                continue;
+              }
 
               // Clean the some basic settings.
               $fpp->fpid = NULL;
