@@ -1717,14 +1717,6 @@ function panelizer_form_panels_ipe_edit_control_form_alter(&$form, &$form_state)
         '#id' => 'panelizer-ipe-revert',
         '#access' => $handler->panelizer_access('defaults', $entity, $panelizer->view_mode),
       );
-      $form['buttons']['show_default'] = array(
-        '#type' => 'submit',
-        '#value' => t('View @bundle_name default', array('@bundle_name' => $entity_info['bundles'][$bundle]['label'])),
-        '#submit' => array('panels_ipe_redirect_to_default'),
-        '#attributes' => array('class' => array('panels-ipe-cancel')),
-        '#id' => 'panelizer-ipe-revert',
-        '#access' => $handler->panelizer_access('defaults', $entity, $panelizer->view_mode),
-      );
     }
     return;
   }
@@ -1899,21 +1891,6 @@ function panels_ipe_revert_to_default($form, &$form_state) {
   $display->context = $handler->get_contexts($panelizer, $entity);
 
   $renderer->commands[] = ajax_command_replace("#panels-ipe-display-{$renderer->clean_key}", panels_render_display($display, $renderer));
-}
-
-/**
- * Submit handler to revert to the default panelizer.
- */
-function panels_ipe_redirect_to_default($form, &$form_state) {
-  // Reduce code complexity due to indirection.
-  $handler = $form_state['panelizer handler'];
-  $entity = $form_state['panelizer entity'];
-  $bundle = $form_state['panelizer bundle'];
-  $view_mode = $form_state['panelizer view_mode'];
-  $renderer = $form_state['renderer'];
-  $default_template = variable_get('panels_curator_display_' . $bundle);
-  dpm($default_value, 'default');
-  //drupal_goto('node/' . $default_template);
 }
 
 /**

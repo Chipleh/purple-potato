@@ -1563,8 +1563,6 @@ abstract class PanelizerEntityDefault implements PanelizerEntityInterface {
   }
 
   public function hook_entity_insert($entity) {
-    //ctools_include('plugins', 'panels');
-    //include '/var/www/leidos/drupal/sites/all/modules/contrib/panels/panels.module';
     list($entity_id, $revision_id, $bundle) = entity_extract_ids($this->entity_type, $entity);
     if (!$this->is_panelized($bundle)) {
       return;
@@ -1627,25 +1625,6 @@ abstract class PanelizerEntityDefault implements PanelizerEntityInterface {
       if (empty($panelizer->view_mode)) {
         $panelizer->view_mode = $view_mode;
       }
-
-      // Make sure to duplicate the new panels, so they can be edited.
-      /*
-      $replicants = array();
-      //dpm($panelizer, 'panelizer-1');
-      foreach ($panelizer->display->panels as $region_key => $region) {
-        foreach ($panelizer->display->panels[$region_key] as $panel_key => $pid) {
-          //$replicant = duplicate_pane($pid);
-          //$replicant = clone_pane($pid);
-
-          //panels_new_pane($type, $subtype, $set_defaults = FALSE);
-
-          ///$panelizer->display->panels[$region_key][$panel_key] = $replicant->pid;
-          //$replicants[$replicant->pid] = $replicant;
-        }
-      }
-      //$panelizer->display->content = $replicants;
-      //dpm($panelizer, 'panelizer-2');
-      */
 
       // And write the new record.
       drupal_write_record('panelizer_entity', $panelizer);
