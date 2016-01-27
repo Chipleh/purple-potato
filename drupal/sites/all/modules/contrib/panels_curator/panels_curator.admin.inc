@@ -66,9 +66,9 @@ function panels_curator_settings_form() {
       $category = variable_get('panels_curator_' . $key, '');
       $category = unserialize($category);
     }
-    $category_title = check_plain($category['title']) . ' (' . count($category['content']) . ')';
+    $category_title = $category['title'] . ' (' . count($category['content']) . ')';
     $form[$key] = array(
-      '#title' => $category_title,
+      '#title' => check_plain($category_title),
       '#type' => 'fieldset',
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
@@ -90,14 +90,14 @@ function panels_curator_settings_form() {
     );
     foreach ($category['content'] as $content) {
       $form[$key][$content['title']] = array(
-        '#title' => $content['title'],
+        '#title' => check_plain($content['title']),
         '#type' => 'select',
         '#options' => $options,
         '#default_value' => $key,
       );
       // Store the serialized data in a hidden variable.
       $form['hidden_' . $content['title']] = array(
-        '#title' => $content['title'],
+        '#title' => check_plain($content['title']),
         '#type' => 'hidden',
         '#default_value' => $key,
         '#value' => serialize($content),
@@ -117,14 +117,14 @@ function panels_curator_settings_form() {
     }
     $panel_title = $types[$type['group']][$type['panel']]['title'];
     $form[$group][$panel_title] = array(
-      '#title' => $panel_title,
+      '#title' => check_plain($panel_title),
       '#type' => 'select',
       '#options' => $options,
       '#default_value' => $group,
     );
     // Store the serialized data in a hidden variable.
     $form['hidden_' . $panel_title] = array(
-      '#title' => $panel_title,
+      '#title' => check_plain($panel_title),
       '#type' => 'hidden',
       '#default_value' => $group,
       '#value' => serialize($types[$type['group']][$type['panel']]),
@@ -180,7 +180,7 @@ function panels_curator_settings_form_submit($form, &$form_state) {
   }
   // Create a new group.
   if (!empty($form_state['values']['custom_group'])) {
-    $group_title = preg_replace('@[^a-z0-9-]+@','-', strtolower($form_state['values']['custom_group']));
+    $group_title = preg_replace('@[^a-z0-9-]+@', '-', strtolower($form_state['values']['custom_group']));
     $categories[$group_title] = array(
       'title' => $form_state['values']['custom_group'],
       'content' => array(),
