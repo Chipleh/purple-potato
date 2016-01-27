@@ -149,7 +149,7 @@ function panels_curator_preprocess_page(&$vars) {
 /**
  * Implements hook_form_alter().
  *
- * Alter the IPE save control form to handle extra Panelizer functionality.
+ * Alter the IPE save control form to handle extra panels curator functionality.
  */
 function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_state) {
   // Add custom submit buttons based on current node and default template status.
