@@ -101,36 +101,42 @@ function panels_curator_preprocess_page(&$vars) {
     $default_display = variable_get('panels_curator_display_' . $vars['node']->type, 0);
     // If the current node is not the default template, use new duplicate panels and a new display.
     if (empty($vars['node']->panelizer[$view_mode]->did) && $vars['node']->nid != $default_display) {
-      $new_display = panels_save_display($display);
-      $vars['node']->panelizer[$view_mode]->display = &$new_display;
-      foreach ($vars['node']->panelizer[$view_mode]->display->content as &$pane) {
-        // Clone each FPP and then assign the new fpid.
-        if ($pane->type == 'fieldable_panels_pane') {
-          list($subtype, $fpid) = explode(':', $pane->subtype);
-          if ($subtype == 'fpid') {
-            // Clone the FPP object.
-            $fpp = fieldable_panels_panes_load($fpid);
+      // Set the default template node if it is not already set.
+      if (empty($default_display)) {
+        variable_set('panels_curator_display_' . $vars['node']->type, $vars['node']->nid);
+      }
+      else {
+        $new_display = panels_save_display($display);
+        $vars['node']->panelizer[$view_mode]->display = &$new_display;
+        foreach ($vars['node']->panelizer[$view_mode]->display->content as &$pane) {
+          // Clone each FPP and then assign the new fpid.
+          if ($pane->type == 'fieldable_panels_pane') {
+            list($subtype, $fpid) = explode(':', $pane->subtype);
+            if ($subtype == 'fpid') {
+              // Clone the FPP object.
+              $fpp = fieldable_panels_panes_load($fpid);
 
-            // Clean the some basic settings.
-            $fpp->fpid = NULL;
-            $fpp->created = NULL;
-            $fpp->timestamp = NULL;
+              // Clean the some basic settings.
+              $fpp->fpid = NULL;
+              $fpp->created = NULL;
+              $fpp->timestamp = NULL;
 
-            // Save the cloned FPP.
-            $newfpp = fieldable_panels_panes_save($fpp);
+              // Save the cloned FPP.
+              $newfpp = fieldable_panels_panes_save($fpp);
 
-            // Update the FPP reference.
-            $pane->subtype = 'fpid:' . $newfpp->fpid;
+              // Update the FPP reference.
+              $pane->subtype = 'fpid:' . $newfpp->fpid;
+            }
           }
         }
+        // Save and map the new display/panels to the node.
+        $vars['node']->panelizer[$view_mode]->display_is_modified = TRUE;
+        node_save($vars['node']);
+        ctools_include('object-cache');
+        ctools_object_cache_clear('panels_node_display_cache', $vars['node']->nid);
+        // Reload the current page so that the panel IDs are accurate.
+        drupal_goto(current_path());
       }
-      // Save and map the new display/panels to the node.
-      $vars['node']->panelizer[$view_mode]->display_is_modified = TRUE;
-      node_save($vars['node']);
-      ctools_include('object-cache');
-      ctools_object_cache_clear('panels_node_display_cache', $vars['node']->nid);
-      // Reload the current page so that the panel IDs are accurate.
-      drupal_goto(current_path());
     }
   }
 }

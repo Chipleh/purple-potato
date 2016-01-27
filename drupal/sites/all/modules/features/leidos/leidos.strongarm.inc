@@ -760,6 +760,13 @@ function leidos_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panels_curator_override_displays';
+  $strongarm->value = 1;
+  $export['panels_curator_override_displays'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panels_curator_page-elements';
   $strongarm->value = 'a:2:{s:5:"title";s:13:"Page elements";s:7:"content";a:0:{}}';
   $export['panels_curator_page-elements'] = $strongarm;
@@ -803,7 +810,7 @@ function leidos_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panels_curator_regions_leidos';
-  $strongarm->value = 'center,right_rail';
+  $strongarm->value = 'right_rail,middle';
   $export['panels_curator_regions_leidos'] = $strongarm;
 
   $strongarm = new stdClass();
