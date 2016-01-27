@@ -26,6 +26,9 @@ function leidos_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
+  if ($module == "panelizer" && $api == "panelizer") {
+    return array("version" => "1");
+  }
   if ($module == "panels" && $api == "layouts") {
     return array("version" => "1");
   }
@@ -161,6 +164,22 @@ function leidos_image_default_styles() {
     ),
   );
 
+  // Exported image style: square_thumbnail.
+  $styles['square_thumbnail'] = array(
+    'label' => 'square_thumbnail',
+    'effects' => array(
+      10 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 180,
+          'height' => 180,
+          'weight' => 0,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
@@ -173,6 +192,14 @@ function leidos_node_info() {
       'name' => t('Announcement'),
       'base' => 'node_content',
       'description' => t('Global news item content type that can be categorized using taxonomy.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'flexible_page' => array(
+      'name' => t('Flexible page'),
+      'base' => 'node_content',
+      'description' => '',
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
