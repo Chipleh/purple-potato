@@ -91,7 +91,11 @@ function panels_curator_form_alter(&$form, &$form_state, $form_id) {
  */
 function panels_curator_preprocess_page(&$vars) {
   // Check for panelizer default template settings.
-  if (isset($vars['node']->panelizer) && variable_get('panels_curator_override_displays', FALSE)) {
+  if (
+    isset($vars['node']->panelizer) &&
+    isset($vars['node']->panelizer_view_mode) &&
+    variable_get('panels_curator_override_displays', FALSE)
+  ) {
     $view_mode = $vars['node']->panelizer_view_mode;
     $display = !empty($vars['node']->panelizer) ? $vars['node']->panelizer[$view_mode]->display : FALSE;
     $default_display = variable_get('panels_curator_display_' . $vars['node']->type, 0);
