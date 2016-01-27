@@ -725,7 +725,7 @@ hr {
 #content .section .content-container .panels-flexible-column.right-container,
 #content .content .content-container .panels-flexible-column.right-container {
   float: right;
-  min-height: calc(100vh - 358px);
+  min-height: calc(100vh - 126px);
   width: calc(100% - 240px);
 }
 /* line 108, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_layout.scss */
