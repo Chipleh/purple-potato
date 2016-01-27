@@ -139,4 +139,46 @@ function panels_curator_preprocess_page(&$vars) {
       }
     }
   }
+  // Add css and js for IPE enhancements.
+  if (isset($vars['node']->panelizer) && user_access('use panels in place editing')) {
+    drupal_add_css(drupal_get_path('module', 'panels_curator') . '/css/panels_curator.css');
+    drupal_add_js(drupal_get_path('module', 'panels_curator') . '/js/panels_curator.js', array('group' => JS_LIBRARY));
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Alter the IPE save control form to handle extra Panelizer functionality.
+ */
+function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_state) {
+  // Add custom submit buttons based on current node and default template status.
+  if (isset($form_state['panelizer entity'])) {
+    if (isset($form_state['panelizer entity']->nid)) {
+      $default_display = variable_get('panels_curator_display_' . $form_state['panelizer bundle'], 0);
+      if ($form_state['panelizer entity']->nid == $default_display) {
+        unset($form['buttons']['submit']);
+      }
+      else {
+        // Add a new button that redirects to the default node template for this bundle.
+        $redirect_url = url('/node/' . $default_display);
+        drupal_add_js(array('panelizer' => array('view_default_url' => $redirect_url)), 'setting');
+        $form['buttons']['view_default'] = array(
+          '#type' => 'submit',
+          '#value' => t('View default template'),
+          '#attributes' => array(
+            'class' => array(
+              'panels-ipe-view-default'
+            )
+          ),
+          '#id' => 'panels-ipe-default',
+          '#access' => TRUE,
+        );
+      }
+      // Hide the revision checkbox.
+      if (isset($form['revision_information'])) {
+        unset($form['revision_information']);
+      }
+    }
+  }
 }
