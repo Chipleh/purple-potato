@@ -141,11 +141,11 @@ function panels_curator_preprocess_page(&$vars) {
         drupal_goto(current_path());
       }
     }
-  }
-  // Add css and js for IPE enhancements.
-  if (isset($vars['node']->panelizer) && user_access('use panels in place editing')) {
-    drupal_add_css(drupal_get_path('module', 'panels_curator') . '/css/panels_curator.css');
-    drupal_add_js(drupal_get_path('module', 'panels_curator') . '/js/panels_curator.js', array('group' => JS_LIBRARY));
+    // Add css and js for IPE enhancements.
+    if (isset($vars['node']->panelizer) && user_access('use panels in place editing')) {
+      drupal_add_css(drupal_get_path('module', 'panels_curator') . '/css/panels_curator.css');
+      drupal_add_js(drupal_get_path('module', 'panels_curator') . '/js/panels_curator.js', array('group' => JS_LIBRARY));
+    }
   }
 }
 
@@ -156,7 +156,10 @@ function panels_curator_preprocess_page(&$vars) {
  */
 function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_state) {
   // Add custom submit buttons based on current node and default template status.
-  if (isset($form_state['panelizer entity'])) {
+  if (
+    isset($form_state['panelizer entity']) &&
+    variable_get('panels_curator_override_displays', FALSE)
+  ) {
     if (isset($form_state['panelizer entity']->nid)) {
       $default_display = variable_get('panels_curator_display_' . $form_state['panelizer bundle'], 0);
       if ($form_state['panelizer entity']->nid == $default_display) {
