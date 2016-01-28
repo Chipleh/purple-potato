@@ -166,12 +166,13 @@ function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_s
         unset($form['buttons']['submit']);
       }
       else {
+        $form['buttons']['revert_default']['#value'] = t('Revert to default');
         // Add a new button that redirects to the default node template for this bundle.
         $redirect_url = url('node/' . $default_display);
         drupal_add_js(array('panelizer' => array('view_default_url' => $redirect_url)), 'setting');
         $form['buttons']['view_default'] = array(
           '#type' => 'submit',
-          '#value' => t('View default template'),
+          '#value' => t('Edit default template'),
           '#attributes' => array(
             'class' => array(
               'panels-ipe-view-default'
