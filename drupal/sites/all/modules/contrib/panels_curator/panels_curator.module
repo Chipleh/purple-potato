@@ -167,7 +167,8 @@ function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_s
       }
       else {
         // Add a new button that redirects to the default node template for this bundle.
-        $redirect_url = url('/node/' . $default_display);
+        $redirect_url = url('node/' . $default_display);
+        dpm($redirect_url);
         drupal_add_js(array('panelizer' => array('view_default_url' => $redirect_url)), 'setting');
         $form['buttons']['view_default'] = array(
           '#type' => 'submit',
