@@ -78,6 +78,13 @@ function panels_curator_preprocess_panels_add_content_modal(&$vars) {
  * Implements hook_form_alter().
  */
 function panels_curator_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
+    $entity_id = $form['#entity']->fpid;
+    $form['revision']['view_revisions'] = array(
+      '#type' => 'item',
+      '#markup' => l(t('View all panel revisions &raquo;'), 'admin/structure/fieldable-panels-panes/view/' . $entity_id . '/revision', array('html' => TRUE))
+    );
+  }
   if (isset($form['reusable'])) {
     // Force re-usable panels into one group.
     $form['reusable']['category']['#disabled'] = TRUE;
