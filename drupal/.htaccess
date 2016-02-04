@@ -140,6 +140,8 @@ DirectoryIndex index.php index.html index.htm
       Header append Vary Accept-Encoding
     </FilesMatch>
     # Header origin allow for fonts.
-    Header add Access-Control-Allow-Origin "https://www.leidos.com"
+    #Header add Access-Control-Allow-Origin "https://www.leidos.com"
+    # TODO: Remove this in favor of a more locked-down list of origins.
+    Header set Access-Control-Allow-Origin "*"
   </IfModule>
 </IfModule>
