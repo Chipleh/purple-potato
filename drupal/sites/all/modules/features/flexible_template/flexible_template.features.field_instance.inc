@@ -732,15 +732,19 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_disable_lightbox_on_event'
-  $field_instances['field_collection_item-field_thumbnail_image_item-field_disable_lightbox_on_event'] = array(
+  // 'field_collection_item-field_thumbnail_image_item-field_disable_lightbox_on_click'
+  $field_instances['field_collection_item-field_thumbnail_image_item-field_disable_lightbox_on_click'] = array(
     'bundle' => 'field_thumbnail_image_item',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -749,7 +753,7 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_disable_lightbox_on_event',
+    'field_name' => 'field_disable_lightbox_on_click',
     'label' => 'Disable lightbox on click',
     'required' => 0,
     'settings' => array(
@@ -758,8 +762,10 @@ function flexible_template_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
       'weight' => 8,
     ),
   );
@@ -1888,6 +1894,45 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'fieldable_panels_pane-multi_column_parallax-field_columns_multi'
+  $field_instances['fieldable_panels_pane-multi_column_parallax-field_columns_multi'] = array(
+    'bundle' => 'multi_column_parallax',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_columns_multi',
+    'label' => 'Columns',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
   // 'fieldable_panels_pane-rotator_hero-field_module_height'
   $field_instances['fieldable_panels_pane-rotator_hero-field_module_height'] = array(
     'bundle' => 'rotator_hero',
@@ -2359,7 +2404,107 @@ function flexible_template_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-flexible_template-field_display_footer'
+  $field_instances['node-flexible_template-field_display_footer'] = array(
+    'bundle' => 'flexible_template',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_display_footer',
+    'label' => 'Display footer',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-flexible_template-field_display_header'
+  $field_instances['node-flexible_template-field_display_header'] = array(
+    'bundle' => 'flexible_template',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_display_header',
+    'label' => 'Display header',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 2,
     ),
   );
 
@@ -2937,6 +3082,8 @@ function flexible_template_field_default_field_instances() {
   t('Columns');
   t('Comment');
   t('Disable lightbox on click');
+  t('Display footer');
+  t('Display header');
   t('Grid Type');
   t('Icon item');
   t('Image');

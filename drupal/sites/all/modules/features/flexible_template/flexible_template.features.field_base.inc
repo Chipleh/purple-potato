@@ -120,13 +120,13 @@ function flexible_template_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_disable_lightbox_on_event'
-  $field_bases['field_disable_lightbox_on_event'] = array(
+  // Exported field_base: 'field_disable_lightbox_on_click'
+  $field_bases['field_disable_lightbox_on_click'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_disable_lightbox_on_event',
+    'field_name' => 'field_disable_lightbox_on_click',
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -135,11 +135,64 @@ function flexible_template_field_default_field_bases() {
     'locked' => 0,
     'module' => 'list',
     'settings' => array(
-      'allowed_values' => array(),
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
       'allowed_values_function' => '',
     ),
     'translatable' => 0,
-    'type' => 'list_float',
+    'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_display_footer'
+  $field_bases['field_display_footer'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_display_footer',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_display_header'
+  $field_bases['field_display_header'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_display_header',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_file_image_alt_text'

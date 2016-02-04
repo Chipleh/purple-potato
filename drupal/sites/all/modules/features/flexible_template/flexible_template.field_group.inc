@@ -33,12 +33,12 @@ function flexible_template_field_group_info() {
       7 => 'field_background_video',
       8 => 'field_background_mobile_image',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-general field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
@@ -67,17 +67,44 @@ function flexible_template_field_group_info() {
       6 => 'field_subhead_copy_size',
       7 => 'field_background_color',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-general field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
   );
   $export['group_general|fieldable_panels_pane|icons|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_general|fieldable_panels_pane|multi_column_parallax|form';
+  $field_group->group_name = 'group_general';
+  $field_group->entity_type = 'fieldable_panels_pane';
+  $field_group->bundle = 'multi_column_parallax';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Info',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_columns_multi',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-general field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_general|fieldable_panels_pane|multi_column_parallax|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -92,24 +119,14 @@ function flexible_template_field_group_info() {
     'label' => 'General Info',
     'weight' => '1',
     'children' => array(
-      0 => 'field_subhead_copy_color',
-      1 => 'field_subhead_copy_size',
-      2 => 'field_video_tout',
-      3 => 'field_background_color',
-      4 => 'field_background_image',
-      5 => 'field_cta',
-      6 => 'field_title_copy',
-      7 => 'field_subhead_copy',
-      8 => 'field_title_copy_color',
-      9 => 'field_title_copy_size',
-      10 => 'field_columns_multi',
+      0 => 'field_columns_multi',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-general field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
@@ -132,12 +149,12 @@ function flexible_template_field_group_info() {
       0 => 'field_rotator_slide',
       1 => 'field_module_height',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-general field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
@@ -167,12 +184,12 @@ function flexible_template_field_group_info() {
       7 => 'field_thumbnail_image_item',
       8 => 'field_grid_type',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-general field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
@@ -204,12 +221,12 @@ function flexible_template_field_group_info() {
       9 => 'field_title_copy_size',
       10 => 'field_title_copy_color',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-general field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
