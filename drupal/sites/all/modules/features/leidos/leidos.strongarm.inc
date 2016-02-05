@@ -684,7 +684,7 @@ function leidos_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panels_curator_categories';
-  $strongarm->value = 'activity,custom-blocks,display-suite,fielded-panes,menus,miscellaneous,optional-theme-elements,page-elements,root,view-panes,views,widgets,disabled,leidos,top-banner,navigation-menu,rotator,right-rail,open-html';
+  $strongarm->value = 'activity,custom-blocks,display-suite,fielded-panes,menus,miscellaneous,optional-theme-elements,page-elements,root,view-panes,views,widgets,disabled,leidos,top-banner,navigation-menu,rotator,right-rail,open-html,flexible-template';
   $export['panels_curator_categories'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -693,6 +693,13 @@ function leidos_strongarm() {
   $strongarm->name = 'panels_curator_custom-blocks';
   $strongarm->value = 'a:2:{s:5:"title";s:13:"Custom blocks";s:7:"content";a:0:{}}';
   $export['panels_curator_custom-blocks'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panels_curator_data_object';
+  $strongarm->value = 0;
+  $export['panels_curator_data_object'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -714,6 +721,20 @@ function leidos_strongarm() {
   $strongarm->name = 'panels_curator_fielded-panes';
   $strongarm->value = 'a:2:{s:5:"title";s:13:"Fielded panes";s:7:"content";a:0:{}}';
   $export['panels_curator_fielded-panes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panels_curator_flexible-template';
+  $strongarm->value = 'a:2:{s:5:"title";s:17:"Flexible template";s:7:"content";a:7:{s:13:"Feature_Video";a:12:{s:4:"name";s:13:"feature_video";s:5:"title";s:13:"Feature Video";s:8:"category";s:13:"Fielded panes";s:9:"top level";b:0;s:4:"icon";N;s:11:"description";s:27:"Create a new custom entity.";s:12:"all contexts";b:1;s:6:"bundle";s:13:"feature_video";s:21:"create content access";s:49:"fieldable_panels_panes_content_type_create_access";s:4:"path";s:70:"sites/all/modules/contrib/fieldable_panels_panes/plugins/content_types";s:9:"type_name";s:21:"fieldable_panels_pane";s:12:"subtype_name";s:13:"feature_video";}s:5:"Icons";a:12:{s:4:"name";s:5:"icons";s:5:"title";s:5:"Icons";s:8:"category";s:13:"Fielded panes";s:9:"top level";b:0;s:4:"icon";N;s:11:"description";s:27:"Create a new custom entity.";s:12:"all contexts";b:1;s:6:"bundle";s:5:"icons";s:21:"create content access";s:49:"fieldable_panels_panes_content_type_create_access";s:4:"path";s:70:"sites/all/modules/contrib/fieldable_panels_panes/plugins/content_types";s:9:"type_name";s:21:"fieldable_panels_pane";s:12:"subtype_name";s:5:"icons";}s:12:"Multi-column";a:12:{s:4:"name";s:12:"multi_column";s:5:"title";s:12:"Multi-column";s:8:"category";s:13:"Fielded panes";s:9:"top level";b:0;s:4:"icon";N;s:11:"description";s:27:"Create a new custom entity.";s:12:"all contexts";b:1;s:6:"bundle";s:12:"multi_column";s:21:"create content access";s:49:"fieldable_panels_panes_content_type_create_access";s:4:"path";s:70:"sites/all/modules/contrib/fieldable_panels_panes/plugins/content_types";s:9:"type_name";s:21:"fieldable_panels_pane";s:12:"subtype_name";s:12:"multi_column";}s:21:"Multi-column_Parallax";a:12:{s:4:"name";s:21:"multi_column_parallax";s:5:"title";s:21:"Multi-column Parallax";s:8:"category";s:13:"Fielded panes";s:9:"top level";b:0;s:4:"icon";N;s:11:"description";s:27:"Create a new custom entity.";s:12:"all contexts";b:1;s:6:"bundle";s:21:"multi_column_parallax";s:21:"create content access";s:49:"fieldable_panels_panes_content_type_create_access";s:4:"path";s:70:"sites/all/modules/contrib/fieldable_panels_panes/plugins/content_types";s:9:"type_name";s:21:"fieldable_panels_pane";s:12:"subtype_name";s:21:"multi_column_parallax";}s:14:"Rotator_/_Hero";a:12:{s:4:"name";s:12:"rotator_hero";s:5:"title";s:14:"Rotator / Hero";s:8:"category";s:13:"Fielded panes";s:9:"top level";b:0;s:4:"icon";N;s:11:"description";s:27:"Create a new custom entity.";s:12:"all contexts";b:1;s:6:"bundle";s:12:"rotator_hero";s:21:"create content access";s:49:"fieldable_panels_panes_content_type_create_access";s:4:"path";s:70:"sites/all/modules/contrib/fieldable_panels_panes/plugins/content_types";s:9:"type_name";s:21:"fieldable_panels_pane";s:12:"subtype_name";s:12:"rotator_hero";}s:17:"Thumbnail_Gallery";a:12:{s:4:"name";s:17:"thumbnail_gallery";s:5:"title";s:17:"Thumbnail Gallery";s:8:"category";s:13:"Fielded panes";s:9:"top level";b:0;s:4:"icon";N;s:11:"description";s:27:"Create a new custom entity.";s:12:"all contexts";b:1;s:6:"bundle";s:17:"thumbnail_gallery";s:21:"create content access";s:49:"fieldable_panels_panes_content_type_create_access";s:4:"path";s:70:"sites/all/modules/contrib/fieldable_panels_panes/plugins/content_types";s:9:"type_name";s:21:"fieldable_panels_pane";s:12:"subtype_name";s:17:"thumbnail_gallery";}s:10:"Image_list";a:10:{s:5:"title";s:10:"Image list";s:11:"description";s:0:"";s:8:"category";s:17:"Re-usable content";s:12:"all contexts";b:1;s:4:"icon";s:21:"icon_block_custom.png";s:4:"name";s:8:"fpid:113";s:9:"entity_id";s:8:"fpid:113";s:4:"path";s:70:"sites/all/modules/contrib/fieldable_panels_panes/plugins/content_types";s:9:"type_name";s:21:"fieldable_panels_pane";s:12:"subtype_name";s:8:"fpid:113";}}}';
+  $export['panels_curator_flexible-template'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panels_curator_hide_extras';
+  $strongarm->value = 1;
+  $export['panels_curator_hide_extras'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -805,6 +826,13 @@ function leidos_strongarm() {
   $strongarm->name = 'panels_curator_regions_fielded-panes';
   $strongarm->value = '';
   $export['panels_curator_regions_fielded-panes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panels_curator_regions_flexible-template';
+  $strongarm->value = 'center,middle';
+  $export['panels_curator_regions_flexible-template'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -903,6 +931,13 @@ function leidos_strongarm() {
   $strongarm->name = 'panels_curator_regions_widgets';
   $strongarm->value = '';
   $export['panels_curator_regions_widgets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panels_curator_reusable';
+  $strongarm->value = 'rotator-to-be-resued';
+  $export['panels_curator_reusable'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
