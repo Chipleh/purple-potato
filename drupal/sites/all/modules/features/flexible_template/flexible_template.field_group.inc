@@ -32,6 +32,7 @@ function flexible_template_field_group_info() {
       6 => 'field_cta',
       7 => 'field_background_video',
       8 => 'field_background_mobile_image',
+      9 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -66,6 +67,7 @@ function flexible_template_field_group_info() {
       5 => 'field_subhead_copy_color',
       6 => 'field_subhead_copy_size',
       7 => 'field_background_color',
+      8 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -93,6 +95,7 @@ function flexible_template_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_columns_multi',
+      1 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -120,6 +123,7 @@ function flexible_template_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_columns_multi',
+      1 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -148,6 +152,7 @@ function flexible_template_field_group_info() {
     'children' => array(
       0 => 'field_rotator_slide',
       1 => 'field_module_height',
+      2 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -183,6 +188,7 @@ function flexible_template_field_group_info() {
       6 => 'field_background_color',
       7 => 'field_thumbnail_image_item',
       8 => 'field_grid_type',
+      9 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

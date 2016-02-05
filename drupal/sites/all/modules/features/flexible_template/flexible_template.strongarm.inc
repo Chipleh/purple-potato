@@ -330,7 +330,7 @@ function flexible_template_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '6',
         ),
         'redirect' => array(
           'weight' => '2',
@@ -339,8 +339,8 @@ function flexible_template_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '-5',
-            'visible' => TRUE,
+            'weight' => '2',
+            'visible' => FALSE,
           ),
         ),
       ),

@@ -45,13 +45,15 @@ function flexible_template_ds_layout_settings_info() {
       'field_cta' => 'ds_content',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
+    'hide_sidebars' => 0,
   );
   $export['field_collection_item|field_columns_multi|default'] = $ds_layout;
 
@@ -224,13 +226,15 @@ function flexible_template_ds_layout_settings_info() {
       'field_background_mobile_image' => 'ds_content',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
+    'hide_sidebars' => 0,
   );
   $export['fieldable_panels_pane|feature_video|default'] = $ds_layout;
 
@@ -316,13 +320,11 @@ function flexible_template_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'title',
-        1 => 'field_rotator_slide',
-        2 => 'field_module_height',
+        0 => 'field_rotator_slide',
+        1 => 'field_module_height',
       ),
     ),
     'fields' => array(
-      'title' => 'ds_content',
       'field_rotator_slide' => 'ds_content',
       'field_module_height' => 'ds_content',
     ),
