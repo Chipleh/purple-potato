@@ -15,11 +15,19 @@ function panels_curator_settings_form() {
   $panels_renderer = new panels_renderer_editor;
   $types = panels_common_get_allowed_types('');
   $type_mapping = array();
-  foreach ($types as $group => $type) {
+  foreach ($types as $group => &$type) {
     foreach ($type as $key => $panel) {
       $type_mapping[$panel['title']] = array('group' => $group, 'panel' => $key);
+      if ($group == 'fieldable_panels_pane') {
+        // Make sure that the fieldable panels pane subtypes are set.
+        if (!isset($types[$group][$key]['type'])) {
+          $types[$group][$key]['type_name'] = 'fieldable_panels_pane';
+          $types[$group][$key]['subtype_name'] = $types[$group][$key]['name'];
+        }
+      }
     }
   }
+
   // Load all layouts and regions.
   $regions = array();
   $layouts = panels_get_layouts();
@@ -29,7 +37,7 @@ function panels_curator_settings_form() {
       $regions[$key] = $region . ' (' . $layout['title'] . ')';
     }
   }
-  $override = variable_get('panels_curator_override_displays', FALSE);
+
   $categories = variable_get('panels_curator_categories', '');
   $categories = array_filter(explode(',', $categories));
   if (empty($categories)) {
@@ -131,16 +139,32 @@ function panels_curator_settings_form() {
     );
   }
 
-  $form['default_displays'] = array(
-    '#title' => t('Default panelizer display templates'),
+  // Additional settings.
+  $override = variable_get('panels_curator_override_displays', FALSE);
+  $hide_extras = variable_get('panels_curator_hide_extras', FALSE);
+  $data_object = variable_get('panels_curator_data_object', FALSE);
+  $form['additional_settings'] = array(
+    '#title' => t('Additional settings'),
     '#type' => 'fieldset',
     '#collapsible' => TRUE,
   );
-  $form['default_displays']['override_displays'] = array(
+  $form['additional_settings']['override_displays'] = array(
     '#title' => t('Override panelizer default display automatically'),
     '#description' => t('Checking this box will create a new display and panel duplicates for each new panelized node.'),
     '#type' => 'checkbox',
     '#default_value' => $override,
+  );
+  $form['additional_settings']['hide_extras'] = array(
+    '#title' => t('Hide extra options for fieldable panels pane forms'),
+    '#description' => t('Checking this box will hide the "Make title a link" and "View mode" form options added by other modules.'),
+    '#type' => 'checkbox',
+    '#default_value' => $hide_extras,
+  );
+  $form['additional_settings']['data_object'] = array(
+    '#title' => t('Provide a clean canonical data object for fiedable panels pane templates'),
+    '#description' => t('Check this box if you want to provide front end developers with a simple "output" object in their pane templates.'),
+    '#type' => 'checkbox',
+    '#default_value' => $data_object,
   );
 
   $form['#submit'][] = 'panels_curator_settings_form_submit';
@@ -231,4 +255,6 @@ function panels_curator_settings_form_submit($form, &$form_state) {
     variable_set('panels_curator_regions_' . $group, implode(',', $region_mappings));
   }
   variable_set('panels_curator_override_displays', $form_state['values']['override_displays']);
+  variable_set('panels_curator_hide_extras', $form_state['values']['hide_extras']);
+  variable_set('panels_curator_data_object', $form_state['values']['data_object']);
 }

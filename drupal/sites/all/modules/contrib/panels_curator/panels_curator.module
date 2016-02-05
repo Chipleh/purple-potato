@@ -37,7 +37,7 @@ function panels_curator_preprocess_panels_add_content_modal(&$vars) {
         $regions = array_filter(explode(',', $regions));
         $category = variable_get('panels_curator_' . $key, '');
         $category = unserialize($category);
-        if (!empty($regions) && !in_array($vars['region'], $regions)) {
+        if (empty($regions) || !in_array($vars['region'], $regions)) {
           // Limit category groups to specific regions.
           continue;
         }
@@ -89,6 +89,15 @@ function panels_curator_form_alter(&$form, &$form_state, $form_id) {
         array('html' => TRUE)
       )
     );
+    // Hide extra link and view mode options.
+    if (variable_get('panels_curator_hide_extras', FALSE)) {
+      if (isset($form['link'])) {
+        unset($form['link']);
+      }
+      if (isset($form['view_mode'])) {
+        unset($form['view_mode']);
+      }
+    }
   }
   // Force re-usable panels into one group.
   if (isset($form['reusable'])) {
@@ -197,6 +206,60 @@ function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_s
       // Hide the revision checkbox.
       if (isset($form['revision_information'])) {
         unset($form['revision_information']);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_fieldable_panels_pane().
+ */
+function panels_curator_preprocess_fieldable_panels_pane(&$vars) {
+  // Provide a clean canonical data array for front end fpp templates.
+  if (variable_get('panels_curator_data_object', FALSE)) {
+    // Automatic pane ID generation, based on pane title.
+    $vars['pane_id'] = preg_replace('@[^a-z0-9-]+@','-', strtolower($vars['content']['title']['#value']));
+    // Create an array of clean, canonical panel data values.
+    $vars['output'] = array();
+    foreach ($vars as $key => $item) {
+      if (isset($vars['content'][$key])) {
+        $output = array();
+        $clean_key = str_replace('field_', '', $key);
+        foreach ($item as $item_key => $values) {
+          if (isset($values['value'])) {
+            // Basic fields.
+            $output[] = $values['value'];
+          }
+          elseif (isset($values['rgb'])) {
+            // Color fields.
+            $output[] = $values['rgb'];
+          }
+          elseif (isset($values['video_url'])) {
+            $output[] = $values['video_url'];
+          }
+          elseif ($values['type'] == 'image') {
+            // Image fields.
+            if (isset($vars['content'][$key][$item_key]['#image_style'])) {
+              // Apply image styles if they are specified.
+              $image_style = $vars['content'][$key][$item_key]['#image_style'];
+              $output[] = image_style_url($image_style, $values['uri']);
+            }
+            else {
+              $output[] = $values['uri'];
+            }
+          }
+          elseif ($values['type'] == 'video') {
+            // Video fields.
+            $output[] = file_create_url($values['uri']);
+          }
+        }
+        // Add the current item's values to the output array.
+        if (count($output) > 1) {
+          $vars['output'][$clean_key] = $output;
+        }
+        else {
+          $vars['output'][$clean_key] = implode('', $output);
+        }
       }
     }
   }
