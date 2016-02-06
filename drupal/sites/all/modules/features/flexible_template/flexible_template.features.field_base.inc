@@ -389,13 +389,13 @@ function flexible_template_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_subhead_copy'
-  $field_bases['field_subhead_copy'] = array(
+  // Exported field_base: 'field_subhead'
+  $field_bases['field_subhead'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_subhead_copy',
+    'field_name' => 'field_subhead',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -408,13 +408,13 @@ function flexible_template_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_subhead_copy_color'
-  $field_bases['field_subhead_copy_color'] = array(
+  // Exported field_base: 'field_subhead_color'
+  $field_bases['field_subhead_color'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_subhead_copy_color',
+    'field_name' => 'field_subhead_color',
     'indexes' => array(
       'rgb' => array(
         0 => 'rgb',
@@ -430,13 +430,13 @@ function flexible_template_field_default_field_bases() {
     'type' => 'color_field_rgb',
   );
 
-  // Exported field_base: 'field_subhead_copy_size'
-  $field_bases['field_subhead_copy_size'] = array(
+  // Exported field_base: 'field_subhead_size'
+  $field_bases['field_subhead_size'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_subhead_copy_size',
+    'field_name' => 'field_subhead_size',
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -478,34 +478,13 @@ function flexible_template_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_title_copy'
-  $field_bases['field_title_copy'] = array(
+  // Exported field_base: 'field_title_color'
+  $field_bases['field_title_color'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_title_copy',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 55,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_title_copy_color'
-  $field_bases['field_title_copy_color'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_title_copy_color',
+    'field_name' => 'field_title_color',
     'indexes' => array(
       'rgb' => array(
         0 => 'rgb',
@@ -520,13 +499,13 @@ function flexible_template_field_default_field_bases() {
     'type' => 'color_field_rgb',
   );
 
-  // Exported field_base: 'field_title_copy_size'
-  $field_bases['field_title_copy_size'] = array(
+  // Exported field_base: 'field_title_size'
+  $field_bases['field_title_size'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_title_copy_size',
+    'field_name' => 'field_title_size',
     'indexes' => array(
       'value' => array(
         0 => 'value',

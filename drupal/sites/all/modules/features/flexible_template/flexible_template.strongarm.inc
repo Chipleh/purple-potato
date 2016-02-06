@@ -339,8 +339,8 @@ function flexible_template_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '2',
-            'visible' => FALSE,
+            'weight' => '0',
+            'visible' => TRUE,
           ),
         ),
       ),

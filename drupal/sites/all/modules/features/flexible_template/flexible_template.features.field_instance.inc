@@ -230,8 +230,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_subhead_copy'
-  $field_instances['field_collection_item-field_columns_multi-field_subhead_copy'] = array(
+  // 'field_collection_item-field_columns_multi-field_subhead'
+  $field_instances['field_collection_item-field_columns_multi-field_subhead'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
     'deleted' => 0,
@@ -247,8 +247,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_subhead_copy',
-    'label' => 'Subhead Copy',
+    'field_name' => 'field_subhead',
+    'label' => 'Subhead',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -296,8 +296,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_subhead_copy_color'
-  $field_instances['field_collection_item-field_columns_multi-field_subhead_copy_color'] = array(
+  // 'field_collection_item-field_columns_multi-field_subhead_color'
+  $field_instances['field_collection_item-field_columns_multi-field_subhead_color'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
     'deleted' => 0,
@@ -313,8 +313,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_subhead_copy_color',
-    'label' => 'Subhead Copy Color',
+    'field_name' => 'field_subhead_color',
+    'label' => 'Subhead Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -329,8 +329,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_subhead_copy_size'
-  $field_instances['field_collection_item-field_columns_multi-field_subhead_copy_size'] = array(
+  // 'field_collection_item-field_columns_multi-field_subhead_size'
+  $field_instances['field_collection_item-field_columns_multi-field_subhead_size'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => array(
       0 => array(
@@ -350,8 +350,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_subhead_copy_size',
-    'label' => 'Subhead Copy Size',
+    'field_name' => 'field_subhead_size',
+    'label' => 'Subhead Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -366,44 +366,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_title_copy'
-  $field_instances['field_collection_item-field_columns_multi-field_title_copy'] = array(
-    'bundle' => 'field_columns_multi',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_title_copy',
-    'label' => 'Title Copy',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_title_copy_color'
-  $field_instances['field_collection_item-field_columns_multi-field_title_copy_color'] = array(
+  // 'field_collection_item-field_columns_multi-field_title_color'
+  $field_instances['field_collection_item-field_columns_multi-field_title_color'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
     'deleted' => 0,
@@ -419,8 +383,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_title_copy_color',
-    'label' => 'Title Copy Color',
+    'field_name' => 'field_title_color',
+    'label' => 'Title Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -435,8 +399,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_title_copy_size'
-  $field_instances['field_collection_item-field_columns_multi-field_title_copy_size'] = array(
+  // 'field_collection_item-field_columns_multi-field_title_size'
+  $field_instances['field_collection_item-field_columns_multi-field_title_size'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => array(
       0 => array(
@@ -456,8 +420,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_title_copy_size',
-    'label' => 'Title Copy Size',
+    'field_name' => 'field_title_size',
+    'label' => 'Title Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -696,42 +660,6 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_icon_item-field_title_copy'
-  $field_instances['field_collection_item-field_icon_item-field_title_copy'] = array(
-    'bundle' => 'field_icon_item',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_title_copy',
-    'label' => 'Title Copy',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance:
   // 'field_collection_item-field_thumbnail_image_item-field_disable_lightbox_on_click'
   $field_instances['field_collection_item-field_thumbnail_image_item-field_disable_lightbox_on_click'] = array(
     'bundle' => 'field_thumbnail_image_item',
@@ -890,8 +818,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_subhead_copy'
-  $field_instances['field_collection_item-field_thumbnail_image_item-field_subhead_copy'] = array(
+  // 'field_collection_item-field_thumbnail_image_item-field_subhead'
+  $field_instances['field_collection_item-field_thumbnail_image_item-field_subhead'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => NULL,
     'deleted' => 0,
@@ -907,8 +835,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_subhead_copy',
-    'label' => 'Subhead Copy',
+    'field_name' => 'field_subhead',
+    'label' => 'Subhead',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -956,8 +884,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_subhead_copy_color'
-  $field_instances['field_collection_item-field_thumbnail_image_item-field_subhead_copy_color'] = array(
+  // 'field_collection_item-field_thumbnail_image_item-field_subhead_color'
+  $field_instances['field_collection_item-field_thumbnail_image_item-field_subhead_color'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => NULL,
     'deleted' => 0,
@@ -973,8 +901,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_subhead_copy_color',
-    'label' => 'Subhead Copy Color',
+    'field_name' => 'field_subhead_color',
+    'label' => 'Subhead Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -989,8 +917,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_subhead_copy_size'
-  $field_instances['field_collection_item-field_thumbnail_image_item-field_subhead_copy_size'] = array(
+  // 'field_collection_item-field_thumbnail_image_item-field_subhead_size'
+  $field_instances['field_collection_item-field_thumbnail_image_item-field_subhead_size'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => array(
       0 => array(
@@ -1010,8 +938,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_subhead_copy_size',
-    'label' => 'Subhead Copy Size',
+    'field_name' => 'field_subhead_size',
+    'label' => 'Subhead Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1026,44 +954,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_title_copy'
-  $field_instances['field_collection_item-field_thumbnail_image_item-field_title_copy'] = array(
-    'bundle' => 'field_thumbnail_image_item',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_title_copy',
-    'label' => 'Title Copy',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_title_copy_color'
-  $field_instances['field_collection_item-field_thumbnail_image_item-field_title_copy_color'] = array(
+  // 'field_collection_item-field_thumbnail_image_item-field_title_color'
+  $field_instances['field_collection_item-field_thumbnail_image_item-field_title_color'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1079,8 +971,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_title_copy_color',
-    'label' => 'Title Copy Color',
+    'field_name' => 'field_title_color',
+    'label' => 'Title Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1095,8 +987,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_title_copy_size'
-  $field_instances['field_collection_item-field_thumbnail_image_item-field_title_copy_size'] = array(
+  // 'field_collection_item-field_thumbnail_image_item-field_title_size'
+  $field_instances['field_collection_item-field_thumbnail_image_item-field_title_size'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => array(
       0 => array(
@@ -1116,8 +1008,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_title_copy_size',
-    'label' => 'Title Copy Size',
+    'field_name' => 'field_title_size',
+    'label' => 'Title Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1311,8 +1203,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_subhead_copy'
-  $field_instances['fieldable_panels_pane-feature_video-field_subhead_copy'] = array(
+  // 'fieldable_panels_pane-feature_video-field_subhead'
+  $field_instances['fieldable_panels_pane-feature_video-field_subhead'] = array(
     'bundle' => 'feature_video',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1328,8 +1220,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_subhead_copy',
-    'label' => 'Subhead Copy',
+    'field_name' => 'field_subhead',
+    'label' => 'Subhead',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1377,8 +1269,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_subhead_copy_color'
-  $field_instances['fieldable_panels_pane-feature_video-field_subhead_copy_color'] = array(
+  // 'fieldable_panels_pane-feature_video-field_subhead_color'
+  $field_instances['fieldable_panels_pane-feature_video-field_subhead_color'] = array(
     'bundle' => 'feature_video',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1394,8 +1286,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_subhead_copy_color',
-    'label' => 'Subhead Copy Color',
+    'field_name' => 'field_subhead_color',
+    'label' => 'Subhead Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1410,8 +1302,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_subhead_copy_size'
-  $field_instances['fieldable_panels_pane-feature_video-field_subhead_copy_size'] = array(
+  // 'fieldable_panels_pane-feature_video-field_subhead_size'
+  $field_instances['fieldable_panels_pane-feature_video-field_subhead_size'] = array(
     'bundle' => 'feature_video',
     'default_value' => array(
       0 => array(
@@ -1431,8 +1323,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_subhead_copy_size',
-    'label' => 'Subhead Copy Size',
+    'field_name' => 'field_subhead_size',
+    'label' => 'Subhead Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1447,44 +1339,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_title_copy'
-  $field_instances['fieldable_panels_pane-feature_video-field_title_copy'] = array(
-    'bundle' => 'feature_video',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_title_copy',
-    'label' => 'Title Copy',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_title_copy_color'
-  $field_instances['fieldable_panels_pane-feature_video-field_title_copy_color'] = array(
+  // 'fieldable_panels_pane-feature_video-field_title_color'
+  $field_instances['fieldable_panels_pane-feature_video-field_title_color'] = array(
     'bundle' => 'feature_video',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1500,8 +1356,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_title_copy_color',
-    'label' => 'Title Copy Color',
+    'field_name' => 'field_title_color',
+    'label' => 'Title Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1516,8 +1372,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_title_copy_size'
-  $field_instances['fieldable_panels_pane-feature_video-field_title_copy_size'] = array(
+  // 'fieldable_panels_pane-feature_video-field_title_size'
+  $field_instances['fieldable_panels_pane-feature_video-field_title_size'] = array(
     'bundle' => 'feature_video',
     'default_value' => array(
       0 => array(
@@ -1537,8 +1393,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_title_copy_size',
-    'label' => 'Title Copy Size',
+    'field_name' => 'field_title_size',
+    'label' => 'Title Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1623,8 +1479,8 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead_copy'
-  $field_instances['fieldable_panels_pane-icons-field_subhead_copy'] = array(
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead'
+  $field_instances['fieldable_panels_pane-icons-field_subhead'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1640,8 +1496,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_subhead_copy',
-    'label' => 'Subhead Copy',
+    'field_name' => 'field_subhead',
+    'label' => 'Subhead',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1689,8 +1545,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-icons-field_subhead_copy_color'
-  $field_instances['fieldable_panels_pane-icons-field_subhead_copy_color'] = array(
+  // 'fieldable_panels_pane-icons-field_subhead_color'
+  $field_instances['fieldable_panels_pane-icons-field_subhead_color'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1706,8 +1562,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_subhead_copy_color',
-    'label' => 'Subhead Copy Color',
+    'field_name' => 'field_subhead_color',
+    'label' => 'Subhead Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1722,8 +1578,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-icons-field_subhead_copy_size'
-  $field_instances['fieldable_panels_pane-icons-field_subhead_copy_size'] = array(
+  // 'fieldable_panels_pane-icons-field_subhead_size'
+  $field_instances['fieldable_panels_pane-icons-field_subhead_size'] = array(
     'bundle' => 'icons',
     'default_value' => array(
       0 => array(
@@ -1743,8 +1599,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_subhead_copy_size',
-    'label' => 'Subhead Copy Size',
+    'field_name' => 'field_subhead_size',
+    'label' => 'Subhead Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1758,44 +1614,9 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-icons-field_title_copy'
-  $field_instances['fieldable_panels_pane-icons-field_title_copy'] = array(
-    'bundle' => 'icons',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_title_copy',
-    'label' => 'Title Copy',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance:
-  // 'fieldable_panels_pane-icons-field_title_copy_color'
-  $field_instances['fieldable_panels_pane-icons-field_title_copy_color'] = array(
+  // 'fieldable_panels_pane-icons-field_title_color'
+  $field_instances['fieldable_panels_pane-icons-field_title_color'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1811,8 +1632,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_title_copy_color',
-    'label' => 'Title Copy Color',
+    'field_name' => 'field_title_color',
+    'label' => 'Title Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1827,8 +1648,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-icons-field_title_copy_size'
-  $field_instances['fieldable_panels_pane-icons-field_title_copy_size'] = array(
+  // 'fieldable_panels_pane-icons-field_title_size'
+  $field_instances['fieldable_panels_pane-icons-field_title_size'] = array(
     'bundle' => 'icons',
     'default_value' => array(
       0 => array(
@@ -1848,8 +1669,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_title_copy_size',
-    'label' => 'Title Copy Size',
+    'field_name' => 'field_title_size',
+    'label' => 'Title Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1958,7 +1779,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1993,7 +1814,7 @@ function flexible_template_field_default_field_instances() {
           'node_reference_view_mode' => 'full',
         ),
         'type' => 'node_reference_node',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2088,8 +1909,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead_copy'
-  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_subhead_copy'] = array(
+  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead'
+  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_subhead'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2105,8 +1926,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_subhead_copy',
-    'label' => 'Subhead Copy',
+    'field_name' => 'field_subhead',
+    'label' => 'Subhead',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -2154,8 +1975,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead_copy_color'
-  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_subhead_copy_color'] = array(
+  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead_color'
+  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_subhead_color'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2171,8 +1992,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_subhead_copy_color',
-    'label' => 'Subhead Copy Color',
+    'field_name' => 'field_subhead_color',
+    'label' => 'Subhead Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2187,8 +2008,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead_copy_size'
-  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_subhead_copy_size'] = array(
+  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead_size'
+  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_subhead_size'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => array(
       0 => array(
@@ -2208,8 +2029,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_subhead_copy_size',
-    'label' => 'Subhead Copy Size',
+    'field_name' => 'field_subhead_size',
+    'label' => 'Subhead Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2263,44 +2084,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_title_copy'
-  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_title_copy'] = array(
-    'bundle' => 'thumbnail_gallery',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_title_copy',
-    'label' => 'Title Copy',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_title_copy_color'
-  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_title_copy_color'] = array(
+  // 'fieldable_panels_pane-thumbnail_gallery-field_title_color'
+  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_title_color'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2316,8 +2101,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_title_copy_color',
-    'label' => 'Title Copy Color',
+    'field_name' => 'field_title_color',
+    'label' => 'Title Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2332,8 +2117,8 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_title_copy_size'
-  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_title_copy_size'] = array(
+  // 'fieldable_panels_pane-thumbnail_gallery-field_title_size'
+  $field_instances['fieldable_panels_pane-thumbnail_gallery-field_title_size'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => array(
       0 => array(
@@ -2353,8 +2138,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_title_copy_size',
-    'label' => 'Title Copy Size',
+    'field_name' => 'field_title_size',
+    'label' => 'Title Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2365,57 +2150,6 @@ function flexible_template_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-flexible_template-body'
-  $field_instances['node-flexible_template-body'] = array(
-    'bundle' => 'flexible_template',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 1,
     ),
   );
 
@@ -2553,7 +2287,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_default_widget',
-      'weight' => 16,
+      'weight' => 10,
     ),
   );
 
@@ -2624,7 +2358,7 @@ function flexible_template_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 17,
+      'weight' => 11,
     ),
   );
 
@@ -2682,7 +2416,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 13,
+      'weight' => 7,
     ),
   );
 
@@ -2740,12 +2474,12 @@ function flexible_template_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_subhead_copy'
-  $field_instances['node-rotator_hero-field_subhead_copy'] = array(
+  // Exported field_instance: 'node-rotator_hero-field_subhead'
+  $field_instances['node-rotator_hero-field_subhead'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2767,10 +2501,40 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_subhead_copy',
-    'label' => 'Subhead Copy',
+    'field_name' => 'field_subhead',
+    'label' => 'Subhead',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+          'restricted_html' => 'restricted_html',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -8,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'php_code' => array(
+              'weight' => -6,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'restricted_html' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2781,12 +2545,12 @@ function flexible_template_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_subhead_copy_color'
-  $field_instances['node-rotator_hero-field_subhead_copy_color'] = array(
+  // Exported field_instance: 'node-rotator_hero-field_subhead_color'
+  $field_instances['node-rotator_hero-field_subhead_color'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2808,8 +2572,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_subhead_copy_color',
-    'label' => 'Subhead Copy Color',
+    'field_name' => 'field_subhead_color',
+    'label' => 'Subhead Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2819,12 +2583,12 @@ function flexible_template_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_default_widget',
-      'weight' => 11,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_subhead_copy_size'
-  $field_instances['node-rotator_hero-field_subhead_copy_size'] = array(
+  // Exported field_instance: 'node-rotator_hero-field_subhead_size'
+  $field_instances['node-rotator_hero-field_subhead_size'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => array(
       0 => array(
@@ -2850,8 +2614,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_subhead_copy_size',
-    'label' => 'Subhead Copy Size',
+    'field_name' => 'field_subhead_size',
+    'label' => 'Subhead Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2861,53 +2625,12 @@ function flexible_template_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_title_copy'
-  $field_instances['node-rotator_hero-field_title_copy'] = array(
-    'bundle' => 'rotator_hero',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_title_copy',
-    'label' => 'Title Copy',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-rotator_hero-field_title_copy_color'
-  $field_instances['node-rotator_hero-field_title_copy_color'] = array(
+  // Exported field_instance: 'node-rotator_hero-field_title_color'
+  $field_instances['node-rotator_hero-field_title_color'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2929,8 +2652,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_title_copy_color',
-    'label' => 'Title Copy Color',
+    'field_name' => 'field_title_color',
+    'label' => 'Title Color',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2940,12 +2663,12 @@ function flexible_template_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_default_widget',
-      'weight' => 8,
+      'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_title_copy_size'
-  $field_instances['node-rotator_hero-field_title_copy_size'] = array(
+  // Exported field_instance: 'node-rotator_hero-field_title_size'
+  $field_instances['node-rotator_hero-field_title_size'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => array(
       0 => array(
@@ -2971,8 +2694,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_title_copy_size',
-    'label' => 'Title Copy Size',
+    'field_name' => 'field_title_size',
+    'label' => 'Title Size',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2982,46 +2705,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-rotator_hero-field_top_color'
-  $field_instances['node-rotator_hero-field_top_color'] = array(
-    'bundle' => 'rotator_hero',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_top_color',
-    'label' => 'Top Color',
-    'required' => FALSE,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 3,
     ),
   );
 
@@ -3078,7 +2762,7 @@ function flexible_template_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 15,
+      'weight' => 9,
     ),
   );
 
@@ -3088,7 +2772,6 @@ function flexible_template_field_default_field_instances() {
   t('Background Image');
   t('Background Mobile Image');
   t('Background Video');
-  t('Body');
   t('CTA');
   t('Columns');
   t('Comment');
@@ -3103,14 +2786,12 @@ function flexible_template_field_default_field_instances() {
   t('Module Height');
   t('Rotator Slide');
   t('Secondary CTA');
-  t('Subhead Copy');
-  t('Subhead Copy Color');
-  t('Subhead Copy Size');
+  t('Subhead');
+  t('Subhead Color');
+  t('Subhead Size');
   t('Thumbnail Image item');
-  t('Title Copy');
-  t('Title Copy Color');
-  t('Title Copy Size');
-  t('Top Color');
+  t('Title Color');
+  t('Title Size');
   t('Video Tout');
 
   return $field_instances;
