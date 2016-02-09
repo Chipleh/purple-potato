@@ -444,9 +444,18 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'module' => 'media_colorbox',
+        'settings' => array(
+          'audio_playlist' => FALSE,
+          'colorbox_caption' => 'title',
+          'colorbox_gallery' => 'post',
+          'colorbox_gallery_custom' => '',
+          'colorbox_view_mode' => 'large',
+          'file_view_mode' => 'small',
+          'fixed_height' => '',
+          'fixed_width' => '',
+        ),
+        'type' => 'media_colorbox',
         'weight' => 6,
       ),
     ),
@@ -673,9 +682,8 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 8,
       ),
     ),
@@ -707,12 +715,18 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'colorbox',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'colorbox_caption' => 'auto',
+          'colorbox_caption_custom' => '',
+          'colorbox_gallery' => 'post',
+          'colorbox_gallery_custom' => '',
+          'colorbox_image_style' => '',
+          'colorbox_multivalue_index' => NULL,
+          'colorbox_node_style' => '',
+          'colorbox_node_style_first' => '',
         ),
-        'type' => 'image',
+        'type' => 'colorbox',
         'weight' => 6,
       ),
     ),
@@ -1040,6 +1054,16 @@ function flexible_template_field_default_field_instances() {
         'type' => 'image',
         'weight' => 8,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 8,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
@@ -1112,6 +1136,22 @@ function flexible_template_field_default_field_instances() {
         'type' => 'file_video',
         'weight' => 7,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'autoplay' => FALSE,
+          'controls' => TRUE,
+          'height' => NULL,
+          'loop' => FALSE,
+          'multiple_file_behavior' => 'tags',
+          'muted' => FALSE,
+          'preload' => '',
+          'width' => NULL,
+        ),
+        'type' => 'file_video',
+        'weight' => 7,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
@@ -1158,6 +1198,13 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 6,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
@@ -1211,6 +1258,13 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -1283,6 +1337,13 @@ function flexible_template_field_default_field_instances() {
         'type' => 'color_field_default_formatter',
         'weight' => 4,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'color_field',
+        'settings' => array(),
+        'type' => 'color_field_default_formatter',
+        'weight' => 4,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
@@ -1314,6 +1375,13 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
@@ -1353,6 +1421,13 @@ function flexible_template_field_default_field_instances() {
         'type' => 'color_field_default_formatter',
         'weight' => 1,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'color_field',
+        'settings' => array(),
+        'type' => 'color_field_default_formatter',
+        'weight' => 1,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
@@ -1384,6 +1459,13 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
@@ -1544,8 +1626,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'fieldable_panels_pane-icons-field_subhead_color'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead_color'
   $field_instances['fieldable_panels_pane-icons-field_subhead_color'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
@@ -1577,8 +1658,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'fieldable_panels_pane-icons-field_subhead_size'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead_size'
   $field_instances['fieldable_panels_pane-icons-field_subhead_size'] = array(
     'bundle' => 'icons',
     'default_value' => array(
@@ -1614,8 +1694,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'fieldable_panels_pane-icons-field_title_color'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_title_color'
   $field_instances['fieldable_panels_pane-icons-field_title_color'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
@@ -1647,8 +1726,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'fieldable_panels_pane-icons-field_title_size'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_title_size'
   $field_instances['fieldable_panels_pane-icons-field_title_size'] = array(
     'bundle' => 'icons',
     'default_value' => array(
@@ -2166,10 +2244,9 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'above',
@@ -2216,9 +2293,8 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'full' => array(
@@ -2717,9 +2793,18 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'module' => 'media_colorbox',
+        'settings' => array(
+          'audio_playlist' => FALSE,
+          'colorbox_caption' => 'title',
+          'colorbox_gallery' => 'post',
+          'colorbox_gallery_custom' => '',
+          'colorbox_view_mode' => 'large',
+          'file_view_mode' => 'small',
+          'fixed_height' => '',
+          'fixed_width' => '',
+        ),
+        'type' => 'media_colorbox',
         'weight' => 7,
       ),
       'teaser' => array(

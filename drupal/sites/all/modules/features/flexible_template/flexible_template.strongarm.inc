@@ -14,7 +14,7 @@ function flexible_template_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_flexible_template';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-ds-extras';
   $export['additional_settings__active_tab_flexible_template'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -121,7 +121,8 @@ function flexible_template_strongarm() {
   $strongarm->name = 'ds_extras_view_modes_flexible_template';
   $strongarm->value = array(
     0 => 'default',
-    1 => 'teaser',
+    1 => 'full',
+    2 => 'teaser',
   );
   $export['ds_extras_view_modes_flexible_template'] = $strongarm;
 
@@ -219,6 +220,10 @@ function flexible_template_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
+            'weight' => '-5',
+            'visible' => TRUE,
+          ),
+          'full' => array(
             'weight' => '-5',
             'visible' => TRUE,
           ),
@@ -528,7 +533,32 @@ function flexible_template_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__rotator_hero';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
@@ -708,6 +738,12 @@ function flexible_template_strongarm() {
         'default' => 1,
         'choice' => 1,
       ),
+      'full' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'teaser' => array(
         'status' => 0,
         'substitute' => 0,
@@ -739,6 +775,13 @@ function flexible_template_strongarm() {
     'view modes' => array(),
   );
   $export['panelizer_defaults_node_rotator_hero'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:flexible_template:default_selection';
+  $strongarm->value = 'node:flexible_template:default:default';
+  $export['panelizer_node:flexible_template:default_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
