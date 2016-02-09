@@ -1857,7 +1857,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1874,45 +1874,6 @@ function flexible_template_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'fieldable_panels_pane-rotator_hero-field_rotator_slide'
-  $field_instances['fieldable_panels_pane-rotator_hero-field_rotator_slide'] = array(
-    'bundle' => 'rotator_hero',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'node_reference',
-        'settings' => array(
-          'node_reference_view_mode' => 'full',
-        ),
-        'type' => 'node_reference_node',
-        'weight' => 1,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'fieldable_panels_pane',
-    'field_name' => 'field_rotator_slide',
-    'label' => 'Rotator Slide',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'node_reference',
-      'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'node_reference_autocomplete',
-      'weight' => 8,
     ),
   );
 
@@ -2337,7 +2298,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'color_field',
         'settings' => array(),
         'type' => 'color_field_default_formatter',
@@ -2374,7 +2335,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
@@ -2446,7 +2407,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -2504,7 +2465,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -2562,7 +2523,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -2633,7 +2594,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'color_field',
         'settings' => array(),
         'type' => 'color_field_default_formatter',
@@ -2675,7 +2636,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -2713,7 +2674,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'color_field',
         'settings' => array(),
         'type' => 'color_field_default_formatter',
@@ -2755,7 +2716,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -2792,7 +2753,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'media_colorbox',
         'settings' => array(
           'audio_playlist' => FALSE,
@@ -2869,7 +2830,6 @@ function flexible_template_field_default_field_instances() {
   t('Image Hover');
   t('Image Link');
   t('Module Height');
-  t('Rotator Slide');
   t('Secondary CTA');
   t('Subhead');
   t('Subhead Color');

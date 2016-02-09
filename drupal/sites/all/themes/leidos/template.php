@@ -261,7 +261,24 @@ function leidos_preprocess_field(&$variables) {
     $rotator->execute();
     $variables['rotator'] = $rotator->render();
   }
-  if ($variables['element']['#field_name'] == 'field_capabilities') {
+  elseif ($variables['element']['#field_name'] == 'field_rotator_slide_hero') {
+    // Render the rotator instead of the slide nodes that are referenced.
+    $arguments = array();
+    foreach ($variables['items'] as $item) {
+      $arguments[] = $item['#node']->nid;
+    }
+    // Render the rotator.
+    $rotator = views_get_view('rotators_hero');
+    $rotator->set_display('rotator_pane');
+    if (!empty($arguments)) {
+      $rotator->set_arguments(array(implode(',', $arguments)));
+      $rotator->set_items_per_page(count($arguments));
+    }
+    $rotator->pre_execute();
+    $rotator->execute();
+    $variables['rotator_hero'] = $rotator->render();
+  }
+  elseif ($variables['element']['#field_name'] == 'field_capabilities') {
     // Render the capabilities view instead of the terms that are referenced.
     $arguments = array();
     foreach ($variables['items'] as $item) {
@@ -366,6 +383,26 @@ function leidos_preprocess_panels_pane(&$variables) {
         '#field_translatable' => 0,
         '#entity_type' => 'fieldable_panels_pane',
         '#bundle' => 'rotator',
+        '#items' => array()
+      );
+    }
+  }
+  elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'rotator_hero') {
+    // Default rotator hero field to empty view for all slides.
+    if (!isset($variables['content']['field_rotator_slide_hero'])) {
+      $variables['content']['field_rotator_slide_hero'] = array(
+        '#theme' => 'field',
+        '#weight' => '2',
+        '#title' => 'Rotator slide / Hero',
+        '#access' => TRUE,
+        '#label_display' => 'hidden',
+        '#view_mode' => 'full',
+        '#language' => 'und',
+        '#field_name' => 'field_rotator_slide_hero',
+        '#field_type' => 'node_reference',
+        '#field_translatable' => 0,
+        '#entity_type' => 'fieldable_panels_pane',
+        '#bundle' => 'rotator_hero',
         '#items' => array()
       );
     }

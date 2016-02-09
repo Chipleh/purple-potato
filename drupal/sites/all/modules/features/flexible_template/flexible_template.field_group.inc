@@ -150,9 +150,10 @@ function flexible_template_field_group_info() {
     'label' => 'General Info',
     'weight' => '1',
     'children' => array(
-      0 => 'field_rotator_slide',
-      1 => 'field_module_height',
+      0 => 'field_module_height',
+      1 => 'field_rotator_slide',
       2 => 'title',
+      3 => 'field_rotator_slide_hero',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

@@ -313,14 +313,14 @@ function flexible_template_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'field_rotator_slide',
-        2 => 'field_module_height',
+        1 => 'field_module_height',
+        2 => 'field_rotator_slide_hero',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'field_rotator_slide' => 'ds_content',
       'field_module_height' => 'ds_content',
+      'field_rotator_slide_hero' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
