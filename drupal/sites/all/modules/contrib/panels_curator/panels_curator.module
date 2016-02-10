@@ -212,6 +212,46 @@ function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_s
 }
 
 /**
+ * Helper function to map the correct values for a variety of fields.
+ */
+function panels_curator_map_values($values, $content) {
+  if (isset($values['value'])) {
+    // Basic fields.
+    $value = $values['value'];
+  }
+  elseif (isset($values['rgb'])) {
+    // Color fields.
+    $value = $values['rgb'];
+  }
+  elseif (isset($values['video_url'])) {
+    $value = $values['video_url'];
+  }
+  elseif ($values['type'] == 'image') {
+    // Image fields.
+    if (isset($content['#image_style'])) {
+      // Apply image styles if they are specified.
+      $image_style = $content['#image_style'];
+      $value = image_style_url($image_style, $values['uri']);
+    }
+    else {
+      $value = $values['uri'];
+    }
+  }
+  elseif ($values['type'] == 'video') {
+    // Video fields.
+    $value = file_create_url($values['uri']);
+  }
+  elseif (isset($values['url'])) {
+    // Link fields.
+    $value = l($values['title'], $values['url']);
+  }
+  else {
+    $value = t('Unmapped field');
+  }
+  return $value;
+}
+
+/**
  * Implements hook_preprocess_fieldable_panels_pane().
  */
 function panels_curator_preprocess_fieldable_panels_pane(&$vars) {
@@ -223,34 +263,38 @@ function panels_curator_preprocess_fieldable_panels_pane(&$vars) {
     $vars['output'] = array();
     foreach ($vars as $key => $item) {
       if (isset($vars['content'][$key])) {
+        // Check for field collection fields.
+        $field_collection = ($vars['content'][$key]['#field_type'] == 'field_collection');
         $output = array();
         $clean_key = str_replace('field_', '', $key);
         foreach ($item as $item_key => $values) {
-          if (isset($values['value'])) {
-            // Basic fields.
-            $output[] = $values['value'];
-          }
-          elseif (isset($values['rgb'])) {
-            // Color fields.
-            $output[] = $values['rgb'];
-          }
-          elseif (isset($values['video_url'])) {
-            $output[] = $values['video_url'];
-          }
-          elseif ($values['type'] == 'image') {
-            // Image fields.
-            if (isset($vars['content'][$key][$item_key]['#image_style'])) {
-              // Apply image styles if they are specified.
-              $image_style = $vars['content'][$key][$item_key]['#image_style'];
-              $output[] = image_style_url($image_style, $values['uri']);
+          // Account for field collections.
+          if ($field_collection) {
+            $collection_output = array();
+            $collection_entity = current($vars['content'][$key][$item_key]['entity']['field_collection_item']);
+            // Get all values for each field in the field collection.
+            foreach ($collection_entity as $collection_key => $collection_values) {
+              // Check for fields inside of this field colleciton.
+              if (is_array($collection_values) && isset($collection_values['#items'])) {
+                $current_key = str_replace('field_', '', $collection_key);
+                $current_output = array();
+                // Account for multi-value fields in the field collection.
+                foreach ($collection_values['#items'] as $current_key => $current_values) {
+                  $current_output[] = panels_curator_map_values($current_values, $collection_values[$current_key]);
+                }
+                // Array of values or a single value.
+                if (count($current_output) > 1) {
+                  $collection_output[$collection_key] = $current_output;
+                }
+                else {
+                  $collection_output[$collection_key] = implode('', $current_output);
+                }
+              }
             }
-            else {
-              $output[] = $values['uri'];
-            }
+            $output[] = $collection_output;
           }
-          elseif ($values['type'] == 'video') {
-            // Video fields.
-            $output[] = file_create_url($values['uri']);
+          else {
+            $output[] = panels_curator_map_values($values, $vars['content'][$key][$item_key]);
           }
         }
         // Add the current item's values to the output array.
