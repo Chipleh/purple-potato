@@ -10,6 +10,8 @@ include_once 'flexible_template.features.inc';
  * Implements template_preprocess_entity().
  */
 function flexible_template_preprocess_entity(&$variables, $hook) {
+
+  // Expose function call flexible_template_preprocess_BUNDLE().
   $function = 'flexible_template_preprocess_' . $variables['elements']['#bundle'];
   if (function_exists($function)) {
     $function($variables, $hook);
@@ -86,12 +88,16 @@ function flexible_template_preprocess_field_thumbnail_image_item(&$variables) {
 }
 
 /**
- * Preprocess Subtitle field value.
+ * Preprocess Subtitle value based on configured Color/Size field values.
  *
  * The $variables array contains the following arguments:
  * - $node
  * - $view_mode
  * - $page
+ *
+ * @see field_subhead
+ * @see field_subhead_color
+ * @see field_subhead_size
  */
 function flexible_template_preprocess_subhead(&$variables) {
   $content = $variables['content'];
