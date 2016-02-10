@@ -15,7 +15,7 @@ function flexible_template_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Rotators Hero';
+  $view->human_name = 'Rotators / Hero';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -234,8 +234,8 @@ function flexible_template_views_default_views() {
     'rotator_hero' => 'rotator_hero',
   );
 
-  /* Display: Rotator Hero */
-  $handler = $view->new_display('panel_pane', 'Rotator Hero', 'rotator_hero_pane');
+  /* Display: Rotator / Hero */
+  $handler = $view->new_display('panel_pane', 'Rotator / Hero', 'rotator_hero_pane');
   $export['rotators_hero'] = $view;
 
   return $export;

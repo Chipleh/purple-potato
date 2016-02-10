@@ -220,7 +220,7 @@ function flexible_template_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '-5',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -344,8 +344,8 @@ function flexible_template_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '2',
+            'visible' => FALSE,
           ),
         ),
       ),

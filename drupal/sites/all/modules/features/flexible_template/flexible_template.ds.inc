@@ -20,18 +20,20 @@ function flexible_template_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_title_color',
-        1 => 'field_title_size',
-        2 => 'field_subhead',
-        3 => 'field_subhead_color',
-        4 => 'field_subhead_size',
-        5 => 'field_video_tout',
-        6 => 'field_background_color',
-        7 => 'field_background_image',
-        8 => 'field_cta',
+        0 => 'field_title_item',
+        1 => 'field_title_color',
+        2 => 'field_title_size',
+        3 => 'field_subhead',
+        4 => 'field_subhead_color',
+        5 => 'field_subhead_size',
+        6 => 'field_video_tout',
+        7 => 'field_background_color',
+        8 => 'field_background_image',
+        9 => 'field_cta',
       ),
     ),
     'fields' => array(
+      'field_title_item' => 'ds_content',
       'field_title_color' => 'ds_content',
       'field_title_size' => 'ds_content',
       'field_subhead' => 'ds_content',
@@ -65,7 +67,7 @@ function flexible_template_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'first' => array(
-        0 => 'field_title',
+        0 => 'field_title_item',
         1 => 'field_title_color',
         2 => 'field_title_size',
         3 => 'field_subhead',
@@ -76,13 +78,11 @@ function flexible_template_ds_layout_settings_info() {
         8 => 'field_video_tout',
         9 => 'field_cta',
         10 => 'redirect',
-      ),
-      'hidden' => array(
         11 => '_add_existing_field',
       ),
     ),
     'fields' => array(
-      'field_title' => 'first',
+      'field_title_item' => 'first',
       'field_title_color' => 'first',
       'field_title_size' => 'first',
       'field_subhead' => 'first',
@@ -93,7 +93,7 @@ function flexible_template_ds_layout_settings_info() {
       'field_video_tout' => 'first',
       'field_cta' => 'first',
       'redirect' => 'first',
-      '_add_existing_field' => 'hidden',
+      '_add_existing_field' => 'first',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -154,16 +154,18 @@ function flexible_template_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_title_color',
-        1 => 'field_title_size',
-        2 => 'field_subhead',
-        3 => 'field_subhead_color',
-        4 => 'field_subhead_size',
-        5 => 'field_image',
-        6 => 'field_image_hover',
+        0 => 'field_title_item',
+        1 => 'field_title_color',
+        2 => 'field_title_size',
+        3 => 'field_subhead',
+        4 => 'field_subhead_color',
+        5 => 'field_subhead_size',
+        6 => 'field_image',
+        7 => 'field_image_hover',
       ),
     ),
     'fields' => array(
+      'field_title_item' => 'ds_content',
       'field_title_color' => 'ds_content',
       'field_title_size' => 'ds_content',
       'field_subhead' => 'ds_content',
@@ -201,9 +203,9 @@ function flexible_template_ds_layout_settings_info() {
         3 => 'field_subhead',
         4 => 'field_subhead_color',
         5 => 'field_subhead_size',
-        6 => 'field_cta',
-        7 => 'field_background_video',
-        8 => 'field_background_mobile_image',
+        6 => 'field_background_video',
+        7 => 'field_background_mobile_image',
+        8 => 'field_cta',
       ),
     ),
     'fields' => array(
@@ -213,9 +215,9 @@ function flexible_template_ds_layout_settings_info() {
       'field_subhead' => 'ds_content',
       'field_subhead_color' => 'ds_content',
       'field_subhead_size' => 'ds_content',
-      'field_cta' => 'ds_content',
       'field_background_video' => 'ds_content',
       'field_background_mobile_image' => 'ds_content',
+      'field_cta' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -312,13 +314,11 @@ function flexible_template_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'title',
-        1 => 'field_module_height',
-        2 => 'field_rotator_slide_hero',
+        0 => 'field_module_height',
+        1 => 'field_rotator_slide_hero',
       ),
     ),
     'fields' => array(
-      'title' => 'ds_content',
       'field_module_height' => 'ds_content',
       'field_rotator_slide_hero' => 'ds_content',
     ),

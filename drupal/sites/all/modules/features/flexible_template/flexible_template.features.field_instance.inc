@@ -399,6 +399,40 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_title_item'
+  $field_instances['field_collection_item-field_columns_multi-field_title_item'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_title_item',
+    'label' => 'Title',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_columns_multi-field_title_size'
   $field_instances['field_collection_item-field_columns_multi-field_title_size'] = array(
     'bundle' => 'field_columns_multi',
@@ -1001,6 +1035,72 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_thumbnail_image_item-field_title_item'
+  $field_instances['field_collection_item-field_thumbnail_image_item-field_title_item'] = array(
+    'bundle' => 'field_thumbnail_image_item',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_title_item',
+    'label' => 'Title',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+          'restricted_html' => 'restricted_html',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+            'restricted_html' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_thumbnail_image_item-field_title_size'
   $field_instances['field_collection_item-field_thumbnail_image_item-field_title_size'] = array(
     'bundle' => 'field_thumbnail_image_item',
@@ -1052,7 +1152,7 @@ function flexible_template_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1134,7 +1234,7 @@ function flexible_template_field_default_field_instances() {
           'width' => NULL,
         ),
         'type' => 'file_video',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1202,7 +1302,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1810,7 +1910,7 @@ function flexible_template_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
           'add' => 'Add',
@@ -1857,7 +1957,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1874,6 +1974,45 @@ function flexible_template_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'fieldable_panels_pane-rotator_hero-field_rotator_slide_hero'
+  $field_instances['fieldable_panels_pane-rotator_hero-field_rotator_slide_hero'] = array(
+    'bundle' => 'rotator_hero',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'node_reference',
+        'settings' => array(
+          'node_reference_view_mode' => 'full',
+        ),
+        'type' => 'node_reference_node',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_rotator_slide_hero',
+    'label' => 'Rotator Slide / Hero',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'node_reference',
+      'settings' => array(
+        'autocomplete_match' => 'contains',
+        'autocomplete_path' => 'node_reference/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'node_reference_autocomplete',
+      'weight' => 9,
     ),
   );
 
@@ -2830,11 +2969,13 @@ function flexible_template_field_default_field_instances() {
   t('Image Hover');
   t('Image Link');
   t('Module Height');
+  t('Rotator Slide / Hero');
   t('Secondary CTA');
   t('Subhead');
   t('Subhead Color');
   t('Subhead Size');
   t('Thumbnail Image item');
+  t('Title');
   t('Title Color');
   t('Title Size');
   t('Video Tout');

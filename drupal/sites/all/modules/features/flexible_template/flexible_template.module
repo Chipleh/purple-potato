@@ -7,44 +7,106 @@
 include_once 'flexible_template.features.inc';
 
 /**
- * Implements hook_entity_info_alter().
+ * Implements template_preprocess_entity().
  */
-/*function flexible_template_entity_info_alter(&$entity_info) {
-  $panes = array(
-    'feature_video' => array(
-      'name' => 'Feature Video',
-      'category' => 'Flexible Template',
-    ),
-    'icons' => array(
-      'name' => 'Icons',
-      'category' => 'Flexible Template',
-    ),
-    'multi_column' => array(
-      'name' => 'Multi-column',
-      'category' => 'Flexible Template',
-    ),
-    'rotator_hero' => array(
-      'name' => 'Rotator / Hero',
-      'category' => 'Flexible Template',
-    ),
-    'thumbnail_gallery' => array(
-      'name' => 'Thumbnail Gallery',
-      'category' => 'Flexible Template',
-    ),
-  );
-
-  foreach($panes as $pane_id => $pane_info) {
-    $entity_info['fieldable_panels_pane']['bundles'][$pane_id] = array(
-      'label' => t($pane_info['name']),
-      'pane category' => t($pane_info['category']),
-      'pane top level' => FALSE,
-      'pane icon' => isset($pane_info['icon']) ? drupal_get_path('module', 'wy') . '/icons/' . $pane_info['icon'] : '',
-      'admin' => array(
-        'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-        'bundle argument' => 4,
-        'real path' => 'admin/structure/fieldable-panels-panes/manage/' . str_replace('_', '-', $pane_id),
-        'access arguments' => array('administer fieldable panels panes'),
-      ),
-    );
+function flexible_template_preprocess_entity(&$variables, $hook) {
+  $function = 'flexible_template_preprocess_' . $variables['elements']['#bundle'];
+  if (function_exists($function)) {
+    $function($variables, $hook);
   }
-}*/
+}
+
+/**
+ * Implements template_preprocess_panels_pane().
+ */
+function flexible_template_preprocess_panels_pane(&$variables) {
+  $content = &$variables['content'];
+
+  // Set background color.
+  if (isset($content['field_background_color'])) {
+    $variables['attributes_array']['style'][] = 'color:' . $content['field_background_color']['#items'][0]['rgb'];
+    unset($variables['content']['field_background_color']);
+  }
+
+  // Set title color.
+  if (!empty($content['field_title_color']['#items'][0]['rgb'])) {
+    $variables['title_attributes_array']['style'][] = 'color:' . $content['field_title_color']['#items'][0]['rgb'];
+    unset($variables['content']['field_title_color']);
+  }
+
+  // Set title size.
+  if (!empty($content['field_title_size'][0]['#markup'])) {
+    $variables['title_heading'] = $content['field_title_size'][0]['#markup'];
+    unset($variables['content']['field_title_size']);
+  }
+
+  flexible_template_preprocess_subhead($variables);
+}
+
+/**
+ * Field collection implementation of template_preprocess_entity().
+ *
+ * The $variables array contains the following arguments:
+ * - $node
+ * - $view_mode
+ * - $page
+ */
+function flexible_template_preprocess_field_collection_item(&$variables) {
+  $content = &$variables['content'];
+
+  // Set title color.
+  if (isset($content['field_title_color'])) {
+    $variables['content']['field_title_item'][0]['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
+    unset($variables['content']['field_title_color']);
+  }
+
+  // Set title size.
+  if (isset($content['field_title_size'])) {
+    if (isset($content['field_title_item'])) {
+      $variables['content']['field_title_item'][0]['#theme'] = 'html_tag';
+      $variables['content']['field_title_item'][0]['#tag']   = $content['field_title_size'][0]['#markup'];
+      $variables['content']['field_title_item'][0]['#value'] = $content['field_title_item'][0]['#markup'];
+    }
+    unset($variables['content']['field_title_size']);
+  }
+
+  flexible_template_preprocess_subhead($variables);
+}
+
+function flexible_template_preprocess_field_columns_multi(&$variables) {
+  flexible_template_preprocess_field_collection_item($variables);
+}
+
+function flexible_template_preprocess_field_icon_item(&$variables) {
+  flexible_template_preprocess_field_collection_item($variables);
+}
+
+function flexible_template_preprocess_field_thumbnail_image_item(&$variables) {
+  flexible_template_preprocess_field_collection_item($variables);
+}
+
+/**
+ * Preprocess Subtitle field value.
+ *
+ * The $variables array contains the following arguments:
+ * - $node
+ * - $view_mode
+ * - $page
+ */
+function flexible_template_preprocess_subhead(&$variables) {
+  $content = $variables['content'];
+
+  // Set subhead color.
+  if (isset($content['field_subhead_color'])) {
+    $variables['content']['field_subhead'][0]['#attributes'] = array('style' => 'color:' . $content['field_subhead_color']['#items'][0]['rgb']);
+    unset($variables['content']['field_subhead_color']);
+  }
+
+  // Set subhead size.
+  if (isset($content['field_subhead_size'])) {
+    $variables['content']['field_subhead'][0]['#theme'] = 'html_tag';
+    $variables['content']['field_subhead'][0]['#tag']   = $content['field_subhead_size'][0]['#markup'];
+    $variables['content']['field_subhead'][0]['#value'] = $content['field_subhead'][0]['#markup'];
+    unset($variables['content']['field_subhead_size']);
+  }
+}

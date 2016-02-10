@@ -269,7 +269,7 @@ function leidos_preprocess_field(&$variables) {
     }
     // Render the rotator.
     $rotator = views_get_view('rotators_hero');
-    $rotator->set_display('rotator_pane');
+    $rotator->set_display('rotator_hero_pane');
     if (!empty($arguments)) {
       $rotator->set_arguments(array(implode(',', $arguments)));
       $rotator->set_items_per_page(count($arguments));

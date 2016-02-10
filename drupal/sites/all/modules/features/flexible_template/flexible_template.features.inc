@@ -48,7 +48,7 @@ function flexible_template_node_info() {
     'rotator_hero' => array(
       'name' => t('Rotator slide / Hero'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Carousel rotator slides [Hero]'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
