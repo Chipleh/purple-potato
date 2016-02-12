@@ -101,7 +101,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'feature_video') {
 
     // Get mobile background URL and remove field.
-    $variables['background_mobile_image'] = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']);
+    $variables['background_mobile_image'] = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']) || '';
 
     // Convert Mobile Background image field to video play button placeholder.
     $variables['content']['field_background_mobile_image'] = array(
