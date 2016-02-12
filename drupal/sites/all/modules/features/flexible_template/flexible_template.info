@@ -19,6 +19,7 @@ dependencies[] = filter
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list
+dependencies[] = maxlength
 dependencies[] = media
 dependencies[] = media_colorbox
 dependencies[] = node_reference
