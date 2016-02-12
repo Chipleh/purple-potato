@@ -7,6 +7,20 @@
 include_once 'flexible_template.features.inc';
 
 /**
+ * Implements hook_view_mode_templates().
+ */
+function flexible_template_view_mode_templates() {
+  return array(
+    'flexible_template_module__feature_video',
+    'flexible_template_module__icons',
+    'flexible_template_module__multi_column',
+    'flexible_template_module__multi_column_parallax',
+    'flexible_template_module__rotator_hero',
+    'flexible_template_module__thumbnail_gallery',
+  );
+}
+
+/**
  * Implements template_preprocess_entity().
  */
 function flexible_template_preprocess_entity(&$variables, $hook) {
@@ -19,18 +33,21 @@ function flexible_template_preprocess_entity(&$variables, $hook) {
 }
 
 /**
- * Implements theme_preprocess_field().
+ * Implements template_preprocess_field().
  */
 function flexible_template_preprocess_field(&$variables) {
+
+  //
+  // Rotator slide / Hero
+  //
   if ($variables['element']['#field_name'] == 'field_rotator_slide_hero') {
 
-    // Render the rotator instead of the slide nodes that are referenced.
+    // Render rotator instead of slide nodes references.
     $arguments = array();
     foreach ($variables['items'] as $item) {
       $arguments[] = $item['#node']->nid;
     }
 
-    // Render the rotator.
     $rotator = views_get_view('rotators_hero');
     $rotator->set_display('rotator_hero_pane');
     if (!empty($arguments)) {
@@ -57,21 +74,48 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   }
 
   // Set title color.
-  if (!empty($content['field_title_color']['#items'][0]['rgb'])) {
-    $variables['title_attributes_array']['style'][] = 'color:' . $content['field_title_color']['#items'][0]['rgb'];
+  if (isset($content['field_title_color'])) {
+    $variables['content']['title']['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
     unset($variables['content']['field_title_color']);
   }
 
   // Set title size.
-  if (!empty($content['field_title_size'][0]['#markup'])) {
-    $variables['title_heading'] = $content['field_title_size'][0]['#markup'];
+  if (isset($content['field_title_size'])) {
+    if (isset($content['title'])) {
+      $variables['content']['title']['#theme'] = 'html_tag';
+      $variables['content']['title']['#tag']   = $content['field_title_size'][0]['#markup'];
+    }
     unset($variables['content']['field_title_size']);
   }
 
   flexible_template_preprocess_subhead($variables);
 
-  // Create empty Rotator slide / Hero field for all slides.
-  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'rotator_hero') {
+  // Define Fieldable Panels template overrides.
+  if ($variables['pane']->type == 'fieldable_panels_pane') {
+    $variables['theme_hook_suggestions'][] = 'flexible_template_module__' . $variables['content']['#element']->bundle;
+  }
+
+  //
+  // Flexible Video
+  //
+  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'feature_video') {
+
+    // Get mobile background URL and remove field.
+    $variables['background_mobile_image'] = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']);
+
+    // Convert Mobile Background image field to video play button placeholder.
+    $variables['content']['field_background_mobile_image'] = array(
+      '#type' => 'markup',
+      '#markup' => '<a class="play-button">Play</a>',
+    );
+  }
+
+  //
+  // Rotator slide / Hero
+  //
+  elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'rotator_hero') {
+
+    // Add empty field for all slides.
     if (!isset($variables['content']['field_rotator_slide_hero'])) {
       $variables['content']['field_rotator_slide_hero'] = array(
         '#theme' => 'field',
@@ -90,6 +134,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
       );
     }
   }
+
+
+dsm($variables);
 }
 
 /**

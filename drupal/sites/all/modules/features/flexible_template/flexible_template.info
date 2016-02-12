@@ -26,6 +26,7 @@ dependencies[] = panelizer
 dependencies[] = panels_curator
 dependencies[] = strongarm
 dependencies[] = text
+dependencies[] = view_mode_templates
 dependencies[] = views
 dependencies[] = views_content
 dependencies[] = views_slideshow
