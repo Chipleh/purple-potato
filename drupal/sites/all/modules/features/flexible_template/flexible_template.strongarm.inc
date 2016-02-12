@@ -220,7 +220,7 @@ function flexible_template_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '0',
+            'weight' => '1',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -665,20 +665,6 @@ function flexible_template_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'page_title_type_flexible_template';
-  $strongarm->value = '';
-  $export['page_title_type_flexible_template'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'page_title_type_flexible_template_showfield';
-  $strongarm->value = 0;
-  $export['page_title_type_flexible_template_showfield'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'page_title_type_gallery_thumbnail';
   $strongarm->value = '';
   $export['page_title_type_gallery_thumbnail'] = $strongarm;
@@ -689,34 +675,6 @@ function flexible_template_strongarm() {
   $strongarm->name = 'page_title_type_gallery_thumbnail_showfield';
   $strongarm->value = 0;
   $export['page_title_type_gallery_thumbnail_showfield'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'page_title_type_rotator';
-  $strongarm->value = '';
-  $export['page_title_type_rotator'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'page_title_type_rotator_hero';
-  $strongarm->value = '';
-  $export['page_title_type_rotator_hero'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'page_title_type_rotator_hero_showfield';
-  $strongarm->value = 0;
-  $export['page_title_type_rotator_hero_showfield'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'page_title_type_rotator_showfield';
-  $strongarm->value = 0;
-  $export['page_title_type_rotator_showfield'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -1166,7 +1166,7 @@ function flexible_template_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1197,8 +1197,8 @@ function flexible_template_field_default_field_instances() {
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '2 MB',
-      'max_resolution' => '',
-      'min_resolution' => '',
+      'max_resolution' => '1400x405',
+      'min_resolution' => '1400x405',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1216,9 +1216,10 @@ function flexible_template_field_default_field_instances() {
           'video' => 0,
         ),
         'browser_plugins' => array(
+          'media_browser_plus--media_browser_my_files' => 0,
+          'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 'media_internet',
           'upload' => 'upload',
         ),
       ),
@@ -1248,7 +1249,7 @@ function flexible_template_field_default_field_instances() {
           'width' => NULL,
         ),
         'type' => 'file_video',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1316,7 +1317,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1369,14 +1370,14 @@ function flexible_template_field_default_field_instances() {
     'bundle' => 'feature_video',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Content limited to 160 characters total.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1429,6 +1430,10 @@ function flexible_template_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => 160,
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 1,
         'rows' => 5,
       ),
       'type' => 'text_textarea',
@@ -1449,7 +1454,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'color_field',
         'settings' => array(),
         'type' => 'color_field_default_formatter',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1493,7 +1498,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1533,7 +1538,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'color_field',
         'settings' => array(),
         'type' => 'color_field_default_formatter',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1577,7 +1582,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2974,6 +2979,7 @@ function flexible_template_field_default_field_instances() {
   t('CTA');
   t('Columns');
   t('Comment');
+  t('Content limited to 160 characters total.');
   t('Disable lightbox on click');
   t('Display footer');
   t('Display header');
