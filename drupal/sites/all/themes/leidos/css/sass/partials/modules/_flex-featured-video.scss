@@ -1,0 +1,171 @@
+/*************************
+*   Flex Video Styles
+*   Rhino Hooton
+*   1/1/16
+/************************/
+
+
+/*  elements
+**************************************************/
+.pane-bundle-feature-video {
+	background: red;
+	clear: both;
+	display: block;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 28.9285%;
+		position: relative;
+		width: 100%;
+	}
+
+	.pane-title,
+	.field-name-field-subhead {
+		display: block;
+		max-width: 1000px;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.pane-title,
+	.field-name-field-subhead,
+	.field-name-field-cta {
+		position: relative;
+		z-index: 2;
+	}
+
+	.pane-title {
+		background: orange;
+		margin: 34px auto 20px;
+
+		display: none;
+	}
+
+	.field-name-field-subhead {
+		background: pink;
+		margin: 0 auto 20px;
+
+		display: none;
+	}
+
+	.field-name-field-background-video {
+		background: purple;
+		display: none;
+		position: relative;
+		z-index: 100;
+
+		display: none;
+	}
+
+	// temp
+	.field-type-image {
+		// background: green;
+		// left: 0;
+		// position: absolute;
+		// top: 0;
+		// z-index: 1;
+		border-bottom: 20px solid transparent;
+		border-left: 35px solid #fff;
+		border-top: 20px solid transparent;
+		content: '';
+		display: block;
+		height: 0;
+		margin: 0 auto 20px;
+		position: relative;
+		width: 0;
+
+		&:before {
+			background: $color-white;
+			border-radius: 50%;
+			content: '';
+			display: block;
+			height: 70px;
+			left: -63px;
+			opacity: .25;
+			position: absolute;
+			top:  -41px;
+			transition: all .5s ease;
+			width: 70px;
+			z-index: 1;
+		}
+
+		&:after {
+			background: $color-white;
+			border-radius: 50%;
+			content: '';
+			display: block;
+			height: 58px;
+			left: -57px;
+			opacity: .25;
+			position: absolute;
+			top:  -35px;
+			transition: all .5s ease;
+			width: 58px;
+			z-index: 1;
+		}
+
+		&:hover {
+			&:before {
+				opacity: .55;
+			}
+		}
+
+		img {
+			display: none;
+		}
+
+		display: none;
+	}
+
+	.field-name-field-cta {
+		background: blue;
+
+		.field-item {
+			text-align: center;
+		}
+
+		a {
+			border: 1px solid $color-white;
+			color: $color-white;
+			display: inline-block;
+			margin: 0 auto;
+			padding: 16px 40px;
+			position: relative;
+			z-index: 2;
+
+			&:before {
+				background: $color-white;
+				content: '';
+				display: block;
+				height: 100%;
+				left: 0;
+				opacity: .15;
+				position: absolute;
+				top: 0;
+				transition: all .5s ease;
+				width: 100%;
+				z-index: 1;
+			}
+
+			&:hover {
+				&:before {
+					opacity: .45;
+					transition: all .5s ease;
+				}
+			}
+		}
+
+		display: none;
+	}
+}
+
+
+/*  tablet & mobile
+**************************************************/
+@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
+	.pane-bundle-feature-video {
+
+	}
+}
