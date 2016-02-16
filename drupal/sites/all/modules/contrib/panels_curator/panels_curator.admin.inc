@@ -119,9 +119,12 @@ function panels_curator_settings_form() {
 
   // Add any new or un-categorized panels.
   foreach ($type_mapping as $key => $type) {
-    $group = 'disabled';
-    if (isset($form[$type['group']])) {
-      $group = $type['group'];
+    $group = $type['group'];
+    if ($group == 'fieldable_panels_pane') {
+      $group = 'fielded-panes';
+    }
+    if (!isset($form[$group])) {
+      $group = 'disabled';
     }
     $panel_title = $types[$type['group']][$type['panel']]['title'];
     $form[$group][$panel_title] = array(

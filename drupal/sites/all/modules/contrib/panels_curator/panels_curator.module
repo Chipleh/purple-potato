@@ -212,12 +212,39 @@ function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_s
 }
 
 /**
+ * Helper function to load panels content from a node.
+ */
+function panels_curator_panel_view($node) {
+  // Check for panels content on a node.
+  if (isset($node->panelizer['page_manager']->display)) {
+    // Display.
+    $display = panels_load_display($node->panelizer['page_manager']->display->did);
+    $render = panels_render_display($display);
+    return $render;
+  }
+
+  // Otherwise, fall back.
+  return drupal_render(node_view($node));
+}
+
+/**
  * Helper function to map the correct values for a variety of fields.
  */
 function panels_curator_map_values($values, $content) {
   if (isset($values['value'])) {
     // Basic fields.
     $value = $values['value'];
+  }
+  elseif (isset($values['nid'])) {
+    // Node reference fields.
+    $node = node_load($values['nid']);
+    $value = panels_curator_panel_view($node);
+  }
+  elseif (isset($values['entity']) && isset($values['entity']->nid)) {
+    // Node entity reference fields.
+    $nid = $values['entity']->nid;
+    $node = node_load($nid);
+    $value = panels_curator_panel_view($node);
   }
   elseif (isset($values['rgb'])) {
     // Color fields.
@@ -248,6 +275,7 @@ function panels_curator_map_values($values, $content) {
   else {
     $value = t('Unmapped field');
   }
+
   return $value;
 }
 
@@ -283,7 +311,7 @@ function panels_curator_preprocess_fieldable_panels_pane(&$vars) {
                   $current_output[] = panels_curator_map_values($current_values, $collection_values[$current_key]);
                 }
                 // Array of values or a single value.
-                if (count($current_output) > 1) {
+                if (count($current_output) > 1 || is_array($current_output[0])) {
                   $collection_output[$collection_key] = $current_output;
                 }
                 else {
@@ -298,7 +326,7 @@ function panels_curator_preprocess_fieldable_panels_pane(&$vars) {
           }
         }
         // Add the current item's values to the output array.
-        if (count($output) > 1) {
+        if (count($output) > 1 || is_array($output[0])) {
           $vars['output'][$clean_key] = $output;
         }
         else {
