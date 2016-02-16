@@ -109,6 +109,15 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   }
 
   //
+  // Multi-column
+  //
+  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'multi_column') {
+
+    // Add custom class that identifies total number of columns defined.
+    $variables['classes_array'][] = 'multi-column-' . count($variables['content']['field_columns_multi']['#items']);
+  }
+
+  //
   // Rotator slide / Hero
   //
   elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'rotator_hero') {
@@ -206,6 +215,7 @@ function flexible_template_preprocess_subhead(&$variables) {
     $variables['content']['field_subhead'][0]['#theme'] = 'html_tag';
     $variables['content']['field_subhead'][0]['#tag']   = $content['field_subhead_size'][0]['#markup'];
     $variables['content']['field_subhead'][0]['#value'] = $content['field_subhead'][0]['#markup'];
+
     unset($variables['content']['field_subhead_size']);
   }
 }
