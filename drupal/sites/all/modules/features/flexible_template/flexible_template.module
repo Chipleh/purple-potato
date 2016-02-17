@@ -38,9 +38,48 @@ function flexible_template_preprocess_entity(&$variables, $hook) {
 function flexible_template_preprocess_field(&$variables) {
 
   //
+  // Icons
+  //
+  if ($variables['element']['#field_name'] == 'field_icons') {
+
+    // Addend custom classes for field collection items.
+    foreach ($variables['items'] as $key => &$item) {
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+
+  //
+  // Multi-column
+  //
+  elseif ($variables['element']['#field_name'] == 'field_columns_multi') {
+
+    // Addend custom classes for field collection items.
+    foreach ($variables['items'] as $key => &$item) {
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+
+  //
+  // Multi-column parallax
+  //
+  elseif ($variables['element']['#field_name'] == 'field_columns_multi_parallax') {
+
+    // Addend custom classes for field collection items.
+    foreach ($variables['items'] as $key => &$item) {
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+
+  //
   // Rotator slide / Hero
   //
-  if ($variables['element']['#field_name'] == 'field_rotator_slide_hero') {
+  elseif ($variables['element']['#field_name'] == 'field_rotator_slide_hero') {
 
     // Render rotator instead of slide nodes references.
     $arguments = array();
@@ -58,6 +97,19 @@ function flexible_template_preprocess_field(&$variables) {
     $rotator->execute();
 
     $variables['rotator_hero'] = $rotator->render();
+  }
+
+  //
+  // Thumbnail gallery
+  //
+  elseif ($variables['element']['#field_name'] == 'field_thumbnail_gallery') {
+
+    // Addend custom classes for field collection items.
+    foreach ($variables['items'] as $key => &$item) {
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
   }
 }
 
