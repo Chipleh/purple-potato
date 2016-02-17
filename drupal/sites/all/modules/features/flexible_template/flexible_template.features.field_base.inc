@@ -101,7 +101,7 @@ function flexible_template_field_default_field_bases() {
   // Exported field_base: 'field_columns_multi'
   $field_bases['field_columns_multi'] = array(
     'active' => 1,
-    'cardinality' => 4,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_columns_multi',
