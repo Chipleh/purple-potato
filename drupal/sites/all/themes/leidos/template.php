@@ -337,6 +337,14 @@ function leidos_preprocess_field(&$variables) {
       );
     }
   }
+  elseif ($variables['element']['#field_name'] == 'field_columns_multi') {
+    // Custom classes for our field collection wrappers.
+    foreach ($variables['items'] as $key => &$item) {
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items']))
+      );
+    }
+  }
   elseif ($variables['element']['#field_name'] == 'field_left_menu') {
     $variables['items'][0]['#markup'] = '
     <h2 class="pane-title"></h2>
