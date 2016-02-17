@@ -14,7 +14,7 @@ function flexible_template_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_flexible_template';
-  $strongarm->value = 'edit-ds-extras';
+  $strongarm->value = 'edit-panelizer';
   $export['additional_settings__active_tab_flexible_template'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -691,10 +691,10 @@ function flexible_template_strongarm() {
         'choice' => 1,
       ),
       'default' => array(
-        'status' => 1,
-        'substitute' => '',
-        'default' => 1,
-        'choice' => 1,
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
       ),
       'full' => array(
         'status' => 0,
@@ -738,7 +738,7 @@ function flexible_template_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:flexible_template:default_selection';
-  $strongarm->value = 'node:flexible_template:default:default';
+  $strongarm->value = 0;
   $export['panelizer_node:flexible_template:default_selection'] = $strongarm;
 
   $strongarm = new stdClass();
