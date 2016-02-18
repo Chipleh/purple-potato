@@ -163,10 +163,17 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   //
   // Multi-column
   //
-  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'multi_column') {
+  elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'multi_column') {
 
     // Add custom class that identifies total number of columns defined.
     $variables['classes_array'][] = 'multi-column-' . count($variables['content']['field_columns_multi']['#items']);
+
+    // Get mobile background URL and remove field.
+    $variables['background_mobile_image'] = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']) || '';
+    unset($variables['content']['field_background_mobile_image']);
+
+    // Added Close/Play buttons to field list.
+    $variables['content']['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play"></a>';
   }
 
   //
