@@ -41,9 +41,9 @@ function flexible_template_preprocess_field(&$variables) {
   // Icons
   //
   if ($variables['element']['#field_name'] == 'field_icons') {
-
-    // Addend custom classes for field collection items.
     foreach ($variables['items'] as $key => &$item) {
+
+      // Addend custom classes for field collection items.
       $variables['items'][$key]['#attributes'] = array(
         'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
       );
@@ -54,12 +54,22 @@ function flexible_template_preprocess_field(&$variables) {
   // Multi-column
   //
   elseif ($variables['element']['#field_name'] == 'field_columns_multi') {
-
-    // Addend custom classes for field collection items.
     foreach ($variables['items'] as $key => &$item) {
-      $variables['items'][$key]['#attributes'] = array(
+
+      // Addend custom classes for field collection items.
+      $item['#attributes'] = array(
         'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
       );
+
+      // Created simplified field collection object.
+      $collection_item = &$item['entity']['field_collection_item'][key($item['entity']['field_collection_item'])];
+
+      // Get mobile background URL and remove field.
+      $collection_item['background_mobile_image'] = file_create_url($collection_item['field_background_mobile_image']['#items'][0]['uri']);
+      unset($collection_item['field_background_mobile_image']);
+
+      // Added Close/Play buttons to field list.
+      $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play"></a>';
     }
   }
 
@@ -67,9 +77,9 @@ function flexible_template_preprocess_field(&$variables) {
   // Multi-column parallax
   //
   elseif ($variables['element']['#field_name'] == 'field_columns_multi_parallax') {
-
-    // Addend custom classes for field collection items.
     foreach ($variables['items'] as $key => &$item) {
+
+      // Addend custom classes for field collection items.
       $variables['items'][$key]['#attributes'] = array(
         'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
       );
@@ -164,13 +174,6 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
     // Add custom class that identifies total number of columns defined.
     $variables['classes_array'][] = 'multi-column-' . count($variables['content']['field_columns_multi']['#items']);
-
-    // Get mobile background URL and remove field.
-    $variables['background_mobile_image'] = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']) || '';
-    unset($variables['content']['field_background_mobile_image']);
-
-    // Added Close/Play buttons to field list.
-    $variables['content']['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play"></a>';
   }
 
   //
