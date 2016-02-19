@@ -183,8 +183,8 @@
 
 			h2 {
 				font-size: 3.6vw;
-				height: calc(#{$multiBit} * 5);
-				line-height: calcLineHeight($multiBit , 5);
+				height: calc(#{$multiBit} * 7);
+				line-height: calcLineHeight($multiBit , 7);
 				margin-bottom: calc(#{$multiBit} * 1);
 				margin-top: calc(#{$multiBit} * 4);
 			}
@@ -200,16 +200,16 @@
 			}
 
 			h4 {
-				font-size: 1.429vw;
-				height: calc(#{$multiBit} * 6);
-				line-height: calcLineHeight($multiBit , 3);
+				font-size: 1.529vw;
+				height: calc(#{$multiBit} * 8);
+				line-height: calcLineHeight($multiBit , 4);
 				margin-bottom: calc(#{$multiBit} * 5);
 				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h5 {
 				font-size: 1.072vw;
-				height: calc(#{$multiBit} * 6);
+				height: calc(#{$multiBit} * 8);
 				line-height: calcLineHeight($multiBit , 2);
 				margin-bottom: calc(#{$multiBit} * 5);
 				margin-top: calc(#{$multiBit} * 0);
@@ -254,42 +254,56 @@
 				font-size: 4.3vw;
 				height: calc(#{$multiBit} * 7);
 				line-height: calcLineHeight($multiBit , 7);
-				margin-bottom: calc(#{$multiBit} * 1);
-				margin-top: calc(#{$multiBit} * 4);
+				margin-bottom: calc(#{$multiBit} * 2);
+				margin-top: calc(#{$multiBit} * 3);
+				text-align: left;
 			}
 
 			h2 {
 				font-size: 3.6vw;
-				height: calc(#{$multiBit} * 5);
-				line-height: calcLineHeight($multiBit , 5);
-				margin-bottom: calc(#{$multiBit} * 1);
-				margin-top: calc(#{$multiBit} * 4);
+				height: calc(#{$multiBit} * 7);
+				line-height: calcLineHeight($multiBit , 7);
+				margin-bottom: calc(#{$multiBit} * 2);
+				margin-top: calc(#{$multiBit} * 3);
+				text-align: left;
+			}
+
+			h3 {
+				font-size: 1.6vw;
+				height: calc(#{$multiBit} * 7);
+				line-height: calcLineHeight($multiBit , 3.5);
+				margin-bottom: calc(#{$multiBit} * 2);
+				margin-top: calc(#{$multiBit} * 3);
+				text-align: left;
 			}
 		}
 
 		.field-name-field-subhead {
 			h3 {
 				font-size: 1.786vw;
-				height: calc(#{$multiBit} * 8);
-				line-height: calcLineHeight($multiBit , 4);
-				margin-bottom: calc(#{$multiBit} * 5);
+				height: calc(#{$multiBit} * 15);
+				line-height: calcLineHeight($multiBit , 3.75);
+				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
+				text-align: left;
 			}
 
 			h4 {
 				font-size: 1.429vw;
-				height: calc(#{$multiBit} * 6);
+				height: calc(#{$multiBit} * 15);
 				line-height: calcLineHeight($multiBit , 3);
-				margin-bottom: calc(#{$multiBit} * 5);
+				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
+				text-align: left;
 			}
 
 			h5 {
 				font-size: 1.072vw;
-				height: calc(#{$multiBit} * 6);
-				line-height: calcLineHeight($multiBit , 2);
-				margin-bottom: calc(#{$multiBit} * 5);
+				height: calc(#{$multiBit} * 15);
+				line-height: calcLineHeight($multiBit , 2.15);
+				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
+				text-align: left;
 			}
 		}
 
@@ -297,10 +311,20 @@
 		}
 
 		.button-play {
+			width: 74% !important;
+			border: none !important;
+			font-size: 1.429vw !important;
+			text-decoration: underline !important;
+			text-align: left !important;
 
+			&:before,
+			&:after {
+				display: none !important;
+			}
 		}
 
 		.field-name-field-cta {
+			text-align: left;
 		}
 
 		.field-name-field-video-tout {
@@ -335,41 +359,41 @@
 				font-size: 4.3vw;
 				height: calc(#{$multiBit} * 7);
 				line-height: calcLineHeight($multiBit , 7);
-				margin-bottom: calc(#{$multiBit} * 1);
-				margin-top: calc(#{$multiBit} * 4);
+				margin-bottom: calc(#{$multiBit} * 2);
+				margin-top: calc(#{$multiBit} * 3);
 			}
 
 			h2 {
-				font-size: 3.6vw;
-				height: calc(#{$multiBit} * 5);
-				line-height: calcLineHeight($multiBit , 5);
-				margin-bottom: calc(#{$multiBit} * 1);
-				margin-top: calc(#{$multiBit} * 4);
+				font-size: 1.6vw;
+				height: calc(#{$multiBit} * 7);
+				line-height: calcLineHeight($multiBit , 3.5);
+				margin-bottom: calc(#{$multiBit} * 2);
+				margin-top: calc(#{$multiBit} * 3);
 			}
 		}
 
 		.field-name-field-subhead {
 			h3 {
 				font-size: 1.786vw;
-				height: calc(#{$multiBit} * 8);
-				line-height: calcLineHeight($multiBit , 4);
-				margin-bottom: calc(#{$multiBit} * 5);
+				height: calc(#{$multiBit} * 15);
+				line-height: calcLineHeight($multiBit , 3.75);
+				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h4 {
 				font-size: 1.429vw;
-				height: calc(#{$multiBit} * 6);
+				height: calc(#{$multiBit} * 15);
 				line-height: calcLineHeight($multiBit , 3);
-				margin-bottom: calc(#{$multiBit} * 5);
+				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h5 {
 				font-size: 1.072vw;
-				height: calc(#{$multiBit} * 6);
-				line-height: calcLineHeight($multiBit , 2);
-				margin-bottom: calc(#{$multiBit} * 5);
+				height: calc(#{$multiBit} * 15);
+				line-height: calcLineHeight($multiBit , 2.15);
+				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
 			}
 		}
@@ -378,6 +402,15 @@
 		}
 
 		.button-play {
+			width: 74% !important;
+			border: none !important;
+			font-size: 1.429vw !important;
+			text-decoration: underline !important;
+
+			&:before,
+			&:after {
+				display: none !important;
+			}
 		}
 
 		.field-name-field-cta {
@@ -420,41 +453,41 @@
 				font-size: 4.3vw;
 				height: calc(#{$multiBit} * 7);
 				line-height: calcLineHeight($multiBit , 7);
-				margin-bottom: calc(#{$multiBit} * 1);
-				margin-top: calc(#{$multiBit} * 4);
+				margin-bottom: calc(#{$multiBit} * 2);
+				margin-top: calc(#{$multiBit} * 3);
 			}
 
 			h2 {
-				font-size: 3.6vw;
-				height: calc(#{$multiBit} * 5);
-				line-height: calcLineHeight($multiBit , 5);
-				margin-bottom: calc(#{$multiBit} * 1);
-				margin-top: calc(#{$multiBit} * 4);
+				font-size: 1.6vw;
+				height: calc(#{$multiBit} * 7);
+				line-height: calcLineHeight($multiBit , 3.5);
+				margin-bottom: calc(#{$multiBit} * 2);
+				margin-top: calc(#{$multiBit} * 3);
 			}
 		}
 
 		.field-name-field-subhead {
 			h3 {
 				font-size: 1.786vw;
-				height: calc(#{$multiBit} * 8);
-				line-height: calcLineHeight($multiBit , 4);
-				margin-bottom: calc(#{$multiBit} * 5);
+				height: calc(#{$multiBit} * 15);
+				line-height: calcLineHeight($multiBit , 3.75);
+				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h4 {
 				font-size: 1.429vw;
-				height: calc(#{$multiBit} * 6);
+				height: calc(#{$multiBit} * 15);
 				line-height: calcLineHeight($multiBit , 3);
-				margin-bottom: calc(#{$multiBit} * 5);
+				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h5 {
 				font-size: 1.072vw;
-				height: calc(#{$multiBit} * 6);
-				line-height: calcLineHeight($multiBit , 2);
-				margin-bottom: calc(#{$multiBit} * 5);
+				height: calc(#{$multiBit} * 15);
+				line-height: calcLineHeight($multiBit , 2.15);
+				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
 			}
 		}
@@ -463,6 +496,15 @@
 		}
 
 		.button-play {
+			width: 74% !important;
+			border: none !important;
+			font-size: 1.429vw !important;
+			text-decoration: underline !important;
+
+			&:before,
+			&:after {
+				display: none !important;
+			}
 		}
 
 		.field-name-field-cta {

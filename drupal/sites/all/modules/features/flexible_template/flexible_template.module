@@ -69,7 +69,7 @@ function flexible_template_preprocess_field(&$variables) {
       unset($collection_item['field_background_mobile_image']);
 
       // Added Close/Play buttons to field list.
-      $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play"></a>';
+      $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play">Watch Video</a>';
     }
   }
 
