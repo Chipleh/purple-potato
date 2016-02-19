@@ -166,7 +166,8 @@
 			display: block;
 			font-size: 0;
 			height: 0;
-			margin: 2.8vw auto;
+			margin: 0 auto;
+			margin-bottom: calc(#{$multiBit} * 5);
 			position: relative;
 			width: 0;
 
