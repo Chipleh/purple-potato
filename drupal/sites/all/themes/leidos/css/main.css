@@ -4683,40 +4683,51 @@ p.subtext {
   background-size: 100% auto;
   clear: both;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: calc(0.643vw * 2);
   overflow: hidden;
   position: relative;
 }
 /* line 19, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column .flexible-template-content {
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  /* disable fields */
   /* shared */
+  /* fields */
   /* header */
-  /* subhead */
-  /* video */
-  /* button close */
-  /* button play */
   /* cta */
 }
-/* line 32, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
-.pane-bundle-multi-column .flexible-template-content .field-name-field-title-item,
-.pane-bundle-multi-column .flexible-template-content .field-name-field-subhead,
-.pane-bundle-multi-column .flexible-template-content .field-name-field-cta {
-  position: relative;
-  z-index: 2;
-}
-/* line 48, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 28, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column .flexible-template-content .field-name-field-background-color,
 .pane-bundle-multi-column .flexible-template-content .field-name-field-background-image,
-.pane-bundle-multi-column .flexible-template-content .field-name-field-cta {
+.pane-bundle-multi-column .flexible-template-content .field-name-field-background-video {
   display: none;
 }
-/* line 55, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 42, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column .flexible-template-content .field-name-field-title-item,
+.pane-bundle-multi-column .flexible-template-content .field-name-field-subhead,
+.pane-bundle-multi-column .flexible-template-content .button-close,
+.pane-bundle-multi-column .flexible-template-content .button-play,
+.pane-bundle-multi-column .flexible-template-content .field-name-field-cta,
+.pane-bundle-multi-column .flexible-template-content .field-name-field-video-tout {
+  clear: both;
+  display: block;
+  overflow: hidden;
+}
+/* line 53, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column .flexible-template-content .field-name-field-title-item,
+.pane-bundle-multi-column .flexible-template-content .field-name-field-subhead,
+.pane-bundle-multi-column .flexible-template-content .button-play,
+.pane-bundle-multi-column .flexible-template-content .field-name-field-cta,
+.pane-bundle-multi-column .flexible-template-content .field-name-field-video-tout {
+  width: 74%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 85, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column .flexible-template-content .button-close,
+.pane-bundle-multi-column .flexible-template-content .field-name-field-video-tout {
+  display: none;
+}
+/* line 93, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column .flexible-template-content h1,
 .pane-bundle-multi-column .flexible-template-content h2,
 .pane-bundle-multi-column .flexible-template-content h3,
@@ -4727,9 +4738,8 @@ p.subtext {
   margin: 0 auto;
   overflow: hidden;
   text-align: center;
-  width: 71%;
 }
-/* line 67, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 104, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column .flexible-template-content h1 p,
 .pane-bundle-multi-column .flexible-template-content h2 p,
 .pane-bundle-multi-column .flexible-template-content h3 p,
@@ -4737,15 +4747,38 @@ p.subtext {
 .pane-bundle-multi-column .flexible-template-content h5 p {
   margin: 0;
 }
-/* line 237, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
-.pane-bundle-multi-column.multi-column-1:before, .pane-bundle-multi-column.multi-column-2:before, .pane-bundle-multi-column.multi-column-3:before, .pane-bundle-multi-column.multi-column-4:before {
-  content: "";
-  display: block;
-  padding-top: 28.9295%;
+/* line 111, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column .flexible-template-content .field-name-field-cta a {
+  border: 1px solid #fff;
+  color: #fff;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1.15vw 2.85vw;
   position: relative;
-  width: 100%;
+  z-index: 2;
+  font-size: 1.429vw;
+  font-weight: 100;
 }
-/* line 245, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 122, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column .flexible-template-content .field-name-field-cta a:before {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: .15;
+  position: absolute;
+  top: 0;
+  transition: all .5s ease;
+  width: 100%;
+  z-index: 1;
+}
+/* line 137, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column .flexible-template-content .field-name-field-cta a:hover:before {
+  opacity: .45;
+  transition: all .5s ease;
+}
+/* line 150, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .column-0,
 .pane-bundle-multi-column.multi-column-1 .column-1,
 .pane-bundle-multi-column.multi-column-1 .column-2,
@@ -4762,12 +4795,46 @@ p.subtext {
   display: block;
   float: left;
   overflow: hidden;
+  position: relative;
 }
-/* line 255, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
-.pane-bundle-multi-column.multi-column-1 {
-  background: red;
+/* line 159, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column.multi-column-1 .column-0:before,
+.pane-bundle-multi-column.multi-column-1 .column-1:before,
+.pane-bundle-multi-column.multi-column-1 .column-2:before,
+.pane-bundle-multi-column.multi-column-1 .column-3:before, .pane-bundle-multi-column.multi-column-2 .column-0:before,
+.pane-bundle-multi-column.multi-column-2 .column-1:before,
+.pane-bundle-multi-column.multi-column-2 .column-2:before,
+.pane-bundle-multi-column.multi-column-2 .column-3:before, .pane-bundle-multi-column.multi-column-3 .column-0:before,
+.pane-bundle-multi-column.multi-column-3 .column-1:before,
+.pane-bundle-multi-column.multi-column-3 .column-2:before,
+.pane-bundle-multi-column.multi-column-3 .column-3:before, .pane-bundle-multi-column.multi-column-4 .column-0:before,
+.pane-bundle-multi-column.multi-column-4 .column-1:before,
+.pane-bundle-multi-column.multi-column-4 .column-2:before,
+.pane-bundle-multi-column.multi-column-4 .column-3:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
 }
-/* line 259, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 166, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column.multi-column-1 .column-0 .ds-1col,
+.pane-bundle-multi-column.multi-column-1 .column-1 .ds-1col,
+.pane-bundle-multi-column.multi-column-1 .column-2 .ds-1col,
+.pane-bundle-multi-column.multi-column-1 .column-3 .ds-1col, .pane-bundle-multi-column.multi-column-2 .column-0 .ds-1col,
+.pane-bundle-multi-column.multi-column-2 .column-1 .ds-1col,
+.pane-bundle-multi-column.multi-column-2 .column-2 .ds-1col,
+.pane-bundle-multi-column.multi-column-2 .column-3 .ds-1col, .pane-bundle-multi-column.multi-column-3 .column-0 .ds-1col,
+.pane-bundle-multi-column.multi-column-3 .column-1 .ds-1col,
+.pane-bundle-multi-column.multi-column-3 .column-2 .ds-1col,
+.pane-bundle-multi-column.multi-column-3 .column-3 .ds-1col, .pane-bundle-multi-column.multi-column-4 .column-0 .ds-1col,
+.pane-bundle-multi-column.multi-column-4 .column-1 .ds-1col,
+.pane-bundle-multi-column.multi-column-4 .column-2 .ds-1col,
+.pane-bundle-multi-column.multi-column-4 .column-3 .ds-1col {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 176, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .field-name-field-title-item h1 {
   font-size: 4.3vw;
   height: calc(0.643vw * 7);
@@ -4775,211 +4842,394 @@ p.subtext {
   margin-bottom: calc(0.643vw * 1);
   margin-top: calc(0.643vw * 4);
 }
-/* line 267, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 184, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .field-name-field-title-item h2 {
   font-size: 3.6vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 5);
+  line-height: 3.215vw;
+  margin-bottom: calc(0.643vw * 1);
+  margin-top: calc(0.643vw * 4);
 }
-/* line 277, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 194, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .field-name-field-subhead h3 {
   font-size: 1.786vw;
   height: calc(0.643vw * 8);
   line-height: 2.572vw;
-  margin-bottom: calc(0.643vw * 2);
+  margin-bottom: calc(0.643vw * 0);
   margin-top: calc(0.643vw * 0);
 }
-/* line 285, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 202, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .field-name-field-subhead h4 {
   font-size: 1.429vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 6);
+  line-height: 1.929vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 293, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 210, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .field-name-field-subhead h5 {
   font-size: 1.072vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 6);
+  line-height: 1.286vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 319, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 232, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .ds-1col .column-0 {
+  background: #294f69;
   clear: both;
   float: none;
   width: 100%;
 }
-/* line 327, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
-.pane-bundle-multi-column.multi-column-2 {
-  background: green;
+/* line 238, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column.multi-column-1 .ds-1col .column-0:before {
+  padding-top: 28.929%;
 }
-/* line 331, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 242, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column.multi-column-1 .ds-1col .column-0 .ds-1col {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 253, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .field-name-field-title-item h1 {
   font-size: 4.3vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 7);
+  line-height: 4.501vw;
+  margin-bottom: calc(0.643vw * 1);
+  margin-top: calc(0.643vw * 4);
 }
-/* line 339, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 261, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .field-name-field-title-item h2 {
   font-size: 3.6vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 5);
+  line-height: 3.215vw;
+  margin-bottom: calc(0.643vw * 1);
+  margin-top: calc(0.643vw * 4);
 }
-/* line 349, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 271, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .field-name-field-subhead h3 {
   font-size: 1.786vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 8);
+  line-height: 2.572vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 357, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 279, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .field-name-field-subhead h4 {
   font-size: 1.429vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 6);
+  line-height: 1.929vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 365, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 287, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .field-name-field-subhead h5 {
   font-size: 1.072vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 6);
+  line-height: 1.286vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 391, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 313, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column.multi-column-2 .ds-1col .column-0:before,
+.pane-bundle-multi-column.multi-column-2 .ds-1col .column-1:before {
+  padding-top: 57.858%;
+}
+/* line 318, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .ds-1col .column-0 {
-  background: purple;
+  background: #294f69;
   clear: left;
   width: 50%;
 }
-/* line 397, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 324, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .ds-1col .column-1 {
-  background: pink;
+  background: #3e4a64;
   clear: right;
   width: 50%;
 }
-/* line 405, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
-.pane-bundle-multi-column.multi-column-3 {
-  background: blue;
-}
-/* line 409, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 334, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-3 .field-name-field-title-item h1 {
   font-size: 4.3vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 7);
+  line-height: 4.501vw;
+  margin-bottom: calc(0.643vw * 1);
+  margin-top: calc(0.643vw * 4);
 }
-/* line 417, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 342, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-3 .field-name-field-title-item h2 {
   font-size: 3.6vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 5);
+  line-height: 3.215vw;
+  margin-bottom: calc(0.643vw * 1);
+  margin-top: calc(0.643vw * 4);
 }
-/* line 427, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 352, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-3 .field-name-field-subhead h3 {
   font-size: 1.786vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 8);
+  line-height: 2.572vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 435, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 360, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-3 .field-name-field-subhead h4 {
   font-size: 1.429vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 6);
+  line-height: 1.929vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 443, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 368, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-3 .field-name-field-subhead h5 {
   font-size: 1.072vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 6);
+  line-height: 1.286vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 469, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 393, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column.multi-column-3 .ds-1col .column-0:before,
+.pane-bundle-multi-column.multi-column-3 .ds-1col .column-1:before,
+.pane-bundle-multi-column.multi-column-3 .ds-1col .column-2:before {
+  padding-top: 86.798%;
+}
+/* line 398, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-3 .ds-1col .column-0 {
-  background: purple;
+  background: #294f69;
   clear: left;
   width: 33.33%;
 }
-/* line 475, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 404, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-3 .ds-1col .column-1 {
-  background: pink;
+  background: #3e4a64;
   width: 33.33%;
 }
-/* line 480, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 409, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-3 .ds-1col .column-2 {
-  background: yellow;
+  background: #898b8c;
   clear: right;
   width: 33.33%;
 }
-/* line 488, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
-.pane-bundle-multi-column.multi-column-4 {
-  background: teal;
-}
-/* line 492, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 419, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .field-name-field-title-item h1 {
   font-size: 4.3vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 7);
+  line-height: 4.501vw;
+  margin-bottom: calc(0.643vw * 1);
+  margin-top: calc(0.643vw * 4);
 }
-/* line 500, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 427, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .field-name-field-title-item h2 {
   font-size: 3.6vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 5);
+  line-height: 3.215vw;
+  margin-bottom: calc(0.643vw * 1);
+  margin-top: calc(0.643vw * 4);
 }
-/* line 510, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 437, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .field-name-field-subhead h3 {
   font-size: 1.786vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 8);
+  line-height: 2.572vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 518, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 445, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .field-name-field-subhead h4 {
   font-size: 1.429vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 6);
+  line-height: 1.929vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 526, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 453, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .field-name-field-subhead h5 {
   font-size: 1.072vw;
-  height: calc(0.643vw * );
-  margin-bottom: calc(0.643vw * );
-  margin-top: calc(0.643vw * );
+  height: calc(0.643vw * 6);
+  line-height: 1.286vw;
+  margin-bottom: calc(0.643vw * 0);
+  margin-top: calc(0.643vw * 0);
 }
-/* line 552, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 479, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+.pane-bundle-multi-column.multi-column-4 .ds-1col .column-0:before,
+.pane-bundle-multi-column.multi-column-4 .ds-1col .column-1:before,
+.pane-bundle-multi-column.multi-column-4 .ds-1col .column-2:before,
+.pane-bundle-multi-column.multi-column-4 .ds-1col .column-3:before {
+  padding-top: 115.717%;
+}
+/* line 484, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-0 {
-  background: purple;
+  background: #294f69;
   clear: left;
   width: 25%;
 }
-/* line 558, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 490, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-1 {
-  background: pink;
+  background: #3e4a64;
   width: 25%;
 }
-/* line 563, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 495, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-2 {
-  background: yellow;
+  background: #898b8c;
   width: 25%;
 }
-/* line 568, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
+/* line 500, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-3 {
-  background: gold;
+  background: #170c50;
   clear: right;
   width: 25%;
 }
 
 /* video open */
+/*  tablet & mobile
+**************************************************/
+/*************************
+*   Flex Video Styles
+*   Rhino Hooton
+*   1/1/16
+/************************/
+/*  elements
+**************************************************/
+/* line 12, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content,
+.pane-bundle-feature-video .flexible-template-content {
+  /* video */
+  /* button close */
+  /* button play */
+}
+/* line 15, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content .field-name-field-background-video,
+.pane-bundle-feature-video .flexible-template-content .field-name-field-background-video {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* line 24, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content .field-name-field-background-video:before,
+.pane-bundle-feature-video .flexible-template-content .field-name-field-background-video:before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 36, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content .field-name-field-background-video video,
+.pane-bundle-feature-video .flexible-template-content .field-name-field-background-video video {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: calc(50vh - 360px);
+  width: 70%;
+  border: 10px solid;
+}
+/* line 47, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content .button-close,
+.pane-bundle-feature-video .flexible-template-content .button-close {
+  display: none;
+  height: 60px;
+  outline: none;
+  position: fixed;
+  right: 15%;
+  top: calc(50vh - 351px);
+  width: 60px;
+  z-index: 2000;
+}
+/* line 57, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content .button-close:before,
+.pane-bundle-feature-video .flexible-template-content .button-close:before {
+  color: #fff;
+  content: "+";
+  display: block;
+  font-size: 50px;
+  height: 100%;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 100%;
+}
+/* line 70, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content .button-play,
+.pane-bundle-feature-video .flexible-template-content .button-play {
+  border-bottom: 1.4vw solid transparent;
+  border-left: 2.3vw solid #fff;
+  border-top: 1.4vw solid transparent;
+  color: transparent;
+  content: '';
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  height: 0;
+  margin: 2.8vw auto;
+  overflow: visible;
+  position: relative;
+  width: 0;
+}
+/* line 85, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content .button-play:before,
+.pane-bundle-feature-video .flexible-template-content .button-play:before {
+  background: #fff;
+  border-radius: 50%;
+  content: '';
+  cursor: pointer;
+  display: block;
+  height: 6vw;
+  left: -4.45vw;
+  opacity: .25;
+  position: absolute;
+  top: -2.98vw;
+  transition: all .5s ease;
+  width: 6vw;
+  z-index: 1;
+}
+/* line 101, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content .button-play:after,
+.pane-bundle-feature-video .flexible-template-content .button-play:after {
+  background: #fff;
+  border-radius: 50%;
+  content: '';
+  cursor: pointer;
+  display: block;
+  height: 5vw;
+  left: -4vw;
+  opacity: .25;
+  position: absolute;
+  top: -2.5vw;
+  transition: all .5s ease;
+  width: 5vw;
+  z-index: 1;
+}
+/* line 118, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.pane-bundle-multi-column .flexible-template-content .button-play:hover:before,
+.pane-bundle-feature-video .flexible-template-content .button-play:hover:before {
+  opacity: .55;
+}
+
+/* video open */
+/* line 129, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.node-type-flexible-template.video-open #header {
+  z-index: 1;
+}
+/* line 133, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.node-type-flexible-template.video-open #main-wrapper {
+  z-index: 100;
+}
+/* line 137, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.node-type-flexible-template.video-open #main-wrapper .video-container-open .button-close,
+.node-type-flexible-template.video-open #main-wrapper .video-container-open .field-name-field-background-video {
+  display: block;
+}
+
 /*  tablet & mobile
 **************************************************/
 /*************************

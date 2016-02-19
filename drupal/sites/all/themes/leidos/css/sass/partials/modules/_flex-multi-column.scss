@@ -12,42 +12,80 @@
 	background-size: 100% auto;
 	clear: both;
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: calc(#{$multiBit} * 2);
 	overflow: hidden;
 	position: relative;
 
 	.flexible-template-content {
-		height: 100%;
-		left: 0;
-		overflow: hidden;
-		position: absolute;
-		top: 0;
-		width: 100%;
+		// height: 100%;
+		// left: 0;
+		// overflow: hidden;
+		// position: absolute;
+		// top: 0;
+		// width: 100%;
 
-		> h2 {
-			// display: none !important;
+		/* disable fields */
+		.field-name-field-background-color,
+		.field-name-field-background-image,
+		.field-name-field-background-video {
+			display: none;
 		}
 
 		/* shared */
+		// .field-name-field-title-item,
+		// .field-name-field-subhead,
+		// .field-name-field-cta {
+		// 	position: relative;
+		// 	z-index: 2;
+		// }
+
 		.field-name-field-title-item,
 		.field-name-field-subhead,
-		.field-name-field-cta {
-			position: relative;
-			z-index: 2;
+		.button-close,
+		.button-play,
+		.field-name-field-cta,
+		.field-name-field-video-tout {
+			clear: both;
+			display: block;
+			overflow: hidden;
 		}
 
 		.field-name-field-title-item,
 		.field-name-field-subhead,
-		.field-name-field-video-tout,
-		.field-name-field-background-color,
-		.field-name-field-background-image,
-		.field-name-field-cta {
-			
+		.button-play,
+		.field-name-field-cta,
+		.field-name-field-video-tout {
+			width: 74%;
+			margin: 0 auto;
+			text-align: center;
 		}
 
-		.field-name-field-background-color,
-		.field-name-field-background-image,
+		/* fields */
+		.field-name-field-title-item {
+		}
+
+		.field-name-field-subhead {
+		}
+
+		.button-close {
+		}
+
+		.button-play {
+		}
+
 		.field-name-field-cta {
+		}
+
+		.field-name-field-video-tout {
+		}
+
+		// .field-name-field-title-item,
+		// .field-name-field-subhead,
+		// .field-name-field-background-color,
+		.button-close,
+		// .button-play,
+		// .field-name-field-cta,
+		.field-name-field-video-tout {
 			display: none;
 		}
 
@@ -62,186 +100,53 @@
 			margin: 0 auto;
 			overflow: hidden;
 			text-align: center;
-			width: 71%;
 
 			p {
 				margin: 0;
 			}
 		}
 
-		/* subhead */
-		// .field-name-field-title-item,
-		// .field-name-field-subhead {
-		// 	display: block;
-		// 	overflow: hidden;
-		// }
-
-		// .field-name-field-subhead {
-		// 	margin: 0 auto 1vw;
-		// 	width: 71%;
-		// }
-
-		/* video */
-		// .field-name-field-background-video {
-		// 	display: none;
-		// 	height: 100%;
-		// 	left: 0;
-		// 	position: fixed;
-		// 	top: 0;
-		// 	width: 100%;
-		// 	z-index: 1000;
-
-		// 	&:before {
-		// 		background: $color-black;
-		// 		content: "";
-		// 		display: block;
-		// 		height: 100%;
-		// 		left: 0;
-		// 		opacity: 0.5;
-		// 		position: absolute;
-		// 		top: 0;
-		// 		width: 100%;
-		// 	}
-
-		// 	video {
-		// 		display: block;
-		// 		margin: 0 auto;
-		// 		position: relative;
-		// 		top: calc(50vh - 360px);
-		// 		width: 70%;
-		// 		border: 10px solid;
-		// 	}
-		// }
-
-		/* button close */
-		// .button-close {
-		// 	display: none;
-		// 	height: 60px;
-		// 	outline: none;
-		// 	position: fixed;
-		// 	right: 15%;
-		// 	top: calc(50vh - 351px);
-		// 	width: 60px;
-		// 	z-index: 2000;
-
-		// 	&:before {
-		// 		color: $color-white;
-		// 		content: "+";
-		// 		display: block;
-		// 		font-size: 50px;
-		// 		height: 100%;
-		// 		text-align: center;
-		// 		transform: rotate(45deg);
-		// 		width: 100%;
-		// 	}
-		// }
-
-		/* button play */
-		// .button-play {
-		// 	border-bottom: 1.4vw solid transparent;
-		// 	border-left: 2.3vw solid #fff;
-		// 	border-top: 1.4vw solid transparent;
-		// 	color: transparent;
-		// 	content: '';
-		// 	cursor: pointer;
-		// 	display: block;
-		// 	font-size: 0;
-		// 	height: 0;
-		// 	margin: 2.8vw auto;
-		// 	position: relative;
-		// 	width: 0;
-
-		// 	&:before {
-		// 		background: $color-white;
-		// 		border-radius: 50%;
-		// 		content: '';
-		// 		cursor: pointer;
-		// 		display: block;
-		// 		height: 6vw;
-		// 		left: -4.45vw;
-		// 		opacity: .25;
-		// 		position: absolute;
-		// 		top: -2.98vw;
-		// 		transition: all .5s ease;
-		// 		width: 6vw;
-		// 		z-index: 1;
-		// 	}
-
-		// 	&:after {
-		// 		background: $color-white;
-		// 		border-radius: 50%;
-		// 		content: '';
-		// 		cursor: pointer;
-		// 		display: block;
-		// 		height: 5vw;
-		// 		left: -4vw;
-		// 		opacity: .25;
-		// 		position: absolute;
-		// 		top: -2.5vw;
-		// 		transition: all .5s ease;
-		// 		width: 5vw;
-		// 		z-index: 1;
-		// 	}
-
-		// 	&:hover {
-		// 		&:before {
-		// 			opacity: .55;
-		// 		}
-		// 	}
-		// }
-
 		/* cta */
-		// .field-name-field-cta {
-		// 	.field-item {
-		// 		text-align: center;
-		// 	}
+		.field-name-field-cta {
+			a {
+				border: 1px solid $color-white;
+				color: $color-white;
+				display: inline-block;
+				margin: 0 auto;
+				padding: 1.15vw 2.85vw;
+				position: relative;
+				z-index: 2;
+				font-size: 1.429vw;
+				font-weight: 100;
 
-		// 	a {
-		// 		border: 1px solid $color-white;
-		// 		color: $color-white;
-		// 		display: inline-block;
-		// 		margin: 0 auto;
-		// 		padding: 1.15vw 2.85vw;
-		// 		position: relative;
-		// 		z-index: 2;
-		// 		font-size: 19px;
+				&:before {
+					background: $color-white;
+					content: '';
+					display: block;
+					height: 100%;
+					left: 0;
+					opacity: .15;
+					position: absolute;
+					top: 0;
+					transition: all .5s ease;
+					width: 100%;
+					z-index: 1;
+				}
 
-		// 		&:before {
-		// 			background: $color-white;
-		// 			content: '';
-		// 			display: block;
-		// 			height: 100%;
-		// 			left: 0;
-		// 			opacity: .15;
-		// 			position: absolute;
-		// 			top: 0;
-		// 			transition: all .5s ease;
-		// 			width: 100%;
-		// 			z-index: 1;
-		// 		}
-
-		// 		&:hover {
-		// 			&:before {
-		// 				opacity: .45;
-		// 				transition: all .5s ease;
-		// 			}
-		// 		}
-		// 	}
-		// }
+				&:hover {
+					&:before {
+						opacity: .45;
+						transition: all .5s ease;
+					}
+				}
+			}
+		}
 	}
 
 	&.multi-column-1,
 	&.multi-column-2,
 	&.multi-column-3,
 	&.multi-column-4 {
-		&:before {
-			content: "";
-			display: block;
-			padding-top: 28.9295%;
-			position: relative;
-			width: 100%;
-		}
-
 		.column-0,
 		.column-1,
 		.column-2,
@@ -249,12 +154,24 @@
 			display: block;
 			float: left;
 			overflow: hidden;
+			position: relative;
+
+			&:before {
+				content: "";
+				display: block;
+				position: relative;
+				width: 100%;
+			}
+
+			.ds-1col {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
 		}
 	}
 
 	&.multi-column-1 {
-		background: red;
-
 		.field-name-field-title-item {
 			h1 {
 				font-size: 4.3vw;
@@ -266,10 +183,10 @@
 
 			h2 {
 				font-size: 3.6vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 5);
+				line-height: calcLineHeight($multiBit , 5);
+				margin-bottom: calc(#{$multiBit} * 1);
+				margin-top: calc(#{$multiBit} * 4);
 			}
 		}
 
@@ -278,124 +195,134 @@
 				font-size: 1.786vw;
 				height: calc(#{$multiBit} * 8);
 				line-height: calcLineHeight($multiBit , 4);
-				margin-bottom: calc(#{$multiBit} * 2);
+				margin-bottom: calc(#{$multiBit} * 0);
 				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h4 {
 				font-size: 1.429vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 6);
+				line-height: calcLineHeight($multiBit , 3);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h5 {
 				font-size: 1.072vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 6);
+				line-height: calcLineHeight($multiBit , 2);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 		}
 
-		.field-name-field-video-tout {
-			
+		.button-close {
 		}
 
-		.field-name-field-background-color {
-			
-		}
-
-		.field-name-field-background-image {
-			
+		.button-play {
 		}
 
 		.field-name-field-cta {
-			
+		}
+
+		.field-name-field-video-tout {
 		}
 
 		.ds-1col {
 			.column-0 {
+				background: #294f69;
 				clear: both;
 				float: none;
 				width: 100%;
+
+				&:before {
+					padding-top: 28.929%;
+				}
+
+				.ds-1col {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
 			}
 		}
 	}
 
 	&.multi-column-2 {
-		background: green;
-
 		.field-name-field-title-item {
 			h1 {
 				font-size: 4.3vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 7);
+				line-height: calcLineHeight($multiBit , 7);
+				margin-bottom: calc(#{$multiBit} * 1);
+				margin-top: calc(#{$multiBit} * 4);
 			}
 
 			h2 {
 				font-size: 3.6vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 5);
+				line-height: calcLineHeight($multiBit , 5);
+				margin-bottom: calc(#{$multiBit} * 1);
+				margin-top: calc(#{$multiBit} * 4);
 			}
 		}
 
 		.field-name-field-subhead {
 			h3 {
 				font-size: 1.786vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 8);
+				line-height: calcLineHeight($multiBit , 4);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h4 {
 				font-size: 1.429vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 6);
+				line-height: calcLineHeight($multiBit , 3);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h5 {
 				font-size: 1.072vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 6);
+				line-height: calcLineHeight($multiBit , 2);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 		}
 
-		.field-name-field-video-tout {
-			
+		.button-close {
 		}
 
-		.field-name-field-background-color {
-			
-		}
+		.button-play {
 
-		.field-name-field-background-image {
-			
 		}
 
 		.field-name-field-cta {
-			
+		}
+
+		.field-name-field-video-tout {
 		}
 
 		.ds-1col {
+
+			.column-0,
+			.column-1 {
+				&:before {
+					padding-top: 57.858%;
+				}
+			}
+
 			.column-0 {
-				background: purple;
+				background: #294f69;
 				clear: left;
 				width: 50%;
 			}
 
 			.column-1 {
-				background: pink;
+				background: #3e4a64;
 				clear: right;
 				width: 50%;
 			}
@@ -403,82 +330,84 @@
 	}
 
 	&.multi-column-3 {
-		background: blue;
-
 		.field-name-field-title-item {
 			h1 {
 				font-size: 4.3vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 7);
+				line-height: calcLineHeight($multiBit , 7);
+				margin-bottom: calc(#{$multiBit} * 1);
+				margin-top: calc(#{$multiBit} * 4);
 			}
 
 			h2 {
 				font-size: 3.6vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 5);
+				line-height: calcLineHeight($multiBit , 5);
+				margin-bottom: calc(#{$multiBit} * 1);
+				margin-top: calc(#{$multiBit} * 4);
 			}
 		}
 
 		.field-name-field-subhead {
 			h3 {
 				font-size: 1.786vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 8);
+				line-height: calcLineHeight($multiBit , 4);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h4 {
 				font-size: 1.429vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 6);
+				line-height: calcLineHeight($multiBit , 3);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h5 {
 				font-size: 1.072vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 6);
+				line-height: calcLineHeight($multiBit , 2);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 		}
 
-		.field-name-field-video-tout {
-			
+		.button-close {
 		}
 
-		.field-name-field-background-color {
-			
-		}
-
-		.field-name-field-background-image {
-			
+		.button-play {
 		}
 
 		.field-name-field-cta {
-			
+		}
+
+		.field-name-field-video-tout {
 		}
 
 		.ds-1col {
+			.column-0,
+			.column-1,
+			.column-2 {
+				&:before {
+					padding-top: 86.798%;
+				}
+			}
+
 			.column-0 {
-				background: purple;
+				background: #294f69;
 				clear: left;
 				width: 33.33%;
 			}
 
 			.column-1 {
-				background: pink;
+				background: #3e4a64;
 				width: 33.33%;
 			}
 
 			.column-2 {
-				background: yellow;
+				background: #898b8c;
 				clear: right;
 				width: 33.33%;
 			}
@@ -486,87 +415,90 @@
 	}
 
 	&.multi-column-4 {
-		background: teal;
-
 		.field-name-field-title-item {
 			h1 {
 				font-size: 4.3vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 7);
+				line-height: calcLineHeight($multiBit , 7);
+				margin-bottom: calc(#{$multiBit} * 1);
+				margin-top: calc(#{$multiBit} * 4);
 			}
 
 			h2 {
 				font-size: 3.6vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 5);
+				line-height: calcLineHeight($multiBit , 5);
+				margin-bottom: calc(#{$multiBit} * 1);
+				margin-top: calc(#{$multiBit} * 4);
 			}
 		}
 
 		.field-name-field-subhead {
 			h3 {
 				font-size: 1.786vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 8);
+				line-height: calcLineHeight($multiBit , 4);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h4 {
 				font-size: 1.429vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 6);
+				line-height: calcLineHeight($multiBit , 3);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h5 {
 				font-size: 1.072vw;
-				height: calc(#{$multiBit} * );
-				// line-height: calcLineHeight($multiBit , );
-				margin-bottom: calc(#{$multiBit} * );
-				margin-top: calc(#{$multiBit} * );
+				height: calc(#{$multiBit} * 6);
+				line-height: calcLineHeight($multiBit , 2);
+				margin-bottom: calc(#{$multiBit} * 0);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 		}
 
-		.field-name-field-video-tout {
-			
+		.button-close {
 		}
 
-		.field-name-field-background-color {
-			
-		}
-
-		.field-name-field-background-image {
-			
+		.button-play {
 		}
 
 		.field-name-field-cta {
-			
+		}
+
+		.field-name-field-video-tout {
 		}
 
 		.ds-1col {
+			.column-0,
+			.column-1,
+			.column-2,
+			.column-3 {
+				&:before {
+					padding-top: 115.717%;
+				}
+			}
+
 			.column-0 {
-				background: purple;
+				background: #294f69;
 				clear: left;
 				width: 25%;
 			}
 
 			.column-1 {
-				background: pink;
+				background: #3e4a64;
 				width: 25%;
 			}
 
 			.column-2 {
-				background: yellow;
+				background: #898b8c;
 				width: 25%;
 			}
 
 			.column-3 {
-				background: gold;
+				background: #170c50;
 				clear: right;
 				width: 25%;
 			}
