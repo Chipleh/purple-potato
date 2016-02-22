@@ -17,12 +17,6 @@
 	position: relative;
 
 	.flexible-template-content {
-		// height: 100%;
-		// left: 0;
-		// overflow: hidden;
-		// position: absolute;
-		// top: 0;
-		// width: 100%;
 
 		/* disable fields */
 		.field-name-field-background-color,
@@ -32,13 +26,6 @@
 		}
 
 		/* shared */
-		// .field-name-field-title-item,
-		// .field-name-field-subhead,
-		// .field-name-field-cta {
-		// 	position: relative;
-		// 	z-index: 2;
-		// }
-
 		.field-name-field-title-item,
 		.field-name-field-subhead,
 		.button-close,
@@ -61,30 +48,25 @@
 		}
 
 		/* fields */
-		.field-name-field-title-item {
-		}
+		// .field-name-field-title-item {
+		// }
 
-		.field-name-field-subhead {
-		}
+		// .field-name-field-subhead {
+		// }
 
-		.button-close {
-		}
+		// .button-close {
+		// }
 
-		.button-play {
-		}
+		// .button-play {
+		// }
 
-		.field-name-field-cta {
-		}
+		// .field-name-field-cta {
+		// }
 
-		.field-name-field-video-tout {
-		}
+		// .field-name-field-video-tout {
+		// }
 
-		// .field-name-field-title-item,
-		// .field-name-field-subhead,
-		// .field-name-field-background-color,
 		.button-close,
-		// .button-play,
-		// .field-name-field-cta,
 		.field-name-field-video-tout {
 			display: none;
 		}
@@ -113,10 +95,10 @@
 				color: $color-white;
 				display: inline-block;
 				margin: 0 auto;
-				padding: 1.15vw 2.85vw;
+				padding: 0.643vw 2.85vw;
 				position: relative;
 				z-index: 2;
-				font-size: 1.429vw;
+				font-size: 1.229vw;
 				font-weight: 100;
 
 				&:before {
@@ -313,7 +295,7 @@
 		.button-play {
 			width: 74% !important;
 			border: none !important;
-			font-size: 1.429vw !important;
+			font-size: 1.229vw !important;
 			text-decoration: underline !important;
 			text-align: left !important;
 
@@ -356,7 +338,7 @@
 	&.multi-column-3 {
 		.field-name-field-title-item {
 			h1 {
-				font-size: 4.3vw;
+				font-size: 3.3vw;
 				height: calc(#{$multiBit} * 7);
 				line-height: calcLineHeight($multiBit , 7);
 				margin-bottom: calc(#{$multiBit} * 2);
@@ -382,7 +364,7 @@
 			}
 
 			h4 {
-				font-size: 1.429vw;
+				font-size: 1.229vw;
 				height: calc(#{$multiBit} * 15);
 				line-height: calcLineHeight($multiBit , 3);
 				margin-bottom: calc(#{$multiBit} * 2);
@@ -390,7 +372,7 @@
 			}
 
 			h5 {
-				font-size: 1.072vw;
+				font-size: 1.000vw;
 				height: calc(#{$multiBit} * 15);
 				line-height: calcLineHeight($multiBit , 2.15);
 				margin-bottom: calc(#{$multiBit} * 2);
@@ -404,7 +386,7 @@
 		.button-play {
 			width: 74% !important;
 			border: none !important;
-			font-size: 1.429vw !important;
+			font-size: 1.229vw !important;
 			text-decoration: underline !important;
 
 			&:before,
@@ -450,15 +432,15 @@
 	&.multi-column-4 {
 		.field-name-field-title-item {
 			h1 {
-				font-size: 4.3vw;
+				font-size: 1.9vw;
 				height: calc(#{$multiBit} * 7);
-				line-height: calcLineHeight($multiBit , 7);
+				line-height: calcLineHeight($multiBit , 3.5);
 				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 3);
 			}
 
 			h2 {
-				font-size: 1.6vw;
+				font-size: 1.3vw;
 				height: calc(#{$multiBit} * 7);
 				line-height: calcLineHeight($multiBit , 3.5);
 				margin-bottom: calc(#{$multiBit} * 2);
@@ -468,23 +450,23 @@
 
 		.field-name-field-subhead {
 			h3 {
-				font-size: 1.786vw;
-				height: calc(#{$multiBit} * 15);
-				line-height: calcLineHeight($multiBit , 3.75);
-				margin-bottom: calc(#{$multiBit} * 2);
-				margin-top: calc(#{$multiBit} * 0);
-			}
-
-			h4 {
-				font-size: 1.429vw;
+				font-size: 1.3vw;
 				height: calc(#{$multiBit} * 15);
 				line-height: calcLineHeight($multiBit , 3);
 				margin-bottom: calc(#{$multiBit} * 2);
 				margin-top: calc(#{$multiBit} * 0);
 			}
 
+			h4 {
+				font-size: 1.000vw;
+				height: calc(#{$multiBit} * 15);
+				line-height: calcLineHeight($multiBit , 2.15);
+				margin-bottom: calc(#{$multiBit} * 2);
+				margin-top: calc(#{$multiBit} * 0);
+			}
+
 			h5 {
-				font-size: 1.072vw;
+				font-size: 0.800vw;
 				height: calc(#{$multiBit} * 15);
 				line-height: calcLineHeight($multiBit , 2.15);
 				margin-bottom: calc(#{$multiBit} * 2);
@@ -498,7 +480,7 @@
 		.button-play {
 			width: 74% !important;
 			border: none !important;
-			font-size: 1.429vw !important;
+			font-size: 1.229vw !important;
 			text-decoration: underline !important;
 
 			&:before,
@@ -548,107 +530,525 @@
 	}
 }
 
-/* video open */
-// .node-type-flexible-template {
-// 	&.video-open {
-// 		#header {
-// 			z-index: 1;
-// 		}
-
-// 		#main-wrapper {
-// 			z-index: 100;
-
-// 			.video-container-open {
-// 				.button-close,
-// 				.field-name-field-background-video {
-// 					display: block;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
 
 /*  tablet & mobile
 **************************************************/
 @media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
-	// .pane-bundle-feature-video {
-	// 	background-position: center center;
-	// 	background-size: auto 100%;
-	// 	margin-bottom: 0;
+	.pane-bundle-multi-column {
+		// background-repeat: none;
+		// background-size: 100% auto;
+		// clear: both;
+		// display: block;
+		// margin-bottom: calc(#{$multiBit} * 2);
+		// overflow: hidden;
+		// position: relative;
 
-	// 	&:before {
-	// 		display: none;
-	// 	}
+		.flexible-template-content {
 
-	// 	.flexible-template-content {
-	// 		left: auto;
-	// 		position: relative;
-	// 		top: auto;
-	// 		padding: 40px 0;
+			/* disable fields */
+			.field-name-field-background-color,
+			.field-name-field-background-image,
+			.field-name-field-background-video {
+				// display: none;
+			}
 
-	// 		/* header */
-	// 		h1,
-	// 		h2 {
-	// 			margin: 0 40px 15px;
-	// 			width: calc(100% - 80px);
-	// 		}
+			/* shared */
+			.field-name-field-title-item,
+			.field-name-field-subhead,
+			.button-close,
+			.button-play,
+			.field-name-field-cta,
+			.field-name-field-video-tout {
+				// clear: both;
+				// display: block;
+				// overflow: hidden;
+			}
 
-	// 		h1 {
-	// 			font-size: 60px;
-	// 		}
+			.field-name-field-title-item,
+			.field-name-field-subhead,
+			.button-play,
+			.field-name-field-cta,
+			.field-name-field-video-tout {
+				width: 90%;
+				// margin: 0 auto;
+				// text-align: center;
+			}
 
-	// 		h2 {
-	// 			font-size: 50px;
-	// 		}
+			/* fields */
+			// .field-name-field-title-item {
+			// }
 
-	// 		h3 {
-	// 			font-size: 25px;
-	// 		}
+			// .field-name-field-subhead {
+			// }
 
-	// 		h4 {
-	// 			font-size: 20px;
-	// 		}
+			// .button-close {
+			// }
 
-	// 		h5 {
-	// 			font-size: 15px;
-	// 		}
+			// .button-play {
+			// }
 
-	// 		/* subhead */
-	// 		.field-name-field-title-item,
-	// 		.field-name-field-subhead {
-	// 			width: calc(100% - 80px);
-	// 		}
+			// .field-name-field-cta {
+			// }
 
-	// 		/* play button */
-	// 		.button-play {
-	// 			border-bottom: 30px solid transparent;
-	// 			border-left: 50px solid $color-white;
-	// 			border-top: 30px solid transparent;
-	// 			margin: 80px auto;
+			// .field-name-field-video-tout {
+			// }
 
-	// 			&:before {
-	// 				height: 140px;
-	// 				left: -100px;
-	// 				top: -69px;
-	// 				width: 140px;
-	// 			}
+			.button-close,
+			.field-name-field-video-tout {
+				// display: none;
+			}
 
-	// 			&:after {
-	// 				height: 120px;
-	// 				left: -90px;
-	// 				top: -59px;
-	// 				width: 120px;
-	// 			}
-	// 		}
+			/* header */
+			h1,
+			h2,
+			h3,
+			h4,
+			h5 {
+				// display: block;
+				// font-weight: 100;
+				// margin: 0 auto;
+				// overflow: hidden;
+				// text-align: center;
 
-	// 		/* cta */
-	// 		.field-name-field-cta {
-	// 			a {
-	// 				font-size: 45px;
-	// 				width: calc(100% - 80px);
-	// 			}
-	// 		}
-	// 	}
-	// }
+				p {
+					// margin: 0;
+				}
+			}
+
+			/* cta */
+			.field-name-field-cta {
+				a {
+					// border: 1px solid $color-white;
+					// color: $color-white;
+					// display: inline-block;
+					// margin: 0 auto;
+					padding: 2.5vw 13vw;
+					// position: relative;
+					// z-index: 2;
+					font-size: 6.6vw;
+					// font-weight: 100;
+
+					&:before {
+						// background: $color-white;
+						// content: '';
+						// display: block;
+						// height: 100%;
+						// left: 0;
+						// opacity: .15;
+						// position: absolute;
+						// top: 0;
+						// transition: all .5s ease;
+						// width: 100%;
+						// z-index: 1;
+					}
+
+					&:hover {
+						&:before {
+							// opacity: .45;
+							// transition: all .5s ease;
+						}
+					}
+				}
+			}
+		}
+
+		&.multi-column-1,
+		&.multi-column-2,
+		&.multi-column-3,
+		&.multi-column-4 {
+			.column-0,
+			.column-1,
+			.column-2,
+			.column-3 {
+				// display: block;
+				// float: left;
+				// overflow: hidden;
+				// position: relative;
+
+				&:before {
+					// content: "";
+					// display: block;
+					// position: relative;
+					// width: 100%;
+				}
+
+				.ds-1col {
+					// position: absolute;
+					// top: 0;
+					// left: 0;
+				}
+			}
+		}
+
+		&.multi-column-1 {
+			.field-name-field-title-item {
+				h1 {
+					font-size: 10vw;
+					height: calc(#{$multiBit} * 32);
+					line-height: calcLineHeight($multiBit , 16);
+					margin-bottom: calc(#{$multiBit} * 4);
+					margin-top: calc(#{$multiBit} * 16);
+				}
+
+				h2 {
+					font-size: 8vw;
+					height: calc(#{$multiBit} * 32);
+					line-height: calcLineHeight($multiBit , 16);
+					margin-bottom: calc(#{$multiBit} * 4);
+					margin-top: calc(#{$multiBit} * 16);
+				}
+			}
+
+			.field-name-field-subhead {
+				h3 {
+					font-size: 6.6vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 12);
+					margin-bottom: calc(#{$multiBit} * 28);
+					margin-top: calc(#{$multiBit} * 0);
+				}
+
+				h4 {
+					font-size: 4vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 9);
+					margin-bottom: calc(#{$multiBit} * 28);
+					margin-top: calc(#{$multiBit} * 0);
+				}
+
+				h5 {
+					font-size: 3vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 7);
+					margin-bottom: calc(#{$multiBit} * 28);
+					margin-top: calc(#{$multiBit} * 0);
+				}
+			}
+
+			.ds-1col {
+				.column-0 {
+					&:before {
+						padding-top: 133.263%;
+					}
+				}
+			}
+		}
+
+		&.multi-column-2 {
+			.field-name-field-title-item {
+				h1 {
+					font-size: 6.6vw;
+					height: calc(#{$multiBit} * 30);
+					line-height: calcLineHeight($multiBit , 14);
+					margin-bottom: calc(#{$multiBit} * 6);
+					margin-top: calc(#{$multiBit} * 16);
+					text-align: center;
+				}
+
+				h2 {
+					font-size: 5.6vw;
+					height: calc(#{$multiBit} * 30);
+					line-height: calcLineHeight($multiBit , 14);
+					margin-bottom: calc(#{$multiBit} * 6);
+					margin-top: calc(#{$multiBit} * 16);
+					text-align: center;
+				}
+
+				h3 {
+					font-size: 4.6vw;
+					height: calc(#{$multiBit} * 30);
+					line-height: calcLineHeight($multiBit , 14);
+					margin-bottom: calc(#{$multiBit} * 6);
+					margin-top: calc(#{$multiBit} * 16);
+					text-align: center;
+				}
+			}
+
+			.field-name-field-subhead {
+				h3 {
+					font-size: 6.6vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 12);
+					margin-bottom: calc(#{$multiBit} * 12);
+					margin-top: calc(#{$multiBit} * 0);
+					text-align: center;
+				}
+
+				h4 {
+					font-size: 4vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 9);
+					margin-bottom: calc(#{$multiBit} * 12);
+					margin-top: calc(#{$multiBit} * 0);
+					text-align: center;
+				}
+
+				h5 {
+					font-size: 3vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 7);
+					margin-bottom: calc(#{$multiBit} * 12);
+					margin-top: calc(#{$multiBit} * 0);
+					text-align: center;
+				}
+			}
+
+			.button-close {
+			}
+
+			.button-play {
+				// width: 74% !important;
+				// border: none !important;
+				font-size: 6.6vw !important;
+				width: 90% !important;
+				// text-decoration: underline !important;
+				text-align: center !important;
+
+				&:before,
+				&:after {
+					// display: none !important;
+				}
+			}
+
+			.field-name-field-cta {
+				text-align: center;
+			}
+
+			.field-name-field-video-tout {
+			}
+
+			.ds-1col {
+
+				.column-0,
+				.column-1 {
+					float: none;
+					width: 100%;
+
+					&:before {
+						padding-top: 106.610%;
+					}
+				}
+
+				.column-0 {
+					// background: #294f69;
+					// clear: left;
+					// width: 50%;
+				}
+
+				.column-1 {
+					// background: #3e4a64;
+					// clear: right;
+					// width: 50%;
+				}
+			}
+		}
+
+		&.multi-column-3 {
+			.field-name-field-title-item {
+				h1 {
+					font-size: 6.6vw;
+					height: calc(#{$multiBit} * 30);
+					line-height: calcLineHeight($multiBit , 14);
+					margin-bottom: calc(#{$multiBit} * 6);
+					margin-top: calc(#{$multiBit} * 16);
+					text-align: center;
+				}
+
+				h2 {
+					font-size: 5.6vw;
+					height: calc(#{$multiBit} * 30);
+					line-height: calcLineHeight($multiBit , 14);
+					margin-bottom: calc(#{$multiBit} * 6);
+					margin-top: calc(#{$multiBit} * 16);
+					text-align: center;
+				}
+			}
+
+			.field-name-field-subhead {
+				h3 {
+					font-size: 6.6vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 12);
+					margin-bottom: calc(#{$multiBit} * 12);
+					margin-top: calc(#{$multiBit} * 0);
+				}
+
+				h4 {
+					font-size: 4vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 9);
+					margin-bottom: calc(#{$multiBit} * 12);
+					margin-top: calc(#{$multiBit} * 0);
+				}
+
+				h5 {
+					font-size: 3vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 7);
+					margin-bottom: calc(#{$multiBit} * 12);
+					margin-top: calc(#{$multiBit} * 0);
+				}
+			}
+
+			.button-close {
+			}
+
+			.button-play {
+				// width: 74% !important;
+				// border: none !important;
+				font-size: 6.6vw !important;
+				width: 90% !important;
+				// text-decoration: underline !important;
+				text-align: center !important;
+
+				&:before,
+				&:after {
+					// display: none !important;
+				}
+			}
+
+			.field-name-field-cta {
+			}
+
+			.field-name-field-video-tout {
+			}
+
+			.ds-1col {
+				.column-0,
+				.column-1,
+				.column-2 {
+					float: none;
+					width: 100%;
+
+					&:before {
+						padding-top: 106.610%;
+					}
+				}
+
+				.column-0 {
+					// background: #294f69;
+					// clear: left;
+					// width: 33.33%;
+				}
+
+				.column-1 {
+					// background: #3e4a64;
+					// width: 33.33%;
+				}
+
+				.column-2 {
+					// background: #898b8c;
+					// clear: right;
+					// width: 33.33%;
+				}
+			}
+		}
+
+		&.multi-column-4 {
+			.field-name-field-title-item {
+				h1 {
+					font-size: 6.6vw;
+					height: calc(#{$multiBit} * 30);
+					line-height: calcLineHeight($multiBit , 14);
+					margin-bottom: calc(#{$multiBit} * 6);
+					margin-top: calc(#{$multiBit} * 16);
+					text-align: center;
+				}
+
+				h2 {
+					font-size: 5.6vw;
+					height: calc(#{$multiBit} * 30);
+					line-height: calcLineHeight($multiBit , 14);
+					margin-bottom: calc(#{$multiBit} * 6);
+					margin-top: calc(#{$multiBit} * 16);
+					text-align: center;
+				}
+			}
+
+			.field-name-field-subhead {
+				h3 {
+					font-size: 6.6vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 12);
+					margin-bottom: calc(#{$multiBit} * 12);
+					margin-top: calc(#{$multiBit} * 0);
+				}
+
+				h4 {
+					font-size: 4vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 9);
+					margin-bottom: calc(#{$multiBit} * 12);
+					margin-top: calc(#{$multiBit} * 0);
+				}
+
+				h5 {
+					font-size: 3vw;
+					height: calc(#{$multiBit} * 36);
+					line-height: calcLineHeight($multiBit , 7);
+					margin-bottom: calc(#{$multiBit} * 12);
+					margin-top: calc(#{$multiBit} * 0);
+				}
+			}
+
+			.button-close {
+			}
+
+			.button-play {
+				// width: 74% !important;
+				// border: none !important;
+				font-size: 6.6vw !important;
+				width: 90% !important;
+				// text-decoration: underline !important;
+				text-align: center !important;
+
+				&:before,
+				&:after {
+					// display: none !important;
+				}
+			}
+
+			.field-name-field-cta {
+			}
+
+			.field-name-field-video-tout {
+			}
+
+			.ds-1col {
+				.column-0,
+				.column-1,
+				.column-2,
+				.column-3 {
+					float: none;
+					width: 100%;
+
+					&:before {
+						padding-top: 106.610%;
+					}
+				}
+
+				.column-0 {
+					// background: #294f69;
+					// clear: left;
+					// width: 25%;
+				}
+
+				.column-1 {
+					// background: #3e4a64;
+					// width: 25%;
+				}
+
+				.column-2 {
+					// background: #898b8c;
+					// width: 25%;
+				}
+
+				.column-3 {
+					// background: #170c50;
+					// clear: right;
+					// width: 25%;
+				}
+			}
+		}
+	}
 }
