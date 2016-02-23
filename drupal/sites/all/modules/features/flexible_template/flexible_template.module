@@ -38,9 +38,19 @@ function flexible_template_preprocess_entity(&$variables, $hook) {
 function flexible_template_preprocess_field(&$variables) {
 
   //
+  // Featured Video
+  //
+  if ($variables['element']['#field_name'] == 'field_background_video') {
+
+    $variables['items'][0]['#attributes']['class'][] = 'video-bg';
+    $variables['items'][0]['#attributes']['id'][] = 'video-bg';
+    //dsm($variables);
+  }
+
+  //
   // Icons
   //
-  if ($variables['element']['#field_name'] == 'field_icons') {
+  elseif ($variables['element']['#field_name'] == 'field_icons') {
     foreach ($variables['items'] as $key => &$item) {
 
       // Addend custom classes for field collection items.
@@ -70,12 +80,12 @@ function flexible_template_preprocess_field(&$variables) {
         unset($collection_item['field_background_mobile_image']);
       }
 
-      // Get Subhead color to append to video play button.
+      // Get Subhead color so append to video play button.
       $subhead_color = '';
       if (isset($collection_item['field_subhead_color'])) {
         $subhead_color = 'style="color: ' . $collection_item['field_subhead_color'][0]['#markup'] . '"';
       }
-
+      
       // Added Close/Play buttons to field list.
       $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play" ' . $subhead_color . '>' . t('Watch Video') . '</a>';
     }

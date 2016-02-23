@@ -459,6 +459,142 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_subhead_copy'
+  $field_instances['field_collection_item-field_columns_multi-field_subhead_copy'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_subhead_copy',
+    'label' => 'Subhead Copy',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'php_code' => 0,
+          'plain_text' => 0,
+          'restricted_html' => 'restricted_html',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -8,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'php_code' => array(
+              'weight' => -6,
+            ),
+            'plain_text' => array(
+              'weight' => -7,
+            ),
+            'restricted_html' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_subhead_copy_color'
+  $field_instances['field_collection_item-field_columns_multi-field_subhead_copy_color'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'color_field',
+        'settings' => array(),
+        'type' => 'color_field_default_formatter',
+        'weight' => 4,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_subhead_copy_color',
+    'label' => 'Subhead Copy Color',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'color_field',
+      'settings' => array(),
+      'type' => 'color_field_default_widget',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_subhead_copy_size'
+  $field_instances['field_collection_item-field_columns_multi-field_subhead_copy_size'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => array(
+      0 => array(
+        'value' => 'h3',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_subhead_copy_size',
+    'label' => 'Subhead Copy Size',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_columns_multi-field_subhead_size'
   $field_instances['field_collection_item-field_columns_multi-field_subhead_size'] = array(
     'bundle' => 'field_columns_multi',
@@ -525,6 +661,112 @@ function flexible_template_field_default_field_instances() {
       'settings' => array(),
       'type' => 'color_field_default_widget',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_title_copy'
+  $field_instances['field_collection_item-field_columns_multi-field_title_copy'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_title_copy',
+    'label' => 'Title Copy',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_title_copy_color'
+  $field_instances['field_collection_item-field_columns_multi-field_title_copy_color'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'color_field',
+        'settings' => array(),
+        'type' => 'color_field_default_formatter',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_title_copy_color',
+    'label' => 'Title Copy Color',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'color_field',
+      'settings' => array(),
+      'type' => 'color_field_default_widget',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_title_copy_size'
+  $field_instances['field_collection_item-field_columns_multi-field_title_copy_size'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => array(
+      0 => array(
+        'value' => 'h1',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_title_copy_size',
+    'label' => 'Title Copy Size',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
     ),
   );
 
@@ -1696,14 +1938,14 @@ function flexible_template_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'file_entity',
         'settings' => array(
-          'autoplay' => FALSE,
-          'controls' => TRUE,
-          'height' => NULL,
-          'loop' => FALSE,
+          'autoplay' => 1,
+          'controls' => 0,
+          'height' => '',
+          'loop' => 1,
           'multiple_file_behavior' => 'tags',
-          'muted' => FALSE,
+          'muted' => 0,
           'preload' => '',
-          'width' => NULL,
+          'width' => '',
         ),
         'type' => 'file_video',
         'weight' => 7,
