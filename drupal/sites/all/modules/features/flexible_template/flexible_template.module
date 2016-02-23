@@ -65,11 +65,19 @@ function flexible_template_preprocess_field(&$variables) {
       $collection_item = &$item['entity']['field_collection_item'][key($item['entity']['field_collection_item'])];
 
       // Get mobile background URL and remove field.
-      $collection_item['background_mobile_image'] = file_create_url($collection_item['field_background_mobile_image']['#items'][0]['uri']);
-      unset($collection_item['field_background_mobile_image']);
-      $subhead_color = $collection_item['field_subhead_color'][0]['#markup'];
+      if (isset($collection_item['field_background_mobile_image'])) {
+        $collection_item['background_mobile_image'] = file_create_url($collection_item['field_background_mobile_image']['#items'][0]['uri']);
+        unset($collection_item['field_background_mobile_image']);
+      }
+
+      // Get Subhead color to append to video play button.
+      $subhead_color = '';
+      if (isset($collection_item['field_subhead_color'])) {
+        $subhead_color = 'style="color: ' . $collection_item['field_subhead_color'][0]['#markup'] . '"';
+      }
+
       // Added Close/Play buttons to field list.
-      $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play" style="color: ' . $subhead_color . ';">' . t('Watch Video') . '</a>';
+      $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play" ' . $subhead_color . '>' . t('Watch Video') . '</a>';
     }
   }
 
