@@ -38,19 +38,9 @@ function flexible_template_preprocess_entity(&$variables, $hook) {
 function flexible_template_preprocess_field(&$variables) {
 
   //
-  // Featured Video
-  //
-  if ($variables['element']['#field_name'] == 'field_background_video') {
-
-    $variables['items'][0]['#attributes']['class'][] = 'video-bg';
-    $variables['items'][0]['#attributes']['id'][] = 'video-bg';
-    //dsm($variables);
-  }
-
-  //
   // Icons
   //
-  elseif ($variables['element']['#field_name'] == 'field_icons') {
+  if ($variables['element']['#field_name'] == 'field_icons') {
     foreach ($variables['items'] as $key => &$item) {
 
       // Addend custom classes for field collection items.
