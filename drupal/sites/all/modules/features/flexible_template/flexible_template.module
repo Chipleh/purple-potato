@@ -166,7 +166,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   }
 
   //
-  // Flexible Video
+  // Feature Video
   //
   if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'feature_video') {
 
