@@ -8,13 +8,14 @@
 /*  elements
 **************************************************/
 .pane-bundle-feature-video {
-	background-repeat: none;
-	background-size: 100% auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 	clear: both;
 	display: block;
+	margin-bottom: 20px;
 	overflow: hidden;
 	position: relative;
-	margin-bottom: 20px;
 
 	&:before {
 		content: "";
@@ -25,12 +26,15 @@
 	}
 
 	.flexible-template-content {
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0);
 		height: 100%;
 		left: 0;
 		overflow: hidden;
 		position: absolute;
 		top: 0;
 		width: 100%;
+		z-index: 2;
 
 		/* shared */
 		.pane-title,
@@ -47,45 +51,52 @@
 		h4,
 		h5 {
 			display: block;
+			margin: 0 auto;
 			overflow: hidden;
+			position: relative;
 			text-align: center;
-		}
-
-		h1,
-		h2 {
-			margin: 1.2vw auto .6vw;
 			width: 71%;
-		}
-
-		h3,
-		h4,
-		h5 {
-			font-weight: 100;
-			margin: 0;
-
-			p {
-				margin: 0;				
-			}
+			z-index: 2;
 		}
 
 		h1 {
 			font-size: 4.3vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 7);
+			margin-bottom: calc(#{$multiBit} * 2);
+			margin-top: calc(#{$multiBit} * 4);
 		}
 
 		h2 {
 			font-size: 3.6vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 7);
+			margin-bottom: calc(#{$multiBit} * 2);
+			margin-top: calc(#{$multiBit} * 4);
 		}
 
 		h3 {
 			font-size: 1.786vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 4);
+			margin-bottom: calc(#{$multiBit} * 8);
+			margin-top: calc(#{$multiBit} * 0);
 		}
 
 		h4 {
-			font-size: 1.429vw;
+			font-size: 1.529vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 4);
+			margin-bottom: calc(#{$multiBit} * 8);
+			margin-top: calc(#{$multiBit} * 0);
 		}
 
 		h5 {
 			font-size: 1.072vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 2);
+			margin-bottom: calc(#{$multiBit} * 8);
+			margin-top: calc(#{$multiBit} * 0);
 		}
 
 		/* subhead */
@@ -93,120 +104,32 @@
 		.field-name-field-subhead {
 			display: block;
 			overflow: hidden;
-			width: 71%;
-		}
-
-		.field-name-field-subhead {
-			margin: 0 auto 1vw;
 		}
 
 		/* video */
 		.field-name-field-background-video {
-			display: none;
+			bottom: 0;
+			font-size: 0;
 			height: 100%;
 			left: 0;
-			position: fixed;
+			margin: auto;
+			position: absolute;
+			right: 0;
 			top: 0;
 			width: 100%;
-			z-index: 1000;
-
-			&:before {
-				background: $color-black;
-				content: "";
-				display: block;
-				height: 100%;
-				left: 0;
-				opacity: 0.5;
-				position: absolute;
-				top: 0;
-				width: 100%;
-			}
+			z-index: 1;
 
 			video {
-				display: block;
-				margin: 0 auto;
-				position: relative;
-				top: calc(50vh - 360px);
-				width: 70%;
-				border: 10px solid;
-			}
-		}
-
-		/* button close */
-		.button-close {
-			display: none;
-			height: 60px;
-			outline: none;
-			position: fixed;
-			right: 15%;
-			top: calc(50vh - 351px);
-			width: 60px;
-			z-index: 2000;
-
-			&:before {
-				color: $color-white;
-				content: "+";
-				display: block;
-				font-size: 50px;
-				height: 100%;
-				text-align: center;
-				transform: rotate(45deg);
-				width: 100%;
-			}
-		}
-
-		/* button play */
-		.button-play {
-			border-bottom: 1.4vw solid transparent;
-			border-left: 2.3vw solid #fff;
-			border-top: 1.4vw solid transparent;
-			color: transparent;
-			content: '';
-			cursor: pointer;
-			display: block;
-			font-size: 0;
-			height: 0;
-			margin: 0 auto;
-			margin-bottom: calc(#{$multiBit} * 5);
-			position: relative;
-			width: 0;
-
-			&:before {
-				background: $color-white;
-				border-radius: 50%;
-				content: '';
-				cursor: pointer;
-				display: block;
-				height: 6vw;
-				left: -4.45vw;
-				opacity: .25;
+				-ms-transform: translateX(-50%) translateY(-50%);
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				height: auto;
+				left: 50%;
+				min-height: 100%;
+				min-width: 100%;
 				position: absolute;
-				top: -2.98vw;
-				transition: all .5s ease;
-				width: 6vw;
-				z-index: 1;
-			}
-
-			&:after {
-				background: $color-white;
-				border-radius: 50%;
-				content: '';
-				cursor: pointer;
-				display: block;
-				height: 5vw;
-				left: -4vw;
-				opacity: .25;
-				position: absolute;
-				top: -2.5vw;
-				transition: all .5s ease;
-				width: 5vw;
-				z-index: 1;
-			}
-
-			&:hover {
-				&:before {
-					opacity: .55;
-				}
+				top: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				width: auto;
 			}
 		}
 
@@ -220,11 +143,11 @@
 				border: 1px solid $color-white;
 				color: $color-white;
 				display: inline-block;
+				font-size: 19px;
 				margin: 0 auto;
 				padding: 1.15vw 2.85vw;
 				position: relative;
 				z-index: 2;
-				font-size: 19px;
 
 				&:before {
 					background: $color-white;
@@ -251,105 +174,76 @@
 	}
 }
 
-/* video open */
-.node-type-flexible-template {
-	&.video-open {
-		#header {
-			z-index: 1;
-		}
-
-		#main-wrapper {
-			z-index: 100;
-
-			.video-container-open {
-				.button-close,
-				.field-name-field-background-video {
-					display: block;
-				}
-			}
-		}
-	}
-}
-
 
 /*  tablet & mobile
 **************************************************/
 @media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
 	.pane-bundle-feature-video {
-		background-position: center center;
-		background-size: auto 100%;
-		margin-bottom: 0;
-
 		&:before {
-			display: none;
+			padding-top: 133.263%;
 		}
 
 		.flexible-template-content {
-			left: auto;
-			position: relative;
-			top: auto;
-			padding: 40px 0;
 
 			/* header */
 			h1,
-			h2 {
-				margin: 0 40px 15px;
-				width: calc(100% - 80px);
+			h2,
+			h3,
+			h4,
+			h5 {
+				width: 90%;
 			}
 
 			h1 {
-				font-size: 60px;
+				font-size: 10vw;
+				height: calc(#{$multiBit} * 32);
+				line-height: calcLineHeight($multiBit , 16);
+				margin-bottom: calc(#{$multiBit} * 4);
+				margin-top: calc(#{$multiBit} * 16);
 			}
 
 			h2 {
-				font-size: 50px;
+				font-size: 8vw;
+				height: calc(#{$multiBit} * 32);
+				line-height: calcLineHeight($multiBit , 16);
+				margin-bottom: calc(#{$multiBit} * 4);
+				margin-top: calc(#{$multiBit} * 16);
 			}
 
 			h3 {
-				font-size: 25px;
+				font-size: 7.6vw;
+				height: calc(#{$multiBit} * 99);
+				line-height: calcLineHeight($multiBit , 14);
+				margin-bottom: calc(#{$multiBit} * 18);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h4 {
-				font-size: 20px;
+				font-size: 4vw;
+				height: calc(#{$multiBit} * 99);
+				line-height: calcLineHeight($multiBit , 9);
+				margin-bottom: calc(#{$multiBit} * 18);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
 			h5 {
-				font-size: 15px;
+				font-size: 3vw;
+				height: calc(#{$multiBit} * 99);
+				line-height: calcLineHeight($multiBit , 7);
+				margin-bottom: calc(#{$multiBit} * 18);
+				margin-top: calc(#{$multiBit} * 0);
 			}
 
-			/* subhead */
-			.pane-title,
-			.field-name-field-subhead {
-				width: calc(100% - 80px);
-			}
-
-			/* play button */
-			.button-play {
-				border-bottom: 30px solid transparent;
-				border-left: 50px solid $color-white;
-				border-top: 30px solid transparent;
-				margin: 80px auto;
-
-				&:before {
-					height: 140px;
-					left: -100px;
-					top: -69px;
-					width: 140px;
-				}
-
-				&:after {
-					height: 120px;
-					left: -90px;
-					top: -59px;
-					width: 120px;
-				}
+			/* video */
+			.field-name-field-background-video {
+				display: none;
 			}
 
 			/* cta */
 			.field-name-field-cta {
 				a {
-					font-size: 45px;
-					width: calc(100% - 80px);
+					padding: 2.5vw 13vw;
+					font-size: 6.6vw;
 				}
 			}
 		}
