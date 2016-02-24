@@ -241,11 +241,23 @@ function flexible_template_preprocess_field_collection_item(&$variables) {
 function flexible_template_preprocess_field_columns_multi(&$variables) {
   flexible_template_preprocess_field_collection_item($variables);
 
-  // Append desktop/mobile background images to collection wrapper.
-  $variables['attributes_array'] = array(
-    'data-background-desktop' => 'background-image: url(' . file_create_url($variables['field_background_image'][0]['uri']) . ')',
-    'data-background-mobile'  => 'background-image: url(' . file_create_url($variables['field_background_mobile_image'][0]['uri']) . ')',
-  );
+  // Append desktop background image to collection wrapper.
+  if (isset($variables['field_background_image'])) {
+    $background_image = file_create_url($variables['field_background_image'][0]['uri']);
+
+    $variables['attributes_array']['data-background-desktop'] = 'background-image: url(' . $background_image . ')';
+
+    unset($variables['content']['field_background_image']);
+  }
+
+  // Append mobile background image to collection wrapper.
+  if (isset($variables['field_background_mobile_image'])) {
+    $background_image = file_create_url($variables['field_background_mobile_image'][0]['uri']);
+
+    $variables['attributes_array']['data-background-mobile'] = 'background-image: url(' . $background_image . ')';
+
+    unset($variables['content']['field_background_mobile_image']);
+  }
 }
 
 function flexible_template_preprocess_field_icon_item(&$variables) {
