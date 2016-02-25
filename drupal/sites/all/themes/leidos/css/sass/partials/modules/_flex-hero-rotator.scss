@@ -7,7 +7,7 @@
 
 /*  elements
 **************************************************/
-.pane-bundle-multi-column {
+.pane-bundle-rotator-hero {
 	background-repeat: none;
 	background-size: 100% auto;
 	clear: both;
@@ -45,6 +45,10 @@
 			margin: 0 auto;
 			text-align: center;
 			width: 74%;
+		}
+
+		.views-field-field-background-image {
+			display: none;
 		}
 
 		/* fields */

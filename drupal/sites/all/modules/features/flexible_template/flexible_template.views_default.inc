@@ -136,6 +136,7 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Field: Subhead Color */
   $handler->display->display_options['fields']['field_subhead_color']['id'] = 'field_subhead_color';
@@ -156,6 +157,7 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_subhead']['table'] = 'field_data_field_subhead';
   $handler->display->display_options['fields']['field_subhead']['field'] = 'field_subhead';
   $handler->display->display_options['fields']['field_subhead']['label'] = '';
+  $handler->display->display_options['fields']['field_subhead']['element_type'] = '0';
   $handler->display->display_options['fields']['field_subhead']['element_label_colon'] = FALSE;
   /* Field: Field: CTA */
   $handler->display->display_options['fields']['field_cta']['id'] = 'field_cta';
