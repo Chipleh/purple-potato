@@ -155,14 +155,14 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   flexible_template_preprocess_subhead($variables);
 
   // Define Fieldable Panels template overrides.
-  if ($variables['pane']->type == 'fieldable_panels_pane') {
+  if (isset($variables['pane']) && $variables['pane']->type == 'fieldable_panels_pane') {
     $variables['theme_hook_suggestions'][] = 'flexible_template_module__' . $variables['content']['#element']->bundle;
   }
 
   //
   // Feature Video
   //
-  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'feature_video') {
+  if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {
 
     // Get mobile background URL and remove field.
     if (isset($content['field_background_mobile_image'])) {
@@ -174,19 +174,19 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   //
   // Multi-column
   //
-  elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'multi_column') {
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'multi_column') {
 
     // Add custom class that identifies total number of columns defined.
-    $variables['classes_array'][] = 'multi-column-' . count($variables['content']['field_columns_multi']['#items']);
+    $variables['classes_array'][] = 'multi-column-' . count($content['field_columns_multi']['#items']);
   }
 
   //
   // Rotator slide / Hero
   //
-  elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'rotator_hero') {
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'rotator_hero') {
 
     // Add empty field for all slides.
-    if (!isset($variables['content']['field_rotator_slide_hero'])) {
+    if (!isset($content['field_rotator_slide_hero'])) {
       $variables['content']['field_rotator_slide_hero'] = array(
         '#theme' => 'field',
         '#weight' => '2',
@@ -202,6 +202,12 @@ function flexible_template_preprocess_panels_pane(&$variables) {
         '#bundle' => 'rotator_hero',
         '#items' => array()
       );
+    }
+
+    // Add custom class that identifies the Module Height (short/tall) and remove field.
+    if (isset($content['field_module_height'])) {
+      $variables['classes_array'][] = 'rotator-slide-module-height-' . $content['field_module_height']['#items'][0]['value'];
+      unset($variables['content']['field_module_height']);
     }
   }
 }
@@ -241,23 +247,7 @@ function flexible_template_preprocess_field_collection_item(&$variables) {
 function flexible_template_preprocess_field_columns_multi(&$variables) {
   flexible_template_preprocess_field_collection_item($variables);
 
-  // Append desktop background image to collection wrapper.
-  if (isset($variables['field_background_image'])) {
-    $background_image = file_create_url($variables['field_background_image'][0]['uri']);
-
-    $variables['attributes_array']['data-background-desktop'] = 'background-image: url(' . $background_image . ')';
-
-    unset($variables['content']['field_background_image']);
-  }
-
-  // Append mobile background image to collection wrapper.
-  if (isset($variables['field_background_mobile_image'])) {
-    $background_image = file_create_url($variables['field_background_mobile_image'][0]['uri']);
-
-    $variables['attributes_array']['data-background-mobile'] = 'background-image: url(' . $background_image . ')';
-
-    unset($variables['content']['field_background_mobile_image']);
-  }
+  flexible_template_append_background_attributes($variables);
 }
 
 function flexible_template_preprocess_field_icon_item(&$variables) {
@@ -298,5 +288,40 @@ function flexible_template_preprocess_subhead(&$variables) {
     $variables['content']['field_subhead'][0]['#value'] = $content['field_subhead'][0]['#markup'];
 
     unset($variables['content']['field_subhead_size']);
+  }
+}
+
+/**
+ * Append data-* elements to container to be post-processed using jQuery.
+ *
+ * @param object $variables
+ *
+ * The $variables array contains the following arguments:
+ * - $node
+ * - $view_mode
+ * - $page
+ *
+ * @see field_background_image
+ * @see field_background_mobile_image
+ */
+function flexible_template_append_background_attributes(&$variables) {
+  $content = $variables['content'];
+
+  // Append desktop background image to collection wrapper.
+  if (isset($content['field_background_image'])) {
+    $background_image = file_create_url($content['field_background_image'][0]['uri']);
+
+    $variables['attributes_array']['data-background-desktop'] = 'background-image: url(' . $background_image . ')';
+
+    unset($variables['content']['field_background_image']);
+  }
+
+  // Append mobile background image to collection wrapper.
+  if (isset($content['field_background_mobile_image'])) {
+    $background_image = file_create_url($content['field_background_mobile_image'][0]['uri']);
+
+    $variables['attributes_array']['data-background-mobile'] = 'background-image: url(' . $background_image . ')';
+
+    unset($variables['content']['field_background_mobile_image']);
   }
 }
