@@ -206,7 +206,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
     // Add custom class that identifies the Module Height (short/tall) and remove field.
     if (isset($content['field_module_height'])) {
-      $variables['classes_array'][] = 'rotator-slide-' . $content['field_module_height']['#items'][0]['value'];
+      $variables['classes_array'][] = 'rotator-slide-module-height-' . $content['field_module_height']['#items'][0]['value'];
       unset($variables['content']['field_module_height']);
     }
   }
