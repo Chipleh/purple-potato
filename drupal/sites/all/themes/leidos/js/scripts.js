@@ -36,7 +36,7 @@
 			// Define styles for defined data-* attributes.
 			function defineStyles() {
 				var width  = jQuery('body').width(),
-				select = null;
+				    select = null;
 
 				if (width > 960) {
 					select = 'data-background-desktop';
@@ -48,9 +48,13 @@
 
 				items.each(function() {
 					var item = $(this),
-					val  = item.attr(select);
+					    val  = item.attr(select);
 
-					item.parent().attr('style', val);
+			// Remove style from parent node, if exists.
+			item.parent().removeAttr('style');
+
+			// Append background to parent node.
+			item.parent().attr('style', val);
 				});
 			}
 
@@ -62,6 +66,7 @@
 		}
 	};
 })(jQuery);
+
 //	Capabilities Module
 //	Rhino Hooton
 //	6/29/15

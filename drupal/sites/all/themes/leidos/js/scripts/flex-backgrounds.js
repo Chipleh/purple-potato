@@ -22,11 +22,11 @@
 					var item = $(this),
 					    val  = item.attr(select);
 
-          // Remove style from parent node, if exists.
-          item.parent().removeAttr('style');
+			// Remove style from parent node, if exists.
+			item.parent().removeAttr('style');
 
-          // Append background to parent node.
-          item.parent().attr('style', val)
+			// Append background to parent node.
+			item.parent().attr('style', val);
 				});
 			}
 
