@@ -61,57 +61,6 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Desktop image */
-  $handler->display->display_options['fields']['field_rotator_image']['id'] = 'field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image']['table'] = 'field_data_field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image']['field'] = 'field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image']['ui_name'] = 'Desktop image';
-  $handler->display->display_options['fields']['field_rotator_image']['label'] = '';
-  $handler->display->display_options['fields']['field_rotator_image']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_rotator_image']['element_class'] = 'desktop-image';
-  $handler->display->display_options['fields']['field_rotator_image']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_rotator_image']['settings'] = array(
-    'image_style' => 'rotator',
-    'image_link' => '',
-  );
-  /* Field: Tablet image */
-  $handler->display->display_options['fields']['field_rotator_image_1']['id'] = 'field_rotator_image_1';
-  $handler->display->display_options['fields']['field_rotator_image_1']['table'] = 'field_data_field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image_1']['field'] = 'field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image_1']['ui_name'] = 'Tablet image';
-  $handler->display->display_options['fields']['field_rotator_image_1']['label'] = '';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_class'] = 'tablet-image';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image_1']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image_1']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_rotator_image_1']['settings'] = array(
-    'image_style' => 'rotator_tablet',
-    'image_link' => '',
-  );
-  /* Field: Mobile image */
-  $handler->display->display_options['fields']['field_rotator_image_2']['id'] = 'field_rotator_image_2';
-  $handler->display->display_options['fields']['field_rotator_image_2']['table'] = 'field_data_field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image_2']['field'] = 'field_rotator_image';
-  $handler->display->display_options['fields']['field_rotator_image_2']['ui_name'] = 'Mobile image';
-  $handler->display->display_options['fields']['field_rotator_image_2']['label'] = '';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_class'] = 'mobile-image';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_rotator_image_2']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_rotator_image_2']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_rotator_image_2']['settings'] = array(
-    'image_style' => 'rotator_mobile',
-    'image_link' => '',
-  );
   /* Field: Field: Title Color */
   $handler->display->display_options['fields']['field_title_color']['id'] = 'field_title_color';
   $handler->display->display_options['fields']['field_title_color']['table'] = 'field_data_field_title_color';
