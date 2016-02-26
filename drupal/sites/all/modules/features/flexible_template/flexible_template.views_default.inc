@@ -108,20 +108,6 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_subhead']['label'] = '';
   $handler->display->display_options['fields']['field_subhead']['element_type'] = '0';
   $handler->display->display_options['fields']['field_subhead']['element_label_colon'] = FALSE;
-  /* Field: Field: CTA */
-  $handler->display->display_options['fields']['field_cta']['id'] = 'field_cta';
-  $handler->display->display_options['fields']['field_cta']['table'] = 'field_data_field_cta';
-  $handler->display->display_options['fields']['field_cta']['field'] = 'field_cta';
-  $handler->display->display_options['fields']['field_cta']['label'] = '';
-  $handler->display->display_options['fields']['field_cta']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_cta']['click_sort_column'] = 'url';
-  /* Field: Content: Secondary CTA */
-  $handler->display->display_options['fields']['field_secondary_cta']['id'] = 'field_secondary_cta';
-  $handler->display->display_options['fields']['field_secondary_cta']['table'] = 'field_data_field_secondary_cta';
-  $handler->display->display_options['fields']['field_secondary_cta']['field'] = 'field_secondary_cta';
-  $handler->display->display_options['fields']['field_secondary_cta']['label'] = '';
-  $handler->display->display_options['fields']['field_secondary_cta']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_secondary_cta']['click_sort_column'] = 'url';
   /* Field: Field: Video Tout */
   $handler->display->display_options['fields']['field_video_tout']['id'] = 'field_video_tout';
   $handler->display->display_options['fields']['field_video_tout']['table'] = 'field_data_field_video_tout';
@@ -157,6 +143,20 @@ function flexible_template_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
+  /* Field: Field: CTA */
+  $handler->display->display_options['fields']['field_cta']['id'] = 'field_cta';
+  $handler->display->display_options['fields']['field_cta']['table'] = 'field_data_field_cta';
+  $handler->display->display_options['fields']['field_cta']['field'] = 'field_cta';
+  $handler->display->display_options['fields']['field_cta']['label'] = '';
+  $handler->display->display_options['fields']['field_cta']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_cta']['click_sort_column'] = 'url';
+  /* Field: Content: Secondary CTA */
+  $handler->display->display_options['fields']['field_secondary_cta']['id'] = 'field_secondary_cta';
+  $handler->display->display_options['fields']['field_secondary_cta']['table'] = 'field_data_field_secondary_cta';
+  $handler->display->display_options['fields']['field_secondary_cta']['field'] = 'field_secondary_cta';
+  $handler->display->display_options['fields']['field_secondary_cta']['label'] = '';
+  $handler->display->display_options['fields']['field_secondary_cta']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_secondary_cta']['click_sort_column'] = 'url';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
