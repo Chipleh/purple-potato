@@ -33,8 +33,6 @@
 		}
 
 		.hero-rotator-outer {
-			backgorund: blue;
-
 			&:before {
 				content: "";
 				display: block;
@@ -43,9 +41,9 @@
 			}
 
 			.hero-rotator-inner {
-				backgorund: red;
+				background: green;
 				left: 0;
-				// position: absolute;
+				position: absolute;
 				top: 0;
 			}
 		}
@@ -212,20 +210,24 @@
 
 	&.rotator-slide-module-height-tall {
 		.flexible-template-content {
-			background: #294f69;
+			.hero-rotator-outer {
+				background: blue;
 
-			&:before {
-				padding-top: 42.858%;
+				&:before {
+					padding-top: 42.858%;
+				}
 			}
 		}
 	}
 
 	&.rotator-slide-module-height-short {
 		.flexible-template-content {
-			background: #f69294;
+			.hero-rotator-outer {
+				background: red;
 
-			&:before {
-				padding-top: 28.929%;
+				&:before {
+					padding-top: 28.929%;
+				}
 			}
 		}
 	}
