@@ -4639,13 +4639,12 @@ p.subtext {
 .pane-bundle-rotator-hero .flexible-template-content .views-field-title,
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-subhead,
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta,
-.pane-bundle-rotator-hero .flexible-template-content .views-field-field-secondary-cta,
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-video-tout {
   clear: both;
   display: block;
   overflow: hidden;
 }
-/* line 79, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 78, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-title,
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-subhead,
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta,
@@ -4655,7 +4654,7 @@ p.subtext {
   text-align: center;
   width: 74%;
 }
-/* line 91, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 90, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-title h1 {
   font-size: 4.3vw;
   height: calc(0.643vw * 7);
@@ -4663,7 +4662,7 @@ p.subtext {
   margin-bottom: calc(0.643vw * 1);
   margin-top: calc(0.643vw * 4);
 }
-/* line 99, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 98, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-title h2 {
   font-size: 3.6vw;
   height: calc(0.643vw * 7);
@@ -4671,7 +4670,7 @@ p.subtext {
   margin-bottom: calc(0.643vw * 1);
   margin-top: calc(0.643vw * 4);
 }
-/* line 109, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 108, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-subhead h3 {
   font-size: 1.786vw;
   height: calc(0.643vw * 8);
@@ -4679,7 +4678,7 @@ p.subtext {
   margin-bottom: calc(0.643vw * 5);
   margin-top: calc(0.643vw * 0);
 }
-/* line 117, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 116, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-subhead h4 {
   font-size: 1.529vw;
   height: calc(0.643vw * 8);
@@ -4687,7 +4686,7 @@ p.subtext {
   margin-bottom: calc(0.643vw * 5);
   margin-top: calc(0.643vw * 0);
 }
-/* line 125, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 124, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-subhead h5 {
   font-size: 1.072vw;
   height: calc(0.643vw * 8);
@@ -4695,7 +4694,7 @@ p.subtext {
   margin-bottom: calc(0.643vw * 5);
   margin-top: calc(0.643vw * 0);
 }
-/* line 135, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 134, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta a {
   border: 1px solid #fff;
   color: #fff;
@@ -4707,7 +4706,7 @@ p.subtext {
   position: relative;
   z-index: 2;
 }
-/* line 146, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 145, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta a:before {
   background: #fff;
   content: '';
@@ -4721,12 +4720,12 @@ p.subtext {
   width: 100%;
   z-index: 1;
 }
-/* line 161, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 160, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta a:hover:before {
   opacity: .45;
   transition: all .5s ease;
 }
-/* line 170, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 169, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-secondary-cta a {
   border: 1px solid #fff;
   color: #fff;
@@ -4738,7 +4737,7 @@ p.subtext {
   position: relative;
   z-index: 2;
 }
-/* line 181, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 180, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-secondary-cta a:before {
   background: #fff;
   content: '';
@@ -4752,12 +4751,13 @@ p.subtext {
   width: 100%;
   z-index: 1;
 }
-/* line 196, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 195, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-secondary-cta a:hover:before {
   opacity: .45;
   transition: all .5s ease;
 }
-/* line 204, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+/* line 203, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-hero-rotator.scss */
+.pane-bundle-rotator-hero .flexible-template-content .views-field-field-secondary-cta,
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-video-tout,
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-background-color,
 .pane-bundle-rotator-hero .flexible-template-content .views-field-field-background-image {
