@@ -23,29 +23,39 @@
 ?>
 
 <?php
-  $attributes = array();
+  $attributes1 = array();
+  $attributes2 = array();
+
+  // Append background color to outer wrapper.
+  if (isset($row->field_field_background_color[0]['raw']['rgb'])) {
+    $background_color = $row->field_field_background_color[0]['raw']['rgb'];
+
+    $attributes1[] = 'style="background-color: ' . $background_color . '"';
+
+    unset($fields['field_background_color']);
+  }
 
   // Append desktop background image to custom inner/outer wrapper.
   if (isset($row->field_field_background_image[0]['raw']['uri'])) {
     $background_image = file_create_url($row->field_field_background_image[0]['raw']['uri']);
 
-    $attributes[] = 'data-background-desktop="background-image: url(' . $background_image . ')"';
+    $attributes2[] = 'data-background-desktop="background-image: url(' . $background_image . ')"';
 
-    unset($row->field_field_background_image);
+    unset($fields['field_background_image']);
   }
 
   // Append mobile background image to custom inner/outer wrapper.
   if (isset($row->field_field_background_mobile_image[0]['raw']['uri'])) {
     $background_image = file_create_url($row->field_field_background_mobile_image[0]['raw']['uri']);
 
-    $attributes[] = 'data-background-mobile="background-image: url(' . $background_image . ')"';
+    $attributes2[] = 'data-background-mobile="background-image: url(' . $background_image . ')"';
 
-    unset($row->field_field_background_mobile_image);
+    unset($fields['field_background_mobile_image']);
   }
 ?>
 
 <div class="hero-rotator-outer">
-<div class="hero-rotator-inner" <?php print implode(' ', $attributes); ?>>
+<div class="hero-rotator-inner" <?php print implode(' ', $attributes1); ?> <?php print implode(' ', $attributes2); ?>>
 
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>
