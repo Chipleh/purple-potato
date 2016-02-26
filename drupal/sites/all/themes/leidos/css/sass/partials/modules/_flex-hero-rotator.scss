@@ -84,51 +84,6 @@
 			width: 74%;
 		}
 
-		/* title */
-		.views-field-title {
-			h1 {
-				font-size: 4.3vw;
-				height: calc(#{$multiBit} * 7);
-				line-height: calcLineHeight($multiBit , 7);
-				margin-bottom: calc(#{$multiBit} * 1);
-				margin-top: calc(#{$multiBit} * 4);
-			}
-
-			h2 {
-				font-size: 3.6vw;
-				height: calc(#{$multiBit} * 7);
-				line-height: calcLineHeight($multiBit , 7);
-				margin-bottom: calc(#{$multiBit} * 1);
-				margin-top: calc(#{$multiBit} * 4);
-			}
-		}
-
-		.views-field-field-subhead {
-			h3 {
-				font-size: 1.786vw;
-				height: calc(#{$multiBit} * 8);
-				line-height: calcLineHeight($multiBit , 4);
-				margin-bottom: calc(#{$multiBit} * 5);
-				margin-top: calc(#{$multiBit} * 0);
-			}
-
-			h4 {
-				font-size: 1.529vw;
-				height: calc(#{$multiBit} * 8);
-				line-height: calcLineHeight($multiBit , 4);
-				margin-bottom: calc(#{$multiBit} * 5);
-				margin-top: calc(#{$multiBit} * 0);
-			}
-
-			h5 {
-				font-size: 1.072vw;
-				height: calc(#{$multiBit} * 8);
-				line-height: calcLineHeight($multiBit , 2);
-				margin-bottom: calc(#{$multiBit} * 5);
-				margin-top: calc(#{$multiBit} * 0);
-			}
-		}
-
 		.views-field-field-cta {
 			a {
 				border: 1px solid $color-white;
@@ -163,38 +118,21 @@
 				}
 			}
 		}
+	
+		.flex-control-nav {
+			bottom: 20px;
+			z-index: 2;
+		}
 
-		.views-field-field-secondary-cta {
+		.flex-nav-prev,
+		.flex-nav-next {
 			a {
-				border: 1px solid $color-white;
-				color: $color-white;
-				display: inline-block;
-				font-size: 1.229vw;
-				font-weight: 100;
-				margin: 0 auto;
-				padding: 0.643vw 2.85vw;
-				position: relative;
-				z-index: 2;
+				height: 60px;
+				outline: none;
 
 				&:before {
-					background: $color-white;
-					content: '';
 					display: block;
-					height: 100%;
-					left: 0;
-					opacity: .15;
-					position: absolute;
-					top: 0;
-					transition: all .5s ease;
-					width: 100%;
-					z-index: 1;
-				}
-
-				&:hover {
-					&:before {
-						opacity: .45;
-						transition: all .5s ease;
-					}
+					color: rgba(255, 255, 255, 0.8);
 				}
 			}
 		}
@@ -215,6 +153,51 @@
 				&:before {
 					padding-top: 42.858%;
 				}
+
+				/* title */
+				.views-field-title {
+					h1 {
+						font-size: 4.3vw;
+						height: calc(#{$multiBit} * 7);
+						line-height: calcLineHeight($multiBit , 7);
+						margin-bottom: calc(#{$multiBit} * 1);
+						margin-top: calc(#{$multiBit} * 4);
+					}
+
+					h2 {
+						font-size: 3.6vw;
+						height: calc(#{$multiBit} * 7);
+						line-height: calcLineHeight($multiBit , 7);
+						margin-bottom: calc(#{$multiBit} * 1);
+						margin-top: calc(#{$multiBit} * 4);
+					}
+				}
+
+				.views-field-field-subhead {
+					h3 {
+						font-size: 1.786vw;
+						height: calc(#{$multiBit} * 8);
+						line-height: calcLineHeight($multiBit , 4);
+						margin-bottom: calc(#{$multiBit} * 5);
+						margin-top: calc(#{$multiBit} * 0);
+					}
+
+					h4 {
+						font-size: 1.529vw;
+						height: calc(#{$multiBit} * 8);
+						line-height: calcLineHeight($multiBit , 4);
+						margin-bottom: calc(#{$multiBit} * 5);
+						margin-top: calc(#{$multiBit} * 0);
+					}
+
+					h5 {
+						font-size: 1.072vw;
+						height: calc(#{$multiBit} * 8);
+						line-height: calcLineHeight($multiBit , 2);
+						margin-bottom: calc(#{$multiBit} * 5);
+						margin-top: calc(#{$multiBit} * 0);
+					}
+				}
 			}
 		}
 	}
@@ -226,6 +209,51 @@
 
 				&:before {
 					padding-top: 28.929%;
+				}
+
+				/* title */
+				.views-field-title {
+					h1 {
+						font-size: 4.3vw;
+						height: calc(#{$multiBit} * 7);
+						line-height: calcLineHeight($multiBit , 7);
+						margin-bottom: calc(#{$multiBit} * 1);
+						margin-top: calc(#{$multiBit} * 4);
+					}
+
+					h2 {
+						font-size: 3.6vw;
+						height: calc(#{$multiBit} * 7);
+						line-height: calcLineHeight($multiBit , 7);
+						margin-bottom: calc(#{$multiBit} * 1);
+						margin-top: calc(#{$multiBit} * 4);
+					}
+				}
+
+				.views-field-field-subhead {
+					h3 {
+						font-size: 1.786vw;
+						height: calc(#{$multiBit} * 8);
+						line-height: calcLineHeight($multiBit , 4);
+						margin-bottom: calc(#{$multiBit} * 5);
+						margin-top: calc(#{$multiBit} * 0);
+					}
+
+					h4 {
+						font-size: 1.529vw;
+						height: calc(#{$multiBit} * 8);
+						line-height: calcLineHeight($multiBit , 4);
+						margin-bottom: calc(#{$multiBit} * 5);
+						margin-top: calc(#{$multiBit} * 0);
+					}
+
+					h5 {
+						font-size: 1.072vw;
+						height: calc(#{$multiBit} * 8);
+						line-height: calcLineHeight($multiBit , 2);
+						margin-bottom: calc(#{$multiBit} * 5);
+						margin-top: calc(#{$multiBit} * 0);
+					}
 				}
 			}
 		}
