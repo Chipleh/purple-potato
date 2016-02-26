@@ -4,9 +4,9 @@ core = 7.x
 package = Panels
 dependencies[] = panels
 
-; Information added by Drupal.org packaging script on 2016-02-09
-version = "7.x-1.1+18-dev"
+; Information added by Drupal.org packaging script on 2016-02-24
+version = "7.x-1.1+20-dev"
 core = "7.x"
 project = "panels_curator"
-datestamp = "1455052440"
+datestamp = "1456341580"
 

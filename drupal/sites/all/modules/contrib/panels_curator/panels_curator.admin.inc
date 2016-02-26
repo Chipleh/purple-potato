@@ -25,6 +25,11 @@ function panels_curator_settings_form() {
           $types[$group][$key]['subtype_name'] = $types[$group][$key]['name'];
         }
       }
+      elseif ($group == 'block') {
+        // Make sure that block types/subtypes are set.
+        $types[$group][$key]['type_name'] = 'block';
+        $types[$group][$key]['subtype_name'] = $key;
+      }
     }
   }
 
@@ -142,20 +147,31 @@ function panels_curator_settings_form() {
     );
   }
 
+  // Panelizer default overrides.
+  $content_types = node_type_get_names();
+  $panelizer_overrides = variable_get('panels_curator_override_displays', '');
+  $panelizer_overrides = explode(',', $panelizer_overrides);
+  $form['panelizer_overrides'] = array(
+    '#title' => t('Panelizer default overrides'),
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['panelizer_overrides']['override_displays'] = array(
+    '#title' => t('Override panelizer default display automatically'),
+    '#description' => t('Checking this box will create a new display and panel duplicates for each new panelized node.'),
+    '#type' => 'checkboxes',
+    '#options' => $content_types,
+    '#default_value' => $panelizer_overrides,
+  );
+
   // Additional settings.
-  $override = variable_get('panels_curator_override_displays', FALSE);
   $hide_extras = variable_get('panels_curator_hide_extras', FALSE);
   $data_object = variable_get('panels_curator_data_object', FALSE);
   $form['additional_settings'] = array(
     '#title' => t('Additional settings'),
     '#type' => 'fieldset',
     '#collapsible' => TRUE,
-  );
-  $form['additional_settings']['override_displays'] = array(
-    '#title' => t('Override panelizer default display automatically'),
-    '#description' => t('Checking this box will create a new display and panel duplicates for each new panelized node.'),
-    '#type' => 'checkbox',
-    '#default_value' => $override,
   );
   $form['additional_settings']['hide_extras'] = array(
     '#title' => t('Hide extra options for fieldable panels pane forms'),
@@ -257,7 +273,15 @@ function panels_curator_settings_form_submit($form, &$form_state) {
     }
     variable_set('panels_curator_regions_' . $group, implode(',', $region_mappings));
   }
-  variable_set('panels_curator_override_displays', $form_state['values']['override_displays']);
+  $override_displays = array();
+  foreach ($form_state['values']['override_displays'] as $display) {
+    if (!empty($display)) {
+      $override_displays[] = $display; 
+    }
+  }
+  // Set the new update categories.
+  variable_set('panels_curator_override_displays', implode(',', $override_displays));
+  //variable_set('panels_curator_override_displays', $form_state['values']['override_displays']);
   variable_set('panels_curator_hide_extras', $form_state['values']['hide_extras']);
   variable_set('panels_curator_data_object', $form_state['values']['data_object']);
 }

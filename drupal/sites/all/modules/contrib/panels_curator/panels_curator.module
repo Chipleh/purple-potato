@@ -114,58 +114,62 @@ function panels_curator_preprocess_page(&$vars) {
   // Check for panelizer default template settings.
   if (
     isset($vars['node']->panelizer) &&
-    isset($vars['node']->panelizer_view_mode) &&
-    variable_get('panels_curator_override_displays', FALSE)
+    isset($vars['node']->panelizer_view_mode)
   ) {
-    $view_mode = $vars['node']->panelizer_view_mode;
-    $display = !empty($vars['node']->panelizer) ? $vars['node']->panelizer[$view_mode]->display : FALSE;
-    $default_display = variable_get('panels_curator_display_' . $vars['node']->type, 0);
-    // If the current node is not the default template, use new duplicate panels and a new display.
-    if (empty($vars['node']->panelizer[$view_mode]->did) && $vars['node']->nid != $default_display) {
-      // Set the default template node if it is not already set.
-      if (empty($default_display)) {
-        variable_set('panels_curator_display_' . $vars['node']->type, $vars['node']->nid);
-      }
-      else {
-        $new_display = panels_save_display($display);
-        $vars['node']->panelizer[$view_mode]->display = &$new_display;
-        foreach ($vars['node']->panelizer[$view_mode]->display->content as &$pane) {
-          // Clone each FPP and then assign the new fpid.
-          if ($pane->type == 'fieldable_panels_pane') {
-            list($subtype, $fpid) = explode(':', $pane->subtype);
-            if ($subtype == 'fpid') {
-              // Clone the FPP object.
-              $fpp = fieldable_panels_panes_load($fpid);
-              if (!isset($fpp->fpid)) {
-                continue;
+    $panelizer_overrides = variable_get('panels_curator_override_displays', '');
+    $panelizer_overrides = explode(',', $panelizer_overrides);
+    // Check if the panelizer defaults should be overridden for this content type.
+    if (in_array($vars['node']->type, $panelizer_overrides)) {
+      $view_mode = $vars['node']->panelizer_view_mode;
+      $display = !empty($vars['node']->panelizer) ? $vars['node']->panelizer[$view_mode]->display : FALSE;
+      $default_display = variable_get('panels_curator_display_' . $vars['node']->type, 0);
+      // If the current node is not the default template, use new duplicate panels and a new display.
+      if (empty($vars['node']->panelizer[$view_mode]->did) && $vars['node']->nid != $default_display) {
+        // Set the default template node if it is not already set.
+        if (empty($default_display)) {
+          variable_set('panels_curator_display_' . $vars['node']->type, $vars['node']->nid);
+        }
+        else {
+          $new_display = panels_save_display($display);
+          $vars['node']->panelizer[$view_mode]->display = &$new_display;
+          foreach ($vars['node']->panelizer[$view_mode]->display->content as &$pane) {
+            // Clone each FPP and then assign the new fpid.
+            if ($pane->type == 'fieldable_panels_pane') {
+              list($subtype, $fpid) = explode(':', $pane->subtype);
+              if ($subtype == 'fpid') {
+                // Clone the FPP object.
+                $fpp = fieldable_panels_panes_load($fpid);
+                if (!isset($fpp->fpid)) {
+                  continue;
+                }
+
+                // Clean the some basic settings.
+                $fpp->fpid = NULL;
+                $fpp->created = NULL;
+                $fpp->timestamp = NULL;
+
+                // Save the cloned FPP.
+                $newfpp = fieldable_panels_panes_save($fpp);
+
+                // Update the FPP reference.
+                $pane->subtype = 'fpid:' . $newfpp->fpid;
               }
-
-              // Clean the some basic settings.
-              $fpp->fpid = NULL;
-              $fpp->created = NULL;
-              $fpp->timestamp = NULL;
-
-              // Save the cloned FPP.
-              $newfpp = fieldable_panels_panes_save($fpp);
-
-              // Update the FPP reference.
-              $pane->subtype = 'fpid:' . $newfpp->fpid;
             }
           }
+          // Save and map the new display/panels to the node.
+          $vars['node']->panelizer[$view_mode]->display_is_modified = TRUE;
+          node_save($vars['node']);
+          ctools_include('object-cache');
+          ctools_object_cache_clear('panels_node_display_cache', $vars['node']->nid);
+          // Reload the current page so that the panel IDs are accurate.
+          drupal_goto(current_path());
         }
-        // Save and map the new display/panels to the node.
-        $vars['node']->panelizer[$view_mode]->display_is_modified = TRUE;
-        node_save($vars['node']);
-        ctools_include('object-cache');
-        ctools_object_cache_clear('panels_node_display_cache', $vars['node']->nid);
-        // Reload the current page so that the panel IDs are accurate.
-        drupal_goto(current_path());
       }
-    }
-    // Add css and js for IPE enhancements.
-    if (isset($vars['node']->panelizer) && user_access('use panels in place editing')) {
-      drupal_add_css(drupal_get_path('module', 'panels_curator') . '/css/panels_curator.css');
-      drupal_add_js(drupal_get_path('module', 'panels_curator') . '/js/panels_curator.js', array('group' => JS_LIBRARY));
+      // Add css and js for IPE enhancements.
+      if (isset($vars['node']->panelizer) && user_access('use panels in place editing')) {
+        drupal_add_css(drupal_get_path('module', 'panels_curator') . '/css/panels_curator.css');
+        drupal_add_js(drupal_get_path('module', 'panels_curator') . '/js/panels_curator.js', array('group' => JS_LIBRARY));
+      }
     }
   }
 }
@@ -177,11 +181,11 @@ function panels_curator_preprocess_page(&$vars) {
  */
 function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_state) {
   // Add custom submit buttons based on current node and default template status.
-  if (
-    isset($form_state['panelizer entity']) &&
-    variable_get('panels_curator_override_displays', FALSE)
-  ) {
-    if (isset($form_state['panelizer entity']->nid)) {
+  if (isset($form_state['panelizer entity'])) {
+    $panelizer_overrides = variable_get('panels_curator_override_displays', '');
+    $panelizer_overrides = explode(',', $panelizer_overrides);
+    // Check if the panelizer defaults should be overridden for this content type.
+    if (isset($form_state['panelizer entity']->nid) && in_array($form_state['panelizer entity']->type, $panelizer_overrides)) {
       $default_display = variable_get('panels_curator_display_' . $form_state['panelizer bundle'], 0);
       if ($form_state['panelizer entity']->nid == $default_display) {
         unset($form['buttons']['submit']);
@@ -253,7 +257,7 @@ function panels_curator_map_values($values, $content) {
   elseif (isset($values['video_url'])) {
     $value = $values['video_url'];
   }
-  elseif ($values['type'] == 'image') {
+  elseif (isset($values['type']) && $values['type'] == 'image') {
     // Image fields.
     if (isset($content['#image_style'])) {
       // Apply image styles if they are specified.
@@ -264,7 +268,7 @@ function panels_curator_map_values($values, $content) {
       $value = $values['uri'];
     }
   }
-  elseif ($values['type'] == 'video') {
+  elseif (isset($values['type']) && $values['type'] == 'video') {
     // Video fields.
     $value = file_create_url($values['uri']);
   }
