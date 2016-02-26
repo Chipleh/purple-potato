@@ -143,6 +143,17 @@ function flexible_template_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
+  /* Field: Field: Background Mobile Image */
+  $handler->display->display_options['fields']['field_background_mobile_image']['id'] = 'field_background_mobile_image';
+  $handler->display->display_options['fields']['field_background_mobile_image']['table'] = 'field_data_field_background_mobile_image';
+  $handler->display->display_options['fields']['field_background_mobile_image']['field'] = 'field_background_mobile_image';
+  $handler->display->display_options['fields']['field_background_mobile_image']['label'] = '';
+  $handler->display->display_options['fields']['field_background_mobile_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_background_mobile_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_background_mobile_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
   /* Field: Field: CTA */
   $handler->display->display_options['fields']['field_cta']['id'] = 'field_cta';
   $handler->display->display_options['fields']['field_cta']['table'] = 'field_data_field_cta';

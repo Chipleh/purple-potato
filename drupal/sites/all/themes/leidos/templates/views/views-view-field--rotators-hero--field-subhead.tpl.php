@@ -8,6 +8,8 @@
  * - $field: The field handler object that can process the input
  * - $row: The raw SQL result that can be used
  * - $output: The processed output that will normally be used.
+ *
+ * @ingroup views_templates
  */
 ?>
 

@@ -562,16 +562,16 @@ function flexible_template_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '2',
+          'weight' => '1',
         ),
         'metatags' => array(
-          'weight' => '3',
+          'weight' => '2',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '3',
         ),
         'redirect' => array(
           'weight' => '5',

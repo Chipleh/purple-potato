@@ -22,8 +22,30 @@
  */
 ?>
 
+<?php
+  $attributes = array();
+
+  // Append desktop background image to custom inner/outer wrapper.
+  if (isset($row->field_field_background_image[0]['raw']['uri'])) {
+    $background_image = file_create_url($row->field_field_background_image[0]['raw']['uri']);
+
+    $attributes[] = 'data-background-desktop="background-image: url(' . $background_image . ')"';
+
+    unset($row->field_field_background_image);
+  }
+
+  // Append mobile background image to custom inner/outer wrapper.
+  if (isset($row->field_field_background_mobile_image[0]['raw']['uri'])) {
+    $background_image = file_create_url($row->field_field_background_mobile_image[0]['raw']['uri']);
+
+    $attributes[] = 'data-background-mobile="background-image: url(' . $background_image . ')"';
+
+    unset($row->field_field_background_mobile_image);
+  }
+?>
+
 <div class="hero-rotator-outer">
-<div class="hero-rotator-inner">
+<div class="hero-rotator-inner" <?php print implode(' ', $attributes); ?>>
 
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>

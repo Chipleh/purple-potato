@@ -212,7 +212,7 @@ function flexible_template_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'General Info',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
       0 => 'field_background_image',
       1 => 'field_cta',
@@ -224,7 +224,8 @@ function flexible_template_field_group_info() {
       7 => 'field_background_color',
       8 => 'field_subhead_color',
       9 => 'field_title_color',
-      10 => 'title',
+      10 => 'field_background_mobile_image',
+      11 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
