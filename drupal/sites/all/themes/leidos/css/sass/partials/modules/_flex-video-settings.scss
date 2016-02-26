@@ -7,11 +7,13 @@
 
 /*  elements
 **************************************************/
-.pane-bundle-multi-column {
+.pane-bundle-multi-column,
+.pane-bundle-rotator-hero {
 	.flexible-template-content {
 
 		/* video */
-		.field-name-field-background-video {
+		.field-name-field-background-video,
+		.views-field-field-video-tout {
 			display: none;
 			height: 100%;
 			left: 0;
@@ -45,6 +47,7 @@
 		/* button close */
 		.button-close {
 			display: none;
+			font-size: 0;
 			height: 60px;
 			outline: none;
 			position: fixed;
@@ -136,7 +139,8 @@
 
 			.video-container-open {
 				.button-close,
-				.field-name-field-background-video {
+				.field-name-field-background-video,
+				.views-field-field-video-tout {
 					display: block;
 				}
 			}
