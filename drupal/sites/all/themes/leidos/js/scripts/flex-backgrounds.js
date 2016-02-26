@@ -22,12 +22,14 @@
 					var item = $(this),
 					    val  = item.attr(select);
 
-					// Remove style from parent node, if exists.
+					// If style attributes already exists on parent node, relocate contents.
+                    var parent_attr = item.parent().attr('style');
+
+                    // Remove the parent style.
 					item.parent().removeAttr('style');
 
-					// Append background to parent node.
-					item.parent().attr('style', val);
-
+					// Append background and to parent node.
+					item.parent().attr('style', val + ';' + parent_attr);
 				});
 			}
 

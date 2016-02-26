@@ -54,8 +54,8 @@
   }
 ?>
 
-<div class="hero-rotator-outer">
-<div class="hero-rotator-inner" <?php print implode(' ', $attributes1); ?> <?php print implode(' ', $attributes2); ?>>
+<div class="hero-rotator-outer" <?php print implode(' ', $attributes1); ?>>
+<div class="hero-rotator-inner" <?php print implode(' ', $attributes2); ?>>
 
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>
