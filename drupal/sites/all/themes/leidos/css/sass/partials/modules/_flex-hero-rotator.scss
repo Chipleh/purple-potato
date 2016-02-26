@@ -32,17 +32,22 @@
 			}
 		}
 
-		&:before {
-			content: "";
-			display: block;
-			position: relative;
-			width: 100%;
-		}
+		.hero-rotator-outer {
+			backgorund: blue;
 
-		.ds-1col {
-			left: 0;
-			position: absolute;
-			top: 0;
+			&:before {
+				content: "";
+				display: block;
+				position: relative;
+				width: 100%;
+			}
+
+			.hero-rotator-inner {
+				backgorund: red;
+				left: 0;
+				// position: absolute;
+				top: 0;
+			}
 		}
 
 		/* header */
