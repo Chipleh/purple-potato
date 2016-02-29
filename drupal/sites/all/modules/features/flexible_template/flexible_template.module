@@ -40,6 +40,8 @@ function flexible_template_preprocess_field(&$variables) {
   //
   // Icons
   //
+  // @see field_icons
+  //
   if ($variables['element']['#field_name'] == 'field_icons') {
     foreach ($variables['items'] as $key => &$item) {
 
@@ -52,6 +54,8 @@ function flexible_template_preprocess_field(&$variables) {
 
   //
   // Multi-column
+  //
+  // @see field_columns_multi
   //
   elseif ($variables['element']['#field_name'] == 'field_columns_multi') {
     foreach ($variables['items'] as $key => &$item) {
@@ -78,6 +82,8 @@ function flexible_template_preprocess_field(&$variables) {
   //
   // Multi-column parallax
   //
+  // @see field_columns_multi_parallax
+  //
   elseif ($variables['element']['#field_name'] == 'field_columns_multi_parallax') {
     foreach ($variables['items'] as $key => &$item) {
 
@@ -90,6 +96,8 @@ function flexible_template_preprocess_field(&$variables) {
 
   //
   // Rotator slide / Hero
+  //
+  // @see field_rotator_slide_hero
   //
   elseif ($variables['element']['#field_name'] == 'field_rotator_slide_hero') {
 
@@ -113,6 +121,8 @@ function flexible_template_preprocess_field(&$variables) {
 
   //
   // Thumbnail gallery
+  //
+  // @see field_thumbnail_gallery
   //
   elseif ($variables['element']['#field_name'] == 'field_thumbnail_gallery') {
 
@@ -162,6 +172,8 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   //
   // Feature Video
   //
+  // @see feature_video
+  //
   if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {
 
     // Get mobile background URL and remove field.
@@ -174,7 +186,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   //
   // Icons
   //
-  elseif (isset($content['#bundle']) && $content['#bundle'] == 'icons') { 
+  // @see icons
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'icons') {
 
     // Add custom class that identifies total number of columns defined.
     $variables['classes_array'][] = 'icons-' . count($content['field_icons']['#items']);
@@ -182,6 +196,8 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
   //
   // Multi-column
+  //
+  // @see multi_column
   //
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'multi_column') {
 
@@ -191,6 +207,8 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
   //
   // Rotator slide / Hero
+  //
+  // @see rotator_hero
   //
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'rotator_hero') {
 
@@ -223,7 +241,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   //
   // Thumbnail Gallery
   //
-  elseif (isset($content['#bundle']) && $content['#bundle'] == 'multi_column') {
+  // @see thumbnail_gallery
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'thumbnail_gallery') {
 
     // Add custom class that identifies total number of columns defined.
     $variables['classes_array'][] = 'thumbnail-gallery-' . count($content['field_thumbnail_gallery']['#items']);
