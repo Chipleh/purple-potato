@@ -70,7 +70,7 @@ function flexible_template_preprocess_field(&$variables) {
         $subhead_color = 'style="color: ' . $collection_item['field_subhead_color'][0]['#markup'] . '"';
       }
 
-      // Added Close/Play buttons to field list.
+      // Added Close/Play buttons to field list (Note: Things like this should actually be handled in jQuery!).
       $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play" ' . $subhead_color . '>' . t('Watch Video') . '</a>';
     }
   }
@@ -172,6 +172,15 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   }
 
   //
+  // Icons
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'icons') { 
+
+    // Add custom class that identifies total number of columns defined.
+    $variables['classes_array'][] = 'icons-' . count($content['field_icons']['#items']);
+  }
+
+  //
   // Multi-column
   //
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'multi_column') {
@@ -209,6 +218,15 @@ function flexible_template_preprocess_panels_pane(&$variables) {
       $variables['classes_array'][] = 'rotator-slide-module-height-' . $content['field_module_height']['#items'][0]['value'];
       unset($variables['content']['field_module_height']);
     }
+  }
+
+  //
+  // Thumbnail Gallery
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'multi_column') {
+
+    // Add custom class that identifies total number of columns defined.
+    $variables['classes_array'][] = 'thumbnail-gallery-' . count($content['field_thumbnail_gallery']['#items']);
   }
 }
 
