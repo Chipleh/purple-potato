@@ -4017,18 +4017,18 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'media_colorbox',
+        'module' => 'file_entity',
         'settings' => array(
-          'audio_playlist' => FALSE,
-          'colorbox_caption' => 'title',
-          'colorbox_gallery' => 'post',
-          'colorbox_gallery_custom' => '',
-          'colorbox_view_mode' => 'large',
-          'file_view_mode' => 'small',
-          'fixed_height' => '',
-          'fixed_width' => '',
+          'autoplay' => FALSE,
+          'controls' => TRUE,
+          'height' => NULL,
+          'loop' => FALSE,
+          'multiple_file_behavior' => 'tags',
+          'muted' => FALSE,
+          'preload' => '',
+          'width' => NULL,
         ),
-        'type' => 'media_colorbox',
+        'type' => 'file_video',
         'weight' => 7,
       ),
       'teaser' => array(
