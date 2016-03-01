@@ -166,7 +166,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
   // Define Fieldable Panels template overrides.
   if (isset($variables['pane']) && $variables['pane']->type == 'fieldable_panels_pane') {
-    $variables['theme_hook_suggestions'][] = 'flexible_template_module__' . $variables['content']['#element']->bundle;
+    if (isset($variables['content']['#element'])) {
+      $variables['theme_hook_suggestions'][] = 'flexible_template_module__' . $variables['content']['#element']->bundle;
+    }
   }
 
   //
@@ -346,7 +348,7 @@ function flexible_template_append_background_attributes(&$variables) {
   $content = $variables['content'];
 
   // Append desktop background image to collection wrapper.
-  if (isset($content['field_background_image'])) {
+  if (isset($content['field_background_image'][0])) {
     $background_image = file_create_url($content['field_background_image'][0]['uri']);
 
     $variables['attributes_array']['data-background-desktop'] = 'background-image: url(' . $background_image . ')';
@@ -355,7 +357,7 @@ function flexible_template_append_background_attributes(&$variables) {
   }
 
   // Append mobile background image to collection wrapper.
-  if (isset($content['field_background_mobile_image'])) {
+  if (isset($content['field_background_mobile_image'][0])) {
     $background_image = file_create_url($content['field_background_mobile_image'][0]['uri']);
 
     $variables['attributes_array']['data-background-mobile'] = 'background-image: url(' . $background_image . ')';
