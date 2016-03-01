@@ -35,7 +35,7 @@
 			}
 
 			video {
-				border: 10px solid;
+				border: 10px solid $color-gray-medium-dark;
 				display: block;
 				margin: 0 auto;
 				position: relative;
@@ -138,6 +138,9 @@
 			z-index: 100;
 
 			.video-container-open {
+				position: relative;
+				z-index: 1;
+
 				.button-close,
 				.field-name-field-background-video,
 				.views-field-field-video-tout {
@@ -153,7 +156,8 @@
 **************************************************/
 @media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
 	.pane-bundle-multi-column,
-	.pane-bundle-feature-video {
+	.pane-bundle-feature-video,
+	.pane-bundle-rotator-hero {
 		.flexible-template-content {
 
 			/* button play */

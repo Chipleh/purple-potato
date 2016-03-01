@@ -50,12 +50,14 @@
 					var item = $(this),
 					    val  = item.attr(select);
 
-					// Remove style from parent node, if exists.
+					// If style attributes already exists on parent node, relocate contents.
+                    var parent_attr = item.parent().attr('style');
+
+                    // Remove the parent style.
 					item.parent().removeAttr('style');
 
-					// Append background to parent node.
-					item.parent().attr('style', val);
-
+					// Append background and to parent node.
+					item.parent().attr('style', val + ';' + parent_attr);
 				});
 			}
 
@@ -90,11 +92,15 @@
 			jQuery('.node-type-flexible-template .button-play').on('click', function () {
 				jQuery(this).parent().addClass('video-container-open');
 				jQuery('.node-type-flexible-template').addClass('video-open');
+				$('.flex-pauseplay .flex-pause').trigger('click');
+				// jQuery('.flexslider').flexslider({pausePlay: true});
 			});
 			// close video pop up
 			jQuery('.node-type-flexible-template .button-close').on('click', function () {
 				jQuery(this).parent().removeClass('video-container-open');
 				jQuery('.node-type-flexible-template').removeClass('video-open');
+				$('.flex-pauseplay .flex-play').trigger('click');  
+				// jQuery('.flexslider').flexslider({pausePlay: false});
 			});
 		}
 	};	
