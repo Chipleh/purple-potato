@@ -1,0 +1,35 @@
+#panelizer-ipe-revert,
+#panels-ipe-default {
+  padding: 0 0.8em 2px 10px;
+  background-image: none, -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #383838),
+    color-stop(1, #666666)
+  );
+}
+
+#panelizer-ipe-revert:hover,
+#panelizer-ipe-revert:focus,
+#panels-ipe-default:hover,
+#panels-ipe-default:focus {
+  background-image: none, -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #3D3D3D),
+    color-stop(1, #999999)
+  );
+}
+
+#panelizer-ipe-revert:active,
+#panels-ipe-default:active {
+  background-image: none, -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #616161),
+    color-stop(1, #333333)
+  );
+}

@@ -1,0 +1,365 @@
+<?php
+/**
+ * @file
+ * Code for the Flexible Template feature.
+ */
+
+include_once 'flexible_template.features.inc';
+
+/**
+ * Implements hook_view_mode_templates().
+ */
+function flexible_template_view_mode_templates() {
+  return array(
+    'flexible_template_module__feature_video',
+    'flexible_template_module__icons',
+    'flexible_template_module__multi_column',
+    'flexible_template_module__multi_column_parallax',
+    'flexible_template_module__rotator_hero',
+    'flexible_template_module__thumbnail_gallery',
+  );
+}
+
+/**
+ * Implements template_preprocess_entity().
+ */
+function flexible_template_preprocess_entity(&$variables, $hook) {
+
+  // Expose function call flexible_template_preprocess_BUNDLE().
+  $function = 'flexible_template_preprocess_' . $variables['elements']['#bundle'];
+  if (function_exists($function)) {
+    $function($variables, $hook);
+  }
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function flexible_template_preprocess_field(&$variables) {
+
+  //
+  // Icons
+  //
+  // @see field_icons
+  //
+  if ($variables['element']['#field_name'] == 'field_icons') {
+    foreach ($variables['items'] as $key => &$item) {
+
+      // Addend custom classes for field collection items.
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+
+  //
+  // Multi-column
+  //
+  // @see field_columns_multi
+  //
+  elseif ($variables['element']['#field_name'] == 'field_columns_multi') {
+    foreach ($variables['items'] as $key => &$item) {
+
+      // Addend custom classes for field collection items.
+      $item['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+
+      // Created simplified field collection object.
+      $collection_item = &$item['entity']['field_collection_item'][key($item['entity']['field_collection_item'])];
+
+      // Get Subhead color so append to video play button.
+      $subhead_color = '';
+      if (isset($collection_item['field_subhead_color'])) {
+        $subhead_color = 'style="color: ' . $collection_item['field_subhead_color'][0]['#markup'] . '"';
+      }
+
+      // Added Close/Play buttons to field list (Note: Things like this should actually be handled in jQuery!).
+      $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play" ' . $subhead_color . '>' . t('Watch Video') . '</a>';
+    }
+  }
+
+  //
+  // Multi-column parallax
+  //
+  // @see field_columns_multi_parallax
+  //
+  elseif ($variables['element']['#field_name'] == 'field_columns_multi_parallax') {
+    foreach ($variables['items'] as $key => &$item) {
+
+      // Addend custom classes for field collection items.
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+
+  //
+  // Rotator slide / Hero
+  //
+  // @see field_rotator_slide_hero
+  //
+  elseif ($variables['element']['#field_name'] == 'field_rotator_slide_hero') {
+
+    // Render rotator instead of slide nodes references.
+    $arguments = array();
+    foreach ($variables['items'] as $item) {
+      $arguments[] = $item['#node']->nid;
+    }
+
+    $rotator = views_get_view('rotators_hero');
+    $rotator->set_display('rotator_hero_pane');
+    if (!empty($arguments)) {
+      $rotator->set_arguments(array(implode(',', $arguments)));
+      $rotator->set_items_per_page(count($arguments));
+    }
+    $rotator->pre_execute();
+    $rotator->execute();
+
+    $variables['rotator_hero'] = $rotator->render();
+  }
+
+  //
+  // Thumbnail gallery
+  //
+  // @see field_thumbnail_gallery
+  //
+  elseif ($variables['element']['#field_name'] == 'field_thumbnail_gallery') {
+
+    // Addend custom classes for field collection items.
+    foreach ($variables['items'] as $key => &$item) {
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_panels_pane().
+ */
+function flexible_template_preprocess_panels_pane(&$variables) {
+  $content = &$variables['content'];
+
+  // Set background color.
+  if (isset($content['field_background_color'])) {
+    $variables['attributes_array']['style'][] = 'color:' . $content['field_background_color']['#items'][0]['rgb'];
+    unset($variables['content']['field_background_color']);
+  }
+
+  // Set title color.
+  if (isset($content['field_title_color'])) {
+    $variables['content']['title']['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
+    unset($variables['content']['field_title_color']);
+  }
+
+  // Set title size.
+  if (isset($content['field_title_size'])) {
+    if (isset($content['title'])) {
+      $variables['content']['title']['#theme'] = 'html_tag';
+      $variables['content']['title']['#tag']   = $content['field_title_size'][0]['#markup'];
+    }
+    unset($variables['content']['field_title_size']);
+  }
+
+  flexible_template_preprocess_subhead($variables);
+
+  // Define Fieldable Panels template overrides.
+  if (isset($variables['pane']) && $variables['pane']->type == 'fieldable_panels_pane') {
+    $variables['theme_hook_suggestions'][] = 'flexible_template_module__' . $variables['content']['#element']->bundle;
+  }
+
+  //
+  // Feature Video
+  //
+  // @see feature_video
+  //
+  if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {
+
+    // Get mobile background URL and remove field.
+    if (isset($content['field_background_mobile_image'])) {
+      $variables['background_mobile_image'] = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']);
+      unset($variables['content']['field_background_mobile_image']);
+    }
+  }
+
+  //
+  // Icons
+  //
+  // @see icons
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'icons') {
+
+    // Add custom class that identifies total number of columns defined.
+    $variables['classes_array'][] = 'icons-' . count($content['field_icons']['#items']);
+  }
+
+  //
+  // Multi-column
+  //
+  // @see multi_column
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'multi_column') {
+
+    // Add custom class that identifies total number of columns defined.
+    $variables['classes_array'][] = 'multi-column-' . count($content['field_columns_multi']['#items']);
+  }
+
+  //
+  // Rotator slide / Hero
+  //
+  // @see rotator_hero
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'rotator_hero') {
+
+    // Add empty field for all slides.
+    if (!isset($content['field_rotator_slide_hero'])) {
+      $variables['content']['field_rotator_slide_hero'] = array(
+        '#theme' => 'field',
+        '#weight' => '2',
+        '#title' => 'Rotator slide / Hero',
+        '#access' => TRUE,
+        '#label_display' => 'hidden',
+        '#view_mode' => 'full',
+        '#language' => 'und',
+        '#field_name' => 'field_rotator_slide_hero',
+        '#field_type' => 'node_reference',
+        '#field_translatable' => 0,
+        '#entity_type' => 'fieldable_panels_pane',
+        '#bundle' => 'rotator_hero',
+        '#items' => array()
+      );
+    }
+
+    // Add custom class that identifies the Module Height (short/tall) and remove field.
+    if (isset($content['field_module_height'])) {
+      $variables['classes_array'][] = 'rotator-slide-module-height-' . $content['field_module_height']['#items'][0]['value'];
+      unset($variables['content']['field_module_height']);
+    }
+  }
+
+  //
+  // Thumbnail Gallery
+  //
+  // @see thumbnail_gallery
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'thumbnail_gallery') {
+
+    // Add custom class that identifies total number of columns defined.
+    $variables['classes_array'][] = 'thumbnail-gallery-' . count($content['field_thumbnail_gallery']['#items']);
+  }
+}
+
+/**
+ * Field collection implementation of template_preprocess_entity().
+ *
+ * @param object $variables
+ *
+ * The $variables array contains the following arguments:
+ * - $node
+ * - $view_mode
+ * - $page
+ */
+function flexible_template_preprocess_field_collection_item(&$variables) {
+  $content = &$variables['content'];
+
+  // Set title color.
+  if (isset($content['field_title_color'])) {
+    $variables['content']['field_title_item'][0]['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
+    unset($variables['content']['field_title_color']);
+  }
+
+  // Set title size.
+  if (isset($content['field_title_size'])) {
+    if (isset($content['field_title_item'])) {
+      $variables['content']['field_title_item'][0]['#theme'] = 'html_tag';
+      $variables['content']['field_title_item'][0]['#tag']   = $content['field_title_size'][0]['#markup'];
+      $variables['content']['field_title_item'][0]['#value'] = $content['field_title_item'][0]['#markup'];
+    }
+    unset($variables['content']['field_title_size']);
+  }
+
+  flexible_template_preprocess_subhead($variables);
+}
+
+function flexible_template_preprocess_field_columns_multi(&$variables) {
+  flexible_template_preprocess_field_collection_item($variables);
+
+  flexible_template_append_background_attributes($variables);
+}
+
+function flexible_template_preprocess_field_icon_item(&$variables) {
+  flexible_template_preprocess_field_collection_item($variables);
+}
+
+function flexible_template_preprocess_field_thumbnail_image_item(&$variables) {
+  flexible_template_preprocess_field_collection_item($variables);
+}
+
+/**
+ * Preprocess Subtitle value based on configured Color/Size field values.
+ *
+ * @param object $variables
+ *
+ * The $variables array contains the following arguments:
+ * - $node
+ * - $view_mode
+ * - $page
+ *
+ * @see field_subhead
+ * @see field_subhead_color
+ * @see field_subhead_size
+ */
+function flexible_template_preprocess_subhead(&$variables) {
+  $content = $variables['content'];
+
+  // Set subhead color.
+  if (isset($content['field_subhead_color'])) {
+    $variables['content']['field_subhead'][0]['#attributes'] = array('style' => 'color:' . $content['field_subhead_color']['#items'][0]['rgb']);
+    unset($variables['content']['field_subhead_color']);
+  }
+
+  // Set subhead size.
+  if (isset($content['field_subhead_size'])) {
+    $variables['content']['field_subhead'][0]['#theme'] = 'html_tag';
+    $variables['content']['field_subhead'][0]['#tag']   = $content['field_subhead_size'][0]['#markup'];
+    $variables['content']['field_subhead'][0]['#value'] = $content['field_subhead'][0]['#markup'];
+
+    unset($variables['content']['field_subhead_size']);
+  }
+}
+
+/**
+ * Append data-* elements to container to be post-processed using jQuery.
+ *
+ * @param object $variables
+ *
+ * The $variables array contains the following arguments:
+ * - $node
+ * - $view_mode
+ * - $page
+ *
+ * @see field_background_image
+ * @see field_background_mobile_image
+ */
+function flexible_template_append_background_attributes(&$variables) {
+  $content = $variables['content'];
+
+  // Append desktop background image to collection wrapper.
+  if (isset($content['field_background_image'])) {
+    $background_image = file_create_url($content['field_background_image'][0]['uri']);
+
+    $variables['attributes_array']['data-background-desktop'] = 'background-image: url(' . $background_image . ')';
+
+    unset($variables['content']['field_background_image']);
+  }
+
+  // Append mobile background image to collection wrapper.
+  if (isset($content['field_background_mobile_image'])) {
+    $background_image = file_create_url($content['field_background_mobile_image'][0]['uri']);
+
+    $variables['attributes_array']['data-background-mobile'] = 'background-image: url(' . $background_image . ')';
+
+    unset($variables['content']['field_background_mobile_image']);
+  }
+}

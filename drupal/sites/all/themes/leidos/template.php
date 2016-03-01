@@ -261,7 +261,7 @@ function leidos_preprocess_field(&$variables) {
     $rotator->execute();
     $variables['rotator'] = $rotator->render();
   }
-  if ($variables['element']['#field_name'] == 'field_capabilities') {
+  elseif ($variables['element']['#field_name'] == 'field_capabilities') {
     // Render the capabilities view instead of the terms that are referenced.
     $arguments = array();
     foreach ($variables['items'] as $item) {

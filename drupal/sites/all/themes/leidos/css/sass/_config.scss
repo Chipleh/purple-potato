@@ -156,6 +156,16 @@ $side-nav-height: 54px;
 }
 
 
+/***** multi column math *****/
+/* multiBit */
+$multiBit: 0.643vw;
+
+/* calcLineHeight */
+@function calcLineHeight($value, $multiplier) {
+	@return $value * $multiplier; 
+}
+
+
 /***** page *****/
 /* body */
 html,

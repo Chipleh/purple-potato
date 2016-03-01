@@ -1,0 +1,251 @@
+/*************************
+*   Flex Video Styles
+*   Rhino Hooton
+*   1/1/16
+/************************/
+
+
+/*  elements
+**************************************************/
+.pane-bundle-feature-video {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	clear: both;
+	display: block;
+	margin-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 28.9285%;
+		position: relative;
+		width: 100%;
+	}
+
+	.flexible-template-content {
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0);
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+
+		/* shared */
+		.pane-title,
+		.field-name-field-subhead,
+		.field-name-field-cta {
+			position: relative;
+			z-index: 2;
+		}
+
+		/* header */
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+			display: block;
+			margin: 0 auto;
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+			width: 71%;
+			z-index: 2;
+		}
+
+		h1 {
+			font-size: 4.3vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 7);
+			margin-bottom: calc(#{$multiBit} * 2);
+			margin-top: calc(#{$multiBit} * 4);
+		}
+
+		h2 {
+			font-size: 3.6vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 7);
+			margin-bottom: calc(#{$multiBit} * 2);
+			margin-top: calc(#{$multiBit} * 4);
+		}
+
+		h3 {
+			font-size: 1.786vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 4);
+			margin-bottom: calc(#{$multiBit} * 8);
+			margin-top: calc(#{$multiBit} * 0);
+		}
+
+		h4 {
+			font-size: 1.529vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 4);
+			margin-bottom: calc(#{$multiBit} * 8);
+			margin-top: calc(#{$multiBit} * 0);
+		}
+
+		h5 {
+			font-size: 1.072vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 2);
+			margin-bottom: calc(#{$multiBit} * 8);
+			margin-top: calc(#{$multiBit} * 0);
+		}
+
+		/* subhead */
+		.pane-title,
+		.field-name-field-subhead {
+			display: block;
+			overflow: hidden;
+		}
+
+		/* video */
+		.field-name-field-background-video {
+			bottom: 0;
+			font-size: 0;
+			height: 100%;
+			left: 0;
+			margin: auto;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+
+			video {
+				-ms-transform: translateX(-50%) translateY(-50%);
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				height: auto;
+				left: 50%;
+				min-height: 100%;
+				min-width: 100%;
+				position: absolute;
+				top: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				width: auto;
+			}
+		}
+
+		/* cta */
+		.field-name-field-cta {
+			.field-item {
+				text-align: center;
+			}
+
+			a {
+				border: 1px solid $color-white;
+				color: $color-white;
+				display: inline-block;
+				font-size: 19px;
+				margin: 0 auto;
+				padding: 1.15vw 2.85vw;
+				position: relative;
+				z-index: 2;
+
+				&:before {
+					background: $color-white;
+					content: '';
+					display: block;
+					height: 100%;
+					left: 0;
+					opacity: .15;
+					position: absolute;
+					top: 0;
+					transition: all .5s ease;
+					width: 100%;
+					z-index: 1;
+				}
+
+				&:hover {
+					&:before {
+						opacity: .45;
+						transition: all .5s ease;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*  tablet & mobile
+**************************************************/
+@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
+	.pane-bundle-feature-video {
+		&:before {
+			padding-top: 133.263%;
+		}
+
+		.flexible-template-content {
+
+			/* header */
+			h1,
+			h2,
+			h3,
+			h4,
+			h5 {
+				width: 90%;
+			}
+
+			h1 {
+				font-size: 10vw;
+				height: calc(#{$multiBit} * 32);
+				line-height: calcLineHeight($multiBit , 16);
+				margin-bottom: calc(#{$multiBit} * 4);
+				margin-top: calc(#{$multiBit} * 16);
+			}
+
+			h2 {
+				font-size: 8vw;
+				height: calc(#{$multiBit} * 32);
+				line-height: calcLineHeight($multiBit , 16);
+				margin-bottom: calc(#{$multiBit} * 4);
+				margin-top: calc(#{$multiBit} * 16);
+			}
+
+			h3 {
+				font-size: 7.6vw;
+				height: calc(#{$multiBit} * 99);
+				line-height: calcLineHeight($multiBit , 14);
+				margin-bottom: calc(#{$multiBit} * 18);
+				margin-top: calc(#{$multiBit} * 0);
+			}
+
+			h4 {
+				font-size: 4vw;
+				height: calc(#{$multiBit} * 99);
+				line-height: calcLineHeight($multiBit , 9);
+				margin-bottom: calc(#{$multiBit} * 18);
+				margin-top: calc(#{$multiBit} * 0);
+			}
+
+			h5 {
+				font-size: 3vw;
+				height: calc(#{$multiBit} * 99);
+				line-height: calcLineHeight($multiBit , 7);
+				margin-bottom: calc(#{$multiBit} * 18);
+				margin-top: calc(#{$multiBit} * 0);
+			}
+
+			/* video */
+			.field-name-field-background-video {
+				display: none;
+			}
+
+			/* cta */
+			.field-name-field-cta {
+				a {
+					padding: 2.5vw 13vw;
+					font-size: 6.6vw;
+				}
+			}
+		}
+	}
+}

@@ -26,6 +26,80 @@
 		}
 	};	
 })(jQuery);
+//  Toggle background images (desktop/mobile) based on web browser width.
+//  Marc S. Brooks
+//  2/24/16
+(function ($) {
+	Drupal.behaviors.flexibleTemplateBackground = {
+		attach: function(context, settings) {
+
+			// Define styles for defined data-* attributes.
+			function defineStyles() {
+				var width  = jQuery('body').width(),
+				    select = null;
+
+				if (width > 960) {
+					select = 'data-background-desktop';
+				} else {
+					select = 'data-background-mobile';
+				}
+
+				var items = jQuery('[' + select + ']');
+
+				items.each(function() {
+					var item = $(this),
+					    val  = item.attr(select);
+
+					// Remove style from parent node, if exists.
+					item.parent().removeAttr('style');
+
+					// Append background to parent node.
+					item.parent().attr('style', val);
+
+				});
+			}
+
+			// Listen for resize events.
+			window.onresize = defineStyles;
+
+			// Init on load.
+			defineStyles();
+		}
+	};
+})(jQuery);
+
+//	Capabilities Module
+//	Rhino Hooton
+//	6/29/15
+(function ($) {
+  Drupal.behaviors.flexWorkaround = {
+    attach: function (context, settings) {
+			// open video pop up
+			jQuery('.hero-rotator-inner .views-field-field-subhead').after('<a href="#" class="button-close">X</a><a href="#" class="button-play">Watch Video</a>');
+		}
+	};	
+})(jQuery);
+
+//	Capabilities Module
+//	Rhino Hooton
+//	6/29/15
+(function ($) {
+  Drupal.behaviors.leidosFlexFunctions = {
+    attach: function (context, settings) {
+			// open video pop up
+			jQuery('.node-type-flexible-template .button-play').on('click', function () {
+				jQuery(this).parent().addClass('video-container-open');
+				jQuery('.node-type-flexible-template').addClass('video-open');
+			});
+			// close video pop up
+			jQuery('.node-type-flexible-template .button-close').on('click', function () {
+				jQuery(this).parent().removeClass('video-container-open');
+				jQuery('.node-type-flexible-template').removeClass('video-open');
+			});
+		}
+	};	
+})(jQuery);
+
 //	Top Nav JS
 //	Rhino Hooton
 //	6/29/15
