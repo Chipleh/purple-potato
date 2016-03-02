@@ -115,7 +115,19 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_columns_multi-field_background_image'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at the following dimensions
+
+1 column [desktop]: 1400x405
+1 column [mobile]: 750x1000
+
+2 column [desktop]: 700x405
+2 column [mobile]: 750x1000
+
+3 column [desktop]: 467x405
+3 column [mobile]: 750x1000
+
+4 column [desktop]: 300x405
+4 column [mobile]: 750x1000',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -139,13 +151,13 @@ function flexible_template_field_default_field_instances() {
       'epsacrop' => array(
         'styles' => array(
           'rotator' => 'rotator',
-          'rotator_mobile' => 'rotator_mobile',
-          'rotator_tablet' => 'rotator_tablet',
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
         ),
       ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '20 MB',
+      'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 0,
@@ -182,7 +194,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_columns_multi-field_background_mobile_image'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -206,8 +218,8 @@ function flexible_template_field_default_field_instances() {
       'epsacrop' => array(
         'styles' => array(
           'rotator' => 'rotator',
-          'rotator_mobile' => 'rotator_mobile',
-          'rotator_tablet' => 'rotator_tablet',
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
         ),
       ),
       'file_directory' => '',
@@ -907,7 +919,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_icon_item-field_image'] = array(
     'bundle' => 'field_icon_item',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -931,8 +943,8 @@ function flexible_template_field_default_field_instances() {
       'epsacrop' => array(
         'styles' => array(
           'rotator' => 'rotator',
-          'rotator_mobile' => 'rotator_mobile',
-          'rotator_tablet' => 'rotator_tablet',
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
         ),
       ),
       'file_directory' => '',
@@ -974,7 +986,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_icon_item-field_image_hover'] = array(
     'bundle' => 'field_icon_item',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -998,8 +1010,8 @@ function flexible_template_field_default_field_instances() {
       'epsacrop' => array(
         'styles' => array(
           'rotator' => 'rotator',
-          'rotator_mobile' => 'rotator_mobile',
-          'rotator_tablet' => 'rotator_tablet',
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
         ),
       ),
       'file_directory' => '',
@@ -1201,7 +1213,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_thumbnail_image_item-field_image'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1231,8 +1243,8 @@ function flexible_template_field_default_field_instances() {
       'epsacrop' => array(
         'styles' => array(
           'rotator' => 'rotator',
-          'rotator_mobile' => 'rotator_mobile',
-          'rotator_tablet' => 'rotator_tablet',
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
         ),
       ),
       'file_directory' => '',
@@ -1274,7 +1286,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_thumbnail_image_item-field_image_hover'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1298,8 +1310,8 @@ function flexible_template_field_default_field_instances() {
       'epsacrop' => array(
         'styles' => array(
           'rotator' => 'rotator',
-          'rotator_mobile' => 'rotator_mobile',
-          'rotator_tablet' => 'rotator_tablet',
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
         ),
       ),
       'file_directory' => '',
@@ -1855,7 +1867,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['fieldable_panels_pane-feature_video-field_background_mobile_image'] = array(
     'bundle' => 'feature_video',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at 1000  x 750 pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1889,8 +1901,8 @@ function flexible_template_field_default_field_instances() {
       'epsacrop' => array(
         'styles' => array(
           'rotator' => 'rotator',
-          'rotator_mobile' => 'rotator_mobile',
-          'rotator_tablet' => 'rotator_tablet',
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
         ),
       ),
       'file_directory' => '',
@@ -1943,7 +1955,7 @@ function flexible_template_field_default_field_instances() {
           'height' => 405,
           'loop' => 1,
           'multiple_file_behavior' => 'tags',
-          'muted' => 0,
+          'muted' => 1,
           'preload' => '',
           'width' => 1400,
         ),
@@ -3241,7 +3253,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['node-rotator_hero-field_background_image'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3270,7 +3282,7 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'rotator' => 0,
+          'rotator' => 'rotator',
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
         ),
@@ -3313,7 +3325,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['node-rotator_hero-field_background_mobile_image'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3343,8 +3355,8 @@ function flexible_template_field_default_field_instances() {
       'epsacrop' => array(
         'styles' => array(
           'rotator' => 'rotator',
-          'rotator_mobile' => 'rotator_mobile',
-          'rotator_tablet' => 'rotator_tablet',
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
         ),
       ),
       'file_directory' => '',
@@ -4095,6 +4107,21 @@ function flexible_template_field_default_field_instances() {
   t('Image');
   t('Image Hover');
   t('Image Link');
+  t('Image upload supports: png, gif, jpg, jpeg at # x # pixels.');
+  t('Image upload supports: png, gif, jpg, jpeg at 1000  x 750 pixels.');
+  t('Image upload supports: png, gif, jpg, jpeg at the following dimensions
+
+1 column [desktop]: 1400x405
+1 column [mobile]: 750x1000
+
+2 column [desktop]: 700x405
+2 column [mobile]: 750x1000
+
+3 column [desktop]: 467x405
+3 column [mobile]: 750x1000
+
+4 column [desktop]: 300x405
+4 column [mobile]: 750x1000');
   t('Module Height');
   t('Rotator Slide / Hero');
   t('Secondary CTA');
