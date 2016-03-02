@@ -376,6 +376,37 @@ function flexible_template_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'fieldable_panels_pane|multi_column_parallax|default';
+  $ds_layout->entity_type = 'fieldable_panels_pane';
+  $ds_layout->bundle = 'multi_column_parallax';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_columns_multi',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'field_columns_multi' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'hide_sidebars' => 0,
+  );
+  $export['fieldable_panels_pane|multi_column_parallax|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'fieldable_panels_pane|multi_column|default';
   $ds_layout->entity_type = 'fieldable_panels_pane';
   $ds_layout->bundle = 'multi_column';

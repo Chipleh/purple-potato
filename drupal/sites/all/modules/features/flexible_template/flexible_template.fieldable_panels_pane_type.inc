@@ -29,6 +29,14 @@ function flexible_template_default_fieldable_panels_pane_type() {
   $fieldable_panels_pane_type = new stdClass();
   $fieldable_panels_pane_type->disabled = FALSE; /* Edit this to true to make a default fieldable_panels_pane_type disabled initially */
   $fieldable_panels_pane_type->api_version = 1;
+  $fieldable_panels_pane_type->name = 'long_form_copy';
+  $fieldable_panels_pane_type->title = 'Long-form Copy';
+  $fieldable_panels_pane_type->description = 'Provides a standard way to add text copy and images in a document format.';
+  $export['long_form_copy'] = $fieldable_panels_pane_type;
+
+  $fieldable_panels_pane_type = new stdClass();
+  $fieldable_panels_pane_type->disabled = FALSE; /* Edit this to true to make a default fieldable_panels_pane_type disabled initially */
+  $fieldable_panels_pane_type->api_version = 1;
   $fieldable_panels_pane_type->name = 'multi_column';
   $fieldable_panels_pane_type->title = 'Multi-column';
   $fieldable_panels_pane_type->description = 'Supports a minimum of 1 column and a maximum of 4 columns.';
