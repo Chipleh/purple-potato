@@ -200,6 +200,8 @@
 
 		.ds-1col {
 			.column-0 {
+				background-repeat: no-repeat !important;
+				background-size: 100% auto !important;
 				background: #294f69;
 				clear: both;
 				float: none;
@@ -297,6 +299,9 @@
 		.ds-1col {
 			.column-0,
 			.column-1 {
+				background-repeat: no-repeat !important;
+				background-size: 100% auto !important;
+		
 				&:before {
 					padding-top: 57.858%;
 				}
@@ -380,6 +385,9 @@
 			.column-0,
 			.column-1,
 			.column-2 {
+				background-repeat: no-repeat !important;
+				background-size: 100% auto !important;
+
 				&:before {
 					padding-top: 86.798%;
 				}
@@ -466,6 +474,9 @@
 			.column-1,
 			.column-2,
 			.column-3 {
+				background-repeat: no-repeat !important;
+				background-size: 100% auto !important;
+
 				&:before {
 					padding-top: 115.717%;
 				}
