@@ -25,6 +25,10 @@
 		width: 100%;
 	}
 
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	.flexible-template-content {
 		-webkit-backface-visibility: hidden;
 		-webkit-transform: translateZ(0);
@@ -212,7 +216,7 @@
 
 			h3 {
 				font-size: 7.6vw;
-				height: calc(#{$multiBit} * 99);
+				height: calc(#{$multiBit} * 97);
 				line-height: calcLineHeight($multiBit , 14);
 				margin-bottom: calc(#{$multiBit} * 18);
 				margin-top: calc(#{$multiBit} * 0);

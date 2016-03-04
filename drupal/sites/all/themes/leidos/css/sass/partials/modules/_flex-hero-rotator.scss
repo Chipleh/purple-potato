@@ -16,6 +16,10 @@
 	overflow: hidden;
 	position: relative;
 
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	.flexible-template-content {
 
 		.flexslider {
