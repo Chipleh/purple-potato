@@ -20,7 +20,7 @@
 		margin-bottom: 0;
 	}
 
-	.pane-content {
+	.flexible-template-content {
 		margin: 0 auto;
 		width: 74%;
 
@@ -47,23 +47,39 @@
 
 		.drop_cap {
 			float: left;
-			font-size: 75px;
-			line-height: 60px;
-			padding-left: 3px;
-			padding-right: 8px;
-			padding-top: 4px;
+			font-size: 60px;
+			line-height: 58px;
+			padding-right: 6px;
+		}
+
+		.field-name-field-image {
+			width: 48%;
+			margin-bottom: calc(#{$multiBit} * 2);
+
+			img {
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+
+			p {
+				margin-top: calc(#{$multiBit} * 2);
+				margin-bottom: 0;
+			}
 		}
 	}
 
 	&.image-align-left {
 		.field-name-field-image {
 			float: left;
+			margin-right: calc(#{$multiBit} * 4);
 		}
 	}
 
 	&.image-align-right {
 		.field-name-field-image {
 			float: right;
+			margin-left: calc(#{$multiBit} * 4);
 		}	
 	}
 }
@@ -72,298 +88,56 @@
 /*  tablet & mobile
 **************************************************/
 @media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
-	.pane-bundle-multi-column {
+	.pane-bundle-long-form-copy {
 		.flexible-template-content {
+			margin: 0 auto;
+			width: 90%;
 
-			/* shared */
-			.field-name-field-title-item,
-			.field-name-field-subhead,
-			.button-play,
-			.field-name-field-cta,
-			.field-name-field-video-tout {
-				width: 90%;
-			}
-
-			/* cta */
-			.field-name-field-cta {
-				a {
-					padding: 2.5vw 13vw;
-					font-size: 6.6vw;
-				}
-			}
-		}
-
-		&.multi-column-1 {
-			.field-name-field-title-item {
-				h1 {
-					font-size: 10vw;
-					height: calc(#{$multiBit} * 32);
-					line-height: calcLineHeight($multiBit , 16);
-					margin-bottom: calc(#{$multiBit} * 4);
-					margin-top: calc(#{$multiBit} * 16);
-				}
-
-				h2 {
-					font-size: 8vw;
-					height: calc(#{$multiBit} * 32);
-					line-height: calcLineHeight($multiBit , 16);
-					margin-bottom: calc(#{$multiBit} * 4);
-					margin-top: calc(#{$multiBit} * 16);
-				}
-			}
-
-			.field-name-field-subhead {
-				h3 {
-					font-size: 6.6vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 12);
-					margin-bottom: calc(#{$multiBit} * 28);
-					margin-top: calc(#{$multiBit} * 0);
-				}
-
-				h4 {
-					font-size: 4vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 9);
-					margin-bottom: calc(#{$multiBit} * 28);
-					margin-top: calc(#{$multiBit} * 0);
-				}
-
-				h5 {
-					font-size: 3vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 7);
-					margin-bottom: calc(#{$multiBit} * 28);
-					margin-top: calc(#{$multiBit} * 0);
-				}
-			}
-
-			.ds-1col {
-				.column-0 {
-					&:before {
-						padding-top: 133.263%;
-					}
-				}
-			}
-		}
-
-		&.multi-column-2 {
-			.field-name-field-title-item {
-				h1 {
-					font-size: 6.6vw;
-					height: calc(#{$multiBit} * 30);
-					line-height: calcLineHeight($multiBit , 14);
-					margin-bottom: calc(#{$multiBit} * 6);
-					margin-top: calc(#{$multiBit} * 16);
-					text-align: center;
-				}
-
-				h2 {
-					font-size: 5.6vw;
-					height: calc(#{$multiBit} * 30);
-					line-height: calcLineHeight($multiBit , 14);
-					margin-bottom: calc(#{$multiBit} * 6);
-					margin-top: calc(#{$multiBit} * 16);
-					text-align: center;
-				}
-
-				h3 {
-					font-size: 4.6vw;
-					height: calc(#{$multiBit} * 30);
-					line-height: calcLineHeight($multiBit , 14);
-					margin-bottom: calc(#{$multiBit} * 6);
-					margin-top: calc(#{$multiBit} * 16);
-					text-align: center;
-				}
-			}
-
-			.field-name-field-subhead {
-				h3 {
-					font-size: 6.6vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 12);
-					margin-bottom: calc(#{$multiBit} * 12);
-					margin-top: calc(#{$multiBit} * 0);
-					text-align: center;
-				}
-
-				h4 {
-					font-size: 4vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 9);
-					margin-bottom: calc(#{$multiBit} * 12);
-					margin-top: calc(#{$multiBit} * 0);
-					text-align: center;
-				}
-
-				h5 {
-					font-size: 3vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 7);
-					margin-bottom: calc(#{$multiBit} * 12);
-					margin-top: calc(#{$multiBit} * 0);
-					text-align: center;
-				}
-			}
-
-			.button-play {
-				font-size: 6.6vw !important;
-				width: 90% !important;
-				text-align: center !important;
-			}
-
-			.field-name-field-cta {
+			/* header */
+			h1,
+			h2,
+			h3,
+			h4,
+			h5 {
+				display: block;
+				font-weight: 100;
+				margin: 0 auto;
+				overflow: hidden;
 				text-align: center;
+
+				p {
+					margin: 0;
+				}
 			}
 
-			.ds-1col {
-				.column-0,
-				.column-1 {
-					float: none;
-					width: 100%;
+			.field-name-field-image {
+				display: block;
+				margin: 0 auto;
+				margin-bottom: calc(#{$multiBit} * 4);
+				width: 100%;
 
-					&:before {
-						padding-top: 106.610%;
-					}
+				img {
+					display: block;
+					height: auto;
+					width: 100%;
+				}
+
+				p {
+					margin-bottom: 0;
+					margin-top: calc(#{$multiBit} * 4);
 				}
 			}
 		}
 
-		&.multi-column-3 {
-			.field-name-field-title-item {
-				h1 {
-					font-size: 6.6vw;
-					height: calc(#{$multiBit} * 30);
-					line-height: calcLineHeight($multiBit , 14);
-					margin-bottom: calc(#{$multiBit} * 6);
-					margin-top: calc(#{$multiBit} * 16);
-					text-align: center;
-				}
-
-				h2 {
-					font-size: 5.6vw;
-					height: calc(#{$multiBit} * 30);
-					line-height: calcLineHeight($multiBit , 14);
-					margin-bottom: calc(#{$multiBit} * 6);
-					margin-top: calc(#{$multiBit} * 16);
-					text-align: center;
-				}
-			}
-
-			.field-name-field-subhead {
-				h3 {
-					font-size: 6.6vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 12);
-					margin-bottom: calc(#{$multiBit} * 12);
-					margin-top: calc(#{$multiBit} * 0);
-				}
-
-				h4 {
-					font-size: 4vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 9);
-					margin-bottom: calc(#{$multiBit} * 12);
-					margin-top: calc(#{$multiBit} * 0);
-				}
-
-				h5 {
-					font-size: 3vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 7);
-					margin-bottom: calc(#{$multiBit} * 12);
-					margin-top: calc(#{$multiBit} * 0);
-				}
-			}
-
-			.button-close {
-			}
-
-			.button-play {
-				font-size: 6.6vw !important;
-				width: 90% !important;
-				text-align: center !important;
-			}
-
-			.ds-1col {
-				.column-0,
-				.column-1,
-				.column-2 {
-					float: none;
-					width: 100%;
-
-					&:before {
-						padding-top: 106.610%;
-					}
-				}
+		&.image-align-left {
+			.field-name-field-image {
+				float: none;
 			}
 		}
 
-		&.multi-column-4 {
-			.field-name-field-title-item {
-				h1 {
-					font-size: 6.6vw;
-					height: calc(#{$multiBit} * 30);
-					line-height: calcLineHeight($multiBit , 14);
-					margin-bottom: calc(#{$multiBit} * 6);
-					margin-top: calc(#{$multiBit} * 16);
-					text-align: center;
-				}
-
-				h2 {
-					font-size: 5.6vw;
-					height: calc(#{$multiBit} * 30);
-					line-height: calcLineHeight($multiBit , 14);
-					margin-bottom: calc(#{$multiBit} * 6);
-					margin-top: calc(#{$multiBit} * 16);
-					text-align: center;
-				}
-			}
-
-			.field-name-field-subhead {
-				h3 {
-					font-size: 6.6vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 12);
-					margin-bottom: calc(#{$multiBit} * 12);
-					margin-top: calc(#{$multiBit} * 0);
-				}
-
-				h4 {
-					font-size: 4vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 9);
-					margin-bottom: calc(#{$multiBit} * 12);
-					margin-top: calc(#{$multiBit} * 0);
-				}
-
-				h5 {
-					font-size: 3vw;
-					height: calc(#{$multiBit} * 36);
-					line-height: calcLineHeight($multiBit , 7);
-					margin-bottom: calc(#{$multiBit} * 12);
-					margin-top: calc(#{$multiBit} * 0);
-				}
-			}
-
-			.button-play {
-				font-size: 6.6vw !important;
-				width: 90% !important;
-				text-align: center !important;
-			}
-
-			.ds-1col {
-				.column-0,
-				.column-1,
-				.column-2,
-				.column-3 {
-					float: none;
-					width: 100%;
-
-					&:before {
-						padding-top: 106.610%;
-					}
-				}
+		&.image-align-right {
+			.field-name-field-image {
+				float: none;
 			}
 		}
 	}

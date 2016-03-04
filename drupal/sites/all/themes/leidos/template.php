@@ -39,6 +39,7 @@ function leidos_preprocess_html(&$variables) {
   drupal_add_css(path_to_theme() . '/css/main.css', array('group' => CSS_THEME));
 
   //Webdev compiled
+  drupal_add_js(path_to_theme() . '/js/modernizr-custom.js', array('group' => JS_LIBRARY, 'weight' => 48));
   drupal_add_js(path_to_theme() . '/js/scripts.js', array('group' => JS_LIBRARY, 'weight' => 49));
 
   //Leidos theme modifications
