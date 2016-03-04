@@ -224,8 +224,11 @@ function flexible_template_preprocess_panels_pane(&$variables) {
       // Relocate image caption item to image container.
       if (isset($content['field_image_caption'])) {
         $content['field_image_caption'][0]['#markup'] = '<p class="caption">' . $content['field_image_caption']['#items'][0]['value'] . '</p>';
-        $content['field_image'][] = $content['field_image_caption'][0];
+
+        array_unshift($content['field_image'], $content['field_image_caption'][0]);
+
         $content['field_image']['#items'][] = $content['field_image_caption']['#items'][0];
+
         unset($content['field_image_caption']);
       }
     }
@@ -275,6 +278,24 @@ function flexible_template_preprocess_panels_pane(&$variables) {
       $variables['classes_array'][] = 'rotator-slide-module-height-' . $content['field_module_height']['#items'][0]['value'];
       unset($content['field_module_height']);
     }
+
+    // [Bug Fix]: Reorder slides to reflect #items since Draggable weights don't work with Fieldable Panels.
+    $field = $content['field_rotator_slide_hero'];
+
+    foreach ($field['#items'] as $index => $item) {
+      $count = 0;
+
+      while(1) {
+        if ($item['nid'] == $field[$count]['#node']->nid) {
+          $content['field_rotator_slide_hero'][$index] = $content['field_rotator_slide_hero'][$count];
+          break;
+        }
+
+        $count++;
+      }
+    }
+
+    //dsm($content['field_rotator_slide_hero']);
   }
 
   //
