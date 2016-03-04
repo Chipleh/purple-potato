@@ -168,10 +168,6 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_secondary_cta']['label'] = '';
   $handler->display->display_options['fields']['field_secondary_cta']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_secondary_cta']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';

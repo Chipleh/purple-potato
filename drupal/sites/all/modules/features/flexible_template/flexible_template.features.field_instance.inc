@@ -2605,7 +2605,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 6,
       ),
     ),
     'ds_extras_field_template' => '',
