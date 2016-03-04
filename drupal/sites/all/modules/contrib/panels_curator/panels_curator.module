@@ -80,22 +80,24 @@ function panels_curator_preprocess_panels_add_content_modal(&$vars) {
 function panels_curator_form_alter(&$form, &$form_state, $form_id) {
   // Add a link to the panel revisions in the FPP edit form.
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
-    $entity_id = $form['#entity']->fpid;
-    $form['revision']['view_revisions'] = array(
-      '#type' => 'item',
-      '#markup' => l(
-        t('View all panel revisions &raquo;'),
-        'admin/structure/fieldable-panels-panes/view/' . $entity_id . '/revision',
-        array('html' => TRUE)
-      )
-    );
-    // Hide extra link and view mode options.
-    if (variable_get('panels_curator_hide_extras', FALSE)) {
-      if (isset($form['link'])) {
-        unset($form['link']);
-      }
-      if (isset($form['view_mode'])) {
-        unset($form['view_mode']);
+    if (isset($form['#entity'])) {
+      $entity_id = $form['#entity']->fpid;
+      $form['revision']['view_revisions'] = array(
+        '#type' => 'item',
+        '#markup' => l(
+          t('View all panel revisions &raquo;'),
+          'admin/structure/fieldable-panels-panes/view/' . $entity_id . '/revision',
+          array('html' => TRUE)
+        )
+      );
+      // Hide extra link and view mode options.
+      if (variable_get('panels_curator_hide_extras', FALSE)) {
+        if (isset($form['link'])) {
+          unset($form['link']);
+        }
+        if (isset($form['view_mode'])) {
+          unset($form['view_mode']);
+        }
       }
     }
   }
