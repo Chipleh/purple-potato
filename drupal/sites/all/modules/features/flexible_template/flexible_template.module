@@ -345,7 +345,7 @@ function flexible_template_preprocess_field_thumbnail_image_item(&$variables) {
  * @see field_subhead_size
  */
 function flexible_template_preprocess_subhead(&$variables) {
-  $content = $variables['content'];
+  $content = &$variables['content'];
 
   // Set subhead color.
   if (isset($content['field_subhead_color'])) {
@@ -376,7 +376,7 @@ function flexible_template_preprocess_subhead(&$variables) {
  * @see field_background_mobile_image
  */
 function flexible_template_append_background_attributes(&$variables) {
-  $content = $variables['content'];
+  $content = &$variables['content'];
 
   // Append desktop background image to collection wrapper.
   if (isset($variables['field_background_image'])) {
