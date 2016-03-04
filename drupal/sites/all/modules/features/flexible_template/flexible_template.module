@@ -13,6 +13,7 @@ function flexible_template_view_mode_templates() {
   return array(
     'flexible_template_module__feature_video',
     'flexible_template_module__icons',
+    'flexible_template_module__long_form_copy',
     'flexible_template_module__multi_column',
     'flexible_template_module__multi_column_parallax',
     'flexible_template_module__rotator_hero',
@@ -144,29 +145,29 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   // Set background color.
   if (isset($content['field_background_color'])) {
     $variables['attributes_array']['style'][] = 'color:' . $content['field_background_color']['#items'][0]['rgb'];
-    unset($variables['content']['field_background_color']);
+    unset($content['field_background_color']);
   }
 
   // Set title color.
   if (isset($content['field_title_color'])) {
-    $variables['content']['title']['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
-    unset($variables['content']['field_title_color']);
+    $content['title']['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
+    unset($content['field_title_color']);
   }
 
   // Set title size.
   if (isset($content['field_title_size'])) {
     if (isset($content['title'])) {
-      $variables['content']['title']['#theme'] = 'html_tag';
-      $variables['content']['title']['#tag']   = $content['field_title_size'][0]['#markup'];
+      $content['title']['#theme'] = 'html_tag';
+      $content['title']['#tag']   = $content['field_title_size'][0]['#markup'];
     }
-    unset($variables['content']['field_title_size']);
+    unset($content['field_title_size']);
   }
 
   flexible_template_preprocess_subhead($variables);
 
   // Define Fieldable Panels template overrides.
   if (isset($variables['pane']) && $variables['pane']->type == 'fieldable_panels_pane') {
-    if (isset($variables['content']['#element'])) {
+    if (isset($content['#element'])) {
       $variables['theme_hook_suggestions'][] = 'flexible_template_module__' . $variables['content']['#element']->bundle;
     }
   }
@@ -181,7 +182,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
     // Get mobile background URL and remove field.
     if (isset($content['field_background_mobile_image'])) {
       $variables['background_mobile_image'] = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']);
-      unset($variables['content']['field_background_mobile_image']);
+      unset($content['field_background_mobile_image']);
     }
   }
 
@@ -194,6 +195,37 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
     // Add custom class that identifies total number of columns defined.
     $variables['classes_array'][] = 'icons-' . count($content['field_icons']['#items']);
+  }
+
+  //
+  // Long-form Copy
+  //
+  // @see long_form_copy
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'long_form_copy') {
+
+    // If Dropcap is enabled, wrap first character of body with SPAN tag and remove field.
+    if (isset($content['field_drop_cap'])) {
+      $content['field_body'][0]['#markup'] = preg_replace('/^<p>(\w{1})/', '<p><span class="drop_cap">$1</span>', $content['field_body'][0]['#markup']);
+      unset($content['field_drop_cap']);
+    }
+
+    // Pre-process image properties.
+    if (isset($content['field_image'])) {
+
+      // Append class that identify position and remove field.
+      if (isset($content['field_image_position'])) {
+        $variables['classes_array'][] = 'image-align-' . $content['field_image_position']['#items'][0]['value'];
+        unset($content['field_image_position']);
+      }
+
+      // Relocate image caption result to image container.
+      if (isset($content['field_image_caption'])) {
+        $content['field_image'][] = $content['field_image_caption'][0];
+        $content['field_image']['#items'][] = $content['field_image_caption']['#items'][0];
+        unset($content['field_image_caption']);
+      }
+    }
   }
 
   //
@@ -216,7 +248,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
     // Add empty field for all slides.
     if (!isset($content['field_rotator_slide_hero'])) {
-      $variables['content']['field_rotator_slide_hero'] = array(
+      $content['field_rotator_slide_hero'] = array(
         '#theme' => 'field',
         '#weight' => '2',
         '#title' => 'Rotator slide / Hero',
@@ -236,7 +268,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
     // Add custom class that identifies the Module Height (short/tall) and remove field.
     if (isset($content['field_module_height'])) {
       $variables['classes_array'][] = 'rotator-slide-module-height-' . $content['field_module_height']['#items'][0]['value'];
-      unset($variables['content']['field_module_height']);
+      unset($content['field_module_height']);
     }
   }
 
@@ -267,18 +299,18 @@ function flexible_template_preprocess_field_collection_item(&$variables) {
 
   // Set title color.
   if (isset($content['field_title_color'])) {
-    $variables['content']['field_title_item'][0]['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
-    unset($variables['content']['field_title_color']);
+    $content['field_title_item'][0]['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
+    unset($content['field_title_color']);
   }
 
   // Set title size.
   if (isset($content['field_title_size'])) {
     if (isset($content['field_title_item'])) {
-      $variables['content']['field_title_item'][0]['#theme'] = 'html_tag';
-      $variables['content']['field_title_item'][0]['#tag']   = $content['field_title_size'][0]['#markup'];
-      $variables['content']['field_title_item'][0]['#value'] = $content['field_title_item'][0]['#markup'];
+      $content['field_title_item'][0]['#theme'] = 'html_tag';
+      $content['field_title_item'][0]['#tag']   = $content['field_title_size'][0]['#markup'];
+      $content['field_title_item'][0]['#value'] = $content['field_title_item'][0]['#markup'];
     }
-    unset($variables['content']['field_title_size']);
+    unset($content['field_title_size']);
   }
 
   flexible_template_preprocess_subhead($variables);
@@ -317,17 +349,16 @@ function flexible_template_preprocess_subhead(&$variables) {
 
   // Set subhead color.
   if (isset($content['field_subhead_color'])) {
-    $variables['content']['field_subhead'][0]['#attributes'] = array('style' => 'color:' . $content['field_subhead_color']['#items'][0]['rgb']);
-    unset($variables['content']['field_subhead_color']);
+    $content['field_subhead'][0]['#attributes'] = array('style' => 'color:' . $content['field_subhead_color']['#items'][0]['rgb']);
+    unset($content['field_subhead_color']);
   }
 
   // Set subhead size.
   if (isset($content['field_subhead_size'])) {
-    $variables['content']['field_subhead'][0]['#theme'] = 'html_tag';
-    $variables['content']['field_subhead'][0]['#tag']   = $content['field_subhead_size'][0]['#markup'];
-    $variables['content']['field_subhead'][0]['#value'] = $content['field_subhead'][0]['#markup'];
-
-    unset($variables['content']['field_subhead_size']);
+    $content['field_subhead'][0]['#theme'] = 'html_tag';
+    $content['field_subhead'][0]['#tag']   = $content['field_subhead_size'][0]['#markup'];
+    $content['field_subhead'][0]['#value'] = $content['field_subhead'][0]['#markup'];
+    unset($content['field_subhead_size']);
   }
 }
 
@@ -345,22 +376,19 @@ function flexible_template_preprocess_subhead(&$variables) {
  * @see field_background_mobile_image
  */
 function flexible_template_append_background_attributes(&$variables) {
+  $content = $variables['content'];
 
   // Append desktop background image to collection wrapper.
   if (isset($variables['field_background_image'])) {
     $background_image = file_create_url($variables['field_background_image'][0]['uri']);
-
     $variables['attributes_array']['data-background-desktop'] = 'background-image: url(' . $background_image . ')';
-
-    unset($variables['content']['field_background_image']);
+    unset($content['field_background_image']);
   }
 
   // Append mobile background image to collection wrapper.
   if (isset($variables['field_background_mobile_image'])) {
     $background_image = file_create_url($variables['field_background_mobile_image'][0]['uri']);
-
     $variables['attributes_array']['data-background-mobile'] = 'background-image: url(' . $background_image . ')';
-
-    unset($variables['content']['field_background_mobile_image']);
+    unset($content['field_background_mobile_image']);
   }
 }
