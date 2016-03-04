@@ -194,7 +194,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'icons') {
 
     // Add custom class that identifies total number of columns defined.
-    $variables['classes_array'][] = 'icons-' . count($content['field_icons']['#items']);
+    if (isset($content['field_icons'])) {
+      $variables['classes_array'][] = 'icons-' . count($content['field_icons']['#items']);
+    }
   }
 
   //
@@ -210,17 +212,18 @@ function flexible_template_preprocess_panels_pane(&$variables) {
       unset($content['field_drop_cap']);
     }
 
-    // Pre-process image properties.
+    // Pre-process image properties and remove field references.
     if (isset($content['field_image'])) {
 
-      // Append class that identify position and remove field.
+      // Append class that identify position.
       if (isset($content['field_image_position'])) {
         $variables['classes_array'][] = 'image-align-' . $content['field_image_position']['#items'][0]['value'];
         unset($content['field_image_position']);
       }
 
-      // Relocate image caption result to image container.
+      // Relocate image caption item to image container.
       if (isset($content['field_image_caption'])) {
+        $content['field_image_caption'][0]['#markup'] = '<p class="caption">' . $content['field_image_caption']['#items'][0]['value'] . '</p>';
         $content['field_image'][] = $content['field_image_caption'][0];
         $content['field_image']['#items'][] = $content['field_image_caption']['#items'][0];
         unset($content['field_image_caption']);
@@ -236,7 +239,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'multi_column') {
 
     // Add custom class that identifies total number of columns defined.
-    $variables['classes_array'][] = 'multi-column-' . count($content['field_columns_multi']['#items']);
+    if (isset($content['field_columns_multi'])) {
+      $variables['classes_array'][] = 'multi-column-' . count($content['field_columns_multi']['#items']);
+    }
   }
 
   //
@@ -280,7 +285,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'thumbnail_gallery') {
 
     // Add custom class that identifies total number of columns defined.
-    $variables['classes_array'][] = 'thumbnail-gallery-' . count($content['field_thumbnail_gallery']['#items']);
+    if (isset($content['field_thumbnail_gallery'])) {
+      $variables['classes_array'][] = 'thumbnail-gallery-' . count($content['field_thumbnail_gallery']['#items']);
+    }
   }
 }
 
