@@ -72,6 +72,30 @@
   };
 })(jQuery);
 
+//  Multi-column module
+//  Marc S. Brooks
+//  3/8/16
+(function ($) {
+  Drupal.behaviors.flexibleTemplateMultiColumn = {
+    attach: function(context, settings) {
+      var pane = jQuery('.pane-bundle-multi-column');
+      if (pane[0]) {
+        pane.each(function() {
+
+          // Dynamically append Play/Close buttons prior to video field.
+          var field = jQuery(this).find('.field-name-field-background-video');
+          if (field[0]) {
+            var close = jQuery('<a class="button-close" href="#"></a>'),
+                play  = jQuery('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
+
+            field.before(close, play);
+          }
+        });
+      }
+    }
+  };
+})(jQuery);
+
 //  Capabilities Module
 //  Rhino Hooton
 //  6/29/15

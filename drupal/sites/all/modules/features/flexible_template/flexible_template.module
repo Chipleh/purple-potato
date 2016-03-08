@@ -74,9 +74,6 @@ function flexible_template_preprocess_field(&$variables) {
       if (isset($collection_item['field_subhead_color'])) {
         $subhead_color = 'style="color: ' . $collection_item['field_subhead_color'][0]['#markup'] . '"';
       }
-
-      // Added Close/Play buttons to field list (Note: Things like this should actually be handled in jQuery!).
-      $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play" ' . $subhead_color . '>' . t('Watch Video') . '</a>';
     }
   }
 
