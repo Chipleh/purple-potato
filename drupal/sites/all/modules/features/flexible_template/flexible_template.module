@@ -65,15 +65,6 @@ function flexible_template_preprocess_field(&$variables) {
       $item['#attributes'] = array(
         'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
       );
-
-      // Created simplified field collection object.
-      $collection_item = &$item['entity']['field_collection_item'][key($item['entity']['field_collection_item'])];
-
-      // Get Subhead color so append to video play button.
-      $subhead_color = '';
-      if (isset($collection_item['field_subhead_color'])) {
-        $subhead_color = 'style="color: ' . $collection_item['field_subhead_color'][0]['#markup'] . '"';
-      }
     }
   }
 
