@@ -80,6 +80,30 @@
   };
 })(jQuery);
 
+//  Hero/Rotator module
+//  Marc S. Brooks
+//  3/8/16
+(function ($) {
+  Drupal.behaviors.flexibleTemplateHeroRotator = {
+    attach: function(context, settings) {
+      var pane = jQuery('.pane-bundle-rotator-hero');
+      if (pane[0]) {
+        pane.each(function() {
+
+          // Dynamically append Play/Close buttons prior to video tout field.
+          var field = jQuery(this).find('.views-field-field-video-tout');
+          if (field[0]) {
+            var close = jQuery('<a class="button-close" href="#"></a>'),
+                play  = jQuery('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
+
+            field.before(close, play);
+          }
+        });
+      }
+    }
+  };
+})(jQuery);
+
 //  Long-form Copy module
 //  Marc S. Brooks
 //  3/8/16
