@@ -45,6 +45,22 @@
 
 		}
 
+		h1 {
+			font-size: 4.3vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 7);
+			margin-bottom: calc(#{$multiBit} * 2);
+			margin-top: calc(#{$multiBit} * 4);
+		}
+
+		h2 {
+			font-size: 3.6vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 7);
+			margin-bottom: calc(#{$multiBit} * 2);
+			margin-top: calc(#{$multiBit} * 4);
+		}
+
 		.drop_cap {
 			float: left;
 			font-size: 60px;
@@ -108,6 +124,22 @@
 				p {
 					margin: 0;
 				}
+			}
+
+			h1 {
+				font-size: 10vw;
+				height: calc(#{$multiBit} * 32);
+				line-height: calcLineHeight($multiBit , 16);
+				margin-bottom: calc(#{$multiBit} * 4);
+				margin-top: calc(#{$multiBit} * 16);
+			}
+
+			h2 {
+				font-size: 8vw;
+				height: calc(#{$multiBit} * 32);
+				line-height: calcLineHeight($multiBit , 16);
+				margin-bottom: calc(#{$multiBit} * 4);
+				margin-top: calc(#{$multiBit} * 16);
 			}
 
 			.field-name-field-image {
