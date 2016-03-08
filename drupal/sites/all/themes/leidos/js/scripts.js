@@ -72,6 +72,28 @@
   };
 })(jQuery);
 
+//  Long-form Copy module
+//  Marc S. Brooks
+//  3/8/16
+(function ($) {
+  Drupal.behaviors.flexibleTemplateLongFormCopy = {
+    attach: function(context, settings) {
+      var pane = jQuery('.pane-bundle-long-form-copy');
+      if (pane[0]) {
+        pane.each(function() {
+          var title = jQuery(this).find('.flexible-template-content').children().first();
+
+          // Relocate title field element to inline container.
+          var field = jQuery(this).find('.field-name-field-image');
+          if (field[0]) {
+            field.before(title);
+          }
+        });
+      }
+    }
+  };
+})(jQuery);
+
 //  Multi-column module
 //  Marc S. Brooks
 //  3/8/16
