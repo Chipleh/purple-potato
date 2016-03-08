@@ -28,7 +28,7 @@
   };
 })(jQuery);
 
-//  Toggle background images (desktop/mobile) based on web browser width.
+//  Toggle background images (Desktop/Mobile) based on web browser width.
 //  Marc S. Brooks
 //  2/24/16
 (function ($) {
@@ -49,17 +49,25 @@
         var items = jQuery('[' + select + ']');
 
         items.each(function() {
-          var item = $(this),
+          var item = jQuery(this),
               val  = item.attr(select);
 
           // If style attributes already exists on parent node, relocate contents.
-          var parent_attr = item.parent().attr('style');
+          var parent_node = item.parent(),
+              parent_attr = parent_node.attr('style');
 
           // Remove the parent style.
-          item.parent().removeAttr('style');
+          parent_node.removeAttr('style');
 
-          // Append background and to parent node.
-          item.parent().attr('style', val + ';' + parent_attr);
+          // Append background and to parent node if it doesn't already exist.
+          if (!parent_node.attr('style') && parent_attr) {
+
+            // Remove custom attributes preserving default values.
+            parent_attr = parent_attr.replace(/background-image:.*;/g, '');
+
+            // Append new attributes.
+            parent_node.attr('style', val + ';' + parent_attr);
+          }
         });
       }
 
