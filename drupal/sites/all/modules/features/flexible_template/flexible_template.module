@@ -99,11 +99,21 @@ function flexible_template_preprocess_field(&$variables) {
     $rotator = views_get_view('rotators_hero');
     $rotator->set_display('rotator_hero_pane');
     if (!empty($arguments)) {
-      $rotator->set_arguments(array(implode(',', $arguments)));
       $rotator->set_items_per_page(count($arguments));
     }
     $rotator->pre_execute();
     $rotator->execute();
+
+    $results_old = $rotator->result;
+    $results_new = array();
+    foreach ($arguments as $nid) {
+      foreach ($results_old as $result) {
+        if ($result->nid == $nid) {
+          $results_new[] = $result;
+        }
+      }
+    }
+    $rotator->result = $results_new;
 
     $variables['rotator_hero'] = $rotator->render();
   }
