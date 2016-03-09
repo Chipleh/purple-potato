@@ -293,35 +293,62 @@ function flexible_template_preprocess_panels_pane(&$variables) {
  * Implements hook_form_FORM_ID_alter().
  */
 function flexible_template_field_widget_form_alter(&$element, &$form_state, $context) {
-
-  // Remove "- None -" from optional select list fields.
-  if (isset($element['#field_name']) && $element['#field_name'] == 'field_title_size') {
-    unset($element['#options']['_none']);
-  }
-
-  if (isset($element['#field_name']) && $element['#field_name'] == 'field_subhead_size') {
-    unset($element['#options']['_none']);
-  }
+  flexible_template_form_remove_select_menu_none($element, TRUE);
 }
 
 function flexible_template_form_fieldable_panels_panes_entity_edit_form_alter(&$form, &$form_state, $form_id) {
-
-  // Remove "- None -" from optional select list fields.
-  if (isset($form['field_title_size'])) {
-    unset($form['field_title_size'][LANGUAGE_NONE]['#options']['_none']);
-  }
-
-  if (isset($form['field_subhead_size'])) {
-    unset($form['field_subhead_size'][LANGUAGE_NONE]['#options']['_none']);
-  }
-
-  if (isset($form['field_image_position'])) {
-    unset($form['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
-  }
+  flexible_template_form_remove_select_menu_none($form);
 
   // Add validation callback to ensure only 4 columns can be submitted.
   if (isset($form['field_columns_multi'])) {
     $form['#validate'][] = 'flexible_template_field_collection_form_validate';
+  }
+}
+
+function flexible_template_form_fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
+  flexible_template_form_remove_select_menu_none($form);
+}
+
+/**
+ * Remove "- None -" from optional select list fields.
+ *
+ * @param object $field
+ *   Reference to the form/element object.
+ *
+ * @param object $widget
+ *   Process as widget form.
+ *
+ * @see field_title_size
+ * @see field_subhead_size
+ * @see field_image_position
+ *
+ */
+function flexible_template_form_remove_select_menu_none(&$field, $widget = FALSE) {
+
+  // Widget field
+  if ($widget) {
+    if (isset($field['#field_name']) && $field['#field_name'] == 'field_title_size') {
+      unset($field['#options']['_none']);
+    }
+
+    if (isset($field['#field_name']) && $field['#field_name'] == 'field_subhead_size') {
+      unset($field['#options']['_none']);
+    }
+  }
+
+  // Standard form and Panel Panes
+  else {
+    if (isset($field['field_title_size'])) {
+      unset($field['field_title_size'][LANGUAGE_NONE]['#options']['_none']);
+    }
+
+    if (isset($field['field_subhead_size'])) {
+      unset($field['field_subhead_size'][LANGUAGE_NONE]['#options']['_none']);
+    }
+
+    if (isset($field['field_image_position'])) {
+      unset($field['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
+    }
   }
 }
 
@@ -436,6 +463,8 @@ function flexible_template_append_background_attributes(&$variables) {
 
 /**
  * Throw error when Multi-column contains more than 4 columns.
+ *
+ * @see field_columns_multi
  */
 function flexible_template_field_collection_form_validate(&$form, &$form_state) {
   if (count($form_state['values']['field_columns_multi'][LANGUAGE_NONE]) > 5) {
