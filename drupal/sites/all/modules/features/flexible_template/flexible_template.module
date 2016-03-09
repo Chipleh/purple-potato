@@ -295,11 +295,11 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 function flexible_template_field_widget_form_alter(&$element, &$form_state, $context) {
 
   // Remove "- None -" from optional select list fields.
-  if ($element['#field_name'] == 'field_title_size') {
+  if (isset($element['#field_name']) && $element['#field_name'] == 'field_title_size') {
     unset($element['#options']['_none']);
   }
 
-  if ($element['#field_name'] == 'field_subhead_size') {
+  if (isset($element['#field_name']) && $element['#field_name'] == 'field_subhead_size') {
     unset($element['#options']['_none']);
   }
 }
