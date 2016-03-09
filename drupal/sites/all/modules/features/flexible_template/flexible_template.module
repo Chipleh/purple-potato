@@ -293,6 +293,8 @@ function flexible_template_preprocess_panels_pane(&$variables) {
  * Implements hook_form_FORM_ID_alter().
  */
 function flexible_template_field_widget_form_alter(&$element, &$form_state, $context) {
+
+  // Remove "- None -" from optional select list fields.
   if ($element['#field_name'] == 'field_title_size') {
     unset($element['#options']['_none']);
   }
@@ -303,6 +305,8 @@ function flexible_template_field_widget_form_alter(&$element, &$form_state, $con
 }
 
 function flexible_template_form_fieldable_panels_panes_entity_edit_form_alter(&$form, &$form_state, $form_id) {
+
+  // Remove "- None -" from optional select list fields.
   if (isset($form['field_title_size'])) {
     unset($form['field_title_size'][LANGUAGE_NONE]['#options']['_none']);
   }
