@@ -22,7 +22,7 @@ function flexible_template_filter_default_formats() {
         'weight' => -50,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a>  <s> <u> <em> <strong> <cite> <blockquote> <ul> <ol> <li> <dl> <dt> <dd> <sub> <sup>',
+          'allowed_html' => '<a> <p> <s> <u> <em> <strong> <cite> <blockquote> <ul> <ol> <li> <dl> <dt> <dd> <sub> <sup>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
