@@ -178,7 +178,14 @@
 /*  new flex template
 **************************************************/
 .node-type-flexible-template {
+	#main-wrapper {
+		background: $color-white;
+	}
 
+	#main,
+	#content {
+		background: transparent;
+	}
 }
 
 
