@@ -290,6 +290,33 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function flexible_template_field_widget_form_alter(&$element, &$form_state, $context) {
+  if ($element['#field_name'] == 'field_title_size') {
+    unset($element['#options']['_none']);
+  }
+
+  if ($element['#field_name'] == 'field_subhead_size') {
+    unset($element['#options']['_none']);
+  }
+}
+
+function flexible_template_form_fieldable_panels_panes_entity_edit_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['field_title_size'])) {
+    unset($form['field_title_size'][LANGUAGE_NONE]['#options']['_none']);
+  }
+
+  if (isset($form['field_subhead_size'])) {
+    unset($form['field_subhead_size'][LANGUAGE_NONE]['#options']['_none']);
+  }
+
+  if (isset($form['field_image_position'])) {
+    unset($form['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
+  }
+}
+
+/**
  * Field collection implementation of template_preprocess_entity().
  *
  * @param object $variables
