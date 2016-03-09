@@ -315,8 +315,8 @@ function flexible_template_form_fieldable_panels_panes_fieldable_panels_pane_con
  * @param object $field
  *   Reference to the form/element object.
  *
- * @param object $widget
- *   Process as widget form.
+ * @param bool $widget
+ *   Process as a Widget field.
  *
  * @see field_title_size
  * @see field_subhead_size
