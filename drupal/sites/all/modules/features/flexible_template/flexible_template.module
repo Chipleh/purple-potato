@@ -205,7 +205,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'long_form_copy') {
 
     // If Dropcap is enabled, wrap first character of body with SPAN tag and remove field.
-    if (isset($content['field_drop_cap'])) {
+    if (!empty($content['field_drop_cap'][0]['#markup'])) {
       $content['field_body'][0]['#markup'] = preg_replace('/^<p>((?:<\w+>)+\w{1})/', '<p><span class="drop_cap">$1</span>', $content['field_body'][0]['#markup']);
       unset($content['field_drop_cap']);
     }
