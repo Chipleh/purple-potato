@@ -89,6 +89,7 @@
       var pane = jQuery('.pane-bundle-rotator-hero');
       if (pane[0]) {
         pane.each(function() {
+          if (jQuery(this).find('.button-close')[0] || jQuery(this).find('.button-play')[0]) return;
 
           // Dynamically append Play/Close buttons prior to video tout field.
           var field = jQuery(this).find('.views-field-field-video-tout');
@@ -137,6 +138,7 @@ console.log(title);
       var pane = jQuery('.pane-bundle-multi-column');
       if (pane[0]) {
         pane.each(function() {
+          if (jQuery(this).find('.button-close')[0] || jQuery(this).find('.button-play')[0]) return;
 
           // Dynamically append Play/Close buttons prior to video field.
           var field = jQuery(this).find('.field-name-field-background-video');
