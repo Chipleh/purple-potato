@@ -113,7 +113,9 @@
       var pane = jQuery('.pane-bundle-long-form-copy');
       if (pane[0]) {
         pane.each(function() {
-          var title = jQuery(this).find('.flexible-template-content').children().first();
+          var title = jQuery(this).find('.flexible-template-content').children().filter('h1, h2, h3, h4, h5');
+
+console.log(title);
 
           // Relocate title field element to inline container.
           var field = jQuery(this).find('.field-name-field-image');
