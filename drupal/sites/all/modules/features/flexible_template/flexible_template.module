@@ -154,7 +154,12 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
   // Set title size.
   if (isset($content['field_title_size'])) {
-    if (isset($content['title'])) {
+
+    // Remove title if value doesn't exist.
+    if (empty($content['title']['#value'])) {
+      unset($content['title']);
+    }
+    else {
       $content['title']['#theme'] = 'html_tag';
       $content['title']['#tag']   = $content['field_title_size'][0]['#markup'];
     }
