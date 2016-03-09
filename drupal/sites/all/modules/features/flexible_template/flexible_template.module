@@ -318,6 +318,11 @@ function flexible_template_form_fieldable_panels_panes_entity_edit_form_alter(&$
   if (isset($form['field_image_position'])) {
     unset($form['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
   }
+
+  // Add validation callback to ensure only 4 columns can be submitted.
+  if (isset($form['field_columns_multi'])) {
+    $form['#validate'][] = 'flexible_template_field_collection_form_validate';
+  }
 }
 
 /**
@@ -426,5 +431,14 @@ function flexible_template_append_background_attributes(&$variables) {
     $background_image = file_create_url($variables['field_background_mobile_image'][0]['uri']);
     $variables['attributes_array']['data-background-mobile'] = 'background-image: url(' . $background_image . ')';
     unset($content['field_background_mobile_image']);
+  }
+}
+
+/**
+ * Throw error when Multi-column contains more than 4 columns.
+ */
+function flexible_template_field_collection_form_validate(&$form, &$form_state, $form_id) {
+  if (count($form_state['values']['field_columns_multi'][LANGUAGE_NONE]) > 5) {
+    form_set_error('field_columns_multi', t('This module only supports 4 columns. Please make the necessary adjustments and try again.'));
   }
 }
