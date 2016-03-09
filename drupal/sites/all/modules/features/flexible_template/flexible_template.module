@@ -437,7 +437,7 @@ function flexible_template_append_background_attributes(&$variables) {
 /**
  * Throw error when Multi-column contains more than 4 columns.
  */
-function flexible_template_field_collection_form_validate(&$form, &$form_state, $form_id) {
+function flexible_template_field_collection_form_validate(&$form, &$form_state) {
   if (count($form_state['values']['field_columns_multi'][LANGUAGE_NONE]) > 5) {
     form_set_error('field_columns_multi', t('This module only supports 4 columns. Please make the necessary adjustments and try again.'));
   }
