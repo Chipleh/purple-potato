@@ -338,8 +338,13 @@ function flexible_template_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 
-  // Process standard form.
+  // Process standard Drupal form.
   flexible_template_form_field_apply_states($form);
+
+  // Add validation callback to ensure only 4 columns can be submitted.
+  if (isset($form['field_columns_multi'])) {
+    $form['#validate'][] = 'flexible_template_field_collection_form_validate';
+  }
 }
 
 /**
@@ -349,15 +354,4 @@ function flexible_template_field_widget_form_alter(&$element, &$form_state, $con
 
   // Remove the "- None -" select list option.
   flexible_template_form_remove_option_none($element, TRUE);
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function flexible_template_form_fieldable_panels_panes_entity_edit_form_alter(&$form, &$form_state, $form_id) {
-
-  // Add validation callback to ensure only 4 columns can be submitted.
-  if (isset($form['field_columns_multi'])) {
-    $form['#validate'][] = 'flexible_template_field_collection_form_validate';
-  }
 }
