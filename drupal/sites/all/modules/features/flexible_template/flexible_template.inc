@@ -215,48 +215,6 @@ function flexible_template_form_field_apply_states(&$field, $delta = NULL) {
 }
 
 /**
- * Remove "- None -" from optional select list fields.
- *
- * @param object $field
- *   Reference to the form/element object.
- *
- * @param bool $widget
- *   Process as a Widget field.
- *
- * @see field_title_size
- * @see field_subhead_size
- * @see field_image_position
- */
-function flexible_template_form_remove_option_none(&$field, $widget = FALSE) {
-
-  // Widget field
-  if ($widget && isset($field['#field_name'])) {
-    if ($field['#field_name'] == 'field_title_size') {
-      unset($field['#options']['_none']);
-    }
-
-    if ($field['#field_name'] == 'field_subhead_size') {
-      unset($field['#options']['_none']);
-    }
-  }
-
-  // Standard form and Panel Panes
-  else {
-    if (isset($field['field_title_size'])) {
-      unset($field['field_title_size'][LANGUAGE_NONE]['#options']['_none']);
-    }
-
-    if (isset($field['field_subhead_size'])) {
-      unset($field['field_subhead_size'][LANGUAGE_NONE]['#options']['_none']);
-    }
-
-    if (isset($field['field_image_position'])) {
-      unset($field['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
-    }
-  }
-}
-
-/**
  * Field collection form callback.
  *
  * @see field_columns_multi

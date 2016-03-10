@@ -352,6 +352,36 @@ function flexible_template_form_alter(&$form, &$form_state, $form_id) {
  */
 function flexible_template_field_widget_form_alter(&$element, &$form_state, $context) {
 
-  // Remove the "- None -" select list option.
-  flexible_template_form_remove_option_none($element, TRUE);
+  // Remove "- None -" from optional select list fields.
+  if (isset($element['#field_name'])) {
+
+    // Field Collections
+    if ($element['#field_name'] == 'field_title_size') {
+      unset($element['#options']['_none']);
+    }
+
+    if ($element['#field_name'] == 'field_subhead_size') {
+      unset($element['#options']['_none']);
+    }
+
+    if ($element['#field_name'] == 'field_image_position') {
+      unset($element['#options']['_none']);
+    }
+  }
+  else {
+
+    // Standard form and Panel Panes
+    if (isset($element['field_title_size'])) {
+      unset($element['field_title_size'][LANGUAGE_NONE]['#options']['_none']);
+    }
+
+    if (isset($element['field_subhead_size'])) {
+      unset($element['field_subhead_size'][LANGUAGE_NONE]['#options']['_none']);
+    }
+
+    if (isset($element['field_image_position'])) {
+      unset($element['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
+    }
+  }
+
 }
