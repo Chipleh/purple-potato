@@ -224,8 +224,8 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'long_form_copy') {
 
     // If Dropcap is enabled, wrap first character of body with SPAN tag and remove field.
-    if (!empty($content['field_drop_cap'][0]['#markup'])) {
-      $markup = preg_replace('/^<p>((?:<\w+>)+\w{1})/', '<p><span class="drop_cap">$1</span>', $content['field_body'][0]['#markup']);
+    if (!empty($content['field_drop_cap']['#items'][0]['value'])) {
+      $markup = preg_replace('/^<p>(?:(<\w+>)+(\w{1}))/', '<p><span class="drop_cap">$2</span>$1', $content['field_body'][0]['#markup']);
       $content['field_body'][0]['#markup'] = $markup;
       unset($content['field_drop_cap']);
     }
@@ -370,7 +370,7 @@ function flexible_template_field_widget_form_alter(&$element, &$form_state, $con
   }
   else {
 
-    // Standard form and Panel Panes
+    // Drupal form and Panel Panes
     if (isset($element['field_title_size'])) {
       unset($element['field_title_size'][LANGUAGE_NONE]['#options']['_none']);
     }
@@ -383,5 +383,4 @@ function flexible_template_field_widget_form_alter(&$element, &$form_state, $con
       unset($element['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
     }
   }
-
 }

@@ -10,11 +10,12 @@
     attach: function(context, settings) {
       if (typeof CKEDITOR !== 'undefined') {
         CKEDITOR.on('instanceCreated', function(event) {
+          var id = event.editor.element.$.id;
 
           // Listen for text input events.
           event.editor.on('change', function() {
-            var field1 = $('#edit-field-subhead-color'),
-                field2 = $('#edit-field-subhead-size');
+            var field1 = $('#' + id).parents().eq(6).find('.field-name-field-subhead-color'),
+                field2 = $('#' + id).parents().eq(6).find('.field-name-field-subhead-size');
 
             if (field1 && field2) {
               var hidden = field1.find(':hidden'),
