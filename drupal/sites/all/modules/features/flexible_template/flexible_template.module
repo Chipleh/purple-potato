@@ -225,7 +225,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
     // If Dropcap is enabled, wrap first character of body with SPAN tag and remove field.
     if (!empty($content['field_drop_cap']['#items'][0]['value'])) {
-      $markup = preg_replace('/^<p>(?:(<\w+>)+(\w{1}))/', '<p><span class="drop_cap">$2</span>$1', $content['field_body'][0]['#markup']);
+      $markup = preg_replace('/^<p>(?:(<\w+>)*(\w{1}))/', '<p><span class="drop_cap">$2</span>$1', $content['field_body'][0]['#markup']);
       $content['field_body'][0]['#markup'] = $markup;
       unset($content['field_drop_cap']);
     }
