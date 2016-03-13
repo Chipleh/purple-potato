@@ -204,7 +204,7 @@ function flexible_template_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 9,
+        'weight' => 8,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -253,68 +253,6 @@ function flexible_template_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_background_video'
-  $field_instances['field_collection_item-field_columns_multi-field_background_video'] = array(
-    'bundle' => 'field_columns_multi',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'file_entity',
-        'settings' => array(
-          'autoplay' => FALSE,
-          'controls' => TRUE,
-          'height' => NULL,
-          'loop' => FALSE,
-          'multiple_file_behavior' => 'tags',
-          'muted' => FALSE,
-          'preload' => '',
-          'width' => NULL,
-        ),
-        'type' => 'file_video',
-        'weight' => 8,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_background_video',
-    'label' => 'Background Video',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 0,
-      'file_directory' => 'videos',
-      'file_extensions' => 'mp4 m4v webm',
-      'max_filesize' => '20 MB',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 0,
-          'video' => 'video',
-        ),
-        'browser_plugins' => array(
-          'media_browser_plus--media_browser_my_files' => 0,
-          'media_browser_plus--media_browser_thumbnails' => 0,
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'upload' => 'upload',
-        ),
-      ),
-      'type' => 'media_generic',
-      'weight' => 8,
     ),
   );
 
@@ -616,23 +554,23 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_columns_multi-field_video_tout'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'For best modal window results the recommended dimensions for the video file are greater than 1024 x 768',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'media_colorbox',
+        'module' => 'file_entity',
         'settings' => array(
-          'audio_playlist' => FALSE,
-          'colorbox_caption' => 'title',
-          'colorbox_gallery' => 'post',
-          'colorbox_gallery_custom' => '',
-          'colorbox_view_mode' => 'large',
-          'file_view_mode' => 'small',
-          'fixed_height' => '',
-          'fixed_width' => '',
+          'autoplay' => 0,
+          'controls' => 0,
+          'height' => '',
+          'loop' => 0,
+          'multiple_file_behavior' => 'tags',
+          'muted' => 0,
+          'preload' => '',
+          'width' => '',
         ),
-        'type' => 'media_colorbox',
-        'weight' => 11,
+        'type' => 'file_video',
+        'weight' => 9,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -652,6 +590,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -661,9 +600,10 @@ function flexible_template_field_default_field_instances() {
           'video' => 'video',
         ),
         'browser_plugins' => array(
+          'media_browser_plus--media_browser_my_files' => 0,
+          'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 'media_internet',
           'upload' => 'upload',
         ),
       ),
@@ -2923,10 +2863,9 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'color_field',
         'settings' => array(),
-        'type' => 'color_field_default_formatter',
-        'weight' => 8,
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2966,7 +2905,7 @@ function flexible_template_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 9,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3038,7 +2977,7 @@ function flexible_template_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 13,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3108,7 +3047,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 4,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3139,7 +3078,7 @@ function flexible_template_field_default_field_instances() {
       'rel_remove' => 'default',
       'title' => 'required',
       'title_label_use_field_label' => 0,
-      'title_maxlength' => 17,
+      'title_maxlength' => 14,
       'title_value' => '',
       'url' => 0,
       'user_register_form' => FALSE,
@@ -3166,7 +3105,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3224,7 +3163,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3292,10 +3231,9 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'color_field',
         'settings' => array(),
-        'type' => 'color_field_default_formatter',
-        'weight' => 10,
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3334,10 +3272,9 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3372,10 +3309,9 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'color_field',
         'settings' => array(),
-        'type' => 'color_field_default_formatter',
-        'weight' => 12,
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3414,10 +3350,9 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 11,
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3447,23 +3382,23 @@ function flexible_template_field_default_field_instances() {
   $field_instances['node-rotator_hero-field_video_tout'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'For best modal window results the recommended dimensions for the video file are greater than 1024 x 768',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'media_colorbox',
         'settings' => array(
-          'autoplay' => FALSE,
-          'controls' => TRUE,
-          'height' => NULL,
-          'loop' => FALSE,
-          'multiple_file_behavior' => 'tags',
-          'muted' => FALSE,
-          'preload' => '',
-          'width' => NULL,
+          'audio_playlist' => 0,
+          'colorbox_caption' => 'none',
+          'colorbox_gallery' => 'none',
+          'colorbox_gallery_custom' => '',
+          'colorbox_view_mode' => 'default',
+          'file_view_mode' => 'default',
+          'fixed_height' => '',
+          'fixed_width' => '',
         ),
-        'type' => 'file_video',
-        'weight' => 7,
+        'type' => 'media_colorbox',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3489,6 +3424,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -3525,6 +3461,7 @@ function flexible_template_field_default_field_instances() {
   t('Display footer');
   t('Display header');
   t('Enable Drop Cap');
+  t('For best modal window results the recommended dimensions for the video file are greater than 1024 x 768');
   t('Grid Type');
   t('Icon item');
   t('Image');

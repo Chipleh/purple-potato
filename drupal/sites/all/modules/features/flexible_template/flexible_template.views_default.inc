@@ -108,24 +108,6 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_subhead']['label'] = '';
   $handler->display->display_options['fields']['field_subhead']['element_type'] = '0';
   $handler->display->display_options['fields']['field_subhead']['element_label_colon'] = FALSE;
-  /* Field: Field: Video Tout */
-  $handler->display->display_options['fields']['field_video_tout']['id'] = 'field_video_tout';
-  $handler->display->display_options['fields']['field_video_tout']['table'] = 'field_data_field_video_tout';
-  $handler->display->display_options['fields']['field_video_tout']['field'] = 'field_video_tout';
-  $handler->display->display_options['fields']['field_video_tout']['label'] = '';
-  $handler->display->display_options['fields']['field_video_tout']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_video_tout']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_video_tout']['type'] = 'media_colorbox';
-  $handler->display->display_options['fields']['field_video_tout']['settings'] = array(
-    'file_view_mode' => 'default',
-    'colorbox_view_mode' => 'default',
-    'fixed_width' => '',
-    'fixed_height' => '',
-    'colorbox_gallery' => 'post',
-    'colorbox_gallery_custom' => '',
-    'colorbox_caption' => 'title',
-    'audio_playlist' => 0,
-  );
   /* Field: Field: Background Color */
   $handler->display->display_options['fields']['field_background_color']['id'] = 'field_background_color';
   $handler->display->display_options['fields']['field_background_color']['table'] = 'field_data_field_background_color';
@@ -153,6 +135,24 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_background_mobile_image']['settings'] = array(
     'image_style' => '',
     'image_link' => '',
+  );
+  /* Field: Field: Video Tout */
+  $handler->display->display_options['fields']['field_video_tout']['id'] = 'field_video_tout';
+  $handler->display->display_options['fields']['field_video_tout']['table'] = 'field_data_field_video_tout';
+  $handler->display->display_options['fields']['field_video_tout']['field'] = 'field_video_tout';
+  $handler->display->display_options['fields']['field_video_tout']['label'] = '';
+  $handler->display->display_options['fields']['field_video_tout']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video_tout']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_video_tout']['type'] = 'file_video';
+  $handler->display->display_options['fields']['field_video_tout']['settings'] = array(
+    'controls' => 0,
+    'autoplay' => 0,
+    'loop' => 0,
+    'muted' => 0,
+    'width' => '',
+    'height' => '',
+    'preload' => '',
+    'multiple_file_behavior' => 'tags',
   );
   /* Field: Field: CTA */
   $handler->display->display_options['fields']['field_cta']['id'] = 'field_cta';
