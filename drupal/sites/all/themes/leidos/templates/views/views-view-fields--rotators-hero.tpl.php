@@ -39,7 +39,7 @@
   if (isset($row->field_field_background_image[0]['raw']['uri'])) {
     $background_image = file_create_url($row->field_field_background_image[0]['raw']['uri']);
 
-    $attributes2[] = 'data-background-desktop="background-image: url(' . $background_image . ')"';
+    $attributes2[] = 'data-background-desktop="' . $background_image . '"';
 
     unset($fields['field_background_image']);
   }
@@ -48,7 +48,7 @@
   if (isset($row->field_field_background_mobile_image[0]['raw']['uri'])) {
     $background_image = file_create_url($row->field_field_background_mobile_image[0]['raw']['uri']);
 
-    $attributes2[] = 'data-background-mobile="background-image: url(' . $background_image . ')"';
+    $attributes2[] = 'data-background-mobile="' . $background_image . '"';
 
     unset($fields['field_background_mobile_image']);
   }
