@@ -113,14 +113,14 @@ function flexible_template_append_background_attributes(&$variables) {
   // Append desktop background image to collection wrapper.
   if (isset($variables['field_background_image'])) {
     $background_image = file_create_url($variables['field_background_image'][0]['uri']);
-    $variables['attributes_array']['data-background-desktop'] = 'background-image: url(' . $background_image . ')';
+    $variables['attributes_array']['data-background-desktop'] = $background_image;
     unset($content['field_background_image']);
   }
 
   // Append mobile background image to collection wrapper.
   if (isset($variables['field_background_mobile_image'])) {
     $background_image = file_create_url($variables['field_background_mobile_image'][0]['uri']);
-    $variables['attributes_array']['data-background-mobile'] = 'background-image: url(' . $background_image . ')';
+    $variables['attributes_array']['data-background-mobile'] = $background_image;
     unset($content['field_background_mobile_image']);
   }
 }
