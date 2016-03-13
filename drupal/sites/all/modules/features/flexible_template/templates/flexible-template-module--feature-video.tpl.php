@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="<?php print $classes; ?>"<?php print $attributes; ?> style="background-image: url('<?php print $background_mobile_image; ?>');">
+<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="flexible-template-content">
     <?php print render($content['title']); ?>
     <?php print render($content); ?>
