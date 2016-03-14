@@ -2375,7 +2375,13 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selection dimensions:
+<ul>
+<li>short = 1400 x 405</li>
+<li>tall = 1400 x 600</li>
+</ul>
+
+',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2967,7 +2973,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['node-rotator_hero-field_background_mobile_image'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
-    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at 750 x 1000 pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3014,6 +3020,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -3471,6 +3478,7 @@ function flexible_template_field_default_field_instances() {
   t('Image Position');
   t('Image upload supports: png, gif, jpg, jpeg at # x # pixels.');
   t('Image upload supports: png, gif, jpg, jpeg at 1000  x 750 pixels.');
+  t('Image upload supports: png, gif, jpg, jpeg at 750 x 1000 pixels.');
   t('Image upload supports: png, gif, jpg, jpeg at the following dimensions
 
 1 column [desktop]: 1400x405
@@ -3487,6 +3495,13 @@ function flexible_template_field_default_field_instances() {
   t('Module Height');
   t('Rotator Slide / Hero');
   t('Secondary CTA');
+  t('Selection dimensions:
+<ul>
+<li>short = 1400 x 405</li>
+<li>tall = 1400 x 600</li>
+</ul>
+
+');
   t('Subhead');
   t('Subhead Color');
   t('Subhead Size');
