@@ -5255,9 +5255,9 @@ p.subtext {
   margin: 0 auto;
   padding: 0.643vw 2.85vw;
   position: relative;
+  z-index: 2;
 }
-/* line 105, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
-i
+/* line 107, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column .flexible-template-content .field-name-field-cta a:before {
   background: #fff;
   content: '';
