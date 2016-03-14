@@ -12,7 +12,7 @@
 	.flexible-template-content {
 
 		/* video */
-		.field-name-field-background-video,
+		.field-name-field-video-tout,
 		.views-field-field-video-tout {
 			display: none;
 			height: 100%;
@@ -20,7 +20,7 @@
 			position: fixed;
 			top: 0;
 			width: 100%;
-			z-index: 1000;
+			z-index: 9999;
 
 			&:before {
 				background: $color-black;
@@ -54,7 +54,7 @@
 			right: 15%;
 			top: calc(50vh - 351px);
 			width: 60px;
-			z-index: 2000;
+			z-index: 10000;
 
 			&:before {
 				color: $color-white;
@@ -85,6 +85,7 @@
 			overflow: visible;
 			position: relative;
 			width: 0;
+			//z-index: 1;
 
 			&:before {
 				background: $color-white;
@@ -99,7 +100,7 @@
 				top: -2.98vw;
 				transition: all .5s ease;
 				width: 6vw;
-				z-index: 1;
+				//z-index: 1;
 			}
 
 			&:after {
@@ -115,7 +116,7 @@
 				top: -2.5vw;
 				transition: all .5s ease;
 				width: 5vw;
-				z-index: 1;
+				//z-index: 1;
 			}
 
 			&:hover {
@@ -142,7 +143,7 @@
 				z-index: 1;
 
 				.button-close,
-				.field-name-field-background-video,
+				.field-name-field-video-tout,
 				.views-field-field-video-tout {
 					display: block;
 				}

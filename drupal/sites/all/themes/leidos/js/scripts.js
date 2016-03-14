@@ -1,43 +1,44 @@
-//  Capabilities Module
+//  Capabilities module
 //  Rhino Hooton
 //  6/29/15
-(function ($) {
+(function($) {
   Drupal.behaviors.leidosCapabilities = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
 
       // add hover state on mouse over
-      jQuery('.sliding-box .inner').hover(function() {
-        jQuery(this).parent('.sliding-box').toggleClass('hover');
+      $('.sliding-box .inner').hover(function() {
+        $(this).parent('.sliding-box').toggleClass('hover');
       });
 
       // open slide box on content click
-      jQuery('.sliding-box .inner').on('click', function () {
-        if (jQuery(this).parent('.sliding-box').hasClass('open')) {
-          jQuery(this).parent('.sliding-box').removeClass('open');
+      $('.sliding-box .inner').on('click', function() {
+        if ($(this).parent('.sliding-box').hasClass('open')) {
+          $(this).parent('.sliding-box').removeClass('open');
           return false;
         }
-        jQuery('.open').removeClass('open');
-        jQuery(this).parent('.sliding-box').toggleClass('open');
+        $('.open').removeClass('open');
+        $(this).parent('.sliding-box').toggleClass('open');
       });
 
       // close slide box on close click
-      jQuery('.sliding-box .click-box-close').on('click', function () {
-        jQuery('.open').removeClass('open');
+      $('.sliding-box .click-box-close').on('click', function() {
+        $('.open').removeClass('open');
       });
     }
   };
 })(jQuery);
 
+//  Global action
 //  Toggle background images (Desktop/Mobile) based on web browser width.
 //  Marc S. Brooks
 //  2/24/16
-(function ($) {
+(function($) {
   Drupal.behaviors.flexibleTemplateBackground = {
     attach: function(context, settings) {
 
       // Define styles for defined data-* attributes.
       function defineStyles() {
-        var width  = jQuery('body').width(),
+        var width  = $('body').width(),
             select = null;
 
         if (width > 960) {
@@ -46,29 +47,13 @@
           select = 'data-background-mobile';
         }
 
-        var items = jQuery('[' + select + ']');
+        $('[' + select + ']', context)
+          .each(function() {
+            var val = $(this).attr(select);
 
-        items.each(function() {
-          var item = jQuery(this),
-              val  = item.attr(select);
-
-          // If style attributes already exists on parent node, relocate contents.
-          var parent_node = item.parent(),
-              parent_attr = parent_node.attr('style');
-
-          // Remove the parent style.
-          parent_node.removeAttr('style');
-
-          // Append background and to parent node if it doesn't already exist.
-          if (!parent_node.attr('style') && parent_attr) {
-
-            // Remove custom attributes preserving default values.
-            parent_attr = parent_attr.replace(/background-image:.*;/g, '');
-
-            // Append new attributes.
-            parent_node.attr('style', val + ';' + parent_attr);
-          }
-        });
+            // Append background to parent node.
+            $(this).parent().css('background-image', 'url(' + val + ')');
+          });
       }
 
       // Listen for resize events.
@@ -83,19 +68,19 @@
 //  Hero/Rotator module
 //  Marc S. Brooks
 //  3/8/16
-(function ($) {
+(function($) {
   Drupal.behaviors.flexibleTemplateHeroRotator = {
     attach: function(context, settings) {
-      var pane = jQuery('.pane-bundle-rotator-hero');
+      var pane = $('.pane-bundle-rotator-hero', context);
       if (pane[0]) {
         pane.each(function() {
-          if (jQuery(this).find('.button-close')[0] || jQuery(this).find('.button-play')[0]) return;
+          if ($(this).find('.button-close')[0] || $(this).find('.button-play')[0]) return;
 
           // Dynamically append Play/Close buttons prior to video tout field.
-          var field = jQuery(this).find('.views-field-field-video-tout');
+          var field = $(this).find('.views-field-field-video-tout');
           if (field[0]) {
-            var close = jQuery('<a class="button-close" href="#"></a>'),
-                play  = jQuery('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
+            var close = $('<a class="button-close" href="#"></a>'),
+                play  = $('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
 
             field.before(close, play);
           }
@@ -108,18 +93,16 @@
 //  Long-form Copy module
 //  Marc S. Brooks
 //  3/8/16
-(function ($) {
+(function($) {
   Drupal.behaviors.flexibleTemplateLongFormCopy = {
     attach: function(context, settings) {
-      var pane = jQuery('.pane-bundle-long-form-copy');
+      var pane = $('.pane-bundle-long-form-copy', context);
       if (pane[0]) {
         pane.each(function() {
-          var title = jQuery(this).find('.flexible-template-content').children().filter('h1, h2, h3, h4, h5');
-
-console.log(title);
+          var title = $(this).find('.flexible-template-content').children().filter('h1, h2, h3, h4, h5');
 
           // Relocate title field element to inline container.
-          var field = jQuery(this).find('.field-name-field-image');
+          var field = $(this).find('.field-name-field-image');
           if (field[0]) {
             field.before(title);
           }
@@ -132,19 +115,19 @@ console.log(title);
 //  Multi-column module
 //  Marc S. Brooks
 //  3/8/16
-(function ($) {
+(function($) {
   Drupal.behaviors.flexibleTemplateMultiColumn = {
     attach: function(context, settings) {
-      var pane = jQuery('.pane-bundle-multi-column');
+      var pane = $('.pane-bundle-multi-column', context);
       if (pane[0]) {
         pane.each(function() {
-          if (jQuery(this).find('.button-close')[0] || jQuery(this).find('.button-play')[0]) return;
+          if ($(this).find('.button-close')[0] || $(this).find('.button-play')[0]) return;
 
           // Dynamically append Play/Close buttons prior to video field.
-          var field = jQuery(this).find('.field-name-field-background-video');
+          var field = $(this).find('.field-name-field-video-tout');
           if (field[0]) {
-            var close = jQuery('<a class="button-close" href="#"></a>'),
-                play  = jQuery('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
+            var close = $('<a class="button-close" href="#"></a>'),
+                play  = $('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
 
             field.before(close, play);
           }
@@ -157,9 +140,9 @@ console.log(title);
 //  Capabilities Module
 //  Rhino Hooton
 //  6/29/15
-// (function ($) {
+// (function($) {
 //   Drupal.behaviors.flexWorkaround = {
-//     attach: function (context, settings) {
+//     attach: function(context, settings) {
 //       // open video pop up
 //       jQuery('.hero-rotator-inner .views-field-field-subhead').after('<a href="#" class="button-close">X</a><a href="#" class="button-play">Watch Video</a>');
 //     }
@@ -169,22 +152,24 @@ console.log(title);
 //  Capabilities Module
 //  Rhino Hooton
 //  6/29/15
-(function ($) {
+(function($) {
   Drupal.behaviors.leidosFlexFunctions = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
 
       // open video pop up
-      jQuery('.node-type-flexible-template .button-play').on('click', function () {
+      jQuery('.node-type-flexible-template .button-play').on('click', function() {
         jQuery(this).parent().addClass('video-container-open');
         jQuery('.node-type-flexible-template').addClass('video-open');
+
         $('.flex-pauseplay .flex-pause').trigger('click');
         // jQuery('.flexslider').flexslider({pausePlay: true});
       });
 
       // close video pop up
-      jQuery('.node-type-flexible-template .button-close').on('click', function () {
+      jQuery('.node-type-flexible-template .button-close').on('click', function() {
         jQuery(this).parent().removeClass('video-container-open');
         jQuery('.node-type-flexible-template').removeClass('video-open');
+
         $('.flex-pauseplay .flex-play').trigger('click');
         // jQuery('.flexslider').flexslider({pausePlay: false});
       });
@@ -293,7 +278,7 @@ console.log(title);
 //  Projects JS
 //  Rhino Hooton
 //  6/29/15
-(function ($) {
+(function($) {
   Drupal.behaviors.leidosProjects = {
     attach: function (context, settings) {
       jQuery('.pane-projects .views-row, .pane-projects-full-view-projects-pane .views-row, .pane-projects-full-view-projects-pane-mobile .views-row').on('mouseenter', function() {
@@ -308,9 +293,9 @@ console.log(title);
 //  Search Box JS
 //  Rhino Hooton
 //  6/29/15
-(function ($) {
+(function($) {
   Drupal.behaviors.leidosSearch = {
-    attach: function (context, settings) {
+    attach: function(context, settings) {
       var searchBox = jQuery('li.last span.nolink');
       var cancelButton = jQuery('#search_leidos_website span');
       var searchForm = jQuery('div.block-leidos-custom-search');
