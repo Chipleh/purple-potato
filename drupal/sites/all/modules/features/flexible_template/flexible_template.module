@@ -140,7 +140,9 @@ function flexible_template_preprocess_field(&$variables) {
  * Implements hook_preprocess_page().
  */
 function flexible_template_preprocess_page(&$vars) {
-  if (arg(0) == 'admin' || arg(0) == 'node') {
+  global $user;
+
+  if (in_array('administrator', $user->roles)) {
     drupal_add_js(drupal_get_path('module','flexible_template') . '/js/flexible-template.js');
   }
 }
