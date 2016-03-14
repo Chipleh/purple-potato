@@ -190,18 +190,18 @@
 				.views-field-title {
 					h1 {
 						font-size: 4.3vw;
-						height: calc(#{$multiBit} * 16);
+						height: calc(#{$multiBit} * 8);
 						line-height: calcLineHeight($multiBit , 8);
 						margin-bottom: calc(#{$multiBit} * 1);
-						margin-top: calc(#{$multiBit} * 4);
+						margin-top: calc(#{$multiBit} * 11);
 					}
 
 					h2 {
 						font-size: 3.6vw;
-						height: calc(#{$multiBit} * 16);
+						height: calc(#{$multiBit} * 8);
 						line-height: calcLineHeight($multiBit , 8);
 						margin-bottom: calc(#{$multiBit} * 1);
-						margin-top: calc(#{$multiBit} * 4);
+						margin-top: calc(#{$multiBit} * 11);
 					}
 				}
 
@@ -251,16 +251,16 @@
 				.views-field-title {
 					h1 {
 						font-size: 4.3vw;
-						height: calc(#{$multiBit} * 7);
-						line-height: calcLineHeight($multiBit , 7);
+						height: calc(#{$multiBit} * 8);
+						line-height: calcLineHeight($multiBit , 8);
 						margin-bottom: calc(#{$multiBit} * 1);
 						margin-top: calc(#{$multiBit} * 4);
 					}
 
 					h2 {
 						font-size: 3.6vw;
-						height: calc(#{$multiBit} * 7);
-						line-height: calcLineHeight($multiBit , 7);
+						height: calc(#{$multiBit} * 8);
+						line-height: calcLineHeight($multiBit , 8);
 						margin-bottom: calc(#{$multiBit} * 1);
 						margin-top: calc(#{$multiBit} * 4);
 					}
