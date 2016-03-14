@@ -561,7 +561,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'file_entity',
         'settings' => array(
           'autoplay' => 0,
-          'controls' => 0,
+          'controls' => 1,
           'height' => '',
           'loop' => 0,
           'multiple_file_behavior' => 'tags',
@@ -2905,7 +2905,7 @@ function flexible_template_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 4,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2970,14 +2970,14 @@ function flexible_template_field_default_field_instances() {
     'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3047,7 +3047,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3105,7 +3105,7 @@ function flexible_template_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3386,19 +3386,19 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'media_colorbox',
+        'module' => 'file_entity',
         'settings' => array(
-          'audio_playlist' => 0,
-          'colorbox_caption' => 'none',
-          'colorbox_gallery' => 'none',
-          'colorbox_gallery_custom' => '',
-          'colorbox_view_mode' => 'default',
-          'file_view_mode' => 'default',
-          'fixed_height' => '',
-          'fixed_width' => '',
+          'autoplay' => FALSE,
+          'controls' => TRUE,
+          'height' => NULL,
+          'loop' => FALSE,
+          'multiple_file_behavior' => 'tags',
+          'muted' => FALSE,
+          'preload' => '',
+          'width' => NULL,
         ),
-        'type' => 'media_colorbox',
-        'weight' => 3,
+        'type' => 'file_video',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
