@@ -283,7 +283,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['fields']['field_bottom_color']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_bottom_color']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_bottom_color']['element_default_classes'] = FALSE;
-  /* Field: Field: Top Color */
+  /* Field: Taxonomy term: Top Color */
   $handler->display->display_options['fields']['field_top_color']['id'] = 'field_top_color';
   $handler->display->display_options['fields']['field_top_color']['table'] = 'field_data_field_top_color';
   $handler->display->display_options['fields']['field_top_color']['field'] = 'field_top_color';

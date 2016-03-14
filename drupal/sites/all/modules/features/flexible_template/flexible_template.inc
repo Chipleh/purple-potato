@@ -225,7 +225,9 @@ function flexible_template_form_field_apply_states(&$field, $delta = NULL) {
 function flexible_template_field_collection_form_validate(&$form, &$form_state) {
 
   // Throw error when Multi-column contains more than 4 columns.
-  if (count($form_state['values']['field_columns_multi'][LANGUAGE_NONE]) >= 4) {
+  $columns = array_filter(array_keys($form_state['values']['field_columns_multi'][LANGUAGE_NONE]), 'is_numeric');
+
+  if (count($columns) > 4) {
     form_set_error('field_columns_multi', t('This module only supports 4 columns.  Please make the necessary adjustments and try again.'));
   }
 }
