@@ -145,7 +145,7 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_video_tout']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_video_tout']['type'] = 'file_video';
   $handler->display->display_options['fields']['field_video_tout']['settings'] = array(
-    'controls' => 0,
+    'controls' => 1,
     'autoplay' => 0,
     'loop' => 0,
     'muted' => 0,
