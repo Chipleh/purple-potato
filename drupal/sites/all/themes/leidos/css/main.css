@@ -5335,16 +5335,16 @@ i
 /* line 162, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .field-name-field-title-item h1 {
   font-size: 4.3vw;
-  height: calc(0.643vw * 7);
-  line-height: 4.501vw;
+  height: calc(0.643vw * 8);
+  line-height: 5.144vw;
   margin-bottom: calc(0.643vw * 1);
   margin-top: calc(0.643vw * 4);
 }
 /* line 170, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .field-name-field-title-item h2 {
   font-size: 3.6vw;
-  height: calc(0.643vw * 7);
-  line-height: 4.501vw;
+  height: calc(0.643vw * 8);
+  line-height: 5.144vw;
   margin-bottom: calc(0.643vw * 1);
   margin-top: calc(0.643vw * 4);
 }
