@@ -6066,6 +6066,7 @@ p.subtext {
   overflow: visible;
   position: relative;
   width: 0;
+  z-index: 1;
 }
 /* line 90, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play:before,
@@ -6082,6 +6083,7 @@ p.subtext {
   top: -2.98vw;
   transition: all .5s ease;
   width: 6vw;
+  z-index: 1;
 }
 /* line 106, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play:after,
@@ -6098,6 +6100,7 @@ p.subtext {
   top: -2.5vw;
   transition: all .5s ease;
   width: 5vw;
+  z-index: 1;
 }
 /* line 123, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play:hover:before,
@@ -6135,7 +6138,13 @@ p.subtext {
   .pane-bundle-rotator-hero .flexible-template-content {
     /* button play */
   }
-  /* line 165, sass/partials/modules/_flex-video-settings.scss */
+  /* line 163, sass/partials/modules/_flex-video-settings.scss */
+  .pane-bundle-multi-column .flexible-template-content video,
+  .pane-bundle-feature-video .flexible-template-content video,
+  .pane-bundle-rotator-hero .flexible-template-content video {
+    top: calc(10vh);
+  }
+  /* line 168, sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play,
   .pane-bundle-feature-video .flexible-template-content .button-play,
   .pane-bundle-rotator-hero .flexible-template-content .button-play {
@@ -6144,7 +6153,7 @@ p.subtext {
     border-top: 6.4vw solid transparent;
     margin-bottom: calc(0.643vw * 28);
   }
-  /* line 171, sass/partials/modules/_flex-video-settings.scss */
+  /* line 174, sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play:before,
   .pane-bundle-feature-video .flexible-template-content .button-play:before,
   .pane-bundle-rotator-hero .flexible-template-content .button-play:before {
@@ -6153,7 +6162,7 @@ p.subtext {
     top: -13vw;
     width: 26vw;
   }
-  /* line 178, sass/partials/modules/_flex-video-settings.scss */
+  /* line 181, sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play:after,
   .pane-bundle-feature-video .flexible-template-content .button-play:after,
   .pane-bundle-rotator-hero .flexible-template-content .button-play:after {
