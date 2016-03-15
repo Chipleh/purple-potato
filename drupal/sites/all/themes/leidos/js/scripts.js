@@ -106,8 +106,6 @@
               var video = document.getElementsByTagName('video')[0];
               video.pause();
               video.currentTime = 0;
-
-              console.log(video);
             });
 
             field.before(close, play);
@@ -171,8 +169,6 @@
               var video = document.getElementsByTagName('video')[0];
               video.pause();
               video.currentTime = 0;
-
-              console.log(video);
             });
 
             field.before(close, play);
