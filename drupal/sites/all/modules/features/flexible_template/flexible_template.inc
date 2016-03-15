@@ -76,21 +76,22 @@ function flexible_template_preprocess_field_thumbnail_image_item(&$variables) {
 function flexible_template_preprocess_subhead(&$variables) {
   $content = &$variables['content'];
 
-  if (isset($content['field_subhead'])) {
-
-    // Set subhead color.
-    if (isset($content['field_subhead_color'])) {
+  // Set subhead color.
+  if (isset($content['field_subhead_color'])) {
+    if (isset($content['field_subhead'])) { 
       $content['field_subhead'][0]['#attributes'] = array('style' => 'color:' . $content['field_subhead_color']['#items'][0]['rgb']);
-      unset($content['field_subhead_color']);
     }
+    unset($content['field_subhead_color']);
+  } 
 
-    // Set subhead size.
-    if (isset($content['field_subhead_size'])) {
+  // Set subhead size.
+  if (isset($content['field_subhead_size'])) {
+    if (isset($content['field_subhead'])) {
       $content['field_subhead'][0]['#theme'] = 'html_tag';
       $content['field_subhead'][0]['#tag']   = $content['field_subhead_size'][0]['#markup'];
       $content['field_subhead'][0]['#value'] = $content['field_subhead'][0]['#markup'];
-      unset($content['field_subhead_size']);
     }
+    unset($content['field_subhead_size']);
   }
 }
 
