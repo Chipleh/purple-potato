@@ -17,6 +17,11 @@
 function flexible_template_preprocess_field_collection_item(&$variables) {
   $content = &$variables['content'];
 
+  // Check if title has been defined.  If not, add a class to indicate this.
+  if (!isset($content['field_title_item'])) {
+    $variables['classes_array'][] = 'flex-template-module-no-title';
+  }
+
   // Set title color.
   if (isset($content['field_title_color'])) {
     $content['field_title_item'][0]['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
