@@ -221,6 +221,16 @@
 					top: 0;
 				}
 			}
+
+			&.flex-template-module-no-title {
+				.field-name-field-subhead {
+					h3,
+					h4,
+					h5 {
+						margin-top: calc(#{$multiBit} * 13);
+					}
+				}
+			}
 		}
 	}
 
@@ -322,6 +332,16 @@
 				clear: right;
 				width: 50%;
 			}
+
+			&.flex-template-module-no-title {
+				.field-name-field-subhead {
+					h3,
+					h4,
+					h5 {
+						margin-top: calc(#{$multiBit} * 12);
+					}
+				}
+			}
 		}
 	}
 
@@ -412,6 +432,16 @@
 				background: #898b8c;
 				clear: right;
 				width: 33.33%;
+			}
+
+			&.flex-template-module-no-title {
+				.field-name-field-subhead {
+					h3,
+					h4,
+					h5 {
+						margin-top: calc(#{$multiBit} * 12);
+					}
+				}
 			}
 		}
 	}
@@ -507,46 +537,14 @@
 				clear: right;
 				width: 25%;
 			}
-		}
-	}
 
-	&.flex-template-module-no-title {
-		&.multi-column-1 {
-			.field-name-field-subhead {
-				h3,
-				h4,
-				h5 {
-					margin-top: calc(#{$multiBit} * 13);
-				}
-			}
-		}
-
-		&.multi-column-2 {
-			.field-name-field-subhead {
-				h3,
-				h4,
-				h5 {
-					margin-top: calc(#{$multiBit} * 12);
-				}
-			}
-		}
-
-		&.multi-column-3 {
-			.field-name-field-subhead {
-				h3,
-				h4,
-				h5 {
-					margin-top: calc(#{$multiBit} * 12);
-				}
-			}
-		}
-
-		&.multi-column-4 {
-			.field-name-field-subhead {
-				h3,
-				h4,
-				h5 {
-					margin-top: calc(#{$multiBit} * 12);
+			&.flex-template-module-no-title {
+				.field-name-field-subhead {
+					h3,
+					h4,
+					h5 {
+						margin-top: calc(#{$multiBit} * 12);
+					}
 				}
 			}
 		}
@@ -627,6 +625,16 @@
 				.column-0 {
 					&:before {
 						padding-top: 133.263%;
+					}
+				}
+
+				&.flex-template-module-no-title {
+					.field-name-field-subhead {
+						h3,
+						h4,
+						h5 {
+							margin-top: calc(#{$multiBit} * 52);
+						}
 					}
 				}
 			}
@@ -711,6 +719,16 @@
 						padding-top: 106.610%;
 					}
 				}
+
+				&.flex-template-module-no-title {
+					.field-name-field-subhead {
+						h3,
+						h4,
+						h5 {
+							margin-top: calc(#{$multiBit} * 52);
+						}
+					}
+				}
 			}
 		}
 
@@ -781,6 +799,16 @@
 						padding-top: 106.610%;
 					}
 				}
+
+				&.flex-template-module-no-title {
+					.field-name-field-subhead {
+						h3,
+						h4,
+						h5 {
+							margin-top: calc(#{$multiBit} * 52);
+						}
+					}
+				}
 			}
 		}
 
@@ -849,46 +877,14 @@
 						padding-top: 106.610%;
 					}
 				}
-			}
-		}
 
-		&.flex-template-module-no-title {
-			&.multi-column-1 {
-				.field-name-field-subhead {
-					h3,
-					h4,
-					h5 {
-						margin-top: calc(#{$multiBit} * 52);
-					}
-				}
-			}
-
-			&.multi-column-2 {
-				.field-name-field-subhead {
-					h3,
-					h4,
-					h5 {
-						margin-top: calc(#{$multiBit} * 52);
-					}
-				}
-			}
-
-			&.multi-column-3 {
-				.field-name-field-subhead {
-					h3,
-					h4,
-					h5 {
-						margin-top: calc(#{$multiBit} * 52);
-					}
-				}
-			}
-
-			&.multi-column-4 {
-				.field-name-field-subhead {
-					h3,
-					h4,
-					h5 {
-						margin-top: calc(#{$multiBit} * 52);
+				&.flex-template-module-no-title {
+					.field-name-field-subhead {
+						h3,
+						h4,
+						h5 {
+							margin-top: calc(#{$multiBit} * 52);
+						}
 					}
 				}
 			}
