@@ -3546,6 +3546,7 @@ function leidos_field_default_field_instances() {
   t('Project Value');
   t('Proof Point or Web Page Title');
   t('Quick Links');
+  t('Recommended Character Limit: 270 characters');
   t('Recommended Image Size: 660 x 383 px');
   t('Recommended size 650x650');
   t('Recommended size: 244 x 244');

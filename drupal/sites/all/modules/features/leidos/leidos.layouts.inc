@@ -13,6 +13,17 @@ function leidos_default_panels_layout() {
   $layout = new stdClass();
   $layout->disabled = FALSE; /* Edit this to true to make a default layout disabled initially */
   $layout->api_version = 1;
+  $layout->name = 'full_width';
+  $layout->admin_title = 'Full width';
+  $layout->admin_description = '';
+  $layout->category = 'Full width';
+  $layout->plugin = 'flexible';
+  $layout->settings = array();
+  $export['full_width'] = $layout;
+
+  $layout = new stdClass();
+  $layout->disabled = FALSE; /* Edit this to true to make a default layout disabled initially */
+  $layout->api_version = 1;
   $layout->name = 'industry_template';
   $layout->admin_title = 'Industry Template';
   $layout->admin_description = 'Two columns with optional rotator and optional inner right rail';

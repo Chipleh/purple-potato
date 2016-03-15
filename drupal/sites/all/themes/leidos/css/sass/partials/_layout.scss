@@ -175,6 +175,19 @@
 }
 
 
+/*  new flex template
+**************************************************/
+.node-type-flexible-template {
+	#main-wrapper {
+		background: $color-white;
+	}
+
+	#main,
+	#content {
+		background: transparent;
+	}
+}
+
 
 /*  tablet
 **************************************************/
@@ -258,10 +271,4 @@
 			}
 		}	
 	}
-}
-
-
-/*  mobile
-**************************************************/
-@media only screen and (max-width: 720px) {
 }

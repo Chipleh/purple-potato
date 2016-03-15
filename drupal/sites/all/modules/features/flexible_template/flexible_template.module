@@ -1,0 +1,397 @@
+<?php
+/**
+ * @file
+ * Flexible Template - Drupal application hooks.
+ */
+
+include_once 'flexible_template.inc';
+include_once 'flexible_template.features.inc';
+
+/**
+ * Implements hook_view_mode_templates().
+ */
+function flexible_template_view_mode_templates() {
+  return array(
+    'flexible_template_module__feature_video',
+    'flexible_template_module__icons',
+    'flexible_template_module__long_form_copy',
+    'flexible_template_module__multi_column',
+    'flexible_template_module__multi_column_parallax',
+    'flexible_template_module__rotator_hero',
+    'flexible_template_module__thumbnail_gallery',
+  );
+}
+
+/**
+ * Implements template_preprocess_entity().
+ */
+function flexible_template_preprocess_entity(&$variables, $hook) {
+
+  // Expose function call flexible_template_preprocess_BUNDLE().
+  $function = 'flexible_template_preprocess_' . $variables['elements']['#bundle'];
+  if (function_exists($function)) {
+    $function($variables, $hook);
+  }
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function flexible_template_preprocess_field(&$variables) {
+
+  //
+  // Icons
+  //
+  // @see field_icons
+  //
+  if ($variables['element']['#field_name'] == 'field_icons') {
+    foreach ($variables['items'] as $key => &$item) {
+
+      // Addend custom classes for field collection items.
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+
+  //
+  // Multi-column
+  //
+  // @see field_columns_multi
+  //
+  elseif ($variables['element']['#field_name'] == 'field_columns_multi') {
+    foreach ($variables['items'] as $key => &$item) {
+
+      // Addend custom classes for field collection items.
+      $item['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+
+  //
+  // Multi-column parallax
+  //
+  // @see field_columns_multi_parallax
+  //
+  elseif ($variables['element']['#field_name'] == 'field_columns_multi_parallax') {
+    foreach ($variables['items'] as $key => &$item) {
+
+      // Addend custom classes for field collection items.
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+
+  //
+  // Rotator slide / Hero
+  //
+  // @see field_rotator_slide_hero
+  //
+  elseif ($variables['element']['#field_name'] == 'field_rotator_slide_hero') {
+
+    // Render rotator instead of slide nodes references.
+    $arguments = array();
+    foreach ($variables['items'] as $item) {
+      $arguments[] = $item['#node']->nid;
+    }
+
+    $rotator = views_get_view('rotators_hero');
+    $rotator->set_display('rotator_hero_pane');
+    if (!empty($arguments)) {
+      $rotator->set_items_per_page(count($arguments));
+    }
+    $rotator->pre_execute();
+    $rotator->execute();
+
+    // Ensure DraggableViews defined order is maintained.
+    $results_old = $rotator->result;
+    $results_new = array();
+    foreach ($arguments as $nid) {
+      foreach ($results_old as $result) {
+        if ($result->nid == $nid) {
+          $results_new[] = $result;
+        }
+      }
+    }
+    $rotator->result = $results_new;
+
+    $variables['rotator_hero'] = $rotator->render();
+  }
+
+  //
+  // Thumbnail gallery
+  //
+  // @see field_thumbnail_gallery
+  //
+  elseif ($variables['element']['#field_name'] == 'field_thumbnail_gallery') {
+
+    // Addend custom classes for field collection items.
+    foreach ($variables['items'] as $key => &$item) {
+      $variables['items'][$key]['#attributes'] = array(
+        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
+      );
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function flexible_template_preprocess_page(&$vars) {
+  global $user;
+
+  if (in_array('administrator', $user->roles)) {
+    drupal_add_js(drupal_get_path('module','flexible_template') . '/js/flexible-template.js');
+  }
+}
+
+/**
+ * Implements template_preprocess_panels_pane().
+ */
+function flexible_template_preprocess_panels_pane(&$variables) {
+  $content = &$variables['content'];
+
+  $field_title = (isset($content['field_title_item'])) ? 'field_title_item' : 'title';
+
+  // Set background color.
+  if (isset($content['field_background_color'])) {
+    if (!isset($content['field_background_image']) && !isset($content['field_background_video'])) {
+      $variables['attributes_array']['style'][] = 'color:' . $content['field_background_color']['#items'][0]['rgb'];
+    }
+    unset($content['field_background_color']);
+  }
+
+  // Set title color.
+  if (isset($content['field_title_color'])) {
+    if (isset($content[$field_title])) {
+      $content[$field_title]['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
+    }
+    unset($content['field_title_color']);
+  }
+
+  // Set title size.
+  if (isset($content['field_title_size'])) {
+    if (isset($content[$field_title])) {
+
+      // Remove title if value doesn't exist.
+      if (empty($content[$field_title]['#value'])) {
+        unset($content[$field_title]);
+      }
+
+      // Apply selected HTML element.
+      else {
+        $content[$field_title]['#theme'] = 'html_tag';
+        $content[$field_title]['#tag']   = $content['field_title_size'][0]['#markup'];
+      }
+    }
+    unset($content['field_title_size']);
+  }
+
+  // Preprocess Subhead elements.
+  flexible_template_preprocess_subhead($variables);
+
+  // Define Fieldable Panels template overrides.
+  if (isset($variables['pane']) && $variables['pane']->type == 'fieldable_panels_pane') {
+    if (isset($content['#element'])) {
+      $variables['theme_hook_suggestions'][] = 'flexible_template_module__' . $variables['content']['#element']->bundle;
+    }
+  }
+
+  //
+  // Feature Video
+  //
+  // @see feature_video
+  //
+  if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {
+
+    // Append mobile background image to collection wrapper.
+    if (isset($content['field_background_mobile_image'])) {
+      $background_image = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']);
+      $variables['attributes_array']['data-background-mobile'] = $background_image;
+      unset($content['field_background_mobile_image']);
+    }
+  }
+
+  //
+  // Icons
+  //
+  // @see icons
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'icons') {
+
+    // Add custom class that identifies total number of columns defined.
+    if (isset($content['field_icons'])) {
+      $variables['classes_array'][] = 'icons-' . count($content['field_icons']['#items']);
+    }
+  }
+
+  //
+  // Long-form Copy
+  //
+  // @see long_form_copy
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'long_form_copy') {
+
+    // If Dropcap is enabled, wrap first character of body with SPAN tag and remove field.
+    if (!empty($content['field_drop_cap']['#items'][0]['value'])) {
+      $markup = preg_replace('/^<p>(?:(<\w+>)*(\w{1}))/', '<p><span class="drop_cap">$2</span>$1', $content['field_body'][0]['#markup']);
+      $content['field_body'][0]['#markup'] = $markup;
+      unset($content['field_drop_cap']);
+    }
+
+    // Append class that identify position.
+    if (isset($content['field_image_position'])) {
+      if (isset($content['field_image'])) {
+        $variables['classes_array'][] = 'image-align-' . $content['field_image_position']['#items'][0]['value'];
+      }
+      unset($content['field_image_position']);
+    }
+
+    // Relocate image caption item to image container.
+    if (isset($content['field_image_caption'])) {
+      if (isset($content['field_image'])) {
+        $markup = '<p class="caption">' . $content['field_image_caption']['#items'][0]['value'] . '</p>';
+        $content['field_image_caption'][0]['#markup'] = $markup;
+        $content['field_image'][] = $content['field_image_caption'][0];
+        $content['field_image']['#items'][] = $content['field_image_caption']['#items'][0];
+      }
+      unset($content['field_image_caption']);
+    }
+  }
+
+  //
+  // Multi-column
+  //
+  // @see multi_column
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'multi_column') {
+
+    // Add custom class that identifies total number of columns defined.
+    if (isset($content['field_columns_multi'])) {
+      $variables['classes_array'][] = 'multi-column-' . count($content['field_columns_multi']['#items']);
+    }
+  }
+
+  //
+  // Rotator slide / Hero
+  //
+  // @see rotator_hero
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'rotator_hero') {
+
+    // Add empty field for all slides.
+    if (!isset($content['field_rotator_slide_hero'])) {
+      $content['field_rotator_slide_hero'] = array(
+        '#theme' => 'field',
+        '#weight' => '2',
+        '#title' => 'Rotator slide / Hero',
+        '#access' => TRUE,
+        '#label_display' => 'hidden',
+        '#view_mode' => 'full',
+        '#language' => 'und',
+        '#field_name' => 'field_rotator_slide_hero',
+        '#field_type' => 'node_reference',
+        '#field_translatable' => 0,
+        '#entity_type' => 'fieldable_panels_pane',
+        '#bundle' => 'rotator_hero',
+        '#items' => array()
+      );
+    }
+
+    // Add custom class that identifies the Module Height (short/tall) and remove field.
+    if (isset($content['field_module_height'])) {
+      $variables['classes_array'][] = 'rotator-slide-module-height-' . $content['field_module_height']['#items'][0]['value'];
+      unset($content['field_module_height']);
+    }
+  }
+
+  //
+  // Thumbnail Gallery
+  //
+  // @see thumbnail_gallery
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'thumbnail_gallery') {
+
+    // Add custom class that identifies total number of columns defined.
+    if (isset($content['field_thumbnail_gallery'])) {
+      $variables['classes_array'][] = 'thumbnail-gallery-' . count($content['field_thumbnail_gallery']['#items']);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function flexible_template_form_alter(&$form, &$form_state, $form_id) {
+  $field_collection = NULL;
+
+  // Check if supported Field Collection exists.
+  if (isset($form['field_columns_multi'])) {
+    $field_collection = 'field_columns_multi';
+  }
+  elseif (isset($form['field_columns_multi_parallax'])) {
+    $field_collection = 'field_columns_multi_parallax';
+  }
+  elseif (isset($form['field_thumbnail_image_item'])) {
+    $field_collection = 'field_thumbnail_image_item';
+  }
+
+  // Apply conditional states to circular dependent fields.
+  if ($field_collection) {
+    $delta = 0;
+
+    // Process Field Collection items.
+    while ($delta <= $form[$field_collection][LANGUAGE_NONE]['#max_delta']) {
+      flexible_template_form_field_apply_states($form[$field_collection][LANGUAGE_NONE][$delta], $delta);
+      $delta++;
+    }
+  }
+
+  // Process standard Drupal form.
+  flexible_template_form_field_apply_states($form);
+
+  // Add validation callback to ensure only 4 columns can be submitted.
+  if (isset($form['field_columns_multi'])) {
+    $form['#validate'][] = 'flexible_template_field_collection_form_validate';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function flexible_template_field_widget_form_alter(&$element, &$form_state, $context) {
+
+  // Remove "- None -" from optional select list fields.
+  if (isset($element['#field_name'])) {
+
+    // Field Collections
+    if ($element['#field_name'] == 'field_title_size') {
+      unset($element['#options']['_none']);
+    }
+
+    if ($element['#field_name'] == 'field_subhead_size') {
+      unset($element['#options']['_none']);
+    }
+
+    if ($element['#field_name'] == 'field_image_position') {
+      unset($element['#options']['_none']);
+    }
+  }
+  else {
+
+    // Drupal form and Panel Panes
+    if (isset($element['field_title_size'])) {
+      unset($element['field_title_size'][LANGUAGE_NONE]['#options']['_none']);
+    }
+
+    if (isset($element['field_subhead_size'])) {
+      unset($element['field_subhead_size'][LANGUAGE_NONE]['#options']['_none']);
+    }
+
+    if (isset($element['field_image_position'])) {
+      unset($element['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
+    }
+  }
+}

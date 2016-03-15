@@ -26,7 +26,7 @@
         settings.loaded = false;
 
         // Assign default settings
-		// @todo update the list of options to match the new set
+	     	// @todo update the list of options to match the new set
         settings.opts = {
           // v2.x options
           namespace:settings.namespace,

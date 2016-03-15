@@ -1,0 +1,176 @@
+/*************************
+*   Flex Video Styles
+*   Rhino Hooton
+*   1/1/16
+/************************/
+
+
+/*  elements
+**************************************************/
+.pane-bundle-long-form-copy {
+	background-repeat: none;
+	background-size: 100% auto;
+	clear: both;
+	display: block;
+	margin-bottom: calc(#{$multiBit} * 2);
+	overflow: hidden;
+	position: relative;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.flexible-template-content {
+		margin: 0 auto;
+		width: 74%;
+
+		/* header */
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+			display: block;
+			font-weight: 100;
+			margin: 0 auto;
+			overflow: hidden;
+			text-align: center;
+
+			p {
+				margin: 0;
+			}
+		}
+
+		p {
+
+		}
+
+		h1 {
+			font-size: 4.3vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 7);
+			margin-bottom: calc(#{$multiBit} * 2);
+			margin-top: calc(#{$multiBit} * 4);
+		}
+
+		h2 {
+			font-size: 3.6vw;
+			height: calc(#{$multiBit} * 8);
+			line-height: calcLineHeight($multiBit , 7);
+			margin-bottom: calc(#{$multiBit} * 2);
+			margin-top: calc(#{$multiBit} * 4);
+		}
+
+		.drop_cap {
+			float: left;
+			font-size: 60px;
+			line-height: 58px;
+			padding-right: 6px;
+		}
+
+		.field-name-field-image {
+			width: 48%;
+			margin-bottom: calc(#{$multiBit} * 2);
+
+			img {
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+
+			p {
+				margin-top: calc(#{$multiBit} * 2);
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&.image-align-left {
+		.field-name-field-image {
+			float: left;
+			margin-right: calc(#{$multiBit} * 4);
+		}
+	}
+
+	&.image-align-right {
+		.field-name-field-image {
+			float: right;
+			margin-left: calc(#{$multiBit} * 4);
+		}	
+	}
+}
+
+
+/*  tablet & mobile
+**************************************************/
+@media only screen /*and (min-width: 721px)*/ and (max-width: 960px) {
+	.pane-bundle-long-form-copy {
+		.flexible-template-content {
+			margin: 0 auto;
+			width: 90%;
+
+			/* header */
+			h1,
+			h2,
+			h3,
+			h4,
+			h5 {
+				display: block;
+				font-weight: 100;
+				margin: 0 auto;
+				overflow: hidden;
+				text-align: center;
+
+				p {
+					margin: 0;
+				}
+			}
+
+			h1 {
+				font-size: 10vw;
+				height: calc(#{$multiBit} * 32);
+				line-height: calcLineHeight($multiBit , 16);
+				margin-bottom: calc(#{$multiBit} * 4);
+				margin-top: calc(#{$multiBit} * 16);
+			}
+
+			h2 {
+				font-size: 8vw;
+				height: calc(#{$multiBit} * 32);
+				line-height: calcLineHeight($multiBit , 16);
+				margin-bottom: calc(#{$multiBit} * 4);
+				margin-top: calc(#{$multiBit} * 16);
+			}
+
+			.field-name-field-image {
+				display: block;
+				margin: 0 auto;
+				margin-bottom: calc(#{$multiBit} * 4);
+				width: 100%;
+
+				img {
+					display: block;
+					height: auto;
+					width: 100%;
+				}
+
+				p {
+					margin-bottom: 0;
+					margin-top: calc(#{$multiBit} * 4);
+				}
+			}
+		}
+
+		&.image-align-left {
+			.field-name-field-image {
+				float: none;
+			}
+		}
+
+		&.image-align-right {
+			.field-name-field-image {
+				float: none;
+			}
+		}
+	}
+}

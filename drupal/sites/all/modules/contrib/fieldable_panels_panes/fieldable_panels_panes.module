@@ -1158,8 +1158,16 @@ function fieldable_panels_panes_entity_edit_form_submit($form, &$form_state) {
 
   // Copy hardcoded fields.
   $entity->title = $form_state['values']['title'];
-  $entity->link = $form_state['values']['link'];
-  $entity->path = $form_state['values']['path'];
+
+  // TODO: This should be fixed.
+  if (isset($form_state['values']['link'])) {
+    $entity->link = $form_state['values']['link'];
+  }
+
+  if (isset($form_state['values']['path'])) {
+    $entity->path = $form_state['values']['path'];
+  }
+
   $entity->language = $form_state['values']['language'];
   $entity->reusable = $form_state['values']['reusable'];
   $entity->category = $form_state['values']['category'];
