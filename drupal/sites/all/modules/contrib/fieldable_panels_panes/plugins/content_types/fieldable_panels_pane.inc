@@ -195,7 +195,7 @@ function fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_val
 function fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_submit($form, &$form_state) {
 
   // TODO: This needs to be fixed.
-  if (isset($form_state['conf']['view_mode'])) {
+  if (isset($form_state['values']['view_mode'])) {
     $form_state['conf']['view_mode'] = $form_state['values']['view_mode'];
   }
 
