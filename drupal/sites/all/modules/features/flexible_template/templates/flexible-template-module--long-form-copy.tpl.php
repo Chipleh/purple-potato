@@ -1,6 +1,6 @@
 <?php
 /**
- * @file flexible-template-module--feature_video.tpl.php
+ * @file flexible-template-module--long-form-copy.tpl.php
  * Flexible Template module template.
  */
 ?>

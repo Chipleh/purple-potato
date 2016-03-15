@@ -1,9 +1,10 @@
 <?php
 /**
  * @file
- * Code for the Flexible Template feature.
+ * Flexible Template - Drupal application hooks.
  */
 
+include_once 'flexible_template.inc';
 include_once 'flexible_template.features.inc';
 
 /**
@@ -13,6 +14,7 @@ function flexible_template_view_mode_templates() {
   return array(
     'flexible_template_module__feature_video',
     'flexible_template_module__icons',
+    'flexible_template_module__long_form_copy',
     'flexible_template_module__multi_column',
     'flexible_template_module__multi_column_parallax',
     'flexible_template_module__rotator_hero',
@@ -64,18 +66,6 @@ function flexible_template_preprocess_field(&$variables) {
       $item['#attributes'] = array(
         'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
       );
-
-      // Created simplified field collection object.
-      $collection_item = &$item['entity']['field_collection_item'][key($item['entity']['field_collection_item'])];
-
-      // Get Subhead color so append to video play button.
-      $subhead_color = '';
-      if (isset($collection_item['field_subhead_color'])) {
-        $subhead_color = 'style="color: ' . $collection_item['field_subhead_color'][0]['#markup'] . '"';
-      }
-
-      // Added Close/Play buttons to field list (Note: Things like this should actually be handled in jQuery!).
-      $collection_item['field_background_video']['#prefix'] = '<a href="#" class="button-close"></a><a href="#" class="button-play" ' . $subhead_color . '>' . t('Watch Video') . '</a>';
     }
   }
 
@@ -110,11 +100,22 @@ function flexible_template_preprocess_field(&$variables) {
     $rotator = views_get_view('rotators_hero');
     $rotator->set_display('rotator_hero_pane');
     if (!empty($arguments)) {
-      $rotator->set_arguments(array(implode(',', $arguments)));
       $rotator->set_items_per_page(count($arguments));
     }
     $rotator->pre_execute();
     $rotator->execute();
+
+    // Ensure DraggableViews defined order is maintained.
+    $results_old = $rotator->result;
+    $results_new = array();
+    foreach ($arguments as $nid) {
+      foreach ($results_old as $result) {
+        if ($result->nid == $nid) {
+          $results_new[] = $result;
+        }
+      }
+    }
+    $rotator->result = $results_new;
 
     $variables['rotator_hero'] = $rotator->render();
   }
@@ -136,37 +137,64 @@ function flexible_template_preprocess_field(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function flexible_template_preprocess_page(&$vars) {
+  global $user;
+
+  if (in_array('administrator', $user->roles)) {
+    drupal_add_js(drupal_get_path('module','flexible_template') . '/js/flexible-template.js');
+  }
+}
+
+/**
  * Implements template_preprocess_panels_pane().
  */
 function flexible_template_preprocess_panels_pane(&$variables) {
   $content = &$variables['content'];
 
+  $field_title = (isset($content['field_title_item'])) ? 'field_title_item' : 'title';
+
   // Set background color.
   if (isset($content['field_background_color'])) {
-    $variables['attributes_array']['style'][] = 'color:' . $content['field_background_color']['#items'][0]['rgb'];
-    unset($variables['content']['field_background_color']);
+    if (!isset($content['field_background_image']) && !isset($content['field_background_video'])) {
+      $variables['attributes_array']['style'][] = 'color:' . $content['field_background_color']['#items'][0]['rgb'];
+    }
+    unset($content['field_background_color']);
   }
 
   // Set title color.
   if (isset($content['field_title_color'])) {
-    $variables['content']['title']['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
-    unset($variables['content']['field_title_color']);
+    if (isset($content[$field_title])) {
+      $content[$field_title]['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
+    }
+    unset($content['field_title_color']);
   }
 
   // Set title size.
   if (isset($content['field_title_size'])) {
-    if (isset($content['title'])) {
-      $variables['content']['title']['#theme'] = 'html_tag';
-      $variables['content']['title']['#tag']   = $content['field_title_size'][0]['#markup'];
+    if (isset($content[$field_title])) {
+
+      // Remove title if value doesn't exist.
+      if (empty($content[$field_title]['#value'])) {
+        unset($content[$field_title]);
+      }
+
+      // Apply selected HTML element.
+      else {
+        $content[$field_title]['#theme'] = 'html_tag';
+        $content[$field_title]['#tag']   = $content['field_title_size'][0]['#markup'];
+      }
     }
-    unset($variables['content']['field_title_size']);
+    unset($content['field_title_size']);
   }
 
+  // Preprocess Subhead elements.
   flexible_template_preprocess_subhead($variables);
 
   // Define Fieldable Panels template overrides.
   if (isset($variables['pane']) && $variables['pane']->type == 'fieldable_panels_pane') {
-    if (isset($variables['content']['#element'])) {
+    if (isset($content['#element'])) {
       $variables['theme_hook_suggestions'][] = 'flexible_template_module__' . $variables['content']['#element']->bundle;
     }
   }
@@ -178,10 +206,11 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   //
   if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {
 
-    // Get mobile background URL and remove field.
+    // Append mobile background image to collection wrapper.
     if (isset($content['field_background_mobile_image'])) {
-      $variables['background_mobile_image'] = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']);
-      unset($variables['content']['field_background_mobile_image']);
+      $background_image = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']);
+      $variables['attributes_array']['data-background-mobile'] = $background_image;
+      unset($content['field_background_mobile_image']);
     }
   }
 
@@ -193,7 +222,43 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'icons') {
 
     // Add custom class that identifies total number of columns defined.
-    $variables['classes_array'][] = 'icons-' . count($content['field_icons']['#items']);
+    if (isset($content['field_icons'])) {
+      $variables['classes_array'][] = 'icons-' . count($content['field_icons']['#items']);
+    }
+  }
+
+  //
+  // Long-form Copy
+  //
+  // @see long_form_copy
+  //
+  elseif (isset($content['#bundle']) && $content['#bundle'] == 'long_form_copy') {
+
+    // If Dropcap is enabled, wrap first character of body with SPAN tag and remove field.
+    if (!empty($content['field_drop_cap']['#items'][0]['value'])) {
+      $markup = preg_replace('/^<p>(?:(<\w+>)*(\w{1}))/', '<p><span class="drop_cap">$2</span>$1', $content['field_body'][0]['#markup']);
+      $content['field_body'][0]['#markup'] = $markup;
+      unset($content['field_drop_cap']);
+    }
+
+    // Append class that identify position.
+    if (isset($content['field_image_position'])) {
+      if (isset($content['field_image'])) {
+        $variables['classes_array'][] = 'image-align-' . $content['field_image_position']['#items'][0]['value'];
+      }
+      unset($content['field_image_position']);
+    }
+
+    // Relocate image caption item to image container.
+    if (isset($content['field_image_caption'])) {
+      if (isset($content['field_image'])) {
+        $markup = '<p class="caption">' . $content['field_image_caption']['#items'][0]['value'] . '</p>';
+        $content['field_image_caption'][0]['#markup'] = $markup;
+        $content['field_image'][] = $content['field_image_caption'][0];
+        $content['field_image']['#items'][] = $content['field_image_caption']['#items'][0];
+      }
+      unset($content['field_image_caption']);
+    }
   }
 
   //
@@ -204,7 +269,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'multi_column') {
 
     // Add custom class that identifies total number of columns defined.
-    $variables['classes_array'][] = 'multi-column-' . count($content['field_columns_multi']['#items']);
+    if (isset($content['field_columns_multi'])) {
+      $variables['classes_array'][] = 'multi-column-' . count($content['field_columns_multi']['#items']);
+    }
   }
 
   //
@@ -216,7 +283,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
 
     // Add empty field for all slides.
     if (!isset($content['field_rotator_slide_hero'])) {
-      $variables['content']['field_rotator_slide_hero'] = array(
+      $content['field_rotator_slide_hero'] = array(
         '#theme' => 'field',
         '#weight' => '2',
         '#title' => 'Rotator slide / Hero',
@@ -236,7 +303,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
     // Add custom class that identifies the Module Height (short/tall) and remove field.
     if (isset($content['field_module_height'])) {
       $variables['classes_array'][] = 'rotator-slide-module-height-' . $content['field_module_height']['#items'][0]['value'];
-      unset($variables['content']['field_module_height']);
+      unset($content['field_module_height']);
     }
   }
 
@@ -248,119 +315,83 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'thumbnail_gallery') {
 
     // Add custom class that identifies total number of columns defined.
-    $variables['classes_array'][] = 'thumbnail-gallery-' . count($content['field_thumbnail_gallery']['#items']);
-  }
-}
-
-/**
- * Field collection implementation of template_preprocess_entity().
- *
- * @param object $variables
- *
- * The $variables array contains the following arguments:
- * - $node
- * - $view_mode
- * - $page
- */
-function flexible_template_preprocess_field_collection_item(&$variables) {
-  $content = &$variables['content'];
-
-  // Set title color.
-  if (isset($content['field_title_color'])) {
-    $variables['content']['field_title_item'][0]['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
-    unset($variables['content']['field_title_color']);
-  }
-
-  // Set title size.
-  if (isset($content['field_title_size'])) {
-    if (isset($content['field_title_item'])) {
-      $variables['content']['field_title_item'][0]['#theme'] = 'html_tag';
-      $variables['content']['field_title_item'][0]['#tag']   = $content['field_title_size'][0]['#markup'];
-      $variables['content']['field_title_item'][0]['#value'] = $content['field_title_item'][0]['#markup'];
+    if (isset($content['field_thumbnail_gallery'])) {
+      $variables['classes_array'][] = 'thumbnail-gallery-' . count($content['field_thumbnail_gallery']['#items']);
     }
-    unset($variables['content']['field_title_size']);
-  }
-
-  flexible_template_preprocess_subhead($variables);
-}
-
-function flexible_template_preprocess_field_columns_multi(&$variables) {
-  flexible_template_preprocess_field_collection_item($variables);
-
-  flexible_template_append_background_attributes($variables);
-}
-
-function flexible_template_preprocess_field_icon_item(&$variables) {
-  flexible_template_preprocess_field_collection_item($variables);
-}
-
-function flexible_template_preprocess_field_thumbnail_image_item(&$variables) {
-  flexible_template_preprocess_field_collection_item($variables);
-}
-
-/**
- * Preprocess Subtitle value based on configured Color/Size field values.
- *
- * @param object $variables
- *
- * The $variables array contains the following arguments:
- * - $node
- * - $view_mode
- * - $page
- *
- * @see field_subhead
- * @see field_subhead_color
- * @see field_subhead_size
- */
-function flexible_template_preprocess_subhead(&$variables) {
-  $content = $variables['content'];
-
-  // Set subhead color.
-  if (isset($content['field_subhead_color'])) {
-    $variables['content']['field_subhead'][0]['#attributes'] = array('style' => 'color:' . $content['field_subhead_color']['#items'][0]['rgb']);
-    unset($variables['content']['field_subhead_color']);
-  }
-
-  // Set subhead size.
-  if (isset($content['field_subhead_size'])) {
-    $variables['content']['field_subhead'][0]['#theme'] = 'html_tag';
-    $variables['content']['field_subhead'][0]['#tag']   = $content['field_subhead_size'][0]['#markup'];
-    $variables['content']['field_subhead'][0]['#value'] = $content['field_subhead'][0]['#markup'];
-
-    unset($variables['content']['field_subhead_size']);
   }
 }
 
 /**
- * Append data-* elements to container to be post-processed using jQuery.
- *
- * @param object $variables
- *
- * The $variables array contains the following arguments:
- * - $node
- * - $view_mode
- * - $page
- *
- * @see field_background_image
- * @see field_background_mobile_image
+ * Implements hook_form_alter().
  */
-function flexible_template_append_background_attributes(&$variables) {
+function flexible_template_form_alter(&$form, &$form_state, $form_id) {
+  $field_collection = NULL;
 
-  // Append desktop background image to collection wrapper.
-  if (isset($variables['field_background_image'])) {
-    $background_image = file_create_url($variables['field_background_image'][0]['uri']);
-
-    $variables['attributes_array']['data-background-desktop'] = 'background-image: url(' . $background_image . ')';
-
-    unset($variables['content']['field_background_image']);
+  // Check if supported Field Collection exists.
+  if (isset($form['field_columns_multi'])) {
+    $field_collection = 'field_columns_multi';
+  }
+  elseif (isset($form['field_columns_multi_parallax'])) {
+    $field_collection = 'field_columns_multi_parallax';
+  }
+  elseif (isset($form['field_thumbnail_image_item'])) {
+    $field_collection = 'field_thumbnail_image_item';
   }
 
-  // Append mobile background image to collection wrapper.
-  if (isset($variables['field_background_mobile_image'])) {
-    $background_image = file_create_url($variables['field_background_mobile_image'][0]['uri']);
+  // Apply conditional states to circular dependent fields.
+  if ($field_collection) {
+    $delta = 0;
 
-    $variables['attributes_array']['data-background-mobile'] = 'background-image: url(' . $background_image . ')';
+    // Process Field Collection items.
+    while ($delta <= $form[$field_collection][LANGUAGE_NONE]['#max_delta']) {
+      flexible_template_form_field_apply_states($form[$field_collection][LANGUAGE_NONE][$delta], $delta);
+      $delta++;
+    }
+  }
 
-    unset($variables['content']['field_background_mobile_image']);
+  // Process standard Drupal form.
+  flexible_template_form_field_apply_states($form);
+
+  // Add validation callback to ensure only 4 columns can be submitted.
+  if (isset($form['field_columns_multi'])) {
+    $form['#validate'][] = 'flexible_template_field_collection_form_validate';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function flexible_template_field_widget_form_alter(&$element, &$form_state, $context) {
+
+  // Remove "- None -" from optional select list fields.
+  if (isset($element['#field_name'])) {
+
+    // Field Collections
+    if ($element['#field_name'] == 'field_title_size') {
+      unset($element['#options']['_none']);
+    }
+
+    if ($element['#field_name'] == 'field_subhead_size') {
+      unset($element['#options']['_none']);
+    }
+
+    if ($element['#field_name'] == 'field_image_position') {
+      unset($element['#options']['_none']);
+    }
+  }
+  else {
+
+    // Drupal form and Panel Panes
+    if (isset($element['field_title_size'])) {
+      unset($element['field_title_size'][LANGUAGE_NONE]['#options']['_none']);
+    }
+
+    if (isset($element['field_subhead_size'])) {
+      unset($element['field_subhead_size'][LANGUAGE_NONE]['#options']['_none']);
+    }
+
+    if (isset($element['field_image_position'])) {
+      unset($element['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
+    }
   }
 }

@@ -16,12 +16,15 @@
 	overflow: hidden;
 	position: relative;
 
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	.flexible-template-content {
 
 		/* disable fields */
 		.field-name-field-background-color,
-		.field-name-field-background-image,
-		.field-name-field-background-video {
+		.field-name-field-background-image {
 			display: none;
 		}
 
@@ -112,7 +115,7 @@
 					top: 0;
 					transition: all .5s ease;
 					width: 100%;
-					z-index: 1;
+					//z-index: 1;
 				}
 
 				&:hover {
@@ -149,6 +152,7 @@
 				left: 0;
 				position: absolute;
 				top: 0;
+				width: 100%;
 			}
 		}
 	}
@@ -157,16 +161,16 @@
 		.field-name-field-title-item {
 			h1 {
 				font-size: 4.3vw;
-				height: calc(#{$multiBit} * 7);
-				line-height: calcLineHeight($multiBit , 7);
+				height: calc(#{$multiBit} * 8);
+				line-height: calcLineHeight($multiBit , 8);
 				margin-bottom: calc(#{$multiBit} * 1);
 				margin-top: calc(#{$multiBit} * 4);
 			}
 
 			h2 {
 				font-size: 3.6vw;
-				height: calc(#{$multiBit} * 7);
-				line-height: calcLineHeight($multiBit , 7);
+				height: calc(#{$multiBit} * 8);
+				line-height: calcLineHeight($multiBit , 8);
 				margin-bottom: calc(#{$multiBit} * 1);
 				margin-top: calc(#{$multiBit} * 4);
 			}
@@ -200,6 +204,8 @@
 
 		.ds-1col {
 			.column-0 {
+				background-repeat: no-repeat !important;
+				background-size: 100% auto !important;
 				background: #294f69;
 				clear: both;
 				float: none;
@@ -297,6 +303,9 @@
 		.ds-1col {
 			.column-0,
 			.column-1 {
+				background-repeat: no-repeat !important;
+				background-size: 100% auto !important;
+		
 				&:before {
 					padding-top: 57.858%;
 				}
@@ -380,6 +389,9 @@
 			.column-0,
 			.column-1,
 			.column-2 {
+				background-repeat: no-repeat !important;
+				background-size: 100% auto !important;
+
 				&:before {
 					padding-top: 86.798%;
 				}
@@ -466,6 +478,9 @@
 			.column-1,
 			.column-2,
 			.column-3 {
+				background-repeat: no-repeat !important;
+				background-size: 100% auto !important;
+
 				&:before {
 					padding-top: 115.717%;
 				}
