@@ -101,6 +101,10 @@
 
               // Resume the rotator.
               $('.views_slideshow_controls_text_pause > a').trigger('click');
+
+              // Disable video.
+              $('video')[0].pause();
+              $('video')[0].load();
             });
 
             field.before(close, play);
