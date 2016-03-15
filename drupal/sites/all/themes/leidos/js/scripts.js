@@ -52,7 +52,11 @@
             var val = $(this).attr(select);
 
             // Append background to parent node.
-            $(this).parent().css('background-image', 'url(' + val + ')');
+            $(this).parent().css({
+              'background-image':  'url(' + val + ')',
+              'background-repeat': 'no-repeat',
+              'background-size':   'contain'
+            });
           });
       }
 
