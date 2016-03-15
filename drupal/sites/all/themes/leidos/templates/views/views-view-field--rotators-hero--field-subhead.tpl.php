@@ -19,12 +19,12 @@
     $results = '';
 
     // Set subhead color.
-    if (isset($row->field_field_subhead_color)) {
+    if (isset($row->field_field_subhead_color[0]['rendered']['#markup'])) {
       $attributes = 'style="color:' . $row->field_field_subhead_color[0]['rendered']['#markup'] . '"';
     }
 
     // Set subhead size.
-    if (isset($row->field_field_subhead_size)) {
+    if (isset($row->field_field_subhead_size[0]['rendered']['#markup'])) {
       $results .= '<'  . $row->field_field_subhead_size[0]['rendered']['#markup'] . ' ' . $attributes . '>';
       $results .= $row->field_field_subhead[0]['rendered']['#markup'];
       $results .= '</' . $row->field_field_subhead_size[0]['rendered']['#markup'] . '>';
