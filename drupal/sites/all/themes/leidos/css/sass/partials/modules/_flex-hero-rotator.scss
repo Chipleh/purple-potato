@@ -13,7 +13,7 @@
 	clear: both;
 	display: block;
 	margin-bottom: calc(#{$multiBit} * 2);
-	overflow: hidden;
+	// overflow: hidden;
 	position: relative;
 
 	&:last-child {
@@ -21,7 +21,6 @@
 	}
 
 	.flexible-template-content {
-
 		.flexslider {
 			margin: 0;
 			border: none;
@@ -31,6 +30,10 @@
 		.flex-play {
 			opacity: 0;
 		}
+
+        .views-slideshow-controls-bottom {
+          display: none;
+        }
 
 		.flexslider-views-slideshow-main-frame {
 			margin: 0;
@@ -239,8 +242,6 @@
 	&.rotator-slide-module-height-short {
 		.flexible-template-content {
 			.hero-rotator-outer {
-				background: red;
-
 				&:before {
 					padding-top: 28.929%;
 				}

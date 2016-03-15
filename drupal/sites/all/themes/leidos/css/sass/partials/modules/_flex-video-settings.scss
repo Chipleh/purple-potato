@@ -140,12 +140,16 @@
 
 			.video-container-open {
 				position: relative;
-				z-index: 1;
+				z-index: 9999;
 
 				.button-close,
 				.field-name-field-video-tout,
 				.views-field-field-video-tout {
 					display: block;
+
+					.flex-control-nav {
+						display: block;
+					}
 				}
 			}
 		}

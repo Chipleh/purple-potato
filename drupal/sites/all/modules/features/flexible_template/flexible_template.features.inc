@@ -33,6 +33,61 @@ function flexible_template_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function flexible_template_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: flexible_template_desktop.
+  $styles['flexible_template_desktop'] = array(
+    'label' => 'Flexible Template Desktop',
+    'effects' => array(
+      6 => array(
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 1400,
+          'height' => 600,
+          'anchor' => 'center-center',
+          'disable_scale' => 0,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: flexible_template_mobile.
+  $styles['flexible_template_mobile'] = array(
+    'label' => 'Flexible Template Mobile',
+    'effects' => array(
+      5 => array(
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 750,
+          'height' => 1000,
+          'anchor' => 'center-center',
+          'disable_scale' => 0,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function flexible_template_node_info() {
