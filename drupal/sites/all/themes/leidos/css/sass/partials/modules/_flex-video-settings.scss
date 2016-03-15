@@ -165,6 +165,14 @@
 	.pane-bundle-rotator-hero {
 		.flexible-template-content {
 
+			.field-name-field-video-tout,
+			.views-field-field-video-tout {
+				video {
+					top: 150px;
+					width: 90%;
+				}
+			}
+
 			/* button play */
 			.button-play {
 				border-bottom: 6.4vw solid transparent;
