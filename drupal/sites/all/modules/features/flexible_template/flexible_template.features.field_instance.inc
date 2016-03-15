@@ -3121,6 +3121,64 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-rotator_hero-field_secondary_cta'
+  $field_instances['node-rotator_hero-field_secondary_cta'] = array(
+    'bundle' => 'rotator_hero',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_secondary_cta',
+    'label' => 'Secondary CTA',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'required',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 17,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-rotator_hero-field_subhead'
   $field_instances['node-rotator_hero-field_subhead'] = array(
     'bundle' => 'rotator_hero',
@@ -3476,6 +3534,7 @@ function flexible_template_field_default_field_instances() {
   t('Image upload supports: png, gif, jpg, jpeg at # x # pixels.');
   t('Module Height');
   t('Rotator Slide / Hero');
+  t('Secondary CTA');
   t('Selection dimensions:
 <ul>
 <li>short = 1400 x 405</li>
