@@ -307,6 +307,36 @@
 			}
 		}
 	}
+
+	&.module-no-title {
+		&.rotator-slide-module-height-tall {
+			.flexible-template-content {
+				.hero-rotator-outer {
+					.field-name-field-subhead {
+						h3,
+						h4,
+						h5 {
+							margin-top: calc(#{$multiBit} * 20);
+						}
+					}
+				}
+			}
+		}
+
+		&.rotator-slide-module-height-short {
+			.flexible-template-content {
+				.hero-rotator-outer {
+					.field-name-field-subhead {
+						h3,
+						h4,
+						h5 {
+							margin-top: calc(#{$multiBit} * 13);
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 

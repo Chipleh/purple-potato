@@ -103,6 +103,14 @@
 			margin-top: calc(#{$multiBit} * 0);
 		}
 
+		&.module-no-title {
+			h3,
+			h4,
+			h5 {
+				margin-top: calc(#{$multiBit} * 14);
+			}
+		}
+
 		/* subhead */
 		.pane-title,
 		.field-name-field-subhead {
@@ -234,6 +242,14 @@
 				line-height: calcLineHeight($multiBit , 7);
 				margin-bottom: calc(#{$multiBit} * 18);
 				margin-top: calc(#{$multiBit} * 0);
+			}
+
+			&.module-no-title {
+				h3,
+				h4,
+				h5 {
+					margin-top: calc(#{$multiBit} * 52);
+				}
 			}
 
 			/* video */

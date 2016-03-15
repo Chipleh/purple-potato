@@ -509,6 +509,48 @@
 			}
 		}
 	}
+
+	&.module-no-title {
+		&.multi-column-1 {
+			.field-name-field-subhead {
+				h3,
+				h4,
+				h5 {
+					margin-top: calc(#{$multiBit} * 13);
+				}
+			}
+		}
+
+		&.multi-column-2 {
+			.field-name-field-subhead {
+				h3,
+				h4,
+				h5 {
+					margin-top: calc(#{$multiBit} * 12);
+				}
+			}
+		}
+
+		&.multi-column-3 {
+			.field-name-field-subhead {
+				h3,
+				h4,
+				h5 {
+					margin-top: calc(#{$multiBit} * 12);
+				}
+			}
+		}
+
+		&.multi-column-4 {
+			.field-name-field-subhead {
+				h3,
+				h4,
+				h5 {
+					margin-top: calc(#{$multiBit} * 12);
+				}
+			}
+		}
+	}
 }
 
 
@@ -805,6 +847,48 @@
 
 					&:before {
 						padding-top: 106.610%;
+					}
+				}
+			}
+		}
+
+		&.module-no-title {
+			&.multi-column-1 {
+				.field-name-field-subhead {
+					h3,
+					h4,
+					h5 {
+						margin-top: calc(#{$multiBit} * 52);
+					}
+				}
+			}
+
+			&.multi-column-2 {
+				.field-name-field-subhead {
+					h3,
+					h4,
+					h5 {
+						margin-top: calc(#{$multiBit} * 52);
+					}
+				}
+			}
+
+			&.multi-column-3 {
+				.field-name-field-subhead {
+					h3,
+					h4,
+					h5 {
+						margin-top: calc(#{$multiBit} * 52);
+					}
+				}
+			}
+
+			&.multi-column-4 {
+				.field-name-field-subhead {
+					h3,
+					h4,
+					h5 {
+						margin-top: calc(#{$multiBit} * 52);
 					}
 				}
 			}
