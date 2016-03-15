@@ -21,7 +21,6 @@
 	}
 
 	.flexible-template-content {
-
 		.flexslider {
 			margin: 0;
 			border: none;
@@ -31,6 +30,10 @@
 		.flex-play {
 			opacity: 0;
 		}
+
+        .views-slideshow-controls-bottom {
+          display: none;
+        }
 
 		.flexslider-views-slideshow-main-frame {
 			margin: 0;
