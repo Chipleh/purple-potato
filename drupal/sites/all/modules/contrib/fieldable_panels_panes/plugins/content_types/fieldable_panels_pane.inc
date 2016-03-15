@@ -193,7 +193,11 @@ function fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_val
  * Submit our content type edit form.
  */
 function fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_submit($form, &$form_state) {
-  $form_state['conf']['view_mode'] = $form_state['values']['view_mode'];
+
+  // TODO: This needs to be fixed.
+  if (isset($form_state['conf']['view_mode'])) {
+    $form_state['conf']['view_mode'] = $form_state['values']['view_mode'];
+  }
 
   if (!empty($form_state['no update entity'])) {
     return;
