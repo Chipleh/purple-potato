@@ -43,9 +43,17 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'field_title_color' => 0,
+    'field_title_size' => 0,
     'title' => 0,
-    'body' => 0,
-    'field_rotator_image' => 0,
+    'field_subhead_color' => 0,
+    'field_subhead_size' => 0,
+    'field_subhead' => 0,
+    'field_background_color' => 0,
+    'field_background_image' => 0,
+    'field_background_mobile_image' => 0,
+    'field_video_tout' => 0,
+    'field_cta' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
@@ -53,10 +61,19 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'field_title_color' => 0,
+    'field_title_size' => 0,
     'title' => 0,
-    'body' => 0,
-    'field_rotator_image' => 0,
+    'field_subhead_color' => 0,
+    'field_subhead_size' => 0,
+    'field_subhead' => 0,
+    'field_background_color' => 0,
+    'field_background_image' => 0,
+    'field_background_mobile_image' => 0,
+    'field_video_tout' => 0,
+    'field_cta' => 0,
   );
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['enable'] = 1;
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';

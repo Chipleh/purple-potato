@@ -5,12 +5,12 @@
   Drupal.behaviors.leidosCapabilities = {
     attach: function(context, settings) {
 
-      // add hover state on mouse over
+      // Add hover state on mouse over.
       $('.sliding-box .inner').hover(function() {
         $(this).parent('.sliding-box').toggleClass('hover');
       });
 
-      // open slide box on content click
+      // Open slide box on content click.
       $('.sliding-box .inner').on('click', function() {
         if ($(this).parent('.sliding-box').hasClass('open')) {
           $(this).parent('.sliding-box').removeClass('open');
@@ -20,7 +20,7 @@
         $(this).parent('.sliding-box').toggleClass('open');
       });
 
-      // close slide box on close click
+      // Close slide box on close click.
       $('.sliding-box .click-box-close').on('click', function() {
         $('.open').removeClass('open');
       });
@@ -52,7 +52,11 @@
             var val = $(this).attr(select);
 
             // Append background to parent node.
-            $(this).parent().css('background-image', 'url(' + val + ')');
+            $(this).parent().css({
+              'background-image':  'url(' + val + ')',
+              'background-repeat': 'no-repeat',
+              'background-size':   'contain'
+            });
           });
       }
 
@@ -81,6 +85,23 @@
           if (field[0]) {
             var close = $('<a class="button-close" href="#"></a>'),
                 play  = $('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
+
+            // Add video player modal events.
+            play.on('click', function() {
+              $('.hero-rotator-outer',  context).addClass('video-container-open');
+              $('.node-type-flexible-template', context).addClass('video-open');
+
+              // Pause the rotator.
+              $('.views_slideshow_controls_text_pause > a').trigger('click');
+            });
+
+            close.on('click', function() {
+              $('.hero-rotator-outer',  context).removeClass('video-container-open');
+              $('.node-type-flexible-template', context).removeClass('video-open');
+
+              // Resume the rotator.
+              $('.views_slideshow_controls_text_pause > a').trigger('click');
+            });
 
             field.before(close, play);
           }
@@ -129,50 +150,21 @@
             var close = $('<a class="button-close" href="#"></a>'),
                 play  = $('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
 
+            // Add video player modal events.
+            play.on('click', function() {
+              $('.field-collection-container',  context).addClass('video-container-open');
+              $('.node-type-flexible-template', context).addClass('video-open');
+            });
+
+            close.on('click', function() {
+              $('.field-collection-container',  context).removeClass('video-container-open');
+              $('.node-type-flexible-template', context).removeClass('video-open');
+            });
+
             field.before(close, play);
           }
         });
       }
-    }
-  };
-})(jQuery);
-
-//  Capabilities Module
-//  Rhino Hooton
-//  6/29/15
-// (function($) {
-//   Drupal.behaviors.flexWorkaround = {
-//     attach: function(context, settings) {
-//       // open video pop up
-//       jQuery('.hero-rotator-inner .views-field-field-subhead').after('<a href="#" class="button-close">X</a><a href="#" class="button-play">Watch Video</a>');
-//     }
-//   };
-// })(jQuery);
-
-//  Capabilities Module
-//  Rhino Hooton
-//  6/29/15
-(function($) {
-  Drupal.behaviors.leidosFlexFunctions = {
-    attach: function(context, settings) {
-
-      // open video pop up
-      jQuery('.node-type-flexible-template .button-play').on('click', function() {
-        jQuery(this).parent().addClass('video-container-open');
-        jQuery('.node-type-flexible-template').addClass('video-open');
-
-        $('.flex-pauseplay .flex-pause').trigger('click');
-        // jQuery('.flexslider').flexslider({pausePlay: true});
-      });
-
-      // close video pop up
-      jQuery('.node-type-flexible-template .button-close').on('click', function() {
-        jQuery(this).parent().removeClass('video-container-open');
-        jQuery('.node-type-flexible-template').removeClass('video-open');
-
-        $('.flex-pauseplay .flex-play').trigger('click');
-        // jQuery('.flexslider').flexslider({pausePlay: false});
-      });
     }
   };
 })(jQuery);

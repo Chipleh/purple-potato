@@ -145,7 +145,9 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'rotator' => 'rotator',
+          'flexible_template_desktop' => 'flexible_template_desktop',
+          'flexible_template_mobile' => 0,
+          'rotator' => 0,
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
         ),
@@ -163,7 +165,6 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -213,7 +214,9 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'rotator' => 'rotator',
+          'flexible_template_desktop' => 0,
+          'flexible_template_mobile' => 'flexible_template_mobile',
+          'rotator' => 0,
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
         ),
@@ -231,7 +234,6 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -637,7 +639,9 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'rotator' => 'rotator',
+          'flexible_template_desktop' => 0,
+          'flexible_template_mobile' => 0,
+          'rotator' => 0,
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
         ),
@@ -863,14 +867,16 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'rotator' => 'rotator',
+          'flexible_template_desktop' => 0,
+          'flexible_template_mobile' => 0,
+          'rotator' => 0,
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
         ),
       ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '20 MB',
+      'max_filesize' => '2 MB',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 0,
@@ -1246,7 +1252,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['fieldable_panels_pane-feature_video-field_background_mobile_image'] = array(
     'bundle' => 'feature_video',
     'deleted' => 0,
-    'description' => 'Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>1000 x 750</em> dimensions.',
+    'description' => 'Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>750 x 1000</em> dimensions.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1279,7 +1285,9 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'rotator' => 'rotator',
+          'flexible_template_desktop' => 0,
+          'flexible_template_mobile' => 'flexible_template_mobile',
+          'rotator' => 0,
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
         ),
@@ -1297,7 +1305,6 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -2109,7 +2116,9 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'rotator' => 'rotator',
+          'flexible_template_desktop' => 0,
+          'flexible_template_mobile' => 0,
+          'rotator' => 0,
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
         ),
@@ -2127,7 +2136,6 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -2940,7 +2948,9 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'rotator' => 'rotator',
+          'flexible_template_desktop' => 'flexible_template_desktop',
+          'flexible_template_mobile' => 0,
+          'rotator' => 0,
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
         ),
@@ -2958,7 +2968,6 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -3023,7 +3032,8 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'rotator' => 'rotator',
+          'flexible_template_mobile' => 'flexible_template_mobile',
+          'rotator' => 0,
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
         ),
@@ -3041,7 +3051,6 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -3498,7 +3507,6 @@ function flexible_template_field_default_field_instances() {
   t('Image Hover');
   t('Image Link');
   t('Image Position');
-  t('Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>1000 x 750</em> dimensions.');
   t('Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>672 width</em> with no maximum height.');
   t('Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>750 x 1000</em> dimensions.');
   t('Image upload supports: <em>png, gif, jpg, jpeg</em> at dimensions based on the defined Module Height.<br>
