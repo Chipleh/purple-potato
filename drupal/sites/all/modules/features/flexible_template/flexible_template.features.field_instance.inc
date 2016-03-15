@@ -115,19 +115,14 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_columns_multi-field_background_image'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
-    'description' => 'Image upload supports: png, gif, jpg, jpeg at the following dimensions
-
-1 column [desktop]: 1400x405
-1 column [mobile]: 750x1000
-
-2 column [desktop]: 700x405
-2 column [mobile]: 750x1000
-
-3 column [desktop]: 467x405
-3 column [mobile]: 750x1000
-
-4 column [desktop]: 300x405
-4 column [mobile]: 750x1000',
+    'description' => 'Image upload supports: <em>png, gif, jpg, jpeg</em> at dimensions based on the total number of Columns selected.<br>
+<br>
+<ul>
+<li><strong>1 column</strong> <em>1400x405</em></li>
+<li><strong>2 column</strong> <em>700x405</em></li>
+<li><strong>3 column</strong> <em>467x405</em></li>
+<li><strong>4 column</strong> <em>300x405</em></li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -157,7 +152,7 @@ function flexible_template_field_default_field_instances() {
       ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '2 MB',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 0,
@@ -168,6 +163,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -194,7 +190,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_columns_multi-field_background_mobile_image'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
-    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
+    'description' => 'Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>750 x 1000</em> dimensions.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -224,9 +220,9 @@ function flexible_template_field_default_field_instances() {
       ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
+      'max_filesize' => '2 MB',
+      'max_resolution' => '750x1000',
+      'min_resolution' => '750x1000',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -235,6 +231,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -582,7 +579,7 @@ function flexible_template_field_default_field_instances() {
       'description_field' => 0,
       'file_directory' => 'videos',
       'file_extensions' => 'mp4 m4v wmv',
-      'max_filesize' => '50 MB',
+      'max_filesize' => '20 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1249,7 +1246,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['fieldable_panels_pane-feature_video-field_background_mobile_image'] = array(
     'bundle' => 'feature_video',
     'deleted' => 0,
-    'description' => 'Image upload supports: png, gif, jpg, jpeg at 1000  x 750 pixels.',
+    'description' => 'Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>1000 x 750</em> dimensions.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1289,7 +1286,7 @@ function flexible_template_field_default_field_instances() {
       ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '2 MB',
       'max_resolution' => '1000x750',
       'min_resolution' => '1000x750',
       'title_field' => 0,
@@ -1300,6 +1297,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -1378,6 +1376,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -2087,7 +2086,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['fieldable_panels_pane-long_form_copy-field_image'] = array(
     'bundle' => 'long_form_copy',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>672 width</em> with no maximum height.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2117,7 +2116,7 @@ function flexible_template_field_default_field_instances() {
       ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '2 MB',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 0,
@@ -2128,6 +2127,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -2901,7 +2901,17 @@ function flexible_template_field_default_field_instances() {
   $field_instances['node-rotator_hero-field_background_image'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
-    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
+    'description' => 'Image upload supports: <em>png, gif, jpg, jpeg</em> at dimensions based on the defined Module Height.<br>
+<br>
+<strong>Hero Rotator/Tall</strong>
+<ul>
+<li><em>1400x600</em></li>
+</ul>
+<br>
+<strong>Hero Rotator/Short</strong><br>
+<ul>
+<li><em>1400x405</em></li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2937,7 +2947,7 @@ function flexible_template_field_default_field_instances() {
       ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '20 MB',
+      'max_filesize' => '2 MB',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 0,
@@ -2948,6 +2958,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
@@ -2973,7 +2984,17 @@ function flexible_template_field_default_field_instances() {
   $field_instances['node-rotator_hero-field_background_mobile_image'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
-    'description' => 'Image upload supports: png, gif, jpg, jpeg at 750 x 1000 pixels.',
+    'description' => 'Image upload supports: <em>png, gif, jpg, jpeg</em> at dimensions based on the defined Module Height.<br>
+<br>
+<strong>Hero Rotator/Tall</strong>
+<ul>
+<li><em>750x1000</em></li>
+</ul>
+<br>
+<strong>Hero Rotator/Short</strong><br>
+<ul>
+<li><em>750x1000</em></li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3331,7 +3352,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['node-rotator_hero-field_video_tout'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
-    'description' => 'For best modal window results the recommended dimensions for the video file are greater than 1024 x 768',
+    'description' => 'For best results the recommended video resolution is greater than <em>1024 x 768</em>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3411,6 +3432,7 @@ function flexible_template_field_default_field_instances() {
   t('Display header');
   t('Enable Drop Cap');
   t('For best modal window results the recommended dimensions for the video file are greater than 1024 x 768');
+  t('For best results the recommended video resolution is greater than <em>1024 x 768</em>');
   t('Grid Type');
   t('Icon item');
   t('Image');
@@ -3418,22 +3440,40 @@ function flexible_template_field_default_field_instances() {
   t('Image Hover');
   t('Image Link');
   t('Image Position');
+  t('Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>1000 x 750</em> dimensions.');
+  t('Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>672 width</em> with no maximum height.');
+  t('Image upload supports: <em>png, gif, jpg, jpeg</em> at <em>750 x 1000</em> dimensions.');
+  t('Image upload supports: <em>png, gif, jpg, jpeg</em> at dimensions based on the defined Module Height.<br>
+<br>
+<strong>Hero Rotator/Tall</strong>
+<ul>
+<li><em>1400x600</em></li>
+</ul>
+<br>
+<strong>Hero Rotator/Short</strong><br>
+<ul>
+<li><em>1400x405</em></li>
+</ul>');
+  t('Image upload supports: <em>png, gif, jpg, jpeg</em> at dimensions based on the defined Module Height.<br>
+<br>
+<strong>Hero Rotator/Tall</strong>
+<ul>
+<li><em>750x1000</em></li>
+</ul>
+<br>
+<strong>Hero Rotator/Short</strong><br>
+<ul>
+<li><em>750x1000</em></li>
+</ul>');
+  t('Image upload supports: <em>png, gif, jpg, jpeg</em> at dimensions based on the total number of Columns selected.<br>
+<br>
+<ul>
+<li><strong>1 column</strong> <em>1400x405</em></li>
+<li><strong>2 column</strong> <em>700x405</em></li>
+<li><strong>3 column</strong> <em>467x405</em></li>
+<li><strong>4 column</strong> <em>300x405</em></li>
+</ul>');
   t('Image upload supports: png, gif, jpg, jpeg at # x # pixels.');
-  t('Image upload supports: png, gif, jpg, jpeg at 1000  x 750 pixels.');
-  t('Image upload supports: png, gif, jpg, jpeg at 750 x 1000 pixels.');
-  t('Image upload supports: png, gif, jpg, jpeg at the following dimensions
-
-1 column [desktop]: 1400x405
-1 column [mobile]: 750x1000
-
-2 column [desktop]: 700x405
-2 column [mobile]: 750x1000
-
-3 column [desktop]: 467x405
-3 column [mobile]: 750x1000
-
-4 column [desktop]: 300x405
-4 column [mobile]: 750x1000');
   t('Module Height');
   t('Rotator Slide / Hero');
   t('Selection dimensions:

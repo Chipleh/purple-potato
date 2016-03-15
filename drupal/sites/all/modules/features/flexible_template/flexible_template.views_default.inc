@@ -114,17 +114,6 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_background_color']['field'] = 'field_background_color';
   $handler->display->display_options['fields']['field_background_color']['label'] = '';
   $handler->display->display_options['fields']['field_background_color']['element_label_colon'] = FALSE;
-  /* Field: Field: Background Image */
-  $handler->display->display_options['fields']['field_background_image']['id'] = 'field_background_image';
-  $handler->display->display_options['fields']['field_background_image']['table'] = 'field_data_field_background_image';
-  $handler->display->display_options['fields']['field_background_image']['field'] = 'field_background_image';
-  $handler->display->display_options['fields']['field_background_image']['label'] = '';
-  $handler->display->display_options['fields']['field_background_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_background_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_background_image']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
   /* Field: Field: Background Mobile Image */
   $handler->display->display_options['fields']['field_background_mobile_image']['id'] = 'field_background_mobile_image';
   $handler->display->display_options['fields']['field_background_mobile_image']['table'] = 'field_data_field_background_mobile_image';
@@ -161,12 +150,6 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_cta']['label'] = '';
   $handler->display->display_options['fields']['field_cta']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_cta']['click_sort_column'] = 'url';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_secondary_cta']['id'] = 'field_secondary_cta';
-  $handler->display->display_options['fields']['field_secondary_cta']['table'] = 'field_data_field_secondary_cta';
-  $handler->display->display_options['fields']['field_secondary_cta']['field'] = 'field_secondary_cta';
-  $handler->display->display_options['fields']['field_secondary_cta']['label'] = '';
-  $handler->display->display_options['fields']['field_secondary_cta']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
