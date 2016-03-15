@@ -100,6 +100,7 @@ function flexible_template_preprocess_field(&$variables) {
     $rotator = views_get_view('rotators_hero');
     $rotator->set_display('rotator_hero_pane');
     if (!empty($arguments)) {
+      $rotator->set_arguments(array(implode(',', $arguments)));
       $rotator->set_items_per_page(count($arguments));
     }
     $rotator->pre_execute();
