@@ -6153,6 +6153,7 @@ p.subtext {
 /* line 141, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #main-wrapper .video-container-open {
   position: relative;
+  z-index: 9999;
 }
 /* line 145, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .button-close,
