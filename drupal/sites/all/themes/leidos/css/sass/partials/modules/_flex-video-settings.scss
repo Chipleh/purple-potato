@@ -168,10 +168,16 @@
 
 			.field-name-field-video-tout,
 			.views-field-field-video-tout {
-				iframe,
+				iframe {
+					top: 8px;
+					width: 90% !important;
+					height: auto !important;
+					min-height: 445px;
+				}
+
 				video {
 					top: 150px;
-					width: 90% !important;
+					width: 90%;
 				}
 			}
 
