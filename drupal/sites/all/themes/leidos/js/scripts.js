@@ -89,9 +89,15 @@
       $('video > source', context)
         .each(function() {
           if ($(this).attr('type') == 'video/youtube') {
-            var iframe = $('<iframe>');
-            iframe[0].src = 'https://www.youtube.com/embed/' + $(this)[0].src.replace(/^.*\?v=(\w+)$/, '$1');
-            $(this).parent().replaceWith(iframe);
+            var iframe = $('<iframe>')
+              .css({
+                height: '610px',
+                width:  '1000px'
+              });
+
+            if ($(this)[0].src) {
+              iframe[0].src = 'https://www.youtube.com/embed/' + $(this)[0].src.replace(/^.*\?v=(\w+)$/, '$1');
+            }
           }
         });
     }
