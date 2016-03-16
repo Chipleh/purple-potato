@@ -34,6 +34,7 @@
 				width: 100%;
 			}
 
+			iframe,
 			video {
 				border: 10px solid $color-gray-medium-dark;
 				display: block;
@@ -164,6 +165,22 @@
 	.pane-bundle-feature-video,
 	.pane-bundle-rotator-hero {
 		.flexible-template-content {
+
+			.field-name-field-video-tout,
+			.views-field-field-video-tout {
+				iframe,
+				video {
+					top: 150px;
+					width: 90%;
+				}
+			}
+
+			/* button close */
+			.button-close {
+				right: 0;
+				top: 82px;
+			}
+
 
 			/* button play */
 			.button-play {

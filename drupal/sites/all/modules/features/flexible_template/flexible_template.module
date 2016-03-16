@@ -154,7 +154,18 @@ function flexible_template_preprocess_page(&$vars) {
 function flexible_template_preprocess_panels_pane(&$variables) {
   $content = &$variables['content'];
 
-  $field_title = (isset($content['field_title_item'])) ? 'field_title_item' : 'title';
+  $field_title = NULL;
+
+  // Check if title has been defined.  If not, add a class to indicate this.
+  if (isset($content['field_title_item'])) {
+    $field_title = 'field_title_item';
+  }
+  elseif (isset($content['title'])) {
+    $field_title =  'title';
+  }
+  else {
+    $variables['classes_array'][] = 'flex-template-module-no-title';
+  }
 
   // Set background color.
   if (isset($content['field_background_color'])) {
