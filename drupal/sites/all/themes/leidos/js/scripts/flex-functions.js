@@ -15,8 +15,7 @@
 			jQuery('.node-type-flexible-template .button-close').on('click', function () {
 				jQuery(this).parent().removeClass('video-container-open');
 				jQuery('.node-type-flexible-template').removeClass('video-open');
-				$('.flex-pauseplay .flex-play').trigger('click');
-				$('video').get(0).stop();
+				$('.flex-pauseplay .flex-play').trigger('click');  
 				// jQuery('.flexslider').flexslider({pausePlay: false});
 			});
 		}

@@ -17,6 +17,11 @@
 function flexible_template_preprocess_field_collection_item(&$variables) {
   $content = &$variables['content'];
 
+  // Check if title has been defined.  If not, add a class to indicate this.
+  if (!isset($content['field_title_item'])) {
+    $variables['classes_array'][] = 'flex-template-module-no-title';
+  }
+
   // Set title color.
   if (isset($content['field_title_color'])) {
     $content['field_title_item'][0]['#attributes'] = array('style' => 'color:' . $content['field_title_color']['#items'][0]['rgb']);
@@ -37,6 +42,9 @@ function flexible_template_preprocess_field_collection_item(&$variables) {
   flexible_template_preprocess_subhead($variables);
 }
 
+/**
+ * @callback
+ */
 function flexible_template_preprocess_field_columns_multi(&$variables) {
 
   // Preprocess Field Collection elements.
@@ -46,13 +54,18 @@ function flexible_template_preprocess_field_columns_multi(&$variables) {
   flexible_template_append_background_attributes($variables);
 }
 
+/**
+ * @callback
+ */
 function flexible_template_preprocess_field_icon_item(&$variables) {
 
   // Preprocess Field Collection elements.
   flexible_template_preprocess_field_collection_item($variables);
 }
 
-
+/**
+ * @callback
+ */
 function flexible_template_preprocess_field_thumbnail_image_item(&$variables) {
 
   // Preprocess Field Collection elements.
