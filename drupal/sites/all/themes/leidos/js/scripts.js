@@ -77,7 +77,7 @@
   };
 })(jQuery);
 
-//  Globall action
+//  Global action
 //  Replace YouTube video VIDEO instances with Google supported IFRAME
 //  Marc S. Brooks
 //  3/15/16
@@ -98,6 +98,8 @@
             if ($(this)[0].src) {
               iframe[0].src = 'https://www.youtube.com/embed/' + $(this)[0].src.replace(/^.*\?v=(\w+)$/, '$1');
             }
+
+            $(this).parent().replaceWith(iframe);
           }
         });
     }
@@ -137,11 +139,13 @@
               // Resume the rotator.
               $('.views_slideshow_controls_text_pause > a').trigger('click');
 
-              // Disable video.
+              // Disable HTML5 video.
               var video = document.getElementsByTagName('video');
               for (key in video) {
-                video[key].pause();
-                video[key].currentTime = 0;
+                if (video.hasOwnProperty(key)) {
+                  video[key].pause();
+                  video[key].currentTime = 0;
+                }
               }
             });
 
@@ -202,11 +206,21 @@
               $('.field-collection-container',  context).removeClass('video-container-open');
               $('.node-type-flexible-template', context).removeClass('video-open');
 
-              // Disable video.
+              // Disable HTML5 video.
               var video = document.getElementsByTagName('video');
               for (key in video) {
-                video[key].pause();
-                video[key].currentTime = 0;
+                if (video.hasOwnProperty(key)) {
+                  video[key].pause();
+                  video[key].currentTime = 0;
+                }
+              }
+
+              // Disable YouTube player.
+              var iframe = document.getElementsByTagName('iframe');
+              for (key in iframe) {
+                if (iframe.hasOwnProperty(key)) {
+                  iframe[key].src = iframe[key].src;
+                }
               }
             });
 
