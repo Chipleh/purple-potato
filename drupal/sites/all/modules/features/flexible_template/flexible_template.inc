@@ -42,9 +42,6 @@ function flexible_template_preprocess_field_collection_item(&$variables) {
   flexible_template_preprocess_subhead($variables);
 }
 
-/**
- * @callback
- */
 function flexible_template_preprocess_field_columns_multi(&$variables) {
 
   // Preprocess Field Collection elements.
@@ -54,18 +51,13 @@ function flexible_template_preprocess_field_columns_multi(&$variables) {
   flexible_template_append_background_attributes($variables);
 }
 
-/**
- * @callback
- */
 function flexible_template_preprocess_field_icon_item(&$variables) {
 
   // Preprocess Field Collection elements.
   flexible_template_preprocess_field_collection_item($variables);
 }
 
-/**
- * @callback
- */
+
 function flexible_template_preprocess_field_thumbnail_image_item(&$variables) {
 
   // Preprocess Field Collection elements.

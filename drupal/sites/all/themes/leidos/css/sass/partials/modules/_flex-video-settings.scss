@@ -141,7 +141,7 @@
 
 			.video-container-open {
 				position: relative;
-				z-index: 9999;
+				// z-index: 9999;
 
 				.button-close,
 				.field-name-field-video-tout,
@@ -168,7 +168,13 @@
 
 			.field-name-field-video-tout,
 			.views-field-field-video-tout {
-				iframe,
+				iframe {
+					top: 8px;
+					width: 90% !important;
+					height: auto !important;
+					min-height: 445px;
+				}
+
 				video {
 					top: 150px;
 					width: 90%;
@@ -177,10 +183,9 @@
 
 			/* button close */
 			.button-close {
-				right: 0;
-				top: 82px;
+				right: 110px;
+				top: 7px;
 			}
-
 
 			/* button play */
 			.button-play {

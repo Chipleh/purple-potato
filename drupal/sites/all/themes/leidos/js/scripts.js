@@ -51,8 +51,16 @@
           .each(function() {
             var val = $(this).attr(select);
 
-            // Append background to parent node.
-            $(this).parent().css({
+            // Append background to parent node, unless it's a panel container.
+            var target = $(this).parent();
+
+            if ($(this).hasClass('panel-pane')) {
+
+              // Add inline style.
+              target = $(this);
+            }
+
+            target.css({
               'background-image':  'url(' + val + ')',
               'background-repeat': 'no-repeat',
               'background-size':   'contain'
@@ -69,7 +77,7 @@
   };
 })(jQuery);
 
-//  Globall action
+//  Global action
 //  Replace YouTube video VIDEO instances with Google supported IFRAME
 //  Marc S. Brooks
 //  3/15/16
@@ -131,10 +139,14 @@
               // Resume the rotator.
               $('.views_slideshow_controls_text_pause > a').trigger('click');
 
-              // Disable video.
-              var video = document.getElementsByTagName('video')[0];
-              video.pause();
-              video.currentTime = 0;
+              // Disable HTML5 video.
+              var video = document.getElementsByTagName('video');
+              for (key in video) {
+                if (video.hasOwnProperty(key)) {
+                  video[key].pause();
+                  video[key].currentTime = 0;
+                }
+              }
             });
 
             field.before(close, play);
@@ -194,10 +206,22 @@
               $('.field-collection-container',  context).removeClass('video-container-open');
               $('.node-type-flexible-template', context).removeClass('video-open');
 
-              // Disable video.
-              var video = document.getElementsByTagName('video')[0];
-              video.pause();
-              video.currentTime = 0;
+              // Disable HTML5 video.
+              var video = document.getElementsByTagName('video');
+              for (key in video) {
+                if (video.hasOwnProperty(key)) {
+                  video[key].pause();
+                  video[key].currentTime = 0;
+                }
+              }
+
+              // Disable YouTube player.
+              var iframe = document.getElementsByTagName('iframe');
+              for (key in iframe) {
+                if (iframe.hasOwnProperty(key)) {
+                  iframe[key].src = iframe[key].src;
+                }
+              }
             });
 
             field.before(close, play);
