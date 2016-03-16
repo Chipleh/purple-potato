@@ -51,8 +51,14 @@
           .each(function() {
             var val = $(this).attr(select);
 
-            // Append background to parent node.
-            $(this).parent().css({
+            // Append background to parent node, unless it's a panel container.
+            var target = $(this).parent();
+
+            if ($(this).hasClass('panel-pane')) {
+              target = $(this);   // Add inline style.
+            }
+
+            target.css({
               'background-image':  'url(' + val + ')',
               'background-repeat': 'no-repeat',
               'background-size':   'contain'
@@ -65,35 +71,6 @@
 
       // Init on load.
       defineStyles();
-    }
-  };
-})(jQuery);
-
-//  Globall action
-//  Replace YouTube video VIDEO instances with Google supported IFRAME
-//  Marc S. Brooks
-//  3/15/16
-(function($) {
-  Drupal.behaviors.flexibleTemplateYouTubeVideo = {
-    attach: function(context, settings) {
-
-      // If YouTube type, replace HTML5 VIDEO element
-      $('video > source', context)
-        .each(function() {
-          if ($(this).attr('type') == 'video/youtube') {
-            var iframe = $('<iframe>')
-              .css({
-                height: '610px',
-                width:  '1000px'
-              });
-
-            if ($(this)[0].src) {
-              iframe[0].src = 'https://www.youtube.com/embed/' + $(this)[0].src.replace(/^.*\?v=(\w+)$/, '$1');
-            }
-
-            $(this).parent().replaceWith(iframe);
-          }
-        });
     }
   };
 })(jQuery);
@@ -132,9 +109,11 @@
               $('.views_slideshow_controls_text_pause > a').trigger('click');
 
               // Disable video.
-              var video = document.getElementsByTagName('video')[0];
-              video.pause();
-              video.currentTime = 0;
+              var video = document.getElementsByTagName('video');
+              for (key in video) {
+                video[key].pause();
+                video[key].currentTime = 0;
+              }
             });
 
             field.before(close, play);
@@ -195,9 +174,11 @@
               $('.node-type-flexible-template', context).removeClass('video-open');
 
               // Disable video.
-              var video = document.getElementsByTagName('video')[0];
-              video.pause();
-              video.currentTime = 0;
+              var video = document.getElementsByTagName('video');
+              for (key in video) {
+                video[key].pause();
+                video[key].currentTime = 0;
+              }
             });
 
             field.before(close, play);

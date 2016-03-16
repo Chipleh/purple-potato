@@ -34,7 +34,6 @@
 				width: 100%;
 			}
 
-			iframe,
 			video {
 				border: 10px solid $color-gray-medium-dark;
 				display: block;
@@ -141,7 +140,7 @@
 
 			.video-container-open {
 				position: relative;
-				z-index: 9999;
+				// z-index: 9999;
 
 				.button-close,
 				.field-name-field-video-tout,
@@ -168,7 +167,6 @@
 
 			.field-name-field-video-tout,
 			.views-field-field-video-tout {
-				iframe,
 				video {
 					top: 150px;
 					width: 90%;
