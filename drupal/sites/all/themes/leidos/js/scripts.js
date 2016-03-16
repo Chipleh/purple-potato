@@ -51,8 +51,14 @@
           .each(function() {
             var val = $(this).attr(select);
 
-            // Append background to parent node.
-            $(this).parent().css({
+            // Append background to parent node, unless it's a panel container.
+            var target = $(this).parent();
+
+            if ($(this).hasClass('panel-pane')) {
+              target = $(this);   // Add inline style.
+            }
+
+            target.css({
               'background-image':  'url(' + val + ')',
               'background-repeat': 'no-repeat',
               'background-size':   'contain'
