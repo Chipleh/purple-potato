@@ -69,6 +69,27 @@
   };
 })(jQuery);
 
+//  Globall action
+//  Replace YouTube video VIDEO instances with Google supported IFRAME
+//  Marc S. Brooks
+//  3/15/16
+(function($) {
+  Drupal.behaviors.flexibleTemplateYouTubeVideo = {
+    attach: function(context, settings) {
+
+      // If YouTube type, replace HTML5 VIDEO element
+      $('video > source', context)
+        .each(function() {
+          if ($(this).attr('type') == 'video/youtube') {
+            var iframe = $('<iframe>');
+            iframe[0].src = 'https://www.youtube.com/embed/' + $(this)[0].src.replace(/^.*\?v=(\w+)$/, '$1');
+            $(this).parent().replaceWith(iframe);
+          }
+        });
+    }
+  };
+})(jQuery);
+
 //  Hero/Rotator module
 //  Marc S. Brooks
 //  3/8/16
