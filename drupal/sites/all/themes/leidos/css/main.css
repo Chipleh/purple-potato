@@ -6207,8 +6207,8 @@ p.subtext {
   .pane-bundle-multi-column .flexible-template-content .button-close,
   .pane-bundle-feature-video .flexible-template-content .button-close,
   .pane-bundle-rotator-hero .flexible-template-content .button-close {
-    right: 0;
-    top: 82px;
+    right: 110px;
+    top: 7px;
   }
   /* line 191, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play,
