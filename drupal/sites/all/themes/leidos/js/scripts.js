@@ -103,9 +103,11 @@
               $('.views_slideshow_controls_text_pause > a').trigger('click');
 
               // Disable video.
-              var video = document.getElementsByTagName('video')[0];
-              video.pause();
-              video.currentTime = 0;
+              var video = document.getElementsByTagName('video');
+              for (key in video) {
+                video[key].pause();
+                video[key].currentTime = 0;
+              }
             });
 
             field.before(close, play);
@@ -166,9 +168,11 @@
               $('.node-type-flexible-template', context).removeClass('video-open');
 
               // Disable video.
-              var video = document.getElementsByTagName('video')[0];
-              video.pause();
-              video.currentTime = 0;
+              var video = document.getElementsByTagName('video');
+              for (key in video) {
+                video[key].pause();
+                video[key].currentTime = 0;
+              }
             });
 
             field.before(close, play);
