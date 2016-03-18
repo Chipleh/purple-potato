@@ -47,6 +47,7 @@
 
 		/* button close */
 		.button-close {
+            cursor: pointer;
 			display: none;
 			font-size: 0;
 			height: 60px;
@@ -86,7 +87,6 @@
 			overflow: visible;
 			position: relative;
 			width: 0;
-			//z-index: 1;
 
 			&:before {
 				background: $color-white;
@@ -101,7 +101,6 @@
 				top: -2.98vw;
 				transition: all .5s ease;
 				width: 6vw;
-				//z-index: 1;
 			}
 
 			&:after {
@@ -117,7 +116,6 @@
 				top: -2.5vw;
 				transition: all .5s ease;
 				width: 5vw;
-				//z-index: 1;
 			}
 
 			&:hover {
@@ -141,8 +139,6 @@
 
 			.video-container-open {
 				position: relative;
-				// z-index: 9999;
-
 				.button-close,
 				.field-name-field-video-tout,
 				.views-field-field-video-tout {
