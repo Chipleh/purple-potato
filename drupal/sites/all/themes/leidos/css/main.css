@@ -6154,6 +6154,10 @@ p.subtext {
 .node-type-flexible-template.video-open #main-wrapper {
   z-index: 100;
 }
+/* line 142, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+.node-type-flexible-template.video-open #main-wrapper .video-container-open {
+  position: relative;
+}
 /* line 146, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .button-close,
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .field-name-field-video-tout,
