@@ -144,7 +144,7 @@ function flexible_template_preprocess_page(&$vars) {
   global $user;
 
   if (in_array('administrator', $user->roles)) {
-    drupal_add_js(drupal_get_path('module','flexible_template') . '/js/flexible-template.js');
+    drupal_add_js(drupal_get_path('module', 'flexible_template') . '/js/flexible-template.js');
   }
 }
 
