@@ -589,6 +589,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
           'youtube' => 'youtube',
         ),
@@ -3462,8 +3463,8 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
-          'youtube' => 'youtube',
         ),
         'allowed_types' => array(
           'audio' => 0,
@@ -3476,7 +3477,6 @@ function flexible_template_field_default_field_instances() {
           'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 'media_internet',
           'upload' => 'upload',
         ),
       ),

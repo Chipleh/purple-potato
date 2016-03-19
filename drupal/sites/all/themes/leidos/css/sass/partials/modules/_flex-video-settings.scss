@@ -47,13 +47,12 @@
 
 		/* button close */
 		.button-close {
-            cursor: pointer;
 			display: none;
 			font-size: 0;
 			height: 60px;
 			outline: none;
 			position: fixed;
-			right: 15%;
+			right: 26%;
 			top: calc(50vh - 351px);
 			width: 60px;
 			z-index: 10000;
@@ -87,6 +86,7 @@
 			overflow: visible;
 			position: relative;
 			width: 0;
+			//z-index: 1;
 
 			&:before {
 				background: $color-white;
@@ -101,6 +101,7 @@
 				top: -2.98vw;
 				transition: all .5s ease;
 				width: 6vw;
+				//z-index: 1;
 			}
 
 			&:after {
@@ -116,6 +117,7 @@
 				top: -2.5vw;
 				transition: all .5s ease;
 				width: 5vw;
+				//z-index: 1;
 			}
 
 			&:hover {
@@ -138,7 +140,9 @@
 			z-index: 100;
 
 			.video-container-open {
-				position: relative;
+				// position: relative;
+				// z-index: 9999;
+
 				.button-close,
 				.field-name-field-video-tout,
 				.views-field-field-video-tout {

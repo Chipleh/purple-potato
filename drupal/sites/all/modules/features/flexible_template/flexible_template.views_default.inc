@@ -131,14 +131,12 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_background_color']['field'] = 'field_background_color';
   $handler->display->display_options['fields']['field_background_color']['label'] = '';
   $handler->display->display_options['fields']['field_background_color']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_background_color']['hide_empty'] = TRUE;
   /* Field: Field: Background Image */
   $handler->display->display_options['fields']['field_background_image']['id'] = 'field_background_image';
   $handler->display->display_options['fields']['field_background_image']['table'] = 'field_data_field_background_image';
   $handler->display->display_options['fields']['field_background_image']['field'] = 'field_background_image';
   $handler->display->display_options['fields']['field_background_image']['label'] = '';
   $handler->display->display_options['fields']['field_background_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_background_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_background_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_background_image']['settings'] = array(
     'image_style' => '',
@@ -150,7 +148,6 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_background_mobile_image']['field'] = 'field_background_mobile_image';
   $handler->display->display_options['fields']['field_background_mobile_image']['label'] = '';
   $handler->display->display_options['fields']['field_background_mobile_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_background_mobile_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_background_mobile_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_background_mobile_image']['settings'] = array(
     'image_style' => '',
@@ -162,7 +159,6 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_video_tout']['field'] = 'field_video_tout';
   $handler->display->display_options['fields']['field_video_tout']['label'] = '';
   $handler->display->display_options['fields']['field_video_tout']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_video_tout']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_video_tout']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_video_tout']['type'] = 'file_video';
   $handler->display->display_options['fields']['field_video_tout']['settings'] = array(
@@ -181,7 +177,6 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_cta']['field'] = 'field_cta';
   $handler->display->display_options['fields']['field_cta']['label'] = '';
   $handler->display->display_options['fields']['field_cta']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_cta']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_cta']['click_sort_column'] = 'url';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';

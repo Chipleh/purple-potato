@@ -43,8 +43,7 @@
 
         if (width > 960) {
           select = 'data-background-desktop';
-        }
-        else {
+        } else {
           select = 'data-background-mobile';
         }
 
@@ -113,34 +112,28 @@
 (function($) {
   Drupal.behaviors.flexibleTemplateHeroRotator = {
     attach: function(context, settings) {
-      var panes = $('.pane-bundle-rotator-hero', context);
-      if (panes[0]) {
-        panes.each(function() {
-          var pane = $(this);
-
-          if (pane.find('.button-close')[0] || pane.find('.button-play')[0]) return;
+      var pane = $('.pane-bundle-rotator-hero', context);
+      if (pane[0]) {
+        pane.each(function() {
+          if ($(this).find('.button-close')[0] || $(this).find('.button-play')[0]) return;
 
           // Dynamically append Play/Close buttons prior to video tout field.
-          var field = pane.find('.views-field-field-video-tout');
+          var field = $(this).find('.views-field-field-video-tout');
           if (field[0]) {
-            var close = $('<a class="button-close"></a>'),
-                play  = $('<a class="button-play">' + Drupal.t('Watch Video') + '</a>');
+            var close = $('<a class="button-close" href="#"></a>'),
+                play  = $('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
 
             // Add video player modal events.
-            play.on('click', function(event) {
-              event.preventDefault();
-
-              $('.hero-rotator-outer', pane).addClass('video-container-open');
+            play.on('click', function() {
+              $('.hero-rotator-outer',  context).addClass('video-container-open');
               $('.node-type-flexible-template', context).addClass('video-open');
 
               // Pause the rotator.
               $('.views_slideshow_controls_text_pause > a').trigger('click');
             });
 
-            close.on('click', function(event) {
-              event.preventDefault();
-
-              $('.hero-rotator-outer', pane).removeClass('video-container-open');
+            close.on('click', function() {
+              $('.hero-rotator-outer',  context).removeClass('video-container-open');
               $('.node-type-flexible-template', context).removeClass('video-open');
 
               // Resume the rotator.
@@ -152,14 +145,6 @@
                 if (video.hasOwnProperty(key)) {
                   video[key].pause();
                   video[key].currentTime = 0;
-                }
-              }
-
-              // Disable YouTube player.
-              var iframe = document.getElementsByTagName('iframe');
-              for (key in iframe) {
-                if (iframe.hasOwnProperty(key)) {
-                  iframe[key].src = iframe[key].src;
                 }
               }
             });
@@ -200,34 +185,26 @@
 (function($) {
   Drupal.behaviors.flexibleTemplateMultiColumn = {
     attach: function(context, settings) {
-      var cols = $('.pane-bundle-multi-column').find('.column');
-      if (cols[0]) {
-        cols.each(function() {
-          var col = $(this);
-
-          if (col.find('.button-close')[0] || col.find('.button-play')[0]) return;
+      var pane = $('.pane-bundle-multi-column', context);
+      if (pane[0]) {
+        pane.each(function() {
+          if ($(this).find('.button-close')[0] || $(this).find('.button-play')[0]) return;
 
           // Dynamically append Play/Close buttons prior to video field.
-          var field = col.find('.field-name-field-video-tout');
+          var field = $(this).find('.field-name-field-video-tout');
           if (field[0]) {
-            var close = $('<a class="button-close"></a>'),
-                play  = $('<a class="button-play">' + Drupal.t('Watch Video') + '</a>');
+            var close = $('<a class="button-close" href="#"></a>'),
+                play  = $('<a class="button-play" href="#">' + Drupal.t('Watch Video') + '</a>');
 
             // Add video player modal events.
-            play.on('click', function(event) {
-              event.preventDefault();
-
-              $(this).parent().addClass('video-container-open');
-
-              $('.node-type-flexible-template').addClass('video-open');
+            play.on('click', function() {
+              $('.field-collection-container',  context).addClass('video-container-open');
+              $('.node-type-flexible-template', context).addClass('video-open');
             });
 
-            close.on('click', function(event) {
-              event.preventDefault();
-
-              $(this).parent().removeClass('video-container-open');
-
-              $('.node-type-flexible-template').removeClass('video-open');
+            close.on('click', function() {
+              $('.field-collection-container',  context).removeClass('video-container-open');
+              $('.node-type-flexible-template', context).removeClass('video-open');
 
               // Disable HTML5 video.
               var video = document.getElementsByTagName('video');
