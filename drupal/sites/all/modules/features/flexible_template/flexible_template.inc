@@ -38,6 +38,14 @@ function flexible_template_preprocess_field_collection_item(&$variables) {
     unset($content['field_title_size']);
   }
 
+  // Set background color.
+  if (isset($content['field_background_color'])) {
+    if (!isset($content['field_background_image'])) {
+      $variables['attributes_array']['style'][] = 'background-color:' . $content['field_background_color']['#items'][0]['rgb'];
+    }
+    unset($content['field_background_color']);
+  }
+
   // Preprocess Subhead elements.
   flexible_template_preprocess_subhead($variables);
 }
