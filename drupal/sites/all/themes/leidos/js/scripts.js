@@ -154,14 +154,6 @@
                   video[key].currentTime = 0;
                 }
               }
-
-              // Disable YouTube player.
-              var iframe = document.getElementsByTagName('iframe');
-              for (key in iframe) {
-                if (iframe.hasOwnProperty(key)) {
-                  iframe[key].src = iframe[key].src;
-                }
-              }
             });
 
             field.before(close, play);
