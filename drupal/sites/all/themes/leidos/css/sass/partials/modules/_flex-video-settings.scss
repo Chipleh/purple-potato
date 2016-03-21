@@ -169,7 +169,8 @@
 			.field-name-field-video-tout,
 			.views-field-field-video-tout {
 				iframe {
-					top: 8px;
+					// top: 8px;
+					top: 150px;
 					width: 90% !important;
 					height: auto !important;
 					min-height: 445px;
@@ -184,7 +185,7 @@
 			/* button close */
 			.button-close {
 				right: 110px;
-				top: 7px;
+				top: 150px;
 			}
 
 			/* button play */
