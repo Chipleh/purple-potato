@@ -47,7 +47,7 @@ function flexible_template_preprocess_field(&$variables) {
   if ($variables['element']['#field_name'] == 'field_icons') {
     foreach ($variables['items'] as $key => &$item) {
 
-      // Addend custom classes for field collection items.
+      // Append custom classes for field collection items.
       $variables['items'][$key]['#attributes'] = array(
         'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
       );
@@ -61,11 +61,20 @@ function flexible_template_preprocess_field(&$variables) {
   //
   elseif ($variables['element']['#field_name'] == 'field_columns_multi') {
     foreach ($variables['items'] as $key => &$item) {
+      $item['#attributes'] = array();
 
-      // Addend custom classes for field collection items.
-      $item['#attributes'] = array(
-        'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
-      );
+      // Set background color.
+      $content = &current($item['entity']['field_collection_item']);
+
+      if (isset($content['field_background_color'])) {
+        if (!isset($content['field_background_image'])) {
+          $item['#attributes']['style'] = 'background-color:' . $content['field_background_color']['#items'][0]['rgb'];
+        }
+        unset($content['field_background_color']);
+      }
+
+      // Append custom classes for field collection items.
+      $item['#attributes']['class'] = array('column', 'column-' . $key, 'columns-total-' . count($variables['items']));
     }
   }
 
@@ -77,7 +86,7 @@ function flexible_template_preprocess_field(&$variables) {
   elseif ($variables['element']['#field_name'] == 'field_columns_multi_parallax') {
     foreach ($variables['items'] as $key => &$item) {
 
-      // Addend custom classes for field collection items.
+      // Append custom classes for field collection items.
       $variables['items'][$key]['#attributes'] = array(
         'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
       );
@@ -128,7 +137,7 @@ function flexible_template_preprocess_field(&$variables) {
   //
   elseif ($variables['element']['#field_name'] == 'field_thumbnail_gallery') {
 
-    // Addend custom classes for field collection items.
+    // Append custom classes for field collection items.
     foreach ($variables['items'] as $key => &$item) {
       $variables['items'][$key]['#attributes'] = array(
         'class' => array('column', 'column-' . $key, 'columns-total-' . count($variables['items'])),
