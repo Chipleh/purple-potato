@@ -6048,10 +6048,11 @@ p.subtext {
   display: block;
   margin: 0 auto;
   position: relative;
-  top: calc(50vh - 360px);
-  width: 70%;
+  top: 140px;
+  width: 695px !important;
+  height: 400px !important;
 }
-/* line 49, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 50, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-close,
 .pane-bundle-rotator-hero .flexible-template-content .button-close {
   display: none;
@@ -6059,12 +6060,12 @@ p.subtext {
   height: 60px;
   outline: none;
   position: fixed;
-  right: 22%;
-  top: calc(50vh - 360px);
+  right: calc(50% - 360px);
+  top: 80px;
   width: 60px;
   z-index: 10000;
 }
-/* line 60, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 61, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-close:before,
 .pane-bundle-rotator-hero .flexible-template-content .button-close:before {
   color: #fff;
@@ -6078,7 +6079,7 @@ p.subtext {
           transform: rotate(45deg);
   width: 100%;
 }
-/* line 73, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 74, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play,
 .pane-bundle-rotator-hero .flexible-template-content .button-play {
   border-bottom: 1.4vw solid transparent;
@@ -6097,7 +6098,7 @@ p.subtext {
   position: relative;
   width: 0;
 }
-/* line 91, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 92, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play:before,
 .pane-bundle-rotator-hero .flexible-template-content .button-play:before {
   background: #fff;
@@ -6113,7 +6114,7 @@ p.subtext {
   transition: all .5s ease;
   width: 6vw;
 }
-/* line 107, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 108, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play:after,
 .pane-bundle-rotator-hero .flexible-template-content .button-play:after {
   background: #fff;
@@ -6129,28 +6130,28 @@ p.subtext {
   transition: all .5s ease;
   width: 5vw;
 }
-/* line 124, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 125, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play:hover:before,
 .pane-bundle-rotator-hero .flexible-template-content .button-play:hover:before {
   opacity: .55;
 }
 
 /* video open */
-/* line 135, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 136, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #header {
   z-index: 1;
 }
-/* line 139, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 140, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #main-wrapper {
   z-index: 100;
 }
-/* line 146, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 147, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .button-close,
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .field-name-field-video-tout,
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .views-field-field-video-tout {
   display: block;
 }
-/* line 151, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+/* line 152, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .button-close .flex-control-nav,
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .field-name-field-video-tout .flex-control-nav,
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .views-field-field-video-tout .flex-control-nav {
@@ -6160,43 +6161,39 @@ p.subtext {
 /*  tablet & mobile
 **************************************************/
 @media only screen and (max-width: 960px) {
-  /* line 167, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+  /* line 168, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content,
   .pane-bundle-feature-video .flexible-template-content,
   .pane-bundle-rotator-hero .flexible-template-content {
     /* button close */
     /* button play */
   }
-  /* line 171, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+  /* line 172, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .field-name-field-video-tout iframe,
+  .pane-bundle-multi-column .flexible-template-content .field-name-field-video-tout video,
   .pane-bundle-multi-column .flexible-template-content .views-field-field-video-tout iframe,
+  .pane-bundle-multi-column .flexible-template-content .views-field-field-video-tout video,
   .pane-bundle-feature-video .flexible-template-content .field-name-field-video-tout iframe,
+  .pane-bundle-feature-video .flexible-template-content .field-name-field-video-tout video,
   .pane-bundle-feature-video .flexible-template-content .views-field-field-video-tout iframe,
+  .pane-bundle-feature-video .flexible-template-content .views-field-field-video-tout video,
   .pane-bundle-rotator-hero .flexible-template-content .field-name-field-video-tout iframe,
-  .pane-bundle-rotator-hero .flexible-template-content .views-field-field-video-tout iframe {
+  .pane-bundle-rotator-hero .flexible-template-content .field-name-field-video-tout video,
+  .pane-bundle-rotator-hero .flexible-template-content .views-field-field-video-tout iframe,
+  .pane-bundle-rotator-hero .flexible-template-content .views-field-field-video-tout video {
     top: 150px;
     width: 90% !important;
     height: auto !important;
     min-height: 445px;
   }
-  /* line 179, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
-  .pane-bundle-multi-column .flexible-template-content .field-name-field-video-tout video,
-  .pane-bundle-multi-column .flexible-template-content .views-field-field-video-tout video,
-  .pane-bundle-feature-video .flexible-template-content .field-name-field-video-tout video,
-  .pane-bundle-feature-video .flexible-template-content .views-field-field-video-tout video,
-  .pane-bundle-rotator-hero .flexible-template-content .field-name-field-video-tout video,
-  .pane-bundle-rotator-hero .flexible-template-content .views-field-field-video-tout video {
-    top: 150px;
-    width: 90%;
-  }
-  /* line 186, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+  /* line 183, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-close,
   .pane-bundle-feature-video .flexible-template-content .button-close,
   .pane-bundle-rotator-hero .flexible-template-content .button-close {
-    right: 110px;
-    top: 150px;
+    right: 40px;
+    top: 80px;
   }
-  /* line 192, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+  /* line 189, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play,
   .pane-bundle-feature-video .flexible-template-content .button-play,
   .pane-bundle-rotator-hero .flexible-template-content .button-play {
@@ -6205,7 +6202,7 @@ p.subtext {
     border-top: 6.4vw solid transparent;
     margin-bottom: calc(0.643vw * 28);
   }
-  /* line 198, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+  /* line 195, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play:before,
   .pane-bundle-feature-video .flexible-template-content .button-play:before,
   .pane-bundle-rotator-hero .flexible-template-content .button-play:before {
@@ -6214,7 +6211,7 @@ p.subtext {
     top: -13vw;
     width: 26vw;
   }
-  /* line 205, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
+  /* line 202, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play:after,
   .pane-bundle-feature-video .flexible-template-content .button-play:after,
   .pane-bundle-rotator-hero .flexible-template-content .button-play:after {

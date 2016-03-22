@@ -40,8 +40,9 @@
 				display: block;
 				margin: 0 auto;
 				position: relative;
-				top: calc(50vh - 360px);
-				width: 70%;
+				top: 140px;
+				width: 695px !important;
+				height: 400px !important;
 			}
 		}
 
@@ -52,8 +53,8 @@
 			height: 60px;
 			outline: none;
 			position: fixed;
-			right: 22%;
-			top: calc(50vh - 360px);
+			right: calc(50% - 360px);
+			top: 80px;
 			width: 60px;
 			z-index: 10000;
 
@@ -168,24 +169,20 @@
 
 			.field-name-field-video-tout,
 			.views-field-field-video-tout {
-				iframe {
+				iframe,
+				video {
 					// top: 8px;
 					top: 150px;
 					width: 90% !important;
 					height: auto !important;
 					min-height: 445px;
 				}
-
-				video {
-					top: 150px;
-					width: 90%;
-				}
 			}
 
 			/* button close */
 			.button-close {
-				right: 110px;
-				top: 150px;
+				right: 40px;
+				top: 80px;
 			}
 
 			/* button play */
