@@ -159,6 +159,7 @@ function flexible_template_views_default_views() {
   $handler->display->display_options['fields']['field_video_tout']['field'] = 'field_video_tout';
   $handler->display->display_options['fields']['field_video_tout']['label'] = '';
   $handler->display->display_options['fields']['field_video_tout']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video_tout']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_video_tout']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_video_tout']['type'] = 'file_video';
   $handler->display->display_options['fields']['field_video_tout']['settings'] = array(
