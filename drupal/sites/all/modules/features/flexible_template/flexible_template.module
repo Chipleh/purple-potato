@@ -64,7 +64,7 @@ function flexible_template_preprocess_field(&$variables) {
       $item['#attributes'] = array();
 
       // Set background color.
-      $content = &current($item['entity']['field_collection_item']);
+      $content = current($item['entity']['field_collection_item']);
 
       if (isset($content['field_background_color'])) {
         if (!isset($content['field_background_image'])) {
