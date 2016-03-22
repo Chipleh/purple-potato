@@ -41,7 +41,7 @@
         var width  = $('body').width(),
             select = null;
 
-        if (width > 960) {
+        if (width > 961) {
           select = 'data-background-desktop';
         }
         else {
