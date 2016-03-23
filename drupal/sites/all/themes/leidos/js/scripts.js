@@ -41,10 +41,11 @@
         var width  = $('body').width(),
             select = null;
 
-        if (width > 961) {
+        if (width >= 961) {
           select = 'data-background-desktop';
         }
-        else {
+        else
+        if (width < 961) {
           select = 'data-background-mobile';
         }
 
