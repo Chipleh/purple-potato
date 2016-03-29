@@ -367,6 +367,10 @@ function flexible_template_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
         'rows' => 5,
       ),
       'type' => 'text_textarea',
@@ -417,7 +421,29 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => '<h5>One Column</h5>
+<ul>
+<li>H3 (mobile & desktop) - 114 characters (will need adjustment)</li>
+<li>H4 (mobile & desktop) - 130- characters (will need adjustment)</li>
+</ul>
+
+<h5>Two Column</h5>
+<ul>
+<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
+<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+</ul>
+
+<h5>Three Column</h5>
+<ul>
+<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
+<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+</ul>
+
+<h5>Four Column</h5>
+<ul>
+<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
+<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -521,7 +547,29 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => '<h5>One Column</h5>
+<ul>
+<li>H1 (mobile & desktop) - 23 characters</li>
+<li>H2 (mobile & desktop) - ?</li>
+</ul>
+
+<h5>Two Column</h5>
+<ul>
+<li>H1 (mobile & desktop) - 23 characters</li>
+<li>H2 (mobile & desktop) - ? characters</li>
+</ul>
+
+<h5>Three Column</h5>
+<ul>
+<li>H1 (mobile & desktop) - 10 characters (will need adjustment)</li>
+<li>H2 (mobile & desktop) - 42 characters</li>
+</ul>
+
+<h5>Four Column</h5>
+<ul>
+<li>H1 (mobile & desktop) - 26 characters</li>
+<li>H2 (mobile & desktop) - 38 characters</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1593,7 +1641,10 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => '<ul>
+<li>H3 (mobile & desktop) - 110 characters</li>
+<li>H4 (mobile & desktop) - 122 characters</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1677,7 +1728,10 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => '<ul>
+<li>H1 (mobile & desktop) - 22 characters</li>
+<li>H2 (mobile & desktop) - 27 characters</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2270,7 +2324,10 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => '<ul>
+<li>H1 (mobile & desktop) - 23 characters</li>
+<li>H2 (mobile & desktop) - 28 characters</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3307,7 +3364,10 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => '<ul>
+<li>H3 (mobile & desktop) - 110 characters</li>
+<li>H4 (mobile & desktop) - 122 characters</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3385,7 +3445,10 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => '<ul>
+<li>H1 (mobile & desktop) - 22 characters</li>
+<li>H2 (mobile & desktop) - 27 characters</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3487,6 +3550,64 @@ function flexible_template_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<h5>One Column</h5>
+<ul>
+<li>H1 (mobile & desktop) - 23 characters</li>
+<li>H2 (mobile & desktop) - ?</li>
+</ul>
+
+<h5>Two Column</h5>
+<ul>
+<li>H1 (mobile & desktop) - 23 characters</li>
+<li>H2 (mobile & desktop) - ? characters</li>
+</ul>
+
+<h5>Three Column</h5>
+<ul>
+<li>H1 (mobile & desktop) - 10 characters (will need adjustment)</li>
+<li>H2 (mobile & desktop) - 42 characters</li>
+</ul>
+
+<h5>Four Column</h5>
+<ul>
+<li>H1 (mobile & desktop) - 26 characters</li>
+<li>H2 (mobile & desktop) - 38 characters</li>
+</ul>');
+  t('<h5>One Column</h5>
+<ul>
+<li>H3 (mobile & desktop) - 114 characters (will need adjustment)</li>
+<li>H4 (mobile & desktop) - 130- characters (will need adjustment)</li>
+</ul>
+
+<h5>Two Column</h5>
+<ul>
+<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
+<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+</ul>
+
+<h5>Three Column</h5>
+<ul>
+<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
+<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+</ul>
+
+<h5>Four Column</h5>
+<ul>
+<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
+<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+</ul>');
+  t('<ul>
+<li>H1 (mobile & desktop) - 22 characters</li>
+<li>H2 (mobile & desktop) - 27 characters</li>
+</ul>');
+  t('<ul>
+<li>H1 (mobile & desktop) - 23 characters</li>
+<li>H2 (mobile & desktop) - 28 characters</li>
+</ul>');
+  t('<ul>
+<li>H3 (mobile & desktop) - 110 characters</li>
+<li>H4 (mobile & desktop) - 122 characters</li>
+</ul>');
   t('Background Color');
   t('Background Image');
   t('Background Mobile Image');
