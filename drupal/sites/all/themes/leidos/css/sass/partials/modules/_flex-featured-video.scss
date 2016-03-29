@@ -208,7 +208,7 @@
 
 			h1 {
 				font-size: 10vw;
-				height: calc(#{$multiBit} * 32);
+				height: calc(#{$multiBit} * 34);
 				line-height: calcLineHeight($multiBit , 16);
 				margin-bottom: calc(#{$multiBit} * 4);
 				margin-top: calc(#{$multiBit} * 16);
@@ -216,7 +216,7 @@
 
 			h2 {
 				font-size: 8vw;
-				height: calc(#{$multiBit} * 32);
+				height: calc(#{$multiBit} * 34);
 				line-height: calcLineHeight($multiBit , 16);
 				margin-bottom: calc(#{$multiBit} * 4);
 				margin-top: calc(#{$multiBit} * 16);
