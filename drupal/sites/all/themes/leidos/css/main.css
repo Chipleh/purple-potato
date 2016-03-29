@@ -4546,7 +4546,7 @@ p.subtext {
   /* line 209, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content h1 {
     font-size: 10vw;
-    height: calc(0.643vw * 32);
+    height: calc(0.643vw * 34);
     line-height: 10.288vw;
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
@@ -4554,7 +4554,7 @@ p.subtext {
   /* line 217, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content h2 {
     font-size: 8vw;
-    height: calc(0.643vw * 32);
+    height: calc(0.643vw * 34);
     line-height: 10.288vw;
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
