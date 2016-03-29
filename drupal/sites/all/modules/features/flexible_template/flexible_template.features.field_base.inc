@@ -571,7 +571,6 @@ function flexible_template_field_default_field_bases() {
       'allowed_values' => array(
         'h3' => 'h3',
         'h4' => 'h4',
-        'h5' => 'h5',
       ),
       'allowed_values_function' => '',
     ),
