@@ -946,6 +946,11 @@ p.subtext {
   font-size: 11px;
 }
 
+/* line 81, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_misc.scss */
+.ctools-modal-content .ds-4col > .group-first {
+  width: auto !important;
+}
+
 /*  tablet
 **************************************************/
 /*  mobile
