@@ -261,7 +261,7 @@ function flexible_template_field_default_field_instances() {
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => '(mobile & desktop) - 15 characters',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -423,26 +423,26 @@ function flexible_template_field_default_field_instances() {
     'deleted' => 0,
     'description' => '<h5>One Column</h5>
 <ul>
-<li>H3 (mobile & desktop) - 114 characters (will need adjustment)</li>
-<li>H4 (mobile & desktop) - 130- characters (will need adjustment)</li>
+<li>H3 (mobile & desktop) - 156 characters</li>
+<li>H4 (mobile & desktop) - 188- characters</li>
 </ul>
 
 <h5>Two Column</h5>
 <ul>
-<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
-<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+<li>H3 (mobile & desktop) - 156 characters</li>
+<li>H4 (mobile & desktop) - 188 characters</li>
 </ul>
 
 <h5>Three Column</h5>
 <ul>
-<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
-<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+<li>H3 (mobile & desktop) - 87 characters</li>
+<li>H4 (mobile & desktop) - 188 characters</li>
 </ul>
 
 <h5>Four Column</h5>
 <ul>
-<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
-<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+<li>H3 (mobile & desktop) - 109 characters</li>
+<li>H4 (mobile & desktop) - 188 characters</li>
 </ul>',
     'display' => array(
       'default' => array(
@@ -519,17 +519,51 @@ function flexible_template_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_title_item',
     'label' => 'Title',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+          'restricted_html' => 'restricted_html',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+            'restricted_html' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -549,26 +583,26 @@ function flexible_template_field_default_field_instances() {
     'deleted' => 0,
     'description' => '<h5>One Column</h5>
 <ul>
-<li>H1 (mobile & desktop) - 23 characters</li>
-<li>H2 (mobile & desktop) - ?</li>
+<li>H1 (mobile & desktop) - 34 characters</li>
+<li>H2 (mobile & desktop) - 40 characters</li>
 </ul>
 
 <h5>Two Column</h5>
 <ul>
-<li>H1 (mobile & desktop) - 23 characters</li>
-<li>H2 (mobile & desktop) - ? characters</li>
+<li>H1 (mobile & desktop) - 30 characters</li>
+<li>H2 (mobile & desktop) - 34 characters</li>
 </ul>
 
 <h5>Three Column</h5>
 <ul>
-<li>H1 (mobile & desktop) - 10 characters (will need adjustment)</li>
-<li>H2 (mobile & desktop) - 42 characters</li>
+<li>H1 (mobile & desktop) - 30 characters</li>
+<li>H2 (mobile & desktop) - 66 characters</li>
 </ul>
 
 <h5>Four Column</h5>
 <ul>
-<li>H1 (mobile & desktop) - 26 characters</li>
-<li>H2 (mobile & desktop) - 38 characters</li>
+<li>H1 (mobile & desktop) - 50 characters</li>
+<li>H2 (mobile & desktop) - 60 characters</li>
 </ul>',
     'display' => array(
       'default' => array(
@@ -1460,7 +1494,7 @@ function flexible_template_field_default_field_instances() {
     'bundle' => 'feature_video',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => '(mobile & desktop) - 15 characters',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1642,8 +1676,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'deleted' => 0,
     'description' => '<ul>
-<li>H3 (mobile & desktop) - 110 characters</li>
-<li>H4 (mobile & desktop) - 122 characters</li>
+<li>H3 (mobile & desktop) - 156 characters</li>
+<li>H4 (mobile & desktop) - 188 characters</li>
 </ul>',
     'display' => array(
       'default' => array(
@@ -1729,8 +1763,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'deleted' => 0,
     'description' => '<ul>
-<li>H1 (mobile & desktop) - 22 characters</li>
-<li>H2 (mobile & desktop) - 27 characters</li>
+<li>H1 (mobile & desktop) - 34 characters</li>
+<li>H2 (mobile & desktop) - 40 characters</li>
 </ul>',
     'display' => array(
       'default' => array(
@@ -2325,8 +2359,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'deleted' => 0,
     'description' => '<ul>
-<li>H1 (mobile & desktop) - 23 characters</li>
-<li>H2 (mobile & desktop) - 28 characters</li>
+<li>H1 (mobile & desktop) - 34 characters</li>
+<li>H2 (mobile & desktop) - 40 characters</li>
 </ul>',
     'display' => array(
       'default' => array(
@@ -3136,7 +3170,7 @@ function flexible_template_field_default_field_instances() {
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => '(mobile & desktop) - 15 characters',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3365,8 +3399,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'deleted' => 0,
     'description' => '<ul>
-<li>H3 (mobile & desktop) - 110 characters</li>
-<li>H4 (mobile & desktop) - 122 characters</li>
+<li>H3 (mobile & desktop) - 156 characters</li>
+<li>H4 (mobile & desktop) - 188 characters</li>
 </ul>',
     'display' => array(
       'default' => array(
@@ -3446,8 +3480,8 @@ function flexible_template_field_default_field_instances() {
     ),
     'deleted' => 0,
     'description' => '<ul>
-<li>H1 (mobile & desktop) - 22 characters</li>
-<li>H2 (mobile & desktop) - 27 characters</li>
+<li>H1 (mobile & desktop) - 34 characters</li>
+<li>H2 (mobile & desktop) - 40 characters</li>
 </ul>',
     'display' => array(
       'default' => array(
@@ -3550,63 +3584,60 @@ function flexible_template_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('(mobile & desktop) - 15 characters');
   t('<h5>One Column</h5>
 <ul>
-<li>H1 (mobile & desktop) - 23 characters</li>
-<li>H2 (mobile & desktop) - ?</li>
+<li>H1 (mobile & desktop) - 34 characters</li>
+<li>H2 (mobile & desktop) - 40 characters</li>
 </ul>
 
 <h5>Two Column</h5>
 <ul>
-<li>H1 (mobile & desktop) - 23 characters</li>
-<li>H2 (mobile & desktop) - ? characters</li>
+<li>H1 (mobile & desktop) - 30 characters</li>
+<li>H2 (mobile & desktop) - 34 characters</li>
 </ul>
 
 <h5>Three Column</h5>
 <ul>
-<li>H1 (mobile & desktop) - 10 characters (will need adjustment)</li>
-<li>H2 (mobile & desktop) - 42 characters</li>
+<li>H1 (mobile & desktop) - 30 characters</li>
+<li>H2 (mobile & desktop) - 66 characters</li>
 </ul>
 
 <h5>Four Column</h5>
 <ul>
-<li>H1 (mobile & desktop) - 26 characters</li>
-<li>H2 (mobile & desktop) - 38 characters</li>
+<li>H1 (mobile & desktop) - 50 characters</li>
+<li>H2 (mobile & desktop) - 60 characters</li>
 </ul>');
   t('<h5>One Column</h5>
 <ul>
-<li>H3 (mobile & desktop) - 114 characters (will need adjustment)</li>
-<li>H4 (mobile & desktop) - 130- characters (will need adjustment)</li>
+<li>H3 (mobile & desktop) - 156 characters</li>
+<li>H4 (mobile & desktop) - 188- characters</li>
 </ul>
 
 <h5>Two Column</h5>
 <ul>
-<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
-<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+<li>H3 (mobile & desktop) - 156 characters</li>
+<li>H4 (mobile & desktop) - 188 characters</li>
 </ul>
 
 <h5>Three Column</h5>
 <ul>
-<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
-<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+<li>H3 (mobile & desktop) - 87 characters</li>
+<li>H4 (mobile & desktop) - 188 characters</li>
 </ul>
 
 <h5>Four Column</h5>
 <ul>
-<li>H3 (mobile & desktop) - 54 characters (will need adjustment)</li>
-<li>H4 (mobile & desktop) - 120 characters (will need adjustment)</li>
+<li>H3 (mobile & desktop) - 109 characters</li>
+<li>H4 (mobile & desktop) - 188 characters</li>
 </ul>');
   t('<ul>
-<li>H1 (mobile & desktop) - 22 characters</li>
-<li>H2 (mobile & desktop) - 27 characters</li>
+<li>H1 (mobile & desktop) - 34 characters</li>
+<li>H2 (mobile & desktop) - 40 characters</li>
 </ul>');
   t('<ul>
-<li>H1 (mobile & desktop) - 23 characters</li>
-<li>H2 (mobile & desktop) - 28 characters</li>
-</ul>');
-  t('<ul>
-<li>H3 (mobile & desktop) - 110 characters</li>
-<li>H4 (mobile & desktop) - 122 characters</li>
+<li>H3 (mobile & desktop) - 156 characters</li>
+<li>H4 (mobile & desktop) - 188 characters</li>
 </ul>');
   t('Background Color');
   t('Background Image');
