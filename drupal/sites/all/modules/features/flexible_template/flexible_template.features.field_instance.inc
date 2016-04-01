@@ -421,25 +421,25 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '<h5>One Column</h5>
+    'description' => '<strong>One Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 156 characters</li>
 <li>H4 (mobile & desktop) - 188- characters</li>
 </ul>
-
-<h5>Two Column</h5>
+<br>
+<strong>Two Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 156 characters</li>
 <li>H4 (mobile & desktop) - 188 characters</li>
 </ul>
-
-<h5>Three Column</h5>
+<br>
+<strong>Three Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 87 characters</li>
 <li>H4 (mobile & desktop) - 188 characters</li>
 </ul>
-
-<h5>Four Column</h5>
+<br>
+<strong>Four Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 109 characters</li>
 <li>H4 (mobile & desktop) - 188 characters</li>
@@ -581,25 +581,25 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '<h5>One Column</h5>
+    'description' => '<strong>One Column</strong>
 <ul>
 <li>H1 (mobile & desktop) - 34 characters</li>
 <li>H2 (mobile & desktop) - 40 characters</li>
 </ul>
-
-<h5>Two Column</h5>
+<br>
+<strong>Two Column</strong>
 <ul>
 <li>H1 (mobile & desktop) - 30 characters</li>
 <li>H2 (mobile & desktop) - 34 characters</li>
 </ul>
-
-<h5>Three Column</h5>
+<br>
+<strong>Three Column</strong>
 <ul>
 <li>H1 (mobile & desktop) - 30 characters</li>
 <li>H2 (mobile & desktop) - 66 characters</li>
 </ul>
-
-<h5>Four Column</h5>
+<br>
+<strong>Four Column</strong>
 <ul>
 <li>H1 (mobile & desktop) - 50 characters</li>
 <li>H2 (mobile & desktop) - 60 characters</li>
@@ -3585,48 +3585,48 @@ function flexible_template_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('(mobile & desktop) - 15 characters');
-  t('<h5>One Column</h5>
+  t('<strong>One Column</strong>
 <ul>
 <li>H1 (mobile & desktop) - 34 characters</li>
 <li>H2 (mobile & desktop) - 40 characters</li>
 </ul>
-
-<h5>Two Column</h5>
+<br>
+<strong>Two Column</strong>
 <ul>
 <li>H1 (mobile & desktop) - 30 characters</li>
 <li>H2 (mobile & desktop) - 34 characters</li>
 </ul>
-
-<h5>Three Column</h5>
+<br>
+<strong>Three Column</strong>
 <ul>
 <li>H1 (mobile & desktop) - 30 characters</li>
 <li>H2 (mobile & desktop) - 66 characters</li>
 </ul>
-
-<h5>Four Column</h5>
+<br>
+<strong>Four Column</strong>
 <ul>
 <li>H1 (mobile & desktop) - 50 characters</li>
 <li>H2 (mobile & desktop) - 60 characters</li>
 </ul>');
-  t('<h5>One Column</h5>
+  t('<strong>One Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 156 characters</li>
 <li>H4 (mobile & desktop) - 188- characters</li>
 </ul>
-
-<h5>Two Column</h5>
+<br>
+<strong>Two Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 156 characters</li>
 <li>H4 (mobile & desktop) - 188 characters</li>
 </ul>
-
-<h5>Three Column</h5>
+<br>
+<strong>Three Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 87 characters</li>
 <li>H4 (mobile & desktop) - 188 characters</li>
 </ul>
-
-<h5>Four Column</h5>
+<br>
+<strong>Four Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 109 characters</li>
 <li>H4 (mobile & desktop) - 188 characters</li>
