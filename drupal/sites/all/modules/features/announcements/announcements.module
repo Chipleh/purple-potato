@@ -5,3 +5,73 @@
  */
 
 include_once 'announcements.features.inc';
+
+/**
+ * Implements hook_block_info().
+ */
+function announcements_block_info() {
+  // Announcements media block.
+  $blocks['announcements_media'] = array(
+    'info'  => t('Announcment Media'),
+  );
+  return $blocks;
+}
+
+/*
+* Implements hook_block_view().
+*/
+function announcements_block_view($delta = '') {
+  switch ($delta) {
+    case 'announcements_media':
+      $node = menu_get_object();
+      $image = '';
+      if (isset($node->field_image[LANGUAGE_NONE])) {
+        $uri = $node->field_image[LANGUAGE_NONE][0]['uri'];
+        $image = image_style_url('announcement_detail', $uri);
+      }
+      $video = '';
+      if (isset($node->field_video_tout[LANGUAGE_NONE])) {
+        $uri = $node->field_video_tout[LANGUAGE_NONE][0]['uri'];
+        $video = $uri;
+      }
+      $caption = '';
+      if (isset($node->field_image_caption[LANGUAGE_NONE])) {
+        $caption = $node->field_image_caption[LANGUAGE_NONE][0]['value'];
+      }
+      $icons = '';
+      $alignment = '';
+      if (isset($node->field_media_placement[LANGUAGE_NONE])) {
+        $alignment = $node->field_media_placement[LANGUAGE_NONE][0]['value'];
+      }
+      $block['content'] = theme(
+        'announcements_media',
+        array(
+          'image' => $image,
+          'video' => $video,
+          'caption' => $caption,
+          'icons' => $icons,
+          'alignment' => $alignment
+        )
+      );
+      break;
+  }
+  return $block;
+}
+
+/*
+* Implements hook_theme().
+*/
+function announcements_theme() {
+  return array(
+    'announcements_media' => array(
+      'variables' => array(
+        'image' => '',
+        'video' => '',
+        'caption' => '',
+        'icons' => '',
+        'alignment' => ''
+      ),
+      'template' => 'templates/announcements-media',
+    ),
+  );
+}
