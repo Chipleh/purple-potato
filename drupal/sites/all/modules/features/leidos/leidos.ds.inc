@@ -972,22 +972,10 @@ function leidos_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'body',
-        1 => 'field_industry',
-        2 => 'field_announcement_type',
-        3 => 'field_authors',
-        4 => 'field_announcement_date',
-        5 => 'field_external_link',
-        6 => 'field_contact_information',
       ),
     ),
     'fields' => array(
       'body' => 'ds_content',
-      'field_industry' => 'ds_content',
-      'field_announcement_type' => 'ds_content',
-      'field_authors' => 'ds_content',
-      'field_announcement_date' => 'ds_content',
-      'field_external_link' => 'ds_content',
-      'field_contact_information' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
