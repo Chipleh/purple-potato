@@ -36,6 +36,7 @@ features[field_instance][] = node-announcement-field_industry
 features[field_instance][] = node-announcement-field_media_placement
 features[field_instance][] = node-announcement-field_video_tout
 features[image][] = announcement_detail
+features[image][] = announcement_icon
 features[node][] = announcement
 features[panelizer_defaults][] = node:announcement:default
 features[panelizer_defaults][] = node:announcement:default:default

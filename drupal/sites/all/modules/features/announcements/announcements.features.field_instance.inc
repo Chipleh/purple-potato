@@ -428,7 +428,7 @@ function announcements_field_default_field_instances() {
     'settings' => array(
       'description_field' => 0,
       'file_directory' => 'announcements/videos',
-      'file_extensions' => 'txt',
+      'file_extensions' => 'mp4 m4v wmv',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),

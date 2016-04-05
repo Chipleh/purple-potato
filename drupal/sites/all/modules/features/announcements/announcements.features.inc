@@ -43,6 +43,21 @@ function announcements_image_default_styles() {
     ),
   );
 
+  // Exported image style: announcement_icon.
+  $styles['announcement_icon'] = array(
+    'label' => 'Announcement icon',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 50,
+          'height' => 50,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
