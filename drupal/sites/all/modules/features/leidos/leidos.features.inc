@@ -188,14 +188,6 @@ function leidos_image_default_styles() {
  */
 function leidos_node_info() {
   $items = array(
-    'announcement' => array(
-      'name' => t('Announcement'),
-      'base' => 'node_content',
-      'description' => t('Global news item content type that can be categorized using taxonomy.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'flexible_page' => array(
       'name' => t('Flexible page'),
       'base' => 'node_content',
