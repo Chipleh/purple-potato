@@ -48,6 +48,25 @@ function announcements_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-261a2533-6dca-469f-97a3-c36bd2674e79';
+    $pane->panel = 'left_rail';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:662';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '261a2533-6dca-469f-97a3-c36bd2674e79';
+    $display->content['new-261a2533-6dca-469f-97a3-c36bd2674e79'] = $pane;
+    $display->panels['left_rail'][0] = 'new-261a2533-6dca-469f-97a3-c36bd2674e79';
+    $pane = new stdClass();
     $pane->pid = 'new-22684936-db06-4531-bd9e-875cc9f67bfe';
     $pane->panel = 'right_rail';
     $pane->type = 'block';
