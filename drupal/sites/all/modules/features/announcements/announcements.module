@@ -24,6 +24,12 @@ function announcements_block_view($delta = '') {
   switch ($delta) {
     case 'announcements_media':
       $node = menu_get_object();
+
+      // Alignment.
+      $alignment = '';
+      if (isset($node->field_media_placement[LANGUAGE_NONE])) {
+        $alignment = $node->field_media_placement[LANGUAGE_NONE][0]['value'];
+      }
       // Image.
       $image = '';
       if (isset($node->field_image[LANGUAGE_NONE])) {
@@ -34,7 +40,20 @@ function announcements_block_view($delta = '') {
       $video = '';
       if (isset($node->field_video_tout[LANGUAGE_NONE])) {
         $uri = $node->field_video_tout[LANGUAGE_NONE][0]['uri'];
+        $mime = $node->field_video_tout[LANGUAGE_NONE][0]['filemime'];
         $video = file_create_url($uri);
+        if ($mime == 'video/youtube') {
+          // YouTube video.
+          $video = str_replace('watch?v=', 'embed/', $video);
+          $video = '<iframe width="660" height="320" src="' . $video . '" frameborder="0" allowfullscreen></iframe>';
+        }
+        else {
+          // Uploaded video.
+          $video = '
+          <video controls="controls">
+            <source src="' . $video .'" type="' . $mime . '">
+          </video>';
+        }
       }
       // Caption.
       $caption = '';
@@ -47,31 +66,32 @@ function announcements_block_view($delta = '') {
         foreach ($node->field_icon_item[LANGUAGE_NONE] as $key => $icon_item) {
           $icon = field_collection_item_load($icon_item['value']);
           $uri = $icon->field_image[LANGUAGE_NONE][0]['uri'];
-          $image = image_style_url('announcement_icon', $uri);
+          $icon_image = image_style_url('announcement_icon', $uri);
           $title = $icon->field_image_link[LANGUAGE_NONE][0]['title'];
           $url = $icon->field_image_link[LANGUAGE_NONE][0]['url'];
           $output = '
           <div class="icon">
-            <image src="' . $image . '">
+            <image src="' . $icon_image . '">
             <span class="title">'. $title . '</span>
           </div>';
           $icons .= l($output, $url, array('html' => TRUE));
         }
       }
-      // Alignment.
-      $alignment = '';
-      if (isset($node->field_media_placement[LANGUAGE_NONE])) {
-        $alignment = $node->field_media_placement[LANGUAGE_NONE][0]['value'];
+      // Body.
+      $body = '';
+      if (isset($node->body[LANGUAGE_NONE])) {
+        $body = $node->body[LANGUAGE_NONE][0]['value'];
       }
       // Render the themed media section.
       $block['content'] = theme(
         'announcements_media',
         array(
+          'alignment' => $alignment,
           'image' => $image,
           'video' => $video,
           'caption' => $caption,
           'icons' => $icons,
-          'alignment' => $alignment
+          'body' => $body,
         )
       );
       break;
@@ -86,11 +106,12 @@ function announcements_theme() {
   return array(
     'announcements_media' => array(
       'variables' => array(
+        'alignment' => '',
         'image' => '',
         'video' => '',
         'caption' => '',
         'icons' => '',
-        'alignment' => ''
+        'body' => ''
       ),
       'template' => 'templates/announcements-media',
     ),
