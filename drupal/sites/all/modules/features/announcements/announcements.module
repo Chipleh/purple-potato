@@ -72,7 +72,6 @@ function announcements_block_view($delta = '') {
           $output = '
           <div class="icon">
             <image src="' . $icon_image . '">
-            <span class="title">'. $title . '</span>
           </div>';
           $icons .= l($output, $url, array('html' => TRUE));
         }
