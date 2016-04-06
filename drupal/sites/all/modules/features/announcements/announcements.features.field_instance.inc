@@ -175,7 +175,7 @@ function announcements_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 10,
+      'weight' => 15,
     ),
   );
 
@@ -247,7 +247,7 @@ function announcements_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 7,
+      'weight' => 12,
     ),
   );
 
@@ -317,7 +317,7 @@ function announcements_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 14,
     ),
   );
 
@@ -456,7 +456,7 @@ function announcements_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 8,
+      'weight' => 13,
     ),
   );
 

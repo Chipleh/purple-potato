@@ -26,8 +26,8 @@ function announcements_field_group_info() {
       0 => 'body',
       1 => 'field_industry',
       2 => 'field_announcement_type',
-      3 => 'title',
-      4 => 'field_announcement_date',
+      3 => 'field_announcement_date',
+      4 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -54,11 +54,11 @@ function announcements_field_group_info() {
     'label' => 'Media',
     'weight' => '1',
     'children' => array(
-      0 => 'field_image',
-      1 => 'field_video_tout',
-      2 => 'field_media_placement',
-      3 => 'field_image_caption',
-      4 => 'field_icon_item',
+      0 => 'field_icon_item',
+      1 => 'field_image',
+      2 => 'field_image_caption',
+      3 => 'field_media_placement',
+      4 => 'field_video_tout',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

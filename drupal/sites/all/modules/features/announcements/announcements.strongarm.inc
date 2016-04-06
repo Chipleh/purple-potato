@@ -150,7 +150,7 @@ function announcements_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_announcement';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_announcement'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -182,6 +182,20 @@ function announcements_strongarm() {
     ),
   );
   $export['panelizer_defaults_node_announcement'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:announcement:default_selection';
+  $strongarm->value = 'node:announcement:default:default';
+  $export['panelizer_node:announcement:default_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:announcement:page_manager_selection';
+  $strongarm->value = 'node:announcement:default';
+  $export['panelizer_node:announcement:page_manager_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
