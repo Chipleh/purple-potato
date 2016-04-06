@@ -438,13 +438,13 @@ function announcements_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
-          'youtube' => 0,
+          'youtube' => 'youtube',
         ),
         'allowed_types' => array(
           'audio' => 0,
           'document' => 0,
-          'image' => 'image',
-          'video' => 0,
+          'image' => 0,
+          'video' => 'video',
         ),
         'browser_plugins' => array(
           'media_browser_plus--media_browser_my_files' => 0,
