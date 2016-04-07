@@ -11,11 +11,11 @@ function announcements_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'Announcements';
+  $view->name = 'announcements';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'announcements';
+  $view->human_name = 'Announcements';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
