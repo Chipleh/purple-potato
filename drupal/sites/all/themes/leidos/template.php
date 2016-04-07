@@ -67,12 +67,19 @@ function leidos_preprocess_page(&$variables) {
     // Add classes for vertices banner.
     if (isset($display->panels['top_banner'])) {
       foreach ($display->panels['top_banner'] as $pane) {
-        if (isset($display->content[$pane]->subtype) && $display->content[$pane]->subtype == 'theme_banner') {
+        // Check for panel ID or actual panel data.
+        if (is_int($pane)) {
+          $panel = fieldable_panels_panes_load($pane);
+        }
+        else {
+          $panel = $display->content[$pane];
+        }
+        if (isset($panel->subtype) && $panel->subtype == 'theme_banner') {
           $vertices = 'has-vertices';
         }
-        if (isset($display->content[$pane]->subtype) && $display->content[$pane]->subtype == 'page_title') {
+        if (isset($panel->subtype) && $panel->subtype == 'page_title') {
           $title_class = 'has-title';
-          if (!empty($display->content[$pane]->configuration['override_title'])) {
+          if (!empty($panel->configuration['override_title'])) {
             $title_class = 'has-title title-override';
           }
         }
