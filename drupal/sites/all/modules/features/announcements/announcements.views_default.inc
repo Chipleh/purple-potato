@@ -15,7 +15,7 @@ function announcements_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Announcements';
+  $view->human_name = 'announcements';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -257,7 +257,7 @@ function announcements_views_default_views() {
     ),
   );
   $handler->display->display_options['inherit_panels_path'] = '1';
-  $export['Announcements'] = $view;
+  $export['announcements'] = $view;
 
   return $export;
 }
