@@ -199,6 +199,17 @@ function announcements_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['label'] = 'Custom View All (Works with javascript in leidos_theme.js)';
   $handler->display->display_options['footer']['area_text_custom']['content'] = '<a id="custom-view-all-link" href="#" onclick="load_show_all()">View All »</a>';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Industry */
+  $handler->display->display_options['arguments']['field_industry_tid']['id'] = 'field_industry_tid';
+  $handler->display->display_options['arguments']['field_industry_tid']['table'] = 'field_data_field_industry';
+  $handler->display->display_options['arguments']['field_industry_tid']['field'] = 'field_industry_tid';
+  $handler->display->display_options['arguments']['field_industry_tid']['ui_name'] = 'Industry';
+  $handler->display->display_options['arguments']['field_industry_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_industry_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_industry_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_industry_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_industry_tid']['break_phrase'] = TRUE;
   $handler->display->display_options['argument_input'] = array(
     'term_node_tid_depth' => array(
       'type' => 'user',
@@ -224,6 +235,17 @@ function announcements_views_default_views() {
   $handler->display->display_options['pager']['options']['advance']['content_class'] = '.view-content';
   $handler->display->display_options['pager']['options']['advance']['pager_selector'] = '.pager-load-more';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Industry */
+  $handler->display->display_options['arguments']['field_industry_tid']['id'] = 'field_industry_tid';
+  $handler->display->display_options['arguments']['field_industry_tid']['table'] = 'field_data_field_industry';
+  $handler->display->display_options['arguments']['field_industry_tid']['field'] = 'field_industry_tid';
+  $handler->display->display_options['arguments']['field_industry_tid']['ui_name'] = 'Industry';
+  $handler->display->display_options['arguments']['field_industry_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_industry_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_industry_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_industry_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_industry_tid']['break_phrase'] = TRUE;
   $handler->display->display_options['argument_input'] = array(
     'term_node_tid_depth' => array(
       'type' => 'user',
