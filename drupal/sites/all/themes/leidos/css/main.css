@@ -2564,6 +2564,218 @@ p.subtext {
 /*  mobile
 **************************************************/
 /*************************
+*   Links Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+/*  elements
+**************************************************/
+/* line 10, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement {
+  /* body */
+}
+/* line 11, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement #content {
+  /* header */
+}
+/* line 15, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement #content .panelizer-view-mode > h2 {
+  display: none;
+}
+/* line 22, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement #content .panelizer-view-mode .top .panels-flexible-region-industry_template-top_banner-inside .pane-page-title > .pane-content {
+  display: none;
+}
+/* line 33, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail {
+  /* header */
+  /* bullet styling */
+}
+/* line 36, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h1,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h2,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h3,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h4,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h5 {
+  display: block;
+  font-weight: 100;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 47, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h1 p,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h2 p,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h3 p,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h4 p,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h5 p {
+  margin: 0;
+}
+/* line 52, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h1 {
+  font-size: 4.3vw;
+  height: calc(0.643vw * 7);
+  line-height: 4.501vw;
+  margin-bottom: calc(0.643vw * 2);
+  margin-top: calc(0.643vw * 4);
+}
+/* line 60, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail h2 {
+  font-size: 3.6vw;
+  height: calc(0.643vw * 8);
+  line-height: 4.501vw;
+  margin-bottom: calc(0.643vw * 2);
+  margin-top: calc(0.643vw * 4);
+}
+/* line 68, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail .drop_cap {
+  float: left;
+  font-size: 60px;
+  line-height: 58px;
+  padding-right: 6px;
+}
+/* line 75, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media {
+  margin-bottom: calc(0.643vw * 2);
+  width: 48%;
+}
+/* line 79, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+/* line 85, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media .caption {
+  margin-bottom: 0;
+  margin-top: calc(0.643vw * 2);
+}
+/* line 90, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media .icons {
+  display: table;
+  width: 100%;
+}
+/* line 94, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media .icons a {
+  display: inline-block;
+  padding: 10px 11.1%;
+}
+/* line 99, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media .icons a .icon img {
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+/* line 118, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media.left {
+  float: left;
+  margin-right: calc(0.643vw * 4);
+}
+/* line 123, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media.right {
+  float: right;
+  margin-left: calc(0.643vw * 4);
+}
+/* line 130, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail ul,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail ol {
+  margin: 1em 0;
+  padding: 0 0 0.25em 2.5em;
+  /* LTR */
+  list-style: none;
+}
+/* line 136, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail ul li,
+.node-type-announcement .panels-flexible-region-industry_template-right_rail ol li {
+  position: relative;
+}
+/* line 142, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail ul li:before {
+  content: "\002022";
+  color: #850f88;
+  position: absolute;
+  left: -17px;
+}
+/* line 150, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail ol {
+  counter-reset: li;
+}
+/* line 153, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+.node-type-announcement .panels-flexible-region-industry_template-right_rail ol li:before {
+  content: counter(li) ".";
+  counter-increment: li;
+  color: #850f88;
+  position: absolute;
+  left: -22px;
+}
+
+@media only screen and (max-width: 960px) {
+  /* line 168, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail {
+    margin: 0 auto;
+    width: 90%;
+    /* header */
+  }
+  /* line 173, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h1,
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h2,
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h3,
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h4,
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h5 {
+    display: block;
+    font-weight: 100;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+  }
+  /* line 184, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h1 p,
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h2 p,
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h3 p,
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h4 p,
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h5 p {
+    margin: 0;
+  }
+  /* line 189, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h1 {
+    font-size: 10vw;
+    height: calc(0.643vw * 32);
+    line-height: 10.288vw;
+    margin-bottom: calc(0.643vw * 4);
+    margin-top: calc(0.643vw * 16);
+  }
+  /* line 197, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail h2 {
+    font-size: 8vw;
+    height: calc(0.643vw * 32);
+    line-height: 10.288vw;
+    margin-bottom: calc(0.643vw * 4);
+    margin-top: calc(0.643vw * 16);
+  }
+  /* line 205, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: calc(0.643vw * 4);
+    width: 100%;
+  }
+  /* line 211, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  /* line 217, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media p {
+    margin-bottom: 0;
+    margin-top: calc(0.643vw * 4);
+  }
+  /* line 222, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media.left, .node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media.right {
+    float: none;
+  }
+}
+/*************************
 *   Breadcrumbs Styles
 *   Rhino Hooton
 *   6/29/15
