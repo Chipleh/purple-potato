@@ -40,8 +40,11 @@ function announcements_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['next'] = '';
   $handler->display->display_options['pager']['options']['tags']['last'] = '';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_announcement_date' => 'field_announcement_date',
+    'title' => 'title',
+  );
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -56,7 +59,7 @@ function announcements_views_default_views() {
   $handler->display->display_options['fields']['field_announcement_date']['label'] = '';
   $handler->display->display_options['fields']['field_announcement_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_announcement_date']['settings'] = array(
-    'format_type' => 'long',
+    'format_type' => 'short',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
