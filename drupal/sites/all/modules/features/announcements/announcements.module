@@ -85,6 +85,7 @@ function announcements_block_view($delta = '') {
       $block['content'] = theme(
         'announcements_media',
         array(
+          'title' => $node->title,
           'alignment' => $alignment,
           'image' => $image,
           'video' => $video,
