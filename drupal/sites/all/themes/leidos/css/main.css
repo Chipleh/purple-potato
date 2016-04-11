@@ -2614,7 +2614,7 @@ p.subtext {
 /* line 52, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
 .node-type-announcement .panels-flexible-region-industry_template-right_rail h1 {
   font-size: 4.3vw;
-  height: calc(0.643vw * 7);
+  height: calc(0.643vw * 7.5);
   line-height: 4.501vw;
   margin-bottom: calc(0.643vw * 2);
   margin-top: calc(0.643vw * 4);
