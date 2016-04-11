@@ -26,6 +26,10 @@
 			font-family: Arial, sans-serif;
 			font-size: 12px;
 		}
+
+		&:before {
+			display: none !important;
+		}
 	}
 }
 
