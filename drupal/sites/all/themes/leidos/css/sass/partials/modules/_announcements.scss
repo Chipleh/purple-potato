@@ -89,13 +89,15 @@
 
 			.icons {
 				display: table;
-				width: 100%;
+				margin: 0 auto;
+				max-width: 270px;
 
 				a {
 					display: inline-block;
-					padding: 10px 11.1%;
 
 					.icon {
+						padding: 20px;
+
 						img {
 							display: block;
 							height: 50px;
@@ -103,15 +105,13 @@
 						}
 					}
 
-					// &:nth-child(1n) {
-					// 	clear: left;
-					// 	padding-left: 0;
-					// }
+					&:nth-child(1n) {
+						clear: left;
+					}
 
-					// &:nth-child(3n) {
-					// 	clear: right;
-					// 	padding-right: 0;
-					// }
+					&:nth-child(3n) {
+						clear: right;
+					}
 				}
 			}
 
@@ -123,6 +123,39 @@
 			&.right {
 				float: right;
 				margin-left: calc(#{$multiBit} * 4);	
+			}
+
+			/* bullet styling */
+			ul,
+			ol {
+				margin: 1em 0;
+				padding: 0 0 0.25em 2.5em; /* LTR */
+				list-style: none;
+
+				li {
+					position: relative;
+				}
+			}
+
+			ul {
+				li:before {
+					content: "\002022";
+					color: #850f88;
+					position: absolute;
+					left: -17px;
+				}
+			}
+
+			ol {
+				counter-reset: li;
+
+				li:before {
+					content: counter(li) ".";
+					counter-increment: li;
+					color: #850f88;
+					position: absolute;
+					left: -22px;
+				}
 			}
 		}
 
@@ -223,36 +256,52 @@
 			}
 		}
 
-		/* bullet styling */
-		ul,
-		ol {
-			margin: 1em 0;
-			padding: 0 0 0.25em 2.5em; /* LTR */
-			list-style: none;
+		.view-content {
+			position: relative;
+
+			.views-row {
+				border-bottom: 1px solid $color-gray-medium-light;
+				display: block;
+				margin-bottom: 20px;
+				overflow: hidden;
+				padding-bottom: 20px;
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				.date-display-single {
+					color: $color-gray-dark;
+					display: block;
+					font-size: 11px;
+				}
+
+				a {
+					display: block;
+					font-size: 11px;
+				}
+			}
+		}
+
+		.pager-load-more {
+			background: $color-gray-light;
+			margin: 0 0 20px;
+			overflow: hidden;
+			padding: 0;
 
 			li {
-				position: relative;
-			}
-		}
+				padding: 0;
 
-		ul {
-			li:before {
-				content: "\002022";
-				color: #850f88;
-				position: absolute;
-				left: -17px;
-			}
-		}
+				a {
+					color: $color-gray-medium-dark;
+					display: block;
+					padding: 10px;
+					text-align: center;
 
-		ol {
-			counter-reset: li;
-
-			li:before {
-				content: counter(li) ".";
-				counter-increment: li;
-				color: #850f88;
-				position: absolute;
-				left: -22px;
+					&:hover {
+						color: $color-black;
+					}
+				}
 			}
 		}
 	}
