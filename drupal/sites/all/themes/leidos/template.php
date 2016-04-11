@@ -331,7 +331,6 @@ function leidos_preprocess_field(&$variables) {
     $announcements->set_display('full_view_announcements_pane');
     if (!empty($arguments)) {
       $announcements->set_arguments(array(implode(',', $arguments)));
-      $announcements->set_items_per_page(count($arguments));
     }
     $announcements->pre_execute();
     $announcements->execute();
@@ -341,7 +340,6 @@ function leidos_preprocess_field(&$variables) {
     $announcements->set_display('full_view_announcements_pane_mobile');
     if (!empty($arguments)) {
       $announcements->set_arguments(array(implode(',', $arguments)));
-      $announcements->set_items_per_page(count($arguments));
     }
     $announcements->pre_execute();
     $announcements->execute();
