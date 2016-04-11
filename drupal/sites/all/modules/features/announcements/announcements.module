@@ -45,7 +45,7 @@ function announcements_block_view($delta = '') {
         if ($mime == 'video/youtube') {
           // YouTube video.
           $video = str_replace('watch?v=', 'embed/', $video);
-          $video = '<iframe width="660" height="320" src="' . $video . '" frameborder="0" allowfullscreen></iframe>';
+          $video = '<iframe width="456" height="320" src="' . $video . '" frameborder="0" allowfullscreen></iframe>';
         }
         else {
           // Uploaded video.
