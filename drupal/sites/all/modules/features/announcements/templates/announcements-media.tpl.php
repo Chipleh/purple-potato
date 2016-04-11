@@ -1,4 +1,7 @@
 <div id="announcment-detail">
+  <h1 class="title"><?php print $title; ?></h1>
+  <hr>
+  <?php if (!empty($image) || !empty($video) || !empty($caption) || !empty($icons)) { ?>
   <div class="announcements-media <?php print $alignment; ?>">
     <?php if (!empty($image)) { ?>
     <div class="image"><img src="<?php print $image; ?>"></div>
@@ -13,5 +16,6 @@
     <div class="icons"><?php print $icons; ?></div>
     <?php } ?>
   </div>
+  <?php } ?>
   <div class="body"><?php print $body; ?></div>
 </div>
