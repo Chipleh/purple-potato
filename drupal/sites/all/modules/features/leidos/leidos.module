@@ -128,15 +128,3 @@ function leidos_sort_capabilities($arguments = array()) {
   // Return the map for use by the capabilities view.
   return $sort_map;
 }
-
-/*
-function leidos_preprocess(&$vars, $hook) {
-  $element = $vars['elements'];
-  if ($element['#entity_type'] == 'fieldable_panels_pane') {
-    $entity_type = $element['#entity_type'];
-    $bundle = $element['#bundle'];
-    $view_mode = $element['#view_mode'];
-    //dpm($vars);
-  }
-}
-*/

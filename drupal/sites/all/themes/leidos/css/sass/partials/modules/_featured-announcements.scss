@@ -7,6 +7,7 @@
 
 /*  elements
 **************************************************/
+.pane-bundle-announcements,
 .pane-announcements-featured-announcements-pane,
 .pane-announcements-full-view-announcements-pane,
 .pane-announcements-full-view-announcements-pane-mobile {
@@ -197,10 +198,12 @@
 	}
 }
 
+.view-display-id-full_view_announcements_pane,
 .pane-announcements-full-view-announcements-pane {
 	display: block;
 }
 
+.view-display-id-full_view_announcements_pane_mobile,
 .pane-announcements-full-view-announcements-pane-mobile {
 	display: none;
 }
@@ -222,6 +225,7 @@
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
+	.pane-bundle-announcements,
 	.pane-announcements-featured-announcements-pane,
 	.pane-announcements-full-view-announcements-pane,
 	.pane-announcements-full-view-announcements-pane-mobile {
@@ -275,10 +279,12 @@
 		}
 	}
 
+	.view-display-id-full_view_announcements_pane,
 	.pane-announcements-full-view-announcements-pane {
 		display: none;
 	}
 
+	.view-display-id-full_view_announcements_pane_mobile,
 	.pane-announcements-full-view-announcements-pane-mobile {
 		display: block;
 	}

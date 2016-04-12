@@ -1087,322 +1087,41 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-announcement-body'
-  $field_instances['node-announcement-body'] = array(
-    'bundle' => 'announcement',
+  // Exported field_instance: 'fieldable_panels_pane-webform-field_webform'
+  $field_instances['fieldable_panels_pane-webform-field_webform'] = array(
+    'bundle' => 'webform',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-announcement-field_announcement_date'
-  $field_instances['node-announcement-field_announcement_date'] = array(
-    'bundle' => 'announcement',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'date',
+        'module' => 'node_reference',
         'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
+          'node_reference_view_mode' => 'full',
         ),
-        'type' => 'date_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'medium',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
+        'type' => 'node_reference_node',
         'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_announcement_date',
-    'label' => 'Announcement Date',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-announcement-field_announcement_type'
-  $field_instances['node-announcement-field_announcement_type'] = array(
-    'bundle' => 'announcement',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_announcement_type',
-    'label' => 'Announcement Type',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'options_select',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-announcement-field_authors'
-  $field_instances['node-announcement-field_authors'] = array(
-    'bundle' => 'announcement',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_authors',
-    'label' => 'Authors',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-announcement-field_contact_information'
-  $field_instances['node-announcement-field_contact_information'] = array(
-    'bundle' => 'announcement',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_contact_information',
-    'label' => 'Contact Information',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-announcement-field_external_link'
-  $field_instances['node-announcement-field_external_link'] = array(
-    'bundle' => 'announcement',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
       ),
     ),
     'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_external_link',
-    'label' => 'External Link',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'none',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-announcement-field_industry'
-  $field_instances['node-announcement-field_industry'] = array(
-    'bundle' => 'announcement',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_industry',
-    'label' => 'Industry',
-    'required' => 0,
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_webform',
+    'label' => 'Webform',
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'node_reference',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
+        'autocomplete_match' => 'contains',
+        'autocomplete_path' => 'node_reference/autocomplete',
         'size' => 60,
       ),
-      'type' => 'options_select',
-      'weight' => 4,
+      'type' => 'node_reference_autocomplete',
+      'weight' => 2,
     ),
   );
 
@@ -3492,9 +3211,6 @@ function leidos_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('About Content Item');
   t('Announcement');
-  t('Announcement Date');
-  t('Announcement Type');
-  t('Authors');
   t('Body');
   t('Bottom Color');
   t('Breadcrumb Link');
@@ -3502,11 +3218,9 @@ function leidos_field_default_field_instances() {
   t('Capabilities');
   t('Color Scheme');
   t('Columns');
-  t('Contact Information');
   t('Contact us');
   t('Content');
   t('Customer Name');
-  t('External Link');
   t('Featured');
   t('Featured subcapabilities');
   t('Freeform Html');
@@ -3523,7 +3237,6 @@ function leidos_field_default_field_instances() {
   t('Hover Title');
   t('Image');
   t('Image Description');
-  t('Industry');
   t('Industry Rankings/Awards');
   t('Intro Text');
   t('Link');
@@ -3564,6 +3277,7 @@ function leidos_field_default_field_instances() {
   t('Title Override');
   t('Title link');
   t('Top Color');
+  t('Webform');
 
   return $field_instances;
 }

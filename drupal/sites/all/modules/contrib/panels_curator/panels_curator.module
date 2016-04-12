@@ -80,30 +80,22 @@ function panels_curator_preprocess_panels_add_content_modal(&$vars) {
 function panels_curator_form_alter(&$form, &$form_state, $form_id) {
   // Add a link to the panel revisions in the FPP edit form.
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
-    if (isset($form['#entity'])) {
-
-      // TODO: This needs to be fixed.
-      if (isset($form['#entity']->fpid)) {
-        $entity_id = $form['#entity']->fpid;
-
-        $form['revision']['view_revisions'] = array(
-          '#type' => 'item',
-          '#markup' => l(
-            t('View all panel revisions &raquo;'),
-            'admin/structure/fieldable-panels-panes/view/' . $entity_id . '/revision',
-            array('html' => TRUE)
-          )
-        );
+    $entity_id = $form['#entity']->fpid;
+    $form['revision']['view_revisions'] = array(
+      '#type' => 'item',
+      '#markup' => l(
+        t('View all panel revisions &raquo;'),
+        'admin/structure/fieldable-panels-panes/view/' . $entity_id . '/revision',
+        array('html' => TRUE)
+      )
+    );
+    // Hide extra link and view mode options.
+    if (variable_get('panels_curator_hide_extras', FALSE)) {
+      if (isset($form['link'])) {
+        unset($form['link']);
       }
-
-      // Hide extra link and view mode options.
-      if (variable_get('panels_curator_hide_extras', FALSE)) {
-        if (isset($form['link'])) {
-          unset($form['link']);
-        }
-        if (isset($form['view_mode'])) {
-          unset($form['view_mode']);
-        }
+      if (isset($form['view_mode'])) {
+        unset($form['view_mode']);
       }
     }
   }
@@ -199,6 +191,7 @@ function panels_curator_form_panels_ipe_edit_control_form_alter(&$form, &$form_s
         unset($form['buttons']['submit']);
       }
       else {
+        $form['buttons']['revert_default']['#attributes']['class'] = array();
         $form['buttons']['revert_default']['#value'] = t('Revert to default');
         // Add a new button that redirects to the default node template for this bundle.
         $redirect_url = url('node/' . $default_display);
@@ -267,13 +260,13 @@ function panels_curator_map_values($values, $content) {
   }
   elseif (isset($values['type']) && $values['type'] == 'image') {
     // Image fields.
-    if (isset($content['#image_style'])) {
+    if (!empty($content['#image_style'])) {
       // Apply image styles if they are specified.
       $image_style = $content['#image_style'];
       $value = image_style_url($image_style, $values['uri']);
     }
     else {
-      $value = $values['uri'];
+      $value = file_create_url($values['uri']);
     }
   }
   elseif (isset($values['type']) && $values['type'] == 'video') {
@@ -282,7 +275,7 @@ function panels_curator_map_values($values, $content) {
   }
   elseif (isset($values['url'])) {
     // Link fields.
-    $value = l($values['title'], $values['url']);
+    $value = l($values['title'], $values['url'], array('attributes' => $values['attributes'], 'html' => $values['html']));
   }
   else {
     $value = t('Unmapped field');
