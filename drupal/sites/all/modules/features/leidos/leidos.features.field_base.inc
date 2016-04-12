@@ -1603,5 +1603,42 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_webform'
+  $field_bases['field_webform'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_webform',
+    'indexes' => array(
+      'nid' => array(
+        0 => 'nid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'node_reference',
+    'settings' => array(
+      'referenceable_types' => array(
+        'announcement' => 0,
+        'article' => 0,
+        'flexible_page' => 0,
+        'flexible_template' => 0,
+        'page' => 0,
+        'panel' => 0,
+        'project' => 0,
+        'rotator' => 0,
+        'rotator_hero' => 0,
+        'webform' => 'webform',
+      ),
+      'view' => array(
+        'args' => array(),
+        'display_name' => '',
+        'view_name' => '',
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'node_reference',
+  );
+
   return $field_bases;
 }
