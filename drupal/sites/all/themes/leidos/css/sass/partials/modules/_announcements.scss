@@ -28,6 +28,13 @@
 		}
 	}
 
+	.pane-bundle-custom-breadcrumbs {
+		margin-bottom: 0;
+	}
+
+	hr {
+		margin-bottom: 25px;
+	}
 
 	/* body */
 	.panels-flexible-region-industry_template-right_rail {
@@ -50,17 +57,15 @@
 		}
 
 		h1 {
-			font-size: 4.3vw;
-			height: calc(#{$multiBit} * 7.5);
-			line-height: calcLineHeight($multiBit , 7);
+			font-size: 40px;
+			line-height: 45px;
 			margin-bottom: calc(#{$multiBit} * 2);
 			margin-top: calc(#{$multiBit} * 4);
 		}
 
 		h2 {
-			font-size: 3.6vw;
-			height: calc(#{$multiBit} * 8);
-			line-height: calcLineHeight($multiBit , 7);
+			font-size: 34px;
+			line-height: 39px;
 			margin-bottom: calc(#{$multiBit} * 2);
 			margin-top: calc(#{$multiBit} * 4);
 		}
@@ -105,6 +110,14 @@
 					position: absolute;
 					left: -22px;
 				}
+			}
+		}
+		
+		.announcment-detail {
+			h1.title,
+			h2.title {
+				text-align: left;
+				margin-top: 0;
 			}
 		}
 
