@@ -67,12 +67,19 @@ function leidos_preprocess_page(&$variables) {
     // Add classes for vertices banner.
     if (isset($display->panels['top_banner'])) {
       foreach ($display->panels['top_banner'] as $pane) {
-        if (isset($display->content[$pane]->subtype) && $display->content[$pane]->subtype == 'theme_banner') {
+        // Check for panel ID or actual panel data.
+        if (is_int($pane)) {
+          $panel = fieldable_panels_panes_load($pane);
+        }
+        else {
+          $panel = $display->content[$pane];
+        }
+        if (isset($panel->subtype) && $panel->subtype == 'theme_banner') {
           $vertices = 'has-vertices';
         }
-        if (isset($display->content[$pane]->subtype) && $display->content[$pane]->subtype == 'page_title') {
+        if (isset($panel->subtype) && $panel->subtype == 'page_title') {
           $title_class = 'has-title';
-          if (!empty($display->content[$pane]->configuration['override_title'])) {
+          if (!empty($panel->configuration['override_title'])) {
             $title_class = 'has-title title-override';
           }
         }
@@ -313,6 +320,31 @@ function leidos_preprocess_field(&$variables) {
     $announcements->execute();
     $variables['announcements'] = $announcements->render();
   }
+  elseif ($variables['element']['#field_name'] == 'field_industry') {
+    // Render the announcements view instead of the announcement nodes.
+    $arguments = array();
+    foreach ($variables['items'] as $item) {
+      $arguments[] = $item['#term']->tid;
+    }
+    // Render the announcements.
+    $announcements = views_get_view('announcements');
+    $announcements->set_display('full_view_announcements_pane');
+    if (!empty($arguments)) {
+      $announcements->set_arguments(array(implode(',', $arguments)));
+    }
+    $announcements->pre_execute();
+    $announcements->execute();
+    $variables['announcements'] = $announcements->render();
+    // Render the announcements.
+    $announcements = views_get_view('announcements');
+    $announcements->set_display('full_view_announcements_pane_mobile');
+    if (!empty($arguments)) {
+      $announcements->set_arguments(array(implode(',', $arguments)));
+    }
+    $announcements->pre_execute();
+    $announcements->execute();
+    $variables['announcements'] .= $announcements->render();
+  }
   elseif ($variables['element']['#field_name'] == 'field_breadcrumb_link') {
     // Add right arrow chevrons for breadcrumb links.
     $total_links = count($variables['items']);
@@ -427,6 +459,26 @@ function leidos_preprocess_panels_pane(&$variables) {
         '#field_translatable' => 0,
         '#entity_type' => 'fieldable_panels_pane',
         '#bundle' => 'featured_news_panel',
+        '#items' => array()
+      );
+    }
+  }
+  elseif (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'announcements') {
+    // Default industry field to empty view for all announcements.
+    if (!isset($variables['content']['field_industry'])) {
+      $variables['content']['field_industry'] = array(
+        '#theme' => 'field',
+        '#weight' => '2',
+        '#title' => 'Industry',
+        '#access' => TRUE,
+        '#label_display' => 'hidden',
+        '#view_mode' => 'full',
+        '#language' => 'und',
+        '#field_name' => 'field_industry',
+        '#field_type' => 'taxonomy_term_reference',
+        '#field_translatable' => 0,
+        '#entity_type' => 'fieldable_panels_pane',
+        '#bundle' => 'announcements',
         '#items' => array()
       );
     }

@@ -188,14 +188,6 @@ function leidos_image_default_styles() {
  */
 function leidos_node_info() {
   $items = array(
-    'announcement' => array(
-      'name' => t('Announcement'),
-      'base' => 'node_content',
-      'description' => t('Global news item content type that can be categorized using taxonomy.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'flexible_page' => array(
       'name' => t('Flexible page'),
       'base' => 'node_content',
@@ -216,6 +208,14 @@ function leidos_node_info() {
       'name' => t('Rotator slide'),
       'base' => 'node_content',
       'description' => t('Carousel rotator slides'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'webform' => array(
+      'name' => t('Webform'),
+      'base' => 'node_content',
+      'description' => t('Create a new form or questionnaire accessible to users. Submission results and statistics are recorded and accessible to privileged users.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
