@@ -2970,13 +2970,17 @@ p.subtext {
     float: none;
     margin: 0 auto;
   }
-  /* line 393, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  /* line 389, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  .node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media.left iframe, .node-type-announcement .panels-flexible-region-industry_template-right_rail .announcements-media.right iframe {
+    width: 100%;
+  }
+  /* line 397, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-category-wrapper {
     display: block;
     margin-bottom: 15px;
     overflow: hidden;
   }
-  /* line 399, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  /* line 403, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-search-wrapper,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-category-wrapper,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters .views-submit-button {
@@ -2985,20 +2989,20 @@ p.subtext {
     overflow: hidden;
     width: 100%;
   }
-  /* line 407, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  /* line 411, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-search-wrapper label,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-category-wrapper label,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters .views-submit-button label {
     text-align: left;
     width: 100%;
   }
-  /* line 412, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  /* line 416, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-search-wrapper .views-widget,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-category-wrapper .views-widget,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters .views-submit-button .views-widget {
     width: 100%;
   }
-  /* line 416, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  /* line 420, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-search-wrapper label,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-search-wrapper .views-widget,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-category-wrapper label,
@@ -3007,27 +3011,27 @@ p.subtext {
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters .views-submit-button .views-widget {
     float: none;
   }
-  /* line 421, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  /* line 425, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-search-wrapper .views-widget,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-category-wrapper .views-widget,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters .views-submit-button .views-widget {
     display: block;
     overflow: hidden;
   }
-  /* line 426, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  /* line 430, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-search-wrapper input,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-category-wrapper input,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters .views-submit-button input {
     width: calc(100% - 14px);
   }
-  /* line 430, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  /* line 434, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-search-wrapper select,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-category-wrapper select,
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters .views-submit-button select {
     width: 100%;
     margin-bottom: 15px;
   }
-  /* line 435, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
+  /* line 439, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-search-wrapper input[type="submit"],
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters #edit-category-wrapper input[type="submit"],
   .node-type-announcement .panels-flexible-region-industry_template-right_rail .view-filters .views-submit-button input[type="submit"] {

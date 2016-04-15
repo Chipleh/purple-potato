@@ -385,6 +385,10 @@
 				&.right {
 					float: none;
 					margin: 0 auto;
+
+					iframe {
+						width: 100%;
+					}
 				}
 			}
 
