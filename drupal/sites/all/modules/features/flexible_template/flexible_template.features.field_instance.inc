@@ -700,7 +700,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_icon_item-field_image'] = array(
     'bundle' => 'field_icon_item',
     'deleted' => 0,
-    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at 50 x 50 pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -744,6 +744,7 @@ function flexible_template_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
+          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
@@ -756,6 +757,7 @@ function flexible_template_field_default_field_instances() {
           'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
           'upload' => 0,
         ),
       ),
@@ -769,7 +771,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_icon_item-field_image_hover'] = array(
     'bundle' => 'field_icon_item',
     'deleted' => 0,
-    'description' => 'Image upload supports: png, gif, jpg, jpeg at # x # pixels.',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at 50 x 50 pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -792,6 +794,8 @@ function flexible_template_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
+          'flexible_template_desktop' => 0,
+          'flexible_template_mobile' => 0,
           'rotator' => 'rotator',
           'rotator_mobile' => 0,
           'rotator_tablet' => 0,
@@ -811,6 +815,7 @@ function flexible_template_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
+          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
@@ -823,6 +828,7 @@ function flexible_template_field_default_field_instances() {
           'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
           'upload' => 'upload',
         ),
       ),
@@ -2227,6 +2233,7 @@ function flexible_template_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
+          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
@@ -2239,6 +2246,7 @@ function flexible_template_field_default_field_instances() {
           'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
           'upload' => 'upload',
         ),
       ),
@@ -3694,6 +3702,9 @@ function flexible_template_field_default_field_instances() {
 <li><strong>4 column</strong> <em>300x405</em></li>
 </ul>');
   t('Image upload supports: png, gif, jpg, jpeg at # x # pixels.');
+  t('Image upload supports: png, gif, jpg, jpeg at 50 x 50 pixels.');
+  t('Image upload supports: png, gif, jpg, jpeg at 50 x 50 pixels.
+');
   t('Module Height');
   t('Rotator Slide / Hero');
   t('Secondary CTA');
