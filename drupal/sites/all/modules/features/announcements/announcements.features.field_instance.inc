@@ -272,7 +272,7 @@ function announcements_field_default_field_instances() {
   $field_instances['node-announcement-field_image'] = array(
     'bundle' => 'announcement',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image upload supports: png, gif, jpg, jpeg at 456x320',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -557,6 +557,7 @@ function announcements_field_default_field_instances() {
   t('Date');
   t('Icon item');
   t('Image');
+  t('Image upload supports: png, gif, jpg, jpeg at 456x320');
   t('Industry');
   t('Media placement');
   t('Title link');
