@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the News Release feature.
+ */
+
+include_once 'news_release.features.inc';
