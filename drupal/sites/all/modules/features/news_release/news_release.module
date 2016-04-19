@@ -55,11 +55,14 @@ function news_release_cron() {
     // Only add new items to the queue.
     if ($release['@attributes']['ReleaseID'] > $last_item) {
       $queue->createItem($release);
-      $processed = $release['@attributes']['ReleaseID'];
+      // Keep track of the highest ID for all items added to the queue.
+      if ($release['@attributes']['ReleaseID'] > $processed) {
+        $processed = $release['@attributes']['ReleaseID'];
+      }
     }
   }
   // Update the last imported item flag.
-  if ($processed) {
+  if ($processed > $last_item) {
     variable_set('news_release_last_item', $processed);
   }
 }
@@ -78,9 +81,9 @@ function news_release_import($item) {
   $node->status = 1;
 
   // Date.
-  $date = strtotime($item['Date']);
+  $date = date('Y-m-d H:i:s', strtotime($item['Date']));
   $node->field_announcement_date[$node->language][] = array(
-    'value' => $date,
+    'value' => $date
   );
   // ID.
   $node->field_id[$node->language][] = array(
