@@ -25,7 +25,7 @@ function news_release_preprocess_node(&$vars) {
 function news_release_fetch() {
   $company_id = variable_get('news_release_company_id', 193857);
 
-  // Download product data from Newegg API
+  // Fetch results from the Thomson Reuter feed.
   $url = 'http://xml.corporate-ir.net/irxmlclient.asp?compid=' . $company_id . '&reqtype=newsreleases_2';
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
