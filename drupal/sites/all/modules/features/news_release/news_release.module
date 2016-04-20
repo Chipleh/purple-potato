@@ -7,6 +7,19 @@
 include_once 'news_release.features.inc';
 
 /**
+ * Override or insert variables into the node template.
+ */
+function news_release_preprocess_node(&$vars) {
+  // Redirect news release detail pages to the external news release.
+  if ($vars['type'] == 'news_release' && $vars['view_mode'] == 'full') {
+    $company_id = variable_get('news_release_company_id', 193857);
+    $release_id = isset($vars['field_id'][$vars['language']][0]['value']) ? $vars['field_id'][$vars['language']][0]['value'] : 0;
+    $external_url = 'http://investors.leidos.com/phoenix.zhtml?c=' . $company_id . '&p=irol-newsArticle&highlight=&ID=' . $release_id;
+    drupal_goto($external_url);
+  }
+}
+
+/**
  * Import news items from the Thomson Reuter feed.
  */
 function news_release_fetch() {
