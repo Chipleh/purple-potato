@@ -38,6 +38,12 @@ function news_release_views_default_views() {
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://investors.leidos.com/phoenix.zhtml?c=193857&p=irol-news&nyo=0">View All »</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Field: Content: ID */
   $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
   $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
