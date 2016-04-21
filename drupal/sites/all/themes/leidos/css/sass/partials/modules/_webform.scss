@@ -109,6 +109,10 @@ form.webform-client-form {
 		vertical-align: top;
 		width: 274px;
 
+		&.webform-calendar {
+			width: auto;
+		}
+
 		// .text {
 
 		// }
