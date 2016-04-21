@@ -377,6 +377,16 @@ function leidos_preprocess_field(&$variables) {
       $variables['items'][0]['#markup'] .
     '</div>';
   }
+  elseif ($variables['element']['#field_name'] == 'field_releases_count') {
+    // Render the news releases.
+    $items_per_page = isset($variables['items'][0]['#markup']) ? $variables['items'][0]['#markup'] : 10;
+    $news = views_get_view('news_releases');
+    $news->set_display('latest_news');
+    $news->set_items_per_page($items_per_page);
+    $news->pre_execute();
+    $news->execute();
+    $variables['news'] = $news->render();
+  }
 }
 
 /**
