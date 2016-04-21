@@ -2925,7 +2925,7 @@ p.subtext {
     font-weight: 100;
     margin: 0 auto;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
   }
   /* line 350, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_announcements.scss */
   .node-type-announcement .panels-flexible-region-industry_template-right_rail h1 p,
