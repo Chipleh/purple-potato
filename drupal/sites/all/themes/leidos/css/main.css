@@ -8460,7 +8460,7 @@ form.webform-client-form input[type="submit"] {
   text-transform: uppercase;
   transition: color .5s ease;
   white-space: nowrap;
-  width: 90px;
+  width: 120px;
 }
 /* line 208, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 form.webform-client-form input[type="submit"]:hover {
