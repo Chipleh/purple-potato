@@ -33,6 +33,7 @@ function announcements_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = 'View All »';
   $handler->display->display_options['pager']['options']['tags']['first'] = '';
