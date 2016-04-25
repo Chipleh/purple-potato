@@ -303,8 +303,8 @@ hr {
 /* line 10, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_body.scss */
 #main-wrapper {
   background: #E8E8E8;
-  z-index: 5;
   position: relative;
+  z-index: 5;
 }
 
 /* line 17, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_body.scss */
