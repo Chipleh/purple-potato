@@ -129,7 +129,7 @@ form.webform-client-form {
 	}
 
 	.form-type-checkbox,
-    .option {
+	.option {
 		display: inline-block;
 
 		input {
@@ -246,8 +246,12 @@ form.webform-client-form {
 	}
 }
 
+#ui-datepicker-div {
+	z-index: 200;
+}
+
 .dependentFieldSlave {
-    display: none;
+	display: none;
 }
 
 
