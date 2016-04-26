@@ -128,6 +128,21 @@ function leidos_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'field_collection_item|field_ranking|default';
+  $ds_fieldsetting->entity_type = 'field_collection_item';
+  $ds_fieldsetting->bundle = 'field_ranking';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'field_title_color' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['field_collection_item|field_ranking|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'fieldable_panels_pane|custom_breadcrumbs|default';
   $ds_fieldsetting->entity_type = 'fieldable_panels_pane';
   $ds_fieldsetting->bundle = 'custom_breadcrumbs';
@@ -660,6 +675,41 @@ function leidos_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'field_collection_item|field_ranking|default';
+  $ds_layout->entity_type = 'field_collection_item';
+  $ds_layout->bundle = 'field_ranking';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_title_item',
+        1 => 'field_title_color',
+        2 => 'field_ranking_number',
+        3 => 'field_cta',
+      ),
+    ),
+    'fields' => array(
+      'field_title_item' => 'ds_content',
+      'field_title_color' => 'ds_content',
+      'field_ranking_number' => 'ds_content',
+      'field_cta' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'hide_sidebars' => 0,
+  );
+  $export['field_collection_item|field_ranking|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'fieldable_panels_pane|custom_breadcrumbs|default';
   $ds_layout->entity_type = 'fieldable_panels_pane';
   $ds_layout->bundle = 'custom_breadcrumbs';
@@ -934,6 +984,39 @@ function leidos_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'fieldable_panels_pane|ranking_promo|default';
+  $ds_layout->entity_type = 'fieldable_panels_pane';
+  $ds_layout->bundle = 'ranking_promo';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_ranking_columns',
+        2 => 'field_ranking',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'field_ranking_columns' => 'ds_content',
+      'field_ranking' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'hide_sidebars' => 0,
+  );
+  $export['fieldable_panels_pane|ranking_promo|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'fieldable_panels_pane|rotator|default';
   $ds_layout->entity_type = 'fieldable_panels_pane';
   $ds_layout->bundle = 'rotator';
@@ -960,6 +1043,35 @@ function leidos_ds_layout_settings_info() {
     'hide_sidebars' => 0,
   );
   $export['fieldable_panels_pane|rotator|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'fieldable_panels_pane|webform|default';
+  $ds_layout->entity_type = 'fieldable_panels_pane';
+  $ds_layout->bundle = 'webform';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_webform',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'field_webform' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['fieldable_panels_pane|webform|default'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
