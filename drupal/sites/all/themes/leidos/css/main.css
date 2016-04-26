@@ -7129,6 +7129,13 @@ p.subtext {
   display: none !important;
 }
 
+/* line 36, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_pager.scss */
+.pager-all {
+  float: right;
+  position: relative;
+  top: -20px;
+}
+
 /*  tablet
 **************************************************/
 /*  mobile
