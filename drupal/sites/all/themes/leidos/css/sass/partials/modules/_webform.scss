@@ -7,6 +7,10 @@
 
 /*  elements
 **************************************************/
+.pane-bundle-webform {
+	margin-bottom: 30px;
+}
+
 .pane-bundle-webform,
 form.webform-client-form {
 	.webform-layout-box  {
@@ -171,6 +175,11 @@ form.webform-client-form {
 		transition: color .5s ease;
 		white-space: nowrap;
 		width: 120px;
+
+		&:nth-child(even) {
+			float: left;
+			margin-left: 20px;
+		}
 
 		&:hover {
 			background-image: -o-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
