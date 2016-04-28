@@ -4068,28 +4068,35 @@ p.subtext {
 .pane-announcements-full-view-announcements-pane-mobile .pager-load-more li a:hover {
   color: #000;
 }
+/* line 181, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+.pane-bundle-announcements .views-widget-per-page,
+.pane-announcements-featured-announcements-pane .views-widget-per-page,
+.pane-announcements-full-view-announcements-pane .views-widget-per-page,
+.pane-announcements-full-view-announcements-pane-mobile .views-widget-per-page {
+  display: none;
+}
 
-/* line 188, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+/* line 192, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
 .right-rail .pane-announcements-featured-announcements-pane .view-content .views-row .date-display-single,
 .right-rail .pane-announcements-full-view-announcements-pane .view-content .views-row .date-display-single,
 .right-rail .pane-announcements-full-view-announcements-pane-mobile .view-content .views-row .date-display-single {
   font-size: 13px;
   color: #1F1646;
 }
-/* line 193, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+/* line 197, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
 .right-rail .pane-announcements-featured-announcements-pane .view-content .views-row a,
 .right-rail .pane-announcements-full-view-announcements-pane .view-content .views-row a,
 .right-rail .pane-announcements-full-view-announcements-pane-mobile .view-content .views-row a {
   font-size: 13px;
 }
 
-/* line 201, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+/* line 205, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
 .view-display-id-full_view_announcements_pane,
 .pane-announcements-full-view-announcements-pane {
   display: block;
 }
 
-/* line 206, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+/* line 210, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
 .view-display-id-full_view_announcements_pane_mobile,
 .pane-announcements-full-view-announcements-pane-mobile {
   display: none;
@@ -4098,12 +4105,12 @@ p.subtext {
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-  /* line 215, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 219, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-announcements-full-view-announcements-pane {
     display: none;
   }
 
-  /* line 219, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 223, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-announcements-full-view-announcements-pane-mobile {
     display: block;
   }
@@ -4111,7 +4118,7 @@ p.subtext {
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-  /* line 233, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 237, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-bundle-announcements .view-filters #edit-category-wrapper,
   .pane-announcements-featured-announcements-pane .view-filters #edit-category-wrapper,
   .pane-announcements-full-view-announcements-pane .view-filters #edit-category-wrapper,
@@ -4120,7 +4127,7 @@ p.subtext {
     margin-bottom: 15px;
     overflow: hidden;
   }
-  /* line 239, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 243, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-bundle-announcements .view-filters #edit-search-wrapper,
   .pane-bundle-announcements .view-filters #edit-category-wrapper,
   .pane-bundle-announcements .view-filters .views-submit-button,
@@ -4138,7 +4145,7 @@ p.subtext {
     overflow: hidden;
     width: 100%;
   }
-  /* line 247, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 251, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-bundle-announcements .view-filters #edit-search-wrapper label,
   .pane-bundle-announcements .view-filters #edit-category-wrapper label,
   .pane-bundle-announcements .view-filters .views-submit-button label,
@@ -4154,7 +4161,7 @@ p.subtext {
     text-align: left;
     width: 100%;
   }
-  /* line 252, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 256, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-bundle-announcements .view-filters #edit-search-wrapper .views-widget,
   .pane-bundle-announcements .view-filters #edit-category-wrapper .views-widget,
   .pane-bundle-announcements .view-filters .views-submit-button .views-widget,
@@ -4169,7 +4176,7 @@ p.subtext {
   .pane-announcements-full-view-announcements-pane-mobile .view-filters .views-submit-button .views-widget {
     width: 100%;
   }
-  /* line 256, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 260, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-bundle-announcements .view-filters #edit-search-wrapper label,
   .pane-bundle-announcements .view-filters #edit-search-wrapper .views-widget,
   .pane-bundle-announcements .view-filters #edit-category-wrapper label,
@@ -4196,7 +4203,7 @@ p.subtext {
   .pane-announcements-full-view-announcements-pane-mobile .view-filters .views-submit-button .views-widget {
     float: none;
   }
-  /* line 261, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 265, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-bundle-announcements .view-filters #edit-search-wrapper .views-widget,
   .pane-bundle-announcements .view-filters #edit-category-wrapper .views-widget,
   .pane-bundle-announcements .view-filters .views-submit-button .views-widget,
@@ -4212,7 +4219,7 @@ p.subtext {
     display: block;
     overflow: hidden;
   }
-  /* line 266, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 270, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-bundle-announcements .view-filters #edit-search-wrapper input,
   .pane-bundle-announcements .view-filters #edit-category-wrapper input,
   .pane-bundle-announcements .view-filters .views-submit-button input,
@@ -4227,7 +4234,7 @@ p.subtext {
   .pane-announcements-full-view-announcements-pane-mobile .view-filters .views-submit-button input {
     width: calc(100% - 14px);
   }
-  /* line 270, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 274, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-bundle-announcements .view-filters #edit-search-wrapper select,
   .pane-bundle-announcements .view-filters #edit-category-wrapper select,
   .pane-bundle-announcements .view-filters .views-submit-button select,
@@ -4243,7 +4250,7 @@ p.subtext {
     width: 100%;
     margin-bottom: 15px;
   }
-  /* line 275, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 279, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .pane-bundle-announcements .view-filters #edit-search-wrapper input[type="submit"],
   .pane-bundle-announcements .view-filters #edit-category-wrapper input[type="submit"],
   .pane-bundle-announcements .view-filters .views-submit-button input[type="submit"],
@@ -4259,13 +4266,13 @@ p.subtext {
     width: 100%;
   }
 
-  /* line 282, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 286, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .view-display-id-full_view_announcements_pane,
   .pane-announcements-full-view-announcements-pane {
     display: none;
   }
 
-  /* line 287, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
+  /* line 291, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_featured-announcements.scss */
   .view-display-id-full_view_announcements_pane_mobile,
   .pane-announcements-full-view-announcements-pane-mobile {
     display: block;
@@ -8505,27 +8512,25 @@ form.webform-client-form input[type="checkbox"] {
   width: auto;
 }
 /* line 99, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
-.pane-bundle-webform .views-exposed-widget,
 .pane-bundle-webform .views-widget-per-page,
-form.webform-client-form .views-exposed-widget,
 form.webform-client-form .views-widget-per-page {
   display: none;
 }
-/* line 104, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 103, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .form-type-checkbox,
 .pane-bundle-webform .option,
 form.webform-client-form .form-type-checkbox,
 form.webform-client-form .option {
   display: inline-block;
 }
-/* line 108, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 107, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .form-type-checkbox input,
 .pane-bundle-webform .option input,
 form.webform-client-form .form-type-checkbox input,
 form.webform-client-form .option input {
   margin: 2px 0 0 0;
 }
-/* line 112, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 111, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .form-type-checkbox label,
 .pane-bundle-webform .option label,
 form.webform-client-form .form-type-checkbox label,
@@ -8533,7 +8538,7 @@ form.webform-client-form .option label {
   padding: 0 20px 0 0;
   width: auto;
 }
-/* line 122, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 121, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .textarea-processed > div,
 .pane-bundle-webform .form-textarea-wrapper > div,
 .pane-bundle-webform .webform-component-checkboxes > div,
@@ -8543,43 +8548,43 @@ form.webform-client-form .webform-component-checkboxes > div {
   width: 306px;
   display: inline-block;
 }
-/* line 128, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 127, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .form-textarea-wrapper,
 form.webform-client-form .form-textarea-wrapper {
   width: 306px;
   display: inline-block;
 }
-/* line 132, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 131, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .form-textarea-wrapper .grippie,
 form.webform-client-form .form-textarea-wrapper .grippie {
   display: none;
 }
-/* line 137, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 136, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform textarea,
 form.webform-client-form textarea {
   width: 306px;
 }
-/* line 143, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 142, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .webform-progressbar .webform-progressbar-outer,
 form.webform-client-form .webform-progressbar .webform-progressbar-outer {
   border: 1px solid red;
 }
-/* line 147, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 146, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .webform-progressbar .webform-progressbar-inner,
 form.webform-client-form .webform-progressbar .webform-progressbar-inner {
   background-color: gold;
 }
-/* line 151, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 150, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .webform-progressbar .webform-progressbar-page,
 form.webform-client-form .webform-progressbar .webform-progressbar-page {
   border: 1px solid teal;
 }
-/* line 154, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 153, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .webform-progressbar .webform-progressbar-page .current,
 form.webform-client-form .webform-progressbar .webform-progressbar-page .current {
   background-color: purple;
 }
-/* line 160, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 159, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform input[type="submit"],
 form.webform-client-form input[type="submit"] {
   background-color: #3B1363;
@@ -8598,19 +8603,19 @@ form.webform-client-form input[type="submit"] {
   white-space: nowrap;
   width: 120px;
 }
-/* line 179, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 178, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform input[type="submit"]:nth-child(even),
 form.webform-client-form input[type="submit"]:nth-child(even) {
   float: left;
   margin-left: 20px;
 }
-/* line 184, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 183, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform input[type="submit"]:hover,
 form.webform-client-form input[type="submit"]:hover {
   background-image: linear-gradient(to left, #7b1f7f 0%, #3b1363 100%);
   color: #dfd1e0;
 }
-/* line 193, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 192, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform ul,
 .pane-bundle-webform ol,
 form.webform-client-form ul,
@@ -8620,14 +8625,14 @@ form.webform-client-form ol {
   overflow: hidden;
   padding: 0 0 0.25em 2.5em;
 }
-/* line 200, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 199, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform ul li,
 .pane-bundle-webform ol li,
 form.webform-client-form ul li,
 form.webform-client-form ol li {
   position: relative;
 }
-/* line 206, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 205, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform ul li:before,
 form.webform-client-form ul li:before {
   color: #850f88;
@@ -8635,12 +8640,12 @@ form.webform-client-form ul li:before {
   left: -17px;
   position: absolute;
 }
-/* line 214, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 213, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform ol,
 form.webform-client-form ol {
   counter-reset: li;
 }
-/* line 217, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 216, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform ol li:before,
 form.webform-client-form ol li:before {
   content: counter(li) ".";
@@ -8649,13 +8654,19 @@ form.webform-client-form ol li:before {
   position: absolute;
   left: -22px;
 }
+/* line 226, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+.pane-bundle-webform .form-type-radio label,
+form.webform-client-form .form-type-radio label {
+  padding: 0 0 0 10px;
+  text-align: left;
+}
 
-/* line 227, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 233, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 #ui-datepicker-div {
   z-index: 200;
 }
 
-/* line 231, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 237, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .dependentFieldSlave {
   display: none;
 }

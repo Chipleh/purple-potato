@@ -96,7 +96,6 @@ form.webform-client-form {
 		width: auto;
 	}
 
-	.views-exposed-widget,
 	.views-widget-per-page {
 		display: none;
 	}
@@ -220,6 +219,13 @@ form.webform-client-form {
 			color: #850f88;
 			position: absolute;
 			left: -22px;
+		}
+	}
+
+	.form-type-radio {
+		label {
+			padding: 0 0 0 10px;
+			text-align: left;	
 		}
 	}
 }
