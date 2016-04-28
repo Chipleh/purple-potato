@@ -7,6 +7,10 @@
 
 /*  elements
 **************************************************/
+.pane-bundle-webform {
+	margin-bottom: 30px;
+}
+
 .pane-bundle-webform,
 form.webform-client-form {
 	.webform-layout-box  {
@@ -92,6 +96,10 @@ form.webform-client-form {
 		width: auto;
 	}
 
+	.views-widget-per-page {
+		display: none;
+	}
+
 	.form-type-checkbox,
 	.option {
 		display: inline-block;
@@ -167,6 +175,11 @@ form.webform-client-form {
 		white-space: nowrap;
 		width: 120px;
 
+		&:nth-child(even) {
+			float: left;
+			margin-left: 20px;
+		}
+
 		&:hover {
 			background-image: -o-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
 			background-image: -webkit-linear-gradient(right, #7B1F7F 0%, #3B1363 100%);
@@ -206,6 +219,13 @@ form.webform-client-form {
 			color: #850f88;
 			position: absolute;
 			left: -22px;
+		}
+	}
+
+	.form-type-radio {
+		label {
+			padding: 0 0 0 10px;
+			text-align: left;	
 		}
 	}
 }
