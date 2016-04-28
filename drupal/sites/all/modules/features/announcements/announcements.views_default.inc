@@ -33,6 +33,7 @@ function announcements_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = 'View All »';
   $handler->display->display_options['pager']['options']['tags']['first'] = '';
@@ -196,12 +197,6 @@ function announcements_views_default_views() {
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Unfiltered text */
-  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
-  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['label'] = 'Custom View All (Works with javascript in leidos_theme.js)';
-  $handler->display->display_options['footer']['area_text_custom']['content'] = '<a id="custom-view-all-link" href="#" onclick="load_show_all()">View All »</a>';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Industry */
   $handler->display->display_options['arguments']['field_industry_tid']['id'] = 'field_industry_tid';

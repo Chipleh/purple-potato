@@ -112,7 +112,7 @@
 				}
 			}
 		}
-		
+
 		.announcment-detail {
 			h1.title,
 			h2.title {
@@ -175,7 +175,7 @@
 
 			&.right {
 				float: right;
-				margin-left: calc(#{$multiBit} * 4);	
+				margin-left: calc(#{$multiBit} * 4);
 			}
 		}
 
@@ -199,6 +199,10 @@
 			.views-submit-button {
 				width: 90px;
 			}
+
+            &.views-widget-per-page {
+                display: block;
+            }
 
 			#edit-search-wrapper,
 			#edit-category-wrapper,
@@ -260,7 +264,7 @@
 					font-family: "AvenirLT-Black", Arial, sans-serif;
 					font-size: 11px;
 					font-weight: normal;
-					margin: 0px;
+					margin: 0;
 					padding: 8px 10px;
 					text-transform: uppercase;
 					transition: color .5s ease;
@@ -345,7 +349,7 @@
 				font-weight: 100;
 				margin: 0 auto;
 				overflow: hidden;
-				text-align: center;
+				text-align: left;
 
 				p {
 					margin: 0;
@@ -424,10 +428,10 @@
 						float: none;
 					}
 
-					.views-widget {
-						display: block;
-						overflow: hidden;
-					}
+                    .views-widget {
+                        display: block;
+                        overflow: hidden;
+                    }
 
 					input {
 						width: calc(100% - 14px);

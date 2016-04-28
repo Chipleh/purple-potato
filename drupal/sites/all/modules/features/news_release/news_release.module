@@ -1,0 +1,120 @@
+<?php
+/**
+ * @file
+ * Code for the News Release feature.
+ */
+
+include_once 'news_release.features.inc';
+
+/**
+ * Override or insert variables into the node template.
+ */
+function news_release_preprocess_node(&$vars) {
+  // Redirect news release detail pages to the external news release.
+  if ($vars['type'] == 'news_release' && $vars['view_mode'] == 'full') {
+    $company_id = variable_get('news_release_company_id', 193857);
+    $release_id = isset($vars['field_id'][$vars['language']][0]['value']) ? $vars['field_id'][$vars['language']][0]['value'] : 0;
+    $external_url = 'http://investors.leidos.com/phoenix.zhtml?c=' . $company_id . '&p=irol-newsArticle&highlight=&ID=' . $release_id;
+    drupal_goto($external_url);
+  }
+}
+
+/**
+ * Import news items from the Thomson Reuter feed.
+ */
+function news_release_fetch() {
+  $company_id = variable_get('news_release_company_id', 193857);
+
+  // Fetch results from the Thomson Reuter feed.
+  $url = 'http://xml.corporate-ir.net/irxmlclient.asp?compid=' . $company_id . '&reqtype=newsreleases_2';
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+  curl_setopt($ch, CURLOPT_URL, $url);
+  $result = curl_exec($ch);
+  curl_close($ch);
+
+  if (!empty($result)) {
+    $xml = file_save_data($result,'public://news-releases.xml', FILE_EXISTS_REPLACE);
+    variable_set('news_release_last_check', strtotime('now'));
+  }
+  else {
+    $xml = FALSE;
+  }
+
+  return $xml;
+}
+
+/**
+ * Implements hook_cron().
+ */
+function news_release_cron() {
+  $queue = DrupalQueue::get('newsReleaseQueue');
+
+  $last_check = variable_get('news_release_last_check', 0);
+  $last_item = variable_get('news_release_last_item', 0);
+  // Check whether or not we need to pull the updated news feed.
+  if ($last_check < strtotime('-24 hours')) {
+    // Pull the news feed and save it locally.
+    news_release_fetch();
+  }
+  // Load the local news feed file.
+  $filename = file_create_url('public://news-releases.xml');
+  $xml = simplexml_load_file($filename);
+
+  $processed = 0;
+  foreach ($xml->NewsReleases->NewsRelease as $key => $item) {
+    $release = json_decode(json_encode($item), TRUE);
+    // Only add new items to the queue.
+    if ($release['@attributes']['ReleaseID'] > $last_item) {
+      $queue->createItem($release);
+      // Keep track of the highest ID for all items added to the queue.
+      if ($release['@attributes']['ReleaseID'] > $processed) {
+        $processed = $release['@attributes']['ReleaseID'];
+      }
+    }
+  }
+  // Update the last imported item flag.
+  if ($processed > $last_item) {
+    variable_set('news_release_last_item', $processed);
+  }
+}
+
+/**
+ * Import items from the feed into drupal nodes.
+ */
+function news_release_import($item) {
+  // Create a new node.
+  $node = new stdClass();
+  $node->title = $item['Title'];
+  $node->type = 'news_release';
+  node_object_prepare($node);
+  $node->language = LANGUAGE_NONE;
+  $node->uid = 1;
+  $node->status = 1;
+
+  // Date.
+  $date = date('Y-m-d H:i:s', strtotime($item['Date']));
+  $node->field_announcement_date[$node->language][] = array(
+    'value' => $date
+  );
+  // ID.
+  $node->field_id[$node->language][] = array(
+    'value' => $item['@attributes']['ReleaseID'],
+  );
+
+  $node = node_submit($node);
+  node_save($node);
+}
+
+/**
+ * Implements hook_cron_queue_info().
+ */
+function news_release_cron_queue_info() {
+  $queues = array();
+  $queues['newsReleaseQueue'] = array(
+    'worker callback' => 'news_release_import',
+    'time' => 60,
+  );
+  return $queues;
+}

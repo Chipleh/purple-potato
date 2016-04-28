@@ -377,6 +377,16 @@ function leidos_preprocess_field(&$variables) {
       $variables['items'][0]['#markup'] .
     '</div>';
   }
+  elseif ($variables['element']['#field_name'] == 'field_releases_count') {
+    // Render the news releases.
+    $items_per_page = isset($variables['items'][0]['#markup']) ? $variables['items'][0]['#markup'] : 10;
+    $news = views_get_view('news_releases');
+    $news->set_display('latest_news');
+    $news->set_items_per_page($items_per_page);
+    $news->pre_execute();
+    $news->execute();
+    $variables['news'] = $news->render();
+  }
 }
 
 /**
@@ -493,16 +503,18 @@ function leidos_preprocess_panels_pane(&$variables) {
 function leidos_menu_link(array $variables) {
   $element = $variables['element'];
 
-  // Process only the menu with no parent
+  // Process only the menu with no parent.
   if ($element['#original_link']['plid'] == 0) {
-    if (($key = array_search('active-trail', $element['#attributes']['class'])) !== false) {
+    if (($key = array_search('active-trail', $element['#attributes']['class'])) !== FALSE) {
       unset($element['#attributes']['class'][$key]);
     }
     // Make sure all link items have a title.
     if (empty($element['#localized_options']['attributes']['title'])) {
       $element['#localized_options']['attributes']['title'] = $element['#title'];
     }
-    if ($element['#href'] == current_path()) {
+    // Check if the menu link is in the active trail for the current page.
+    $current_path = drupal_get_path_alias(current_path());
+    if (strpos($current_path, $element['#href']) !== FALSE) {
       $element['#attributes']['class'][] = 'active-trail-selected';
       $element['#localized_options']['attributes']['class'] = array();
       $element['#localized_options']['attributes']['class'][] = 'active-trail';
@@ -510,7 +522,7 @@ function leidos_menu_link(array $variables) {
 
     if ($element['#below']) {
       foreach ($element['#below'] as $subitem) {
-        if (isset($subitem['#href']) && $subitem['#href'] == current_path()) {
+        if (isset($subitem['#href']) && $subitem['#href'] == $current_path) {
           $element['#attributes']['class'][] = 'active-trail';
         }
       }
