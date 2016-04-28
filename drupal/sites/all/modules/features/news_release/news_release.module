@@ -54,7 +54,7 @@ function news_release_cron() {
   $last_check = variable_get('news_release_last_check', 0);
   $last_item = variable_get('news_release_last_item', 0);
   // Check whether or not we need to pull the updated news feed.
-  if ($last_check < strtotime('-24 hours')) {
+  if ($last_check < strtotime('-30 minutes')) {
     // Pull the news feed and save it locally.
     news_release_fetch();
   }
