@@ -1,0 +1,90 @@
+/*************************
+*   Webform Styles
+*   Rhino Hooton
+*   6/29/15
+/************************/
+
+
+/*  elements
+**************************************************/
+.pane-bundle-ranking-promo {
+	clear: both;
+	display: block;
+	overflow: hidden;
+
+	.ranking-container {
+		display: block;
+		overflow: hidden;
+		width: 46%;
+
+		&:nth-child(odd) {
+			clear: left;
+			float: left;
+		}
+
+		&:nth-child(even) {
+			clear: right;
+			float: right;
+		}
+
+		.ranking-circle {
+			border-radius: 100%;
+			color: $color-white;
+			display: block;
+			float: left;
+			font-size: 25px;
+			height: 64px;
+			line-height: 64px;
+			overflow: hidden;
+			padding: 0;
+			text-align: center;
+			width: 64px;
+		}
+
+		.ranking-details {
+			float: right;
+			width: calc(100% - 84px);
+
+			.title {
+				color: $color-leidos-purple-dark;
+				font-size: 14px;
+				font-weight: bold;
+				margin: 5px 0;
+			}
+		}
+	}
+}
+
+
+/*  tablet
+**************************************************/
+@media only screen and (min-width: 721px) and (max-width: 960px) {
+	.pane-bundle-ranking-promo {
+		.ranking-container {
+			width: 100%;
+
+			&:nth-child(odd),
+			&:nth-child(even) {
+				clear: both;
+				float: none;
+			}
+		}
+	}
+}
+
+
+/*  mobile
+**************************************************/
+@media only screen and (max-width: 720px) {
+	.pane-bundle-ranking-promo {
+		.ranking-container {
+			width: 100%;
+
+			&:nth-child(odd),
+			&:nth-child(even) {
+				clear: both;
+				float: none;
+			}
+		}
+	}
+}
