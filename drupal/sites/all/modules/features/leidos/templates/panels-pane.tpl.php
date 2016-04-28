@@ -4,5 +4,3 @@
   <?php endif; ?>
   <?php print render($content); ?>
 </div>
-
-WTF
