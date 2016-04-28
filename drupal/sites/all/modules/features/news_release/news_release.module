@@ -60,6 +60,15 @@ function news_release_cron() {
   }
   // Load the local news feed file.
   $filename = file_create_url('public://news-releases.xml');
+  $htauth = variable_get('news_release_crendentials', '');
+  // Use credentials to fetch the XML file.
+  if (!empty($htauth)) {
+    $filename = str_replace(
+      array('http://', 'https://'),
+      array('http://' . $htauth . '@', 'https://' . $htauth . '@'),
+      $filename
+    );
+  }
   $xml = simplexml_load_file($filename);
 
   $processed = 0;
