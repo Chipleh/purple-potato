@@ -275,7 +275,13 @@ function panels_curator_map_values($values, $content) {
   }
   elseif (isset($values['url'])) {
     // Link fields.
-    $value = l($values['title'], $values['url'], array('attributes' => $values['attributes'], 'html' => $values['html']));
+    if (!empty($values['url']) || $content['#field']['settings']['url'] != 'optional') {
+      $value = l($values['title'], $values['url'], array('attributes' => $values['attributes'], 'html' => $values['html']));
+    }
+    else {
+      // Allow for plain text, non-links for optional link fields.
+      $value = $values['title'];
+    }
   }
   else {
     $value = t('Unmapped field');
