@@ -54,6 +54,18 @@
 			}
 		}
 	}
+
+	.columns-1 {
+		.ranking-container {
+			width: 100%;
+
+			&:nth-child(odd),
+			&:nth-child(even) {
+				clear: both;
+				float: none;
+			}
+		}		
+	}
 }
 
 
