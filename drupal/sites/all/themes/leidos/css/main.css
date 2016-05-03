@@ -8649,6 +8649,7 @@ form.webform-client-form input[type="submit"] {
   border: none;
   color: #fff;
   display: block;
+  float: left;
   font-family: "AvenirLT-Black", Arial, sans-serif;
   font-size: 11px;
   font-weight: normal;
@@ -8659,10 +8660,9 @@ form.webform-client-form input[type="submit"] {
   white-space: nowrap;
   width: 120px;
 }
-/* line 178, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 179, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform input[type="submit"]:nth-child(even),
 form.webform-client-form input[type="submit"]:nth-child(even) {
-  float: left;
   margin-left: 20px;
 }
 /* line 183, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */

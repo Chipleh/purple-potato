@@ -165,6 +165,7 @@ form.webform-client-form {
 		border: none;
 		color: $color-white;
 		display: block;
+		float: left;
 		font-family: "AvenirLT-Black", Arial, sans-serif;
 		font-size: 11px;
 		font-weight: normal;
@@ -176,7 +177,6 @@ form.webform-client-form {
 		width: 120px;
 
 		&:nth-child(even) {
-			float: left;
 			margin-left: 20px;
 		}
 
