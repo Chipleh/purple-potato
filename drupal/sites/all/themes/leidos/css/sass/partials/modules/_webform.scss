@@ -222,7 +222,17 @@ form.webform-client-form {
 		}
 	}
 
+	.form-radios {
+		display: block;
+		margin: 0.4em 0;
+		overflow: hidden;
+	}
+
 	.form-type-radio {
+		clear: both;
+		display: block !important;
+		margin: 0.4em 0;
+
 		label {
 			padding: 0 0 0 10px;
 			text-align: left;	

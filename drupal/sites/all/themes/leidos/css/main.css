@@ -8710,19 +8710,33 @@ form.webform-client-form ol li:before {
   position: absolute;
   left: -22px;
 }
-/* line 226, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 225, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+.pane-bundle-webform .form-radios,
+form.webform-client-form .form-radios {
+  display: block;
+  margin: 0.4em 0;
+  overflow: hidden;
+}
+/* line 231, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+.pane-bundle-webform .form-type-radio,
+form.webform-client-form .form-type-radio {
+  clear: both;
+  display: block !important;
+  margin: 0.4em 0;
+}
+/* line 236, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .pane-bundle-webform .form-type-radio label,
 form.webform-client-form .form-type-radio label {
   padding: 0 0 0 10px;
   text-align: left;
 }
 
-/* line 233, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 243, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 #ui-datepicker-div {
   z-index: 200 !important;
 }
 
-/* line 237, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
+/* line 247, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_webform.scss */
 .dependentFieldSlave {
   display: none;
 }
