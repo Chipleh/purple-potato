@@ -14,6 +14,7 @@
 
 	.ranking-container {
 		display: block;
+		margin-bottom: 20px;
 		overflow: hidden;
 		width: 46%;
 
@@ -52,6 +53,18 @@
 				margin: 5px 0;
 			}
 		}
+	}
+
+	.columns-1 {
+		.ranking-container {
+			width: 100%;
+
+			&:nth-child(odd),
+			&:nth-child(even) {
+				clear: both;
+				float: none;
+			}
+		}		
 	}
 }
 
