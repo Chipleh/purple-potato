@@ -188,14 +188,6 @@ function leidos_image_default_styles() {
  */
 function leidos_node_info() {
   $items = array(
-    'flexible_page' => array(
-      'name' => t('Flexible page'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'project' => array(
       'name' => t('Project'),
       'base' => 'node_content',
