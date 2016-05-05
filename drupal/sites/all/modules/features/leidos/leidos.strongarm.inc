@@ -13,13 +13,6 @@ function leidos_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_flexible_page';
-  $strongarm->value = 0;
-  $export['comment_anonymous_flexible_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_project';
   $strongarm->value = 0;
   $export['comment_anonymous_project'] = $strongarm;
@@ -30,13 +23,6 @@ function leidos_strongarm() {
   $strongarm->name = 'comment_anonymous_rotator';
   $strongarm->value = 0;
   $export['comment_anonymous_rotator'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_flexible_page';
-  $strongarm->value = 1;
-  $export['comment_default_mode_flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -55,13 +41,6 @@ function leidos_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_flexible_page';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_flexible_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_project';
   $strongarm->value = '50';
   $export['comment_default_per_page_project'] = $strongarm;
@@ -76,20 +55,6 @@ function leidos_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_flexible_page';
-  $strongarm->value = '2';
-  $export['comment_flexible_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_flexible_page';
-  $strongarm->value = 1;
-  $export['comment_form_location_flexible_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_project';
   $strongarm->value = 1;
   $export['comment_form_location_project'] = $strongarm;
@@ -100,13 +65,6 @@ function leidos_strongarm() {
   $strongarm->name = 'comment_form_location_rotator';
   $strongarm->value = 1;
   $export['comment_form_location_rotator'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_flexible_page';
-  $strongarm->value = '1';
-  $export['comment_preview_flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -135,13 +93,6 @@ function leidos_strongarm() {
   $strongarm->name = 'comment_rotator';
   $strongarm->value = '1';
   $export['comment_rotator'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_flexible_page';
-  $strongarm->value = 1;
-  $export['comment_subject_field_flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -210,44 +161,6 @@ function leidos_strongarm() {
     ),
   );
   $export['field_bundle_settings_fieldable_panels_pane__left_navigation'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__flexible_page';
-  $strongarm->value = array(
-    'view_modes' => array(
-      'full' => array(
-        'custom_settings' => TRUE,
-      ),
-      'teaser' => array(
-        'custom_settings' => TRUE,
-      ),
-      'rss' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_index' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_result' => array(
-        'custom_settings' => FALSE,
-      ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
-      'revision' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_node__flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -380,15 +293,6 @@ function leidos_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_flexible_page';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
-  $export['menu_options_flexible_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_project';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -407,13 +311,6 @@ function leidos_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_flexible_page';
-  $strongarm->value = 'main-menu:0';
-  $export['menu_parent_flexible_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_project';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_project'] = $strongarm;
@@ -424,16 +321,6 @@ function leidos_strongarm() {
   $strongarm->name = 'menu_parent_rotator';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_rotator'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_flexible_page';
-  $strongarm->value = array(
-    0 => 'status',
-    1 => 'promote',
-  );
-  $export['node_options_flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -458,13 +345,6 @@ function leidos_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_flexible_page';
-  $strongarm->value = '1';
-  $export['node_preview_flexible_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_project';
   $strongarm->value = '1';
   $export['node_preview_project'] = $strongarm;
@@ -479,13 +359,6 @@ function leidos_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_flexible_page';
-  $strongarm->value = 1;
-  $export['node_submitted_flexible_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_project';
   $strongarm->value = 1;
   $export['node_submitted_project'] = $strongarm;
@@ -496,91 +369,6 @@ function leidos_strongarm() {
   $strongarm->name = 'node_submitted_rotator';
   $strongarm->value = 1;
   $export['node_submitted_rotator'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_defaults_node_flexible_page';
-  $strongarm->value = array(
-    'status' => 1,
-    'view modes' => array(
-      'page_manager' => array(
-        'status' => 1,
-        'substitute' => '',
-        'default' => 1,
-        'choice' => 1,
-      ),
-      'default' => array(
-        'status' => 1,
-        'substitute' => '',
-        'default' => 1,
-        'choice' => 1,
-      ),
-      'teaser' => array(
-        'status' => 0,
-        'substitute' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-    ),
-    'help' => '',
-  );
-  $export['panelizer_defaults_node_flexible_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:flexible_page:default_selection';
-  $strongarm->value = 'node:flexible_page:default:default';
-  $export['panelizer_node:flexible_page:default_selection'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:flexible_page:page_manager_selection';
-  $strongarm->value = 'node:flexible_page:default';
-  $export['panelizer_node:flexible_page:page_manager_selection'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:flexible_page_allowed_layouts';
-  $strongarm->value = 'O:22:"panels_allowed_layouts":4:{s:9:"allow_new";b:1;s:11:"module_name";s:28:"panelizer_node:flexible_page";s:23:"allowed_layout_settings";a:11:{s:8:"flexible";b:1;s:19:"flexible:full_width";b:1;s:26:"flexible:industry_template";b:1;s:6:"onecol";b:1;s:25:"threecol_25_50_25_stacked";b:1;s:17:"threecol_25_50_25";b:1;s:14:"twocol_stacked";b:1;s:13:"twocol_bricks";b:1;s:25:"threecol_33_34_33_stacked";b:1;s:6:"twocol";b:1;s:17:"threecol_33_34_33";b:1;}s:10:"form_state";N;}';
-  $export['panelizer_node:flexible_page_allowed_layouts'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:flexible_page_allowed_layouts_default';
-  $strongarm->value = 0;
-  $export['panelizer_node:flexible_page_allowed_layouts_default'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:flexible_page_allowed_types_default';
-  $strongarm->value = 0;
-  $export['panelizer_node:flexible_page_allowed_types_default'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:flexible_page_default';
-  $strongarm->value = array(
-    'fieldable_panels_pane' => 'fieldable_panels_pane',
-    'entity_form_field' => 0,
-    'token' => 0,
-    'custom' => 0,
-    'entity_field_extra' => 0,
-    'entity_field' => 0,
-    'block' => 0,
-    'entity_view' => 0,
-    'menu_tree' => 0,
-    'views' => 0,
-    'views_panes' => 0,
-    'other' => 0,
-  );
-  $export['panelizer_node:flexible_page_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
