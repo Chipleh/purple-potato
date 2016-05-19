@@ -36,10 +36,26 @@
 			font-size: 25px;
 			height: 64px;
 			line-height: 64px;
+			margin-right: 20px;
 			overflow: hidden;
 			padding: 0;
 			text-align: center;
 			width: 64px;
+		}
+
+		.ranking-simple {
+			display: none;
+			// border-radius: 100%;
+			// color: $color-white;
+			// display: block;
+			// float: left;
+			// font-size: 25px;
+			// height: 64px;
+			// line-height: 64px;
+			// overflow: hidden;
+			// padding: 0;
+			// text-align: center;
+			// width: 64px;
 		}
 
 		.ranking-details {
