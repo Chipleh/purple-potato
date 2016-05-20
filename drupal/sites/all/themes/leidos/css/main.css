@@ -5712,7 +5712,7 @@ p.subtext {
 /* line 48, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h1 {
   font-size: 4.3vw;
-  height: calc(0.643vw * 7);
+  height: calc(0.643vw * 8);
   line-height: 4.501vw;
   margin-bottom: calc(0.643vw * 2);
   margin-top: calc(0.643vw * 4);
@@ -7860,11 +7860,11 @@ p.subtext {
   font-size: 25px;
   height: 64px;
   line-height: 64px;
+  margin-right: 20px;
   overflow: hidden;
   padding: 0;
   text-align: center;
   width: 64px;
-  margin-right: 20px;
 }
 /* line 46, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
 .pane-bundle-ranking-promo .ranking-container .ranking-simple {
