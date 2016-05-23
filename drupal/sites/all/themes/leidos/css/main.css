@@ -5712,7 +5712,7 @@ p.subtext {
 /* line 48, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h1 {
   font-size: 4.3vw;
-  height: calc(0.643vw * 7);
+  height: calc(0.643vw * 8);
   line-height: 4.501vw;
   margin-bottom: calc(0.643vw * 2);
   margin-top: calc(0.643vw * 4);
@@ -7860,28 +7860,33 @@ p.subtext {
   font-size: 25px;
   height: 64px;
   line-height: 64px;
+  margin-right: 20px;
   overflow: hidden;
   padding: 0;
   text-align: center;
   width: 64px;
 }
-/* line 45, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
+/* line 46, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
+.pane-bundle-ranking-promo .ranking-container .ranking-simple {
+  display: none;
+}
+/* line 61, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
 .pane-bundle-ranking-promo .ranking-container .ranking-details {
   float: right;
   width: calc(100% - 84px);
 }
-/* line 49, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
+/* line 65, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
 .pane-bundle-ranking-promo .ranking-container .ranking-details .title {
   color: #1F1646;
   font-size: 14px;
   font-weight: bold;
   margin: 5px 0;
 }
-/* line 59, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
+/* line 75, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
 .pane-bundle-ranking-promo .columns-1 .ranking-container {
   width: 100%;
 }
-/* line 62, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
+/* line 78, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
 .pane-bundle-ranking-promo .columns-1 .ranking-container:nth-child(odd), .pane-bundle-ranking-promo .columns-1 .ranking-container:nth-child(even) {
   clear: both;
   float: none;
@@ -7890,11 +7895,11 @@ p.subtext {
 /*  tablet
 **************************************************/
 @media only screen and (min-width: 721px) and (max-width: 960px) {
-  /* line 76, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
+  /* line 92, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
   .pane-bundle-ranking-promo .ranking-container {
     width: 100%;
   }
-  /* line 79, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
+  /* line 95, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
   .pane-bundle-ranking-promo .ranking-container:nth-child(odd), .pane-bundle-ranking-promo .ranking-container:nth-child(even) {
     clear: both;
     float: none;
@@ -7903,11 +7908,11 @@ p.subtext {
 /*  mobile
 **************************************************/
 @media only screen and (max-width: 720px) {
-  /* line 93, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
+  /* line 109, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
   .pane-bundle-ranking-promo .ranking-container {
     width: 100%;
   }
-  /* line 96, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
+  /* line 112, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
   .pane-bundle-ranking-promo .ranking-container:nth-child(odd), .pane-bundle-ranking-promo .ranking-container:nth-child(even) {
     clear: both;
     float: none;
