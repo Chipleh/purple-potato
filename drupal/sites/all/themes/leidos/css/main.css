@@ -1156,21 +1156,21 @@ p.subtext {
   border-top: none;
 }
 /* line 205, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li:hover, .left-navigation-menu #left-nav-menu li.hover, .left-navigation-menu #left-nav-menu li.active-trail {
+.left-navigation-menu #left-nav-menu li:hover, .left-navigation-menu #left-nav-menu li.hover, .left-navigation-menu #left-nav-menu li.active-trail-selected {
   background: #fff;
   z-index: 3;
 }
 /* line 211, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li:hover:before, .left-navigation-menu #left-nav-menu li.hover:before, .left-navigation-menu #left-nav-menu li.active-trail:before {
+.left-navigation-menu #left-nav-menu li:hover:before, .left-navigation-menu #left-nav-menu li.hover:before, .left-navigation-menu #left-nav-menu li.active-trail-selected:before {
   opacity: 1;
 }
 /* line 215, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li:hover > a, .left-navigation-menu #left-nav-menu li.hover > a, .left-navigation-menu #left-nav-menu li.active-trail > a {
+.left-navigation-menu #left-nav-menu li:hover > a, .left-navigation-menu #left-nav-menu li.hover > a, .left-navigation-menu #left-nav-menu li.active-trail-selected > a {
   border-right: 5px solid #850F88;
   color: #1F1646;
 }
 /* line 221, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li:hover .no-children, .left-navigation-menu #left-nav-menu li.hover .no-children, .left-navigation-menu #left-nav-menu li.active-trail .no-children {
+.left-navigation-menu #left-nav-menu li:hover .no-children, .left-navigation-menu #left-nav-menu li.hover .no-children, .left-navigation-menu #left-nav-menu li.active-trail-selected .no-children {
   max-height: 1000px;
 }
 
@@ -1487,7 +1487,7 @@ p.subtext {
     width: calc(100% - 160px);
   }
   /* line 534, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu #left-nav-menu li:hover, .left-navigation-menu #left-nav-menu li.hover, .left-navigation-menu #left-nav-menu li.active-trail {
+  .left-navigation-menu #left-nav-menu li:hover, .left-navigation-menu #left-nav-menu li.hover, .left-navigation-menu #left-nav-menu li.active-trail-selected {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #ffffff;
     /* Old browsers */
@@ -1504,7 +1504,7 @@ p.subtext {
     /* IE6-8 */
   }
   /* line 549, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
-  .left-navigation-menu #left-nav-menu li:hover > a, .left-navigation-menu #left-nav-menu li.hover > a, .left-navigation-menu #left-nav-menu li.active-trail > a {
+  .left-navigation-menu #left-nav-menu li:hover > a, .left-navigation-menu #left-nav-menu li.hover > a, .left-navigation-menu #left-nav-menu li.active-trail-selected > a {
     border-right: 0px;
   }
   /* line 555, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/_side-nav.scss */
@@ -7872,7 +7872,7 @@ p.subtext {
 }
 /* line 61, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */
 .pane-bundle-ranking-promo .ranking-container .ranking-details {
-  float: right;
+  float: left;
   width: calc(100% - 84px);
 }
 /* line 65, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_ranking-promo.scss */

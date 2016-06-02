@@ -204,7 +204,7 @@
 
 			&:hover,
 			&.hover,
-			&.active-trail {
+			&.active-trail-selected {
 				background: $color-white;
 				z-index: 3;
 
@@ -533,7 +533,7 @@
 
 				&:hover,
 				&.hover,
-				&.active-trail {
+				&.active-trail-selected {
 					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
 					background: #ffffff; /* Old browsers */
 					/* IE9 SVG, needs conditional override of 'filter' to 'none' */
