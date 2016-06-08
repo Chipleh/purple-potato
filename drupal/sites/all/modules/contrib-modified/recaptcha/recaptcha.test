@@ -128,7 +128,7 @@ class ReCaptchaBasicTest extends DrupalWebTestCase {
     // Check if there is a reCAPTCHA on the login form.
     $this->drupalGet('user');
     $this->assertRaw($grecaptcha, '[testReCaptchaOnLoginForm]: reCAPTCHA is shown on form.');
-    $this->assertRaw('<script src="https://www.google.com/recaptcha/api.js?hl=' . $language->language . '" async="async" defer="defer"></script>', '[testReCaptchaOnLoginForm]: reCAPTCHA is shown on form.');
+    $this->assertRaw('<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=' . $language->language . '&amp;render=explicit&amp;onload=-"></script>', '[testReCaptchaOnLoginForm]: reCAPTCHA is shown on form.');
     $this->assertNoRaw($grecaptcha . '<noscript>', '[testReCaptchaOnLoginForm]: NoScript code is not enabled for the reCAPTCHA.');
 
     // Test if the fall back url is properly build and noscript code added.

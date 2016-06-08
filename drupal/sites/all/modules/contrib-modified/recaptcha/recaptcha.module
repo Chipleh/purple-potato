@@ -114,20 +114,16 @@ function recaptcha_captcha($op, $captcha_type = '') {
           $captcha['form']['recaptcha_widget'] = array(
             '#markup' => '<div' . drupal_attributes($attributes) . '></div>',
             '#suffix' => $noscript,
-          );
-
-          // @todo: #1664602: D7 does not yet support "async" in drupal_add_js().
-          // drupal_add_js(url('https://www.google.com/recaptcha/api.js', array('query' => array('hl' => $language->language), 'absolute' => TRUE)), array('defer' => TRUE, 'async' => TRUE, 'type' => 'external'));
-          $data = array(
-            '#tag' => 'script',
-            '#value' => '',
-            '#attributes' => array(
-              'src' => url('https://www.google.com/recaptcha/api.js', array('query' => array('hl' => $language->language), 'absolute' => TRUE)),
-              'async' => 'async',
-              'defer' => 'defer',
+            '#attached' => array(
+              'js' => array(
+                drupal_get_path('module', 'recaptcha') . '/recaptcha.js',
+                array(
+                  'data' => url('https://www.google.com/recaptcha/api.js', array('query' => array('hl' => $language->language, 'render' => 'explicit', 'onload' => 'drupalRecaptchaOnload'), 'absolute' => TRUE)),
+                  'type' => 'external',
+                ),
+              ),
             ),
           );
-          drupal_add_html_head($data, 'recaptcha_api');
         }
         else {
           // Fallback to Math captcha as reCAPTCHA is not configured.
