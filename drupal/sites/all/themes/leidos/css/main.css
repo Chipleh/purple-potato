@@ -5876,7 +5876,6 @@ p.subtext {
   background-size: 100% auto;
   clear: both;
   display: block;
-  margin-bottom: calc(0.643vw * 2);
   overflow: hidden;
   position: relative;
 }
