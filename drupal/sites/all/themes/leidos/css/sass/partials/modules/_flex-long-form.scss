@@ -8,13 +8,15 @@
 /*  elements
 **************************************************/
 .pane-bundle-long-form-copy {
-	background-repeat: none;
-	background-size: 100% auto;
-	clear: both;
-	display: block;
-	margin-bottom: calc(#{$multiBit} * 2);
-	overflow: hidden;
-	position: relative;
+    background-repeat: none;
+    background-size: 100% auto;
+    clear: both;
+    display: block;
+    margin-bottom: calc(#{$multiBit} * 2);
+    overflow: hidden;
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -129,7 +131,7 @@
 		.field-name-field-image {
 			float: right;
 			margin-left: calc(#{$multiBit} * 4);
-		}	
+		}
 	}
 }
 

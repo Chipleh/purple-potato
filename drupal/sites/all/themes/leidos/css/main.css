@@ -5677,19 +5677,21 @@ p.subtext {
   margin-bottom: calc(0.643vw * 2);
   overflow: hidden;
   position: relative;
+  font-size: 20px;
+  line-height: 30px;
 }
-/* line 19, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 21, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy:last-child {
   margin-bottom: 0;
 }
-/* line 23, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 25, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content {
   margin: 0 auto;
   width: 74%;
   /* header */
   /* bullet styling */
 }
-/* line 28, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 30, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h1,
 .pane-bundle-long-form-copy .flexible-template-content h2,
 .pane-bundle-long-form-copy .flexible-template-content h3,
@@ -5701,7 +5703,7 @@ p.subtext {
   overflow: hidden;
   text-align: center;
 }
-/* line 39, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 41, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h1 p,
 .pane-bundle-long-form-copy .flexible-template-content h2 p,
 .pane-bundle-long-form-copy .flexible-template-content h3 p,
@@ -5709,7 +5711,7 @@ p.subtext {
 .pane-bundle-long-form-copy .flexible-template-content h5 p {
   margin: 0;
 }
-/* line 48, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 50, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h1 {
   font-size: 4.3vw;
   height: calc(0.643vw * 8);
@@ -5717,7 +5719,7 @@ p.subtext {
   margin-bottom: calc(0.643vw * 2);
   margin-top: calc(0.643vw * 4);
 }
-/* line 56, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 58, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h2 {
   font-size: 3.6vw;
   height: calc(0.643vw * 8);
@@ -5725,30 +5727,30 @@ p.subtext {
   margin-bottom: calc(0.643vw * 2);
   margin-top: calc(0.643vw * 4);
 }
-/* line 64, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 66, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content .drop_cap {
   float: left;
   font-size: 60px;
   line-height: 58px;
   padding-right: 6px;
 }
-/* line 71, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 73, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image {
   width: 48%;
   margin-bottom: calc(0.643vw * 2);
 }
-/* line 75, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 77, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image img {
   display: block;
   height: auto;
   width: 100%;
 }
-/* line 81, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 83, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image p {
   margin-top: calc(0.643vw * 2);
   margin-bottom: 0;
 }
-/* line 88, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 90, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ul,
 .pane-bundle-long-form-copy .flexible-template-content ol {
   margin: 1em 0;
@@ -5756,23 +5758,23 @@ p.subtext {
   /* LTR */
   list-style: none;
 }
-/* line 94, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 96, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ul li,
 .pane-bundle-long-form-copy .flexible-template-content ol li {
   position: relative;
 }
-/* line 100, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 102, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ul li:before {
   content: "\002022";
   color: #850f88;
   position: absolute;
   left: -17px;
 }
-/* line 108, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 110, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ol {
   counter-reset: li;
 }
-/* line 111, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 113, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ol li:before {
   content: counter(li) ".";
   counter-increment: li;
@@ -5780,12 +5782,12 @@ p.subtext {
   position: absolute;
   left: -22px;
 }
-/* line 122, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 124, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy.image-align-left .field-name-field-image {
   float: left;
   margin-right: calc(0.643vw * 4);
 }
-/* line 129, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+/* line 131, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy.image-align-right .field-name-field-image {
   float: right;
   margin-left: calc(0.643vw * 4);
@@ -5794,13 +5796,13 @@ p.subtext {
 /*  tablet & mobile
 **************************************************/
 @media only screen and (max-width: 960px) {
-  /* line 141, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 143, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content {
     margin: 0 auto;
     width: 90%;
     /* header */
   }
-  /* line 146, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 148, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content h1,
   .pane-bundle-long-form-copy .flexible-template-content h2,
   .pane-bundle-long-form-copy .flexible-template-content h3,
@@ -5812,7 +5814,7 @@ p.subtext {
     overflow: hidden;
     text-align: center;
   }
-  /* line 157, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 159, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content h1 p,
   .pane-bundle-long-form-copy .flexible-template-content h2 p,
   .pane-bundle-long-form-copy .flexible-template-content h3 p,
@@ -5820,7 +5822,7 @@ p.subtext {
   .pane-bundle-long-form-copy .flexible-template-content h5 p {
     margin: 0;
   }
-  /* line 162, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 164, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content h1 {
     font-size: 10vw;
     height: calc(0.643vw * 32);
@@ -5828,7 +5830,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 170, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 172, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content h2 {
     font-size: 8vw;
     height: calc(0.643vw * 32);
@@ -5836,29 +5838,29 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 178, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 180, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image {
     display: block;
     margin: 0 auto;
     margin-bottom: calc(0.643vw * 4);
     width: 100%;
   }
-  /* line 184, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 186, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image img {
     display: block;
     height: auto;
     width: 100%;
   }
-  /* line 190, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 192, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image p {
     margin-bottom: 0;
     margin-top: calc(0.643vw * 4);
   }
-  /* line 198, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 200, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy.image-align-left .field-name-field-image {
     float: none;
   }
-  /* line 204, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
+  /* line 206, C:/xampp/htdocs/leidos-cms/drupal/sites/all/themes/leidos/css/sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy.image-align-right .field-name-field-image {
     float: none;
   }
@@ -5876,7 +5878,6 @@ p.subtext {
   background-size: 100% auto;
   clear: both;
   display: block;
-  margin-bottom: calc(0.643vw * 2);
   overflow: hidden;
   position: relative;
 }
