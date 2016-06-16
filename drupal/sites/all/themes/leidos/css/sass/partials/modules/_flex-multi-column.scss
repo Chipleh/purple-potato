@@ -8,13 +8,13 @@
 /*  elements
 **************************************************/
 .pane-bundle-multi-column {
-	background-repeat: none;
-	background-size: 100% auto;
-	clear: both;
-	display: block;
-	margin-bottom: calc(#{$multiBit} * 2);
-	overflow: hidden;
-	position: relative;
+    // margin-bottom: calc(#{$multiBit} * 2);
+    background-repeat: none;
+    background-size: 100% auto;
+    clear: both;
+    display: block;
+    overflow: hidden;
+    position: relative;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -314,7 +314,7 @@
 			.column-1 {
 				background-repeat: no-repeat !important;
 				background-size: 100% auto !important;
-		
+
 				&:before {
 					padding-top: 57.858%;
 				}

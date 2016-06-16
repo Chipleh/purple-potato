@@ -5673,19 +5673,21 @@ p.subtext {
   margin-bottom: calc(0.643vw * 2);
   overflow: hidden;
   position: relative;
+  font-size: 20px;
+  line-height: 30px;
 }
-/* line 19, sass/partials/modules/_flex-long-form.scss */
+/* line 21, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy:last-child {
   margin-bottom: 0;
 }
-/* line 23, sass/partials/modules/_flex-long-form.scss */
+/* line 25, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content {
   margin: 0 auto;
   width: 74%;
   /* header */
   /* bullet styling */
 }
-/* line 28, sass/partials/modules/_flex-long-form.scss */
+/* line 30, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h1,
 .pane-bundle-long-form-copy .flexible-template-content h2,
 .pane-bundle-long-form-copy .flexible-template-content h3,
@@ -5697,7 +5699,7 @@ p.subtext {
   overflow: hidden;
   text-align: center;
 }
-/* line 39, sass/partials/modules/_flex-long-form.scss */
+/* line 41, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h1 p,
 .pane-bundle-long-form-copy .flexible-template-content h2 p,
 .pane-bundle-long-form-copy .flexible-template-content h3 p,
@@ -5705,7 +5707,7 @@ p.subtext {
 .pane-bundle-long-form-copy .flexible-template-content h5 p {
   margin: 0;
 }
-/* line 48, sass/partials/modules/_flex-long-form.scss */
+/* line 50, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h1 {
   font-size: 4.3vw;
   height: calc(0.643vw * 8);
@@ -5713,7 +5715,7 @@ p.subtext {
   margin-bottom: calc(0.643vw * 2);
   margin-top: calc(0.643vw * 4);
 }
-/* line 56, sass/partials/modules/_flex-long-form.scss */
+/* line 58, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h2 {
   font-size: 3.6vw;
   height: calc(0.643vw * 8);
@@ -5721,30 +5723,30 @@ p.subtext {
   margin-bottom: calc(0.643vw * 2);
   margin-top: calc(0.643vw * 4);
 }
-/* line 64, sass/partials/modules/_flex-long-form.scss */
+/* line 66, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content .drop_cap {
   float: left;
   font-size: 60px;
   line-height: 58px;
   padding-right: 6px;
 }
-/* line 71, sass/partials/modules/_flex-long-form.scss */
+/* line 73, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image {
   width: 48%;
   margin-bottom: calc(0.643vw * 2);
 }
-/* line 75, sass/partials/modules/_flex-long-form.scss */
+/* line 77, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image img {
   display: block;
   height: auto;
   width: 100%;
 }
-/* line 81, sass/partials/modules/_flex-long-form.scss */
+/* line 83, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image p {
   margin-top: calc(0.643vw * 2);
   margin-bottom: 0;
 }
-/* line 88, sass/partials/modules/_flex-long-form.scss */
+/* line 90, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ul,
 .pane-bundle-long-form-copy .flexible-template-content ol {
   margin: 1em 0;
@@ -5752,23 +5754,23 @@ p.subtext {
   /* LTR */
   list-style: none;
 }
-/* line 94, sass/partials/modules/_flex-long-form.scss */
+/* line 96, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ul li,
 .pane-bundle-long-form-copy .flexible-template-content ol li {
   position: relative;
 }
-/* line 100, sass/partials/modules/_flex-long-form.scss */
+/* line 102, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ul li:before {
   content: "\002022";
   color: #850f88;
   position: absolute;
   left: -17px;
 }
-/* line 108, sass/partials/modules/_flex-long-form.scss */
+/* line 110, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ol {
   counter-reset: li;
 }
-/* line 111, sass/partials/modules/_flex-long-form.scss */
+/* line 113, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content ol li:before {
   content: counter(li) ".";
   counter-increment: li;
@@ -5776,12 +5778,12 @@ p.subtext {
   position: absolute;
   left: -22px;
 }
-/* line 122, sass/partials/modules/_flex-long-form.scss */
+/* line 124, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy.image-align-left .field-name-field-image {
   float: left;
   margin-right: calc(0.643vw * 4);
 }
-/* line 129, sass/partials/modules/_flex-long-form.scss */
+/* line 131, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy.image-align-right .field-name-field-image {
   float: right;
   margin-left: calc(0.643vw * 4);
@@ -5790,13 +5792,13 @@ p.subtext {
 /*  tablet & mobile
 **************************************************/
 @media only screen and (max-width: 960px) {
-  /* line 141, sass/partials/modules/_flex-long-form.scss */
+  /* line 143, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content {
     margin: 0 auto;
     width: 90%;
     /* header */
   }
-  /* line 146, sass/partials/modules/_flex-long-form.scss */
+  /* line 148, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content h1,
   .pane-bundle-long-form-copy .flexible-template-content h2,
   .pane-bundle-long-form-copy .flexible-template-content h3,
@@ -5808,7 +5810,7 @@ p.subtext {
     overflow: hidden;
     text-align: center;
   }
-  /* line 157, sass/partials/modules/_flex-long-form.scss */
+  /* line 159, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content h1 p,
   .pane-bundle-long-form-copy .flexible-template-content h2 p,
   .pane-bundle-long-form-copy .flexible-template-content h3 p,
@@ -5816,7 +5818,7 @@ p.subtext {
   .pane-bundle-long-form-copy .flexible-template-content h5 p {
     margin: 0;
   }
-  /* line 162, sass/partials/modules/_flex-long-form.scss */
+  /* line 164, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content h1 {
     font-size: 10vw;
     height: calc(0.643vw * 32);
@@ -5824,7 +5826,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 170, sass/partials/modules/_flex-long-form.scss */
+  /* line 172, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content h2 {
     font-size: 8vw;
     height: calc(0.643vw * 32);
@@ -5832,29 +5834,29 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 178, sass/partials/modules/_flex-long-form.scss */
+  /* line 180, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image {
     display: block;
     margin: 0 auto;
     margin-bottom: calc(0.643vw * 4);
     width: 100%;
   }
-  /* line 184, sass/partials/modules/_flex-long-form.scss */
+  /* line 186, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image img {
     display: block;
     height: auto;
     width: 100%;
   }
-  /* line 190, sass/partials/modules/_flex-long-form.scss */
+  /* line 192, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy .flexible-template-content .field-name-field-image p {
     margin-bottom: 0;
     margin-top: calc(0.643vw * 4);
   }
-  /* line 198, sass/partials/modules/_flex-long-form.scss */
+  /* line 200, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy.image-align-left .field-name-field-image {
     float: none;
   }
-  /* line 204, sass/partials/modules/_flex-long-form.scss */
+  /* line 206, sass/partials/modules/_flex-long-form.scss */
   .pane-bundle-long-form-copy.image-align-right .field-name-field-image {
     float: none;
   }
@@ -5872,7 +5874,6 @@ p.subtext {
   background-size: 100% auto;
   clear: both;
   display: block;
-  margin-bottom: calc(0.643vw * 2);
   overflow: hidden;
   position: relative;
 }
