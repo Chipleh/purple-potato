@@ -31,15 +31,23 @@
         float: left;
         height: 258px;
         margin: 0 20px 1.25% 0;
+        padding: 15px 30px 30px 30px;
         position: relative;
         width: 31.66%;
+
+        dt,
+        dd {
+            display: block;
+        }
 
         footer {
             border-top: solid 1px #d0d0d0;
             bottom: 0;
+            font-size: 12px;
             left: 0;
-            right: 0;
+            padding: 15px 30px;
             position: absolute;
+            right: 0;
         }
 
         &--textRight {
@@ -48,6 +56,59 @@
         &--textLeft {
             text-align: left;
         }
+
+        &--feature {
+            padding-top: 30px;
+
+            dt {
+                color: #867429;
+                font-family: AvenirLT-Book, Arial, sans-serif;
+                font-size: 30px;
+            }
+            dd {
+                color: #1f1646;
+                font-family: AvenirLT-Book, Arial, sans-serif;
+                font-size: 30px;
+            }
+        }
+
+        &--lgNum {
+            dt {
+                color: #197f95;
+                font-size: 100px;
+                font-family: AvenirLT-Book, Arial, sans-serif;
+
+                span {
+                    font-size: 60px;
+                    vertical-align: top;
+                }
+            }
+            dd {
+                color: #ababab;
+                font-family: AvenirLT-Black, Arial, sans-serif;
+                font-size: 12px;
+                line-height: 1.8em;
+                margin-top: -20px;
+                padding-left: 25%;
+                text-transform: uppercase;
+            }
+        }
+
+        &--leaf {
+            dt {
+                &:before {
+                    background: url('https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png') 0 -1679px no-repeat;
+                    content: '';
+                    display: block;
+                    height: 83px;
+                    left: 30px;
+                    position: absolute;
+                    top: 25px;
+                    width: 79px;
+                }
+            }
+        }
+
         &:last-child {
             margin-right: 0;
         }

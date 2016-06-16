@@ -8222,26 +8222,82 @@ p.subtext {
   float: left;
   height: 258px;
   margin: 0 20px 1.25% 0;
+  padding: 15px 30px 30px 30px;
   position: relative;
   width: 31.66%;
 }
-/* line 37, sass/partials/modules/_static-awards.scss */
+/* line 38, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__item dt,
+.staticContent .awards__item dd {
+  display: block;
+}
+/* line 43, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item footer {
   border-top: solid 1px #d0d0d0;
   bottom: 0;
+  font-size: 12px;
   left: 0;
-  right: 0;
+  padding: 15px 30px;
   position: absolute;
+  right: 0;
 }
-/* line 45, sass/partials/modules/_static-awards.scss */
+/* line 53, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--textRight {
   text-align: right;
 }
-/* line 48, sass/partials/modules/_static-awards.scss */
+/* line 56, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--textLeft {
   text-align: left;
 }
-/* line 51, sass/partials/modules/_static-awards.scss */
+/* line 60, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__item--feature {
+  padding-top: 30px;
+}
+/* line 63, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__item--feature dt {
+  color: #867429;
+  font-family: AvenirLT-Book, Arial, sans-serif;
+  font-size: 30px;
+}
+/* line 68, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__item--feature dd {
+  color: #1f1646;
+  font-family: AvenirLT-Book, Arial, sans-serif;
+  font-size: 30px;
+}
+/* line 76, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__item--lgNum dt {
+  color: #197f95;
+  font-size: 100px;
+  font-family: AvenirLT-Book, Arial, sans-serif;
+}
+/* line 81, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__item--lgNum dt span {
+  font-size: 60px;
+  vertical-align: top;
+}
+/* line 86, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__item--lgNum dd {
+  color: #ababab;
+  font-family: AvenirLT-Black, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.8em;
+  margin-top: -20px;
+  padding-left: 25%;
+  text-transform: uppercase;
+}
+/* line 99, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__item--leaf dt:before {
+  background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -1679px no-repeat;
+  content: '';
+  display: block;
+  height: 83px;
+  left: 30px;
+  position: absolute;
+  top: 25px;
+  width: 79px;
+}
+/* line 112, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item:last-child {
   margin-right: 0;
 }
@@ -8288,11 +8344,19 @@ p.subtext {
   display: none;
 }
 /* line 44, sass/partials/modules/_static-common.scss */
+.staticContent dl,
+.staticContent dt,
+.staticContent dd {
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+/* line 52, sass/partials/modules/_static-common.scss */
 .staticContent .borderImage {
   border: 8px solid #fff;
   box-shadow: 0 0 54px rgba(0, 0, 0, 0.1);
 }
-/* line 50, sass/partials/modules/_static-common.scss */
+/* line 58, sass/partials/modules/_static-common.scss */
 .staticContent .cta__primary {
   display: inline-block;
   background-image: linear-gradient(to left, #3f1d69 0%, #0d074d 100%);
@@ -8306,12 +8370,12 @@ p.subtext {
   position: relative;
   text-transform: uppercase;
 }
-/* line 63, sass/partials/modules/_static-common.scss */
+/* line 71, sass/partials/modules/_static-common.scss */
 .staticContent .cta__primary:hover {
   background-image: linear-gradient(to left, #7b1f7f 0%, #3b1363 100%);
   color: #fff;
 }
-/* line 70, sass/partials/modules/_static-common.scss */
+/* line 78, sass/partials/modules/_static-common.scss */
 .staticContent .arrowRight {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -34px no-repeat;
   display: inline-block;
@@ -8323,14 +8387,14 @@ p.subtext {
   white-space: nowrap;
   width: 6px;
 }
-/* line 82, sass/partials/modules/_static-common.scss */
+/* line 90, sass/partials/modules/_static-common.scss */
 .staticContent .subheadLink {
   color: #850f88;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   text-decoration: none;
 }
-/* line 88, sass/partials/modules/_static-common.scss */
+/* line 96, sass/partials/modules/_static-common.scss */
 .staticContent .subheadLink:before {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") no-repeat;
   background-position: 0 -1034px;

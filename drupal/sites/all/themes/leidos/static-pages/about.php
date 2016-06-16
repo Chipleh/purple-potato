@@ -139,9 +139,9 @@
             <a href="/about/rankings-awards" class="subheadLink">View All »</a>
         </heading>
         <div class="awards__row">
-            <article class="awards__item awards__item--textRight">
+            <article class="awards__item awards__item--textRight awards__item--lgNum">
                 <dl>
-                    <dt>#16</dt>
+                    <dt><span>#</span>16</dt>
                     <dd>TOP 100 GOVERNMENT CONTRACTORS</dd>
                 </dl>
                 <footer>
@@ -155,9 +155,9 @@
                 </dl>
                 <p></p>
             </article>
-            <article class="awards__item awards__item--textRight">
+            <article class="awards__item awards__item--textRight awards__item--lgNum">
                 <dl>
-                    <dt>#40</dt>
+                    <dt><span>#</span>40</dt>
                     <dd>TOP 500 DESIGN FIRMS</dd>
                 </dl>
                 <footer>
@@ -166,7 +166,7 @@
             </article>
         </div>
         <div class="awards__row">
-            <article class="awards__item awards__item--textLeft">
+            <article class="awards__item awards__item--textLeft awards__item--feature">
                 <dl>
                     <dt>2016</dt>
                     <dd>"Best for Vets" Employer</dd>
@@ -175,16 +175,16 @@
                     by <a href="http://bestforvets.militarytimes.com/best-employers-for-veterans/2016/" target="_blank">Military Times</a>
                 </footer>
             </article>
-            <article class="awards__item awards__item--textRight">
+            <article class="awards__item awards__item--textRight awards__item--lgNum awards__item--leaf">
                 <dl>
-                    <dt>#75</dt>
+                    <dt><span>#</span>75</dt>
                     <dd>500 GREENEST BIG COMPANIES IN AMERICA</dd>
                 </dl>
                 <footer>
                     by <a href="http://www.thedailybeast.com/newsweek.html" target="_blank">Newsweek</a>
                 </footer>
             </article>
-            <article class="awards__item awards__item--textLeft">
+            <article class="awards__item awards__item--textLeft awards__item--feature">
                 <dl>
                     <dt>2015</dt>
                     <dd>Nunn-Perry Award</dd>

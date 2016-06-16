@@ -41,6 +41,14 @@
         }
     }
 
+    dl,
+    dt,
+    dd {
+        line-height: normal;
+        margin: 0;
+        padding: 0;
+    }
+
     .borderImage {
         border: 8px solid #fff;
         box-shadow: 0 0 54px rgba(0, 0, 0, 0.1);
