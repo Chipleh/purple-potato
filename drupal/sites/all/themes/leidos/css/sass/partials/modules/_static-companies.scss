@@ -1,0 +1,39 @@
+.staticContent .companies {
+    background: #e8e8e8;
+    margin: 0 auto;
+    padding: 35px 0 55px 0;
+
+    > heading {
+        display: block;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 7.28814% 0 7.9661%;
+
+        h2 {
+            color: #1f1646;
+            display: inline-block;
+            font-family: AvenirLT-Black, Arial, sans-serif;
+            font-size: 23px;
+            margin-right: 20px;
+            text-transform: uppercase;
+        }
+    }
+    ul {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 7.28814% 0 7.9661%;
+    }
+    li {
+        float: left;
+        width: 32%;
+
+        h3 {
+            font-size: 23px;
+            margin: 0 0 20px;
+        }
+
+        + li {
+            margin-left: 2%;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.staticContent .fixedNav {
+    background-color: #e8e8e8;
+    border-bottom: solid 1px #ababab;
+    margin-bottom: 300px;
+    text-align: center;
+
+    li {
+        display: inline-block;
+
+        + li {
+            margin-left: 1.8%;
+        }
+    }
+    a {
+        color: #1f1646;
+        display: block;
+        font-size: 12px;
+        font-family: AvenirLT-Black, Arial, sans-serif;
+        padding: 1.75em 0;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #850f88;
+        }
+    }
+}

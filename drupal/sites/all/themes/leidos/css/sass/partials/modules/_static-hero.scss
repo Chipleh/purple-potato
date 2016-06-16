@@ -1,0 +1,37 @@
+.staticContent .hero {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 7.28814% 70px 7.9661%;
+
+    &__feature {
+        float: left;
+        width: 530px;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            line-height: 1.8em;
+            margin-bottom: 0;
+        }
+    }
+    &__topicList {
+        float: right;
+        margin: 0 20px 0 20px;
+        padding: 0;
+        width: 250px;
+
+        li {
+            border-left: #850f88 5px solid;
+            margin: 0 0 16px 0;
+            padding: 0 0 16px 0;
+
+            strong {
+                display: block;
+            }
+        }
+    }
+}

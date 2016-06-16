@@ -1,0 +1,35 @@
+.staticContent .imageTout {
+    $imageTout: 'imageTout';
+
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 7.28814% 120px 7.9661%;
+
+    &__image {
+        width: 33%;
+    }
+    &__meta {
+        width: 51%;
+    }
+
+    &--imgRight {
+        background: url("https://www.leidos.com/sites/all/themes/leidos/images/right-slant-bg.png") no-repeat 56% 50px #fff;
+
+        .#{$imageTout}__image {
+            float: right;
+        }
+        .#{$imageTout}__meta {
+            float: left;
+        }
+    }
+    &--imgLeft {
+        background: url("https://www.leidos.com/sites/all/themes/leidos/images/left-slant-bg.png") no-repeat 60% 100px #fff;
+
+        .#{$imageTout}__image {
+            float: left;
+        }
+        .#{$imageTout}__meta {
+            float: right;
+        }
+    }
+}
