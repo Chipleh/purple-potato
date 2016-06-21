@@ -1,7 +1,8 @@
 .staticContent .hero {
     max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 7.28814% 70px 7.9661%;
+    margin: 390px auto 0;
+    overflow: visible;
+    padding: 0 4.5% 70px 4.9%;
 
     &__feature {
         float: left;
@@ -17,6 +18,10 @@
             line-height: 1.8em;
             margin-bottom: 0;
         }
+
+        .cta {
+            margin-top: 50px;
+        }
     }
     &__topicList {
         float: right;
@@ -24,14 +29,32 @@
         padding: 0;
         width: 250px;
 
-        li {
-            border-left: #850f88 5px solid;
-            margin: 0 0 16px 0;
-            padding: 0 0 16px 0;
+        ul {
+            margin: 35px 0 0 0;
+            width: 2000px;
+        }
+    }
 
-            strong {
-                display: block;
-            }
+    &__topic {
+        border-bottom: #ababab 1px dashed;
+        line-height: 1.8em;
+        margin: 0 0 20px 15px;
+        padding: 0 0 15px 0;
+
+        &__inner {
+            border-left: #850f88 5px solid;
+            margin: 0 0 10px -15px;
+            padding: 0 0 0 18px;
+        }
+
+        strong {
+            color: #1f1646;
+            display: block;
+            font-family: AvenirLT-Black, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: normal;
+            margin-top: 12px;
+            text-transform: uppercase;
         }
     }
 }

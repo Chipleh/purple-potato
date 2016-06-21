@@ -3,13 +3,20 @@
 
     max-width: 1180px;
     margin: 0 auto;
-    padding: 0 7.28814% 120px 7.9661%;
+    padding: 0 4.5% 120px 4.9%;
 
     &__image {
         width: 33%;
     }
     &__meta {
         width: 51%;
+
+        h3 {
+            color: #8b8b8b;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.8em;
+        }
     }
 
     &--imgRight {

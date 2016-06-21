@@ -19,9 +19,21 @@
         <div class="hero__topicList">
             <a href="/sites/default/files/Leidos_Fact_Sheet.pdf" class="cta cta__primary">View Our Fact Sheet<span class="arrowRight"></span></a>
             <ul>
-                <li>Our approach to every challenge is <strong>HOLISTIC & SYSTEMATIC</strong></li>
-                <li>We see solutions others can't with <strong>IMPACTFUL ANALYTICS</strong></li>
-                <li>We make real life better with a <strong>HUMAN POINT-OF-VIEW</strong></li>
+                <li class="hero__topic">
+                    <div class="hero__topic__inner">
+                        Our approach to every challenge is <strong>HOLISTIC & SYSTEMATIC</strong>
+                    </div>
+                </li>
+                <li class="hero__topic">
+                    <div class="hero__topic__inner">
+                        We see solutions others can't with <strong>IMPACTFUL ANALYTICS</strong>
+                    </div>
+                </li>
+                <li class="hero__topic">
+                    <div class="hero__topic__inner">
+                        We make real life better with a <strong>HUMAN POINT-OF-VIEW</strong>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -70,7 +82,7 @@
                         <h2>Our History</h2>
                     </heading>
                     <p>More than 40 years ago a small team of visionary scientists set out to solve big problems…</p>
-                    <a href="">Learn More</a>
+                    <a href="" class="cta cta__secondary">Learn More <span class="arrowRight"></span></a>
                 </div>
             </li>
             <li class="history__event" style="background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/about/timeline-02-1970.jpg)">

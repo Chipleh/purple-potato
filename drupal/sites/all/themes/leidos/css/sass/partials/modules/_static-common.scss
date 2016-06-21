@@ -1,11 +1,19 @@
 .staticContent {
     box-sizing: border-box;
 
+    &:before {
+        clear: both;
+        content: "";
+        display: table;
+        height: 0;
+    }
+
     *, *:before, *:after {
         box-sizing: inherit;
     }
 
-    section {
+    section,
+    nav {
         @include clearfix;
     }
 
@@ -54,6 +62,18 @@
         box-shadow: 0 0 54px rgba(0, 0, 0, 0.1);
     }
 
+    .arrowRight {
+        background: url('https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png')  0 -34px no-repeat;
+        display: inline-block;
+        height: 9px;
+        margin-left: 10px;
+        opacity: 0.5;
+        overflow: hidden;
+        text-indent: 102%;
+        white-space: nowrap;
+        width: 6px;
+    }
+
     .cta {
         &__primary {
             display: inline-block;
@@ -73,18 +93,33 @@
                 color: #fff;
             }
         }
-    }
 
-    .arrowRight {
-        background: url('https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png')  0 -34px no-repeat;
-        display: inline-block;
-        height: 9px;
-        margin-left: 10px;
-        opacity: .5;
-        overflow: hidden;
-        text-indent: 102%;
-        white-space: nowrap;
-        width: 6px;
+        &__secondary {
+            background: transparent;
+            border: 1px solid #646464;
+            color: #fff;
+            display: inline-block;
+            font-family: AvenirLT-Black, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 16px;
+            margin: 30px 0 5px;
+            padding: 18px 20px;
+            position: relative;
+            text-transform: uppercase;
+            transition: border-color 0.4s;
+
+            .arrowRight {
+                transition: opacity 0.4s;
+            }
+
+            &:hover {
+                border-color: #fff;
+
+                .arrowRight {
+                    opacity: 1;
+                }
+            }
+        }
     }
 
     .subheadLink {
