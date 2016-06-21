@@ -3,7 +3,9 @@
     margin: 0 auto;
     padding: 35px 4.5% 55px 4.9%;
 
-    > heading {
+    .subhead {
+        padding-bottom: 0;
+
         h2 {
             color: #1f1646;
             display: inline-block;

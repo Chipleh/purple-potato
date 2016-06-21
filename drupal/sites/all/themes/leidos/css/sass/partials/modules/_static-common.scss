@@ -127,24 +127,36 @@
         }
     }
 
-    .subheadLink {
-        color: #850f88;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13px;
-        text-decoration: none;
+    .subhead {
+        padding-bottom: 1.2em;
+        padding-top: 1.2em;
 
-        &:before {
-            background: url('https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png') no-repeat;
-            background-position: 0 -1034px;
-            color: #c2c2c2;
-            content: '';
-            display: inline-block;
-            font-size: 24px;
-            height: 17px;
-            margin-right: 20px;
-            position: relative;
-            top: 3px;
-            width: 9px;
+        &__head {
+            line-height: normal;
+
+            &:after {
+                background: url('https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png') no-repeat;
+                background-position: 0 -1034px;
+                color: #c2c2c2;
+                content: '';
+                display: inline-block;
+                font-size: 24px;
+                height: 17px;
+                margin-left: 20px;
+                position: relative;
+                top: 3px;
+                width: 9px;
+            }
         }
+
+        &__link {
+            color: #850f88;
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
     }
 }

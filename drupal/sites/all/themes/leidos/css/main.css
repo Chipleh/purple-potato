@@ -8199,14 +8199,15 @@ p.subtext {
   **************************************************/
 }
 /* line 7, sass/partials/modules/_static-awards.scss */
-.staticContent .awards > heading {
+.staticContent .awards .subhead {
   display: block;
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 4.5% 0 4.9%;
+  padding-right: 4.5%;
+  padding-left: 4.9%;
 }
-/* line 13, sass/partials/modules/_static-awards.scss */
-.staticContent .awards > heading h2 {
+/* line 14, sass/partials/modules/_static-awards.scss */
+.staticContent .awards .subhead h2 {
   color: #1f1646;
   display: inline-block;
   font-family: AvenirLT-Black, Arial, sans-serif;
@@ -8214,13 +8215,13 @@ p.subtext {
   margin-right: 20px;
   text-transform: uppercase;
 }
-/* line 23, sass/partials/modules/_static-awards.scss */
+/* line 24, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__row {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 4.5% 120px 4.9%;
 }
-/* line 29, sass/partials/modules/_static-awards.scss */
+/* line 30, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item {
   background: #fff;
   float: left;
@@ -8229,12 +8230,12 @@ p.subtext {
   padding: 15px 30px 30px 30px;
   position: relative;
 }
-/* line 37, sass/partials/modules/_static-awards.scss */
+/* line 38, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item dt,
 .staticContent .awards__item dd {
   display: block;
 }
-/* line 42, sass/partials/modules/_static-awards.scss */
+/* line 43, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item footer {
   border-top: solid 1px #d0d0d0;
   bottom: 0;
@@ -8244,42 +8245,42 @@ p.subtext {
   position: absolute;
   right: 0;
 }
-/* line 52, sass/partials/modules/_static-awards.scss */
+/* line 53, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--textRight {
   text-align: right;
 }
-/* line 55, sass/partials/modules/_static-awards.scss */
+/* line 56, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--textLeft {
   text-align: left;
 }
-/* line 59, sass/partials/modules/_static-awards.scss */
+/* line 60, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--feature {
   padding-top: 30px;
 }
-/* line 62, sass/partials/modules/_static-awards.scss */
+/* line 63, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--feature dt {
   color: #867429;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 30px;
 }
-/* line 67, sass/partials/modules/_static-awards.scss */
+/* line 68, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--feature dd {
   color: #1f1646;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 30px;
 }
-/* line 75, sass/partials/modules/_static-awards.scss */
+/* line 76, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--lgNum dt {
   color: #197f95;
   font-size: 100px;
   font-family: AvenirLT-Book, Arial, sans-serif;
 }
-/* line 80, sass/partials/modules/_static-awards.scss */
+/* line 81, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--lgNum dt span {
   font-size: 60px;
   vertical-align: top;
 }
-/* line 85, sass/partials/modules/_static-awards.scss */
+/* line 86, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--lgNum dd {
   color: #ababab;
   font-family: AvenirLT-Black, Arial, sans-serif;
@@ -8289,7 +8290,7 @@ p.subtext {
   padding-left: 25%;
   text-transform: uppercase;
 }
-/* line 98, sass/partials/modules/_static-awards.scss */
+/* line 99, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--leaf dt:before {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -1679px no-repeat;
   content: '';
@@ -8300,62 +8301,62 @@ p.subtext {
   top: 25px;
   width: 79px;
 }
-/* line 116, sass/partials/modules/_static-awards.scss */
+/* line 117, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dt {
   color: #1f1646;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 40px;
   font-weight: normal;
 }
-/* line 122, sass/partials/modules/_static-awards.scss */
+/* line 123, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dd {
   color: #850f88;
   font-size: 16px;
   font-family: AvenirLT-Medium, Arial, sans-serif;
   line-height: 23px;
 }
-/* line 128, sass/partials/modules/_static-awards.scss */
+/* line 129, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__row:first-of-type .awards__item:nth-child(2) p {
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.8em;
 }
 @media only screen and (min-width: 961px) {
-  /* line 140, sass/partials/modules/_static-awards.scss */
+  /* line 141, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__item {
     width: 31.66%;
   }
-  /* line 143, sass/partials/modules/_static-awards.scss */
+  /* line 144, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__item:last-child {
     margin-right: 0;
   }
-  /* line 150, sass/partials/modules/_static-awards.scss */
+  /* line 151, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__row:first-of-type .awards__item:nth-child(2) {
     padding-top: 30px;
     width: 47%;
   }
-  /* line 154, sass/partials/modules/_static-awards.scss */
+  /* line 155, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dt {
     margin-bottom: 18px;
   }
-  /* line 157, sass/partials/modules/_static-awards.scss */
+  /* line 158, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dd {
     margin: 1.33em 0;
   }
-  /* line 162, sass/partials/modules/_static-awards.scss */
+  /* line 163, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__row:first-of-type .awards__item:first-child, .staticContent .awards__row:first-of-type .awards__item:last-child {
     width: 24%;
   }
 }
 @media only screen and (max-width: 960px) {
-  /* line 173, sass/partials/modules/_static-awards.scss */
+  /* line 174, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__item {
     height: auto;
     margin: 0 0 20px 0;
     padding-bottom: 0;
     width: 100%;
   }
-  /* line 179, sass/partials/modules/_static-awards.scss */
+  /* line 180, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__item footer {
     margin-top: 10px;
     padding-left: 0;
@@ -8491,14 +8492,16 @@ p.subtext {
   opacity: 1;
 }
 /* line 130, sass/partials/modules/_static-common.scss */
-.staticContent .subheadLink {
-  color: #850f88;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  text-decoration: none;
+.staticContent .subhead {
+  padding-bottom: 1.2em;
+  padding-top: 1.2em;
 }
-/* line 136, sass/partials/modules/_static-common.scss */
-.staticContent .subheadLink:before {
+/* line 134, sass/partials/modules/_static-common.scss */
+.staticContent .subhead__head {
+  line-height: normal;
+}
+/* line 137, sass/partials/modules/_static-common.scss */
+.staticContent .subhead__head:after {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") no-repeat;
   background-position: 0 -1034px;
   color: #c2c2c2;
@@ -8506,10 +8509,19 @@ p.subtext {
   display: inline-block;
   font-size: 24px;
   height: 17px;
-  margin-right: 20px;
+  margin-left: 20px;
   position: relative;
   top: 3px;
   width: 9px;
+}
+/* line 152, sass/partials/modules/_static-common.scss */
+.staticContent .subhead__link {
+  color: #850f88;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 /* line 1, sass/partials/modules/_static-companies.scss */
@@ -8551,20 +8563,22 @@ p.subtext {
 }
 /* line 30, sass/partials/modules/_static-companies.scss */
 .staticContent .companies li h3 {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 23px;
+  font-weight: bold;
   margin: 0 0 20px;
 }
-/* line 35, sass/partials/modules/_static-companies.scss */
+/* line 37, sass/partials/modules/_static-companies.scss */
 .staticContent .companies li + li {
   margin-left: 2%;
 }
 @media only screen and (max-width: 720px) {
-  /* line 49, sass/partials/modules/_static-companies.scss */
+  /* line 51, sass/partials/modules/_static-companies.scss */
   .staticContent .companies li {
     margin: 0 0 20px 0;
     width: 100%;
   }
-  /* line 53, sass/partials/modules/_static-companies.scss */
+  /* line 55, sass/partials/modules/_static-companies.scss */
   .staticContent .companies li + li {
     margin-left: 0;
   }
@@ -8717,7 +8731,7 @@ p.subtext {
   }
   /* line 72, sass/partials/modules/_static-hero.scss */
   .staticContent .hero__topicList {
-    margin: 50px 0 0 0;
+    margin: 0;
     width: 100%;
   }
   /* line 76, sass/partials/modules/_static-hero.scss */
@@ -8746,7 +8760,9 @@ p.subtext {
   margin-bottom: 120px;
   position: relative;
   width: 100%;
+  /* jScrollPane styles */
   /* Yuk! CSS Hack for IE6 3 pixel bug :( */
+  /* end jScrollPane styles */
   /*  tablet & mobile
   **************************************************/
 }
@@ -8755,7 +8771,9 @@ p.subtext {
   color: #fff;
   height: 460px;
   white-space: nowrap;
-  width: 3688px;
+  max-width: 3688px;
+  min-width: 2255px;
+  width: 600vw;
 }
 /* line 11, sass/_mixins.scss */
 .staticContent .history__list:after {
@@ -8763,41 +8781,44 @@ p.subtext {
   display: table;
   clear: both;
 }
-/* line 14, sass/partials/modules/_static-history.scss */
+/* line 16, sass/partials/modules/_static-history.scss */
 .staticContent .history__listInner {
   bottom: 80px;
   left: 10%;
   position: absolute;
   width: 70%;
 }
-/* line 20, sass/partials/modules/_static-history.scss */
+/* line 22, sass/partials/modules/_static-history.scss */
 .staticContent .history__event {
   float: left;
   height: 458px;
   position: relative;
   white-space: normal;
   width: 614px;
+  max-width: 614px;
+  min-width: 375px;
+  width: 100vw;
 }
-/* line 27, sass/partials/modules/_static-history.scss */
+/* line 32, sass/partials/modules/_static-history.scss */
 .staticContent .history__event h2,
 .staticContent .history__event h3 {
   color: #fff;
 }
-/* line 32, sass/partials/modules/_static-history.scss */
+/* line 37, sass/partials/modules/_static-history.scss */
 .staticContent .history__event h2 {
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 80px;
   line-height: 1.2em;
   margin: 0;
 }
-/* line 39, sass/partials/modules/_static-history.scss */
+/* line 44, sass/partials/modules/_static-history.scss */
 .staticContent .history__event h3 {
   font-family: AvenirLT-Black, Arial, sans-serif;
   font-size: 16px;
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 46, sass/partials/modules/_static-history.scss */
+/* line 51, sass/partials/modules/_static-history.scss */
 .staticContent .history__event p {
   color: #fff;
   font-family: AvenirLT-Book, Arial, sans-serif;
@@ -8805,11 +8826,11 @@ p.subtext {
   line-height: 1.8em;
   margin-bottom: 0;
 }
-/* line 55, sass/partials/modules/_static-history.scss */
+/* line 60, sass/partials/modules/_static-history.scss */
 .staticContent .history__event + .history__event {
   border-left: 1px solid #fff;
 }
-/* line 60, sass/partials/modules/_static-history.scss */
+/* line 65, sass/partials/modules/_static-history.scss */
 .staticContent .history__event:first-child h2 {
   color: #867429;
   margin-bottom: 50px;
@@ -8818,16 +8839,16 @@ p.subtext {
   margin: 10px 0 20px;
   text-transform: none;
 }
-/* line 71, sass/partials/modules/_static-history.scss */
+/* line 78, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspContainer {
   overflow: hidden;
   position: relative;
 }
-/* line 76, sass/partials/modules/_static-history.scss */
+/* line 83, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspPane {
   position: absolute;
 }
-/* line 80, sass/partials/modules/_static-history.scss */
+/* line 87, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspVerticalBar {
   position: absolute;
   top: 0;
@@ -8836,7 +8857,7 @@ p.subtext {
   height: 100%;
   background: red;
 }
-/* line 89, sass/partials/modules/_static-history.scss */
+/* line 96, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspHorizontalBar {
   position: absolute;
   bottom: 0;
@@ -8845,20 +8866,20 @@ p.subtext {
   height: 16px;
   background: red;
 }
-/* line 98, sass/partials/modules/_static-history.scss */
+/* line 105, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspCap {
   display: none;
 }
-/* line 102, sass/partials/modules/_static-history.scss */
+/* line 109, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspHorizontalBar .jspCap {
   float: left;
 }
-/* line 106, sass/partials/modules/_static-history.scss */
+/* line 113, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspTrack {
   background: #dde;
   position: relative;
 }
-/* line 111, sass/partials/modules/_static-history.scss */
+/* line 118, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspDrag {
   background: #840087;
   border-radius: 7px;
@@ -8867,13 +8888,13 @@ p.subtext {
   left: 0;
   cursor: pointer;
 }
-/* line 120, sass/partials/modules/_static-history.scss */
+/* line 127, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspHorizontalBar .jspTrack,
 .staticContent .history .jspHorizontalBar .jspDrag {
   float: left;
   height: 100%;
 }
-/* line 126, sass/partials/modules/_static-history.scss */
+/* line 133, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspArrow {
   background: #50506d;
   text-indent: -20000px;
@@ -8882,32 +8903,32 @@ p.subtext {
   padding: 0;
   margin: 0;
 }
-/* line 135, sass/partials/modules/_static-history.scss */
+/* line 142, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspArrow.jspDisabled {
   cursor: default;
   background: #80808d;
 }
-/* line 140, sass/partials/modules/_static-history.scss */
+/* line 147, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspVerticalBar .jspArrow {
   height: 16px;
 }
-/* line 144, sass/partials/modules/_static-history.scss */
+/* line 151, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspHorizontalBar .jspArrow {
   width: 16px;
   float: left;
   height: 100%;
 }
-/* line 150, sass/partials/modules/_static-history.scss */
+/* line 157, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspVerticalBar .jspArrow:focus {
   outline: none;
 }
-/* line 154, sass/partials/modules/_static-history.scss */
+/* line 161, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspCorner {
   background: #eeeef4;
   float: left;
   height: 100%;
 }
-/* line 161, sass/partials/modules/_static-history.scss */
+/* line 168, sass/partials/modules/_static-history.scss */
 .staticContent .history * html .jspCorner {
   margin: 0 -3px 0 0;
 }
@@ -8968,7 +8989,7 @@ p.subtext {
   }
   /* line 55, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout__meta h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
   /* line 62, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout--imgRight .imageTout__image,
@@ -8987,8 +9008,12 @@ p.subtext {
   /*  tablet & mobile
   **************************************************/
 }
-/* line 7, sass/partials/modules/_static-leadership.scss */
-.staticContent .leadership > heading h2 {
+/* line 6, sass/partials/modules/_static-leadership.scss */
+.staticContent .leadership .subhead {
+  padding-bottom: 0;
+}
+/* line 9, sass/partials/modules/_static-leadership.scss */
+.staticContent .leadership .subhead h2 {
   color: #1f1646;
   display: inline-block;
   font-family: AvenirLT-Black, Arial, sans-serif;
@@ -8997,15 +9022,15 @@ p.subtext {
   padding: 0;
   text-transform: uppercase;
 }
-/* line 16, sass/partials/modules/_static-leadership.scss */
-.staticContent .leadership > heading p {
+/* line 18, sass/partials/modules/_static-leadership.scss */
+.staticContent .leadership .subhead p {
   color: #8b8b8b;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 30px;
   line-height: 1.25em;
   margin: 0 0 40px;
 }
-/* line 25, sass/partials/modules/_static-leadership.scss */
+/* line 27, sass/partials/modules/_static-leadership.scss */
 .staticContent .leadership__content {
   background: #fff;
   border: 8px solid #fff;
@@ -9014,18 +9039,18 @@ p.subtext {
   min-height: 336px;
   padding-right: 50px;
 }
-/* line 33, sass/partials/modules/_static-leadership.scss */
+/* line 35, sass/partials/modules/_static-leadership.scss */
 .staticContent .leadership__content img {
   height: 100%;
   float: left;
   margin-right: 50px;
 }
-/* line 40, sass/partials/modules/_static-leadership.scss */
+/* line 42, sass/partials/modules/_static-leadership.scss */
 .staticContent .leadership__meta h3 {
   font-size: 40px;
   margin: 0.83em 0 0 0;
 }
-/* line 44, sass/partials/modules/_static-leadership.scss */
+/* line 46, sass/partials/modules/_static-leadership.scss */
 .staticContent .leadership__meta h4 {
   color: #8b8b8b;
   font-family: AvenirLT-Book, Arial, sans-serif;
@@ -9034,11 +9059,11 @@ p.subtext {
   margin: 0 0 20px;
 }
 @media only screen and (max-width: 960px) {
-  /* line 56, sass/partials/modules/_static-leadership.scss */
+  /* line 58, sass/partials/modules/_static-leadership.scss */
   .staticContent .leadership__content {
     padding-right: 0;
   }
-  /* line 59, sass/partials/modules/_static-leadership.scss */
+  /* line 61, sass/partials/modules/_static-leadership.scss */
   .staticContent .leadership__content img {
     float: none;
     margin-right: 0;

@@ -9,7 +9,9 @@
         color: #fff;
         height: 460px;
         white-space: nowrap;
-        width: 3688px;
+        max-width: 3688px;
+        min-width: 2255px;
+        width: 600vw;
     }
     &__listInner {
         bottom: 80px;
@@ -23,6 +25,9 @@
         position: relative;
         white-space: normal;
         width: 614px;
+        max-width: 614px;
+        min-width: 375px;
+        width: 100vw;
 
         h2,
         h3 {
@@ -67,6 +72,8 @@
             }
         }
     }
+
+    /* jScrollPane styles */
 
     .jspContainer {
         overflow: hidden;
@@ -161,6 +168,10 @@
     * html .jspCorner {
         margin: 0 -3px 0 0;
     }
+
+    /* end jScrollPane styles */
+
+
 
     /*  tablet & mobile
     **************************************************/

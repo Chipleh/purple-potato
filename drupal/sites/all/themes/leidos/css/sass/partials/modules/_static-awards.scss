@@ -4,11 +4,12 @@
     padding-bottom: 70px;
     padding-top: 70px;
 
-    > heading {
+    .subhead {
         display: block;
         max-width: 1180px;
         margin: 0 auto;
-        padding: 0 4.5% 0 4.9%;
+        padding-right: 4.5%;
+        padding-left: 4.9%;
 
         h2 {
             color: #1f1646;

@@ -146,9 +146,9 @@
     </section>
 
     <section class="awards" id="rankings-and-awards">
-        <heading class="subhead">
-            <h2 class="subhead__head subhead__head--withLink">Rankings & Awards</h2>
-            <a href="/about/rankings-awards" class="subhead__link">View All »</a>
+        <heading>
+            <h2>Rankings & Awards</h2>
+            <a href="/about/rankings-awards" class="subheadLink">View All »</a>
         </heading>
         <div class="awards__row">
             <article class="awards__item awards__item--textRight awards__item--lgNum">
@@ -209,9 +209,9 @@
     </section>
 
     <section class="leadership" id="leadership">
-        <heading class="subhead">
-            <h2 class="subhead__head subhead__head--withLink">Corporate Leadership</h2>
-            <a href="/about/org" class="subhead__link">View All »</a>
+        <heading>
+            <h2>Corporate Leadership</h2>
+            <a href="/about/org" class="subheadLink">View All »</a>
             <p>Meet the executive team responsible for leading 19,000 forward thinking employees towards shared success.</p>
         </heading>
         <div class="leadership__content">
@@ -228,9 +228,9 @@
     </section>
 
     <section class="companies" id="leidos-companies">
-        <heading class="subhead">
-            <h2 class="subhead__head subhead__head--withLink">Leidos Companies</h2>
-            <a href="/about/companies" class="subhead__link">View All »</a>
+        <heading>
+            <h2>Leidos Companies</h2>
+            <a href="/about/companies" class="subheadLink">View All »</a>
         </heading>
         <ul>
             <li>
