@@ -17,6 +17,11 @@
         @include clearfix;
     }
 
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+
     heading {
         display: block;
     }

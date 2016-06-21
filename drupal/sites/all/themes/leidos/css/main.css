@@ -8193,6 +8193,10 @@ p.subtext {
   background: #e8e8e8;
   padding-bottom: 70px;
   padding-top: 70px;
+  /*  desktop-only
+  **************************************************/
+  /*  tablet & mobile
+  **************************************************/
 }
 /* line 7, sass/partials/modules/_static-awards.scss */
 .staticContent .awards > heading {
@@ -8224,14 +8228,13 @@ p.subtext {
   margin: 0 20px 1.25% 0;
   padding: 15px 30px 30px 30px;
   position: relative;
-  width: 31.66%;
 }
-/* line 38, sass/partials/modules/_static-awards.scss */
+/* line 37, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item dt,
 .staticContent .awards__item dd {
   display: block;
 }
-/* line 43, sass/partials/modules/_static-awards.scss */
+/* line 42, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item footer {
   border-top: solid 1px #d0d0d0;
   bottom: 0;
@@ -8241,42 +8244,42 @@ p.subtext {
   position: absolute;
   right: 0;
 }
-/* line 53, sass/partials/modules/_static-awards.scss */
+/* line 52, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--textRight {
   text-align: right;
 }
-/* line 56, sass/partials/modules/_static-awards.scss */
+/* line 55, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--textLeft {
   text-align: left;
 }
-/* line 60, sass/partials/modules/_static-awards.scss */
+/* line 59, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--feature {
   padding-top: 30px;
 }
-/* line 63, sass/partials/modules/_static-awards.scss */
+/* line 62, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--feature dt {
   color: #867429;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 30px;
 }
-/* line 68, sass/partials/modules/_static-awards.scss */
+/* line 67, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--feature dd {
   color: #1f1646;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 30px;
 }
-/* line 76, sass/partials/modules/_static-awards.scss */
+/* line 75, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--lgNum dt {
   color: #197f95;
   font-size: 100px;
   font-family: AvenirLT-Book, Arial, sans-serif;
 }
-/* line 81, sass/partials/modules/_static-awards.scss */
+/* line 80, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--lgNum dt span {
   font-size: 60px;
   vertical-align: top;
 }
-/* line 86, sass/partials/modules/_static-awards.scss */
+/* line 85, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--lgNum dd {
   color: #ababab;
   font-family: AvenirLT-Black, Arial, sans-serif;
@@ -8286,7 +8289,7 @@ p.subtext {
   padding-left: 25%;
   text-transform: uppercase;
 }
-/* line 99, sass/partials/modules/_static-awards.scss */
+/* line 98, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--leaf dt:before {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -1679px no-repeat;
   content: '';
@@ -8297,9 +8300,68 @@ p.subtext {
   top: 25px;
   width: 79px;
 }
-/* line 112, sass/partials/modules/_static-awards.scss */
-.staticContent .awards__item:last-child {
-  margin-right: 0;
+/* line 116, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__row:first-of-type .awards__item:nth-child(2) dt {
+  color: #1f1646;
+  font-family: AvenirLT-Book, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+}
+/* line 122, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__row:first-of-type .awards__item:nth-child(2) dd {
+  color: #850f88;
+  font-size: 16px;
+  font-family: AvenirLT-Medium, Arial, sans-serif;
+  line-height: 23px;
+}
+/* line 128, sass/partials/modules/_static-awards.scss */
+.staticContent .awards__row:first-of-type .awards__item:nth-child(2) p {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.8em;
+}
+@media only screen and (min-width: 961px) {
+  /* line 140, sass/partials/modules/_static-awards.scss */
+  .staticContent .awards__item {
+    width: 31.66%;
+  }
+  /* line 143, sass/partials/modules/_static-awards.scss */
+  .staticContent .awards__item:last-child {
+    margin-right: 0;
+  }
+  /* line 150, sass/partials/modules/_static-awards.scss */
+  .staticContent .awards__row:first-of-type .awards__item:nth-child(2) {
+    padding-top: 30px;
+    width: 47%;
+  }
+  /* line 154, sass/partials/modules/_static-awards.scss */
+  .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dt {
+    margin-bottom: 18px;
+  }
+  /* line 157, sass/partials/modules/_static-awards.scss */
+  .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dd {
+    margin: 1.33em 0;
+  }
+  /* line 162, sass/partials/modules/_static-awards.scss */
+  .staticContent .awards__row:first-of-type .awards__item:first-child, .staticContent .awards__row:first-of-type .awards__item:last-child {
+    width: 24%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  /* line 173, sass/partials/modules/_static-awards.scss */
+  .staticContent .awards__item {
+    height: auto;
+    margin: 0 0 20px 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  /* line 179, sass/partials/modules/_static-awards.scss */
+  .staticContent .awards__item footer {
+    margin-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
 }
 
 /* line 1, sass/partials/modules/_static-common.scss */
@@ -8325,10 +8387,15 @@ p.subtext {
   clear: both;
 }
 /* line 20, sass/partials/modules/_static-common.scss */
+.staticContent img {
+  height: auto;
+  max-width: 100%;
+}
+/* line 25, sass/partials/modules/_static-common.scss */
 .staticContent heading {
   display: block;
 }
-/* line 24, sass/partials/modules/_static-common.scss */
+/* line 29, sass/partials/modules/_static-common.scss */
 .staticContent h2 {
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 60px;
@@ -8336,23 +8403,23 @@ p.subtext {
   margin-bottom: 13px;
   text-transform: none;
 }
-/* line 33, sass/partials/modules/_static-common.scss */
+/* line 38, sass/partials/modules/_static-common.scss */
 .staticContent h3 a {
   color: #1f1646;
   font-family: AvenirLT-Book, Arial, sans-serif;
 }
-/* line 39, sass/partials/modules/_static-common.scss */
+/* line 44, sass/partials/modules/_static-common.scss */
 .staticContent ol,
 .staticContent ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 47, sass/partials/modules/_static-common.scss */
+/* line 52, sass/partials/modules/_static-common.scss */
 .staticContent li:before {
   display: none;
 }
-/* line 52, sass/partials/modules/_static-common.scss */
+/* line 57, sass/partials/modules/_static-common.scss */
 .staticContent dl,
 .staticContent dt,
 .staticContent dd {
@@ -8360,12 +8427,12 @@ p.subtext {
   margin: 0;
   padding: 0;
 }
-/* line 60, sass/partials/modules/_static-common.scss */
+/* line 65, sass/partials/modules/_static-common.scss */
 .staticContent .borderImage {
   border: 8px solid #fff;
   box-shadow: 0 0 54px rgba(0, 0, 0, 0.1);
 }
-/* line 65, sass/partials/modules/_static-common.scss */
+/* line 70, sass/partials/modules/_static-common.scss */
 .staticContent .arrowRight {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -34px no-repeat;
   display: inline-block;
@@ -8377,7 +8444,7 @@ p.subtext {
   white-space: nowrap;
   width: 6px;
 }
-/* line 78, sass/partials/modules/_static-common.scss */
+/* line 83, sass/partials/modules/_static-common.scss */
 .staticContent .cta__primary {
   display: inline-block;
   background-image: linear-gradient(to left, #3f1d69 0%, #0d074d 100%);
@@ -8391,12 +8458,12 @@ p.subtext {
   position: relative;
   text-transform: uppercase;
 }
-/* line 91, sass/partials/modules/_static-common.scss */
+/* line 96, sass/partials/modules/_static-common.scss */
 .staticContent .cta__primary:hover {
   background-image: linear-gradient(to left, #7b1f7f 0%, #3b1363 100%);
   color: #fff;
 }
-/* line 97, sass/partials/modules/_static-common.scss */
+/* line 102, sass/partials/modules/_static-common.scss */
 .staticContent .cta__secondary {
   background: transparent;
   border: 1px solid #646464;
@@ -8411,26 +8478,26 @@ p.subtext {
   text-transform: uppercase;
   transition: border-color 0.4s;
 }
-/* line 111, sass/partials/modules/_static-common.scss */
+/* line 116, sass/partials/modules/_static-common.scss */
 .staticContent .cta__secondary .arrowRight {
   transition: opacity 0.4s;
 }
-/* line 115, sass/partials/modules/_static-common.scss */
+/* line 120, sass/partials/modules/_static-common.scss */
 .staticContent .cta__secondary:hover {
   border-color: #fff;
 }
-/* line 118, sass/partials/modules/_static-common.scss */
+/* line 123, sass/partials/modules/_static-common.scss */
 .staticContent .cta__secondary:hover .arrowRight {
   opacity: 1;
 }
-/* line 125, sass/partials/modules/_static-common.scss */
+/* line 130, sass/partials/modules/_static-common.scss */
 .staticContent .subheadLink {
   color: #850f88;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   text-decoration: none;
 }
-/* line 131, sass/partials/modules/_static-common.scss */
+/* line 136, sass/partials/modules/_static-common.scss */
 .staticContent .subheadLink:before {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") no-repeat;
   background-position: 0 -1034px;
@@ -8450,6 +8517,10 @@ p.subtext {
   background: #e8e8e8;
   margin: 0 auto;
   padding: 35px 0 55px 0;
+  /*  tablet & mobile
+  **************************************************/
+  /*  mobile-only
+  **************************************************/
 }
 /* line 6, sass/partials/modules/_static-companies.scss */
 .staticContent .companies > heading {
@@ -8487,23 +8558,41 @@ p.subtext {
 .staticContent .companies li + li {
   margin-left: 2%;
 }
+@media only screen and (max-width: 720px) {
+  /* line 49, sass/partials/modules/_static-companies.scss */
+  .staticContent .companies li {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+  /* line 53, sass/partials/modules/_static-companies.scss */
+  .staticContent .companies li + li {
+    margin-left: 0;
+  }
+}
 
 /* line 1, sass/partials/modules/_static-fixed-nav.scss */
+.staticContent {
+  /*  tablet & mobile
+  **************************************************/
+  /*  mobile-only
+  **************************************************/
+}
+/* line 2, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav {
   background-color: #e8e8e8;
   border-bottom: solid 1px #ababab;
-  margin-bottom: 300px;
+  padding: 0 4.5% 0 4.9%;
   text-align: center;
 }
-/* line 7, sass/partials/modules/_static-fixed-nav.scss */
+/* line 8, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav li {
   display: inline-block;
 }
-/* line 10, sass/partials/modules/_static-fixed-nav.scss */
+/* line 11, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav li + li {
   margin-left: 1.8%;
 }
-/* line 14, sass/partials/modules/_static-fixed-nav.scss */
+/* line 15, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav a {
   color: #1f1646;
   display: block;
@@ -8512,17 +8601,55 @@ p.subtext {
   padding: 1.75em 0;
   text-transform: uppercase;
 }
-/* line 22, sass/partials/modules/_static-fixed-nav.scss */
+/* line 23, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav a:hover {
   color: #850f88;
+}
+/* line 28, sass/partials/modules/_static-fixed-nav.scss */
+.staticContent .sticky-wrapper {
+  margin-bottom: 300px;
+  position: relative;
+  z-index: 9999;
+}
+/* line 11, sass/_mixins.scss */
+.staticContent .sticky-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (max-width: 960px) {
+  /* line 39, sass/partials/modules/_static-fixed-nav.scss */
+  .staticContent .fixedNav a {
+    font-size: 16px;
+  }
+  /* line 44, sass/partials/modules/_static-fixed-nav.scss */
+  .staticContent .sticky-wrapper {
+    margin-bottom: 100px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  /* line 52, sass/partials/modules/_static-fixed-nav.scss */
+  .staticContent .fixedNav {
+    position: relative !important;
+  }
+}
+@media only screen and (max-height: 350px) {
+  /* line 57, sass/partials/modules/_static-fixed-nav.scss */
+  .staticContent .fixedNav {
+    position: relative !important;
+  }
 }
 
 /* line 1, sass/partials/modules/_static-hero.scss */
 .staticContent .hero {
   max-width: 1180px;
-  margin: 390px auto 0;
+  margin: 200px auto 0;
   overflow: visible;
   padding: 0 4.5% 70px 4.9%;
+  /*  tablet & mobile
+  **************************************************/
+  /*  mobile-only
+  **************************************************/
 }
 /* line 7, sass/partials/modules/_static-hero.scss */
 .staticContent .hero__feature {
@@ -8579,18 +8706,55 @@ p.subtext {
   margin-top: 12px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 960px) {
+  /* line 64, sass/partials/modules/_static-hero.scss */
+  .staticContent .hero__feature {
+    width: 100%;
+  }
+  /* line 67, sass/partials/modules/_static-hero.scss */
+  .staticContent .hero__feature h2 {
+    font-size: 40px;
+  }
+  /* line 72, sass/partials/modules/_static-hero.scss */
+  .staticContent .hero__topicList {
+    margin: 50px 0 0 0;
+    width: 100%;
+  }
+  /* line 76, sass/partials/modules/_static-hero.scss */
+  .staticContent .hero__topicList ul {
+    width: 50%;
+  }
+  /* line 80, sass/partials/modules/_static-hero.scss */
+  .staticContent .hero__topicList .cta {
+    float: right;
+  }
+}
+@media only screen and (max-width: 720px) {
+  /* line 90, sass/partials/modules/_static-hero.scss */
+  .staticContent .hero__topicList ul {
+    width: 100%;
+  }
+  /* line 94, sass/partials/modules/_static-hero.scss */
+  .staticContent .hero__topicList .cta {
+    float: none;
+  }
+}
 
 /* line 1, sass/partials/modules/_static-history.scss */
 .staticContent .history {
   height: 460px;
   margin-bottom: 120px;
-  overflow: scroll;
+  position: relative;
   width: 100%;
+  /* Yuk! CSS Hack for IE6 3 pixel bug :( */
+  /*  tablet & mobile
+  **************************************************/
 }
 /* line 7, sass/partials/modules/_static-history.scss */
 .staticContent .history__list {
   color: #fff;
   height: 460px;
+  white-space: nowrap;
   width: 3688px;
 }
 /* line 11, sass/_mixins.scss */
@@ -8599,40 +8763,41 @@ p.subtext {
   display: table;
   clear: both;
 }
-/* line 13, sass/partials/modules/_static-history.scss */
+/* line 14, sass/partials/modules/_static-history.scss */
 .staticContent .history__listInner {
   bottom: 80px;
   left: 10%;
   position: absolute;
   width: 70%;
 }
-/* line 19, sass/partials/modules/_static-history.scss */
+/* line 20, sass/partials/modules/_static-history.scss */
 .staticContent .history__event {
   float: left;
   height: 458px;
   position: relative;
+  white-space: normal;
   width: 614px;
 }
-/* line 25, sass/partials/modules/_static-history.scss */
+/* line 27, sass/partials/modules/_static-history.scss */
 .staticContent .history__event h2,
 .staticContent .history__event h3 {
   color: #fff;
 }
-/* line 30, sass/partials/modules/_static-history.scss */
+/* line 32, sass/partials/modules/_static-history.scss */
 .staticContent .history__event h2 {
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 80px;
   line-height: 1.2em;
   margin: 0;
 }
-/* line 37, sass/partials/modules/_static-history.scss */
+/* line 39, sass/partials/modules/_static-history.scss */
 .staticContent .history__event h3 {
   font-family: AvenirLT-Black, Arial, sans-serif;
   font-size: 16px;
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 44, sass/partials/modules/_static-history.scss */
+/* line 46, sass/partials/modules/_static-history.scss */
 .staticContent .history__event p {
   color: #fff;
   font-family: AvenirLT-Book, Arial, sans-serif;
@@ -8640,11 +8805,11 @@ p.subtext {
   line-height: 1.8em;
   margin-bottom: 0;
 }
-/* line 53, sass/partials/modules/_static-history.scss */
+/* line 55, sass/partials/modules/_static-history.scss */
 .staticContent .history__event + .history__event {
   border-left: 1px solid #fff;
 }
-/* line 58, sass/partials/modules/_static-history.scss */
+/* line 60, sass/partials/modules/_static-history.scss */
 .staticContent .history__event:first-child h2 {
   color: #867429;
   margin-bottom: 50px;
@@ -8653,12 +8818,109 @@ p.subtext {
   margin: 10px 0 20px;
   text-transform: none;
 }
+/* line 71, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspContainer {
+  overflow: hidden;
+  position: relative;
+}
+/* line 76, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspPane {
+  position: absolute;
+}
+/* line 80, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  background: red;
+}
+/* line 89, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspHorizontalBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: red;
+}
+/* line 98, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspCap {
+  display: none;
+}
+/* line 102, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspHorizontalBar .jspCap {
+  float: left;
+}
+/* line 106, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspTrack {
+  background: #dde;
+  position: relative;
+}
+/* line 111, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspDrag {
+  background: #840087;
+  border-radius: 7px;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+/* line 120, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspHorizontalBar .jspTrack,
+.staticContent .history .jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%;
+}
+/* line 126, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspArrow {
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+/* line 135, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspArrow.jspDisabled {
+  cursor: default;
+  background: #80808d;
+}
+/* line 140, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspVerticalBar .jspArrow {
+  height: 16px;
+}
+/* line 144, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspHorizontalBar .jspArrow {
+  width: 16px;
+  float: left;
+  height: 100%;
+}
+/* line 150, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspVerticalBar .jspArrow:focus {
+  outline: none;
+}
+/* line 154, sass/partials/modules/_static-history.scss */
+.staticContent .history .jspCorner {
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+/* line 161, sass/partials/modules/_static-history.scss */
+.staticContent .history * html .jspCorner {
+  margin: 0 -3px 0 0;
+}
 
 /* line 1, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 4.5% 120px 4.9%;
+  /*  tablet & mobile
+  **************************************************/
+  /*  mobile-only
+  **************************************************/
 }
 /* line 8, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout__image {
@@ -8699,12 +8961,31 @@ p.subtext {
 .staticContent .imageTout--imgLeft .imageTout__meta {
   float: right;
 }
+@media only screen and (max-width: 720px) {
+  /* line 52, sass/partials/modules/_static-image-tout.scss */
+  .staticContent .imageTout__meta {
+    width: 60%;
+  }
+  /* line 55, sass/partials/modules/_static-image-tout.scss */
+  .staticContent .imageTout__meta h2 {
+    font-size: 40px;
+  }
+  /* line 62, sass/partials/modules/_static-image-tout.scss */
+  .staticContent .imageTout--imgRight .imageTout__image,
+  .staticContent .imageTout--imgRight .imageTout__meta, .staticContent .imageTout--imgLeft .imageTout__image,
+  .staticContent .imageTout--imgLeft .imageTout__meta {
+    float: none;
+    width: 100%;
+  }
+}
 
 /* line 1, sass/partials/modules/_static-leadership.scss */
 .staticContent .leadership {
   max-width: 1180px;
   margin: 0 auto;
   padding: 35px 4.5% 55px 4.9%;
+  /*  tablet & mobile
+  **************************************************/
 }
 /* line 7, sass/partials/modules/_static-leadership.scss */
 .staticContent .leadership > heading h2 {
@@ -8729,8 +9010,8 @@ p.subtext {
   background: #fff;
   border: 8px solid #fff;
   box-shadow: 0 0 54px rgba(0, 0, 0, 0.1);
-  height: 336px;
   margin-bottom: 40px;
+  min-height: 336px;
   padding-right: 50px;
 }
 /* line 33, sass/partials/modules/_static-leadership.scss */
@@ -8752,6 +9033,18 @@ p.subtext {
   font-weight: normal;
   margin: 0 0 20px;
 }
+@media only screen and (max-width: 960px) {
+  /* line 56, sass/partials/modules/_static-leadership.scss */
+  .staticContent .leadership__content {
+    padding-right: 0;
+  }
+  /* line 59, sass/partials/modules/_static-leadership.scss */
+  .staticContent .leadership__content img {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+}
 
 /* line 1, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage {
@@ -8762,7 +9055,7 @@ p.subtext {
 /* line 6, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage__image, .staticContent .marqueeImage__overlay {
   position: absolute;
-  top: 0;
+  top: -300px;
   width: 100%;
 }
 /* line 13, sass/partials/modules/_static-marquee-image.scss */

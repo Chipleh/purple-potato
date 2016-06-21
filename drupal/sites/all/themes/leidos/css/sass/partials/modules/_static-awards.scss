@@ -33,7 +33,6 @@
         margin: 0 20px 1.25% 0;
         padding: 15px 30px 30px 30px;
         position: relative;
-        width: 31.66%;
 
         dt,
         dd {
@@ -108,9 +107,81 @@
                 }
             }
         }
+    }
 
-        &:last-child {
-            margin-right: 0;
+    &__row:first-of-type {
+        .#{$awards}__item {
+            &:nth-child(2) {
+
+                dt {
+                    color: #1f1646;
+                    font-family: AvenirLT-Book, Arial, sans-serif;
+                    font-size: 40px;
+                    font-weight: normal;
+                }
+                dd {
+                    color: #850f88;
+                    font-size: 16px;
+                    font-family: AvenirLT-Medium, Arial, sans-serif;
+                    line-height: 23px;
+                }
+                p {
+                    font-size: 13px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    line-height: 1.8em;
+                }
+            }
+        }
+    }
+
+    /*  desktop-only
+    **************************************************/
+    @media only screen and (min-width: 961px) {
+        &__item {
+            width: 31.66%;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__row:first-of-type {
+            .#{$awards}__item {
+                &:nth-child(2) {
+                    padding-top: 30px;
+                    width: 47%;
+
+                    dt {
+                        margin-bottom: 18px;
+                    }
+                    dd {
+                        margin: 1.33em 0;
+                    }
+                }
+
+                &:first-child,
+                &:last-child {
+                    width: 24%;
+                }
+            }
+        }
+    }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        &__item {
+            height: auto;
+            margin: 0 0 20px 0;
+            padding-bottom: 0;
+            width: 100%;
+
+            footer {
+                margin-top: 10px;
+                padding-left: 0;
+                padding-right: 0;
+                position: relative;
+            }
         }
     }
 }

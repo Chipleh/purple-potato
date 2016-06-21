@@ -1,26 +1,61 @@
-.staticContent .fixedNav {
-    background-color: #e8e8e8;
-    border-bottom: solid 1px #ababab;
-    margin-bottom: 300px;
-    text-align: center;
+.staticContent {
+    .fixedNav {
+        background-color: #e8e8e8;
+        border-bottom: solid 1px #ababab;
+        padding: 0 4.5% 0 4.9%;
+        text-align: center;
 
-    li {
-        display: inline-block;
+        li {
+            display: inline-block;
 
-        + li {
-            margin-left: 1.8%;
+            + li {
+                margin-left: 1.8%;
+            }
+        }
+        a {
+            color: #1f1646;
+            display: block;
+            font-size: 12px;
+            font-family: AvenirLT-Black, Arial, sans-serif;
+            padding: 1.75em 0;
+            text-transform: uppercase;
+
+            &:hover {
+                color: #850f88;
+            }
         }
     }
-    a {
-        color: #1f1646;
-        display: block;
-        font-size: 12px;
-        font-family: AvenirLT-Black, Arial, sans-serif;
-        padding: 1.75em 0;
-        text-transform: uppercase;
+    .sticky-wrapper {
+        @include clearfix;
+        margin-bottom: 300px;
+        position: relative;
+        z-index: 9999;
+    }
 
-        &:hover {
-            color: #850f88;
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        .fixedNav {
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .sticky-wrapper {
+            margin-bottom: 100px;
+        }
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+        .fixedNav {
+            position: relative !important;
+        }
+    }
+    @media only screen and (max-height: 350px) {
+        .fixedNav {
+            position: relative !important;
         }
     }
 }

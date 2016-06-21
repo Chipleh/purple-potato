@@ -26,8 +26,8 @@
         background: #fff;
         border: 8px solid #fff;
         box-shadow: 0 0 54px rgba(0, 0, 0, 0.1);
-        height: 336px;
         margin-bottom: 40px;
+        min-height: 336px;
         padding-right: 50px;
 
         img {
@@ -47,6 +47,20 @@
             font-size: 16px;
             font-weight: normal;
             margin: 0 0 20px;
+        }
+    }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        &__content {
+            padding-right: 0;
+
+            img {
+                float: none;
+                margin-right: 0;
+                width: 100%;
+            }
         }
     }
 }

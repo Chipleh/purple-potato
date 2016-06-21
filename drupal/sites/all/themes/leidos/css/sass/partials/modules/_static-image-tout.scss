@@ -39,4 +39,31 @@
             float: right;
         }
     }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+        &__meta {
+            width: 60%;
+
+            h2 {
+                font-size: 40px;
+            }
+        }
+
+        &--imgRight,
+        &--imgLeft {
+            .#{$imageTout}__image,
+            .#{$imageTout}__meta {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
 }

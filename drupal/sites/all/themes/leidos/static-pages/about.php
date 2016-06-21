@@ -134,6 +134,7 @@
     </section>
 
     <section class="imageTout imageTout--imgRight" id="commitment-to-quality">
+        <img class="imageTout__image borderImage" src="https://www.leidos.com/sites/default/files/about-landing-quality_0.jpg" width="324" height="324" alt="">
         <div class="imageTout__meta">
             <heading>
                 <h2>A Commitment to Quality</h2>
@@ -142,7 +143,6 @@
             <p>To us, quality means two things: satisfying our customers by delivering what they need on time and in budget and continuously improving processes so that our work is done right. <a href="/about/quality">Learn More »</a>
             </p>
         </div>
-        <img class="imageTout__image borderImage" src="https://www.leidos.com/sites/default/files/about-landing-quality_0.jpg" width="324" height="324" alt="">
     </section>
 
     <section class="awards" id="rankings-and-awards">
@@ -165,7 +165,7 @@
                     <dt>The Forrester Wave&trade;</dt>
                     <dd>Managed Security Services: North America, Q4 2014 Report</dd>
                 </dl>
-                <p></p>
+                <p>Leidos receives highest customer satisfaction rating of all selected vendors for managed security services.</p>
             </article>
             <article class="awards__item awards__item--textRight awards__item--lgNum">
                 <dl>
@@ -255,6 +255,7 @@
 
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="js/jquery.sticky.js"></script>
 
 <script>
 (function($){
