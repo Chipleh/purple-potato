@@ -394,9 +394,13 @@
 (function($) {
   Drupal.behaviors.flexibleTemplateLongFormCopy = {
     attach: function(context, settings) {
-        $('.staticContent .fixedNav').sticky({ topSpacing: 0 });
+        if ($('.staticContent .fixedNav').length) {
+            $('.staticContent .fixedNav').sticky({ topSpacing: 0 });
+        }
 
-        $('.staticContent .history').jScrollPane();
+        if ($('.staticContent .history').length) {
+            $('.staticContent .history').jScrollPane();
+        }
     }
   };
 })(jQuery);
