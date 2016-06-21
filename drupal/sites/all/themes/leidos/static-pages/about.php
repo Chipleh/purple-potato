@@ -253,14 +253,9 @@
 
 </div>
 
-<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
-<script type="text/javascript" src="js/jquery.sticky.js"></script>
+<script type="text/javascript" src="/sites/all/themes/leidos/static-pages/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/sites/all/themes/leidos/static-pages/js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/leidos/static-pages/js/jquery.sticky.js"></script>
 
-<script>
-(function($){
-
-})(jQuery);
-</script>
 
 <?php include("closing.html"); ?>
