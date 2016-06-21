@@ -387,3 +387,20 @@
     }
   };
 })(jQuery);
+
+//  Static pages - Sticky nav, styled scrollers
+//  Monte Greene
+//  6/20/16
+(function($) {
+  Drupal.behaviors.flexibleTemplateLongFormCopy = {
+    attach: function(context, settings) {
+        if ($('.staticContent .fixedNav').length) {
+            $('.staticContent .fixedNav').sticky({ topSpacing: 0 });
+        }
+
+        if ($('.staticContent .history').length) {
+            $('.staticContent .history').jScrollPane();
+        }
+    }
+  };
+})(jQuery);
