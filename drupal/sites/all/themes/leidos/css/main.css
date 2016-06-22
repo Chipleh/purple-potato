@@ -9075,24 +9075,31 @@ p.subtext {
 .staticContent .marqueeImage {
   overflow: visible;
   position: relative;
+  transition: padding 0.3s, transform 0.3s;
   z-index: -1;
 }
-/* line 6, sass/partials/modules/_static-marquee-image.scss */
+/* line 7, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage__image, .staticContent .marqueeImage__overlay {
   position: absolute;
   top: -300px;
   width: 100%;
 }
-/* line 13, sass/partials/modules/_static-marquee-image.scss */
+/* line 14, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage__image {
   height: 770px;
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/about-hero.jpg") 100% -172px no-repeat;
 }
-/* line 17, sass/partials/modules/_static-marquee-image.scss */
+/* line 18, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage__overlay {
   background: transparent url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.svg") 50% 0 no-repeat;
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.png") 50% 0 no-repeat;
   height: 800px;
+}
+@media only screen and (max-height: 860px) {
+  /* line 25, sass/partials/modules/_static-marquee-image.scss */
+  .staticContent .marqueeImage__image {
+    background: linear-gradient(to right, #4d196d 30%, #1f1747 100%);
+  }
 }
 
 /*************************
