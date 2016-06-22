@@ -159,7 +159,7 @@
 							&:before,
 							&:after {
 								display: none;
-							}						
+							}
 						}
 					}
 				}
@@ -216,7 +216,7 @@
 						z-index: 2;
 
 						&:before {
-							background: url("../images/search-glass.png") no-repeat center top transparent;
+							background: url("../images/search-glass.png") no-repeat center bottom transparent;
 							content: '';
 							height: 24px;
 							left: 50%;
@@ -229,7 +229,7 @@
 						&:hover,
 						&.search-active {
 							&:before {
-								background-position: center bottom;
+								background-position: center top;
 							}
 						}
 					}
@@ -470,7 +470,7 @@
 				width: $search-height;
 
 				&:hover {
-					background-position: center -88px;					
+					background-position: center -88px;
 				}
 			}
 		}
@@ -558,7 +558,7 @@
 						content: "";
 						display: block;
 						height: 0;
-						overflow: hidden; 
+						overflow: hidden;
 					}
 
 					/* menu sections */
@@ -587,7 +587,7 @@
 							&:after {
 								background: transparent;
 							}
-						}						
+						}
 					}
 
 					/* header logo */
@@ -608,7 +608,7 @@
 							padding: 0;
 
 							&:hover {
-								z-index: 3;					
+								z-index: 3;
 							}
 						}
 					}

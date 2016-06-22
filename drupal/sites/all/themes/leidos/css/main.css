@@ -1773,7 +1773,7 @@ p.subtext {
 }
 /* line 218, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.last span:before {
-  background: url("../images/search-glass.png") no-repeat center top transparent;
+  background: url("../images/search-glass.png") no-repeat center bottom transparent;
   content: '';
   height: 24px;
   left: 50%;
@@ -1784,7 +1784,7 @@ p.subtext {
 }
 /* line 231, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.last span:hover:before, #block-system-main-menu .content .parent-menu li.last span.search-active:before {
-  background-position: center bottom;
+  background-position: center top;
 }
 /* line 239, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children {
