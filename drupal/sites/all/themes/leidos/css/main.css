@@ -8616,12 +8616,20 @@ p.subtext {
   text-transform: uppercase;
 }
 /* line 23, sass/partials/modules/_static-fixed-nav.scss */
+.staticContent .fixedNav a.noPad {
+  padding: 0;
+}
+/* line 27, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav a:hover {
   color: #850f88;
 }
-/* line 28, sass/partials/modules/_static-fixed-nav.scss */
+/* line 31, sass/partials/modules/_static-fixed-nav.scss */
+.staticContent .fixedNav img {
+  margin: 0;
+}
+/* line 35, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .sticky-wrapper {
-  margin-bottom: 300px;
+  margin-bottom: 110px;
   position: relative;
   z-index: 9999;
 }
@@ -8632,23 +8640,23 @@ p.subtext {
   clear: both;
 }
 @media only screen and (max-width: 960px) {
-  /* line 39, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 46, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav a {
     font-size: 16px;
   }
-  /* line 44, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 51, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .sticky-wrapper {
     margin-bottom: 100px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 52, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 59, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav {
     position: relative !important;
   }
 }
 @media only screen and (max-height: 350px) {
-  /* line 57, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 64, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav {
     position: relative !important;
   }

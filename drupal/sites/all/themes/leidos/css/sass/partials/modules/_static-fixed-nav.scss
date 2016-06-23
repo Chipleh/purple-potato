@@ -20,14 +20,21 @@
             padding: 1.75em 0;
             text-transform: uppercase;
 
+            &.noPad {
+                padding: 0;
+            }
+
             &:hover {
                 color: #850f88;
             }
         }
+        img {
+            margin: 0;
+        }
     }
     .sticky-wrapper {
         @include clearfix;
-        margin-bottom: 300px;
+        margin-bottom: 110px;
         position: relative;
         z-index: 9999;
     }
