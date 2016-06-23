@@ -8720,35 +8720,39 @@ p.subtext {
   margin-top: 12px;
   text-transform: uppercase;
 }
+/* line 60, sass/partials/modules/_static-hero.scss */
+.staticContent .hero__topic:last-child {
+  border-bottom: 0;
+}
 @media only screen and (max-width: 960px) {
-  /* line 64, sass/partials/modules/_static-hero.scss */
+  /* line 68, sass/partials/modules/_static-hero.scss */
   .staticContent .hero__feature {
     width: 100%;
   }
-  /* line 67, sass/partials/modules/_static-hero.scss */
+  /* line 71, sass/partials/modules/_static-hero.scss */
   .staticContent .hero__feature h2 {
     font-size: 40px;
   }
-  /* line 72, sass/partials/modules/_static-hero.scss */
+  /* line 76, sass/partials/modules/_static-hero.scss */
   .staticContent .hero__topicList {
     margin: 0;
     width: 100%;
   }
-  /* line 76, sass/partials/modules/_static-hero.scss */
+  /* line 80, sass/partials/modules/_static-hero.scss */
   .staticContent .hero__topicList ul {
     width: 50%;
   }
-  /* line 80, sass/partials/modules/_static-hero.scss */
+  /* line 84, sass/partials/modules/_static-hero.scss */
   .staticContent .hero__topicList .cta {
     float: right;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 90, sass/partials/modules/_static-hero.scss */
+  /* line 94, sass/partials/modules/_static-hero.scss */
   .staticContent .hero__topicList ul {
     width: 100%;
   }
-  /* line 94, sass/partials/modules/_static-hero.scss */
+  /* line 98, sass/partials/modules/_static-hero.scss */
   .staticContent .hero__topicList .cta {
     float: none;
   }
