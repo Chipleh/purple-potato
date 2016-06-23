@@ -43,7 +43,11 @@
     /*  tablet & mobile
     **************************************************/
     @media only screen and (max-width: 960px) {
-
+        &__meta {
+            h2 {
+                font-size: 40px;
+            }
+        }
     }
 
     /*  mobile-only
