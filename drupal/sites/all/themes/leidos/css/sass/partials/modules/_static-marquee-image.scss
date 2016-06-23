@@ -1,0 +1,30 @@
+.staticContent .marqueeImage {
+    overflow: visible;
+    position: relative;
+    transition: padding 0.3s, transform 0.3s;
+    z-index: -1;
+
+    &__image,
+    &__overlay {
+        position: absolute;
+        top: -300px;
+        width: 100%;
+    }
+
+    &__image {
+        height: 770px;
+        background: url("https://www.leidos.com/sites/all/themes/leidos/images/about-hero.jpg") 100% -172px no-repeat;
+    }
+    &__overlay {
+        background: transparent url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.svg") 50% 0 no-repeat;
+        background: url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.png") 50% 0 no-repeat;
+        height: 800px;
+    }
+
+    @media only screen and (max-height: 860px) {
+        &__image {
+            background: linear-gradient(left, #4d196d 30%, #1f1747 100%);
+        }
+    }
+
+}

@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 
   // Configure Tasks
   grunt.initConfig({
-    // Compass - https://github.com/gruntjs/
+    // Compass - https://github.com/gruntjs/grunt-contrib-compass
     compass: {
         dist: {
             options: {

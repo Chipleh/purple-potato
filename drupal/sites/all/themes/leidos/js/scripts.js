@@ -387,3 +387,100 @@
     }
   };
 })(jQuery);
+
+//  Static pages - Smart (debounced) resize
+//  Monte Greene
+//  6/22/16
+(function($) {
+  Drupal.behaviors.smartresize = {
+    attach: function(context, settings) {
+        (function($, sr) {
+
+            // debouncing function from John Hann
+            // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+            var debounce = function(func, threshold, execAsap) {
+                    var timeout;
+
+                    return function debounced() {
+                        var obj = this,
+                            args = arguments;
+
+                        function delayed() {
+                            if (!execAsap)
+                                func.apply(obj, args);
+                            timeout = null;
+                        };
+
+                        if (timeout)
+                            clearTimeout(timeout);
+                        else if (execAsap)
+                            func.apply(obj, args);
+
+                        timeout = setTimeout(delayed, threshold || 100);
+                    };
+                }
+                // smartresize
+            jQuery.fn[sr] = function(fn) {
+                return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
+            };
+
+        })(jQuery, 'smartresize');
+    }
+  };
+})(jQuery);
+
+//  Static pages - Sticky nav, styled scrollers
+//  Monte Greene
+//  6/20/16
+(function($) {
+  Drupal.behaviors.staticPageInit = {
+    attach: function(context, settings) {
+        var jsp;
+
+        if ($('.staticContent .fixedNav').length) {
+            $('.staticContent .fixedNav').sticky({ topSpacing: 0 });
+        }
+
+        if ($('.staticContent .history').length) {
+            jsp = $('.staticContent .history').jScrollPane().data().jsp;
+
+            $(window).smartresize(function() {
+                jsp.destroy();
+                jsp = $('.staticContent .history').jScrollPane().data().jsp;
+            });
+        }
+    }
+  };
+})(jQuery);
+
+//  Static pages - Marquee topper positioning
+//  Monte Greene
+//  6/22/16
+(function($) {
+  Drupal.behaviors.staticPageMarquee = {
+    attach: function(context, settings) {
+        function adjustMarquee() {
+            var h = window.innerHeight,
+                vOffset = h - 850,
+                $marquee = $('.marqueeImage');
+
+            if (h > 1150) {
+                vOffset = '300';
+            } else if (h < 950) {
+                vOffset = '0';
+            }
+
+            $marquee.css({
+                'transform': 'translateY(' + vOffset + 'px)',
+                'padding-bottom': vOffset + 'px'
+            });
+        }
+
+        $(window).smartresize(function() {
+            adjustMarquee();
+        });
+
+        adjustMarquee();
+    }
+  };
+})(jQuery);
