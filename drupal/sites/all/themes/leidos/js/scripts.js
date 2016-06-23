@@ -388,28 +388,11 @@
   };
 })(jQuery);
 
-//  Static pages - Sticky nav, styled scrollers
+//  Static pages - Smart (debounced) resize
 //  Monte Greene
-//  6/20/16
+//  6/22/16
 (function($) {
-  Drupal.behaviors.staticPageInit = {
-    attach: function(context, settings) {
-        if ($('.staticContent .fixedNav').length) {
-            $('.staticContent .fixedNav').sticky({ topSpacing: 0 });
-        }
-
-        if ($('.staticContent .history').length) {
-            $('.staticContent .history').jScrollPane();
-        }
-    }
-  };
-})(jQuery);
-
-//  Static pages - Marquee topper positioning
-//  Monte Greene
-//  6/20/16
-(function($) {
-  Drupal.behaviors.staticPageMarquee = {
+  Drupal.behaviors.smartresize = {
     attach: function(context, settings) {
         (function($, sr) {
 
@@ -442,7 +425,40 @@
             };
 
         })(jQuery, 'smartresize');
+    }
+  };
+})(jQuery);
 
+//  Static pages - Sticky nav, styled scrollers
+//  Monte Greene
+//  6/20/16
+(function($) {
+  Drupal.behaviors.staticPageInit = {
+    attach: function(context, settings) {
+        var jsp;
+
+        if ($('.staticContent .fixedNav').length) {
+            $('.staticContent .fixedNav').sticky({ topSpacing: 0 });
+        }
+
+        if ($('.staticContent .history').length) {
+            jsp = $('.staticContent .history').jScrollPane().data().jsp;
+
+            $(window).smartresize(function() {
+                jsp.destroy();
+                jsp = $('.staticContent .history').jScrollPane().data().jsp;
+            });
+        }
+    }
+  };
+})(jQuery);
+
+//  Static pages - Marquee topper positioning
+//  Monte Greene
+//  6/22/16
+(function($) {
+  Drupal.behaviors.staticPageMarquee = {
+    attach: function(context, settings) {
         function adjustMarquee() {
             var h = window.innerHeight,
                 vOffset = h - 850,
