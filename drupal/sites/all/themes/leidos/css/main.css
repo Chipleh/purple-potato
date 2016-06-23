@@ -6243,7 +6243,7 @@ p.subtext {
 .pane-bundle-multi-column.multi-column-3 .ds-1col .column-1,
 .pane-bundle-multi-column.multi-column-3 .ds-1col .column-2 {
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
 }
 /* line 412, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-3 .ds-1col .column-0:before,
@@ -8601,12 +8601,13 @@ p.subtext {
 /* line 8, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav li {
   display: inline-block;
+  vertical-align: middle;
 }
-/* line 11, sass/partials/modules/_static-fixed-nav.scss */
+/* line 12, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav li + li {
   margin-left: 1.8%;
 }
-/* line 15, sass/partials/modules/_static-fixed-nav.scss */
+/* line 16, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav a {
   color: #1f1646;
   display: block;
@@ -8615,19 +8616,20 @@ p.subtext {
   padding: 1.75em 0;
   text-transform: uppercase;
 }
-/* line 23, sass/partials/modules/_static-fixed-nav.scss */
+/* line 24, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav a.noPad {
   padding: 0;
 }
-/* line 27, sass/partials/modules/_static-fixed-nav.scss */
+/* line 28, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav a:hover {
   color: #850f88;
 }
-/* line 31, sass/partials/modules/_static-fixed-nav.scss */
+/* line 32, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .fixedNav img {
+  display: block;
   margin: 0;
 }
-/* line 35, sass/partials/modules/_static-fixed-nav.scss */
+/* line 37, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .sticky-wrapper {
   margin-bottom: 110px;
   position: relative;
@@ -8640,23 +8642,23 @@ p.subtext {
   clear: both;
 }
 @media only screen and (max-width: 960px) {
-  /* line 46, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 48, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav a {
     font-size: 16px;
   }
-  /* line 51, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 53, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .sticky-wrapper {
     margin-bottom: 100px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 59, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 61, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav {
     position: relative !important;
   }
 }
 @media only screen and (max-height: 350px) {
-  /* line 64, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 66, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav {
     position: relative !important;
   }
@@ -9096,25 +9098,33 @@ p.subtext {
   transition: padding 0.3s, transform 0.3s;
   z-index: -1;
 }
-/* line 7, sass/partials/modules/_static-marquee-image.scss */
+/* line 8, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage__image, .staticContent .marqueeImage__overlay {
   position: absolute;
   top: -300px;
   width: 100%;
 }
-/* line 14, sass/partials/modules/_static-marquee-image.scss */
+/* line 15, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage__image {
   height: 770px;
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/about-hero.jpg") 100% -172px no-repeat;
 }
-/* line 18, sass/partials/modules/_static-marquee-image.scss */
+/* line 19, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage__overlay {
   background: transparent url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.svg") 50% 0 no-repeat;
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.png") 50% 0 no-repeat;
   height: 800px;
 }
+/* line 26, sass/partials/modules/_static-marquee-image.scss */
+.staticContent .marqueeImage--simple .marqueeImage__image {
+  background: linear-gradient(to right, #4d196d 30%, #1f1747 100%);
+}
+/* line 29, sass/partials/modules/_static-marquee-image.scss */
+.staticContent .marqueeImage--simple .marqueeImage__overlay {
+  top: -250px;
+}
 @media only screen and (max-height: 860px) {
-  /* line 25, sass/partials/modules/_static-marquee-image.scss */
+  /* line 35, sass/partials/modules/_static-marquee-image.scss */
   .staticContent .marqueeImage__image {
     background: linear-gradient(to right, #4d196d 30%, #1f1747 100%);
   }
