@@ -1,4 +1,5 @@
 .staticContent .marqueeImage {
+    $marqueeImage: 'marqueeImage';
     overflow: visible;
     position: relative;
     transition: padding 0.3s, transform 0.3s;
@@ -19,6 +20,15 @@
         background: transparent url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.svg") 50% 0 no-repeat;
         background: url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.png") 50% 0 no-repeat;
         height: 800px;
+    }
+
+    &--simple {
+        .#{$marqueeImage}__image {
+            background: linear-gradient(left, #4d196d 30%, #1f1747 100%);
+        }
+        .#{$marqueeImage}__overlay {
+            top: -250px;
+        }
     }
 
     @media only screen and (max-height: 860px) {
