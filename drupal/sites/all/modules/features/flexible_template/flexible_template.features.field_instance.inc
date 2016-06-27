@@ -121,7 +121,7 @@ function flexible_template_field_default_field_instances() {
 <li><strong>1 column</strong> <em>1400x405</em></li>
 <li><strong>2 column</strong> <em>700x405</em></li>
 <li><strong>3 column</strong> <em>467x405</em></li>
-<li><strong>4 column</strong> <em>300x405</em></li>
+<li><strong>4 column</strong> <em>350x405</em></li>
 </ul>',
     'display' => array(
       'default' => array(
@@ -166,6 +166,7 @@ function flexible_template_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
+          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
@@ -178,6 +179,7 @@ function flexible_template_field_default_field_instances() {
           'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
           'upload' => 'upload',
         ),
       ),
@@ -635,7 +637,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_columns_multi-field_video_tout'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
-    'description' => 'For best modal window results the recommended dimensions for the video file are greater than 1024 x 768',
+    'description' => 'For best modal window results the recommended dimensions for the video file are greater than 1280 x 720',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -671,7 +673,6 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'private' => 0,
           'public' => 'public',
           'youtube' => 'youtube',
         ),
@@ -1421,7 +1422,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['fieldable_panels_pane-feature_video-field_background_video'] = array(
     'bundle' => 'feature_video',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Recommended video dimensions: 1400 x 405',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1473,8 +1474,8 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'private' => 0,
           'public' => 'public',
+          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
@@ -1487,6 +1488,7 @@ function flexible_template_field_default_field_instances() {
           'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
           'upload' => 'upload',
         ),
       ),
@@ -3526,7 +3528,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['node-rotator_hero-field_video_tout'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
-    'description' => 'For best results the recommended video resolution is greater than <em>1024 x 768</em>',
+    'description' => 'For best results the recommended video resolution is greater than <em>1280 x 720</em>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3568,8 +3570,8 @@ function flexible_template_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'private' => 0,
           'public' => 'public',
+          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
@@ -3582,6 +3584,7 @@ function flexible_template_field_default_field_instances() {
           'media_browser_plus--media_browser_thumbnails' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
           'upload' => 'upload',
         ),
       ),
@@ -3660,8 +3663,8 @@ function flexible_template_field_default_field_instances() {
   t('Display footer');
   t('Display header');
   t('Enable Drop Cap');
-  t('For best modal window results the recommended dimensions for the video file are greater than 1024 x 768');
-  t('For best results the recommended video resolution is greater than <em>1024 x 768</em>');
+  t('For best modal window results the recommended dimensions for the video file are greater than 1280 x 720');
+  t('For best results the recommended video resolution is greater than <em>1280 x 720</em>');
   t('Grid Type');
   t('Icon item');
   t('Image');
@@ -3699,13 +3702,12 @@ function flexible_template_field_default_field_instances() {
 <li><strong>1 column</strong> <em>1400x405</em></li>
 <li><strong>2 column</strong> <em>700x405</em></li>
 <li><strong>3 column</strong> <em>467x405</em></li>
-<li><strong>4 column</strong> <em>300x405</em></li>
+<li><strong>4 column</strong> <em>350x405</em></li>
 </ul>');
   t('Image upload supports: png, gif, jpg, jpeg at # x # pixels.');
   t('Image upload supports: png, gif, jpg, jpeg at 50 x 50 pixels.');
-  t('Image upload supports: png, gif, jpg, jpeg at 50 x 50 pixels.
-');
   t('Module Height');
+  t('Recommended video dimensions: 1400 x 405');
   t('Rotator Slide / Hero');
   t('Secondary CTA');
   t('Selection dimensions:
