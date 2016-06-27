@@ -1,9 +1,9 @@
 <?php include("opening.html"); ?>
 
 
-<div class="staticContent">
+<div class="staticContent aboutLanding">
 
-    <section class="marqueeImage">
+    <section class="marqueeImage marqueeImage--variable">
         <div class="marqueeImage__image"></div>
         <div class="marqueeImage__overlay"></div>
     </section>
@@ -227,10 +227,10 @@
         </div>
     </section>
 
-    <section class="companies" id="leidos-companies">
+    <section class="fullWidthText fullWidthText--threeBlocks fullWidthText--lgHeadings" id="leidos-companies">
         <heading class="subhead">
-            <h2 class="subhead__head subhead__head--withLink">Leidos Companies</h2>
-            <a href="/about/companies" class="subhead__link">View All »</a>
+            <h2 class="subhead__head subhead__head--withLink">Careers FAQs</h2>
+            <a href="/careers/faqs/" class="subhead__link">View All »</a>
         </heading>
         <ul>
             <li>
@@ -256,6 +256,7 @@
 <script type="text/javascript" src="/sites/all/themes/leidos/static-pages/js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="/sites/all/themes/leidos/static-pages/js/jquery.jscrollpane.min.js"></script>
 <script type="text/javascript" src="/sites/all/themes/leidos/static-pages/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="/sites/all/themes/leidos/static-pages/js/slick.min.js"></script>
 
 
 <?php include("closing.html"); ?>
