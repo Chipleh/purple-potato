@@ -1,0 +1,123 @@
+.staticContent .imageToutCarousel {
+    background: #e8e8e8;
+    position: relative;
+    padding: 0 0 50px 0;
+
+    .subhead {
+        padding-right: 4.5%;
+        padding-left: 4.9%;
+        padding-top: 35px;
+    }
+
+    &__item {
+        background: #fff;
+        margin: 0 20px 16px 20px;
+        min-height: 381px;
+        padding: 10px;
+        width: 810px;
+    }
+    &__image {
+        float: left;
+        width: 35%;
+    }
+    &__counter {
+        color: #197f95;
+        float: left;
+        font-size: 100px;
+        font-family: AvenirLT-Book, Arial, sans-serif;
+        line-height: 1em;
+        margin-top: 65px;
+        text-align: center;
+        width: 15%;
+    }
+    &__mobileCounter {
+        color: #197f95;
+        display: none;
+        font-family: AvenirLT-Book, Arial, sans-serif;
+        font-weight: bold;
+    }
+    &__meta {
+        float: left;
+        margin-top: 65px;
+        width: 45%;
+
+        h3 {
+            font-size: 40px;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+        p {
+            color: #8b8b8b;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.65em;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        background: url('https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png') no-repeat;
+        border: 0;
+        height: 54px;
+        left: 50%;
+        overflow: hidden;
+        position: absolute;
+        text-indent: -99999px;
+        width: 55px;
+    }
+    .slick-prev{
+        background-position: 0 -1423px;
+        transform: translateX(-80px);
+    }
+    .slick-next {
+        background-position: 0 -1567px;
+        transform: translateX(30px);
+    }
+    .slick-dots {
+        text-align: center;
+
+        li {
+            display: none;
+
+            &.slick-active {
+                display: inline-block;
+            }
+
+            button,
+            span {
+                background: none;
+                border: 0;
+                color: #1f1646;
+                font-family: AvenirLT-Heavy, Arial, sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 54px;
+            }
+        }
+    }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        &__meta {
+            h3 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+        &__counter {
+            display: none;
+        }
+        &__image,
+        &__meta {
+            float: none;
+            width: 100%;
+        }
+    }
+}

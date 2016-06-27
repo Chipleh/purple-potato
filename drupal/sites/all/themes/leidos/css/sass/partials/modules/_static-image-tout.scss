@@ -6,11 +6,9 @@
     padding: 0 4.5% 120px 4.9%;
 
     &__image {
-        width: 33%;
+
     }
     &__meta {
-        width: 51%;
-
         h3 {
             color: #8b8b8b;
             font-family: AvenirLT-Book, Arial, sans-serif;
@@ -19,6 +17,15 @@
         }
     }
 
+    &--imgRight,
+    &--imgLeft {
+        .#{$imageTout}__image {
+            width: 33%;
+        }
+        .#{$imageTout}__meta {
+            width: 51%;
+        }
+    }
     &--imgRight {
         background: url("https://www.leidos.com/sites/all/themes/leidos/images/right-slant-bg.png") no-repeat 56% 50px #fff;
 
@@ -37,6 +44,53 @@
         }
         .#{$imageTout}__meta {
             float: right;
+        }
+    }
+    &--imgFull {
+        .#{$imageTout}__image {
+
+        }
+        .#{$imageTout}__meta {
+
+        }
+    }
+    &--doubleText {
+        .#{$imageTout}__meta {
+            float: left;
+            margin-right: 2%;
+            padding: 36px 42px 50px;
+            width: 48%;
+
+            h2 {
+                color: #1f1646;
+                font-size: 40px;
+                font-family: AvenirLT-Book, Arial, sans-serif;
+                font-weight: normal;
+                line-height: normal;
+                margin: 0 0 20px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &--tripleText {
+        .#{$imageTout}__meta {
+            float: left;
+            margin-right: 10%;
+            padding: 38px 0 58px;
+            width: 26.667%;
+
+            h2 {
+                font-size: 28px;
+                line-height: normal;
+                margin: 0 0 12px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 
@@ -67,6 +121,23 @@
             .#{$imageTout}__meta {
                 float: none;
                 width: 100%;
+            }
+        }
+        &--doubleText,
+        &--tripleText {
+            .#{$imageTout}__meta {
+                float: none;
+                padding-bottom: 0;
+                padding-left: 0;
+                padding-right: 0;
+                width: 100%;
+            }
+        }
+        &--doubleText {
+            .#{$imageTout}__meta {
+                h2 {
+                    font-size: 30px;
+                }
             }
         }
     }

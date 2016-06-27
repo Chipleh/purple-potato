@@ -462,7 +462,7 @@
         function adjustMarquee() {
             var h = window.innerHeight,
                 vOffset = h - 850,
-                $marquee = $('.marqueeImage');
+                $marquee = $('.marqueeImage--variable');
 
             if (h > 1150) {
                 vOffset = '300';
@@ -476,11 +476,106 @@
             });
         }
 
-        $(window).smartresize(function() {
-            adjustMarquee();
-        });
+        if ($('.marqueeImage--variable').length) {
+            $(window).smartresize(function() {
+                adjustMarquee();
+            });
 
-        adjustMarquee();
+            adjustMarquee();
+        }
+    }
+  };
+})(jQuery);
+
+//  Static pages - Marquee topper positioning
+//  Monte Greene
+//  6/22/16
+(function($) {
+  Drupal.behaviors.staticPageCarousel = {
+    attach: function(context, settings) {
+      if ($('.imageToutCarousel__items').length) {
+          var $slickContainer = $('.imageToutCarousel__items').on('init reInit', function (event, slick, currentSlide, nextSlide) {
+            $('.slick-dots li').append('<span>/ ' + slick.slideCount + '</span>');
+          });
+          console.log($slickContainer);
+          $slickContainer.slick({
+            centerMode: true,
+            centerPadding: '20%',
+            dots: true,
+            slidesToShow: 1,
+            responsive: [
+              {
+                breakpoint: 1300,
+                settings: {
+                  adaptiveHeight: true,
+                  centerPadding: '15%'
+                }
+              },
+              {
+                breakpoint: 1100,
+                settings: {
+                  centerPadding: '10%'
+                }
+              },
+              {
+                breakpoint: 900,
+                settings: {
+                  centerPadding: '5%'
+                }
+              },
+              {
+                breakpoint: 640,
+                settings: {
+                  centerPadding: '0'
+                }
+              }
+            ]
+          });
+      }
+    }
+  };
+})(jQuery);
+
+//  Static pages - Search script, adapted from live site
+//  Monte Greene
+//  6/23/16
+(function($) {
+  Drupal.behaviors.staticPageSearch = {
+    attach: function(context, settings) {
+        if ($('.careersSearch').length) {
+            $('#keywordSearch').submit(function (event) {
+
+                var keywords = $("#keywords");
+                if ($(keywords).val() == $(keywords)[0].title)
+                    $(keywords).val("");
+                keywords = $(keywords).val().replace(' ', '-').replace('&', '-');
+
+                if (keywords != "") {
+                    var url = 'http://jobs.leidos.com/ListJobs/ByKeyword/' + keywords + "/";
+
+                    document.location = url;
+                } else {
+                    document.location = 'http://jobs.leidos.com' + '/ListJobs/All';
+                }
+
+                event.preventDefault();
+            });
+
+            $("#keywords").focus(function () {
+                if ($(this).val() == $(this)[0].title) {
+                    $(this).val("");
+                    $(this).removeClass("defaultTextActive");
+                }
+            });
+
+            $("#keywords").blur(function () {
+                if ($(this).val() == "" || $(this).val() == $(this)[0].title) {
+                    $(this).val($(this)[0].title);
+                    $(this).addClass("defaultTextActive");
+                }
+            });
+            $("#keywords").blur();
+        }
     }
   };
 })(jQuery);
