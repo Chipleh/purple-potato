@@ -5228,7 +5228,7 @@ p.subtext {
 /* line 10, sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero {
   background-repeat: none;
-  background-size: 100% auto;
+  background-size: cover;
   clear: both;
   display: block;
   margin-bottom: calc(0.643vw * 2);
@@ -5265,7 +5265,7 @@ p.subtext {
 /* line 47, sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .hero-rotator-outer {
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
 }
 /* line 51, sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .hero-rotator-outer:before {
@@ -5667,7 +5667,7 @@ p.subtext {
 /* line 10, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy {
   background-repeat: none;
-  background-size: 100% auto;
+  background-size: cover;
   clear: both;
   display: block;
   margin-bottom: calc(0.643vw * 2);
@@ -5871,7 +5871,7 @@ p.subtext {
 /* line 10, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column {
   background-repeat: none;
-  background-size: 100% auto;
+  background-size: cover;
   clear: both;
   display: block;
   overflow: hidden;
@@ -6069,7 +6069,7 @@ p.subtext {
 /* line 206, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .ds-1col .column-0 {
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
   clear: both;
   float: none;
   width: 100%;
@@ -6164,7 +6164,7 @@ p.subtext {
 .pane-bundle-multi-column.multi-column-2 .ds-1col .column-0,
 .pane-bundle-multi-column.multi-column-2 .ds-1col .column-1 {
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
 }
 /* line 318, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .ds-1col .column-0:before,
@@ -6328,7 +6328,7 @@ p.subtext {
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-2,
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-3 {
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
 }
 /* line 508, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-0:before,
