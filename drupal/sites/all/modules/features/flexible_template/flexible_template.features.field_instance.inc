@@ -637,7 +637,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances['field_collection_item-field_columns_multi-field_video_tout'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
-    'description' => 'For best modal window results the recommended dimensions for the video file are greater than 1280 x 720',
+    'description' => 'For best modal window results the recommended dimensions for the video file are 1280 x 720',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3663,8 +3663,8 @@ function flexible_template_field_default_field_instances() {
   t('Display footer');
   t('Display header');
   t('Enable Drop Cap');
-  t('For best modal window results the recommended dimensions for the video file are greater than 1280 x 720');
-  t('For best results the recommended video resolution is greater than <em>1280 x 720</em>');
+  t('For best modal window results the recommended dimensions for the video file are 1280 x 720');
+  t('For best results the recommended video resolution is <em>1280 x 720</em>');
   t('Grid Type');
   t('Icon item');
   t('Image');
