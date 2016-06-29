@@ -116,7 +116,7 @@
         </div>
     </section>
 
-    <section class="imageToutCarousel">
+    <section class="imageToutCarousel" id="getting-ready">
         <heading class="subhead">
             <h2 class="subhead__head subhead__head--withLink">Our Values</h2>
             <a href="/careers/life#tab/our-values" class="subhead__link">View All »</a>
@@ -157,7 +157,7 @@
         </div>
     </section>
 
-    <section class="imageTout imageTout--imgFull imageTout--tripleText" id="life-at-leidos">
+    <section class="imageTout imageTout--imgFull imageTout--tripleText" id="pay-benefits">
         <heading class="subhead">
             <h2 class="subhead__head subhead__head--withLink">Pay & Benefits</h2>
             <a href="/careers/pay-benefits/" class="subhead__link">View All »</a>
@@ -191,11 +191,6 @@
             <a href="/careers/pay-benefits/"><span>Learn More »</span></a>
         </div>
     </section>
-
-
-
-
-
 
     <section class="fullWidthText fullWidthText--fourBlocks" id="faqs">
         <heading class="subhead">
