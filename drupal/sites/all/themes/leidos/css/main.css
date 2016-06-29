@@ -5228,7 +5228,7 @@ p.subtext {
 /* line 10, sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero {
   background-repeat: none;
-  background-size: 100% auto;
+  background-size: cover;
   clear: both;
   display: block;
   margin-bottom: calc(0.643vw * 2);
@@ -5265,7 +5265,7 @@ p.subtext {
 /* line 47, sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .hero-rotator-outer {
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
 }
 /* line 51, sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .hero-rotator-outer:before {
@@ -5667,7 +5667,7 @@ p.subtext {
 /* line 10, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy {
   background-repeat: none;
-  background-size: 100% auto;
+  background-size: cover;
   clear: both;
   display: block;
   margin-bottom: calc(0.643vw * 2);
@@ -5871,7 +5871,7 @@ p.subtext {
 /* line 10, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column {
   background-repeat: none;
-  background-size: 100% auto;
+  background-size: cover;
   clear: both;
   display: block;
   overflow: hidden;
@@ -6069,7 +6069,7 @@ p.subtext {
 /* line 206, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .ds-1col .column-0 {
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
   clear: both;
   float: none;
   width: 100%;
@@ -6164,7 +6164,7 @@ p.subtext {
 .pane-bundle-multi-column.multi-column-2 .ds-1col .column-0,
 .pane-bundle-multi-column.multi-column-2 .ds-1col .column-1 {
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
 }
 /* line 318, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .ds-1col .column-0:before,
@@ -6328,7 +6328,7 @@ p.subtext {
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-2,
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-3 {
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
 }
 /* line 508, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-4 .ds-1col .column-0:before,
@@ -8206,22 +8206,13 @@ p.subtext {
   padding-right: 4.5%;
   padding-left: 4.9%;
 }
-/* line 14, sass/partials/modules/_static-awards.scss */
-.staticContent .awards .subhead h2 {
-  color: #1f1646;
-  display: inline-block;
-  font-family: AvenirLT-Black, Arial, sans-serif;
-  font-size: 18px;
-  margin-right: 20px;
-  text-transform: uppercase;
-}
-/* line 24, sass/partials/modules/_static-awards.scss */
+/* line 15, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__row {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 4.5% 120px 4.9%;
 }
-/* line 30, sass/partials/modules/_static-awards.scss */
+/* line 21, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item {
   background: #fff;
   float: left;
@@ -8230,12 +8221,12 @@ p.subtext {
   padding: 15px 30px 30px 30px;
   position: relative;
 }
-/* line 38, sass/partials/modules/_static-awards.scss */
+/* line 29, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item dt,
 .staticContent .awards__item dd {
   display: block;
 }
-/* line 43, sass/partials/modules/_static-awards.scss */
+/* line 34, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item footer {
   border-top: solid 1px #d0d0d0;
   bottom: 0;
@@ -8245,42 +8236,42 @@ p.subtext {
   position: absolute;
   right: 0;
 }
-/* line 53, sass/partials/modules/_static-awards.scss */
+/* line 44, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--textRight {
   text-align: right;
 }
-/* line 56, sass/partials/modules/_static-awards.scss */
+/* line 47, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--textLeft {
   text-align: left;
 }
-/* line 60, sass/partials/modules/_static-awards.scss */
+/* line 51, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--feature {
   padding-top: 30px;
 }
-/* line 63, sass/partials/modules/_static-awards.scss */
+/* line 54, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--feature dt {
   color: #867429;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 30px;
 }
-/* line 68, sass/partials/modules/_static-awards.scss */
+/* line 59, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--feature dd {
   color: #1f1646;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 30px;
 }
-/* line 76, sass/partials/modules/_static-awards.scss */
+/* line 67, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--lgNum dt {
   color: #197f95;
   font-size: 100px;
   font-family: AvenirLT-Book, Arial, sans-serif;
 }
-/* line 81, sass/partials/modules/_static-awards.scss */
+/* line 72, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--lgNum dt span {
   font-size: 60px;
   vertical-align: top;
 }
-/* line 86, sass/partials/modules/_static-awards.scss */
+/* line 77, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--lgNum dd {
   color: #ababab;
   font-family: AvenirLT-Black, Arial, sans-serif;
@@ -8290,7 +8281,7 @@ p.subtext {
   padding-left: 25%;
   text-transform: uppercase;
 }
-/* line 99, sass/partials/modules/_static-awards.scss */
+/* line 90, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--leaf dt:before {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -1679px no-repeat;
   content: '';
@@ -8301,62 +8292,62 @@ p.subtext {
   top: 25px;
   width: 79px;
 }
-/* line 117, sass/partials/modules/_static-awards.scss */
+/* line 108, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dt {
   color: #1f1646;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 40px;
   font-weight: normal;
 }
-/* line 123, sass/partials/modules/_static-awards.scss */
+/* line 114, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dd {
   color: #850f88;
   font-size: 16px;
   font-family: AvenirLT-Medium, Arial, sans-serif;
   line-height: 23px;
 }
-/* line 129, sass/partials/modules/_static-awards.scss */
+/* line 120, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__row:first-of-type .awards__item:nth-child(2) p {
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.8em;
 }
 @media only screen and (min-width: 961px) {
-  /* line 141, sass/partials/modules/_static-awards.scss */
+  /* line 132, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__item {
     width: 31.66%;
   }
-  /* line 144, sass/partials/modules/_static-awards.scss */
+  /* line 135, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__item:last-child {
     margin-right: 0;
   }
-  /* line 151, sass/partials/modules/_static-awards.scss */
+  /* line 142, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__row:first-of-type .awards__item:nth-child(2) {
     padding-top: 30px;
     width: 47%;
   }
-  /* line 155, sass/partials/modules/_static-awards.scss */
+  /* line 146, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dt {
     margin-bottom: 18px;
   }
-  /* line 158, sass/partials/modules/_static-awards.scss */
+  /* line 149, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__row:first-of-type .awards__item:nth-child(2) dd {
     margin: 1.33em 0;
   }
-  /* line 163, sass/partials/modules/_static-awards.scss */
+  /* line 154, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__row:first-of-type .awards__item:first-child, .staticContent .awards__row:first-of-type .awards__item:last-child {
     width: 24%;
   }
 }
 @media only screen and (max-width: 960px) {
-  /* line 174, sass/partials/modules/_static-awards.scss */
+  /* line 165, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__item {
     height: auto;
     margin: 0 0 20px 0;
     padding-bottom: 0;
     width: 100%;
   }
-  /* line 180, sass/partials/modules/_static-awards.scss */
+  /* line 171, sass/partials/modules/_static-awards.scss */
   .staticContent .awards__item footer {
     margin-top: 10px;
     padding-left: 0;
@@ -8365,9 +8356,105 @@ p.subtext {
   }
 }
 
+/* line 1, sass/partials/modules/_static-careers-hero.scss */
+.staticContent .careersHero {
+  max-width: 1180px;
+  margin: 140px auto 0;
+  padding: 0 4.5% 0 4.9%;
+  /*  tablet & mobile
+  **************************************************/
+  /*  mobile-only
+  **************************************************/
+}
+/* line 11, sass/_mixins.scss */
+.staticContent .careersHero:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 7, sass/partials/modules/_static-careers-hero.scss */
+.staticContent .careersHero__left {
+  border-right: dashed 1px #8b8b8b;
+  float: left;
+  padding: 90px 5% 40px 0;
+  width: 57%;
+}
+/* line 13, sass/partials/modules/_static-careers-hero.scss */
+.staticContent .careersHero__right {
+  float: left;
+  padding-left: 40px;
+  padding-top: 110px;
+  width: 38%;
+}
+@media only screen and (max-width: 960px) {
+  /* line 23, sass/partials/modules/_static-careers-hero.scss */
+  .staticContent .careersHero__left, .staticContent .careersHero__right {
+    float: none;
+    width: 100%;
+  }
+  /* line 28, sass/partials/modules/_static-careers-hero.scss */
+  .staticContent .careersHero__left {
+    border-bottom: dashed 1px #8b8b8b;
+    border-right: 0;
+    padding-right: 0;
+  }
+  /* line 33, sass/partials/modules/_static-careers-hero.scss */
+  .staticContent .careersHero__right {
+    padding-bottom: 40px;
+    padding-left: 0;
+    padding-top: 40px;
+  }
+}
+
+/* line 1, sass/partials/modules/_static-careers-search.scss */
+.staticContent .careersSearch {
+  max-width: 420px;
+  width: 100%;
+}
+/* line 5, sass/partials/modules/_static-careers-search.scss */
+.staticContent .careersSearch input {
+  background-color: #f0f0f0;
+  border-bottom: solid 1px #e8e8e8;
+  border-left: solid 1px #ababab;
+  border-right: solid 1px #e8e8e8;
+  border-top: solid 1px #ababab;
+  color: #787878;
+  font-family: AvenirLT-Medium, Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+  padding: 14px 15px 15px;
+  width: 100%;
+}
+/* line 18, sass/partials/modules/_static-careers-search.scss */
+.staticContent .careersSearch button {
+  background-color: #1f1545;
+  background-image: linear-gradient(to left, #3f1d69 0%, #0d074d 100%);
+  border: 0;
+  float: right;
+  height: 50px;
+  margin: -1px;
+  position: relative;
+  text-indent: -9999px;
+  top: -50px;
+  width: 50px;
+}
+/* line 30, sass/partials/modules/_static-careers-search.scss */
+.staticContent .careersSearch button span {
+  background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -1912px no-repeat;
+  display: block;
+  height: 15px;
+  margin: 0 auto;
+  opacity: 0.5;
+  position: relative;
+  top: -5px;
+  width: 15px;
+}
+
 /* line 1, sass/partials/modules/_static-common.scss */
 .staticContent {
   box-sizing: border-box;
+  /* Slick Slider */
+  /* End Slick Slider */
 }
 /* line 4, sass/partials/modules/_static-common.scss */
 .staticContent:before {
@@ -8497,10 +8584,19 @@ p.subtext {
   padding-top: 1.2em;
 }
 /* line 134, sass/partials/modules/_static-common.scss */
+.staticContent .subhead h2 {
+  color: #1f1646;
+  display: inline-block;
+  font-family: AvenirLT-Black, Arial, sans-serif;
+  font-size: 18px;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+/* line 143, sass/partials/modules/_static-common.scss */
 .staticContent .subhead__head {
   line-height: normal;
 }
-/* line 137, sass/partials/modules/_static-common.scss */
+/* line 146, sass/partials/modules/_static-common.scss */
 .staticContent .subhead__head:after {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") no-repeat;
   background-position: 0 -1034px;
@@ -8514,7 +8610,7 @@ p.subtext {
   top: 3px;
   width: 9px;
 }
-/* line 152, sass/partials/modules/_static-common.scss */
+/* line 161, sass/partials/modules/_static-common.scss */
 .staticContent .subhead__link {
   color: #850f88;
   display: inline-block;
@@ -8523,65 +8619,131 @@ p.subtext {
   text-decoration: none;
   white-space: nowrap;
 }
-
-/* line 1, sass/partials/modules/_static-companies.scss */
-.staticContent .companies {
-  background: #e8e8e8;
-  margin: 0 auto;
-  padding: 35px 0 55px 0;
-  /*  tablet & mobile
-  **************************************************/
-  /*  mobile-only
-  **************************************************/
-}
-/* line 6, sass/partials/modules/_static-companies.scss */
-.staticContent .companies > heading {
+/* line 174, sass/partials/modules/_static-common.scss */
+.staticContent .slick-slider {
+  position: relative;
   display: block;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 4.5% 0 4.9%;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
 }
-/* line 12, sass/partials/modules/_static-companies.scss */
-.staticContent .companies > heading h2 {
-  color: #1f1646;
-  display: inline-block;
+/* line 194, sass/partials/modules/_static-common.scss */
+.staticContent .slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+/* line 203, sass/partials/modules/_static-common.scss */
+.staticContent .slick-list:focus {
+  outline: none;
+}
+/* line 206, sass/partials/modules/_static-common.scss */
+.staticContent .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+/* line 211, sass/partials/modules/_static-common.scss */
+.staticContent .slick-slider .slick-track,
+.staticContent .slick-slider .slick-list {
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 220, sass/partials/modules/_static-common.scss */
+.staticContent .slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+/* line 227, sass/partials/modules/_static-common.scss */
+.staticContent .slick-track:before,
+.staticContent .slick-track:after {
+  display: table;
+  content: '';
+}
+/* line 233, sass/partials/modules/_static-common.scss */
+.staticContent .slick-track:after {
+  clear: both;
+}
+/* line 236, sass/partials/modules/_static-common.scss */
+.staticContent .slick-loading .slick-track {
+  visibility: hidden;
+}
+/* line 240, sass/partials/modules/_static-common.scss */
+.staticContent .slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+/* line 247, sass/partials/modules/_static-common.scss */
+.staticContent [dir='rtl'] .slick-slide {
+  float: right;
+}
+/* line 250, sass/partials/modules/_static-common.scss */
+.staticContent .slick-slide img {
+  display: block;
+}
+/* line 253, sass/partials/modules/_static-common.scss */
+.staticContent .slick-slide.slick-loading img {
+  display: none;
+}
+/* line 256, sass/partials/modules/_static-common.scss */
+.staticContent .slick-slide.dragging img {
+  pointer-events: none;
+}
+/* line 259, sass/partials/modules/_static-common.scss */
+.staticContent .slick-initialized .slick-slide {
+  display: block;
+}
+/* line 262, sass/partials/modules/_static-common.scss */
+.staticContent .slick-loading .slick-slide {
+  visibility: hidden;
+}
+/* line 265, sass/partials/modules/_static-common.scss */
+.staticContent .slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 1, sass/partials/modules/_static-find-your-challenge.scss */
+.staticContent .findYourChallenge {
+  padding: 0 0 40px 0;
+}
+/* line 4, sass/partials/modules/_static-find-your-challenge.scss */
+.staticContent .findYourChallenge h2 {
+  color: #850f88;
   font-family: AvenirLT-Black, Arial, sans-serif;
   font-size: 23px;
-  margin-right: 20px;
+  line-height: normal;
+  margin-bottom: 26px;
   text-transform: uppercase;
 }
-/* line 21, sass/partials/modules/_static-companies.scss */
-.staticContent .companies ul {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 4.5% 0 4.9%;
+/* line 12, sass/partials/modules/_static-find-your-challenge.scss */
+.staticContent .findYourChallenge h2 span {
+  display: block;
 }
-/* line 26, sass/partials/modules/_static-companies.scss */
-.staticContent .companies li {
-  float: left;
-  width: 32%;
+/* line 16, sass/partials/modules/_static-find-your-challenge.scss */
+.staticContent .findYourChallenge h2:first-line {
+  color: #1f1646;
 }
-/* line 30, sass/partials/modules/_static-companies.scss */
-.staticContent .companies li h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 23px;
-  font-weight: bold;
-  margin: 0 0 20px;
-}
-/* line 37, sass/partials/modules/_static-companies.scss */
-.staticContent .companies li + li {
-  margin-left: 2%;
-}
-@media only screen and (max-width: 720px) {
-  /* line 51, sass/partials/modules/_static-companies.scss */
-  .staticContent .companies li {
-    margin: 0 0 20px 0;
-    width: 100%;
-  }
-  /* line 55, sass/partials/modules/_static-companies.scss */
-  .staticContent .companies li + li {
-    margin-left: 0;
-  }
+/* line 20, sass/partials/modules/_static-find-your-challenge.scss */
+.staticContent .findYourChallenge p {
+  color: #8b8b8b;
+  font-family: AvenirLT-Book, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6em;
+  margin-top: 10px;
 }
 
 /* line 1, sass/partials/modules/_static-fixed-nav.scss */
@@ -8661,6 +8823,129 @@ p.subtext {
   /* line 66, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav {
     position: relative !important;
+  }
+}
+
+/* line 1, sass/partials/modules/_static-forward-thinkers.scss */
+.staticContent .forwardThinkers {
+  /*  tablet & mobile
+  **************************************************/
+  /*  mobile-only
+  **************************************************/
+}
+/* line 2, sass/partials/modules/_static-forward-thinkers.scss */
+.staticContent .forwardThinkers header {
+  padding-bottom: 20px;
+}
+/* line 5, sass/partials/modules/_static-forward-thinkers.scss */
+.staticContent .forwardThinkers header h2 {
+  margin: 0 0 20px;
+}
+/* line 8, sass/partials/modules/_static-forward-thinkers.scss */
+.staticContent .forwardThinkers header span {
+  color: #8b8b8b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin-top: 26px;
+}
+/* line 15, sass/partials/modules/_static-forward-thinkers.scss */
+.staticContent .forwardThinkers p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 26px 0 16px 0;
+}
+@media only screen and (max-width: 720px) {
+  /* line 31, sass/partials/modules/_static-forward-thinkers.scss */
+  .staticContent .forwardThinkers header h2 {
+    font-size: 40px;
+    line-height: normal;
+  }
+}
+
+/* line 1, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText {
+  background: #e8e8e8;
+  margin: 0 auto;
+  padding: 35px 0 55px 0;
+  /*  tablet & mobile
+  **************************************************/
+  /*  mobile-only
+  **************************************************/
+}
+/* line 6, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText .subhead {
+  display: block;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 4.5% 0 4.9%;
+}
+/* line 13, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText ul {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 4.5% 0 4.9%;
+}
+/* line 18, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText li {
+  float: left;
+  width: 32%;
+}
+/* line 22, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText li h3 {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: normal;
+  margin: 0 0 20px;
+}
+/* line 31, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText--threeBlocks li {
+  width: 32%;
+}
+/* line 34, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText--threeBlocks li + li {
+  margin-left: 2%;
+}
+/* line 40, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText--fourBlocks li {
+  float: left;
+  padding: 0;
+  width: 20%;
+}
+/* line 45, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText--fourBlocks li + li {
+  margin-left: 6.667%;
+}
+/* line 52, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText--lgHeadings .subhead h2 {
+  font-size: 23px;
+}
+/* line 57, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText--lgHeadings li h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+@media only screen and (max-width: 960px) {
+  /* line 70, sass/partials/modules/_static-full-width-text.scss */
+  .staticContent .fullWidthText--fourBlocks li {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+  /* line 74, sass/partials/modules/_static-full-width-text.scss */
+  .staticContent .fullWidthText--fourBlocks li + li {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 720px) {
+  /* line 84, sass/partials/modules/_static-full-width-text.scss */
+  .staticContent .fullWidthText li {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+  /* line 88, sass/partials/modules/_static-full-width-text.scss */
+  .staticContent .fullWidthText li + li {
+    margin-left: 0;
   }
 }
 
@@ -8947,6 +9232,139 @@ p.subtext {
   margin: 0 -3px 0 0;
 }
 
+/* line 1, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel {
+  background: #e8e8e8;
+  position: relative;
+  padding: 0 0 50px 0;
+  /*  tablet & mobile
+  **************************************************/
+  /*  mobile-only
+  **************************************************/
+}
+/* line 6, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel .subhead {
+  padding-right: 4.5%;
+  padding-left: 4.9%;
+  padding-top: 35px;
+}
+/* line 12, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel__item {
+  background: #fff;
+  margin: 0 20px 16px 20px;
+  min-height: 381px;
+  padding: 10px;
+  width: 810px;
+}
+/* line 19, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel__image {
+  float: left;
+  width: 35%;
+}
+/* line 23, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel__counter {
+  color: #197f95;
+  float: left;
+  font-size: 100px;
+  font-family: AvenirLT-Book, Arial, sans-serif;
+  line-height: 1em;
+  margin-top: 65px;
+  text-align: center;
+  width: 15%;
+}
+/* line 33, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel__mobileCounter {
+  color: #197f95;
+  display: none;
+  font-family: AvenirLT-Book, Arial, sans-serif;
+  font-weight: bold;
+}
+/* line 39, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel__meta {
+  float: left;
+  margin-top: 65px;
+  width: 45%;
+}
+/* line 44, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel__meta h3 {
+  font-size: 40px;
+  line-height: normal;
+  margin-bottom: 0;
+}
+/* line 49, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel__meta p {
+  color: #8b8b8b;
+  font-family: AvenirLT-Book, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.65em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+/* line 59, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel .slick-prev,
+.staticContent .imageToutCarousel .slick-next {
+  background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") no-repeat;
+  border: 0;
+  height: 54px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -99999px;
+  width: 55px;
+}
+/* line 70, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel .slick-prev {
+  background-position: 0 -1423px;
+  -ms-transform: translateX(-80px);
+      transform: translateX(-80px);
+}
+/* line 74, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel .slick-next {
+  background-position: 0 -1567px;
+  -ms-transform: translateX(30px);
+      transform: translateX(30px);
+}
+/* line 78, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel .slick-dots {
+  text-align: center;
+}
+/* line 81, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel .slick-dots li {
+  display: none;
+}
+/* line 84, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel .slick-dots li.slick-active {
+  display: inline-block;
+}
+/* line 88, sass/partials/modules/_static-image-tout-carousel.scss */
+.staticContent .imageToutCarousel .slick-dots li button,
+.staticContent .imageToutCarousel .slick-dots li span {
+  background: none;
+  border: 0;
+  color: #1f1646;
+  font-family: AvenirLT-Heavy, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 54px;
+}
+@media only screen and (max-width: 960px) {
+  /* line 105, sass/partials/modules/_static-image-tout-carousel.scss */
+  .staticContent .imageToutCarousel__meta h3 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  /* line 114, sass/partials/modules/_static-image-tout-carousel.scss */
+  .staticContent .imageToutCarousel__counter {
+    display: none;
+  }
+  /* line 117, sass/partials/modules/_static-image-tout-carousel.scss */
+  .staticContent .imageToutCarousel__image, .staticContent .imageToutCarousel__meta {
+    float: none;
+    width: 100%;
+  }
+}
+
 /* line 1, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout {
   max-width: 1180px;
@@ -8957,15 +9375,7 @@ p.subtext {
   /*  mobile-only
   **************************************************/
 }
-/* line 8, sass/partials/modules/_static-image-tout.scss */
-.staticContent .imageTout__image {
-  width: 33%;
-}
-/* line 11, sass/partials/modules/_static-image-tout.scss */
-.staticContent .imageTout__meta {
-  width: 51%;
-}
-/* line 14, sass/partials/modules/_static-image-tout.scss */
+/* line 12, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout__meta h3 {
   color: #8b8b8b;
   font-family: AvenirLT-Book, Arial, sans-serif;
@@ -8973,50 +9383,107 @@ p.subtext {
   line-height: 1.8em;
 }
 /* line 22, sass/partials/modules/_static-image-tout.scss */
+.staticContent .imageTout--imgRight .imageTout__image, .staticContent .imageTout--imgLeft .imageTout__image {
+  width: 33%;
+}
+/* line 25, sass/partials/modules/_static-image-tout.scss */
+.staticContent .imageTout--imgRight .imageTout__meta, .staticContent .imageTout--imgLeft .imageTout__meta {
+  width: 51%;
+}
+/* line 29, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgRight {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/right-slant-bg.png") no-repeat 56% 50px #fff;
 }
-/* line 25, sass/partials/modules/_static-image-tout.scss */
+/* line 32, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgRight .imageTout__image {
   float: right;
 }
-/* line 28, sass/partials/modules/_static-image-tout.scss */
+/* line 35, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgRight .imageTout__meta {
   float: left;
 }
-/* line 32, sass/partials/modules/_static-image-tout.scss */
+/* line 39, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgLeft {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/left-slant-bg.png") no-repeat 60% 100px #fff;
 }
-/* line 35, sass/partials/modules/_static-image-tout.scss */
+/* line 42, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgLeft .imageTout__image {
   float: left;
 }
-/* line 38, sass/partials/modules/_static-image-tout.scss */
+/* line 45, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgLeft .imageTout__meta {
   float: right;
 }
+/* line 58, sass/partials/modules/_static-image-tout.scss */
+.staticContent .imageTout--doubleText .imageTout__meta {
+  float: left;
+  margin-right: 2%;
+  padding: 36px 42px 50px;
+  width: 48%;
+}
+/* line 64, sass/partials/modules/_static-image-tout.scss */
+.staticContent .imageTout--doubleText .imageTout__meta h2 {
+  color: #1f1646;
+  font-size: 40px;
+  font-family: AvenirLT-Book, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 20px;
+}
+/* line 73, sass/partials/modules/_static-image-tout.scss */
+.staticContent .imageTout--doubleText .imageTout__meta:last-child {
+  margin-right: 0;
+}
+/* line 79, sass/partials/modules/_static-image-tout.scss */
+.staticContent .imageTout--tripleText .imageTout__meta {
+  float: left;
+  margin-right: 10%;
+  padding: 38px 0 58px;
+  width: 26.667%;
+}
+/* line 85, sass/partials/modules/_static-image-tout.scss */
+.staticContent .imageTout--tripleText .imageTout__meta h2 {
+  font-size: 28px;
+  line-height: normal;
+  margin: 0 0 12px;
+}
+/* line 91, sass/partials/modules/_static-image-tout.scss */
+.staticContent .imageTout--tripleText .imageTout__meta:last-child {
+  margin-right: 0;
+}
 @media only screen and (max-width: 960px) {
-  /* line 47, sass/partials/modules/_static-image-tout.scss */
+  /* line 101, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout__meta h2 {
     font-size: 40px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 56, sass/partials/modules/_static-image-tout.scss */
+  /* line 110, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout__meta {
     width: 60%;
   }
-  /* line 59, sass/partials/modules/_static-image-tout.scss */
+  /* line 113, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout__meta h2 {
     font-size: 35px;
   }
-  /* line 66, sass/partials/modules/_static-image-tout.scss */
+  /* line 120, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout--imgRight .imageTout__image,
   .staticContent .imageTout--imgRight .imageTout__meta, .staticContent .imageTout--imgLeft .imageTout__image,
   .staticContent .imageTout--imgLeft .imageTout__meta {
     float: none;
     width: 100%;
+  }
+  /* line 128, sass/partials/modules/_static-image-tout.scss */
+  .staticContent .imageTout--doubleText .imageTout__meta, .staticContent .imageTout--tripleText .imageTout__meta {
+    float: none;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  /* line 138, sass/partials/modules/_static-image-tout.scss */
+  .staticContent .imageTout--doubleText .imageTout__meta h2 {
+    font-size: 30px;
   }
 }
 
@@ -9127,6 +9594,61 @@ p.subtext {
   /* line 35, sass/partials/modules/_static-marquee-image.scss */
   .staticContent .marqueeImage__image {
     background: linear-gradient(to right, #4d196d 30%, #1f1747 100%);
+  }
+}
+
+/* line 1, sass/partials/modules/_static-search-for-jobs.scss */
+.staticContent .searchForJobs {
+  /*  tablet & mobile
+  **************************************************/
+  /*  mobile-only
+  **************************************************/
+}
+/* line 2, sass/partials/modules/_static-search-for-jobs.scss */
+.staticContent .searchForJobs h2 {
+  color: #850f88;
+  font-family: AvenirLT-Black, Arial, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  margin: 0;
+  text-transform: uppercase;
+}
+/* line 10, sass/partials/modules/_static-search-for-jobs.scss */
+.staticContent .searchForJobs header {
+  padding: 0 0 15px 0;
+}
+/* line 13, sass/partials/modules/_static-search-for-jobs.scss */
+.staticContent .searchForJobs header ul {
+  white-space: nowrap;
+}
+/* line 16, sass/partials/modules/_static-search-for-jobs.scss */
+.staticContent .searchForJobs header li {
+  display: inline-block;
+}
+/* line 19, sass/partials/modules/_static-search-for-jobs.scss */
+.staticContent .searchForJobs header li a {
+  font-family: AvenirLT-Black, Arial, sans-serif;
+  font-size: 10px;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+/* line 25, sass/partials/modules/_static-search-for-jobs.scss */
+.staticContent .searchForJobs header li a:after {
+  content: ' \00BB';
+}
+/* line 32, sass/partials/modules/_static-search-for-jobs.scss */
+.staticContent .searchForJobs img {
+  padding: 0 0 15px 0;
+}
+/* line 35, sass/partials/modules/_static-search-for-jobs.scss */
+.staticContent .searchForJobs p {
+  font-family: arial;
+  font-size: 12px;
+}
+@media only screen and (max-width: 720px) {
+  /* line 50, sass/partials/modules/_static-search-for-jobs.scss */
+  .staticContent .searchForJobs header ul {
+    white-space: normal;
   }
 }
 

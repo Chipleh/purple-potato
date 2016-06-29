@@ -9,7 +9,7 @@
 **************************************************/
 .pane-bundle-rotator-hero {
 	background-repeat: none;
-	background-size: 100% auto;
+	background-size: cover;
 	clear: both;
 	display: block;
 	margin-bottom: calc(#{$multiBit} * 2);
@@ -46,7 +46,7 @@
 
 		.hero-rotator-outer {
 			background-repeat: no-repeat !important;
-			background-size: 100% auto !important;
+			background-size: cover !important;
 
 			&:before {
 				content: "";
@@ -134,7 +134,7 @@
 				}
 			}
 		}
-	
+
 		.flex-control-nav {
 			bottom: calcLineHeight($multiBit , 3.9);
 			margin: 0;

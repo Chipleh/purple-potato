@@ -1,0 +1,41 @@
+.staticContent .careersSearch {
+    max-width: 420px;
+    width: 100%;
+
+    input {
+        background-color: #f0f0f0;
+        border-bottom: solid 1px #e8e8e8;
+        border-left: solid 1px #ababab;
+        border-right: solid 1px #e8e8e8;
+        border-top: solid 1px #ababab;
+        color: #787878;
+        font-family: AvenirLT-Medium, Arial, sans-serif;
+        font-size: 16px;
+        outline: none;
+        padding: 14px 15px 15px;
+        width: 100%;
+    }
+    button {
+        background-color: #1f1545;
+        background-image: linear-gradient(to left, #3f1d69 0%, #0d074d 100%);
+        border: 0;
+        float: right;
+        height: 50px;
+        margin: -1px;
+        position: relative;
+        text-indent: -9999px;
+        top: -50px;
+        width: 50px;
+
+        span {
+            background: url('https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png') 0 -1912px no-repeat;
+            display: block;
+            height: 15px;
+            margin: 0 auto;
+            opacity: 0.5;
+            position: relative;
+            top: -5px;
+            width: 15px;
+        }
+    }
+}

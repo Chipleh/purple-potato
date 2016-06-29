@@ -1,0 +1,55 @@
+.staticContent .searchForJobs {
+    h2 {
+        color: #850f88;
+        font-family: AvenirLT-Black, Arial, sans-serif;
+        font-size: 16px;
+        line-height: normal;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    header {
+        padding: 0 0 15px 0;
+
+        ul {
+            white-space: nowrap;
+        }
+        li {
+            display: inline-block;
+
+            a {
+                font-family: AvenirLT-Black, Arial, sans-serif;
+                font-size: 10px;
+                margin-right: 10px;
+                text-transform: uppercase;
+
+                &:after {
+                    content: ' \00BB';
+
+                }
+            }
+        }
+    }
+    img {
+        padding: 0 0 15px 0;
+    }
+    p {
+        font-family: arial;
+        font-size: 12px;
+    }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+        header {
+            ul {
+                white-space: normal;
+            }
+        }
+    }
+}
