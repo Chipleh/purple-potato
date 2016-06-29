@@ -9478,58 +9478,63 @@ p.subtext {
   padding-bottom: 0;
 }
 /* line 96, sass/partials/modules/_static-image-tout.scss */
+.staticContent .imageTout--tripleText .subhead {
+  padding-bottom: 30px;
+  padding-top: 50px;
+}
+/* line 101, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--tripleText .imageTout__meta {
   float: left;
   margin-right: 10%;
   padding: 38px 0 58px;
   width: 26.667%;
 }
-/* line 102, sass/partials/modules/_static-image-tout.scss */
+/* line 107, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--tripleText .imageTout__meta h2 {
   font-size: 28px;
   line-height: normal;
   margin: 0 0 12px;
 }
-/* line 107, sass/partials/modules/_static-image-tout.scss */
+/* line 112, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--tripleText .imageTout__meta p {
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.8em;
   margin-top: 10px;
 }
-/* line 113, sass/partials/modules/_static-image-tout.scss */
+/* line 118, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--tripleText .imageTout__meta a {
   color: #850f88;
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 16px;
 }
-/* line 119, sass/partials/modules/_static-image-tout.scss */
+/* line 124, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--tripleText .imageTout__meta:last-child {
   margin-right: 0;
 }
 @media only screen and (max-width: 960px) {
-  /* line 129, sass/partials/modules/_static-image-tout.scss */
+  /* line 134, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout__meta h2 {
     font-size: 40px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 138, sass/partials/modules/_static-image-tout.scss */
+  /* line 143, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout__meta {
     width: 60%;
   }
-  /* line 141, sass/partials/modules/_static-image-tout.scss */
+  /* line 146, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout__meta h2 {
     font-size: 35px;
   }
-  /* line 148, sass/partials/modules/_static-image-tout.scss */
+  /* line 153, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout--imgRight .imageTout__image,
   .staticContent .imageTout--imgRight .imageTout__meta, .staticContent .imageTout--imgLeft .imageTout__image,
   .staticContent .imageTout--imgLeft .imageTout__meta {
     float: none;
     width: 100%;
   }
-  /* line 156, sass/partials/modules/_static-image-tout.scss */
+  /* line 161, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout--doubleText .imageTout__meta, .staticContent .imageTout--tripleText .imageTout__meta {
     float: none;
     padding-bottom: 0;
@@ -9537,7 +9542,7 @@ p.subtext {
     padding-right: 0;
     width: 100%;
   }
-  /* line 166, sass/partials/modules/_static-image-tout.scss */
+  /* line 171, sass/partials/modules/_static-image-tout.scss */
   .staticContent .imageTout--doubleText .imageTout__meta h2 {
     font-size: 30px;
   }

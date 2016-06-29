@@ -93,6 +93,11 @@
     &--tripleText {
         padding-bottom: 0;
 
+        .subhead {
+            padding-bottom: 30px;
+            padding-top: 50px;
+        }
+
         .#{$imageTout}__meta {
             float: left;
             margin-right: 10%;
