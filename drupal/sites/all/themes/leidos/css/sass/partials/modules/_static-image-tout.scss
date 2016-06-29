@@ -91,6 +91,8 @@
         }
     }
     &--tripleText {
+        padding-bottom: 0;
+
         .#{$imageTout}__meta {
             float: left;
             margin-right: 10%;
