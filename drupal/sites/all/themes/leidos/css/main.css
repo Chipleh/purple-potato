@@ -8852,10 +8852,15 @@ p.subtext {
 .staticContent .forwardThinkers p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
+  line-height: 1.8em;
   margin: 26px 0 16px 0;
 }
+/* line 21, sass/partials/modules/_static-forward-thinkers.scss */
+.staticContent .forwardThinkers p strong {
+  color: #1f1646;
+}
 @media only screen and (max-width: 720px) {
-  /* line 31, sass/partials/modules/_static-forward-thinkers.scss */
+  /* line 36, sass/partials/modules/_static-forward-thinkers.scss */
   .staticContent .forwardThinkers header h2 {
     font-size: 40px;
     line-height: normal;
