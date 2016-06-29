@@ -69,6 +69,21 @@
                 line-height: normal;
                 margin: 0 0 20px;
             }
+            p {
+                font-family: AvenirLT-Book, Arial, sans-serif;
+                font-size: 15px;
+                line-height: 1.8em;
+                margin-top: 10px;
+            }
+            a {
+                color: #850f88;
+                font-family: AvenirLT-Book, Arial, sans-serif;
+                font-size: 16px;
+
+                &:hover {
+                    color: #1f1646;
+                }
+            }
 
             &:last-child {
                 margin-right: 0;
@@ -94,13 +109,9 @@
                 margin-top: 10px;
             }
             a {
+                color: #850f88;
                 font-family: AvenirLT-Book, Arial, sans-serif;
                 font-size: 16px;
-                color: #850f88;
-
-                &:hover {
-                    color: #1f1646;
-                }
             }
 
             &:last-child {
