@@ -10,7 +10,7 @@
 .pane-bundle-multi-column {
     // margin-bottom: calc(#{$multiBit} * 2);
     background-repeat: none;
-    background-size: 100% auto;
+    background-size: cover;
     clear: both;
     display: block;
     overflow: hidden;
@@ -205,7 +205,7 @@
 		.ds-1col {
 			.column-0 {
 				background-repeat: no-repeat !important;
-				background-size: 100% auto !important;
+				background-size: cover !important;
 				clear: both;
 				float: none;
 				width: 100%;
@@ -313,7 +313,7 @@
 			.column-0,
 			.column-1 {
 				background-repeat: no-repeat !important;
-				background-size: 100% auto !important;
+				background-size: cover !important;
 
 				&:before {
 					padding-top: 57.858%;
@@ -503,7 +503,7 @@
 			.column-2,
 			.column-3 {
 				background-repeat: no-repeat !important;
-				background-size: 100% auto !important;
+				background-size: cover !important;
 
 				&:before {
 					padding-top: 115.717%;
