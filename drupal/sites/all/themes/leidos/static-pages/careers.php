@@ -192,7 +192,7 @@
         </div>
     </section>
 
-    <section class="fullWidthText fullWidthText--fourBlocks" id="faqs">
+    <section class="fullWidthText fullWidthText--fourBlocks fullWidthText--wideHeadings" id="faqs">
         <heading class="subhead">
             <h2 class="subhead__head subhead__head--withLink">Careers FAQs</h2>
             <a href="/careers/faqs/" class="subhead__link">View All&nbsp;»</a>

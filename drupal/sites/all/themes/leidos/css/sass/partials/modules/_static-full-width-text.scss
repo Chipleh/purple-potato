@@ -62,6 +62,13 @@
             }
         }
     }
+    &--wideHeadings {
+        padding-top: 45px;
+
+        .subhead {
+            max-width: none;
+        }
+    }
 
     /*  tablet & mobile
     **************************************************/

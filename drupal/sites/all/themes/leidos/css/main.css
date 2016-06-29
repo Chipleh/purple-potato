@@ -8936,24 +8936,32 @@ p.subtext {
   font-weight: bold;
   margin: 0 0 20px;
 }
+/* line 65, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText--wideHeadings {
+  padding-top: 45px;
+}
+/* line 68, sass/partials/modules/_static-full-width-text.scss */
+.staticContent .fullWidthText--wideHeadings .subhead {
+  max-width: none;
+}
 @media only screen and (max-width: 960px) {
-  /* line 70, sass/partials/modules/_static-full-width-text.scss */
+  /* line 77, sass/partials/modules/_static-full-width-text.scss */
   .staticContent .fullWidthText--fourBlocks li {
     margin: 0 0 20px 0;
     width: 100%;
   }
-  /* line 74, sass/partials/modules/_static-full-width-text.scss */
+  /* line 81, sass/partials/modules/_static-full-width-text.scss */
   .staticContent .fullWidthText--fourBlocks li + li {
     margin-left: 0;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 84, sass/partials/modules/_static-full-width-text.scss */
+  /* line 91, sass/partials/modules/_static-full-width-text.scss */
   .staticContent .fullWidthText li {
     margin: 0 0 20px 0;
     width: 100%;
   }
-  /* line 88, sass/partials/modules/_static-full-width-text.scss */
+  /* line 95, sass/partials/modules/_static-full-width-text.scss */
   .staticContent .fullWidthText li + li {
     margin-left: 0;
   }
