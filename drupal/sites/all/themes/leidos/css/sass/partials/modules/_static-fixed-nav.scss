@@ -37,6 +37,13 @@
         iframe {
             margin: 20px 0;
         }
+        span {
+            float: left;
+
+            + span {
+                margin-left: 10px;
+            }
+        }
     }
     .sticky-wrapper {
         @include clearfix;
@@ -49,8 +56,14 @@
     **************************************************/
     @media only screen and (max-width: 960px) {
         .fixedNav {
+            li {
+                + li {
+                    margin-left: 1.2em;
+                }
+            }
             a {
                 font-size: 16px;
+                padding: 1.25em 0;
             }
         }
 

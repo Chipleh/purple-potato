@@ -69,11 +69,14 @@
     }
     .slick-prev{
         background-position: 0 -1423px;
-        transform: translateX(-80px);
+        color: orange;
+        -webkit-transform: translateX(-80px);
+                transform: translateX(-80px);
     }
     .slick-next {
         background-position: 0 -1567px;
-        transform: translateX(30px);
+        -webkit-transform: translateX(30px);
+                transform: translateX(30px);
     }
     .slick-dots {
         text-align: center;

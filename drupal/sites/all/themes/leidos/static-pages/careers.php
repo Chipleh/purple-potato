@@ -24,11 +24,11 @@
                         </div>
                     </form>
                 </div>
-                <p>Already submitted a resume? <a href="">Access your existing profile&nbsp;»</a></p>
+                <p>Already submitted a resume?<br><a href="">Access your existing profile&nbsp;»</a></p>
 
-                <p>Are you a Leidos employee? <a href="">Access your employee profile here&nbsp;»</a></p>
+                <p>Are you a Leidos employee?<br><a href="">Access your employee profile here&nbsp;»</a></p>
 
-                <p><strong>Having Technical Issues Applying to a Position?</strong> If you are having technical issues applying to a position on leidos.com/careers, we’d be happy to assist. <a href="">Request help now&nbsp;»</a></p>
+                <p><strong>Having Technical Issues Applying to a Position?</strong><br>If you are having technical issues applying to a position on leidos.com/careers, we’d be happy to assist.<br><a href="">Request help now&nbsp;»</a></p>
 
                 <p><strong>Accommodation Request</strong> - If you have a disability and need help using leidos.com/careers, we'd be happy to lend a hand. <a href="">Request help now&nbsp;»</a></p>
 
