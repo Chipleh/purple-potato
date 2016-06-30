@@ -438,7 +438,22 @@
         var jsp;
 
         if ($('.staticContent .fixedNav').length) {
+            var $nav = $('.staticContent .fixedNav'),
+                $navLinks = $nav.children('ul').children('li').children('a'),
+                navHeight = $nav.height();
+
             $('.staticContent .fixedNav').sticky({ topSpacing: 0 });
+
+            $navLinks.each(function () {
+                if($(this).attr('href').indexOf('#') === 0) {
+                    $(this).on('click', function (e) {
+                        e.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: $($(this).attr('href')).offset().top - navHeight
+                        }, 300);
+                    });
+                }
+            });
         }
 
         if ($('.staticContent .history').length) {
@@ -497,7 +512,6 @@
           var $slickContainer = $('.imageToutCarousel__items').on('init reInit', function (event, slick, currentSlide, nextSlide) {
             $('.slick-dots li').append('<span>/' + slick.slideCount + '</span>');
           });
-          console.log($slickContainer);
           $slickContainer.slick({
             centerMode: true,
             centerPadding: '20%',
