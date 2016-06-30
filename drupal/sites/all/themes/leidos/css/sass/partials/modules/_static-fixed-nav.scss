@@ -31,7 +31,11 @@
         }
         img {
             display: block;
-            margin: 0;
+            margin: 15px 0;
+            max-height: 30px;
+        }
+        iframe {
+            margin: 20px 0;
         }
     }
     .sticky-wrapper {
