@@ -9365,27 +9365,24 @@ p.subtext {
   background: none;
   border: 0;
   color: #1f1646;
-  font-family: AvenirLT-Heavy, Arial, sans-serif;
+  font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
   line-height: 54px;
-}
-/* line 98, sass/partials/modules/_static-image-tout-carousel.scss */
-.staticContent .imageToutCarousel .slick-dots li button {
-  padding: 0 0.5em 0 0;
+  padding: 0;
 }
 @media only screen and (max-width: 960px) {
-  /* line 108, sass/partials/modules/_static-image-tout-carousel.scss */
+  /* line 106, sass/partials/modules/_static-image-tout-carousel.scss */
   .staticContent .imageToutCarousel__meta h3 {
     font-size: 30px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 117, sass/partials/modules/_static-image-tout-carousel.scss */
+  /* line 115, sass/partials/modules/_static-image-tout-carousel.scss */
   .staticContent .imageToutCarousel__counter {
     display: none;
   }
-  /* line 120, sass/partials/modules/_static-image-tout-carousel.scss */
+  /* line 118, sass/partials/modules/_static-image-tout-carousel.scss */
   .staticContent .imageToutCarousel__image, .staticContent .imageToutCarousel__meta {
     float: none;
     width: 100%;

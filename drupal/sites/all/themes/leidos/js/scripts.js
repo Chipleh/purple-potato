@@ -487,7 +487,7 @@
   };
 })(jQuery);
 
-//  Static pages - Marquee topper positioning
+//  Static pages - Carousel
 //  Monte Greene
 //  6/22/16
 (function($) {
@@ -495,7 +495,7 @@
     attach: function(context, settings) {
       if ($('.imageToutCarousel__items').length) {
           var $slickContainer = $('.imageToutCarousel__items').on('init reInit', function (event, slick, currentSlide, nextSlide) {
-            $('.slick-dots li').append('<span>/ ' + slick.slideCount + '</span>');
+            $('.slick-dots li').append('<span>/' + slick.slideCount + '</span>');
           });
           console.log($slickContainer);
           $slickContainer.slick({
