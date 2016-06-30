@@ -8807,7 +8807,15 @@ p.subtext {
 .staticContent .fixedNav iframe {
   margin: 20px 0;
 }
-/* line 41, sass/partials/modules/_static-fixed-nav.scss */
+/* line 40, sass/partials/modules/_static-fixed-nav.scss */
+.staticContent .fixedNav span {
+  float: left;
+}
+/* line 43, sass/partials/modules/_static-fixed-nav.scss */
+.staticContent .fixedNav span + span {
+  margin-left: 10px;
+}
+/* line 48, sass/partials/modules/_static-fixed-nav.scss */
 .staticContent .sticky-wrapper {
   margin-bottom: 110px;
   position: relative;
@@ -8820,28 +8828,28 @@ p.subtext {
   clear: both;
 }
 @media only screen and (max-width: 960px) {
-  /* line 53, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 60, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav li + li {
     margin-left: 1.2em;
   }
-  /* line 57, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 64, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav a {
     font-size: 16px;
     padding: 1.25em 0;
   }
-  /* line 63, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 70, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .sticky-wrapper {
     margin-bottom: 100px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 71, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 78, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav {
     position: relative !important;
   }
 }
 @media only screen and (max-height: 350px) {
-  /* line 76, sass/partials/modules/_static-fixed-nav.scss */
+  /* line 83, sass/partials/modules/_static-fixed-nav.scss */
   .staticContent .fixedNav {
     position: relative !important;
   }

@@ -37,6 +37,13 @@
         iframe {
             margin: 20px 0;
         }
+        span {
+            float: left;
+
+            + span {
+                margin-left: 10px;
+            }
+        }
     }
     .sticky-wrapper {
         @include clearfix;
