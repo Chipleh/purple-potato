@@ -8426,6 +8426,11 @@ p.subtext {
   width: 100%;
 }
 /* line 18, sass/partials/modules/_static-careers-search.scss */
+.staticContent .careersSearch input:focus {
+  border: solid 1px #850f88;
+  outline: none;
+}
+/* line 23, sass/partials/modules/_static-careers-search.scss */
 .staticContent .careersSearch button {
   background-color: #1f1545;
   background-image: linear-gradient(to left, #3f1d69 0%, #0d074d 100%);
@@ -8438,7 +8443,7 @@ p.subtext {
   top: -50px;
   width: 50px;
 }
-/* line 30, sass/partials/modules/_static-careers-search.scss */
+/* line 35, sass/partials/modules/_static-careers-search.scss */
 .staticContent .careersSearch button span {
   background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -1912px no-repeat;
   display: block;
