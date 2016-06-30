@@ -1017,6 +1017,7 @@ p.subtext {
   -ms-transform: rotate(180deg);
       transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
+  transition: -webkit-transform .25s ease 0s;
   transition: transform .25s ease 0s;
   width: 38px;
   z-index: 1;
@@ -1291,6 +1292,7 @@ p.subtext {
     -ms-transform: rotate(90deg);
         transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
+    transition: -webkit-transform .25s ease 0s;
     transition: transform .25s ease 0s;
     width: 38px;
     z-index: -1;
@@ -2187,6 +2189,7 @@ p.subtext {
     -ms-transform: rotate(90deg);
         transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
+    transition: -webkit-transform .25s ease 0s;
     transition: transform .25s ease 0s;
     width: 38px;
     z-index: -1;
@@ -5096,8 +5099,9 @@ p.subtext {
   min-width: 100%;
   position: absolute;
   top: 50%;
-  -ms-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   width: auto;
 }
 /* line 141, sass/partials/modules/_flex-featured-video.scss */
@@ -6732,8 +6736,9 @@ p.subtext {
   font-size: 50px;
   height: 100%;
   text-align: center;
-  -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   width: 100%;
 }
 /* line 74, sass/partials/modules/_flex-video-settings.scss */
@@ -8659,6 +8664,7 @@ p.subtext {
 /* line 211, sass/partials/modules/_static-common.scss */
 .staticContent .slick-slider .slick-track,
 .staticContent .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
@@ -9343,28 +9349,31 @@ p.subtext {
 /* line 70, sass/partials/modules/_static-image-tout-carousel.scss */
 .staticContent .imageToutCarousel .slick-prev {
   background-position: 0 -1423px;
+  color: orange;
+  -webkit-transform: translateX(-80px);
   -ms-transform: translateX(-80px);
       transform: translateX(-80px);
 }
-/* line 74, sass/partials/modules/_static-image-tout-carousel.scss */
+/* line 76, sass/partials/modules/_static-image-tout-carousel.scss */
 .staticContent .imageToutCarousel .slick-next {
   background-position: 0 -1567px;
+  -webkit-transform: translateX(30px);
   -ms-transform: translateX(30px);
       transform: translateX(30px);
 }
-/* line 78, sass/partials/modules/_static-image-tout-carousel.scss */
+/* line 81, sass/partials/modules/_static-image-tout-carousel.scss */
 .staticContent .imageToutCarousel .slick-dots {
   text-align: center;
 }
-/* line 81, sass/partials/modules/_static-image-tout-carousel.scss */
+/* line 84, sass/partials/modules/_static-image-tout-carousel.scss */
 .staticContent .imageToutCarousel .slick-dots li {
   display: none;
 }
-/* line 84, sass/partials/modules/_static-image-tout-carousel.scss */
+/* line 87, sass/partials/modules/_static-image-tout-carousel.scss */
 .staticContent .imageToutCarousel .slick-dots li.slick-active {
   display: inline-block;
 }
-/* line 88, sass/partials/modules/_static-image-tout-carousel.scss */
+/* line 91, sass/partials/modules/_static-image-tout-carousel.scss */
 .staticContent .imageToutCarousel .slick-dots li button,
 .staticContent .imageToutCarousel .slick-dots li span {
   background: none;
@@ -9377,17 +9386,17 @@ p.subtext {
   padding: 0;
 }
 @media only screen and (max-width: 960px) {
-  /* line 106, sass/partials/modules/_static-image-tout-carousel.scss */
+  /* line 109, sass/partials/modules/_static-image-tout-carousel.scss */
   .staticContent .imageToutCarousel__meta h3 {
     font-size: 30px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 115, sass/partials/modules/_static-image-tout-carousel.scss */
+  /* line 118, sass/partials/modules/_static-image-tout-carousel.scss */
   .staticContent .imageToutCarousel__counter {
     display: none;
   }
-  /* line 118, sass/partials/modules/_static-image-tout-carousel.scss */
+  /* line 121, sass/partials/modules/_static-image-tout-carousel.scss */
   .staticContent .imageToutCarousel__image, .staticContent .imageToutCarousel__meta {
     float: none;
     width: 100%;
@@ -9634,6 +9643,7 @@ p.subtext {
 .staticContent .marqueeImage {
   overflow: visible;
   position: relative;
+  transition: padding 0.3s, -webkit-transform 0.3s;
   transition: padding 0.3s, transform 0.3s;
   z-index: -1;
 }
