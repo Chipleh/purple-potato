@@ -431,6 +431,7 @@ hr {
 /* line 30, sass/partials/_footer.scss */
 #footer-wrapper .footer-logo .copyright {
   display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
   height: 30px;
   line-height: 47px;
   margin: 0;
@@ -438,31 +439,31 @@ hr {
   padding: 0;
   width: 100px;
 }
-/* line 41, sass/partials/_footer.scss */
+/* line 42, sass/partials/_footer.scss */
 #footer-wrapper .menu-block-1 {
   float: left;
   clear: right;
 }
-/* line 46, sass/partials/_footer.scss */
+/* line 47, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn,
 #footer-wrapper .region-footer-secondcolumn {
   display: block;
   padding: 0;
   width: calc(50% - 20px);
 }
-/* line 52, sass/partials/_footer.scss */
+/* line 53, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block {
   margin: 0;
   overflow: hidden;
   padding: 0;
 }
-/* line 57, sass/partials/_footer.scss */
+/* line 58, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block.block,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block.block {
   border: none;
 }
-/* line 61, sass/partials/_footer.scss */
+/* line 62, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block h2,
 #footer-wrapper .region-footer-firstcolumn .block-menu-block span.additional-control,
 #footer-wrapper .region-footer-firstcolumn .block-menu-block span.additional-info,
@@ -471,13 +472,13 @@ hr {
 #footer-wrapper .region-footer-secondcolumn .block-menu-block span.additional-info {
   display: none;
 }
-/* line 68, sass/partials/_footer.scss */
+/* line 69, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block ul,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block ul {
   margin: 19px 0px 11px 0px;
   padding: 0;
 }
-/* line 72, sass/partials/_footer.scss */
+/* line 73, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block ul li,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block ul li {
   border-left: 1px solid #D0D0D0;
@@ -491,12 +492,12 @@ hr {
   position: relative;
   text-transform: uppercase;
 }
-/* line 84, sass/partials/_footer.scss */
+/* line 85, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block ul li:first-child,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block ul li:first-child {
   border-left: none;
 }
-/* line 88, sass/partials/_footer.scss */
+/* line 89, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block ul li a,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block ul li a {
   border: none;
@@ -508,42 +509,42 @@ hr {
   text-indent: 0;
   text-transform: uppercase;
 }
-/* line 98, sass/partials/_footer.scss */
+/* line 99, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block ul li a:hover,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block ul li a:hover {
   color: #1F1646;
 }
-/* line 106, sass/partials/_footer.scss */
+/* line 107, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block .menu-name-menu-footer---social-media li,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block .menu-name-menu-footer---social-media li {
   border: none;
 }
-/* line 110, sass/partials/_footer.scss */
+/* line 111, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(1) a,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(1) a {
   background: transparent url("../images/footer-facebook.png") no-repeat scroll center top;
 }
-/* line 115, sass/partials/_footer.scss */
+/* line 116, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(2) a,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(2) a {
   background: transparent url("../images/footer-linkedin.png") no-repeat scroll center top;
 }
-/* line 120, sass/partials/_footer.scss */
+/* line 121, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(3) a,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(3) a {
   background: transparent url("../images/footer-twitter.png") no-repeat scroll center top;
 }
-/* line 125, sass/partials/_footer.scss */
+/* line 126, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(4) a,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(4) a {
   background: transparent url("../images/footer-youtube.png") no-repeat scroll center top;
 }
-/* line 130, sass/partials/_footer.scss */
+/* line 131, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(5) a,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block .menu-name-menu-footer---social-media li:nth-child(5) a {
   background: transparent url("../images/footer-googleplus.png") no-repeat scroll center top;
 }
-/* line 135, sass/partials/_footer.scss */
+/* line 136, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block .menu-name-menu-footer---social-media li a,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block .menu-name-menu-footer---social-media li a {
   color: transparent;
@@ -554,25 +555,25 @@ hr {
   transition: none;
   width: 21px;
 }
-/* line 144, sass/partials/_footer.scss */
+/* line 145, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .block-menu-block .menu-name-menu-footer---social-media li a:hover,
 #footer-wrapper .region-footer-secondcolumn .block-menu-block .menu-name-menu-footer---social-media li a:hover {
   background-position: center bottom;
 }
-/* line 153, sass/partials/_footer.scss */
+/* line 154, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn .menu-block-4 ul,
 #footer-wrapper .region-footer-secondcolumn .menu-block-4 ul {
   margin-top: 14px;
 }
-/* line 159, sass/partials/_footer.scss */
+/* line 160, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-firstcolumn {
   padding-left: 20px;
 }
-/* line 163, sass/partials/_footer.scss */
+/* line 164, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-secondcolumn {
   padding-right: 20px;
 }
-/* line 166, sass/partials/_footer.scss */
+/* line 167, sass/partials/_footer.scss */
 #footer-wrapper .region-footer-secondcolumn ul {
   float: right;
 }
@@ -581,46 +582,46 @@ hr {
 **************************************************/
 @media only screen and (max-width: 960px) {
   /* footer wrapper */
-  /* line 177, sass/partials/_footer.scss */
+  /* line 178, sass/partials/_footer.scss */
   #footer-wrapper {
     background: #fff;
     border-top: 1px solid #D0D0D0;
     margin: 0;
     padding: 20px 0;
   }
-  /* line 183, sass/partials/_footer.scss */
+  /* line 184, sass/partials/_footer.scss */
   #footer-wrapper .region-footer-firstcolumn,
   #footer-wrapper .region-footer-secondcolumn {
     float: none;
     padding: 0 20px;
     width: calc(100% - 40px);
   }
-  /* line 190, sass/partials/_footer.scss */
+  /* line 191, sass/partials/_footer.scss */
   #footer-wrapper .region-footer-firstcolumn #block-menu-block-1 .footer-logo,
   #footer-wrapper .region-footer-secondcolumn #block-menu-block-1 .footer-logo {
     float: none;
     margin: 0 auto;
     width: 236px;
   }
-  /* line 197, sass/partials/_footer.scss */
+  /* line 198, sass/partials/_footer.scss */
   #footer-wrapper .region-footer-firstcolumn #block-menu-block-1 .menu-block-1 ul,
   #footer-wrapper .region-footer-secondcolumn #block-menu-block-1 .menu-block-1 ul {
     display: none;
   }
-  /* line 203, sass/partials/_footer.scss */
+  /* line 204, sass/partials/_footer.scss */
   #footer-wrapper .region-footer-firstcolumn #block-menu-block-2,
   #footer-wrapper .region-footer-firstcolumn #block-menu-block-3,
   #footer-wrapper .region-footer-secondcolumn #block-menu-block-2,
   #footer-wrapper .region-footer-secondcolumn #block-menu-block-3 {
     display: none;
   }
-  /* line 209, sass/partials/_footer.scss */
+  /* line 210, sass/partials/_footer.scss */
   #footer-wrapper .region-footer-firstcolumn #block-menu-block-4 ul,
   #footer-wrapper .region-footer-secondcolumn #block-menu-block-4 ul {
     width: 175px;
     margin: 15px auto;
   }
-  /* line 217, sass/partials/_footer.scss */
+  /* line 218, sass/partials/_footer.scss */
   #footer-wrapper .region-footer-secondcolumn ul {
     float: none;
   }
