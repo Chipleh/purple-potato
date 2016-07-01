@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     // Auto Prefixer - https://github.com/gruntjs/
     autoprefixer: {
         options: {
-            browsers: ['last 2 version', 'ie 8', 'ie 9'],
+            browsers: ['last 2 version', 'ie 8', 'ie 9', 'ios >= 8'],
             map: true
         },
         all: {

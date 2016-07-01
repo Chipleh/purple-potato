@@ -438,7 +438,27 @@
         var jsp;
 
         if ($('.staticContent .fixedNav').length) {
+            var $nav = $('.staticContent .fixedNav'),
+                $navLinks = $nav.children('ul').children('li').children('a'),
+                navHeight = $nav.height(),
+                offset = navHeight;
+
             $('.staticContent .fixedNav').sticky({ topSpacing: 0 });
+
+            if (window.innerWidth <= 720) {
+                offset = 0;
+            }
+
+            $navLinks.each(function () {
+                if($(this).attr('href').indexOf('#') === 0) {
+                    $(this).on('click', function (e) {
+                        e.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: $($(this).attr('href')).offset().top - offset
+                        }, 300);
+                    });
+                }
+            });
         }
 
         if ($('.staticContent .history').length) {
@@ -487,7 +507,7 @@
   };
 })(jQuery);
 
-//  Static pages - Marquee topper positioning
+//  Static pages - Carousel
 //  Monte Greene
 //  6/22/16
 (function($) {
@@ -495,9 +515,8 @@
     attach: function(context, settings) {
       if ($('.imageToutCarousel__items').length) {
           var $slickContainer = $('.imageToutCarousel__items').on('init reInit', function (event, slick, currentSlide, nextSlide) {
-            $('.slick-dots li').append('<span>/ ' + slick.slideCount + '</span>');
+            $('.slick-dots li').append('<span>/' + slick.slideCount + '</span>');
           });
-          console.log($slickContainer);
           $slickContainer.slick({
             centerMode: true,
             centerPadding: '20%',

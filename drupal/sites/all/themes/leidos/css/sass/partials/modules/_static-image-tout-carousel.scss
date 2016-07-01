@@ -69,11 +69,14 @@
     }
     .slick-prev{
         background-position: 0 -1423px;
-        transform: translateX(-80px);
+        color: orange;
+        -webkit-transform: translateX(-80px);
+                transform: translateX(-80px);
     }
     .slick-next {
         background-position: 0 -1567px;
-        transform: translateX(30px);
+        -webkit-transform: translateX(30px);
+                transform: translateX(30px);
     }
     .slick-dots {
         text-align: center;
@@ -90,10 +93,11 @@
                 background: none;
                 border: 0;
                 color: #1f1646;
-                font-family: AvenirLT-Heavy, Arial, sans-serif;
+                font-family: AvenirLT-Book, Arial, sans-serif;
                 font-size: 16px;
                 font-weight: bold;
                 line-height: 54px;
+                padding: 0;
             }
         }
     }
