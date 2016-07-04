@@ -1,0 +1,49 @@
+.staticContent .news {
+    $news: 'news';
+    margin: 0 auto;
+    max-width: 1180px;
+
+    .subhead {
+
+    }
+
+    &__articles {
+        padding: 0 7% 0 7%;
+
+        > .cta {
+            display: none;
+        }
+    }
+
+    &__article {
+        background: #e8e8e8;
+        float: left;
+        width: 48.5%;
+
+        + .#{$news}__article {
+            float: right;
+            margin: 0 0 20px;
+        }
+
+        p {
+            padding: 0 30px;
+        }
+    }
+    &__header {
+        padding: 25px 30px 0;
+
+        time {
+            color: #867429;
+            font-family: AvenirLT-Black, Arial, sans-serif;
+            font-size: 12px;
+            margin: 0 -20px;
+            text-transform: uppercase;
+        }
+    }
+    &__footer {
+        border-top: solid 1px #d0d0d0;
+        font-size: 12px;
+        margin-top: 26px;
+        padding: 13px 30px;
+    }
+}

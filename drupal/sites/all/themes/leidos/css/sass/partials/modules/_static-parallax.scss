@@ -1,0 +1,13 @@
+body.hasParallax {
+    #page-wrapper,
+    #page,
+    &.node-type-flexible-template #main-wrapper,
+    &.node-type-flexible-template #main,
+    &.node-type-flexible-template #content {
+        background: transparent !important;
+    }
+
+    .parallax-window {
+        height: 550px;
+    }
+}
