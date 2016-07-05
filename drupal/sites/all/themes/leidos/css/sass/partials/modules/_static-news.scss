@@ -25,6 +25,10 @@
             margin: 0 0 20px;
         }
 
+        img {
+            height: auto;
+            width: 100%;
+        }
         p {
             padding: 0 30px;
         }
@@ -45,5 +49,38 @@
         font-size: 12px;
         margin-top: 26px;
         padding: 13px 30px;
+    }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        padding-bottom: 40px;
+
+        .subhead {
+            padding: 0 7% 0 7%;
+        }
+        &__article {
+            float: none;
+            margin-bottom: 20px;
+            width: 100%;
+
+            + .#{$news}__article {
+                float: none;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+        &__article {
+            h3 {
+                font-size: 20px;
+            }
+        }
     }
 }

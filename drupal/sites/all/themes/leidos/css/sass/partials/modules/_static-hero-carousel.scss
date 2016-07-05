@@ -1,68 +1,144 @@
-.staticContent {
-    .heroCarousel {
-        position: relative;
+.staticContent .heroCarousel {
+    $heroCarousel: 'heroCarousel';
 
-        .slick-prev,
-        .slick-next {
-            border: 0;
-            bottom: 35px;
-            cursor: pointer;
-            height: 18px;
-            position: absolute;
-            text-indent: -9999px;
-            width: 11px;
-            z-index: 5;
-        }
-        .slick-prev {
-            background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left.png);
-            left: 25%;
+    position: relative;
 
-            &:hover {
-                background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left-hover.png);
+    h1 {
+        font-size: 60px;
+    }
+    p {
+        font-size: 18px;
+    }
+
+    &__item {
+        @include aspect-ratio(1918, 770);
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    &__item {
+        &--v1 {
+            .#{$heroCarousel}__inner {
+                // padding: 30% 25% 0 0;
+            }
+
+            h1 {
+                color: #fff;
+
+                strong {
+                    color: #f8b43a;
+                }
             }
         }
-        .slick-next {
-            background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right.png);
-            right: 25%;
+        &--v2 {
 
-            &:hover {
-                background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right-hover.png);
-            }
         }
-        .slick-dots {
-            bottom: 35px;
-            left: 0;
-            position: absolute;
-            right: 0;
-            text-align: center;
+        &--v3 {
 
-            li {
-                display: inline-block;
+        }
+        &--v4 {
 
+        }
+        &--v5 {
+
+        }
+        &--v6 {
+
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        border: 0;
+        bottom: 35px;
+        cursor: pointer;
+        height: 18px;
+        position: absolute;
+        text-indent: -9999px;
+        width: 11px;
+        z-index: 5;
+    }
+    .slick-prev {
+        background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left.png);
+        left: 25%;
+
+        &:hover {
+            background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left-hover.png);
+        }
+    }
+    .slick-next {
+        background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right.png);
+        right: 25%;
+
+        &:hover {
+            background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right-hover.png);
+        }
+    }
+    .slick-dots {
+        bottom: 35px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+
+            button {
+                background: #fff;
+                border: 0;
+                border-radius: 50%;
+                cursor: pointer;
+                height: 15px;
+                text-indent: -9999px;
+                width: 15px;
+
+                &:hover {
+                    background: #bebfbd;
+                }
+            }
+
+            &.slick-active {
                 button {
-                    background: #fff;
-                    border: 0;
-                    border-radius: 50%;
-                    cursor: pointer;
-                    height: 15px;
-                    text-indent: -9999px;
-                    width: 15px;
-
-                    &:hover {
-                        background: #bebfbd;
-                    }
-                }
-
-                &.slick-active {
-                    button {
-                        background: #bebfbd;
-                    }
-                }
-
-                + li {
-                    margin-left: 15px;
+                    background: #bebfbd;
                 }
             }
+
+            + li {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        text-align: center;
+
+        &__item {
+            @include aspect-ratio(1500, 1780);
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+        &__item {
+            @include aspect-ratio(1500, 1780);
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 16px;
         }
     }
 }

@@ -76,4 +76,53 @@
             line-height: 1.6em;
         }
     }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        background: #fff;
+        padding-bottom: 60px;
+        padding-top: 60px;
+
+        &__about,
+        &__subsections {
+            display: block;
+            width: 100%;
+        }
+        &__subsections {
+            margin-left: 0;
+        }
+        &__inner {
+            height: auto;
+
+            &:before {
+                content: initial;
+            }
+        }
+        &__about {
+            padding-bottom: 40px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+        &__statistics {
+            padding-bottom: 40px;
+            padding-left: 0;
+
+            p {
+                font-size: 80px;
+            }
+        }
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+        &__about {
+            h2 {
+                font-size: 40px;
+            }
+        }
+    }
 }

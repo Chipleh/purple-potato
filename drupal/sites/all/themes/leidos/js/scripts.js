@@ -503,6 +503,16 @@
 
             adjustMarquee();
         }
+
+        if ($('.nextSection').length) {
+            $('.nextSection').on('click', function () {
+                var $next = $(this).next();
+
+                $('html, body').animate({
+                    scrollTop: $next.offset().top
+                }, 1000);
+            });
+        }
     }
   };
 })(jQuery);
@@ -563,11 +573,20 @@
     attach: function(context, settings) {
         if ($('.heroCarousel').length) {
             var $slickContainer = $('.heroCarousel').slick({
+                adaptiveHeight: true,
                 autoplay: true,
                 autoplaySpeed: 4000,
                 dots: true,
                 pauseOnFocus: true,
-                slidesToShow: 1
+                slidesToShow: 1,
+                responsive: [
+                    {
+                        breakpoint: 720,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ]
             });
         }
     }
@@ -582,6 +601,7 @@
     attach: function(context, settings) {
         if ($('.storiesCarousel').length) {
             var $slickContainer = $('.storiesCarousel').slick({
+                adaptiveHeight: true,
                 autoplay: true,
                 autoplaySpeed: 4000,
                 pauseOnFocus: true,
