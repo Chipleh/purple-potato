@@ -8968,13 +8968,14 @@ p.subtext {
 /* line 62, sass/partials/modules/_static-contact-careers.scss */
 .staticContent .contactCareers .careers footer a {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 @media only screen and (max-width: 960px) {
   /* line 1, sass/partials/modules/_static-contact-careers.scss */
   .staticContent .contactCareers {
     padding-top: 60px;
   }
-  /* line 73, sass/partials/modules/_static-contact-careers.scss */
+  /* line 74, sass/partials/modules/_static-contact-careers.scss */
   .staticContent .contactCareers .contact,
   .staticContent .contactCareers .careers {
     float: none;
@@ -8982,11 +8983,11 @@ p.subtext {
     padding-top: 0;
     width: 100%;
   }
-  /* line 80, sass/partials/modules/_static-contact-careers.scss */
+  /* line 81, sass/partials/modules/_static-contact-careers.scss */
   .staticContent .contactCareers .careers {
     background: none;
   }
-  /* line 83, sass/partials/modules/_static-contact-careers.scss */
+  /* line 84, sass/partials/modules/_static-contact-careers.scss */
   .staticContent .contactCareers footer {
     font-size: 16px;
   }
@@ -9369,25 +9370,6 @@ p.subtext {
   /* line 1, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel {
     text-align: center;
-  }
-  /* line 118, sass/partials/modules/_static-hero-carousel.scss */
-  .staticContent .heroCarousel__item {
-    position: relative;
-  }
-  /* line 20, sass/_mixins.scss */
-  .staticContent .heroCarousel__item:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: 118.66667%;
-  }
-  /* line 26, sass/_mixins.scss */
-  .staticContent .heroCarousel__item > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
   }
   /* line 122, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel h1 {
@@ -10168,12 +10150,18 @@ p.subtext {
 /* line 39, sass/partials/modules/_static-news.scss */
 .staticContent .news__header time {
   color: #867429;
+  display: block;
   font-family: AvenirLT-Black, Arial, sans-serif;
   font-size: 12px;
-  margin: 0 -20px;
+  line-height: 1.75;
+  margin: 0 -20px 5px;
   text-transform: uppercase;
 }
-/* line 47, sass/partials/modules/_static-news.scss */
+/* line 48, sass/partials/modules/_static-news.scss */
+.staticContent .news__header h3 {
+  line-height: 1.1em;
+}
+/* line 52, sass/partials/modules/_static-news.scss */
 .staticContent .news__footer {
   border-top: solid 1px #d0d0d0;
   font-size: 12px;
@@ -10185,27 +10173,27 @@ p.subtext {
   .staticContent .news {
     padding-bottom: 40px;
   }
-  /* line 59, sass/partials/modules/_static-news.scss */
+  /* line 64, sass/partials/modules/_static-news.scss */
   .staticContent .news .subhead {
     padding: 0 7% 0 7%;
   }
-  /* line 62, sass/partials/modules/_static-news.scss */
+  /* line 67, sass/partials/modules/_static-news.scss */
   .staticContent .news__article {
     float: none;
     margin-bottom: 20px;
     width: 100%;
   }
-  /* line 67, sass/partials/modules/_static-news.scss */
+  /* line 72, sass/partials/modules/_static-news.scss */
   .staticContent .news__article + .news__article {
     float: none;
   }
-  /* line 71, sass/partials/modules/_static-news.scss */
+  /* line 76, sass/partials/modules/_static-news.scss */
   .staticContent .news__article p {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 81, sass/partials/modules/_static-news.scss */
+  /* line 86, sass/partials/modules/_static-news.scss */
   .staticContent .news__article h3 {
     font-size: 20px;
   }
@@ -10347,7 +10335,11 @@ body.hasParallax .parallax-mobile {
   line-height: 1.6em;
   margin-bottom: 30px;
 }
-/* line 40, sass/partials/modules/_static-stories-carousel.scss */
+/* line 38, sass/partials/modules/_static-stories-carousel.scss */
+.staticContent .storiesCarousel__meta a {
+  font-size: 12px;
+}
+/* line 43, sass/partials/modules/_static-stories-carousel.scss */
 .staticContent .storiesCarousel .slick-prev,
 .staticContent .storiesCarousel .slick-next {
   background: url(https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png) no-repeat;
@@ -10362,21 +10354,21 @@ body.hasParallax .parallax-mobile {
           transform: translateY(-50%);
   width: 41px;
 }
-/* line 52, sass/partials/modules/_static-stories-carousel.scss */
+/* line 55, sass/partials/modules/_static-stories-carousel.scss */
 .staticContent .storiesCarousel .slick-prev {
   background-position: 0 -424px;
   left: 0;
 }
-/* line 56, sass/partials/modules/_static-stories-carousel.scss */
+/* line 59, sass/partials/modules/_static-stories-carousel.scss */
 .staticContent .storiesCarousel .slick-prev:hover {
   background-position: 0 -222px;
 }
-/* line 60, sass/partials/modules/_static-stories-carousel.scss */
+/* line 63, sass/partials/modules/_static-stories-carousel.scss */
 .staticContent .storiesCarousel .slick-next {
   background-position: 0 -727px;
   right: 0;
 }
-/* line 64, sass/partials/modules/_static-stories-carousel.scss */
+/* line 67, sass/partials/modules/_static-stories-carousel.scss */
 .staticContent .storiesCarousel .slick-next:hover {
   background-position: 0 -525px;
 }
@@ -10385,34 +10377,34 @@ body.hasParallax .parallax-mobile {
   .staticContent .storiesCarousel {
     background: transparent;
   }
-  /* line 74, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 77, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel .slick-slide .storiesCarousel__image {
     display: block;
     margin: 5% auto;
   }
-  /* line 78, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 81, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel__meta {
     display: block;
     padding: 0 5% 60px 5%;
     text-align: center;
     width: 100%;
   }
-  /* line 84, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 87, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel .slick-prev,
   .staticContent .storiesCarousel .slick-next {
     top: 35%;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 93, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 96, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel .slick-slide .storiesCarousel__image {
     max-width: 75%;
   }
-  /* line 97, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 100, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel__meta h2 {
     font-size: 30px;
   }
-  /* line 101, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 104, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel .slick-prev,
   .staticContent .storiesCarousel .slick-next {
     top: 24%;

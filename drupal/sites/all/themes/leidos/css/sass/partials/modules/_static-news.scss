@@ -38,10 +38,15 @@
 
         time {
             color: #867429;
+            display: block;
             font-family: AvenirLT-Black, Arial, sans-serif;
             font-size: 12px;
-            margin: 0 -20px;
+            line-height: 1.75;
+            margin: 0 -20px 5px;
             text-transform: uppercase;
+        }
+        h3 {
+            line-height: 1.1em;
         }
     }
     &__footer {

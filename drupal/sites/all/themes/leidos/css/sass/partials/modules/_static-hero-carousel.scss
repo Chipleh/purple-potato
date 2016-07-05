@@ -116,7 +116,7 @@
         text-align: center;
 
         &__item {
-            @include aspect-ratio(1500, 1780);
+            // @include aspect-ratio(1500, 1780);
         }
 
         h1 {
