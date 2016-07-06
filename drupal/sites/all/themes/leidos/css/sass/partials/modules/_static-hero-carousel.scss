@@ -11,7 +11,7 @@
     }
 
     &__item {
-        @include aspect-ratio(1270, 770);
+        @include aspect-ratio(1900, 770);
         background-position: 50% 50%;
         background-size: cover;
 
@@ -52,7 +52,7 @@
                 color: #fff;
                 font-size: 110px;
                 font-size: 5vw;
-                margin: 18% 0 0 0;
+                margin: 10% 0 0 0;
             }
             p {
                 color: #e6e7ec;
@@ -101,6 +101,9 @@
                 font-size: 19px;
                 margin-bottom: 0;
                 text-transform: uppercase;
+            }
+            .cta__primary {
+
             }
         }
         &--v5 {
