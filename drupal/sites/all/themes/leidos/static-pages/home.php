@@ -4,48 +4,48 @@
 <div class="staticContent homePage">
 
     <section class="heroCarousel">
-        <div class="heroCarousel__item heroCarousel__item--v1" style="background-image: url('https://www.leidos.com/sites/default/files/homepage_rotator/ContinentalLandingPage_0008.jpg');">
+        <div class="heroCarousel__item heroCarousel__item--v1" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/transform.jpg');">
             <div class="heroCarousel__inner">
-                <h1>Tomorrow<br>Starts <strong>Now</strong></h1>
+                <h1>Tomorrow Starts Now</h1>
                 <p>Leidos to combine with Lockheed Martin Information Systems & Global Sollutions (IS&GS)</p>
-                <a href="/transform" class="cta cta__primary">Learn More<span class="arrowRight"></span></a>
+                <a href="/transform" class="cta cta__secondary">Learn More<span class="arrowRight"></span></a>
             </div>
         </div>
-        <div class="heroCarousel__item heroCarousel__item--v2" style="background-image: url('https://www.leidos.com/sites/default/files/homepage_rotator/LI-masthead-3d.png');">
+        <div class="heroCarousel__item heroCarousel__item--v2" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/linkedin.jpg');">
             <div class="heroCarousel__inner">
                 <h1>Top Attractors</h1>
                 <p>Leidos among 40 best U.S. companies at drawing and keeping top talent</p>
                 <a href="https://lists.linkedin.com/2016/top-attractors/en/us/leidos?CID=li_HProtator" class="cta cta__primary">Learn More<span class="arrowRight"></span></a>
             </div>
         </div>
-        <div class="heroCarousel__item heroCarousel__item--v3" style="background-image: url('https://www.leidos.com/sites/default/files/homepage_rotator/IA-masthead4.jpg');">
+        <div class="heroCarousel__item heroCarousel__item--v3" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/airport.jpg');">
             <div class="heroCarousel__inner">
                 <h1>Reshaping the Passenger Experience</h1>
                 <p>Airport technology and the terminals of tomorrow</p>
                 <a href="/intelligent-airports?CID=ia_HProtator" class="cta cta__primary">Learn More<span class="arrowRight"></span></a>
             </div>
         </div>
-        <div class="heroCarousel__item heroCarousel__item--v4" style="background-image: url('https://www.leidos.com/sites/default/files/homepage_rotator/hacker-avenue.jpg');">
+        <div class="heroCarousel__item heroCarousel__item--v4" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/hacker-ave.jpg');">
             <div class="heroCarousel__inner">
                 <h1>Hacker Avenue</h1>
                 <p>How hackers can cripple our cities</p>
                 <a href="http://www.politico.com/sponsor-content/2016/03/hacker-avenue?CID=ha_HProtator" class="cta cta__primary">Explore<span class="arrowRight"></span></a>
             </div>
         </div>
-        <div class="heroCarousel__item heroCarousel__item--v5" style="background-image: url('https://www.leidos.com/sites/default/files/homepage_rotator/AllSystemsGomasthead3.jpg');">
+        <!-- <div class="heroCarousel__item heroCarousel__item--v5" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/AllSystemsGomasthead3.jpg');">
             <div class="heroCarousel__inner">
                 <h1>All Systems Go.</h1>
                 <p>Leidos stakes claim in intellegent infrastructure.</p>
                 <a href="/infrastructure/all-systems-go" class="cta cta__primary">Learn More<span class="arrowRight"></span></a>
             </div>
         </div>
-        <div class="heroCarousel__item heroCarousel__item--v6" style="background-image: url('https://www.leidos.com/sites/default/files/homepage_rotator/carousel-dhmsm.jpg');">
+        <div class="heroCarousel__item heroCarousel__item--v6" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/carousel-dhmsm.jpg');">
             <div class="heroCarousel__inner">
                 <h1>Partnership for Defense Health</h1>
                 <p>Leidos, Accenture, Cerner, and Henry Schein: trusted partners for defense health</p>
                 <a href="http://leidosdefensehealth.com/" class="cta cta__primary">Learn More<span class="arrowRight"></span></a>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <button class="nextSection">Next Section</button>

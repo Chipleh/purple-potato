@@ -14,24 +14,55 @@
         @include aspect-ratio(1918, 770);
         background-position: 50% 50%;
         background-size: cover;
-    }
 
-    &__item {
         &--v1 {
-            .#{$heroCarousel}__inner {
-                // padding: 30% 25% 0 0;
+            .#{heroCarousel}__inner {
+                bottom: 80px;
+                left: 50%;
+                top: auto;
+                transform: translateX(-50%);
+                width: 70%;
             }
-
             h1 {
-                color: #fff;
-
-                strong {
-                    color: #f8b43a;
-                }
+                text-indent: -9999px;
+            }
+            p {
+                color: #fbb53b;
+                display: inline-block;
+                font-size: 25px;
+                font-weight: bold;
+                left: 230px;
+                line-height: 1.25em;
+                margin: -10px 0 0 0;
+                position: relative;
+                text-transform: uppercase;
+                width: 85%;
+            }
+            .cta {
+                bottom: 0;
+                left: 5%;
+                margin: 0;
+                position: absolute;
             }
         }
         &--v2 {
+            text-align: center;
 
+            h1 {
+                color: #fff;
+                font-size: 110px;
+                font-size: 5vw;
+                margin: 9% 0 0 0;
+            }
+            p {
+                color: #e6e7ec;
+                font-family: AvenirLT-Book, Arial, sans-serif;
+                font-size: 35px;
+                font-size: 2.5vw;
+                line-height: normal;
+                margin: 0 auto;
+                width: 60%;
+            }
         }
         &--v3 {
 
@@ -116,14 +147,36 @@
         text-align: center;
 
         &__item {
-            // @include aspect-ratio(1500, 1780);
+            &--v1 {
+
+                .#{heroCarousel}__inner {
+                    bottom: 60px;
+                }
+                h1 {
+
+                }
+                p {
+                    font-size: 16px;
+                    left: 150px;
+                    margin-top: 0;
+                    text-align: left;
+                }
+                .cta {
+
+                }
+            }
+            &--v2 {
+                p {
+                    width: 95%;
+                }
+            }
         }
 
         h1 {
             font-size: 40px;
         }
         p {
-            font-size: 20px;
+            // font-size: 20px;
         }
     }
 
@@ -132,13 +185,40 @@
     @media only screen and (max-width: 720px) {
         &__item {
             @include aspect-ratio(1500, 1780);
+
+            &--v1 {
+                background-position: 50% bottom;
+
+                .#{heroCarousel}__inner {
+                    width: 100%;
+                }
+                p {
+                    left: 0;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    width: 100%;
+                }
+                .cta {
+                    left: 0;
+                    position: relative;
+                }
+            }
+            &--v2 {
+                h1 {
+                    font-size: 40px;
+                    margin-top: 35%;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
         }
 
         h1 {
-            font-size: 30px;
+            // font-size: 30px;
         }
         p {
-            font-size: 16px;
+            // font-size: 16px;
         }
     }
 }
