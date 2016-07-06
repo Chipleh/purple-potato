@@ -620,25 +620,20 @@
         attach: function(context, settings) {
             var $parallax = $('.parallax-window');
 
-            $(window).smartresize(function() {
-                $(window).trigger('resize').trigger('scroll');
-            });
+            if ($parallax.length && window.innerWidth > 960) {
+                $(window).smartresize(function() {
+                    $(window).trigger('resize').trigger('scroll');
+                });
 
-            function init() {
-                if ($parallax.length) {
-                    console.log('init');
-                    // Add body class to apply needed background transparency to parent page elements.
-                    $('body').addClass('hasParallax');
+                // Add body class to enable application of needed background transparency to parent page elements.
+                $('body').addClass('hasParallax');
 
-                    $parallax.each(function () {
-                        var src = $(this).data('image-src');
+                $parallax.each(function () {
+                    var src = $(this).data('image-src');
 
-                        $(this).parallax({imageSrc: src});
-                    });
-                }
+                    $(this).parallax({imageSrc: src});
+                });
             }
-
-            init();
         }
     };
 })(jQuery);
