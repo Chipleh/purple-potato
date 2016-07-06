@@ -97,7 +97,7 @@
         <a href="/newsroom/latest-news/" class="cta cta__primary">View All<span class="arrowRight"></span></a>
     </section>
 
-    <div class="parallax-window" data-parallax="scroll" data-natural-width="1600" data-natural-height="936" data-image-src="https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-02.jpg"></div>
+    <div class="parallax-window" data-image-src="https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-02.jpg"></div>
     <div class="parallax-mobile" style="background-image: url('https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-02.jpg');"></div>
 
     <div class="about">
@@ -129,7 +129,7 @@
         </div>
     </div>
 
-    <div class="parallax-window" data-parallax="scroll" data-natural-width="1600" data-natural-height="936" data-image-src="https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-03.jpg"></div>
+    <div class="parallax-window" data-image-src="https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-03.jpg"></div>
     <div class="parallax-mobile" style="background-image: url('https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-03.jpg');"></div>
 
     <section class="storiesCarousel">
@@ -165,7 +165,7 @@
         </article>
     </section>
 
-    <div class="parallax-window" data-parallax="scroll" data-natural-width="1600" data-natural-height="936" data-image-src="https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-04.jpg"></div>
+    <div class="parallax-window" data-image-src="https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-04.jpg"></div>
     <div class="parallax-mobile" style="background-image: url('https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-04.jpg');"></div>
 
     <div class="contactCareers">

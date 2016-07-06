@@ -618,9 +618,27 @@
 (function($) {
     Drupal.behaviors.staticParallax = {
         attach: function(context, settings) {
-            if ($('.parallax-window').length) {
-                $('body').addClass('hasParallax');
+            var $parallax = $('.parallax-window');
+
+            $(window).smartresize(function() {
+                $(window).trigger('resize').trigger('scroll');
+            });
+
+            function init() {
+                if ($parallax.length) {
+                    console.log('init');
+                    // Add body class to apply needed background transparency to parent page elements.
+                    $('body').addClass('hasParallax');
+
+                    $parallax.each(function () {
+                        var src = $(this).data('image-src');
+
+                        $(this).parallax({imageSrc: src});
+                    });
+                }
             }
+
+            init();
         }
     };
 })(jQuery);
