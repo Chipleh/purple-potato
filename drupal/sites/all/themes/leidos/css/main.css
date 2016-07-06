@@ -9356,7 +9356,7 @@ p.subtext {
 /* line 70, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v3 .heroCarousel__inner {
   line-height: normal;
-  margin-left: 6%;
+  margin-left: 12%;
   padding-top: 9%;
   width: 50%;
 }

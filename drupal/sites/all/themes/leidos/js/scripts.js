@@ -574,7 +574,7 @@
         if ($('.heroCarousel').length) {
             var $slickContainer = $('.heroCarousel').slick({
                 adaptiveHeight: true,
-                // autoplay: true,
+                autoplay: true,
                 autoplaySpeed: 4000,
                 dots: true,
                 pauseOnFocus: true,
