@@ -69,12 +69,14 @@
     /*  tablet & mobile
     **************************************************/
     @media only screen and (max-width: 960px) {
-        padding-top: 60px;
+        padding: 60px 4.5% 60px 4.9%;
 
         .contact,
         .careers {
             float: none;
+            margin-left: 0;
             padding-bottom: 60px;
+            padding-left: 0;
             padding-top: 0;
             width: 100%;
         }
@@ -89,6 +91,12 @@
     /*  mobile-only
     **************************************************/
     @media only screen and (max-width: 720px) {
-
+        .contact,
+        .careers {
+            h2 {
+                font-size: 40px;
+                line-height: normal;
+            }
+        }
     }
 }
