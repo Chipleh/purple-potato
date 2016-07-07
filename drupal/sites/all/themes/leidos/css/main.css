@@ -8944,7 +8944,7 @@ p.subtext {
 .staticContent .contactCareers .careers img {
   border: #fff 6px solid;
   margin: 10px 0 20px;
-  width: 98%;
+  width: 100%;
 }
 /* line 46, sass/partials/modules/_static-contact-careers.scss */
 .staticContent .contactCareers .careers .careersSearch {
@@ -8989,13 +8989,14 @@ p.subtext {
   .staticContent .contactCareers .careers {
     background: none;
   }
-  /* line 86, sass/partials/modules/_static-contact-careers.scss */
-  .staticContent .contactCareers footer {
+  /* line 87, sass/partials/modules/_static-contact-careers.scss */
+  .staticContent .contactCareers footer,
+  .staticContent .contactCareers footer a {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 96, sass/partials/modules/_static-contact-careers.scss */
+  /* line 99, sass/partials/modules/_static-contact-careers.scss */
   .staticContent .contactCareers .contact h2,
   .staticContent .contactCareers .careers h2 {
     font-size: 40px;
@@ -10578,22 +10579,27 @@ body.hasParallax .parallax-mobile {
     text-align: center;
     width: 100%;
   }
-  /* line 89, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 90, sass/partials/modules/_static-stories-carousel.scss */
+  .staticContent .storiesCarousel__meta p,
+  .staticContent .storiesCarousel__meta p a {
+    font-size: 16px;
+  }
+  /* line 96, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel .slick-prev,
   .staticContent .storiesCarousel .slick-next {
     top: 35%;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 98, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 105, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel .slick-slide .storiesCarousel__image {
     max-width: 75%;
   }
-  /* line 102, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 109, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel__meta h2 {
     font-size: 30px;
   }
-  /* line 106, sass/partials/modules/_static-stories-carousel.scss */
+  /* line 113, sass/partials/modules/_static-stories-carousel.scss */
   .staticContent .storiesCarousel .slick-prev,
   .staticContent .storiesCarousel .slick-next {
     top: 24%;
