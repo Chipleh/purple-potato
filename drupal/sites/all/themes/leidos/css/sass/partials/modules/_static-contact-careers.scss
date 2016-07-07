@@ -1,0 +1,94 @@
+.staticContent .contactCareers {
+    background: #e8e8e8;
+
+    &__inner {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    .contact,
+    .careers {
+        float: left;
+        padding: 95px 0 85px 0;
+        width: 42%;
+    }
+    .contact {
+        margin-left: 7.9661%;
+        padding-right: 6%;
+
+        p {
+            color: #8b8b8b;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6em;
+            padding: 10px 0 2px;
+        }
+        .cta {
+            margin-top: 0;
+        }
+    }
+    .careers {
+        background: linear-gradient(to left, #e8e8e8 0%, #e8e8e8 94%, #dbdbdb 100%, #888888 118%, #e8e8e8 100%);
+        margin-right: 7.9661%;
+        padding-left: 6%;
+
+        p {
+            color: #8b8b8b;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6em;
+            padding: 10px 0 2px;
+        }
+        img {
+            border: #fff 6px solid;
+            margin: 10px 0 20px;
+            width: 98%;
+        }
+        .careersSearch {
+            margin-bottom: 40px;
+
+            input {
+                background-color: #fff;
+            }
+        }
+        footer {
+            color: #8b8b8b;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            line-height: 23px;
+            padding: 10px 0 2px;
+
+            strong {
+                color: #1f1646;
+            }
+            a {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+            }
+        }
+    }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        padding-top: 60px;
+
+        .contact,
+        .careers {
+            float: none;
+            padding-bottom: 60px;
+            padding-top: 0;
+            width: 100%;
+        }
+        .careers {
+            background: none;
+        }
+        footer {
+            font-size: 16px;
+        }
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+
+    }
+}

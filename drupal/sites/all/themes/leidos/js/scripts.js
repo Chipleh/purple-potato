@@ -503,6 +503,16 @@
 
             adjustMarquee();
         }
+
+        if ($('.nextSection').length) {
+            $('.nextSection').on('click', function () {
+                var $next = $(this).next();
+
+                $('html, body').animate({
+                    scrollTop: $next.offset().top
+                }, 1000);
+            });
+        }
     }
   };
 })(jQuery);
@@ -511,48 +521,121 @@
 //  Monte Greene
 //  6/22/16
 (function($) {
-  Drupal.behaviors.staticPageCarousel = {
+    Drupal.behaviors.staticPageCarousel = {
+        attach: function(context, settings) {
+          if ($('.imageToutCarousel__items').length) {
+              var $slickContainer = $('.imageToutCarousel__items').on('init reInit', function (event, slick, currentSlide, nextSlide) {
+                $('.slick-dots li').append('<span>/' + slick.slideCount + '</span>');
+              });
+              $slickContainer.slick({
+                centerMode: true,
+                centerPadding: '20%',
+                dots: true,
+                slidesToShow: 1,
+                responsive: [
+                  {
+                    breakpoint: 1300,
+                    settings: {
+                      adaptiveHeight: true,
+                      centerPadding: '15%'
+                    }
+                  },
+                  {
+                    breakpoint: 1100,
+                    settings: {
+                      centerPadding: '10%'
+                    }
+                  },
+                  {
+                    breakpoint: 900,
+                    settings: {
+                      centerPadding: '5%'
+                    }
+                  },
+                  {
+                    breakpoint: 640,
+                    settings: {
+                      centerPadding: '0'
+                    }
+                  }
+                ]
+              });
+            }
+        }
+    };
+})(jQuery);
+
+//  Static pages - Hero carousel
+//  Monte Greene
+//  7/1/16
+(function($) {
+  Drupal.behaviors.staticHeroCarousel = {
     attach: function(context, settings) {
-      if ($('.imageToutCarousel__items').length) {
-          var $slickContainer = $('.imageToutCarousel__items').on('init reInit', function (event, slick, currentSlide, nextSlide) {
-            $('.slick-dots li').append('<span>/' + slick.slideCount + '</span>');
-          });
-          $slickContainer.slick({
-            centerMode: true,
-            centerPadding: '20%',
-            dots: true,
-            slidesToShow: 1,
-            responsive: [
-              {
-                breakpoint: 1300,
-                settings: {
-                  adaptiveHeight: true,
-                  centerPadding: '15%'
-                }
-              },
-              {
-                breakpoint: 1100,
-                settings: {
-                  centerPadding: '10%'
-                }
-              },
-              {
-                breakpoint: 900,
-                settings: {
-                  centerPadding: '5%'
-                }
-              },
-              {
-                breakpoint: 640,
-                settings: {
-                  centerPadding: '0'
-                }
-              }
-            ]
-          });
-      }
+        if ($('.heroCarousel').length) {
+            var $slickContainer = $('.heroCarousel').slick({
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                dots: true,
+                pauseOnFocus: true,
+                slidesToShow: 1,
+                responsive: [
+                    {
+                        breakpoint: 720,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ]
+            });
+        }
     }
   };
+})(jQuery);
+
+//  Static pages - Stories carousel
+//  Monte Greene
+//  7/1/16
+(function($) {
+  Drupal.behaviors.staticStoriesCarousel = {
+    attach: function(context, settings) {
+        if ($('.storiesCarousel').length) {
+            var $slickContainer = $('.storiesCarousel').slick({
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                pauseOnFocus: true,
+                slidesToShow: 1
+            });
+        }
+    }
+  };
+})(jQuery);
+
+//  Static pages - Parallax
+//  Monte Greene
+//  7/4/16
+(function($) {
+    Drupal.behaviors.staticParallax = {
+        attach: function(context, settings) {
+            var $parallax = $('.parallax-window');
+
+            if ($parallax.length && window.innerWidth > 960) {
+                $(window).smartresize(function() {
+                    $(window).trigger('resize').trigger('scroll');
+                });
+
+                // Add body class to enable application of needed background transparency to parent page elements.
+                $('body').addClass('hasParallax');
+
+                $parallax.each(function () {
+                    var src = $(this).data('image-src');
+
+                    $(this).parallax({imageSrc: src});
+                });
+            }
+        }
+    };
 })(jQuery);
 
 //  Static pages - Search script, adapted from live site
