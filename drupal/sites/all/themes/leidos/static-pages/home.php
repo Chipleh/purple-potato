@@ -32,13 +32,13 @@
                 <a href="http://www.politico.com/sponsor-content/2016/03/hacker-avenue?CID=ha_HProtator" class="cta cta__primary">Explore<span class="arrowRight"></span></a>
             </div>
         </div>
-        <!-- <div class="heroCarousel__item heroCarousel__item--v5" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/AllSystemsGomasthead3.jpg');">
+        <div class="heroCarousel__item heroCarousel__item--v5" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/all-systems-go.jpg');">
             <div class="heroCarousel__inner">
                 <h1>All Systems Go.</h1>
                 <p>Leidos stakes claim in intellegent infrastructure.</p>
                 <a href="/infrastructure/all-systems-go" class="cta cta__primary">Learn More<span class="arrowRight"></span></a>
             </div>
-        </div> -->
+        </div>
         <div class="heroCarousel__item heroCarousel__item--v6" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/defense-health.jpg');">
             <div class="heroCarousel__overlay"></div>
             <div class="heroCarousel__inner">
