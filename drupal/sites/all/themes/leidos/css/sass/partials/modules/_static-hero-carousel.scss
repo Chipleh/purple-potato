@@ -10,8 +10,17 @@
         font-size: 18px;
     }
 
+    &__overlay {
+        background: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/verticies.svg') 0 bottom no-repeat;
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
     &__item {
-        @include aspect-ratio(1900, 770);
+        @include aspect-ratio(16, 9);
         background-position: 50% 50%;
         background-size: cover;
 
@@ -52,7 +61,7 @@
                 color: #fff;
                 font-size: 110px;
                 font-size: 5vw;
-                margin: 10% 0 0 0;
+                margin: 15% 0 0 0;
             }
             p {
                 color: #e6e7ec;
@@ -69,7 +78,7 @@
 
             .#{heroCarousel}__inner {
                 line-height: normal;
-                margin-left: 12%;
+                margin-left: 6%;
                 padding-top: 9%;
                 width: 50%;
             }
@@ -113,7 +122,32 @@
 
         }
         &--v6 {
+            text-align: right;
 
+            .#{heroCarousel}__inner {
+                padding: 5% 5% 5% 50%;
+            }
+            h1 {
+                color: #000;
+                font-family: AvenirLT-Book, Arial, sans-serif;
+                font-size: 60px;
+                font-weight: normal;
+                line-height: 1.13em;
+                margin: 0;
+                padding-bottom: 10px;
+                text-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
+                text-transform: none;
+            }
+            p {
+                color: #a2893e;
+                font: 20px/1.3 AvenirLT-Medium, Arial, sans-serif;
+                line-height: 1.3;
+                text-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
+                text-transform: uppercase;
+            }
+            .cta__primary {
+                margin-top: 0;
+            }
         }
     }
 

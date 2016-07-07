@@ -38,14 +38,15 @@
                 <p>Leidos stakes claim in intellegent infrastructure.</p>
                 <a href="/infrastructure/all-systems-go" class="cta cta__primary">Learn More<span class="arrowRight"></span></a>
             </div>
-        </div>
-        <div class="heroCarousel__item heroCarousel__item--v6" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/carousel-dhmsm.jpg');">
+        </div> -->
+        <div class="heroCarousel__item heroCarousel__item--v6" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/defense-health.jpg');">
+            <div class="heroCarousel__overlay"></div>
             <div class="heroCarousel__inner">
                 <h1>Partnership for Defense Health</h1>
                 <p>Leidos, Accenture, Cerner, and Henry Schein: trusted partners for defense health</p>
                 <a href="http://leidosdefensehealth.com/" class="cta cta__primary">Learn More<span class="arrowRight"></span></a>
             </div>
-        </div> -->
+        </div>
     </section>
 
     <button class="nextSection">Next Section</button>
