@@ -9,6 +9,15 @@
     p {
         font-size: 18px;
     }
+    .cta {
+        &__primary,
+        &__secondary {
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: normal;
+            padding: 11px 17px;
+        }
+    }
 
     &__overlay {
         background: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/verticies.svg') 0 bottom no-repeat;
@@ -72,6 +81,9 @@
                 margin: 0 auto;
                 width: 60%;
             }
+            .cta {
+                background: #76399c;
+            }
         }
         &--v3 {
             text-align: left;
@@ -92,6 +104,10 @@
                 font-size: 19px;
                 margin-bottom: 0;
                 text-transform: uppercase;
+            }
+            .cta {
+                background: #76399c;
+                opacity: 0.75;
             }
         }
         &--v4 {
@@ -114,12 +130,34 @@
             .cta__primary {
                 background: #522563;
                 border: 1px solid #896592;
-                font-family: AvenirLT-Book, Arial, sans-serif;
-                font-weight: normal;
+                color: #c1c1c1;
+                padding: 11px 31px;
             }
         }
         &--v5 {
-
+            .#{heroCarousel}__inner {
+                bottom: 80px;
+                left: 1%;
+                top: auto;
+            }
+            h1 {
+                color: #fff;
+                font-size: 6.65vw;
+                margin: 0;
+            }
+            p {
+                color: #3ccccf;
+                display: inline-block;
+                font-size: 25px;
+                margin-bottom: 0;
+                margin-right: 60px;
+                text-transform: uppercase;
+            }
+            .cta {
+                background: #000;
+                border: 1px solid #fff;
+                margin-top: 0;
+            }
         }
         &--v6 {
             text-align: right;
@@ -146,6 +184,8 @@
                 text-transform: uppercase;
             }
             .cta__primary {
+                background: rgba(0, 0, 0, 0.4);
+                border: 1px solid #fff;
                 margin-top: 0;
             }
         }
@@ -241,6 +281,13 @@
             &--v2 {
                 p {
                     width: 95%;
+                }
+            }
+            &--v5 {
+                p {
+                    display: block;
+                    margin-bottom: 20px;
+                    margin-right: 0;
                 }
             }
         }
