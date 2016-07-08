@@ -8953,19 +8953,21 @@ p.subtext {
 /* line 49, sass/partials/modules/_static-contact-careers.scss */
 .staticContent .contactCareers .careers .careersSearch input {
   background-color: #fff;
+  height: 51px;
+  margin: 0;
 }
-/* line 53, sass/partials/modules/_static-contact-careers.scss */
+/* line 55, sass/partials/modules/_static-contact-careers.scss */
 .staticContent .contactCareers .careers footer {
   color: #8b8b8b;
   font-family: AvenirLT-Book, Arial, sans-serif;
   line-height: 23px;
   padding: 10px 0 2px;
 }
-/* line 59, sass/partials/modules/_static-contact-careers.scss */
+/* line 61, sass/partials/modules/_static-contact-careers.scss */
 .staticContent .contactCareers .careers footer strong {
   color: #1f1646;
 }
-/* line 62, sass/partials/modules/_static-contact-careers.scss */
+/* line 64, sass/partials/modules/_static-contact-careers.scss */
 .staticContent .contactCareers .careers footer a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -8975,7 +8977,7 @@ p.subtext {
   .staticContent .contactCareers {
     padding: 60px 4.5% 60px 4.9%;
   }
-  /* line 74, sass/partials/modules/_static-contact-careers.scss */
+  /* line 76, sass/partials/modules/_static-contact-careers.scss */
   .staticContent .contactCareers .contact,
   .staticContent .contactCareers .careers {
     float: none;
@@ -8985,18 +8987,18 @@ p.subtext {
     padding-top: 0;
     width: 100%;
   }
-  /* line 83, sass/partials/modules/_static-contact-careers.scss */
+  /* line 85, sass/partials/modules/_static-contact-careers.scss */
   .staticContent .contactCareers .careers {
     background: none;
   }
-  /* line 87, sass/partials/modules/_static-contact-careers.scss */
+  /* line 89, sass/partials/modules/_static-contact-careers.scss */
   .staticContent .contactCareers footer,
   .staticContent .contactCareers footer a {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 99, sass/partials/modules/_static-contact-careers.scss */
+  /* line 101, sass/partials/modules/_static-contact-careers.scss */
   .staticContent .contactCareers .contact h2,
   .staticContent .contactCareers .careers h2 {
     font-size: 40px;
