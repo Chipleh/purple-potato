@@ -62,7 +62,7 @@
     </nav>
 
     <section class="imageTout imageTout--imgLeft" id="corporate-responsibility">
-        <img class="imageTout__image borderImage" src="https://www.leidos.com/sites/default/files/about-landing-responsibility_0.jpg" width="324" height="324" alt="">
+        <img class="imageTout__image borderImage" src="/sites/all/themes/leidos/static-pages/images/about/about-landing-responsibility_0.jpg" width="324" height="324" alt="">
         <div class="imageTout__meta">
             <heading>
                 <h2>Our People.<br>Our Communities.<br>Our Environment.</h2>
@@ -76,7 +76,7 @@
 
     <section class="history" id="history">
         <ul class="history__list">
-            <li class="history__event" style="background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/about/timeline-01-OurLegacy.jpg)">
+            <li class="history__event" style="background-image: url(/sites/all/themes/leidos/static-pages/images/about/timeline-01-OurLegacy.jpg)">
                 <div class="history__listInner">
                     <heading>
                         <h2>Our History</h2>
@@ -85,7 +85,7 @@
                     <a href="" class="cta cta__secondary">Learn More <span class="arrowRight"></span></a>
                 </div>
             </li>
-            <li class="history__event" style="background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/about/timeline-02-1970.jpg)">
+            <li class="history__event" style="background-image: url(/sites/all/themes/leidos/static-pages/images/about/timeline-02-1970.jpg)">
                 <div class="history__listInner">
                     <heading>
                         <h2>1970</h2>
@@ -94,7 +94,7 @@
                     <p>Leidos posted a profit after its first year, much to its founder’s surprise, and established its first long-term client, the Defense Nuclear Agency.</p>
                 </div>
             </li>
-            <li class="history__event" style="background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/about/timeline-03-1987.jpg)">
+            <li class="history__event" style="background-image: url(/sites/all/themes/leidos/static-pages/images/about/timeline-03-1987.jpg)">
                 <div class="history__listInner">
                     <heading>
                         <h2>1984</h2>
@@ -103,7 +103,7 @@
                     <p>We supported the technical design of the winning yacht for the America’s Cup and began conceptual design for a geologic nuclear waste repository in Nevada.</p>
                 </div>
             </li>
-            <li class="history__event" style="background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/about/timeline-04-1997.jpg)">
+            <li class="history__event" style="background-image: url(/sites/all/themes/leidos/static-pages/images/about/timeline-04-1997.jpg)">
                 <div class="history__listInner">
                     <heading>
                         <h2>1996</h2>
@@ -112,7 +112,7 @@
                     <p>The company’s entrepreneurial spirit and small-company flexibility kept us at the forefront of new technology. We acquired domain name registrar Network Solutions and became one of the largest providers of Internet and e-commerce services.</p>
                 </div>
             </li>
-            <li class="history__event" style="background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/about/timeline-05-2008.jpg)">
+            <li class="history__event" style="background-image: url(/sites/all/themes/leidos/static-pages/images/about/timeline-05-2008.jpg)">
                 <div class="history__listInner">
                     <heading>
                         <h2>2008</h2>
@@ -121,7 +121,7 @@
                     <p>We played a major role in helping Okotoks, Alberta become the first solar community in North America. Our Canadian subsidiary developed a solar-thermal system to capture energy from the summer sun and store it to heat homes through the long, cold winter.</p>
                 </div>
             </li>
-            <li class="history__event" style="background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/about/timeline-06-2013.jpg)">
+            <li class="history__event" style="background-image: url(/sites/all/themes/leidos/static-pages/images/about/timeline-06-2013.jpg)">
                 <div class="history__listInner">
                     <heading>
                         <h2>2013</h2>
@@ -134,7 +134,7 @@
     </section>
 
     <section class="imageTout imageTout--imgRight" id="commitment-to-quality">
-        <img class="imageTout__image borderImage" src="https://www.leidos.com/sites/default/files/about-landing-quality_0.jpg" width="324" height="324" alt="">
+        <img class="imageTout__image borderImage" src="/sites/all/themes/leidos/static-pages/images/about/about-landing-quality_0.jpg" width="324" height="324" alt="">
         <div class="imageTout__meta">
             <heading>
                 <h2>A Commitment to Quality</h2>
@@ -215,7 +215,7 @@
             <p>Meet the executive team responsible for leading 19,000 forward thinking employees towards shared success.</p>
         </heading>
         <div class="leadership__content">
-            <img class="leadership__image" src="https://www.leidos.com/sites/default/files/Roger-A-Krone.jpg" width="320" height="320" alt="">
+            <img class="leadership__image" src="/sites/all/themes/leidos/static-pages/images/about/Roger-A-Krone.jpg" width="320" height="320" alt="">
             <div class="leadership__meta">
                 <heading>
                     <h3><a href="/about/leadership/krone-bio">Roger A. Krone</a></h3>

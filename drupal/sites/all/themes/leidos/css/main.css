@@ -8197,8 +8197,8 @@ p.subtext {
 /* line 1, sass/partials/modules/_static-about.scss */
 .staticContent .about {
   background-color: #fff;
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/about-bg-large.png) top center no-repeat;
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/about-bg-large.png) top center no-repeat, url(https://www.leidos.com/sites/all/themes/leidos/images/about-bg.png) 50% 0px repeat-x;
+  background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/about-bg-large.png) top center no-repeat;
+  background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/about-bg-large.png) top center no-repeat, url(/sites/all/themes/leidos/static-pages/images/backgrounds/about-bg.png) 50% 0px repeat-x;
   /*  tablet & mobile
   **************************************************/
   /*  mobile-only
@@ -8429,7 +8429,7 @@ p.subtext {
 }
 /* line 90, sass/partials/modules/_static-awards.scss */
 .staticContent .awards__item--leaf dt:before {
-  background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -1679px no-repeat;
+  background: url("/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png") 0 -1679px no-repeat;
   content: '';
   display: block;
   height: 83px;
@@ -8591,7 +8591,7 @@ p.subtext {
 }
 /* line 35, sass/partials/modules/_static-careers-search.scss */
 .staticContent .careersSearch button span {
-  background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -1912px no-repeat;
+  background: url("/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png") 0 -1912px no-repeat;
   display: block;
   height: 15px;
   margin: 0 auto;
@@ -8674,7 +8674,7 @@ p.subtext {
 }
 /* line 71, sass/partials/modules/_static-common.scss */
 .staticContent .arrowRight {
-  background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") 0 -34px no-repeat;
+  background: url("/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png") 0 -34px no-repeat;
   display: inline-block;
   height: 9px;
   margin-left: 10px;
@@ -8750,7 +8750,7 @@ p.subtext {
 }
 /* line 147, sass/partials/modules/_static-common.scss */
 .staticContent .subhead__head:after {
-  background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") no-repeat;
+  background: url("/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png") no-repeat;
   background-position: 0 -1034px;
   color: #c2c2c2;
   content: '';
@@ -8773,7 +8773,7 @@ p.subtext {
 }
 /* line 173, sass/partials/modules/_static-common.scss */
 .staticContent .nextSection {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/scroll_down_bg.png) no-repeat;
+  background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/scroll_down_bg.png) no-repeat;
   border: 0;
   bottom: -28px;
   display: block;
@@ -8784,7 +8784,7 @@ p.subtext {
 }
 /* line 183, sass/partials/modules/_static-common.scss */
 .staticContent .nextSection:after {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png) 0 -24px no-repeat;
+  background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png) 0 -24px no-repeat;
   content: '';
   display: block;
   height: 10px;
@@ -9515,21 +9515,21 @@ p.subtext {
 }
 /* line 205, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-prev {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left.png) no-repeat;
+  background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-left.png) no-repeat;
   left: 25%;
 }
 /* line 209, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-prev:hover {
-  background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left-hover.png);
+  background-image: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-left-hover.png);
 }
 /* line 213, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-next {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right.png) no-repeat;
+  background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-right.png) no-repeat;
   right: 25%;
 }
 /* line 217, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-next:hover {
-  background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right-hover.png);
+  background-image: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-right-hover.png);
 }
 /* line 221, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-dots {
@@ -10005,7 +10005,7 @@ p.subtext {
 /* line 59, sass/partials/modules/_static-image-tout-carousel.scss */
 .staticContent .imageToutCarousel .slick-prev,
 .staticContent .imageToutCarousel .slick-next {
-  background: url("https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png") no-repeat;
+  background: url("/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png") no-repeat;
   border: 0;
   height: 54px;
   left: 50%;
@@ -10098,7 +10098,7 @@ p.subtext {
 }
 /* line 29, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgRight {
-  background: url("https://www.leidos.com/sites/all/themes/leidos/images/right-slant-bg.png") no-repeat 56% 50px #fff;
+  background: url("/sites/all/themes/leidos/static-pages/images/backgrounds/right-slant-bg.png") no-repeat 56% 50px #fff;
 }
 /* line 32, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgRight .imageTout__image {
@@ -10110,7 +10110,7 @@ p.subtext {
 }
 /* line 39, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgLeft {
-  background: url("https://www.leidos.com/sites/all/themes/leidos/images/left-slant-bg.png") no-repeat 60% 100px #fff;
+  background: url("/sites/all/themes/leidos/static-pages/images/backgrounds/left-slant-bg.png") no-repeat 60% 100px #fff;
 }
 /* line 42, sass/partials/modules/_static-image-tout.scss */
 .staticContent .imageTout--imgLeft .imageTout__image {
@@ -10324,12 +10324,12 @@ p.subtext {
 /* line 15, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage__image {
   height: 770px;
-  background: url("https://www.leidos.com/sites/all/themes/leidos/images/about-hero.jpg") 100% -172px no-repeat;
+  background: url("/sites/all/themes/leidos/static-pages/images/about/about-hero.jpg") 100% -172px no-repeat;
 }
 /* line 19, sass/partials/modules/_static-marquee-image.scss */
 .staticContent .marqueeImage__overlay {
-  background: transparent url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.svg") 50% 0 no-repeat;
-  background: url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.png") 50% 0 no-repeat;
+  background: transparent url("/sites/all/themes/leidos/static-pages/images/backgrounds/vertices-careers.svg") 50% 0 no-repeat;
+  background: url("/sites/all/themes/leidos/static-pages/images/backgrounds/vertices-careers.png") 50% 0 no-repeat;
   height: 800px;
 }
 /* line 26, sass/partials/modules/_static-marquee-image.scss */
@@ -10532,7 +10532,7 @@ body.hasParallax .parallax-mobile {
 
 /* line 1, sass/partials/modules/_static-stories-carousel.scss */
 .staticContent .storiesCarousel {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/left-slant-bg.png) no-repeat 50% 50% white;
+  background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/left-slant-bg.png) no-repeat 50% 50% white;
   position: relative;
   /*  tablet & mobile
   **************************************************/
@@ -10585,7 +10585,7 @@ body.hasParallax .parallax-mobile {
 /* line 45, sass/partials/modules/_static-stories-carousel.scss */
 .staticContent .storiesCarousel .slick-prev,
 .staticContent .storiesCarousel .slick-next {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png) no-repeat;
+  background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png) no-repeat;
   border: 0;
   cursor: pointer;
   height: 101px;

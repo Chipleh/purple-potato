@@ -1,7 +1,7 @@
 .staticContent .about {
     background-color: #fff;
-    background: url(https://www.leidos.com/sites/all/themes/leidos/images/about-bg-large.png) top center no-repeat;
-    background: url(https://www.leidos.com/sites/all/themes/leidos/images/about-bg-large.png) top center no-repeat, url(https://www.leidos.com/sites/all/themes/leidos/images/about-bg.png) 50% 0px repeat-x;
+    background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/about-bg-large.png) top center no-repeat;
+    background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/about-bg-large.png) top center no-repeat, url(/sites/all/themes/leidos/static-pages/images/backgrounds/about-bg.png) 50% 0px repeat-x;
 
     &__inner {
         height: 640px;

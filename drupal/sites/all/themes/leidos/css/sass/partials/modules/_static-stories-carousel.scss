@@ -1,6 +1,6 @@
 .staticContent .storiesCarousel {
     $storiesCarousel: 'storiesCarousel';
-    background: url(https://www.leidos.com/sites/all/themes/leidos/images/left-slant-bg.png) no-repeat 50% 50% white;
+    background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/left-slant-bg.png) no-repeat 50% 50% white;
     position: relative;
 
     &:before {
@@ -44,7 +44,7 @@
 
     .slick-prev,
     .slick-next {
-        background: url(https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png) no-repeat;
+        background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png) no-repeat;
         border: 0;
         cursor: pointer;
         height: 101px;

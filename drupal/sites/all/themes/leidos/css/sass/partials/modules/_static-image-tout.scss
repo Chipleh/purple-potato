@@ -27,7 +27,7 @@
         }
     }
     &--imgRight {
-        background: url("https://www.leidos.com/sites/all/themes/leidos/images/right-slant-bg.png") no-repeat 56% 50px #fff;
+        background: url("/sites/all/themes/leidos/static-pages/images/backgrounds/right-slant-bg.png") no-repeat 56% 50px #fff;
 
         .#{$imageTout}__image {
             float: right;
@@ -37,7 +37,7 @@
         }
     }
     &--imgLeft {
-        background: url("https://www.leidos.com/sites/all/themes/leidos/images/left-slant-bg.png") no-repeat 60% 100px #fff;
+        background: url("/sites/all/themes/leidos/static-pages/images/backgrounds/left-slant-bg.png") no-repeat 60% 100px #fff;
 
         .#{$imageTout}__image {
             float: left;

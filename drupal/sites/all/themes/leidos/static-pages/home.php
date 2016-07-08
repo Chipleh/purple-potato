@@ -58,7 +58,7 @@
         </heading>
         <div class="news__articles">
             <article class="news__article">
-                <img src="https://www.leidos.com/sites/default/files/062916-wheelchairgames.jpg" alt="Veterans Wheelchair Games">
+                <img src="/sites/all/themes/leidos/static-pages/images/home/062916-wheelchairgames.jpg" alt="Veterans Wheelchair Games">
                 <header class="news__header">
                     <time datetime="2016-06-27T00:00:00-04:00">June 27, 2016</time>
                     <h3>
@@ -98,8 +98,8 @@
         <a href="/newsroom/latest-news/" class="cta cta__primary">View All<span class="arrowRight"></span></a>
     </section>
 
-    <div class="parallax-window" data-image-src="https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-02.jpg"></div>
-    <div class="parallax-mobile" style="background-image: url('https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-02.jpg');"></div>
+    <div class="parallax-window" data-image-src="/sites/all/themes/leidos/static-pages/images/home/parallax-02.jpg"></div>
+    <div class="parallax-mobile" style="background-image: url('/sites/all/themes/leidos/static-pages/images/home/parallax-02.jpg');"></div>
 
     <div class="about">
         <div class="about__inner">
@@ -130,12 +130,12 @@
         </div>
     </div>
 
-    <div class="parallax-window" data-image-src="https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-03.jpg"></div>
-    <div class="parallax-mobile" style="background-image: url('https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-03.jpg');"></div>
+    <div class="parallax-window" data-image-src="/sites/all/themes/leidos/static-pages/images/home/parallax-03.jpg"></div>
+    <div class="parallax-mobile" style="background-image: url('/sites/all/themes/leidos/static-pages/images/home/parallax-03.jpg');"></div>
 
     <section class="storiesCarousel">
         <article class="storiesCarousel__item">
-            <img src="https://www.leidos.com/sites/default/files/caseStory2.jpg" alt="Cancer Research" class="storiesCarousel__image borderImage">
+            <img src="/sites/all/themes/leidos/static-pages/images/home/caseStory2.jpg" alt="Cancer Research" class="storiesCarousel__image borderImage">
             <div class="storiesCarousel__meta">
                 <header class="storiesCarousel__header">
                     <h2>We’re Defining Cancer from a “Network” Perspective & Redefining Cancer Research</h2>
@@ -145,7 +145,7 @@
             </div>
         </article>
         <article class="storiesCarousel__item">
-            <img src="https://www.leidos.com/sites/default/files/caseStory1_1-new.jpg" alt="" class="storiesCarousel__image borderImage">
+            <img src="/sites/all/themes/leidos/static-pages/images/home/caseStory1_1-new.jpg" alt="" class="storiesCarousel__image borderImage">
             <div class="storiesCarousel__meta">
                 <header class="storiesCarousel__header">
                     <h2>Leidos’ Unmanned Sub Tracker Drives Itself & Innovation at Sea</h2>
@@ -155,7 +155,7 @@
             </div>
         </article>
         <article class="storiesCarousel__item">
-            <img src="https://www.leidos.com/sites/default/files/capabilities-thumb.jpg" alt="" class="storiesCarousel__image borderImage">
+            <img src="/sites/all/themes/leidos/static-pages/images/home/capabilities-thumb.jpg" alt="" class="storiesCarousel__image borderImage">
             <div class="storiesCarousel__meta">
                 <header class="storiesCarousel__header">
                     <h2>Explore Our Capabilities</h2>
@@ -166,8 +166,8 @@
         </article>
     </section>
 
-    <div class="parallax-window" data-image-src="https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-04.jpg"></div>
-    <div class="parallax-mobile" style="background-image: url('https://www.leidos.com/sites/all/themes/leidos/images/home/parallax-04.jpg');"></div>
+    <div class="parallax-window" data-image-src="/sites/all/themes/leidos/static-pages/images/home/parallax-04.jpg"></div>
+    <div class="parallax-mobile" style="background-image: url('/sites/all/themes/leidos/static-pages/images/home/parallax-04.jpg');"></div>
 
     <div class="contactCareers">
         <div class="contactCareers__inner">
@@ -184,7 +184,7 @@
                     <h2>Careers</h2>
                 </header>
                 <p>Join Leidos to help make our communities, our nation and our world a better place.</p>
-                <img src="https://www.leidos.com/sites/default/files/homepage-careers.jpg" alt="Leidos employee working">
+                <img src="/sites/all/themes/leidos/static-pages/images/home/homepage-careers.jpg" alt="Leidos employee working">
                 <div class="careersSearch">
                     <form name="careers-keyword-search" id="keywordSearch" method="get" enctype="multipart/form-data" action="http://jobs.leidos.com/search/">
                         <div class="inputWithButton">
