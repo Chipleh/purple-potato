@@ -54,7 +54,7 @@
                         <li><a href="http://jobs.leidos.com/List/Cities"><span>By Location</span></a></li>
                     </ul>
                 </header>
-                <img src="https://www.leidos.com/sites/default/files/hp-map-img.png" width="340" height="178" alt="World map">
+                <img src="/sites/all/themes/leidos/static-pages/images/careers/hp-map-img.png" width="340" height="178" alt="World map">
                 <p>Leidos is an Equal Opportunity Employer - <a href="/EEO">EEO is the Law Poster and Supplements</a>.</p>
             </section>
         </div>
@@ -75,7 +75,7 @@
                 <a href="#pay-benefits">Pay &amp; Benefits</a>
             </li>
             <li>
-                <a href="/careers/e-verify" class="noPad"><img width="124" height="30" src="https://www.leidos.com/sites/default/files/E-Verify_Logo_4-Color_CMYK_Vector_SM_EPS.png""></a>
+                <a href="/careers/e-verify" class="noPad"><img width="124" height="30" src="/sites/all/themes/leidos/static-pages/images/careers/E-Verify_Logo_4-Color_CMYK_Vector_SM_EPS.png""></a>
             </li>
             <li>
                 <span>
@@ -95,7 +95,7 @@
             <h2 class="subhead__head subhead__head--withLink">Life at Leidos</h2>
             <a href="/careers/life/" class="subhead__link">View All&nbsp;»</a>
         </heading>
-        <img class="imageTout__image" src="https://www.leidos.com/sites/default/files/lifeAtLeidos.jpg" width="1000" height="320" alt="">
+        <img class="imageTout__image" src="/sites/all/themes/leidos/static-pages/images/careers/lifeAtLeidos.jpg" width="1000" height="320" alt="">
         <div class="imageTout__meta">
             <heading>
                 <h2>Balance Work & Life</h2>
@@ -123,7 +123,7 @@
         </heading>
         <div class="imageToutCarousel__items">
             <div class="imageToutCarousel__item">
-                <img class="imageToutCarousel__image" src="https://www.leidos.com/sites/default/files/01.jpg" width="280" height="280" alt="">
+                <img class="imageToutCarousel__image" src="/sites/all/themes/leidos/static-pages/images/careers/01.jpg" width="280" height="280" alt="">
                 <div class="imageToutCarousel__counter">1</div>
                 <div class="imageToutCarousel__meta">
                     <h3><span class="imageToutCarousel__mobileCounter">1</span> INSPIRED to make a difference</h3>
@@ -131,7 +131,7 @@
                 </div>
             </div>
             <div class="imageToutCarousel__item">
-                <img class="imageToutCarousel__image" src="https://www.leidos.com/sites/default/files/02.jpg" width="280" height="280" alt="">
+                <img class="imageToutCarousel__image" src="/sites/all/themes/leidos/static-pages/images/careers/02.jpg" width="280" height="280" alt="">
                 <div class="imageToutCarousel__counter">2</div>
                 <div class="imageToutCarousel__meta">
                     <h3><span class="imageToutCarousel__mobileCounter">2</span> PASSIONATE about customer success</h3>
@@ -139,7 +139,7 @@
                 </div>
             </div>
             <div class="imageToutCarousel__item">
-                <img class="imageToutCarousel__image" src="https://www.leidos.com/sites/default/files/03.jpg" width="280" height="280" alt="">
+                <img class="imageToutCarousel__image" src="/sites/all/themes/leidos/static-pages/images/careers/03.jpg" width="280" height="280" alt="">
                 <div class="imageToutCarousel__counter">3</div>
                 <div class="imageToutCarousel__meta">
                     <h3><span class="imageToutCarousel__mobileCounter">3</span> UNITED as a team</h3>
@@ -147,7 +147,7 @@
                 </div>
             </div>
             <div class="imageToutCarousel__item">
-                <img class="imageToutCarousel__image" src="https://www.leidos.com/sites/default/files/04.jpg" width="280" height="280" alt="">
+                <img class="imageToutCarousel__image" src="/sites/all/themes/leidos/static-pages/images/careers/04.jpg" width="280" height="280" alt="">
                 <div class="imageToutCarousel__counter">4</div>
                 <div class="imageToutCarousel__meta">
                     <h3><span class="imageToutCarousel__mobileCounter">4</span> INTEGRITY is the foundation for all that we do</h3>
@@ -162,7 +162,7 @@
             <h2 class="subhead__head subhead__head--withLink">Pay & Benefits</h2>
             <a href="/careers/pay-benefits/" class="subhead__link">View All&nbsp;»</a>
         </heading>
-        <img class="imageTout__image" src="https://www.leidos.com/sites/default/files/payAndBenefits.jpg" width="1000" height="320" alt="">
+        <img class="imageTout__image" src="/sites/all/themes/leidos/static-pages/images/careers/payAndBenefits.jpg" width="1000" height="320" alt="">
         <div class="imageTout__meta">
             <heading>
                 <h2>Compensation</h2>

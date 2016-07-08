@@ -14,11 +14,11 @@
 
     &__image {
         height: 770px;
-        background: url("https://www.leidos.com/sites/all/themes/leidos/images/about-hero.jpg") 100% -172px no-repeat;
+        background: url("/sites/all/themes/leidos/static-pages/images/about/about-hero.jpg") 100% -172px no-repeat;
     }
     &__overlay {
-        background: transparent url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.svg") 50% 0 no-repeat;
-        background: url("https://www.leidos.com/sites/all/themes/leidos/images/vertices-careers.png") 50% 0 no-repeat;
+        background: transparent url("/sites/all/themes/leidos/static-pages/images/backgrounds/vertices-careers.svg") 50% 0 no-repeat;
+        background: url("/sites/all/themes/leidos/static-pages/images/backgrounds/vertices-careers.png") 50% 0 no-repeat;
         height: 800px;
     }
 

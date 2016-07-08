@@ -203,19 +203,19 @@
         z-index: 5;
     }
     .slick-prev {
-        background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left.png) no-repeat;
+        background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-left.png) no-repeat;
         left: 25%;
 
         &:hover {
-            background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left-hover.png);
+            background-image: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-left-hover.png);
         }
     }
     .slick-next {
-        background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right.png) no-repeat;
+        background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-right.png) no-repeat;
         right: 25%;
 
         &:hover {
-            background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right-hover.png);
+            background-image: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-right-hover.png);
         }
     }
     .slick-dots {
