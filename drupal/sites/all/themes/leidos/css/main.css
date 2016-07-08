@@ -9513,21 +9513,21 @@ p.subtext {
 }
 /* line 205, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-prev {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left.png);
+  background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left.png) no-repeat;
   left: 25%;
 }
 /* line 209, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-prev:hover {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left-hover.png);
+  background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-left-hover.png);
 }
 /* line 213, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-next {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right.png);
+  background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right.png) no-repeat;
   right: 25%;
 }
 /* line 217, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-next:hover {
-  background: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right-hover.png);
+  background-image: url(https://www.leidos.com/sites/all/themes/leidos/images/home/pagination-right-hover.png);
 }
 /* line 221, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-dots {
