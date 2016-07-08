@@ -13,7 +13,8 @@
     }
 
     section,
-    nav {
+    nav,
+    > div {
         @include clearfix;
     }
 
@@ -68,7 +69,7 @@
     }
 
     .arrowRight {
-        background: url('https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png')  0 -34px no-repeat;
+        background: url('/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png')  0 -34px no-repeat;
         display: inline-block;
         height: 9px;
         margin-left: 10px;
@@ -144,7 +145,7 @@
             line-height: normal;
 
             &:after {
-                background: url('https://www.leidos.com/sites/all/themes/leidos/images/sprites/sprites-s6882c8ed69.png') no-repeat;
+                background: url('/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png') no-repeat;
                 background-position: 0 -1034px;
                 color: #c2c2c2;
                 content: '';
@@ -169,6 +170,25 @@
 
     }
 
+    .nextSection {
+        background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/scroll_down_bg.png) no-repeat;
+        border: 0;
+        bottom: -28px;
+        display: block;
+        height: 28px;
+        margin: 0 auto 40px auto;
+        text-indent: -9999px;
+        width: 82px;
+
+        &:after {
+            background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png) 0 -24px no-repeat;
+            content: '';
+            display: block;
+            height: 10px;
+            margin: -10px auto 5px auto;
+            width: 15px;
+        }
+    }
 
     /* Slick Slider */
     .slick-slider {

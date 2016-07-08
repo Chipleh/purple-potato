@@ -1,0 +1,118 @@
+.staticContent .storiesCarousel {
+    $storiesCarousel: 'storiesCarousel';
+    background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/left-slant-bg.png) no-repeat 50% 50% white;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        margin-right: -0.25em;
+        vertical-align: middle;
+    }
+    .slick-slide .#{$storiesCarousel}__image {
+        display: inline-block;
+        height: auto;
+        margin: 6% 12%;
+        max-width: 340px;
+        vertical-align: middle;
+    }
+    &__meta {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40%;
+
+        h2 {
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 40px;
+            font-weight: normal;
+            line-height: 1.175em;
+            margin-bottom: 22px;
+            margin-top: 0;
+        }
+        h3 {
+            color: #8b8b8b;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6em;
+            margin-bottom: 30px;
+        }
+        a {
+            font-size: 12px;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png) no-repeat;
+        border: 0;
+        cursor: pointer;
+        height: 101px;
+        position: absolute;
+        text-indent: -9999px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 41px;
+    }
+    .slick-prev {
+        background-position: 0 -424px;
+        left: 0;
+
+        &:hover {
+            background-position: 0 -222px;
+        }
+    }
+    .slick-next {
+        background-position: 0 -727px;
+        right: 0;
+
+        &:hover {
+            background-position: 0 -525px;
+        }
+    }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        background: transparent;
+
+        .slick-slide .#{$storiesCarousel}__image {
+            display: block;
+            margin: 5% auto;
+        }
+        &__meta {
+            display: block;
+            padding: 0 5% 60px 5%;
+            text-align: center;
+            width: 100%;
+
+            p {
+                &,
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+        .slick-prev,
+        .slick-next {
+            top: 35%;
+        }
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+        .slick-slide .#{$storiesCarousel}__image {
+            max-width: 75%;
+        }
+        &__meta {
+            h2 {
+                font-size: 30px;
+            }
+        }
+        .slick-prev,
+        .slick-next {
+            top: 24%;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+.staticContent .about {
+    background-color: #fff;
+    background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/about-bg-large.png) top center no-repeat;
+    background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/about-bg-large.png) top center no-repeat, url(/sites/all/themes/leidos/static-pages/images/backgrounds/about-bg.png) 50% 0px repeat-x;
+
+    &__inner {
+        height: 640px;
+        margin: 0 auto;
+        max-width: 1180px;
+        padding: 0 4.5% 0 4.9%;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            margin-right: -0.25em;
+            vertical-align: middle;
+        }
+    }
+    &__about {
+        display: inline-block;
+        vertical-align: middle;
+        width: 45%;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #8b8b8b;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6em;
+        }
+    }
+    &__subsections {
+        display: inline-block;
+        margin-left: 12%;
+        vertical-align: middle;
+        width: 40%;
+    }
+    &__statistics {
+        padding: 20px 0 60px 84px;
+
+        h2 {
+            color: #ababab;
+            font-family: AvenirLT-Black, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        p {
+            color: #1f1646;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 100px;
+            font-weight: bold;
+            letter-spacing: -2px;
+            line-height: 1.05em;
+            margin: 0;
+            white-space: nowrap;
+        }
+    }
+    &__mission {
+        padding: 30px 0 0 0;
+
+        h2 {
+            font-size: 12px;
+            line-height: normal;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-family: AvenirLT-Black, Arial, sans-serif;
+        }
+        p {
+            color: #8b8b8b;
+            font-family: AvenirLT-Book, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.6em;
+        }
+    }
+
+    /*  tablet & mobile
+    **************************************************/
+    @media only screen and (max-width: 960px) {
+        background: #fff;
+        padding-bottom: 60px;
+        padding-top: 60px;
+
+        &__about,
+        &__subsections {
+            display: block;
+            width: 100%;
+        }
+        &__subsections {
+            margin-left: 0;
+        }
+        &__inner {
+            height: auto;
+
+            &:before {
+                content: initial;
+            }
+        }
+        &__about {
+            padding-bottom: 40px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+        &__statistics {
+            padding-bottom: 40px;
+            padding-left: 0;
+
+            p {
+                font-size: 80px;
+            }
+        }
+    }
+
+    /*  mobile-only
+    **************************************************/
+    @media only screen and (max-width: 720px) {
+        &__about {
+            h2 {
+                font-size: 40px;
+            }
+        }
+    }
+}
