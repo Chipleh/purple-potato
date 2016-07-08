@@ -8265,12 +8265,13 @@ p.subtext {
   letter-spacing: -2px;
   line-height: 1.05em;
   margin: 0;
+  white-space: nowrap;
 }
-/* line 62, sass/partials/modules/_static-about.scss */
+/* line 63, sass/partials/modules/_static-about.scss */
 .staticContent .about__mission {
   padding: 30px 0 0 0;
 }
-/* line 65, sass/partials/modules/_static-about.scss */
+/* line 66, sass/partials/modules/_static-about.scss */
 .staticContent .about__mission h2 {
   font-size: 12px;
   line-height: normal;
@@ -8278,7 +8279,7 @@ p.subtext {
   text-transform: uppercase;
   font-family: AvenirLT-Black, Arial, sans-serif;
 }
-/* line 72, sass/partials/modules/_static-about.scss */
+/* line 73, sass/partials/modules/_static-about.scss */
 .staticContent .about__mission p {
   color: #8b8b8b;
   font-family: AvenirLT-Book, Arial, sans-serif;
@@ -8292,43 +8293,43 @@ p.subtext {
     padding-bottom: 60px;
     padding-top: 60px;
   }
-  /* line 87, sass/partials/modules/_static-about.scss */
+  /* line 88, sass/partials/modules/_static-about.scss */
   .staticContent .about__about, .staticContent .about__subsections {
     display: block;
     width: 100%;
   }
-  /* line 92, sass/partials/modules/_static-about.scss */
+  /* line 93, sass/partials/modules/_static-about.scss */
   .staticContent .about__subsections {
     margin-left: 0;
   }
-  /* line 95, sass/partials/modules/_static-about.scss */
+  /* line 96, sass/partials/modules/_static-about.scss */
   .staticContent .about__inner {
     height: auto;
   }
-  /* line 98, sass/partials/modules/_static-about.scss */
+  /* line 99, sass/partials/modules/_static-about.scss */
   .staticContent .about__inner:before {
     content: initial;
   }
-  /* line 102, sass/partials/modules/_static-about.scss */
+  /* line 103, sass/partials/modules/_static-about.scss */
   .staticContent .about__about {
     padding-bottom: 40px;
   }
-  /* line 105, sass/partials/modules/_static-about.scss */
+  /* line 106, sass/partials/modules/_static-about.scss */
   .staticContent .about__about p {
     font-size: 16px;
   }
-  /* line 109, sass/partials/modules/_static-about.scss */
+  /* line 110, sass/partials/modules/_static-about.scss */
   .staticContent .about__statistics {
     padding-bottom: 40px;
     padding-left: 0;
   }
-  /* line 113, sass/partials/modules/_static-about.scss */
+  /* line 114, sass/partials/modules/_static-about.scss */
   .staticContent .about__statistics p {
     font-size: 80px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 123, sass/partials/modules/_static-about.scss */
+  /* line 124, sass/partials/modules/_static-about.scss */
   .staticContent .about__about h2 {
     font-size: 40px;
   }
