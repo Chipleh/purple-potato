@@ -41,13 +41,15 @@
         img {
             border: #fff 6px solid;
             margin: 10px 0 20px;
-            width: 98%;
+            width: 100%;
         }
         .careersSearch {
             margin-bottom: 40px;
 
             input {
                 background-color: #fff;
+                height: 51px;
+                margin: 0;
             }
         }
         footer {
@@ -69,12 +71,14 @@
     /*  tablet & mobile
     **************************************************/
     @media only screen and (max-width: 960px) {
-        padding-top: 60px;
+        padding: 60px 4.5% 60px 4.9%;
 
         .contact,
         .careers {
             float: none;
+            margin-left: 0;
             padding-bottom: 60px;
+            padding-left: 0;
             padding-top: 0;
             width: 100%;
         }
@@ -82,13 +86,22 @@
             background: none;
         }
         footer {
-            font-size: 16px;
+            &,
+            a {
+                font-size: 16px;
+            }
         }
     }
 
     /*  mobile-only
     **************************************************/
     @media only screen and (max-width: 720px) {
-
+        .contact,
+        .careers {
+            h2 {
+                font-size: 40px;
+                line-height: normal;
+            }
+        }
     }
 }

@@ -12,13 +12,15 @@
     }
     .slick-slide .#{$storiesCarousel}__image {
         display: inline-block;
-        margin: 5% 15%;
+        height: auto;
+        margin: 6% 12%;
+        max-width: 340px;
         vertical-align: middle;
     }
     &__meta {
         display: inline-block;
         vertical-align: middle;
-        width: 30%;
+        width: 40%;
 
         h2 {
             font-family: AvenirLT-Book, Arial, sans-serif;
@@ -83,6 +85,13 @@
             padding: 0 5% 60px 5%;
             text-align: center;
             width: 100%;
+
+            p {
+                &,
+                a {
+                    font-size: 16px;
+                }
+            }
         }
         .slick-prev,
         .slick-next {
