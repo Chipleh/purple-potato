@@ -13,11 +13,11 @@
             <heading>
                 <h2>We turn challenges into opportunities.</h2>
             </heading>
-            <p>We bring a mix of innovative technology and sector expertise to customers in <a href="/natsec">national security</a>, <a href="/health">health</a>, and <a href="/infrastructure">infrastructure</a>. We look for solutions that not only transform businesses, but change the world.</p>
+            <p>We bring a mix of innovative technology and sector expertise to customers in <a href="/national-security">national security</a>, <a href="/health">health</a>, and <a href="/infrastructure">infrastructure</a>. We look for solutions that not only transform businesses, but change the world.</p>
             <a href="/capabilities" class="cta cta__primary">View Our Capabilities<span class="arrowRight"></span></a>
         </div>
         <div class="hero__topicList">
-            <a href="/sites/default/files/Leidos_Fact_Sheet.pdf" class="cta cta__primary">View Our Fact Sheet<span class="arrowRight"></span></a>
+            <a href="/sites/default/files/responsive/about/Leidos_Fact_Sheet.pdf " class="cta cta__primary">View Our Fact Sheet<span class="arrowRight"></span></a>
             <ul>
                 <li class="hero__topic">
                     <div class="hero__topic__inner">
@@ -82,7 +82,7 @@
                         <h2>Our History</h2>
                     </heading>
                     <p>More than 40 years ago a small team of visionary scientists set out to solve big problems…</p>
-                    <a href="" class="cta cta__secondary">Learn More <span class="arrowRight"></span></a>
+                    <a href="/about/history" class="cta cta__secondary">Learn More <span class="arrowRight"></span></a>
                 </div>
             </li>
             <li class="history__event" style="background-image: url(/sites/all/themes/leidos/static-pages/images/about/timeline-02-1970.jpg)">
@@ -229,8 +229,8 @@
 
     <section class="fullWidthText fullWidthText--threeBlocks fullWidthText--lgHeadings" id="leidos-companies">
         <heading class="subhead">
-            <h2 class="subhead__head subhead__head--withLink">Careers FAQs</h2>
-            <a href="/careers/faqs/" class="subhead__link">View All »</a>
+            <h2 class="subhead__head subhead__head--withLink">Leidos Companies</h2>
+            <a href="/about/companies" class="subhead__link">View All »</a>
         </heading>
         <ul>
             <li>
@@ -241,7 +241,7 @@
             <li>
                 <h3>Leidos Canada</h3>
                 <p>From information, environmental, and engineering solutions to healthcare technologies — Leidos Canadian operations provide a wide range of services and products to government agencies and private businesses.</p>
-                <a href="https://www.leidos.com/canada" target="_blank">Learn More »</a>
+                <a href="/about/companies/canada" target="_blank">Learn More »</a>
             </li>
             <li>
                 <h3>Varec, Inc.</h3>
