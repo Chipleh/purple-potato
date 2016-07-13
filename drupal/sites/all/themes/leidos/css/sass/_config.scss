@@ -162,7 +162,7 @@ $multiBit: 0.643vw;
 
 /* calcLineHeight */
 @function calcLineHeight($value, $multiplier) {
-	@return $value * $multiplier; 
+	@return $value * $multiplier;
 }
 
 
@@ -250,7 +250,7 @@ h6 {
 /* links */
 a {
 	color: $color-leidos-purple-light;
-	transition: all .5s ease;
+	transition: all .3s ease;
 
 	&:hover {
 		color: $color-leidos-purple-dark;
