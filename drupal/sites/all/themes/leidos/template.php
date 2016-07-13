@@ -503,7 +503,7 @@ function leidos_preprocess_panels_pane(&$variables) {
 function leidos_menu_link(array $variables) {
   $element = $variables['element'];
 
-  // Process only the menu with no parent.
+  // Process only the menu with no parent
   if ($element['#original_link']['plid'] == 0) {
     if (($key = array_search('active-trail', $element['#attributes']['class'])) !== false) {
       unset($element['#attributes']['class'][$key]);
@@ -512,8 +512,7 @@ function leidos_menu_link(array $variables) {
     if (empty($element['#localized_options']['attributes']['title'])) {
       $element['#localized_options']['attributes']['title'] = $element['#title'];
     }
-    // Check if the menu link is in the active trail for the current page.
-    if($element['#href'] == current_path()){
+    if ($element['#href'] == current_path()) {
       $element['#attributes']['class'][] = 'active-trail-selected';
       $element['#localized_options']['attributes']['class'] = array();
       $element['#localized_options']['attributes']['class'][] = 'active-trail';
