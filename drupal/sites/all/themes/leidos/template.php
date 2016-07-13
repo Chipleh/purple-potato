@@ -505,7 +505,7 @@ function leidos_menu_link(array $variables) {
 
   // Process only the menu with no parent.
   if ($element['#original_link']['plid'] == 0) {
-    if (($key = array_search('active-trail', $element['#attributes']['class'])) !== FALSE) {
+    if (($key = array_search('active-trail', $element['#attributes']['class'])) !== false) {
       unset($element['#attributes']['class'][$key]);
     }
     // Make sure all link items have a title.
@@ -513,8 +513,7 @@ function leidos_menu_link(array $variables) {
       $element['#localized_options']['attributes']['title'] = $element['#title'];
     }
     // Check if the menu link is in the active trail for the current page.
-    $current_path = drupal_get_path_alias(current_path());
-    if (strpos($current_path, $element['#href']) !== FALSE) {
+    if($element['#href'] == current_path()){
       $element['#attributes']['class'][] = 'active-trail-selected';
       $element['#localized_options']['attributes']['class'] = array();
       $element['#localized_options']['attributes']['class'][] = 'active-trail';
@@ -522,7 +521,7 @@ function leidos_menu_link(array $variables) {
 
     if ($element['#below']) {
       foreach ($element['#below'] as $subitem) {
-        if (isset($subitem['#href']) && $subitem['#href'] == $current_path) {
+        if (isset($subitem['#href']) && $subitem['#href'] == current_path()) {
           $element['#attributes']['class'][] = 'active-trail';
         }
       }
