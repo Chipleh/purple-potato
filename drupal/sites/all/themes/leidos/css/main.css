@@ -184,7 +184,7 @@ h6 {
 /* line 251, sass/_config.scss */
 a {
   color: #850F88;
-  transition: all .5s ease;
+  transition: all .3s ease;
 }
 /* line 255, sass/_config.scss */
 a:hover {
@@ -9309,6 +9309,8 @@ p.subtext {
   position: relative;
   background-position: 50% 50%;
   background-size: cover;
+  max-height: 770px;
+  overflow: hidden;
 }
 /* line 20, sass/_mixins.scss */
 .staticContent .heroCarousel__item:before {
@@ -9325,7 +9327,7 @@ p.subtext {
   right: 0;
   bottom: 0;
 }
-/* line 37, sass/partials/modules/_static-hero-carousel.scss */
+/* line 39, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v1 .heroCarousel__inner {
   bottom: 80px;
   left: 50%;
@@ -9335,11 +9337,11 @@ p.subtext {
           transform: translateX(-50%);
   width: 70%;
 }
-/* line 44, sass/partials/modules/_static-hero-carousel.scss */
+/* line 46, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v1 h1 {
   text-indent: -9999px;
 }
-/* line 47, sass/partials/modules/_static-hero-carousel.scss */
+/* line 49, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v1 p {
   color: #fbb53b;
   display: inline-block;
@@ -9352,25 +9354,33 @@ p.subtext {
   text-transform: uppercase;
   width: 85%;
 }
-/* line 59, sass/partials/modules/_static-hero-carousel.scss */
+/* line 61, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v1 .cta {
   bottom: 0;
   left: 5%;
   margin: 0;
   position: absolute;
 }
-/* line 66, sass/partials/modules/_static-hero-carousel.scss */
+/* line 67, sass/partials/modules/_static-hero-carousel.scss */
+.staticContent .heroCarousel__item--v1 .cta:hover {
+  border: 1px solid #646464;
+}
+/* line 70, sass/partials/modules/_static-hero-carousel.scss */
+.staticContent .heroCarousel__item--v1 .cta:hover .arrowRight {
+  opacity: 0.5;
+}
+/* line 76, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v2 {
   text-align: center;
 }
-/* line 69, sass/partials/modules/_static-hero-carousel.scss */
+/* line 79, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v2 h1 {
   color: #fff;
   font-size: 110px;
   font-size: 5vw;
   margin: 15% 0 0 0;
 }
-/* line 75, sass/partials/modules/_static-hero-carousel.scss */
+/* line 85, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v2 p {
   color: #e6e7ec;
   font-family: AvenirLT-Book, Arial, sans-serif;
@@ -9380,80 +9390,80 @@ p.subtext {
   margin: 0 auto;
   width: 60%;
 }
-/* line 84, sass/partials/modules/_static-hero-carousel.scss */
+/* line 94, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v2 .cta {
   background: #76399c;
 }
-/* line 88, sass/partials/modules/_static-hero-carousel.scss */
+/* line 98, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v3 {
   text-align: left;
 }
-/* line 91, sass/partials/modules/_static-hero-carousel.scss */
+/* line 101, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v3 .heroCarousel__inner {
   line-height: normal;
   margin-left: 6%;
   padding-top: 9%;
   width: 50%;
 }
-/* line 97, sass/partials/modules/_static-hero-carousel.scss */
+/* line 107, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v3 h1 {
   color: #850f88;
   margin: 0 0 20px 0;
   text-shadow: 0px 0px 30px white;
 }
-/* line 102, sass/partials/modules/_static-hero-carousel.scss */
+/* line 112, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v3 p {
   color: #1f1646;
   font-size: 19px;
   margin-bottom: 0;
   text-transform: uppercase;
 }
-/* line 108, sass/partials/modules/_static-hero-carousel.scss */
+/* line 118, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v3 .cta {
   background: #76399c;
   opacity: 0.75;
 }
-/* line 113, sass/partials/modules/_static-hero-carousel.scss */
+/* line 123, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v4 {
   text-align: right;
 }
-/* line 116, sass/partials/modules/_static-hero-carousel.scss */
+/* line 126, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v4 .heroCarousel__inner {
   padding-right: 40px;
   padding-top: 9%;
 }
-/* line 120, sass/partials/modules/_static-hero-carousel.scss */
+/* line 130, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v4 h1 {
   color: #fff;
   margin: 0;
 }
-/* line 124, sass/partials/modules/_static-hero-carousel.scss */
+/* line 134, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v4 p {
   color: #f7f9a6;
   font-size: 19px;
   margin-bottom: 0;
   text-transform: uppercase;
 }
-/* line 130, sass/partials/modules/_static-hero-carousel.scss */
+/* line 140, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v4 .cta__primary {
   background: #522563;
   border: 1px solid #896592;
   color: #c1c1c1;
   padding: 11px 31px;
 }
-/* line 138, sass/partials/modules/_static-hero-carousel.scss */
+/* line 148, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v5 .heroCarousel__inner {
   bottom: 80px;
   left: 1%;
   top: auto;
 }
-/* line 143, sass/partials/modules/_static-hero-carousel.scss */
+/* line 153, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v5 h1 {
   color: #fff;
   font-size: 6.65vw;
   margin: 0;
 }
-/* line 148, sass/partials/modules/_static-hero-carousel.scss */
+/* line 158, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v5 p {
   color: #3ccccf;
   display: inline-block;
@@ -9462,21 +9472,21 @@ p.subtext {
   margin-right: 60px;
   text-transform: uppercase;
 }
-/* line 156, sass/partials/modules/_static-hero-carousel.scss */
+/* line 166, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v5 .cta {
   background: #000;
   border: 1px solid #fff;
   margin-top: 0;
 }
-/* line 162, sass/partials/modules/_static-hero-carousel.scss */
+/* line 172, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v6 {
   text-align: right;
 }
-/* line 165, sass/partials/modules/_static-hero-carousel.scss */
+/* line 175, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v6 .heroCarousel__inner {
   padding: 5% 5% 5% 50%;
 }
-/* line 168, sass/partials/modules/_static-hero-carousel.scss */
+/* line 178, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v6 h1 {
   color: #000;
   font-family: AvenirLT-Book, Arial, sans-serif;
@@ -9488,7 +9498,7 @@ p.subtext {
   text-shadow: 0px 0px 30px white;
   text-transform: none;
 }
-/* line 179, sass/partials/modules/_static-hero-carousel.scss */
+/* line 189, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v6 p {
   color: #a2893e;
   font: 20px/1.3 AvenirLT-Medium, Arial, sans-serif;
@@ -9496,13 +9506,13 @@ p.subtext {
   text-shadow: 0px 0px 30px white;
   text-transform: uppercase;
 }
-/* line 186, sass/partials/modules/_static-hero-carousel.scss */
+/* line 196, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v6 .cta__primary {
   background: rgba(0, 0, 0, 0.4);
   border: 1px solid #fff;
   margin-top: 0;
 }
-/* line 194, sass/partials/modules/_static-hero-carousel.scss */
+/* line 204, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-prev,
 .staticContent .heroCarousel .slick-next {
   border: 0;
@@ -9514,25 +9524,25 @@ p.subtext {
   width: 11px;
   z-index: 5;
 }
-/* line 205, sass/partials/modules/_static-hero-carousel.scss */
+/* line 215, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-prev {
   background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-left.png) no-repeat;
   left: 25%;
 }
-/* line 209, sass/partials/modules/_static-hero-carousel.scss */
+/* line 219, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-prev:hover {
   background-image: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-left-hover.png);
 }
-/* line 213, sass/partials/modules/_static-hero-carousel.scss */
+/* line 223, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-next {
   background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-right.png) no-repeat;
   right: 25%;
 }
-/* line 217, sass/partials/modules/_static-hero-carousel.scss */
+/* line 227, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-next:hover {
   background-image: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/pagination-right-hover.png);
 }
-/* line 221, sass/partials/modules/_static-hero-carousel.scss */
+/* line 231, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-dots {
   bottom: 35px;
   left: 0;
@@ -9540,11 +9550,11 @@ p.subtext {
   right: 0;
   text-align: center;
 }
-/* line 228, sass/partials/modules/_static-hero-carousel.scss */
+/* line 238, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-dots li {
   display: inline-block;
 }
-/* line 231, sass/partials/modules/_static-hero-carousel.scss */
+/* line 241, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-dots li button {
   background: #fff;
   border: 0;
@@ -9554,15 +9564,15 @@ p.subtext {
   text-indent: -9999px;
   width: 15px;
 }
-/* line 240, sass/partials/modules/_static-hero-carousel.scss */
+/* line 250, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-dots li button:hover {
   background: #bebfbd;
 }
-/* line 246, sass/partials/modules/_static-hero-carousel.scss */
+/* line 256, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-dots li.slick-active button {
   background: #bebfbd;
 }
-/* line 251, sass/partials/modules/_static-hero-carousel.scss */
+/* line 261, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel .slick-dots li + li {
   margin-left: 15px;
 }
@@ -9571,34 +9581,34 @@ p.subtext {
   .staticContent .heroCarousel {
     text-align: center;
   }
-  /* line 265, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 275, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v1 .heroCarousel__inner {
     bottom: 60px;
   }
-  /* line 271, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 281, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v1 p {
     font-size: 16px;
     left: 150px;
     margin-top: 0;
     text-align: left;
   }
-  /* line 282, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 292, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v2 p {
     width: 95%;
   }
-  /* line 287, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 297, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v5 p {
     display: block;
     margin-bottom: 20px;
     margin-right: 0;
   }
-  /* line 295, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 305, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel h1 {
     font-size: 40px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 306, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 316, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item {
     position: relative;
   }
@@ -9617,36 +9627,36 @@ p.subtext {
     right: 0;
     bottom: 0;
   }
-  /* line 309, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 319, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v1 {
     background-position: 50% bottom;
   }
-  /* line 312, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 322, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v1 .heroCarousel__inner {
     width: 100%;
   }
-  /* line 315, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 325, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v1 p {
     left: 0;
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
   }
-  /* line 321, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 331, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v1 .cta {
     left: 0;
     position: relative;
   }
-  /* line 327, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 337, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v2 h1 {
     font-size: 40px;
     margin-top: 35%;
   }
-  /* line 331, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 341, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v2 p {
     font-size: 20px;
   }
-  /* line 336, sass/partials/modules/_static-hero-carousel.scss */
+  /* line 346, sass/partials/modules/_static-hero-carousel.scss */
   .staticContent .heroCarousel__item--v3 .heroCarousel__inner {
     width: 90%;
   }
@@ -10404,6 +10414,10 @@ p.subtext {
   line-height: 1.1em;
 }
 /* line 52, sass/partials/modules/_static-news.scss */
+.staticContent .news__header a:hover {
+  color: #850f88;
+}
+/* line 57, sass/partials/modules/_static-news.scss */
 .staticContent .news__footer {
   border-top: solid 1px #d0d0d0;
   font-size: 12px;
@@ -10415,27 +10429,27 @@ p.subtext {
   .staticContent .news {
     padding-bottom: 40px;
   }
-  /* line 64, sass/partials/modules/_static-news.scss */
+  /* line 69, sass/partials/modules/_static-news.scss */
   .staticContent .news .subhead {
     padding: 0 7% 0 7%;
   }
-  /* line 67, sass/partials/modules/_static-news.scss */
+  /* line 72, sass/partials/modules/_static-news.scss */
   .staticContent .news__article {
     float: none;
     margin-bottom: 20px;
     width: 100%;
   }
-  /* line 72, sass/partials/modules/_static-news.scss */
+  /* line 77, sass/partials/modules/_static-news.scss */
   .staticContent .news__article + .news__article {
     float: none;
   }
-  /* line 76, sass/partials/modules/_static-news.scss */
+  /* line 81, sass/partials/modules/_static-news.scss */
   .staticContent .news__article p {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 86, sass/partials/modules/_static-news.scss */
+  /* line 91, sass/partials/modules/_static-news.scss */
   .staticContent .news__article h3 {
     font-size: 20px;
   }

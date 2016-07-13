@@ -32,6 +32,8 @@
         @include aspect-ratio(16, 9);
         background-position: 50% 50%;
         background-size: cover;
+        max-height: 770px;
+        overflow: hidden;
 
         &--v1 {
             .#{heroCarousel}__inner {
@@ -61,6 +63,14 @@
                 left: 5%;
                 margin: 0;
                 position: absolute;
+
+                &:hover {
+                    border: 1px solid #646464;
+
+                    .arrowRight {
+                        opacity: 0.5;
+                    }
+                }
             }
         }
         &--v2 {
