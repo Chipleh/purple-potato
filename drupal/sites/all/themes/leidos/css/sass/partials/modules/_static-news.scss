@@ -48,6 +48,11 @@
         h3 {
             line-height: 1.1em;
         }
+        a {
+            &:hover {
+                color: #850f88;
+            }
+        }
     }
     &__footer {
         border-top: solid 1px #d0d0d0;

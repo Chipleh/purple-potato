@@ -35,7 +35,7 @@
         <div class="heroCarousel__item heroCarousel__item--v5" style="background-image: url('/sites/all/themes/leidos/static-pages/images/hero-rotator/all-systems-go.jpg');">
             <div class="heroCarousel__inner">
                 <h1>All Systems Go.</h1>
-                <p>Leidos stakes claim in intellegent infrastructure.</p>
+                <p>Leidos stakes claim in intellegent infrastructure</p>
                 <a href="/infrastructure/all-systems-go" class="cta cta__primary">Learn More<span class="arrowRight"></span></a>
             </div>
         </div>
