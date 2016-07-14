@@ -5712,6 +5712,10 @@ p.subtext {
 .pane-bundle-long-form-copy .flexible-template-content h5 p {
   margin: 0;
 }
+/* line 46, sass/partials/modules/_flex-long-form.scss */
+.pane-bundle-long-form-copy .flexible-template-content p {
+  font-family: "AvenirLT-Book", Arial, sans-serif;
+}
 /* line 50, sass/partials/modules/_flex-long-form.scss */
 .pane-bundle-long-form-copy .flexible-template-content h1 {
   font-size: 4.3vw;
