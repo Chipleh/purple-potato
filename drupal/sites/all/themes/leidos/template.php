@@ -512,7 +512,7 @@ function leidos_menu_link(array $variables) {
     if (empty($element['#localized_options']['attributes']['title'])) {
       $element['#localized_options']['attributes']['title'] = $element['#title'];
     }
-    if ($element['#href'] == current_path()) {
+    if ($element['#href'] == current_path()) {    
       $element['#attributes']['class'][] = 'active-trail-selected';
       $element['#localized_options']['attributes']['class'] = array();
       $element['#localized_options']['attributes']['class'][] = 'active-trail';
@@ -521,7 +521,7 @@ function leidos_menu_link(array $variables) {
     if ($element['#below']) {
       foreach ($element['#below'] as $subitem) {
         if (isset($subitem['#href']) && $subitem['#href'] == current_path()) {
-          $element['#attributes']['class'][] = 'active-trail';
+          $element['#attributes']['class'][] = 'active-trail-selected';
         }
       }
     }
