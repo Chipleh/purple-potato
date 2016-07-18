@@ -88,7 +88,7 @@ function flexible_template_preprocess_field(&$variables) {
       $item['#attributes']['class'] = array('column', 'column-' . $key, 'columns-total-' . count($variables['items']));
 
       if (isset($content['field_background_image_url'])) {
-        if(isset($content['field_background_image'])) {
+        if(isset($content['field_background_image']) && !isset($content['field_title_item']) && !isset($content['field_subhead'])) {
           $item['#theme_wrappers'][] = 'flexible_template_url_field_collection_view';
           $item['#field_background_image_url'] = $content['field_background_image_url']['#items'][0]['url'];
         }
