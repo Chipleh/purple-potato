@@ -189,6 +189,59 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_background_image_url'
+  $field_instances['field_collection_item-field_columns_multi-field_background_image_url'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 11,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_background_image_url',
+    'label' => 'Background Image URL',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 255,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 255,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_columns_multi-field_background_mobile_image'
   $field_instances['field_collection_item-field_columns_multi-field_background_mobile_image'] = array(
     'bundle' => 'field_columns_multi',
@@ -253,7 +306,7 @@ function flexible_template_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -585,26 +638,26 @@ function flexible_template_field_default_field_instances() {
     'deleted' => 0,
     'description' => '<strong>One Column</strong>
 <ul>
-<li>H1 (mobile & desktop) - 34 characters</li>
-<li>H2 (mobile & desktop) - 40 characters</li>
+<li>H1: 24 - 32 characters</li>
+<li>H2: 29 - 39 characters</li>
 </ul>
 <br>
 <strong>Two Column</strong>
 <ul>
-<li>H1 (mobile & desktop) - 30 characters</li>
-<li>H2 (mobile & desktop) - 34 characters</li>
+<li>H1: 12 - 16 characters</li>
+<li>H2: 14 - 19 characters</li>
 </ul>
 <br>
 <strong>Three Column</strong>
 <ul>
-<li>H1 (mobile & desktop) - 30 characters</li>
-<li>H2 (mobile & desktop) - 66 characters</li>
+<li>H1: 10 - 14 characters</li>
+<li>H2: 44 - 58 characters</li>
 </ul>
 <br>
 <strong>Four Column</strong>
 <ul>
-<li>H1 (mobile & desktop) - 50 characters</li>
-<li>H2 (mobile & desktop) - 60 characters</li>
+<li>H1: 24 - 36 characters</li>
+<li>H2; 40 - 54 characters</li>
 </ul>',
     'display' => array(
       'default' => array(
@@ -3598,29 +3651,6 @@ function flexible_template_field_default_field_instances() {
   t('(mobile & desktop) - 15 characters');
   t('<strong>One Column</strong>
 <ul>
-<li>H1 (mobile & desktop) - 34 characters</li>
-<li>H2 (mobile & desktop) - 40 characters</li>
-</ul>
-<br>
-<strong>Two Column</strong>
-<ul>
-<li>H1 (mobile & desktop) - 30 characters</li>
-<li>H2 (mobile & desktop) - 34 characters</li>
-</ul>
-<br>
-<strong>Three Column</strong>
-<ul>
-<li>H1 (mobile & desktop) - 30 characters</li>
-<li>H2 (mobile & desktop) - 66 characters</li>
-</ul>
-<br>
-<strong>Four Column</strong>
-<ul>
-<li>H1 (mobile & desktop) - 50 characters</li>
-<li>H2 (mobile & desktop) - 60 characters</li>
-</ul>');
-  t('<strong>One Column</strong>
-<ul>
 <li>H3 (mobile & desktop) - 156 characters</li>
 <li>H4 (mobile & desktop) - 188- characters</li>
 </ul>
@@ -3642,6 +3672,29 @@ function flexible_template_field_default_field_instances() {
 <li>H3 (mobile & desktop) - 109 characters</li>
 <li>H4 (mobile & desktop) - 188 characters</li>
 </ul>');
+  t('<strong>One Column</strong>
+<ul>
+<li>H1: 24 - 32 characters</li>
+<li>H2: 29 - 39 characters</li>
+</ul>
+<br>
+<strong>Two Column</strong>
+<ul>
+<li>H1: 12 - 16 characters</li>
+<li>H2: 14 - 19 characters</li>
+</ul>
+<br>
+<strong>Three Column</strong>
+<ul>
+<li>H1: 10 - 14 characters</li>
+<li>H2: 44 - 58 characters</li>
+</ul>
+<br>
+<strong>Four Column</strong>
+<ul>
+<li>H1: 24 - 36 characters</li>
+<li>H2; 40 - 54 characters</li>
+</ul>');
   t('<ul>
 <li>H1 (mobile & desktop) - 34 characters</li>
 <li>H2 (mobile & desktop) - 40 characters</li>
@@ -3652,6 +3705,7 @@ function flexible_template_field_default_field_instances() {
 </ul>');
   t('Background Color');
   t('Background Image');
+  t('Background Image URL');
   t('Background Mobile Image');
   t('Background Video');
   t('Body');
@@ -3664,7 +3718,7 @@ function flexible_template_field_default_field_instances() {
   t('Display header');
   t('Enable Drop Cap');
   t('For best modal window results the recommended dimensions for the video file are 1280 x 720');
-  t('For best results the recommended video resolution is <em>1280 x 720</em>');
+  t('For best results the recommended video resolution is greater than <em>1280 x 720</em>');
   t('Grid Type');
   t('Icon item');
   t('Image');
