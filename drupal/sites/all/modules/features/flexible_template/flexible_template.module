@@ -90,7 +90,7 @@ function flexible_template_preprocess_field(&$variables) {
       if (isset($content['field_background_image_url'])) {
         if(isset($content['field_background_image'])) {
           $item['#theme_wrappers'][] = 'flexible_template_url_field_collection_view';
-          $item['field_background_image_url'] = $content['field_background_image_url']['#items'][0]['url'];
+          $item['#field_background_image_url'] = $content['field_background_image_url']['#items'][0]['url'];
         }
         unset($item['entity']['field_collection_item'][key($item['entity']['field_collection_item'])]['field_background_image_url']);
       }
