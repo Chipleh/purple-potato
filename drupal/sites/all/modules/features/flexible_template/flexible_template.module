@@ -23,6 +23,17 @@ function flexible_template_view_mode_templates() {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function flexible_template_theme() {
+  return array(
+    'flexible_template_url_field_collection_view' => array(
+        'render element' => 'element'
+     )
+  );
+}
+
+/**
  * Implements template_preprocess_entity().
  */
 function flexible_template_preprocess_entity(&$variables, $hook) {
@@ -75,6 +86,15 @@ function flexible_template_preprocess_field(&$variables) {
 
       // Append custom classes for field collection items.
       $item['#attributes']['class'] = array('column', 'column-' . $key, 'columns-total-' . count($variables['items']));
+
+      if (isset($content['field_background_image_url'])) {
+        if(isset($content['field_background_image']) && !isset($content['field_title_item']) && !isset($content['field_subhead'])) {
+          $item['#theme_wrappers'] = array('flexible_template_url_field_collection_view');
+          $item['#field_background_image_url'] = $content['field_background_image_url']['#items'][0]['url'];
+        }
+        unset($item['entity']['field_collection_item'][key($item['entity']['field_collection_item'])]['field_background_image_url']);
+      }
+
     }
   }
 
