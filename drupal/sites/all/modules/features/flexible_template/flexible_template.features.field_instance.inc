@@ -476,7 +476,7 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '<strong>Recommended character ranges for Title</strong>
+    'description' => '<p><strong>Recommended character ranges for Title</strong></p>
 <strong>One Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 156 characters</li>
@@ -637,7 +637,7 @@ function flexible_template_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '<strong>Recommended character ranges for Title</strong>
+    'description' => '<p><strong>Recommended character ranges for Title</strong></p>
 <strong>One Column</strong>
 <ul>
 <li>H1: 24 - 32 characters</li>
@@ -3651,7 +3651,7 @@ function flexible_template_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('(mobile & desktop) - 15 characters');
-  t('<strong>Recommended character ranges for Title</strong>
+  t('<p><strong>Recommended character ranges for Title</strong></p>
 <strong>One Column</strong>
 <ul>
 <li>H1: 24 - 32 characters</li>
@@ -3675,7 +3675,7 @@ function flexible_template_field_default_field_instances() {
 <li>H1: 24 - 36 characters</li>
 <li>H2; 40 - 54 characters</li>
 </ul>');
-  t('<strong>Recommended character ranges for Title</strong>
+  t('<p><strong>Recommended character ranges for Title</strong></p>
 <strong>One Column</strong>
 <ul>
 <li>H3 (mobile & desktop) - 156 characters</li>
