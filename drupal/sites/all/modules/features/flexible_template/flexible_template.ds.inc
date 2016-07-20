@@ -24,11 +24,6 @@ function flexible_template_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_video_tout' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
     'field_title_item' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -213,6 +208,7 @@ function flexible_template_ds_layout_settings_info() {
         8 => 'field_background_mobile_image',
         9 => 'field_video_tout',
         10 => 'field_cta',
+        11 => 'field_background_image_url',
       ),
     ),
     'fields' => array(
@@ -227,6 +223,7 @@ function flexible_template_ds_layout_settings_info() {
       'field_background_mobile_image' => 'ds_content',
       'field_video_tout' => 'ds_content',
       'field_cta' => 'ds_content',
+      'field_background_image_url' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -259,20 +256,12 @@ function flexible_template_ds_layout_settings_info() {
         5 => 'field_subhead_size',
         6 => 'field_background_color',
         7 => 'field_background_image',
-        8 => 'field_background_video',
-        9 => 'field_background_mobile_image',
+        8 => 'field_background_mobile_image',
+        9 => 'field_background_image_url',
         10 => 'field_video_tout',
         11 => 'field_cta',
         12 => 'redirect',
         13 => '_add_existing_field',
-      ),
-      'hidden' => array(
-        14 => 'field_title_copy',
-        15 => 'field_title_copy_color',
-        16 => 'field_title_copy_size',
-        17 => 'field_subhead_copy',
-        18 => 'field_subhead_copy_color',
-        19 => 'field_subhead_copy_size',
       ),
     ),
     'fields' => array(
@@ -284,18 +273,12 @@ function flexible_template_ds_layout_settings_info() {
       'field_subhead_size' => 'first',
       'field_background_color' => 'first',
       'field_background_image' => 'first',
-      'field_background_video' => 'first',
       'field_background_mobile_image' => 'first',
+      'field_background_image_url' => 'first',
       'field_video_tout' => 'first',
       'field_cta' => 'first',
       'redirect' => 'first',
       '_add_existing_field' => 'first',
-      'field_title_copy' => 'hidden',
-      'field_title_copy_color' => 'hidden',
-      'field_title_copy_size' => 'hidden',
-      'field_subhead_copy' => 'hidden',
-      'field_subhead_copy_color' => 'hidden',
-      'field_subhead_copy_size' => 'hidden',
     ),
     'classes' => array(),
     'wrappers' => array(

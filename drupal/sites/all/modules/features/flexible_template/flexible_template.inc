@@ -51,6 +51,14 @@ function flexible_template_preprocess_field_collection_item(&$variables) {
 }
 
 /**
+ * Themes field collection items printed using the field_collection_view formatter.
+ */
+function theme_flexible_template_url_field_collection_view($variables) {
+  $element = $variables['element'];
+  return '<a href="' . $element['#field_background_image_url'] . '"' . drupal_attributes($element['#attributes']) . '>' . $element['#children'] . '</a>';
+}
+
+/**
  * @see field_columns_multi
  */
 function flexible_template_preprocess_field_columns_multi(&$variables) {
