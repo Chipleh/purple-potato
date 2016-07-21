@@ -8677,7 +8677,13 @@ p.subtext {
   border: 8px solid #fff;
   box-shadow: 0 0 54px rgba(0, 0, 0, 0.1);
 }
-/* line 71, sass/partials/modules/_static-common.scss */
+/* line 74, sass/partials/modules/_static-common.scss */
+.staticContent .page-node-1810 .pane-bundle-content,
+.staticContent .page-node-1811 .pane-bundle-content,
+.staticContent .page-node-1812 .pane-bundle-content {
+  margin-bottom: 0;
+}
+/* line 79, sass/partials/modules/_static-common.scss */
 .staticContent .arrowRight {
   background: url("/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png") 0 -34px no-repeat;
   display: inline-block;
@@ -8689,7 +8695,7 @@ p.subtext {
   white-space: nowrap;
   width: 6px;
 }
-/* line 84, sass/partials/modules/_static-common.scss */
+/* line 92, sass/partials/modules/_static-common.scss */
 .staticContent .cta__primary {
   display: inline-block;
   background-image: linear-gradient(to left, #3f1d69 0%, #0d074d 100%);
@@ -8703,12 +8709,12 @@ p.subtext {
   position: relative;
   text-transform: uppercase;
 }
-/* line 97, sass/partials/modules/_static-common.scss */
+/* line 105, sass/partials/modules/_static-common.scss */
 .staticContent .cta__primary:hover {
   background-image: linear-gradient(to left, #7b1f7f 0%, #3b1363 100%);
   color: #fff;
 }
-/* line 103, sass/partials/modules/_static-common.scss */
+/* line 111, sass/partials/modules/_static-common.scss */
 .staticContent .cta__secondary {
   background: transparent;
   border: 1px solid #646464;
@@ -8723,24 +8729,24 @@ p.subtext {
   text-transform: uppercase;
   transition: border-color 0.4s;
 }
-/* line 117, sass/partials/modules/_static-common.scss */
+/* line 125, sass/partials/modules/_static-common.scss */
 .staticContent .cta__secondary .arrowRight {
   transition: opacity 0.4s;
 }
-/* line 121, sass/partials/modules/_static-common.scss */
+/* line 129, sass/partials/modules/_static-common.scss */
 .staticContent .cta__secondary:hover {
   border-color: #fff;
 }
-/* line 124, sass/partials/modules/_static-common.scss */
+/* line 132, sass/partials/modules/_static-common.scss */
 .staticContent .cta__secondary:hover .arrowRight {
   opacity: 1;
 }
-/* line 131, sass/partials/modules/_static-common.scss */
+/* line 139, sass/partials/modules/_static-common.scss */
 .staticContent .subhead {
   padding-bottom: 1.2em;
   padding-top: 1.2em;
 }
-/* line 135, sass/partials/modules/_static-common.scss */
+/* line 143, sass/partials/modules/_static-common.scss */
 .staticContent .subhead h2 {
   color: #1f1646;
   display: inline-block;
@@ -8749,11 +8755,11 @@ p.subtext {
   margin-right: 20px;
   text-transform: uppercase;
 }
-/* line 144, sass/partials/modules/_static-common.scss */
+/* line 152, sass/partials/modules/_static-common.scss */
 .staticContent .subhead__head {
   line-height: normal;
 }
-/* line 147, sass/partials/modules/_static-common.scss */
+/* line 155, sass/partials/modules/_static-common.scss */
 .staticContent .subhead__head:after {
   background: url("/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png") no-repeat;
   background-position: 0 -1034px;
@@ -8767,7 +8773,7 @@ p.subtext {
   top: 3px;
   width: 9px;
 }
-/* line 162, sass/partials/modules/_static-common.scss */
+/* line 170, sass/partials/modules/_static-common.scss */
 .staticContent .subhead__link {
   color: #850f88;
   display: inline-block;
@@ -8776,7 +8782,7 @@ p.subtext {
   text-decoration: none;
   white-space: nowrap;
 }
-/* line 173, sass/partials/modules/_static-common.scss */
+/* line 181, sass/partials/modules/_static-common.scss */
 .staticContent .nextSection {
   background: url(/sites/all/themes/leidos/static-pages/images/backgrounds/scroll_down_bg.png) no-repeat;
   border: 0;
@@ -8787,7 +8793,7 @@ p.subtext {
   text-indent: -9999px;
   width: 82px;
 }
-/* line 183, sass/partials/modules/_static-common.scss */
+/* line 191, sass/partials/modules/_static-common.scss */
 .staticContent .nextSection:after {
   background: url(/sites/all/themes/leidos/static-pages/images/sprites-icons-buttons/sprites-s6882c8ed69.png) 0 -24px no-repeat;
   content: '';
@@ -8796,7 +8802,7 @@ p.subtext {
   margin: -10px auto 5px auto;
   width: 15px;
 }
-/* line 194, sass/partials/modules/_static-common.scss */
+/* line 202, sass/partials/modules/_static-common.scss */
 .staticContent .slick-slider {
   position: relative;
   display: block;
@@ -8811,7 +8817,7 @@ p.subtext {
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-/* line 214, sass/partials/modules/_static-common.scss */
+/* line 222, sass/partials/modules/_static-common.scss */
 .staticContent .slick-list {
   position: relative;
   display: block;
@@ -8819,75 +8825,75 @@ p.subtext {
   margin: 0;
   padding: 0;
 }
-/* line 223, sass/partials/modules/_static-common.scss */
+/* line 231, sass/partials/modules/_static-common.scss */
 .staticContent .slick-list:focus {
   outline: none;
 }
-/* line 226, sass/partials/modules/_static-common.scss */
+/* line 234, sass/partials/modules/_static-common.scss */
 .staticContent .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
-/* line 231, sass/partials/modules/_static-common.scss */
+/* line 239, sass/partials/modules/_static-common.scss */
 .staticContent .slick-slider .slick-track,
 .staticContent .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 240, sass/partials/modules/_static-common.scss */
+/* line 248, sass/partials/modules/_static-common.scss */
 .staticContent .slick-track {
   position: relative;
   top: 0;
   left: 0;
   display: block;
 }
-/* line 247, sass/partials/modules/_static-common.scss */
+/* line 255, sass/partials/modules/_static-common.scss */
 .staticContent .slick-track:before,
 .staticContent .slick-track:after {
   display: table;
   content: '';
 }
-/* line 253, sass/partials/modules/_static-common.scss */
+/* line 261, sass/partials/modules/_static-common.scss */
 .staticContent .slick-track:after {
   clear: both;
 }
-/* line 256, sass/partials/modules/_static-common.scss */
+/* line 264, sass/partials/modules/_static-common.scss */
 .staticContent .slick-loading .slick-track {
   visibility: hidden;
 }
-/* line 260, sass/partials/modules/_static-common.scss */
+/* line 268, sass/partials/modules/_static-common.scss */
 .staticContent .slick-slide {
   display: none;
   float: left;
   height: 100%;
   min-height: 1px;
 }
-/* line 267, sass/partials/modules/_static-common.scss */
+/* line 275, sass/partials/modules/_static-common.scss */
 .staticContent [dir='rtl'] .slick-slide {
   float: right;
 }
-/* line 270, sass/partials/modules/_static-common.scss */
+/* line 278, sass/partials/modules/_static-common.scss */
 .staticContent .slick-slide img {
   display: block;
 }
-/* line 273, sass/partials/modules/_static-common.scss */
+/* line 281, sass/partials/modules/_static-common.scss */
 .staticContent .slick-slide.slick-loading img {
   display: none;
 }
-/* line 276, sass/partials/modules/_static-common.scss */
+/* line 284, sass/partials/modules/_static-common.scss */
 .staticContent .slick-slide.dragging img {
   pointer-events: none;
 }
-/* line 279, sass/partials/modules/_static-common.scss */
+/* line 287, sass/partials/modules/_static-common.scss */
 .staticContent .slick-initialized .slick-slide {
   display: block;
 }
-/* line 282, sass/partials/modules/_static-common.scss */
+/* line 290, sass/partials/modules/_static-common.scss */
 .staticContent .slick-loading .slick-slide {
   visibility: hidden;
 }
-/* line 285, sass/partials/modules/_static-common.scss */
+/* line 293, sass/partials/modules/_static-common.scss */
 .staticContent .slick-vertical .slick-slide {
   display: block;
   height: auto;
