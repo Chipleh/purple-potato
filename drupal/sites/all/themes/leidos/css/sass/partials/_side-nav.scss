@@ -203,8 +203,8 @@
 			}
 
 			&:hover,
-			&.hover,
-			&.active-trail-selected {
+			&.hover {
+            // &.active-trail-selected {
 				background: $color-white;
 				z-index: 3;
 
@@ -218,9 +218,9 @@
 					color: $color-leidos-purple-dark;
 				}
 
-				// .no-children {
-				// 	max-height: 1000px;
-				// }
+				.no-children {
+					max-height: 1000px;
+				}
 			}
 		}
 	}
