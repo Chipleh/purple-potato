@@ -1170,10 +1170,6 @@ p.subtext {
   border-right: 5px solid #850F88;
   color: #1F1646;
 }
-/* line 221, sass/partials/_side-nav.scss */
-.left-navigation-menu #left-nav-menu li:hover .no-children, .left-navigation-menu #left-nav-menu li.hover .no-children, .left-navigation-menu #left-nav-menu li.active-trail-selected .no-children {
-  max-height: 1000px;
-}
 
 /*  tablet
 **************************************************/
