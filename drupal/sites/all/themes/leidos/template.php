@@ -530,7 +530,7 @@ function leidos_menu_link(array $variables) {
         }
       }
     }
-    if(in_array($current_path, $menu_parents)){
+    if(in_array($current_path, $menu_parents) || !empty($element['#below'])){
       $element['#attributes']['class'][] = 'main-menu-parent';
     }
   }
