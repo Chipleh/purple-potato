@@ -522,16 +522,17 @@ function leidos_menu_link(array $variables) {
       $element['#localized_options']['attributes']['class'] = array();
       $element['#localized_options']['attributes']['class'][] = 'active-trail';
     }
-    if (in_array($current_path, $menu_parents)){
-      $element['#attributes']['class'][] = 'main-menu-parent';
-    }
-    elseif ($element['#below']) {
+    if ($element['#below']) {
       foreach ($element['#below'] as $subitem) {
         if (isset($subitem['#href']) && $subitem['#href'] == $current_path) {
           $element['#attributes']['class'][] = 'active-trail-selected';
         }
       }
     }
+    if ($element['#href'] == $current_path && in_array($current_path, $menu_parents)){
+      $element['#attributes']['class'][] = 'main-menu-parent';
+    }
+    
   }
 
   $sub_menu = '';
