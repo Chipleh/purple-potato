@@ -203,8 +203,8 @@
 			}
 
 			&:hover,
-			&.hover {
-            // &.active-trail-selected {
+			&.hover,
+            &.active-trail-selected {
 				background: $color-white;
 				z-index: 3;
 
@@ -222,6 +222,21 @@
 					max-height: 1000px;
 				}
 			}
+
+            &.main-menu-parent {
+                background: $color-white;
+                z-index: 3;
+
+                &:before {
+                    opacity: 1;
+                }
+
+                > a {
+                    border-right: 5px solid $color-leidos-purple-light;
+                    // color: $color-leidos-purple-light;
+                    color: $color-leidos-purple-dark;
+                }
+            }
 		}
 	}
 }
