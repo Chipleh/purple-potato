@@ -69,7 +69,16 @@ function news_release_cron() {
       $filename
     );
   }
-  $xml = simplexml_load_file($filename);
+  
+  $arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+  );  
+
+  $response = file_get_contents($filename, false, stream_context_create($arrContextOptions));
+  $xml = simplexml_load_string($response);
 
   $processed = 0;
   foreach ($xml->NewsReleases->NewsRelease as $key => $item) {
