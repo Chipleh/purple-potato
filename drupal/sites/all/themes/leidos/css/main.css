@@ -1728,12 +1728,6 @@ p.subtext {
 #block-system-main-menu .content .parent-menu li.first a:hover:before, #block-system-main-menu .content .parent-menu li.first a:hover:after {
   display: none;
 }
-/* line 171, sass/partials/_top-nav.scss */
-#block-system-main-menu .content .parent-menu li:nth-child(6) a, #block-system-main-menu .content .parent-menu li:nth-child(7) a, #block-system-main-menu .content .parent-menu li:nth-child(8) a {
-  color: #777;
-  font-size: 11px;
-  line-height: 112px;
-}
 /* line 178, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:nth-child(8) {
   margin-right: 0;
@@ -1836,11 +1830,6 @@ p.subtext {
 /* line 280, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li a:before, #block-system-main-menu .content .parent-menu li .no-children li a:after {
   display: none;
-}
-/* line 288, sass/partials/_top-nav.scss */
-#block-system-main-menu .content .parent-menu li .no-children li a:nth-child(6) a, #block-system-main-menu .content .parent-menu li .no-children li a:nth-child(7) a, #block-system-main-menu .content .parent-menu li .no-children li a:nth-child(8) a {
-  font-size: 12px;
-  line-height: normal;
 }
 /* line 295, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li:before, #block-system-main-menu .content .parent-menu li .no-children li:after {
@@ -2149,12 +2138,6 @@ p.subtext {
   /* line 610, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.first a:hover {
     z-index: 3;
-  }
-  /* line 620, sass/partials/_top-nav.scss */
-  #block-system-main-menu .content .parent-menu li:nth-child(6) a, #block-system-main-menu .content .parent-menu li:nth-child(7) a, #block-system-main-menu .content .parent-menu li:nth-child(8) a {
-    color: #1F1646;
-    font-size: 12px;
-    line-height: inherit;
   }
   /* line 628, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded > a {
