@@ -114,10 +114,11 @@
 			li {
 				display: block;
 				float:left;
-				margin: 0 1.25%;
+				margin: 0;
 
-				&.expanded {
-
+				&[data-child-count="1"],
+				&[data-child-count="2"] {
+					position: relative;
 				}
 
 				// second layer
@@ -126,9 +127,13 @@
 						display: none;
 						position: absolute;
 						background: #fff;
-						width: 100%;
+						border: 1px solid $color-gray-medium-light;
+						min-width: 500px;
+						width: auto;
+						max-width: 100%;
 						left: 0;
-						padding: 25px 25px 40px;
+						top: 86px;
+						padding: 25px 0 40px;
 
 						li {
 							width: 200px;
@@ -149,7 +154,20 @@
 										height: 0;
 										width: 0;
 									}
+
+									&:hover,
+									&.hover {
+										background: none;
+									}
 								}
+							}
+
+							&.first {
+								margin-left: 25px;
+							}
+
+							&.last {
+								margin-right: 25px;
 							}
 
 							a {
@@ -158,6 +176,7 @@
 								background: none;
 								width: auto;
 								font-size: 15px;
+								padding: 0;
 								margin-bottom: 5px;
 								color: #1F1646;
 								cursor: pointer;
@@ -221,7 +240,8 @@
 					font-size: 16px;
 					line-height: 108px;
 					outline: none;
-					padding: 0;
+					padding: 0 15px;
+					z-index: 2;
 					position: relative;
 					text-transform: uppercase;
 
@@ -405,6 +425,7 @@
 				&:hover,
 				&.hover {
 					a {
+						background: #FFF;
 						&:before,
 						&:after {
 							background: url("../images/tab-shadows.png") no-repeat $color-white;
@@ -417,12 +438,12 @@
 
 						&:before {
 							background-position: left bottom;
-							left: -14px;
+							left: -4px;
 						}
 
 						&:after {
 							background-position: right bottom;
-							right: -14px;
+							right: -4px;
 						}
 					}
 
@@ -661,7 +682,7 @@
 						display: block;
 						float: left;
 						font-family: "AvenirLT-Black", Arial, sans-serif;
-						font-size: 12px;
+						font-size: 14px;
 						height: auto;
 						line-height: inherit;
 						outline: none;
@@ -731,7 +752,7 @@
 							display: block;
 							float: right;
 							font-size: 0px;
-							height: 52px;
+							height: 55px;
 							padding: 0;
 							position: relative;
 							width: 20%;
@@ -775,16 +796,16 @@
 								float: none;
 								font-size: 14px;
 								height: auto;
-								padding: 17px 30px 17px 100px;
+								padding: 17px 30px 17px 60px;
 								position: relative;
 								right: -100%;
-								top: -$side-nav-height;
+								top: -$sub-nav-mobile-height;
 								white-space: nowrap;
-								width: calc(100% - 130px);
+								width: calc(100% - 90px);
 								z-index: 11;
 
 								&:before {
-									left: 30px;
+									left: 20px;
 									transform: rotate(270deg);
 									-webkit-transform: rotate(270deg);
 								}
@@ -810,130 +831,136 @@
 								font-family: "AvenirLT-Black", Arial, sans-serif;
 								font-size: 14px;
 								height: auto;
-								padding: 17px 30px 17px 100px;
+								padding: 17px 30px 17px 30px;
 								position: relative;
 								right: -100%;
 								text-align: left;
-								top: -$side-nav-height;
-								width: calc(100% - 130px);
+								top: -$sub-nav-mobile-height;
+								width: calc(100% - 60px);
 								z-index: 11;
 								text-transform: uppercase;
 
 							}
 
 							&:nth-child(2) {
-								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
+								& > .additional-control {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("- 0px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("- 0px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 0 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 0 + 1px)");
+								}
+								.parent-menu {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 0 + 1px)");
 								}
 							}
 
 							&:nth-child(3) {
-								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
+								& > .additional-control {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 2 - 0px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 2 - 0px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 1 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 1 + 1px)");
+								}
+								.parent-menu {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 1 + 1px)");
 								}
 							}
 
 							&:nth-child(4) {
-								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
+								& > .additional-control {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 3 - 0px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 3 - 0px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 2 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 2 + 1px)");
 								}
 							}
 
 							&:nth-child(5) {
-								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
+								& > .additional-control {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 4 - 0px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 4 - 0px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 3 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 3 + 1px)");
 								}
 							}
 
 							&:nth-child(6) {
-								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
+								& > .additional-control {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 5 - 0px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 5 - 0px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 4 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 4 + 1px)");
 								}
 							}
 
 							&:nth-child(7) {
-								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
+								& > .additional-control {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 6 - 0px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 6 - 0px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 5 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 5 + 1px)");
 								}
 							}
 
 							&:nth-child(8) {
-								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
+								& > .additional-control {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 7 - 0px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 7 - 0px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 6 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 6 - 2px)");
 								}
 							}
 
 							&:nth-child(9) {
-								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
+								& > .additional-control {
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 8 + 0px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 8 + 0px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 7 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 7 + 0px)");
 								}
 							}
 
 							&:nth-child(10) {
 								.additional-control {
-									top:unquote("calc(")-$side-nav-height unquote("* 9 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 9 + 0px)");
 								}
 								.additional-info {
-									top:unquote("calc(")-$side-nav-height unquote("* 9 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 9 + 0px)");
 								}
 								.no-children {
-									top:unquote("calc(")-$side-nav-height unquote("* 8 + 1px)");
+									top:unquote("calc(")-$sub-nav-mobile-height unquote("* 8 + 1px)");
 								}
 							}
 
 							.no-children {
 								li {
 									a {
-										padding: 17px 30px 17px 130px;
-										width: calc(100% - 160px)
+										padding: 17px 30px 17px 30px;
+										width: calc(100% - 60px)
 									}
 								}
 							}
@@ -980,7 +1007,8 @@
 					}
 
 					/***** sub menus *****/
-					.no-children {
+					.no-children,
+					.parent-menu {
 						background: $color-leidos-purple-soft-light;
 						clear: both;
 						display: none;
@@ -1011,6 +1039,17 @@
 
 								a {
 									margin: 0;
+								}
+							}
+
+							ul {
+								li {
+									right: auto;
+									left: auto;
+									position: relative;
+									height: auto;
+									float: none;
+									top: auto;
 								}
 							}
 
@@ -1071,19 +1110,70 @@
 							}
 						}
 
-						.no-children {
+						.no-children,
+						.parent-menu {
 							background: $color-leidos-purple-soft-light;
 							height: 200vh;
 							max-height: 200vh;
+
+							li {
+								width: auto;
+								float: none;
+								margin: 0;
+							}
 						}
 					}
 
 					&.mobile-active {
-						.no-children {
+						position: relative;
+
+						.no-children,
+						.parent-menu {
 							background: $color-leidos-purple-soft-light;
 							display: block;
 							height: 200vh;
 							opacity: 1;
+							width: 100%;
+							max-width: none;
+							min-width: auto;
+							padding: 114px 0 0 0;
+							left: auto;
+
+							li,
+							li.first,
+							li.last {
+								width: auto;
+								float: none;
+								margin: 0;
+								height: auto;
+								right: auto;
+								left: auto;
+								top: auto;
+								overflow: hidden;
+								position: relative;
+
+								a {
+									float: none;
+									width: auto;
+									padding: 17px 0 17px 30px;
+									text-transform: uppercase;
+									color: $color-leidos-purple-dark;
+									font-size: 14px;
+								}
+
+								.additional-control {
+									position: absolute;
+									right: 0;
+									height: 100%;
+									top: 0;
+									float: none;
+									border-top: 0 none;
+								}
+
+								ul.no-children {
+									position: absolute;
+								}
+							}
 						}
 					}
 				}
