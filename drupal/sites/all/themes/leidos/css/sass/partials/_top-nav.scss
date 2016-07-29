@@ -109,16 +109,107 @@
 		z-index: 2;
 
 		.parent-menu {
-			position: relative;
 			width: 100%;
 
 			li {
-				diplay: block;
+				display: block;
 				float:left;
 				margin: 0 1.25%;
 
 				&.expanded {
-					position: relative;
+
+				}
+
+				// second layer
+				ul {
+					&.parent-menu {
+						display: none;
+						position: absolute;
+						background: #fff;
+						width: 100%;
+						left: 0;
+						padding: 25px 25px 40px;
+
+						li {
+							width: 200px;
+							float: left;
+							cursor: pointer;
+							margin: 0 10px;
+
+							&.first,
+							&.last {
+								background: 0 none;
+								width: 200px;
+								position: relative;
+
+								a {
+									&:after,
+									&:before {
+										display: none;
+										height: 0;
+										width: 0;
+									}
+								}
+							}
+
+							a {
+								line-height: 20px;
+								height: auto;
+								background: none;
+								width: auto;
+								font-size: 15px;
+								margin-bottom: 5px;
+								color: #1F1646;
+								cursor: pointer;
+								text-transform: none;
+							}
+							// third layer
+							ul,
+							ul.no-children {
+								position: relative;
+								left: auto;
+								top: auto;
+								border: 0 none;
+								width: auto;
+
+								li {
+									width: auto;
+									float: none;
+									margin: 0;
+
+									a {
+										margin: 4px 0;
+										font-size: 12px;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&:hover,
+				&.hover {
+					ul {
+						&.parent-menu {
+							display: block;
+							li {
+								a {
+									&:after,
+									&:before {
+										display: none;
+										height: 0;
+										width: 0;
+									}
+								}
+								&:after,
+								&:before {
+									display: none;
+									height: 0;
+									width: 0;
+								}
+							}
+						}
+					}
 				}
 
 				/* menu sections */
