@@ -116,19 +116,180 @@
 				float:left;
 				margin: 0;
 
-				&[data-child-count="1"],
-				&[data-child-count="2"] {
-					position: relative;
+				@media only screen and (min-width: 961px) {
+					&.sub-categories-0,
+					&.sub-categories-1,
+					&.sub-categories-2, {
+						position: relative;
+					}
+
+					&:nth-child(2) {
+						&.sub-categories-0,
+						&.sub-categories-1,
+						&.sub-categories-2, {
+							& > ul {
+								&.parent-menu,
+								&.no-children {
+									left: 0;
+								}
+							}
+						}
+					}
+
+					&:nth-child(3) {
+						&.sub-categories-0,
+						&.sub-categories-1,
+						&.sub-categories-2, {
+							& > ul {
+								&.parent-menu,
+								&.no-children {
+									left: 0;
+								}
+							}
+						}
+					}
+
+					&:nth-child(4) {
+						&.sub-categories-0,
+						&.sub-categories-1 {
+							& > ul {
+								&.parent-menu,
+								&.no-children {
+									left: 0;
+								}
+							}
+						}
+						&.sub-categories-2,
+						&.sub-categories-3 {
+							position: relative;
+							& > ul {
+								&.parent-menu,
+								&.no-children {
+									transform: translateX(-50%);
+									margin-left: 50%;
+								}
+							}
+						}
+					}
+
+					&:nth-child(5) {
+						&.sub-categories-0,
+						&.sub-categories-1 {
+							& > ul {
+								&.parent-menu,
+								&.no-children {
+									left: 0;
+								}
+							}
+						}
+						&.sub-categories-2 {
+							& > ul {
+								&.parent-menu,
+								&.no-children {
+									transform: translateX(-50%);
+									margin-left: 50%;
+								}
+							}
+						}
+
+						&.sub-categories-3 {
+							//position: relative;
+							& > ul {
+								&.parent-menu,
+								&.no-children {
+									right: 100px;
+									left: auto;
+								}
+							}
+						}
+					}
+
+					&:nth-child(6) {
+						&.sub-categories-0,
+						&.sub-categories-1,
+						&.sub-categories-2 {
+							& > ul {
+								&.parent-menu,
+								&.no-children {
+									right: 0;
+									left: auto;
+								}
+							}
+						}
+					}
+
+					&.sub-categories-0,
+					&.sub-categories-1 {
+						& > ul {
+							&.parent-menu,
+							&.no-children {
+								min-width: 200px;
+							}
+						}
+					}
+
+					&.sub-categories-2 {
+						& > ul {
+							&.parent-menu,
+							&.no-children {
+								min-width: calc(400px + 70px);
+							}
+						}
+					}
+
+					&.sub-categories-3 {
+						& > ul {
+							&.parent-menu,
+							&.no-children {
+								min-width: 600px;
+							}
+						}
+					}
+
+					&.sub-categories-4 {
+						& > ul {
+							&.parent-menu,
+							&.no-children {
+								min-width: 800px;
+							}
+						}
+					}
+
+					&.sub-categories-5 {
+						& > ul {
+							&.parent-menu,
+							&.no-children {
+								min-width: 100%;
+								& > li {
+									width: calc(20% - 20px);
+
+									&.first,
+									&.last {
+										width: calc(20% - 55px);
+									}
+
+									.no-children {
+										li {
+
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 
 				// second layer
 				ul {
+					&.no-children {
+						top: 87px;
+					}
 					&.parent-menu {
 						display: none;
 						position: absolute;
 						background: #fff;
 						border: 1px solid $color-gray-medium-light;
-						min-width: 500px;
+						min-width: 250px;
 						width: auto;
 						max-width: 100%;
 						left: 0;
@@ -139,7 +300,8 @@
 							width: 200px;
 							float: left;
 							cursor: pointer;
-							margin: 0 10px;
+							padding: 0 10px;
+							margin: 0;
 
 							&.first,
 							&.last {
@@ -163,11 +325,11 @@
 							}
 
 							&.first {
-								margin-left: 25px;
+								padding-left: 25px;
 							}
 
 							&.last {
-								margin-right: 25px;
+								padding-right: 25px;
 							}
 
 							a {
@@ -195,6 +357,7 @@
 									width: auto;
 									float: none;
 									margin: 0;
+									padding: 0;
 
 									a {
 										margin: 4px 0;
@@ -325,6 +488,11 @@
 						text-align: right;
 						text-transform: uppercase;
 						z-index: 2;
+
+						&.additional-info,
+						&.additional-control {
+							display: none;
+						}
 
 						&:before {
 							background: url("../images/search-glass.png") no-repeat center bottom transparent;
@@ -693,8 +861,6 @@
 
 						&:hover,
 						&.active {
-							background: none;
-
 							&:before,
 							&:after {
 								background: transparent;
@@ -718,6 +884,8 @@
 							height: $header-height-mt;
 							margin: 0 auto;
 							padding: 0;
+							background: url(../images/leidos-logo.png) no-repeat center center;
+							width: 170px;
 
 							&:hover {
 								z-index: 3;
@@ -1145,6 +1313,7 @@
 								width: auto;
 								float: none;
 								margin: 0;
+								padding: 0;
 								height: auto;
 								right: auto;
 								left: auto;
@@ -1157,7 +1326,7 @@
 									width: auto;
 									padding: 17px 0 17px 30px;
 									text-transform: uppercase;
-									color: $color-leidos-purple-dark;
+									color: $color-leidos-purple-light;
 									font-size: 14px;
 								}
 
