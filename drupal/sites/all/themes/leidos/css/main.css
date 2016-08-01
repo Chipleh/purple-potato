@@ -232,13 +232,13 @@ hr {
 
 /* header */
 /* line 27, sass/_extends.scss */
-#block-system-main-menu, #block-system-main-menu:before, #block-system-main-menu .content, #block-system-main-menu .content .parent-menu li a, #block-system-main-menu .content .parent-menu li.last span {
+#block-system-main-menu, #block-system-main-menu:before, #block-system-main-menu .content, #block-system-main-menu .content .parent-menu li a, #block-system-main-menu .content .parent-menu li.last span:not(.additional-info):not(.additional-control) {
   height: 86px;
 }
 
 /* hide text */
 /* line 32, sass/_extends.scss */
-#block-system-main-menu .content .parent-menu li.first a, #block-system-main-menu .content .parent-menu li.last span, .block-leidos-custom-search .content #search_leidos_website span {
+#block-system-main-menu .content .parent-menu li.first a, #block-system-main-menu .content .parent-menu li.last span:not(.additional-info):not(.additional-control), .block-leidos-custom-search .content #search_leidos_website span {
   font-size: 0;
   color: transparent;
 }
@@ -273,7 +273,7 @@ hr {
 @media only screen and (min-width: 721px) and (max-width: 960px) {
   /* header */
   /* line 56, sass/_extends.scss */
-  #block-system-main-menu, #block-system-main-menu:before, #block-system-main-menu .content, #block-system-main-menu .content .parent-menu li a, #block-system-main-menu .content .parent-menu li.last span {
+  #block-system-main-menu, #block-system-main-menu:before, #block-system-main-menu .content, #block-system-main-menu .content .parent-menu li a, #block-system-main-menu .content .parent-menu li.last span:not(.additional-info):not(.additional-control) {
     height: 78px;
   }
 }
@@ -282,7 +282,7 @@ hr {
 @media only screen and (max-width: 720px) {
   /* header */
   /* line 66, sass/_extends.scss */
-  #block-system-main-menu, #block-system-main-menu:before, #block-system-main-menu .content, #block-system-main-menu .content .parent-menu li a, #block-system-main-menu .content .parent-menu li.last span {
+  #block-system-main-menu, #block-system-main-menu:before, #block-system-main-menu .content, #block-system-main-menu .content .parent-menu li a, #block-system-main-menu .content .parent-menu li.last span:not(.additional-info):not(.additional-control) {
     height: 78px;
   }
 }
@@ -1682,7 +1682,6 @@ p.subtext {
   margin: 0;
   /* menu sections */
   /* header logo */
-  /* small menu sections */
   /* search glass menu section */
   /***** sub menus *****/
 }
@@ -1903,11 +1902,7 @@ p.subtext {
 #block-system-main-menu .content .parent-menu li.first a:hover:before, #block-system-main-menu .content .parent-menu li.first a:hover:after {
   display: none;
 }
-/* line 452, sass/partials/_top-nav.scss */
-#block-system-main-menu .content .parent-menu li:nth-child(8) {
-  margin-right: 0;
-}
-/* line 457, sass/partials/_top-nav.scss */
+/* line 442, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.last {
   margin: 0;
   overflow: hidden;
@@ -1916,7 +1911,7 @@ p.subtext {
   top: 0;
   width: 128px;
 }
-/* line 465, sass/partials/_top-nav.scss */
+/* line 450, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li.last:after {
   background: #E8E8E8;
   border: 1px solid #D0D0D0;
@@ -1933,8 +1928,14 @@ p.subtext {
   width: 300px;
   z-index: 1;
 }
-/* line 481, sass/partials/_top-nav.scss */
-#block-system-main-menu .content .parent-menu li.last span {
+@media only screen and (min-width: 961px) {
+  /* line 467, sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.last span.additional-info, #block-system-main-menu .content .parent-menu li.last span.additional-control {
+    display: none;
+  }
+}
+/* line 475, sass/partials/_top-nav.scss */
+#block-system-main-menu .content .parent-menu li.last span:not(.additional-info):not(.additional-control) {
   cursor: pointer;
   display: block;
   padding: 0;
@@ -1943,12 +1944,8 @@ p.subtext {
   text-transform: uppercase;
   z-index: 2;
 }
-/* line 492, sass/partials/_top-nav.scss */
-#block-system-main-menu .content .parent-menu li.last span.additional-info, #block-system-main-menu .content .parent-menu li.last span.additional-control {
-  display: none;
-}
-/* line 497, sass/partials/_top-nav.scss */
-#block-system-main-menu .content .parent-menu li.last span:before {
+/* line 486, sass/partials/_top-nav.scss */
+#block-system-main-menu .content .parent-menu li.last span:not(.additional-info):not(.additional-control):before {
   background: url("../images/search-glass.png") no-repeat center bottom transparent;
   content: '';
   height: 24px;
@@ -1958,11 +1955,11 @@ p.subtext {
   width: 24px;
   z-index: -1;
 }
-/* line 510, sass/partials/_top-nav.scss */
-#block-system-main-menu .content .parent-menu li.last span:hover:before, #block-system-main-menu .content .parent-menu li.last span.search-active:before {
+/* line 499, sass/partials/_top-nav.scss */
+#block-system-main-menu .content .parent-menu li.last span:not(.additional-info):not(.additional-control):hover:before, #block-system-main-menu .content .parent-menu li.last span:not(.additional-info):not(.additional-control).search-active:before {
   background-position: center top;
 }
-/* line 518, sass/partials/_top-nav.scss */
+/* line 507, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children {
   background: #E8E8E8;
   border-left: 1px solid #D0D0D0;
@@ -1977,7 +1974,7 @@ p.subtext {
   width: 200px;
   z-index: 1;
 }
-/* line 532, sass/partials/_top-nav.scss */
+/* line 521, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li {
   display: block;
   float: none;
@@ -1987,7 +1984,7 @@ p.subtext {
   position: relative;
   width: auto;
 }
-/* line 541, sass/partials/_top-nav.scss */
+/* line 530, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li a {
   background: none;
   color: transparent;
@@ -2002,31 +1999,31 @@ p.subtext {
   text-transform: none;
   width: auto;
 }
-/* line 555, sass/partials/_top-nav.scss */
+/* line 544, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li a:hover {
   background: none;
 }
-/* line 559, sass/partials/_top-nav.scss */
+/* line 548, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li a:before, #block-system-main-menu .content .parent-menu li .no-children li a:after {
   display: none;
 }
-/* line 574, sass/partials/_top-nav.scss */
+/* line 554, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li:before, #block-system-main-menu .content .parent-menu li .no-children li:after {
   display: none;
 }
-/* line 580, sass/partials/_top-nav.scss */
+/* line 560, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li.first a {
   margin-top: 20px;
 }
-/* line 586, sass/partials/_top-nav.scss */
+/* line 566, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li .no-children li.last a {
   margin-bottom: 20px;
 }
-/* line 595, sass/partials/_top-nav.scss */
+/* line 575, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover a, #block-system-main-menu .content .parent-menu li.hover a {
   background: #FFF;
 }
-/* line 597, sass/partials/_top-nav.scss */
+/* line 577, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover a:before, #block-system-main-menu .content .parent-menu li:hover a:after, #block-system-main-menu .content .parent-menu li.hover a:before, #block-system-main-menu .content .parent-menu li.hover a:after {
   background: url("../images/tab-shadows.png") no-repeat #fff;
   content: "";
@@ -2035,17 +2032,17 @@ p.subtext {
   top: 0;
   width: 5px;
 }
-/* line 607, sass/partials/_top-nav.scss */
+/* line 587, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover a:before, #block-system-main-menu .content .parent-menu li.hover a:before {
   background-position: left bottom;
   left: -4px;
 }
-/* line 612, sass/partials/_top-nav.scss */
+/* line 592, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover a:after, #block-system-main-menu .content .parent-menu li.hover a:after {
   background-position: right bottom;
   right: -4px;
 }
-/* line 618, sass/partials/_top-nav.scss */
+/* line 598, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children, #block-system-main-menu .content .parent-menu li.hover .no-children {
   background: #fff;
   border-bottom: 1px solid #D0D0D0;
@@ -2053,11 +2050,11 @@ p.subtext {
   max-height: 500px;
   z-index: 2;
 }
-/* line 626, sass/partials/_top-nav.scss */
+/* line 606, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children li a, #block-system-main-menu .content .parent-menu li.hover .no-children li a {
   color: #850F88;
 }
-/* line 629, sass/partials/_top-nav.scss */
+/* line 609, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children li a:before, #block-system-main-menu .content .parent-menu li.hover .no-children li a:before {
   background: none;
   content: '\25e6';
@@ -2073,16 +2070,16 @@ p.subtext {
   width: 24px;
   z-index: -1;
 }
-/* line 645, sass/partials/_top-nav.scss */
+/* line 625, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children li a:hover, #block-system-main-menu .content .parent-menu li.hover .no-children li a:hover {
   color: #1F1646;
 }
-/* line 648, sass/partials/_top-nav.scss */
+/* line 628, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children li a:hover:before, #block-system-main-menu .content .parent-menu li.hover .no-children li a:hover:before {
   opacity: 1;
 }
 @media only screen and (min-width: 961px) and (max-width: 1040px) {
-  /* line 659, sass/partials/_top-nav.scss */
+  /* line 639, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li {
     margin: 0 0.75%;
   }
@@ -2090,7 +2087,7 @@ p.subtext {
 
 /*  search box
 **************************************************/
-/* line 669, sass/partials/_top-nav.scss */
+/* line 649, sass/partials/_top-nav.scss */
 .block-leidos-custom-search {
   background: #E8E8E8;
   border-bottom: 1px solid #D0D0D0;
@@ -2102,25 +2099,25 @@ p.subtext {
   transition: top .5s ease 0s;
   z-index: 1;
 }
-/* line 680, sass/partials/_top-nav.scss */
+/* line 660, sass/partials/_top-nav.scss */
 .block-leidos-custom-search.search-active {
   top: 92px;
 }
-/* line 684, sass/partials/_top-nav.scss */
+/* line 664, sass/partials/_top-nav.scss */
 .block-leidos-custom-search h2 {
   display: none;
 }
-/* line 688, sass/partials/_top-nav.scss */
+/* line 668, sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content {
   height: calc( 78px + 62px);
 }
-/* line 691, sass/partials/_top-nav.scss */
+/* line 671, sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website {
   height: 78px;
   padding: 40px 0px 22px;
   position: relative;
 }
-/* line 697, sass/partials/_top-nav.scss */
+/* line 677, sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website input[type="text"] {
   background: url("../images/searchbox-search-glass.png") no-repeat 50px -92px #E8E8E8;
   border: none;
@@ -2135,11 +2132,11 @@ p.subtext {
   position: relative;
   width: 67%;
 }
-/* line 711, sass/partials/_top-nav.scss */
+/* line 691, sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website input[type="text"]:focus {
   background-position: 50px 10px;
 }
-/* line 716, sass/partials/_top-nav.scss */
+/* line 696, sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website input[type="submit"] {
   background: transparent url("../images/searchbox-search-glass.png") no-repeat center 10px/30% auto;
   border: 0;
@@ -2157,11 +2154,11 @@ p.subtext {
   top: 46px;
   width: 100px;
 }
-/* line 733, sass/partials/_top-nav.scss */
+/* line 713, sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website input[type="submit"]:hover {
   background-position: center -55px;
 }
-/* line 738, sass/partials/_top-nav.scss */
+/* line 718, sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website span {
   background: url("../images/searchbox-cancel.png") no-repeat center 14px #E8E8E8;
   border: 0;
@@ -2175,7 +2172,7 @@ p.subtext {
   top: 40px;
   width: 78px;
 }
-/* line 752, sass/partials/_top-nav.scss */
+/* line 732, sass/partials/_top-nav.scss */
 .block-leidos-custom-search .content #search_leidos_website span:hover {
   background-position: center -88px;
 }
@@ -2185,11 +2182,11 @@ p.subtext {
 @media only screen and (max-width: 960px) {
   /*  main menu
   **************************************************/
-  /* line 767, sass/partials/_top-nav.scss */
+  /* line 747, sass/partials/_top-nav.scss */
   #block-system-main-menu .additional-control {
     display: block;
   }
-  /* line 772, sass/partials/_top-nav.scss */
+  /* line 752, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #e8e8e8;
@@ -2216,12 +2213,12 @@ p.subtext {
     width: 100%;
     z-index: 20;
   }
-  /* line 795, sass/partials/_top-nav.scss */
+  /* line 775, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu.mobile-drop-active {
     max-height: 1000px;
     overflow: visible;
   }
-  /* line 800, sass/partials/_top-nav.scss */
+  /* line 780, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #e8e8e8;
@@ -2249,11 +2246,10 @@ p.subtext {
     z-index: 1;
     /* menu sections */
     /* header logo */
-    /* small menu sections */
     /* search glass menu section */
     /***** sub menus *****/
   }
-  /* line 823, sass/partials/_top-nav.scss */
+  /* line 803, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li:before {
     background: transparent url("../images/left-nav-shadow.png") no-repeat scroll right bottom;
     bottom: -30px;
@@ -2266,7 +2262,7 @@ p.subtext {
     transition: opacity .25s ease 0s;
     width: 271px;
   }
-  /* line 836, sass/partials/_top-nav.scss */
+  /* line 816, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li:after {
     clear: both;
     content: "";
@@ -2274,7 +2270,7 @@ p.subtext {
     height: 0;
     overflow: hidden;
   }
-  /* line 845, sass/partials/_top-nav.scss */
+  /* line 825, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li a {
     border-bottom: 1px solid #D0D0D0;
     border-top: 1px solid #fff;
@@ -2292,11 +2288,11 @@ p.subtext {
     text-transform: uppercase;
     width: calc(100% - 60px);
   }
-  /* line 864, sass/partials/_top-nav.scss */
+  /* line 844, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li a:hover:before, #block-system-main-menu .content .parent-menu li a:hover:after, #block-system-main-menu .content .parent-menu li a.active:before, #block-system-main-menu .content .parent-menu li a.active:after {
     background: transparent;
   }
-  /* line 872, sass/partials/_top-nav.scss */
+  /* line 852, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.first {
     background: #fff;
     border-bottom: 1px solid #D0D0D0;
@@ -2306,7 +2302,7 @@ p.subtext {
     top: 0;
     transition: all .25s ease 0s;
   }
-  /* line 881, sass/partials/_top-nav.scss */
+  /* line 861, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.first a {
     border: none;
     float: none;
@@ -2316,15 +2312,15 @@ p.subtext {
     background: url(../images/leidos-logo.png) no-repeat center center;
     width: 170px;
   }
-  /* line 890, sass/partials/_top-nav.scss */
+  /* line 870, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.first a:hover {
     z-index: 3;
   }
-  /* line 908, sass/partials/_top-nav.scss */
+  /* line 877, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded > a {
     width: calc(80% - 60px);
   }
-  /* line 912, sass/partials/_top-nav.scss */
+  /* line 881, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded > .additional-control {
     background: transparent;
     border-bottom: 1px solid #D0D0D0;
@@ -2342,7 +2338,7 @@ p.subtext {
     width: 100%;
     z-index: 20;
   }
-  /* line 929, sass/partials/_top-nav.scss */
+  /* line 898, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded > .additional-control:before {
     background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
     background-size: 60% auto;
@@ -2351,6 +2347,7 @@ p.subtext {
     position: absolute;
     right: 30px;
     top: calc(50% - 12.5px);
+    left: auto;
     -ms-transform: rotate(90deg);
         transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -2359,11 +2356,11 @@ p.subtext {
     width: 38px;
     z-index: -1;
   }
-  /* line 944, sass/partials/_top-nav.scss */
+  /* line 914, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded > .additional-control:after {
     display: none;
   }
-  /* line 950, sass/partials/_top-nav.scss */
+  /* line 920, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active > .additional-control {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #e8e8e8;
@@ -2392,14 +2389,14 @@ p.subtext {
     width: calc(100% - 90px);
     z-index: 11;
   }
-  /* line 975, sass/partials/_top-nav.scss */
+  /* line 945, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active > .additional-control:before {
     left: 20px;
     -ms-transform: rotate(270deg);
         transform: rotate(270deg);
     -webkit-transform: rotate(270deg);
   }
-  /* line 982, sass/partials/_top-nav.scss */
+  /* line 952, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active > .additional-info {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #e8e8e8;
@@ -2432,128 +2429,156 @@ p.subtext {
     z-index: 11;
     text-transform: uppercase;
   }
-  /* line 1014, sass/partials/_top-nav.scss */
+  /* line 984, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(2) > .additional-control {
     top: calc(-57px - 0px);
   }
-  /* line 1017, sass/partials/_top-nav.scss */
+  /* line 987, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(2) .additional-info {
     top: calc(-57px - 0px);
   }
-  /* line 1020, sass/partials/_top-nav.scss */
+  /* line 990, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(2) .no-children {
-    top: calc(-57px * 0 + 1px);
+    top: calc(-57px * 0 + 0px);
   }
-  /* line 1023, sass/partials/_top-nav.scss */
+  /* line 993, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(2) .parent-menu {
-    top: calc(-57px * 0 + 1px);
+    top: calc(-57px * 0 + 0px);
   }
-  /* line 1029, sass/partials/_top-nav.scss */
+  /* line 999, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(3) > .additional-control {
     top: calc(-57px * 2 - 0px);
   }
-  /* line 1032, sass/partials/_top-nav.scss */
+  /* line 1002, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(3) .additional-info {
     top: calc(-57px * 2 - 0px);
   }
-  /* line 1035, sass/partials/_top-nav.scss */
+  /* line 1005, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(3) .no-children {
-    top: calc(-57px * 1 + 1px);
+    top: calc(-57px * 1 + 0px);
   }
-  /* line 1038, sass/partials/_top-nav.scss */
+  /* line 1008, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(3) .parent-menu {
-    top: calc(-57px * 1 + 1px);
+    top: calc(-57px * 1 + 0px);
   }
-  /* line 1044, sass/partials/_top-nav.scss */
+  /* line 1014, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(4) > .additional-control {
     top: calc(-57px * 3 - 0px);
   }
-  /* line 1047, sass/partials/_top-nav.scss */
+  /* line 1017, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(4) .additional-info {
     top: calc(-57px * 3 - 0px);
   }
-  /* line 1050, sass/partials/_top-nav.scss */
+  /* line 1020, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(4) .no-children {
-    top: calc(-57px * 2 + 1px);
+    top: calc(-57px * 2 + 0px);
   }
-  /* line 1056, sass/partials/_top-nav.scss */
+  /* line 1023, sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(4) .parent-menu {
+    top: calc(-57px * 2 + 0px);
+  }
+  /* line 1029, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(5) > .additional-control {
     top: calc(-57px * 4 - 0px);
   }
-  /* line 1059, sass/partials/_top-nav.scss */
+  /* line 1032, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(5) .additional-info {
     top: calc(-57px * 4 - 0px);
   }
-  /* line 1062, sass/partials/_top-nav.scss */
+  /* line 1035, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(5) .no-children {
-    top: calc(-57px * 3 + 1px);
+    top: calc(-57px * 3 + 0px);
   }
-  /* line 1068, sass/partials/_top-nav.scss */
+  /* line 1038, sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(5) .parent-menu {
+    top: calc(-57px * 3 + 0px);
+  }
+  /* line 1044, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(6) > .additional-control {
     top: calc(-57px * 5 - 0px);
   }
-  /* line 1071, sass/partials/_top-nav.scss */
+  /* line 1047, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(6) .additional-info {
     top: calc(-57px * 5 - 0px);
   }
-  /* line 1074, sass/partials/_top-nav.scss */
+  /* line 1050, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(6) .no-children {
-    top: calc(-57px * 4 + 1px);
+    top: calc(-57px * 4 + 0px);
   }
-  /* line 1080, sass/partials/_top-nav.scss */
+  /* line 1053, sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(6) .parent-menu {
+    top: calc(-57px * 4 + 0px);
+  }
+  /* line 1059, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(7) > .additional-control {
     top: calc(-57px * 6 - 0px);
   }
-  /* line 1083, sass/partials/_top-nav.scss */
+  /* line 1062, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(7) .additional-info {
     top: calc(-57px * 6 - 0px);
   }
-  /* line 1086, sass/partials/_top-nav.scss */
+  /* line 1065, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(7) .no-children {
-    top: calc(-57px * 5 + 1px);
+    top: calc(-57px * 5 + 0px);
   }
-  /* line 1092, sass/partials/_top-nav.scss */
+  /* line 1068, sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(7) .parent-menu {
+    top: calc(-57px * 5 + 0px);
+  }
+  /* line 1074, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(8) > .additional-control {
     top: calc(-57px * 7 - 0px);
   }
-  /* line 1095, sass/partials/_top-nav.scss */
+  /* line 1077, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(8) .additional-info {
     top: calc(-57px * 7 - 0px);
   }
-  /* line 1098, sass/partials/_top-nav.scss */
+  /* line 1080, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(8) .no-children {
     top: calc(-57px * 6 - 2px);
   }
-  /* line 1104, sass/partials/_top-nav.scss */
+  /* line 1083, sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(8) .parent-menu {
+    top: calc(-57px * 6 - 2px);
+  }
+  /* line 1089, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(9) > .additional-control {
     top: calc(-57px * 8 + 0px);
   }
-  /* line 1107, sass/partials/_top-nav.scss */
+  /* line 1092, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(9) .additional-info {
     top: calc(-57px * 8 + 0px);
   }
-  /* line 1110, sass/partials/_top-nav.scss */
+  /* line 1095, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(9) .no-children {
     top: calc(-57px * 7 + 0px);
   }
-  /* line 1116, sass/partials/_top-nav.scss */
+  /* line 1098, sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(9) .parent-menu {
+    top: calc(-57px * 7 + 0px);
+  }
+  /* line 1104, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(10) .additional-control {
     top: calc(-57px * 9 + 0px);
   }
-  /* line 1119, sass/partials/_top-nav.scss */
+  /* line 1107, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(10) .additional-info {
     top: calc(-57px * 9 + 0px);
   }
-  /* line 1122, sass/partials/_top-nav.scss */
+  /* line 1110, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(10) .no-children {
     top: calc(-57px * 8 + 1px);
   }
-  /* line 1129, sass/partials/_top-nav.scss */
+  /* line 1113, sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.expanded.mobile-active:nth-child(10) .parent-menu {
+    top: calc(-57px * 8 + 1px);
+  }
+  /* line 1120, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.expanded.mobile-active .no-children li a {
     padding: 17px 30px 17px 30px;
     width: calc(100% - 60px);
   }
-  /* line 1139, sass/partials/_top-nav.scss */
+  /* line 1130, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.last {
     background: transparent;
     right: 0;
@@ -2562,11 +2587,15 @@ p.subtext {
     width: 85px;
     z-index: 5;
   }
-  /* line 1148, sass/partials/_top-nav.scss */
+  /* line 1138, sass/partials/_top-nav.scss */
+  #block-system-main-menu .content .parent-menu li.last:after {
+    display: none;
+  }
+  /* line 1143, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.last span.search-active {
     background-color: transparent;
   }
-  /* line 1151, sass/partials/_top-nav.scss */
+  /* line 1146, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.last span.search-active:before, #block-system-main-menu .content .parent-menu li.last span.search-active:after {
     background: transparent url("../images/hamburger-bar.png") no-repeat scroll center center/30px auto;
     content: "";
@@ -2578,19 +2607,19 @@ p.subtext {
     width: 50px;
     z-index: 1;
   }
-  /* line 1164, sass/partials/_top-nav.scss */
+  /* line 1159, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.last span.search-active:before {
     -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-  /* line 1169, sass/partials/_top-nav.scss */
+  /* line 1164, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.last span.search-active:after {
     -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
-  /* line 1178, sass/partials/_top-nav.scss */
+  /* line 1173, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li .no-children,
   #block-system-main-menu .content .parent-menu li .parent-menu {
     background: #dfd1e0;
@@ -2610,29 +2639,29 @@ p.subtext {
     width: 100%;
     z-index: 10;
   }
-  /* line 1197, sass/partials/_top-nav.scss */
+  /* line 1192, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li .no-children li,
   #block-system-main-menu .content .parent-menu li .parent-menu li {
     background: transparent;
   }
-  /* line 1200, sass/partials/_top-nav.scss */
+  /* line 1195, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li .no-children li:before,
   #block-system-main-menu .content .parent-menu li .parent-menu li:before {
     display: none;
   }
-  /* line 1204, sass/partials/_top-nav.scss */
+  /* line 1199, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li .no-children li.first, #block-system-main-menu .content .parent-menu li .no-children li.last,
   #block-system-main-menu .content .parent-menu li .parent-menu li.first,
   #block-system-main-menu .content .parent-menu li .parent-menu li.last {
     height: auto;
   }
-  /* line 1208, sass/partials/_top-nav.scss */
+  /* line 1203, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li .no-children li.first a, #block-system-main-menu .content .parent-menu li .no-children li.last a,
   #block-system-main-menu .content .parent-menu li .parent-menu li.first a,
   #block-system-main-menu .content .parent-menu li .parent-menu li.last a {
     margin: 0;
   }
-  /* line 1214, sass/partials/_top-nav.scss */
+  /* line 1209, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li .no-children li ul li,
   #block-system-main-menu .content .parent-menu li .parent-menu li ul li {
     right: auto;
@@ -2642,7 +2671,7 @@ p.subtext {
     float: none;
     top: auto;
   }
-  /* line 1224, sass/partials/_top-nav.scss */
+  /* line 1219, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li .no-children li a,
   #block-system-main-menu .content .parent-menu li .parent-menu li a {
     border-bottom: 1px solid #cbbdcd;
@@ -2658,7 +2687,7 @@ p.subtext {
     text-transform: uppercase;
     width: calc(100% - 60px);
   }
-  /* line 1238, sass/partials/_top-nav.scss */
+  /* line 1233, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li .no-children li a:hover,
   #block-system-main-menu .content .parent-menu li .no-children li a .active,
   #block-system-main-menu .content .parent-menu li .parent-menu li a:hover,
@@ -2666,7 +2695,7 @@ p.subtext {
     border-bottom: 1px solid #fff;
     color: #1F1646;
   }
-  /* line 1247, sass/partials/_top-nav.scss */
+  /* line 1242, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li:hover, #block-system-main-menu .content .parent-menu li.hover, #block-system-main-menu .content .parent-menu li.active-trail {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #ffffff;
@@ -2684,19 +2713,19 @@ p.subtext {
     /* IE6-8 */
     z-index: 2;
   }
-  /* line 1263, sass/partials/_top-nav.scss */
+  /* line 1258, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li:hover:before, #block-system-main-menu .content .parent-menu li.hover:before, #block-system-main-menu .content .parent-menu li.active-trail:before {
     opacity: 1;
   }
-  /* line 1269, sass/partials/_top-nav.scss */
+  /* line 1264, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li:hover.first:before, #block-system-main-menu .content .parent-menu li:hover.last:before, #block-system-main-menu .content .parent-menu li.hover.first:before, #block-system-main-menu .content .parent-menu li.hover.last:before, #block-system-main-menu .content .parent-menu li.active-trail.first:before, #block-system-main-menu .content .parent-menu li.active-trail.last:before {
     opacity: 0;
   }
-  /* line 1275, sass/partials/_top-nav.scss */
+  /* line 1270, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li:hover a:before, #block-system-main-menu .content .parent-menu li:hover a:after, #block-system-main-menu .content .parent-menu li.hover a:before, #block-system-main-menu .content .parent-menu li.hover a:after, #block-system-main-menu .content .parent-menu li.active-trail a:before, #block-system-main-menu .content .parent-menu li.active-trail a:after {
     background: transparent;
   }
-  /* line 1281, sass/partials/_top-nav.scss */
+  /* line 1276, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li:hover .no-children,
   #block-system-main-menu .content .parent-menu li:hover .parent-menu, #block-system-main-menu .content .parent-menu li.hover .no-children,
   #block-system-main-menu .content .parent-menu li.hover .parent-menu, #block-system-main-menu .content .parent-menu li.active-trail .no-children,
@@ -2705,7 +2734,7 @@ p.subtext {
     height: 200vh;
     max-height: 200vh;
   }
-  /* line 1287, sass/partials/_top-nav.scss */
+  /* line 1282, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li:hover .no-children li,
   #block-system-main-menu .content .parent-menu li:hover .parent-menu li, #block-system-main-menu .content .parent-menu li.hover .no-children li,
   #block-system-main-menu .content .parent-menu li.hover .parent-menu li, #block-system-main-menu .content .parent-menu li.active-trail .no-children li,
@@ -2714,11 +2743,11 @@ p.subtext {
     float: none;
     margin: 0;
   }
-  /* line 1295, sass/partials/_top-nav.scss */
+  /* line 1290, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.mobile-active {
     position: relative;
   }
-  /* line 1298, sass/partials/_top-nav.scss */
+  /* line 1293, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children,
   #block-system-main-menu .content .parent-menu li.mobile-active .parent-menu {
     background: #dfd1e0;
@@ -2731,7 +2760,7 @@ p.subtext {
     padding: 114px 0 0 0;
     left: auto;
   }
-  /* line 1310, sass/partials/_top-nav.scss */
+  /* line 1305, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li,
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li.first,
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li.last,
@@ -2749,7 +2778,7 @@ p.subtext {
     overflow: hidden;
     position: relative;
   }
-  /* line 1324, sass/partials/_top-nav.scss */
+  /* line 1319, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li a,
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li.first a,
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li.last a,
@@ -2759,11 +2788,12 @@ p.subtext {
     float: none;
     width: auto;
     padding: 17px 0 17px 30px;
+    margin-bottom: 0;
     text-transform: uppercase;
     color: #850F88;
     font-size: 14px;
   }
-  /* line 1333, sass/partials/_top-nav.scss */
+  /* line 1329, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li .additional-control,
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li.first .additional-control,
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li.last .additional-control,
@@ -2777,7 +2807,7 @@ p.subtext {
     float: none;
     border-top: 0 none;
   }
-  /* line 1342, sass/partials/_top-nav.scss */
+  /* line 1338, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li ul.no-children,
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li.first ul.no-children,
   #block-system-main-menu .content .parent-menu li.mobile-active .no-children li.last ul.no-children,
@@ -2786,32 +2816,32 @@ p.subtext {
   #block-system-main-menu .content .parent-menu li.mobile-active .parent-menu li.last ul.no-children {
     position: absolute;
   }
-  /* line 1350, sass/partials/_top-nav.scss */
+  /* line 1346, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu.parent-shift {
     right: 100%;
   }
-  /* line 1354, sass/partials/_top-nav.scss */
+  /* line 1350, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu.parent-shift > li.first {
     right: -100%;
   }
-  /* line 1358, sass/partials/_top-nav.scss */
+  /* line 1354, sass/partials/_top-nav.scss */
   #block-system-main-menu .content .parent-menu.parent-shift > li.last {
     right: -100%;
   }
 
   /*  search box
   **************************************************/
-  /* line 1369, sass/partials/_top-nav.scss */
+  /* line 1365, sass/partials/_top-nav.scss */
   .block-leidos-custom-search {
     height: 0vh;
     top: calc(-200vh + 57px);
   }
-  /* line 1373, sass/partials/_top-nav.scss */
+  /* line 1369, sass/partials/_top-nav.scss */
   .block-leidos-custom-search.search-active {
     top: 83px;
     height: 200vh;
   }
-  /* line 1381, sass/partials/_top-nav.scss */
+  /* line 1377, sass/partials/_top-nav.scss */
   .block-leidos-custom-search .content #search_leidos_website input[type="text"] {
     background: none;
     background-color: #fff;
@@ -2824,11 +2854,11 @@ p.subtext {
     padding: 0 20px 0 30px;
     width: calc(100% - 90px);
   }
-  /* line 1394, sass/partials/_top-nav.scss */
+  /* line 1390, sass/partials/_top-nav.scss */
   .block-leidos-custom-search .content #search_leidos_website input[type="submit"] {
     display: block;
   }
-  /* line 1398, sass/partials/_top-nav.scss */
+  /* line 1394, sass/partials/_top-nav.scss */
   .block-leidos-custom-search .content #search_leidos_website span {
     display: none;
   }
