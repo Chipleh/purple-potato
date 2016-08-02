@@ -57,7 +57,6 @@
 			position: absolute;
 			right: calc(50% - 25px);
 			transition: all .25s ease 0s;
-			transition: all .25s ease 0s;
 			width: 50px;
 			z-index: 1;
 		}
@@ -223,7 +222,7 @@
 						& > ul {
 							&.parent-menu,
 							&.no-children {
-								min-width: 200px;
+								min-width: 250px;
 							}
 						}
 					}
@@ -295,6 +294,14 @@
 						left: 0;
 						top: 86px;
 						padding: 25px 0 40px;
+
+						@media only screen and (min-width: 961px) {
+							display: block;
+							opacity: 0;
+							transition: max-height .5s ease 0s;
+							max-height: 0;
+							top: -9999px;
+						}
 
 						li {
 							width: 200px;
@@ -374,6 +381,13 @@
 					ul {
 						&.parent-menu {
 							display: block;
+							@media only screen and (min-width: 961px) {
+								display: block;
+								max-height: 500px;
+								opacity: 1;
+								z-index: 1;
+								top: 86px;
+							}
 							li {
 								a {
 									&:after,
@@ -514,7 +528,8 @@
 					overflow: hidden;
 					position: absolute;
 					top: $header-height;
-					transition: all .25s ease 0s;
+					opacity: 0;
+					transition: max-height .5s ease 0s;
 					width: 200px;
 					z-index: 1;
 
@@ -601,6 +616,7 @@
 						display: block;
 						max-height: 500px;
 						z-index: 2;
+						opacity: 1;
 
 						li {
 							a {
@@ -1289,6 +1305,7 @@
 
 					&.mobile-active {
 						position: relative;
+						height: 57px;
 
 						.no-children,
 						.parent-menu {
@@ -1333,6 +1350,7 @@
 									top: 0;
 									float: none;
 									border-top: 0 none;
+									display: none; // temporarirly hide second level arrow
 								}
 
 								ul.no-children {
