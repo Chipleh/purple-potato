@@ -506,6 +506,12 @@ function leidos_preprocess_panels_pane(&$variables) {
 function leidos_menu_link(array $variables) {
   $element = $variables['element'];
   $i=0;
+  $main_menu_items = menu_build_tree('main-menu');
+  $current_path = current_path();
+  
+  foreach($main_menu_items as $parent){
+    $menu_parents[] = $parent['link']['link_path'];
+  }
   // Process only the menu with no parent
   if ($element['#original_link']['plid'] == 0) {
     if (($key = array_search('active-trail', $element['#attributes']['class'])) !== false) {
@@ -515,18 +521,20 @@ function leidos_menu_link(array $variables) {
     if (empty($element['#localized_options']['attributes']['title'])) {
       $element['#localized_options']['attributes']['title'] = $element['#title'];
     }
-    if ($element['#href'] == current_path()) {    
+    if ($element['#href'] == $current_path && !(in_array($current_path, $menu_parents)) && !isset($element['#below'])) {    
       $element['#attributes']['class'][] = 'active-trail-selected';
       $element['#localized_options']['attributes']['class'] = array();
       $element['#localized_options']['attributes']['class'][] = 'active-trail';
     }
-
-    if ($element['#below']) {
-      foreach ($element['#below'] as $key => $subitem) {  
+    if ($element['#href'] == $current_path && (in_array($current_path, $menu_parents) || isset($element['#below']))){
+      $element['#attributes']['class'][] = 'main-menu-parent';
+    }
+    elseif ($element['#below']) {
+      foreach ($element['#below'] as $key => $subitem) {
         if(is_int($key) && !empty($subitem['#below'])){
           $i++;
         }
-        if (isset($subitem['#href']) && $subitem['#href'] == current_path()) {
+        if (isset($subitem['#href']) && $subitem['#href'] == $current_path) {
           $element['#attributes']['class'][] = 'active-trail-selected';
         }
       }

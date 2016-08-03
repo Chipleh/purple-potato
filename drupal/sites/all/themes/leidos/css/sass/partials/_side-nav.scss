@@ -61,7 +61,7 @@
 		&.mobile-drop-active {
 			&:before {
 				transform: rotate(0deg);
-				-webkit-transform: rotate(0deg);	
+				-webkit-transform: rotate(0deg);
 			}
 		}
 	}
@@ -119,7 +119,7 @@
 				content: "";
 				display: block;
 				height: 0;
-				overflow: hidden; 
+				overflow: hidden;
 			}
 
 			/* menu sections */
@@ -204,7 +204,7 @@
 
 			&:hover,
 			&.hover,
-			&.active-trail-selected {
+            &.active-trail-selected {
 				background: $color-white;
 				z-index: 3;
 
@@ -222,6 +222,21 @@
 					max-height: 1000px;
 				}
 			}
+
+            &.main-menu-parent {
+                background: $color-white;
+                z-index: 3;
+
+                &:before {
+                    opacity: 1;
+                }
+
+                > a {
+                    border-right: 5px solid $color-leidos-purple-light;
+                    // color: $color-leidos-purple-light;
+                    color: $color-leidos-purple-dark;
+                }
+            }
 		}
 	}
 }
@@ -533,7 +548,8 @@
 
 				&:hover,
 				&.hover,
-				&.active-trail-selected {
+				&.active-trail-selected,
+                &.main-menu-parent {
 					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
 					background: #ffffff; /* Old browsers */
 					/* IE9 SVG, needs conditional override of 'filter' to 'none' */
