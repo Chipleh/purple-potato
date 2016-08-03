@@ -213,6 +213,9 @@ function leidos_preprocess_block(&$variables) {
  * Implements theme_menu_tree().
  */
 function leidos_menu_tree($variables) {
+  if($variables['theme_hook_original'] == 'menu_tree__main_menu'){
+    $monica = 'test';
+  }
   // Check for children menus and assign 'parent' or 'no-children'.
   $parent = (strpos($variables['tree'], '<ul')) ? 'parent-menu' : 'no-children';
   $active_parent = (strpos($variables['tree'], 'active') && strpos($variables['tree'], 'open-tree') === FALSE) ? 'open-tree' : '';
@@ -502,6 +505,7 @@ function leidos_preprocess_panels_pane(&$variables) {
  */
 function leidos_menu_link(array $variables) {
   $element = $variables['element'];
+  $i=0;
   $main_menu_items = menu_build_tree('main-menu');
   $current_path = current_path();
   
@@ -526,11 +530,15 @@ function leidos_menu_link(array $variables) {
       $element['#attributes']['class'][] = 'main-menu-parent';
     }
     elseif ($element['#below']) {
-      foreach ($element['#below'] as $subitem) {
+      foreach ($element['#below'] as $key => $subitem) {
+        if(is_int($key) && !empty($subitem['#below'])){
+          $i++;
+        }
         if (isset($subitem['#href']) && $subitem['#href'] == $current_path) {
           $element['#attributes']['class'][] = 'active-trail-selected';
         }
       }
+      $element['#attributes']['class'][] = 'sub-categories-' . $i;
     }
   }
 

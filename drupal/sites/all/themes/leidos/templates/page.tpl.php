@@ -6,6 +6,10 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     <?php endif; ?>
+          
+   <?php if ($lightbox): ?>
+        <div id="lightbox"></div>
+    <?php endif; ?>       
 
     <?php if ($site_name || $site_slogan): ?>
       <div id="name-and-slogan"<?php print ($hide_site_name && $hide_site_slogan) ? ' class="element-invisible"' : ''; ?>>
