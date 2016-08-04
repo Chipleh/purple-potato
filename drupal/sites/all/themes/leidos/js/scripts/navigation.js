@@ -44,12 +44,12 @@
 
 
 			// global
-			// nav hover state 
+			// nav hover state
 			jQuery(menuAnchor).hover(function() {
 				jQuery(this).parent("li").toggleClass("hover");
 			});
 
-			// nav set headings 
+			// nav set headings
 			jQuery(menuHeadingTrigger).click(function() {
 				var headingToSet = jQuery(this).prev("a").attr("title");
 				var headingRecipient = jQuery(this).siblings("span.additional-info");
@@ -71,6 +71,10 @@
 				jQuery(this).parent("li").toggleClass("mobile-active");
 				jQuery(menuTopParentMobile).toggleClass("parent-shift");
 			});
+
+      jQuery("#block-system-main-menu .parent-menu li.expanded .additional-info").on('click', function(e) {
+        document.location = jQuery(this).parent('li').find('> a').attr('href');
+      });
 
 
 
