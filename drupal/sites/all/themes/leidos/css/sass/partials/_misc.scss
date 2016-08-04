@@ -51,7 +51,7 @@ hr {
 .node-teaser {
 	border: none;
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 }
 
 .panels-flexible-industry_template-inside {
@@ -80,6 +80,95 @@ p {
 
 .ctools-modal-content .ds-4col > .group-first {
 	width: auto !important;
+}
+
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	background: rgba(32,23,71,0.9);
+
+	.lb-box {
+		background: #FFF;
+		display: block;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		top: 50%;
+		left: 50%;
+		width: 600px;
+		text-align: center;
+		padding: 0 0 75px;
+
+		.lb-box-content {
+			padding: 75px 50px;
+		}
+
+		.lb-close {
+			display: block;
+			position: absolute;
+			top: 17px;
+			right: 12px;
+			color: #850F88;
+			font-family: "AvenirLT-Book", Arial, sans-serif;
+			cursor: pointer;
+
+			.x-icon {
+				position: relative;
+				display: inline-block;
+				width: 25px;
+				margin-left: 8px;
+
+				&:before {
+					background: #850F88;
+					width: 17px;
+					height: 4px;
+					display: block;
+					position: absolute;
+					top: -6px;
+					left: 0;
+					transform: rotate(45deg);
+					content: " ";
+				}
+
+				&:after {
+					background: #850F88;
+					width: 17px;
+					height: 4px;
+					display: block;
+					position: absolute;
+					top: -7px;
+					left: 0;
+					transform: rotate(-45deg);
+					content: " ";
+				}
+			}
+		}
+
+		h3.lb-title {
+			font-size: 28px;
+			color: #201747;
+			line-height: 31px;
+			margin: 0 0 35px;
+			font-family: "AvenirLT-Book", Arial, sans-serif;
+		}
+
+		.lb-continue-link {
+			font-size: 16px;
+			font-family: "AvenirLT-Book", Arial, sans-serif;
+			margin: 0 0 16px 0;
+			display: inline-block;
+		}
+
+		.lb-info-msg {
+			display: block;
+			font-size: 11px;
+			font-family: "AvenirLT-Book", Arial, sans-serif;
+		}
+	}
 }
 
 
