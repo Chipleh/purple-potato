@@ -954,6 +954,134 @@ p.subtext {
   width: auto !important;
 }
 
+/* line 85, sass/partials/_misc.scss */
+.lightbox {
+  display: block;
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background: rgba(32, 23, 71, 0.9);
+  transition: opacity 0.5s ease;
+}
+/* line 97, sass/partials/_misc.scss */
+.lightbox.show {
+  opacity: 1;
+  left: 0;
+  top: 0;
+}
+/* line 103, sass/partials/_misc.scss */
+.lightbox .lb-box {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  width: 600px;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+}
+@media only screen and (max-width: 960px) {
+  /* line 103, sass/partials/_misc.scss */
+  .lightbox .lb-box {
+    width: 88%;
+    max-width: 600px;
+  }
+}
+/* line 118, sass/partials/_misc.scss */
+.lightbox .lb-box .lb-box-content {
+  padding: 75px 50px 150px;
+  background: #FFF url("../images/vertices-lightbox-wide.png") right bottom no-repeat;
+}
+@media only screen and (max-width: 960px) {
+  /* line 118, sass/partials/_misc.scss */
+  .lightbox .lb-box .lb-box-content {
+    background-position: center bottom;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 118, sass/partials/_misc.scss */
+  .lightbox .lb-box .lb-box-content {
+    padding: 75px 15px 120px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  /* line 118, sass/partials/_misc.scss */
+  .lightbox .lb-box .lb-box-content {
+    background-position: -260px bottom;
+    padding-bottom: 75px;
+  }
+}
+/* line 136, sass/partials/_misc.scss */
+.lightbox .lb-box .lb-close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #850F88;
+  font-family: "AvenirLT-Book", Arial, sans-serif;
+  cursor: pointer;
+}
+/* line 145, sass/partials/_misc.scss */
+.lightbox .lb-box .lb-close .x-icon {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  top: 2px;
+  margin-left: 8px;
+  background: url("../images/close-x-purple.png") left top no-repeat;
+}
+/* line 156, sass/partials/_misc.scss */
+.lightbox .lb-box .lb-close:hover {
+  color: #1F1646;
+}
+/* line 159, sass/partials/_misc.scss */
+.lightbox .lb-box .lb-close:hover .x-icon {
+  background-position: left bottom;
+}
+/* line 165, sass/partials/_misc.scss */
+.lightbox .lb-box h3.lb-title {
+  font-size: 28px;
+  color: #201747;
+  line-height: 31px;
+  margin: 0 0 35px;
+  font-family: "AvenirLT-Book", Arial, sans-serif;
+}
+@media only screen and (max-width: 960px) {
+  /* line 165, sass/partials/_misc.scss */
+  .lightbox .lb-box h3.lb-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
+/* line 179, sass/partials/_misc.scss */
+.lightbox .lb-box .lb-continue-link {
+  font-size: 16px;
+  font-family: "AvenirLT-Book", Arial, sans-serif;
+  margin: 0 0 16px 0;
+  display: inline-block;
+}
+/* line 186, sass/partials/_misc.scss */
+.lightbox .lb-box .lb-info-msg {
+  display: block;
+  font-size: 11px;
+  font-family: "AvenirLT-Book", Arial, sans-serif;
+}
+@media only screen and (max-width: 960px) {
+  /* line 186, sass/partials/_misc.scss */
+  .lightbox .lb-box .lb-info-msg {
+    padding: 0 20px;
+  }
+}
+
 /*  tablet
 **************************************************/
 /*  mobile
@@ -1174,26 +1302,40 @@ p.subtext {
 .left-navigation-menu #left-nav-menu li:hover .no-children, .left-navigation-menu #left-nav-menu li.hover .no-children, .left-navigation-menu #left-nav-menu li.active-trail-selected .no-children {
   max-height: 1000px;
 }
+/* line 226, sass/partials/_side-nav.scss */
+.left-navigation-menu #left-nav-menu li.main-menu-parent {
+  background: #fff;
+  z-index: 3;
+}
+/* line 230, sass/partials/_side-nav.scss */
+.left-navigation-menu #left-nav-menu li.main-menu-parent:before {
+  opacity: 1;
+}
+/* line 234, sass/partials/_side-nav.scss */
+.left-navigation-menu #left-nav-menu li.main-menu-parent > a {
+  border-right: 5px solid #850F88;
+  color: #1F1646;
+}
 
 /*  tablet
 **************************************************/
 @media only screen and (max-width: 960px) {
-  /* line 233, sass/partials/_side-nav.scss */
+  /* line 248, sass/partials/_side-nav.scss */
   .left-navigation-menu {
     min-height: 54px;
   }
-  /* line 236, sass/partials/_side-nav.scss */
+  /* line 251, sass/partials/_side-nav.scss */
   .left-navigation-menu .additional-control {
     display: block;
     color: #1F1646;
     transition: color .25s ease 0s;
     cursor: pointer;
   }
-  /* line 242, sass/partials/_side-nav.scss */
+  /* line 257, sass/partials/_side-nav.scss */
   .left-navigation-menu .additional-control.mobile-drop-active {
     color: transparent;
   }
-  /* line 247, sass/partials/_side-nav.scss */
+  /* line 262, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #e8e8e8;
@@ -1218,12 +1360,12 @@ p.subtext {
     width: 100%;
     z-index: 10;
   }
-  /* line 268, sass/partials/_side-nav.scss */
+  /* line 283, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu.mobile-drop-active {
     max-height: 1000px;
     overflow: visible;
   }
-  /* line 273, sass/partials/_side-nav.scss */
+  /* line 288, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #e8e8e8;
@@ -1242,7 +1384,7 @@ p.subtext {
     /* menu sections */
     /***** sub menus *****/
   }
-  /* line 287, sass/partials/_side-nav.scss */
+  /* line 302, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li > a {
     background: transparent;
     border-right: 0;
@@ -1252,17 +1394,17 @@ p.subtext {
     padding: 17px 30px;
     width: calc(100% - 60px);
   }
-  /* line 299, sass/partials/_side-nav.scss */
+  /* line 314, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.active-trail-selected .active-trail.active {
     border-right: none;
     background: transparent;
     z-index: 3;
   }
-  /* line 308, sass/partials/_side-nav.scss */
+  /* line 323, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded > a {
     width: calc(80% - 60px);
   }
-  /* line 312, sass/partials/_side-nav.scss */
+  /* line 327, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded > .additional-control {
     background: transparent;
     border-bottom: 1px solid #D0D0D0;
@@ -1281,7 +1423,7 @@ p.subtext {
     width: 20%;
     z-index: 20;
   }
-  /* line 330, sass/partials/_side-nav.scss */
+  /* line 345, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded > .additional-control:before {
     background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
     background-size: 60% auto;
@@ -1298,15 +1440,15 @@ p.subtext {
     width: 38px;
     z-index: -1;
   }
-  /* line 345, sass/partials/_side-nav.scss */
+  /* line 360, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded > .additional-control:after {
     display: none;
   }
-  /* line 350, sass/partials/_side-nav.scss */
+  /* line 365, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active {
     z-index: 100;
   }
-  /* line 353, sass/partials/_side-nav.scss */
+  /* line 368, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active > .additional-control {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #e8e8e8;
@@ -1334,14 +1476,14 @@ p.subtext {
     width: calc(100% - 130px);
     z-index: 11;
   }
-  /* line 377, sass/partials/_side-nav.scss */
+  /* line 392, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active > .additional-control:before {
     left: 30px;
     -ms-transform: rotate(270deg);
         transform: rotate(270deg);
     -webkit-transform: rotate(270deg);
   }
-  /* line 384, sass/partials/_side-nav.scss */
+  /* line 399, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active > .additional-info {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #e8e8e8;
@@ -1374,121 +1516,121 @@ p.subtext {
     z-index: 11;
     text-transform: uppercase;
   }
-  /* line 416, sass/partials/_side-nav.scss */
+  /* line 431, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(2) .additional-control {
     top: calc(-54px * 2 + 1px);
   }
-  /* line 419, sass/partials/_side-nav.scss */
+  /* line 434, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(2) .additional-info {
     top: calc(-54px * 2 + 1px);
   }
-  /* line 422, sass/partials/_side-nav.scss */
+  /* line 437, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(2) .no-children {
     top: calc(-54px * 1 + 1px);
   }
-  /* line 428, sass/partials/_side-nav.scss */
+  /* line 443, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(3) .additional-control {
     top: calc(-54px * 3 + 1px);
   }
-  /* line 431, sass/partials/_side-nav.scss */
+  /* line 446, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(3) .additional-info {
     top: calc(-54px * 3 + 1px);
   }
-  /* line 434, sass/partials/_side-nav.scss */
+  /* line 449, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(3) .no-children {
     top: calc(-54px * 2 + 1px);
   }
-  /* line 440, sass/partials/_side-nav.scss */
+  /* line 455, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(4) .additional-control {
     top: calc(-54px * 4 + 1px);
   }
-  /* line 443, sass/partials/_side-nav.scss */
+  /* line 458, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(4) .additional-info {
     top: calc(-54px * 4 + 1px);
   }
-  /* line 446, sass/partials/_side-nav.scss */
+  /* line 461, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(4) .no-children {
     top: calc(-54px * 3 + 1px);
   }
-  /* line 452, sass/partials/_side-nav.scss */
+  /* line 467, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(5) .additional-control {
     top: calc(-54px * 5 + 1px);
   }
-  /* line 455, sass/partials/_side-nav.scss */
+  /* line 470, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(5) .additional-info {
     top: calc(-54px * 5 + 1px);
   }
-  /* line 458, sass/partials/_side-nav.scss */
+  /* line 473, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(5) .no-children {
     top: calc(-54px * 4 + 1px);
   }
-  /* line 464, sass/partials/_side-nav.scss */
+  /* line 479, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(6) .additional-control {
     top: calc(-54px * 6 + 1px);
   }
-  /* line 467, sass/partials/_side-nav.scss */
+  /* line 482, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(6) .additional-info {
     top: calc(-54px * 6 + 1px);
   }
-  /* line 470, sass/partials/_side-nav.scss */
+  /* line 485, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(6) .no-children {
     top: calc(-54px * 5 + 1px);
   }
-  /* line 476, sass/partials/_side-nav.scss */
+  /* line 491, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(7) .additional-control {
     top: calc(-54px * 7 + 1px);
   }
-  /* line 479, sass/partials/_side-nav.scss */
+  /* line 494, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(7) .additional-info {
     top: calc(-54px * 7 + 1px);
   }
-  /* line 482, sass/partials/_side-nav.scss */
+  /* line 497, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(7) .no-children {
     top: calc(-54px * 6 + 1px);
   }
-  /* line 488, sass/partials/_side-nav.scss */
+  /* line 503, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(8) .additional-control {
     top: calc(-54px * 8 + 1px);
   }
-  /* line 491, sass/partials/_side-nav.scss */
+  /* line 506, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(8) .additional-info {
     top: calc(-54px * 8 + 1px);
   }
-  /* line 494, sass/partials/_side-nav.scss */
+  /* line 509, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(8) .no-children {
     top: calc(-54px * 7 + 1px);
   }
-  /* line 500, sass/partials/_side-nav.scss */
+  /* line 515, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(9) .additional-control {
     top: calc(-54px * 9 + 1px);
   }
-  /* line 503, sass/partials/_side-nav.scss */
+  /* line 518, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(9) .additional-info {
     top: calc(-54px * 9 + 1px);
   }
-  /* line 506, sass/partials/_side-nav.scss */
+  /* line 521, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(9) .no-children {
     top: calc(-54px * 8 + 1px);
   }
-  /* line 512, sass/partials/_side-nav.scss */
+  /* line 527, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(10) .additional-control {
     top: calc(-54px * 10 + 1px);
   }
-  /* line 515, sass/partials/_side-nav.scss */
+  /* line 530, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(10) .additional-info {
     top: calc(-54px * 10 + 1px);
   }
-  /* line 518, sass/partials/_side-nav.scss */
+  /* line 533, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active:nth-child(10) .no-children {
     top: calc(-54px * 9 + 1px);
   }
-  /* line 525, sass/partials/_side-nav.scss */
+  /* line 540, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.expanded.mobile-active .no-children li a {
     padding: 17px 30px 17px 130px;
     width: calc(100% - 160px);
   }
-  /* line 534, sass/partials/_side-nav.scss */
-  .left-navigation-menu #left-nav-menu li:hover, .left-navigation-menu #left-nav-menu li.hover, .left-navigation-menu #left-nav-menu li.active-trail-selected {
+  /* line 549, sass/partials/_side-nav.scss */
+  .left-navigation-menu #left-nav-menu li:hover, .left-navigation-menu #left-nav-menu li.hover, .left-navigation-menu #left-nav-menu li.active-trail-selected, .left-navigation-menu #left-nav-menu li.main-menu-parent {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+60,d9d9d9+98,e8e8e8+100 */
     background: #ffffff;
     /* Old browsers */
@@ -1504,11 +1646,11 @@ p.subtext {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 );
     /* IE6-8 */
   }
-  /* line 549, sass/partials/_side-nav.scss */
-  .left-navigation-menu #left-nav-menu li:hover > a, .left-navigation-menu #left-nav-menu li.hover > a, .left-navigation-menu #left-nav-menu li.active-trail-selected > a {
+  /* line 565, sass/partials/_side-nav.scss */
+  .left-navigation-menu #left-nav-menu li:hover > a, .left-navigation-menu #left-nav-menu li.hover > a, .left-navigation-menu #left-nav-menu li.active-trail-selected > a, .left-navigation-menu #left-nav-menu li.main-menu-parent > a {
     border-right: 0px;
   }
-  /* line 555, sass/partials/_side-nav.scss */
+  /* line 571, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li .no-children {
     display: block;
     opacity: 0;
@@ -1522,15 +1664,15 @@ p.subtext {
     background: #dfd1e0;
     z-index: 10;
   }
-  /* line 570, sass/partials/_side-nav.scss */
+  /* line 586, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li .no-children li a {
     width: calc(100% - 40px);
   }
-  /* line 577, sass/partials/_side-nav.scss */
+  /* line 593, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu li.mobile-active .no-children {
     opacity: 1;
   }
-  /* line 583, sass/partials/_side-nav.scss */
+  /* line 599, sass/partials/_side-nav.scss */
   .left-navigation-menu #left-nav-menu.parent-shift {
     right: 100%;
   }
@@ -2078,8 +2220,7 @@ p.subtext {
 /* line 625, sass/partials/_top-nav.scss */
 #block-system-main-menu .content .parent-menu li:hover .no-children li a:before, #block-system-main-menu .content .parent-menu li.hover .no-children li a:before {
   background: none;
-  content: '\25e6';
-  display: block;
+  display: none;
   height: 24px;
   left: -24px;
   line-height: 24px;
@@ -6424,7 +6565,7 @@ p.subtext {
 /* line 238, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-2 .field-name-field-title-item h1 {
   font-size: 4.3vw;
-  height: calc(0.643vw * 7);
+  height: calc(0.643vw * 8);
   line-height: 4.501vw;
   margin-bottom: calc(0.643vw * 2);
   margin-top: calc(0.643vw * 3);
@@ -9214,6 +9355,13 @@ p.subtext {
   display: block;
   height: auto;
   border: 1px solid transparent;
+}
+
+/* line 300, sass/partials/modules/_static-common.scss */
+.page-node-1810 .pane-bundle-content,
+.page-node-1811 .pane-bundle-content,
+.page-node-1812 .pane-bundle-content {
+  margin-bottom: 0;
 }
 
 /* line 1, sass/partials/modules/_static-contact-careers.scss */

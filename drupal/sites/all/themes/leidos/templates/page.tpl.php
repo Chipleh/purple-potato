@@ -6,10 +6,19 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     <?php endif; ?>
-          
-   <?php if ($lightbox): ?>
-        <div id="lightbox"></div>
-    <?php endif; ?>       
+
+    <?php if ($lightbox): ?>
+      <div id="lightbox" class="lightbox">
+        <div class="lb-box">
+          <span class="lb-close">Close<span class="x-icon"></span></span>
+          <div class="lb-box-content">
+            <h3 class="lb-title">Lockheed Martin's Information Systems and Global Solutions (IS&amp;GS) business is now a part of Leidos.</h3>
+            <a href="#" class="lb-continue-link">Continue to your requested page</a>
+            <span class="lb-info-msg">For more information about the company visit <a href="http://leidos.com/transform" target="_blank">leidos.com/transform</a>.</span>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
 
     <?php if ($site_name || $site_slogan): ?>
       <div id="name-and-slogan"<?php print ($hide_site_name && $hide_site_slogan) ? ' class="element-invisible"' : ''; ?>>
@@ -88,8 +97,8 @@
   <?php endif; ?>
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
-          
-    <?php //Breadcrumbs hidden on pages by default (can be added as blocks) ?>      
+
+    <?php //Breadcrumbs hidden on pages by default (can be added as blocks) ?>
     <?php //if ($breadcrumb): ?>
     <?php if (false): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
