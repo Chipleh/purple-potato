@@ -3133,8 +3133,10 @@ p.subtext {
     position: relative;
     height: 78px;
     display: block;
+    text-indent: -9999px;
+    overflow: hidden;
   }
-  /* line 1531, sass/partials/_top-nav.scss */
+  /* line 1534, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content span.search {
     display: block;
     position: absolute;
@@ -3145,7 +3147,7 @@ p.subtext {
     cursor: pointer;
     overflow: hidden;
   }
-  /* line 1541, sass/partials/_top-nav.scss */
+  /* line 1544, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content span.search:after {
     background: #E8E8E8;
     border: 1px solid #D0D0D0;
@@ -3162,7 +3164,7 @@ p.subtext {
     width: 300px;
     z-index: 1;
   }
-  /* line 1557, sass/partials/_top-nav.scss */
+  /* line 1560, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content span.search:before {
     background: url("../images/search-glass.png") no-repeat center bottom transparent;
     content: '';
@@ -3173,11 +3175,11 @@ p.subtext {
     width: 24px;
     z-index: 2;
   }
-  /* line 1570, sass/partials/_top-nav.scss */
+  /* line 1573, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content span.search:hover:before, #page-wrapper #header #block-system-main-menu .content span.search.search-active:before {
     background-position: center top;
   }
-  /* line 1577, sass/partials/_top-nav.scss */
+  /* line 1580, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu {
     width: 100%;
     margin: 0;
@@ -3190,7 +3192,7 @@ p.subtext {
     opacity: 1;
     transition: all 250ms ease;
   }
-  /* line 1589, sass/partials/_top-nav.scss */
+  /* line 1592, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li {
     width: 100%;
     margin: 0;
@@ -3199,7 +3201,7 @@ p.subtext {
     position: relative;
     height: 57px;
   }
-  /* line 1597, sass/partials/_top-nav.scss */
+  /* line 1600, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li a {
     font-family: "AvenirLT-Black",Arial,sans-serif;
     line-height: inherit;
@@ -3213,11 +3215,11 @@ p.subtext {
     color: #211748;
     margin: 0;
   }
-  /* line 1610, sass/partials/_top-nav.scss */
+  /* line 1613, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li a:after, #page-wrapper #header #block-system-main-menu .content ul.menu li a:before {
     display: none;
   }
-  /* line 1616, sass/partials/_top-nav.scss */
+  /* line 1619, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li.category-title, #page-wrapper #header #block-system-main-menu .content ul.menu li.back-level {
     display: block;
     background: #e8e8e8;
@@ -3234,15 +3236,15 @@ p.subtext {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#e8e8e8',GradientType=1 );
     /* IE6-8 */
   }
-  /* line 1632, sass/partials/_top-nav.scss */
+  /* line 1635, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li.category-title a, #page-wrapper #header #block-system-main-menu .content ul.menu li.back-level a {
     color: #211748;
   }
-  /* line 1639, sass/partials/_top-nav.scss */
+  /* line 1642, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li.back-level a {
     padding-left: 60px;
   }
-  /* line 1641, sass/partials/_top-nav.scss */
+  /* line 1644, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li.back-level a:before {
     background: transparent url(/sites/all/themes/leidos/images/nav-arrow.png) no-repeat scroll center center;
     background-size: 60% auto;
@@ -3258,7 +3260,7 @@ p.subtext {
         -ms-transform: rotate(270deg);
             transform: rotate(270deg);
   }
-  /* line 1657, sass/partials/_top-nav.scss */
+  /* line 1660, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li > .additional-control {
     background: transparent;
     border-right: 0;
@@ -3275,7 +3277,7 @@ p.subtext {
     width: 100%;
     z-index: 20;
   }
-  /* line 1675, sass/partials/_top-nav.scss */
+  /* line 1678, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li > .additional-control:before {
     background: transparent url("../images/nav-arrow.png") no-repeat scroll center center;
     background-size: 60% auto;
@@ -3293,11 +3295,11 @@ p.subtext {
     width: 38px;
     z-index: -1;
   }
-  /* line 1691, sass/partials/_top-nav.scss */
+  /* line 1694, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li > .additional-control:after {
     display: none;
   }
-  /* line 1696, sass/partials/_top-nav.scss */
+  /* line 1699, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.menu li > ul.menu {
     width: 100%;
     margin: 0;
@@ -3308,7 +3310,7 @@ p.subtext {
     border: 0 none;
     opacity: 1;
   }
-  /* line 1710, sass/partials/_top-nav.scss */
+  /* line 1713, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 {
     max-height: 0;
     overflow: visible;
@@ -3333,12 +3335,12 @@ p.subtext {
     height: 200vh;
     padding-top: 78px;
   }
-  /* line 1731, sass/partials/_top-nav.scss */
+  /* line 1734, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1.mobile-drop-active {
     max-height: 1000px;
     overflow: visible;
   }
-  /* line 1736, sass/partials/_top-nav.scss */
+  /* line 1739, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li {
     background: #e8e8e8;
     /* Old browsers */
@@ -3360,47 +3362,47 @@ p.subtext {
     list-style: none;
     display: block;
   }
-  /* line 1756, sass/partials/_top-nav.scss */
+  /* line 1759, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.link-2 ul.level-2 {
     top: -57px;
   }
-  /* line 1761, sass/partials/_top-nav.scss */
+  /* line 1764, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.link-3 ul.level-2 {
     top: -114px;
   }
-  /* line 1766, sass/partials/_top-nav.scss */
+  /* line 1769, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.link-4 ul.level-2 {
     top: -171px;
   }
-  /* line 1771, sass/partials/_top-nav.scss */
+  /* line 1774, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.link-5 ul.level-2 {
     top: -228px;
   }
-  /* line 1776, sass/partials/_top-nav.scss */
+  /* line 1779, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.link-6 ul.level-2 {
     top: -285px;
   }
-  /* line 1781, sass/partials/_top-nav.scss */
+  /* line 1784, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.link-7 ul.level-2 {
     top: -342px;
   }
-  /* line 1786, sass/partials/_top-nav.scss */
+  /* line 1789, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.link-8 ul.level-2 {
     top: -399px;
   }
-  /* line 1791, sass/partials/_top-nav.scss */
+  /* line 1794, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.link-9 ul.level-2 {
     top: -456px;
   }
-  /* line 1796, sass/partials/_top-nav.scss */
+  /* line 1799, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.link-10 ul.level-2 {
     top: -513px;
   }
-  /* line 1801, sass/partials/_top-nav.scss */
+  /* line 1804, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li a {
     color: #1F1646;
   }
-  /* line 1806, sass/partials/_top-nav.scss */
+  /* line 1809, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.first {
     background: #fff;
     border-bottom: 1px solid #d0d0d0;
@@ -3409,7 +3411,7 @@ p.subtext {
     width: 100%;
     display: none;
   }
-  /* line 1815, sass/partials/_top-nav.scss */
+  /* line 1818, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.first a {
     margin: 0 auto;
     padding: 0;
@@ -3417,18 +3419,18 @@ p.subtext {
     height: 100%;
     color: transparent;
   }
-  /* line 1824, sass/partials/_top-nav.scss */
+  /* line 1827, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.last {
     width: 88px;
     background: transparent;
     display: none;
   }
-  /* line 1831, sass/partials/_top-nav.scss */
+  /* line 1834, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content .level-1 > li.mobile-active ul.menu {
     z-index: 25;
     height: 200vh;
   }
-  /* line 1840, sass/partials/_top-nav.scss */
+  /* line 1843, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 {
     background: #dfd1e0;
     /* FF3.6+ */
@@ -3439,70 +3441,70 @@ p.subtext {
     background: linear-gradient(to right, #dfd1e0 93%, #cbbfcd 98%, #dfd1e0 101%);
     /* W3C */
   }
-  /* line 1849, sass/partials/_top-nav.scss */
+  /* line 1852, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li {
     overflow: visible;
     z-index: 5;
   }
-  /* line 1854, sass/partials/_top-nav.scss */
+  /* line 1857, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li:not(.category-title):not(.back-level) > a {
     border-bottom: 1px solid #c1b3c2;
     border-top: 1px solid #eadceb;
   }
-  /* line 1860, sass/partials/_top-nav.scss */
+  /* line 1863, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.mobile-active {
     z-index: 10;
   }
-  /* line 1866, sass/partials/_top-nav.scss */
+  /* line 1869, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-0 ul.level-3 {
     top: -171px;
   }
-  /* line 1871, sass/partials/_top-nav.scss */
+  /* line 1874, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-1 ul.level-3 {
     top: -228px;
   }
-  /* line 1876, sass/partials/_top-nav.scss */
+  /* line 1879, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-2 ul.level-3 {
     top: -285px;
   }
-  /* line 1881, sass/partials/_top-nav.scss */
+  /* line 1884, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-3 ul.level-3 {
     top: -342px;
   }
-  /* line 1886, sass/partials/_top-nav.scss */
+  /* line 1889, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-4 ul.level-3 {
     top: -171px;
   }
-  /* line 1891, sass/partials/_top-nav.scss */
+  /* line 1894, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-5 ul.level-3 {
     top: -228px;
   }
-  /* line 1896, sass/partials/_top-nav.scss */
+  /* line 1899, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-6 ul.level-3 {
     top: -285px;
   }
-  /* line 1901, sass/partials/_top-nav.scss */
+  /* line 1904, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-7 ul.level-3 {
     top: -342px;
   }
-  /* line 1906, sass/partials/_top-nav.scss */
+  /* line 1909, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-8 ul.level-2 {
     top: -399px;
   }
-  /* line 1911, sass/partials/_top-nav.scss */
+  /* line 1914, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-9 ul.level-2 {
     top: -456px;
   }
-  /* line 1916, sass/partials/_top-nav.scss */
+  /* line 1919, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li.link-10 ul.level-2 {
     top: -513px;
   }
-  /* line 1920, sass/partials/_top-nav.scss */
+  /* line 1923, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-2 li a {
     color: #850F88;
     text-transform: uppercase;
   }
-  /* line 1927, sass/partials/_top-nav.scss */
+  /* line 1930, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-3 {
     width: 100%;
     background: #dfd1e0;
@@ -3514,7 +3516,7 @@ p.subtext {
     background: linear-gradient(to right, #dfd1e0 93%, #cbbfcd 98%, #dfd1e0 101%);
     /* W3C */
   }
-  /* line 1939, sass/partials/_top-nav.scss */
+  /* line 1942, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content ul.level-3 li.leaf a {
     color: #850F88;
     text-transform: none;
@@ -3522,43 +3524,43 @@ p.subtext {
     border-bottom: 1px solid #baacbb;
     border-top: 1px solid #eadceb;
   }
-  /* line 1951, sass/partials/_top-nav.scss */
+  /* line 1954, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content.nav-shift-0 ul.level-1 {
     top: 78px;
     left: 0;
   }
-  /* line 1955, sass/partials/_top-nav.scss */
+  /* line 1958, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content.nav-shift-0 ul.level-1 ul.level-2 {
     left: 100%;
   }
-  /* line 1958, sass/partials/_top-nav.scss */
+  /* line 1961, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content.nav-shift-0 ul.level-1 ul.level-2 ul.level-3 {
     top: 84px;
     left: 200%;
   }
-  /* line 1967, sass/partials/_top-nav.scss */
+  /* line 1970, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content.nav-shift-1 ul.level-1 {
     left: -100%;
     top: 78px;
   }
-  /* line 1971, sass/partials/_top-nav.scss */
+  /* line 1974, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content.nav-shift-1 ul.level-1 ul.level-2 {
     left: 100%;
   }
-  /* line 1974, sass/partials/_top-nav.scss */
+  /* line 1977, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content.nav-shift-1 ul.level-1 ul.level-2 ul.level-3 {
     left: 100%;
   }
-  /* line 1982, sass/partials/_top-nav.scss */
+  /* line 1985, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content.nav-shift-2 ul.level-1 {
     left: -200%;
     top: 78px;
   }
-  /* line 1986, sass/partials/_top-nav.scss */
+  /* line 1989, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content.nav-shift-2 ul.level-1 ul.level-2 {
     left: 100%;
   }
-  /* line 1989, sass/partials/_top-nav.scss */
+  /* line 1992, sass/partials/_top-nav.scss */
   #page-wrapper #header #block-system-main-menu .content.nav-shift-2 ul.level-1 ul.level-2 ul.level-3 {
     left: 100%;
   }
