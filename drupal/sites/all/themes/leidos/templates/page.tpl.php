@@ -7,7 +7,7 @@
       </a>
     <?php endif; ?>
 
-    <?php if ($lightbox): ?>
+
       <div id="lightbox" class="lightbox">
         <div class="lb-box">
           <span class="lb-close">Close<span class="x-icon"></span></span>
@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-    <?php endif; ?>
+
 
     <?php if ($site_name || $site_slogan): ?>
       <div id="name-and-slogan"<?php print ($hide_site_name && $hide_site_slogan) ? ' class="element-invisible"' : ''; ?>>

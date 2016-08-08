@@ -55,13 +55,14 @@ jQuery(document).ready(function($) {
 
     $lightbox.on('click', closeLightbox);
     $('.lb-continue-link').on('click', function(e) {
+      e.preventDefault();
       $lightbox.removeClass('show');
     });
   }
 
   function closeLightbox(e) {
     var $target = $(e.target);
-    if ($target.hasClass('lightbox') || $target.hasClass('lb-close')) {
+    if ($target.hasClass('lightbox') || $target.hasClass('lb-close') || $target.parent('.lb-close').length) {
       $lightbox.removeClass('show');
     }
   }

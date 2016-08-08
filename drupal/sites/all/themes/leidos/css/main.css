@@ -1010,7 +1010,7 @@ p.subtext {
     padding: 75px 15px 120px;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 390px) {
   /* line 118, sass/partials/_misc.scss */
   .lightbox .lb-box .lb-box-content {
     background-position: -260px bottom;
