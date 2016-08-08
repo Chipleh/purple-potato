@@ -151,15 +151,19 @@
         } else if (jQuery(this).parent("li").parent('ul').hasClass('level-3')) {
 
         }
-        //jQuery(this).parents(".mobile-drop-active").addClass('level-1');
-				//jQuery(menuTopParentMobile).toggleClass("parent-shift");
 			});
 
       jQuery("#block-system-main-menu .parent-menu li.expanded .additional-info").on('click', function(e) {
         document.location = jQuery(this).parent('li').find('> a').attr('href');
       });
 
-
+      jQuery('#block-system-main-menu .content > .parent-menu > li.expanded a').on('click', function(e) {
+        if ('ontouchstart' in window || navigator.msMaxTouchPoints) {
+          if (!jQuery(this).parents('.level-2').length) {
+            e.preventDefault();
+          }
+        }
+      });
 
 			// side nav
 			// side nav click for drop down [tablet/mobile function]
