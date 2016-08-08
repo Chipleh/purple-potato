@@ -394,6 +394,12 @@
 
 				&:hover,
 				&.hover {
+					a {
+						@media only screen and (min-width: 961px) {
+							background: #FFF;
+							color: $color-leidos-purple-light;
+						}
+					}
 					ul {
 						&.parent-menu {
 							display: block;
@@ -438,7 +444,6 @@
 					position: relative;
 					text-transform: uppercase;
 
-					&:hover,
 					&.active {
 						color: $color-leidos-purple-light;
 					}
@@ -476,6 +481,10 @@
 					right: 0;
 					top: 0;
 					width: 128px;
+
+					@media only screen and (max-width: 1040px) and (min-width: 961px) {
+						width: 115px;
+					}
 
 					&:after {
 						background: $color-gray-light;
@@ -617,12 +626,12 @@
 
 						&:before {
 							background-position: left bottom;
-							left: -4px;
+							left: -5px;
 						}
 
 						&:after {
 							background-position: right bottom;
-							right: -4px;
+							right: -5px;
 						}
 					}
 
