@@ -127,45 +127,64 @@
 			var menuSideParentMobile = jQuery(".left-navigation-menu .parent-menu");
 			var menuSideSectionMobile = jQuery(".left-navigation-menu .pane-content > .additional-control");
 
-      jQuery('#block-system-main-menu .content').prepend('<a href="http://leidos.com" class="logo" title="home">Leidos</a>');
-      jQuery('#block-system-main-menu .content').prepend('<span class="search" title="Search leidos.com"></span>');
+      // if mobile logo doesnt exist, create it
+      if (!jQuery('#block-system-main-menu .content > a.logo').length) {
+        jQuery('#block-system-main-menu .content').prepend('<a href="http://leidos.com" class="logo" title="home">Leidos</a>');
+      }
+      // if mobile search link doesnt exist, create it
+      if (!jQuery('#block-system-main-menu .content > span.search').length) {
+        jQuery('#block-system-main-menu .content').prepend('<span class="search" title="Search leidos.com"></span>');
+      }
+      // set initial nav classes
       jQuery('#block-system-main-menu .content').addClass('nav-shift-0');
       jQuery('#block-system-main-menu .content > ul.menu').addClass('level-1');
       jQuery('#block-system-main-menu .content > ul.menu:eq(0) > li ul.menu').addClass('level-2');
       jQuery('#block-system-main-menu .content > ul.menu > li ul.menu > li ul.menu').removeClass('level-2').addClass('level-3');
 
+      // mark main nav links to prevent duplicate events/styles
       jQuery('#block-system-main-menu .level-1').each(function(i) {
         var $ul = jQuery(this);
-
         jQuery('> li', $ul).each(function(j) {
           $(this).addClass('link-' + j);
         });
       });
 
+      // mark sub nav links to prevent duplicate events/styles
       jQuery('#block-system-main-menu .level-2').each(function(i) {
         var $ul = jQuery(this);
-
         jQuery('> li', $ul).each(function(j) {
           $(this).addClass('link-' + j);
         });
       });
 
+      // create supplement mobile nav items
       jQuery('#block-system-main-menu .level-2').each(function() {
         var $a = jQuery(this).parent('li').find('a:eq(0)');
         var href = $a.attr('href');
         var title = $a.attr('title');
-
-        jQuery(this).prepend('<li class="category-title"><a href="'+href+'">'+title+'</a></li>');
-        jQuery(this).prepend('<li class="back-level"><a href="#">Back</a></li>');
+        // if category-title item doest exist, create it
+        if (!jQuery(this).find('> li.category-title').length) {
+          jQuery(this).prepend('<li class="category-title"><a href="'+href+'">'+title+'</a></li>');
+        }
+        // if back-level item doesnt exist, create it
+        if (!jQuery(this).find('> li.back-level').length) {
+          jQuery(this).prepend('<li class="back-level"><a href="#">Back</a></li>');
+        }
       });
 
+      // create supplement mobile nav items
       jQuery('#block-system-main-menu .level-3').each(function() {
         var $a = jQuery(this).parent('li').find('a:eq(0)');
         var href = $a.attr('href');
         var title = $a.text();
-
-        jQuery(this).prepend('<li class="category-title"><a href="'+href+'">'+title+'</a></li>');
-        jQuery(this).prepend('<li class="back-level"><a href="#">Back</a></li>');
+        // if category-title item doest exist, create it
+        if (!jQuery(this).find('> li.category-title').length) {
+          jQuery(this).prepend('<li class="category-title"><a href="'+href+'">'+title+'</a></li>');
+        }
+        // if back-level item doesnt exist, create it
+        if (!jQuery(this).find('> li.back-level').length) {
+          jQuery(this).prepend('<li class="back-level"><a href="#">Back</a></li>');
+        }
       });
 
       jQuery('.back-level a').on('click', function(e) {
