@@ -127,7 +127,59 @@
 			var menuSideParentMobile = jQuery(".left-navigation-menu .parent-menu");
 			var menuSideSectionMobile = jQuery(".left-navigation-menu .pane-content > .additional-control");
 
+      jQuery('#block-system-main-menu .content').prepend('<a href="http://leidos.com" class="logo" title="home">Leidos</a>');
+      jQuery('#block-system-main-menu .content').prepend('<span class="search" title="Search leidos.com"></span>');
+      jQuery('#block-system-main-menu .content').addClass('nav-shift-0');
+      jQuery('#block-system-main-menu .content > ul.menu').addClass('level-1');
+      jQuery('#block-system-main-menu .content > ul.menu:eq(0) > li ul.menu').addClass('level-2');
+      jQuery('#block-system-main-menu .content > ul.menu > li ul.menu > li ul.menu').removeClass('level-2').addClass('level-3');
 
+      jQuery('#block-system-main-menu .level-1').each(function(i) {
+        var $ul = jQuery(this);
+
+        jQuery('> li', $ul).each(function(j) {
+          $(this).addClass('link-' + j);
+        });
+      });
+
+      jQuery('#block-system-main-menu .level-2').each(function(i) {
+        var $ul = jQuery(this);
+
+        jQuery('> li', $ul).each(function(j) {
+          $(this).addClass('link-' + j);
+        });
+      });
+
+      jQuery('#block-system-main-menu .level-2').each(function() {
+        var $a = jQuery(this).parent('li').find('a:eq(0)');
+        var href = $a.attr('href');
+        var title = $a.attr('title');
+
+        jQuery(this).prepend('<li class="category-title"><a href="'+href+'">'+title+'</a></li>');
+        jQuery(this).prepend('<li class="back-level"><a href="#">Back</a></li>');
+      });
+
+      jQuery('#block-system-main-menu .level-3').each(function() {
+        var $a = jQuery(this).parent('li').find('a:eq(0)');
+        var href = $a.attr('href');
+        var title = $a.text();
+
+        jQuery(this).prepend('<li class="category-title"><a href="'+href+'">'+title+'</a></li>');
+        jQuery(this).prepend('<li class="back-level"><a href="#">Back</a></li>');
+      });
+
+      jQuery('.back-level a').on('click', function(e) {
+        e.preventDefault();
+        var $a = jQuery(this);
+        var $li = $a.parent('li');
+        if ($li.parent('ul').hasClass('level-2')) {
+          $li.parents('.content').removeClass('nav-shift-1').addClass('nav-shift-0');
+          jQuery('.mobile-active').removeClass('mobile-active');
+        } else if ($li.parent('ul').hasClass('level-3')) {
+          $li.parents('.content').removeClass('nav-shift-2').addClass('nav-shift-1');
+          jQuery('.level-2 .mobile-active').removeClass('mobile-active');
+        }
+      });
 
 			// functions
 			// side nav sets section heading
@@ -147,6 +199,9 @@
 				jQuery('.mobile-active').removeClass('mobile-active');
 				jQuery('.parent-shift').removeClass('parent-shift');
 				jQuery('.search-active').removeClass('search-active');
+        jQuery('.nav-shift-1').removeClass('nav-shift-1');
+        jQuery('.nav-shift-2').removeClass('nav-shift-2');
+        jQuery('#block-system-main-menu .content').addClass('nav-shift-0');
 			}
 
 
@@ -169,6 +224,7 @@
 			// top nav click for drop down [tablet/mobile function]
 			jQuery(menuTopSectionMobile).click(function() {
 				mobileStateClear();
+        jQuery('#block-system-main-menu').toggleClass('show');
 				jQuery(this).toggleClass("mobile-drop-active");
 				jQuery(this).siblings("ul").toggleClass("mobile-drop-active");
 				jQuery('.left-navigation-menu').find('.mobile-drop-active').removeClass('mobile-drop-active');
@@ -177,7 +233,15 @@
 			// top nav click for sub menu [tablet/mobile function]
 			jQuery(menuTopMobile).click(function() {
 				jQuery(this).parent("li").toggleClass("mobile-active");
-				jQuery(menuTopParentMobile).toggleClass("parent-shift");
+        if (jQuery(this).parent("li").parent('ul').hasClass('level-1')) {
+          jQuery('#block-system-main-menu .content').removeClass('nav-shift-0').addClass('nav-shift-1');
+        } else if (jQuery(this).parent("li").parent('ul').hasClass('level-2')) {
+          jQuery('#block-system-main-menu .content').removeClass('nav-shift-1').addClass('nav-shift-2');
+        } else if (jQuery(this).parent("li").parent('ul').hasClass('level-3')) {
+
+        }
+        //jQuery(this).parents(".mobile-drop-active").addClass('level-1');
+				//jQuery(menuTopParentMobile).toggleClass("parent-shift");
 			});
 
       jQuery("#block-system-main-menu .parent-menu li.expanded .additional-info").on('click', function(e) {
@@ -230,7 +294,7 @@
   Drupal.behaviors.leidosSearch = {
     attach: function (context, settings) {
 
-			var searchBox = jQuery('li.last span.nolink');
+			var searchBox = jQuery('li.last span.nolink, .search');
 			var cancelButton = jQuery('#search_leidos_website span');
 			var searchForm = jQuery('div.block-leidos-custom-search');
 
@@ -239,6 +303,7 @@
 				jQuery(searchBox).toggleClass('search-active');
 				jQuery(searchForm).toggleClass('search-active');
 				jQuery('.mobile-drop-active').removeClass('mobile-drop-active');
+        jQuery('#block-system-main-menu').removeClass('show');
 			});
 
 			//search click
