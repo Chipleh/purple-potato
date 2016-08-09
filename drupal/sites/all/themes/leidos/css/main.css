@@ -3953,12 +3953,12 @@ p.subtext {
 .pane-bundle-news-releases .view-content .views-row .date-display-single {
   color: #777;
   display: block;
-  font-size: 11px;
+  font-size: 13px;
 }
 /* line 370, sass/partials/modules/_announcements.scss */
 .pane-bundle-news-releases .view-content .views-row a {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 @media only screen and (max-width: 960px) {
