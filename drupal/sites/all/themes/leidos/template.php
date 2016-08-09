@@ -198,6 +198,9 @@ function leidos_preprocess_block(&$variables) {
   // In the header region visually hide block titles.
   if ($variables['block']->region == 'header') {
     $variables['title_attributes_array']['class'][] = 'element-invisible';
+    $variables['content'] = '
+    <span class="search" title="Search leidos.com"></span>
+    <a href="http://leidos.com" class="logo" title="home">Leidos</a>' . $variables['content'];        
   }
   // Add the footer logo div to the first block in the 'Footer - First column' region.
   if ($variables['block']->region == 'footer_firstcolumn' && $variables['block']->delta == 1) {
