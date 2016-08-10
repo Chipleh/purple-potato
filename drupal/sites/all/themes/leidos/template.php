@@ -60,6 +60,10 @@ function leidos_process_html(&$variables) {
  * Override or insert variables into the page template.
  */
 function leidos_preprocess_page(&$variables) {
+  // Popup modal light box from specific lockheed martin pages
+  $referer_urls = explode(',', variable_get('lightbox_referer_urls'));
+  $variables['lightbox'] = (in_array($_SERVER['HTTP_REFERER'], $referer_urls)) ? TRUE : FALSE ;
+
   $display = panels_get_current_page_display();
   if (isset($display->panels)) {
     $vertices = 'no-vertices';
@@ -198,6 +202,9 @@ function leidos_preprocess_block(&$variables) {
   // In the header region visually hide block titles.
   if ($variables['block']->region == 'header') {
     $variables['title_attributes_array']['class'][] = 'element-invisible';
+    $variables['content'] = '
+    <span class="search" title="Search leidos.com"></span>
+    <a href="http://leidos.com" class="logo" title="home">Leidos</a>' . $variables['content'];        
   }
   // Add the footer logo div to the first block in the 'Footer - First column' region.
   if ($variables['block']->region == 'footer_firstcolumn' && $variables['block']->delta == 1) {
@@ -213,6 +220,9 @@ function leidos_preprocess_block(&$variables) {
  * Implements theme_menu_tree().
  */
 function leidos_menu_tree($variables) {
+  if($variables['theme_hook_original'] == 'menu_tree__main_menu'){
+    $monica = 'test';
+  }
   // Check for children menus and assign 'parent' or 'no-children'.
   $parent = (strpos($variables['tree'], '<ul')) ? 'parent-menu' : 'no-children';
   $active_parent = (strpos($variables['tree'], 'active') && strpos($variables['tree'], 'open-tree') === FALSE) ? 'open-tree' : '';
@@ -502,6 +512,7 @@ function leidos_preprocess_panels_pane(&$variables) {
  */
 function leidos_menu_link(array $variables) {
   $element = $variables['element'];
+  $i=0;
   $main_menu_items = menu_build_tree('main-menu');
   $current_path = current_path();
   
@@ -523,14 +534,27 @@ function leidos_menu_link(array $variables) {
       $element['#localized_options']['attributes']['class'][] = 'active-trail';
     }
     if ($element['#href'] == $current_path && (in_array($current_path, $menu_parents) || isset($element['#below']))){
+      $ignore_subcategories = TRUE;
       $element['#attributes']['class'][] = 'main-menu-parent';
+      foreach($element['#below'] as $element_key => $sublinks){
+        if(is_int($element_key) && !empty($sublinks['#below'])){
+          $ignore_subcategories = FALSE;
+        }
+      }
+      if($ignore_subcategories){
+        $element['#attributes']['class'][] = 'sub-categories-0';
+      }
     }
     elseif ($element['#below']) {
-      foreach ($element['#below'] as $subitem) {
+      foreach ($element['#below'] as $key => $subitem) {
+        if(is_int($key) && !empty($subitem['#below'])){
+          $i++;
+        }
         if (isset($subitem['#href']) && $subitem['#href'] == $current_path) {
           $element['#attributes']['class'][] = 'active-trail-selected';
         }
       }
+      $element['#attributes']['class'][] = 'sub-categories-' . $i;
     }
   }
 
