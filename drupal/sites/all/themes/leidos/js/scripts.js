@@ -547,8 +547,7 @@
 
 			// top nav click for sub menu [tablet/mobile function]
 			jQuery(menuTopMobile).click(function() {
-				jQuery(this).parent("li").toggleClass("mobile-active");
-
+				jQuery(this).parent("li").toggleClass("mobile-active hover");
         if (jQuery(this).parent("li").parent('ul').hasClass('level-1')) {
           jQuery('#block-system-main-menu .content').removeClass('nav-shift-0').addClass('nav-shift-1');
         } else if (jQuery(this).parent("li").parent('ul').hasClass('level-2')) {
