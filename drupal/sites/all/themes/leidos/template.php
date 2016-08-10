@@ -60,6 +60,10 @@ function leidos_process_html(&$variables) {
  * Override or insert variables into the page template.
  */
 function leidos_preprocess_page(&$variables) {
+  // Popup modal light box from specific lockheed martin pages
+  $referer_urls = explode(',', variable_get('lightbox_referer_urls'));
+  $variables['lightbox'] = (in_array($_SERVER['HTTP_REFERER'], $referer_urls)) ? TRUE : FALSE ;
+
   $display = panels_get_current_page_display();
   if (isset($display->panels)) {
     $vertices = 'no-vertices';
