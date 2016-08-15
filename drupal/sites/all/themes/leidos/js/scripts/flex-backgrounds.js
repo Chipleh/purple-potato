@@ -1,36 +1,43 @@
-//  Toggle background images (desktop/mobile) based on web browser width.
+//  Global action
+//  Toggle background images (Desktop/Mobile) based on web browser width.
 //  Marc S. Brooks
 //  2/24/16
-(function ($) {
+(function($) {
   Drupal.behaviors.flexibleTemplateBackground = {
     attach: function(context, settings) {
 
       // Define styles for defined data-* attributes.
       function defineStyles() {
-        var width  = jQuery('body').width(),
+        var width  = $('body').width(),
             select = null;
 
-        if (width > 960) {
+        if (width >= 961) {
           select = 'data-background-desktop';
-        } else {
+        }
+        else
+        if (width < 961) {
           select = 'data-background-mobile';
         }
 
-        var items = jQuery('[' + select + ']');
+        $('[' + select + ']', context)
+          .each(function() {
+            var val = $(this).attr(select);
 
-        items.each(function() {
-          var item = $(this),
-              val  = item.attr(select);
+            // Append background to parent node, unless it's a panel container.
+            var target = $(this).parent();
 
-          // If style attributes already exists on parent node, relocate contents.
-          var parent_attr = item.parent().attr('style');
+            if ($(this).hasClass('panel-pane')) {
 
-          // Remove the parent style.
-          item.parent().removeAttr('style');
+              // Add inline style.
+              target = $(this);
+            }
 
-          // Append background and to parent node.
-          item.parent().attr('style', val + ';' + parent_attr);
-        });
+            target.css({
+              'background-image':  'url(' + val + ')',
+              'background-repeat': 'no-repeat',
+              'background-size':   'contain'
+            });
+          });
       }
 
       // Listen for resize events.
