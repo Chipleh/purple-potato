@@ -409,14 +409,16 @@
                 width:  '1000px'
               });
 
-            $(this).parent('div').prepend('<img src="http://placehold.it/16x9" class="yt-ratio"/>');
-
             if ($(this)[0].src) {
               iframe[0].src = 'https://www.youtube.com/embed/' + $(this)[0].src.replace(/^.*\?v=(\w+)$/, '$1');
             }
 
             $(this).parent().replaceWith(iframe);
           }
+        });
+
+        $('iframe.media-youtube-player', context).each(function() {
+          $(this).prepend('<img src="http://placehold.it/16x9" class="yt-ratio"/>');
         });
     }
   };
