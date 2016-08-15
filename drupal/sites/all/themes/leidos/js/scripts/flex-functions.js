@@ -135,15 +135,14 @@
 
               $(this).parent().addClass('video-container-open');
 
-              console.log("video opening");
-
               $('.node-type-flexible-template').addClass('video-open');
               var fullProp = $(this).parent().attr('data-video-full-screen');
               if (fullProp == "1") {
-                $videoEl = $(this).parent().find('video, iframe.media-youtube-player');
+                console.log('is fullscreen');
+                $videoEl = $('video, iframe.media-youtube-player');
                 $videoEl.css({
-                  'max-height': 'none !important',
-                  'height': window.innerHeight + 'px !important'
+                  'max-height': 'none',
+                  'height': window.innerHeight + 'px'
                 });
               }
             });

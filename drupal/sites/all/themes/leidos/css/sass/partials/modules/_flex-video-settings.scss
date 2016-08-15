@@ -45,8 +45,26 @@
 				margin: 0 auto;
 				position: relative;
 				top: 140px;
-				width: 695px !important;
-				height: 500px !important;
+			}
+		}
+
+		[data-video-full-screen="0"] {
+			.field-name-field-video-tout,
+			.views-field-field-video-tout {
+				iframe,
+				video {
+					border: 10px solid $color-gray-medium-dark;
+					display: block;
+					margin: 0 auto;
+					position: relative;
+					top: 140px;
+					width: 695px !important;
+					height: 500px !important;
+				}
+			}
+
+			.button-close {
+				right: 0;
 			}
 		}
 
@@ -63,12 +81,14 @@
 				video {
 					width: 100% !important;
 					width: calc(100% - 20px) !important;
-					height: 100% !important;
 					top: 0;
+					background: #000;
+					border-color: #000;
 
 					&.media-youtube-player {
 						position: absolute;
 						min-height: 500px;
+						height: 100% !important;
 					}
 				}
 			}
