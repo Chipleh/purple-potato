@@ -531,7 +531,6 @@
               $('.node-type-flexible-template').addClass('video-open');
               var fullProp = $(this).parent().attr('data-video-full-screen');
               if (fullProp == "1") {
-                console.log('is fullscreen');
                 $videoEl = $('video, iframe.media-youtube-player');
                 $videoEl.css({
                   'max-height': 'none',

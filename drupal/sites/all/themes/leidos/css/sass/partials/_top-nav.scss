@@ -683,11 +683,13 @@
 		}
 
 		@media only screen and (min-width: 961px) {
-			.level-2 {
-				& > li {
-					& > a {
-						font-size: 18px;
-						font-family: "Avenir LT W01 65 Medium", Arial, sans-serif;
+			.parent-menu {
+				.menu.level-2 {
+					& > li.expanded {
+						& > a {
+							font-size: 18px;
+							font-family: "Avenir LT W01 65 Medium", Arial, sans-serif;
+						}
 					}
 				}
 			}
