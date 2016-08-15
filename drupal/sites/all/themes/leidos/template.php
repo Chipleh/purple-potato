@@ -62,7 +62,9 @@ function leidos_process_html(&$variables) {
 function leidos_preprocess_page(&$variables) {
   // Popup modal light box from specific lockheed martin pages
   $referer_urls = explode(',', variable_get('lightbox_referer_urls'));
-  $variables['lightbox'] = (in_array($_SERVER['HTTP_REFERER'], $referer_urls)) ? TRUE : FALSE ;
+  $url = parse_url($_SERVER['HTTP_REFERER']);
+  $variables['lightbox'] = (in_array($_SERVER['HTTP_REFERER'], $referer_urls) || 
+          in_array($url, $referer_urls)) ? TRUE : FALSE ;
 
   $display = panels_get_current_page_display();
   if (isset($display->panels)) {
