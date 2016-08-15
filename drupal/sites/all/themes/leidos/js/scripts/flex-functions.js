@@ -23,7 +23,7 @@
             $(this).parent().replaceWith(iframe);
           }
         });
-        console.log("youtube player script");
+
         $('iframe.media-youtube-player', context).each(function() {
           $(this).before('<img src="http://placehold.it/16x9" class="yt-ratio"/>');
         });
@@ -135,7 +135,17 @@
 
               $(this).parent().addClass('video-container-open');
 
+              console.log("video opening");
+
               $('.node-type-flexible-template').addClass('video-open');
+              var fullProp = $(this).parent().attr('data-video-full-screen');
+              if (fullProp == "1") {
+                $videoEl = $(this).parent().find('video, iframe.media-youtube-player');
+                $videoEl.css({
+                  'max-height': 'none !important',
+                  'height': window.innerHeight + 'px !important'
+                });
+              }
             });
 
             close.on('click', function(event) {
