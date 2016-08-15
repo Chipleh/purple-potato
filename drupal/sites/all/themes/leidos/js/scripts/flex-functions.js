@@ -23,9 +23,9 @@
             $(this).parent().replaceWith(iframe);
           }
         });
-
+        console.log("youtube player script");
         $('iframe.media-youtube-player', context).each(function() {
-          $(this).prepend('<img src="http://placehold.it/16x9" class="yt-ratio"/>');
+          $(this).before('<img src="http://placehold.it/16x9" class="yt-ratio"/>');
         });
     }
   };
