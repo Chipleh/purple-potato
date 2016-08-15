@@ -42,13 +42,18 @@
 				position: relative;
 				top: 140px;
 				width: 695px !important;
-				height: 400px !important;
+				height: 500px !important;
 			}
 		}
 
 		[data-video-full-screen="1"] {
 			.field-name-field-video-tout,
 			.views-field-field-video-tout {
+
+				img.yt-ratio {
+					width: 100%;
+					visibility: hidden;
+				}
 				iframe,
 				video {
 					width: 100% !important;
