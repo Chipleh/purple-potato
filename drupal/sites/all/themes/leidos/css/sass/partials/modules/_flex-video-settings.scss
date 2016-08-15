@@ -34,6 +34,10 @@
 				width: 100%;
 			}
 
+			img.yt-ratio {
+				display: none;
+			}
+
 			iframe,
 			video {
 				border: 10px solid $color-gray-medium-dark;
@@ -53,13 +57,15 @@
 				img.yt-ratio {
 					width: 100%;
 					visibility: hidden;
+					display: block;
 				}
 				iframe,
 				video {
 					width: 100% !important;
 					width: calc(100% - 20px) !important;
 					height: 100% !important;
-					min-height: 400px;
+					min-height: 500px;
+					position: absolute;
 				}
 			}
 

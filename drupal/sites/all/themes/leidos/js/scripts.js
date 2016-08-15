@@ -346,6 +346,12 @@
         $('[' + select + ']', context)
           .each(function() {
             var val = $(this).attr(select);
+            //if (select == 'data-background-mobile') {
+              //if (val == "") {
+                // if no mobile bg is defined, use desktop value
+                //val = $(this).attr('data-background-desktop');
+              //}
+            //}
 
             // Append background to parent node, unless it's a panel container.
             var target = $(this).parent();
@@ -402,6 +408,8 @@
                 height: '610px',
                 width:  '1000px'
               });
+
+            $(this).parent('div').prepend('<img src="http://placehold.it/16x9" class="yt-ratio"/>');
 
             if ($(this)[0].src) {
               iframe[0].src = 'https://www.youtube.com/embed/' + $(this)[0].src.replace(/^.*\?v=(\w+)$/, '$1');
