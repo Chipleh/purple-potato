@@ -46,6 +46,21 @@
 			}
 		}
 
+		[data-video-full-screen="1"] {
+			.field-name-field-video-tout,
+			.views-field-field-video-tout {
+				iframe,
+				video {
+					width: 100% !important;
+					height: 100% !important;
+				}
+			}
+
+			.button-close {
+				right: 0;
+			}
+		}
+
 		/* button close */
 		.button-close {
 			display: none;

@@ -22,6 +22,12 @@
         $('[' + select + ']', context)
           .each(function() {
             var val = $(this).attr(select);
+            //if (select == 'data-background-mobile') {
+              //if (val == "") {
+                // if no mobile bg is defined, use desktop value
+                //val = $(this).attr('data-background-desktop');
+              //}
+            //}
 
             // Append background to parent node, unless it's a panel container.
             var target = $(this).parent();
