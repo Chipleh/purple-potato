@@ -359,7 +359,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -684,6 +684,45 @@ function flexible_template_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_video_full_screen'
+  $field_instances['field_collection_item-field_columns_multi-field_video_full_screen'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_video_full_screen',
+    'label' => 'Video Full Screen',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 11,
     ),
   );
 
@@ -3775,6 +3814,7 @@ function flexible_template_field_default_field_instances() {
   t('Title');
   t('Title Color');
   t('Title Size');
+  t('Video Full Screen');
   t('Video Tout');
 
   return $field_instances;

@@ -209,6 +209,7 @@ function flexible_template_ds_layout_settings_info() {
         9 => 'field_video_tout',
         10 => 'field_cta',
         11 => 'field_background_image_url',
+        12 => 'field_video_full_screen',
       ),
     ),
     'fields' => array(
@@ -224,6 +225,7 @@ function flexible_template_ds_layout_settings_info() {
       'field_video_tout' => 'ds_content',
       'field_cta' => 'ds_content',
       'field_background_image_url' => 'ds_content',
+      'field_video_full_screen' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -259,9 +261,10 @@ function flexible_template_ds_layout_settings_info() {
         8 => 'field_background_mobile_image',
         9 => 'field_background_image_url',
         10 => 'field_video_tout',
-        11 => 'field_cta',
-        12 => 'redirect',
-        13 => '_add_existing_field',
+        11 => 'field_video_full_screen',
+        12 => 'field_cta',
+        13 => 'redirect',
+        14 => '_add_existing_field',
       ),
     ),
     'fields' => array(
@@ -276,6 +279,7 @@ function flexible_template_ds_layout_settings_info() {
       'field_background_mobile_image' => 'first',
       'field_background_image_url' => 'first',
       'field_video_tout' => 'first',
+      'field_video_full_screen' => 'first',
       'field_cta' => 'first',
       'redirect' => 'first',
       '_add_existing_field' => 'first',
