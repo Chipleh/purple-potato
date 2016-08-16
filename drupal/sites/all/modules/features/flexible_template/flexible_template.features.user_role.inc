@@ -16,11 +16,5 @@ function flexible_template_user_default_roles() {
     'weight' => 2,
   );
 
-  // Exported role: content editor.
-  $roles['content editor'] = array(
-    'name' => 'content editor',
-    'weight' => 3,
-  );
-
   return $roles;
 }

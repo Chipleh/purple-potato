@@ -46,18 +46,6 @@ function leidos_menu_default_menu_custom() {
     'title' => 'Footer - Social Media',
     'description' => '',
   );
-  // Exported menu: menu-left-navigation.
-  $menus['menu-left-navigation'] = array(
-    'menu_name' => 'menu-left-navigation',
-    'title' => 'Left navigation',
-    'description' => '',
-  );
-  // Exported menu: menu-pane-testing.
-  $menus['menu-pane-testing'] = array(
-    'menu_name' => 'menu-pane-testing',
-    'title' => 'Pane Testing',
-    'description' => '',
-  );
   // Translatables
   // Included for use with string extractors like potx.
   t('Engineering Navigation');
@@ -66,9 +54,7 @@ function leidos_menu_default_menu_custom() {
   t('Footer - Resources');
   t('Footer - Services');
   t('Footer - Social Media');
-  t('Left navigation');
   t('Main menu');
-  t('Pane Testing');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
 
 

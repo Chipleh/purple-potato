@@ -68,17 +68,6 @@ function flexible_template_preprocess_field_columns_multi(&$variables) {
 
   // Append jQuery data-* attibutes to background elements.
   flexible_template_append_background_attributes($variables);
-
-  // Append video full screen attribute.
-  $content = &$variables['content'];
-  if (isset($variables['field_video_full_screen'])) {
-    if ($variables['field_video_full_screen'][0]['value']) {
-      $variables['attributes_array']['data-video-full-screen'] = 1;
-    } else {
-      $variables['attributes_array']['data-video-full-screen'] = 0;
-    }
-    unset($content['field_video_full_screen']);
-  }
 }
 
 /**
