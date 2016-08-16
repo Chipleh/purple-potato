@@ -7748,15 +7748,22 @@ p.subtext {
   margin: 0 auto;
   position: relative;
   top: 140px;
-  width: 695px !important;
-  height: 500px !important;
 }
-/* line 66, sass/partials/modules/_flex-video-settings.scss */
-.pane-bundle-multi-column .flexible-template-content [data-video-full-screen="0"] .button-close,
-.pane-bundle-rotator-hero .flexible-template-content [data-video-full-screen="0"] .button-close {
-  right: 0;
+@media only screen and (min-width: 961px) {
+  /* line 54, sass/partials/modules/_flex-video-settings.scss */
+  .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="0"] .field-name-field-video-tout iframe,
+  .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="0"] .field-name-field-video-tout video,
+  .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="0"] .views-field-field-video-tout iframe,
+  .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="0"] .views-field-field-video-tout video,
+  .pane-bundle-rotator-hero .flexible-template-content [data-video-full-screen="0"] .field-name-field-video-tout iframe,
+  .pane-bundle-rotator-hero .flexible-template-content [data-video-full-screen="0"] .field-name-field-video-tout video,
+  .pane-bundle-rotator-hero .flexible-template-content [data-video-full-screen="0"] .views-field-field-video-tout iframe,
+  .pane-bundle-rotator-hero .flexible-template-content [data-video-full-screen="0"] .views-field-field-video-tout video {
+    width: 695px !important;
+    height: 500px !important;
+  }
 }
-/* line 75, sass/partials/modules/_flex-video-settings.scss */
+/* line 74, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="1"] .field-name-field-video-tout img.yt-ratio,
 .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="1"] .views-field-field-video-tout img.yt-ratio,
 .pane-bundle-rotator-hero .flexible-template-content [data-video-full-screen="1"] .field-name-field-video-tout img.yt-ratio,
@@ -7765,7 +7772,7 @@ p.subtext {
   visibility: hidden;
   display: block;
 }
-/* line 80, sass/partials/modules/_flex-video-settings.scss */
+/* line 79, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="1"] .field-name-field-video-tout iframe,
 .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="1"] .field-name-field-video-tout video,
 .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="1"] .views-field-field-video-tout iframe,
@@ -7780,7 +7787,7 @@ p.subtext {
   background: #000;
   border-color: #000;
 }
-/* line 88, sass/partials/modules/_flex-video-settings.scss */
+/* line 87, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="1"] .field-name-field-video-tout iframe.media-youtube-player,
 .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="1"] .field-name-field-video-tout video.media-youtube-player,
 .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="1"] .views-field-field-video-tout iframe.media-youtube-player,
@@ -7792,13 +7799,13 @@ p.subtext {
   position: absolute;
   min-height: 500px;
 }
-/* line 95, sass/partials/modules/_flex-video-settings.scss */
+/* line 94, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content [data-video-full-screen="1"] .button-close,
 .pane-bundle-rotator-hero .flexible-template-content [data-video-full-screen="1"] .button-close {
   right: 5px;
   top: 25px;
 }
-/* line 102, sass/partials/modules/_flex-video-settings.scss */
+/* line 101, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-close,
 .pane-bundle-rotator-hero .flexible-template-content .button-close {
   display: none;
@@ -7811,7 +7818,7 @@ p.subtext {
   width: 60px;
   z-index: 10000;
 }
-/* line 113, sass/partials/modules/_flex-video-settings.scss */
+/* line 112, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-close:before,
 .pane-bundle-rotator-hero .flexible-template-content .button-close:before {
   color: #fff;
@@ -7825,7 +7832,7 @@ p.subtext {
           transform: rotate(45deg);
   width: 100%;
 }
-/* line 126, sass/partials/modules/_flex-video-settings.scss */
+/* line 125, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play,
 .pane-bundle-rotator-hero .flexible-template-content .button-play {
   border-bottom: 1.4vw solid transparent;
@@ -7844,7 +7851,7 @@ p.subtext {
   position: relative;
   width: 0;
 }
-/* line 144, sass/partials/modules/_flex-video-settings.scss */
+/* line 143, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play:before,
 .pane-bundle-rotator-hero .flexible-template-content .button-play:before {
   background: #fff;
@@ -7860,7 +7867,7 @@ p.subtext {
   transition: all .5s ease;
   width: 6vw;
 }
-/* line 160, sass/partials/modules/_flex-video-settings.scss */
+/* line 159, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play:after,
 .pane-bundle-rotator-hero .flexible-template-content .button-play:after {
   background: #fff;
@@ -7876,28 +7883,28 @@ p.subtext {
   transition: all .5s ease;
   width: 5vw;
 }
-/* line 177, sass/partials/modules/_flex-video-settings.scss */
+/* line 176, sass/partials/modules/_flex-video-settings.scss */
 .pane-bundle-multi-column .flexible-template-content .button-play:hover:before,
 .pane-bundle-rotator-hero .flexible-template-content .button-play:hover:before {
   opacity: .55;
 }
 
 /* video open */
-/* line 188, sass/partials/modules/_flex-video-settings.scss */
+/* line 187, sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #header {
   z-index: 1;
 }
-/* line 192, sass/partials/modules/_flex-video-settings.scss */
+/* line 191, sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #main-wrapper {
   z-index: 100;
 }
-/* line 199, sass/partials/modules/_flex-video-settings.scss */
+/* line 198, sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .button-close,
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .field-name-field-video-tout,
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .views-field-field-video-tout {
   display: block;
 }
-/* line 204, sass/partials/modules/_flex-video-settings.scss */
+/* line 203, sass/partials/modules/_flex-video-settings.scss */
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .button-close .flex-control-nav,
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .field-name-field-video-tout .flex-control-nav,
 .node-type-flexible-template.video-open #main-wrapper .video-container-open .views-field-field-video-tout .flex-control-nav {
@@ -7907,14 +7914,14 @@ p.subtext {
 /*  tablet & mobile
 **************************************************/
 @media only screen and (max-width: 960px) {
-  /* line 220, sass/partials/modules/_flex-video-settings.scss */
+  /* line 219, sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content,
   .pane-bundle-feature-video .flexible-template-content,
   .pane-bundle-rotator-hero .flexible-template-content {
     /* button close */
     /* button play */
   }
-  /* line 224, sass/partials/modules/_flex-video-settings.scss */
+  /* line 223, sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .field-name-field-video-tout iframe,
   .pane-bundle-multi-column .flexible-template-content .field-name-field-video-tout video,
   .pane-bundle-multi-column .flexible-template-content .views-field-field-video-tout iframe,
@@ -7932,14 +7939,14 @@ p.subtext {
     height: auto !important;
     min-height: 445px;
   }
-  /* line 235, sass/partials/modules/_flex-video-settings.scss */
+  /* line 234, sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-close,
   .pane-bundle-feature-video .flexible-template-content .button-close,
   .pane-bundle-rotator-hero .flexible-template-content .button-close {
     right: 40px;
     top: 80px;
   }
-  /* line 241, sass/partials/modules/_flex-video-settings.scss */
+  /* line 240, sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play,
   .pane-bundle-feature-video .flexible-template-content .button-play,
   .pane-bundle-rotator-hero .flexible-template-content .button-play {
@@ -7948,7 +7955,7 @@ p.subtext {
     border-top: 6.4vw solid transparent;
     margin-bottom: calc(0.643vw * 28);
   }
-  /* line 247, sass/partials/modules/_flex-video-settings.scss */
+  /* line 246, sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play:before,
   .pane-bundle-feature-video .flexible-template-content .button-play:before,
   .pane-bundle-rotator-hero .flexible-template-content .button-play:before {
@@ -7957,7 +7964,7 @@ p.subtext {
     top: -13vw;
     width: 26vw;
   }
-  /* line 254, sass/partials/modules/_flex-video-settings.scss */
+  /* line 253, sass/partials/modules/_flex-video-settings.scss */
   .pane-bundle-multi-column .flexible-template-content .button-play:after,
   .pane-bundle-feature-video .flexible-template-content .button-play:after,
   .pane-bundle-rotator-hero .flexible-template-content .button-play:after {
