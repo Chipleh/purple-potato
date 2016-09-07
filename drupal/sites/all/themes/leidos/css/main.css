@@ -10886,11 +10886,9 @@ p.subtext {
 /* line 7, sass/partials/modules/_static-history.scss */
 .staticContent .history__list {
   color: #fff;
+  font-size: 0;
   height: 460px;
   white-space: nowrap;
-  max-width: 3688px;
-  min-width: 2255px;
-  width: 600vw;
 }
 /* line 11, sass/_mixins.scss */
 .staticContent .history__list:after {
@@ -10898,16 +10896,17 @@ p.subtext {
   display: table;
   clear: both;
 }
-/* line 16, sass/partials/modules/_static-history.scss */
+/* line 14, sass/partials/modules/_static-history.scss */
 .staticContent .history__listInner {
   bottom: 80px;
   left: 10%;
   position: absolute;
   width: 70%;
 }
-/* line 22, sass/partials/modules/_static-history.scss */
+/* line 20, sass/partials/modules/_static-history.scss */
 .staticContent .history__event {
-  float: left;
+  display: inline-block;
+  font-size: 13px;
   height: 458px;
   position: relative;
   white-space: normal;
@@ -10916,26 +10915,26 @@ p.subtext {
   min-width: 375px;
   width: 100vw;
 }
-/* line 32, sass/partials/modules/_static-history.scss */
+/* line 31, sass/partials/modules/_static-history.scss */
 .staticContent .history__event h2,
 .staticContent .history__event h3 {
   color: #fff;
 }
-/* line 37, sass/partials/modules/_static-history.scss */
+/* line 36, sass/partials/modules/_static-history.scss */
 .staticContent .history__event h2 {
   font-family: AvenirLT-Book, Arial, sans-serif;
   font-size: 80px;
   line-height: 1.2em;
   margin: 0;
 }
-/* line 44, sass/partials/modules/_static-history.scss */
+/* line 43, sass/partials/modules/_static-history.scss */
 .staticContent .history__event h3 {
   font-family: AvenirLT-Black, Arial, sans-serif;
   font-size: 16px;
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 51, sass/partials/modules/_static-history.scss */
+/* line 50, sass/partials/modules/_static-history.scss */
 .staticContent .history__event p {
   color: #fff;
   font-family: AvenirLT-Book, Arial, sans-serif;
@@ -10943,11 +10942,11 @@ p.subtext {
   line-height: 1.8em;
   margin-bottom: 0;
 }
-/* line 60, sass/partials/modules/_static-history.scss */
+/* line 59, sass/partials/modules/_static-history.scss */
 .staticContent .history__event + .history__event {
   border-left: 1px solid #fff;
 }
-/* line 65, sass/partials/modules/_static-history.scss */
+/* line 64, sass/partials/modules/_static-history.scss */
 .staticContent .history__event:first-child h2 {
   color: #867429;
   margin-bottom: 50px;
@@ -10956,16 +10955,16 @@ p.subtext {
   margin: 10px 0 20px;
   text-transform: none;
 }
-/* line 78, sass/partials/modules/_static-history.scss */
+/* line 77, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspContainer {
   overflow: hidden;
   position: relative;
 }
-/* line 83, sass/partials/modules/_static-history.scss */
+/* line 82, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspPane {
   position: absolute;
 }
-/* line 87, sass/partials/modules/_static-history.scss */
+/* line 86, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspVerticalBar {
   position: absolute;
   top: 0;
@@ -10974,7 +10973,7 @@ p.subtext {
   height: 100%;
   background: red;
 }
-/* line 96, sass/partials/modules/_static-history.scss */
+/* line 95, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspHorizontalBar {
   position: absolute;
   bottom: 0;
@@ -10983,20 +10982,20 @@ p.subtext {
   height: 16px;
   background: red;
 }
-/* line 105, sass/partials/modules/_static-history.scss */
+/* line 104, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspCap {
   display: none;
 }
-/* line 109, sass/partials/modules/_static-history.scss */
+/* line 108, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspHorizontalBar .jspCap {
   float: left;
 }
-/* line 113, sass/partials/modules/_static-history.scss */
+/* line 112, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspTrack {
   background: #dde;
   position: relative;
 }
-/* line 118, sass/partials/modules/_static-history.scss */
+/* line 117, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspDrag {
   background: #840087;
   border-radius: 7px;
@@ -11005,13 +11004,13 @@ p.subtext {
   left: 0;
   cursor: pointer;
 }
-/* line 127, sass/partials/modules/_static-history.scss */
+/* line 126, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspHorizontalBar .jspTrack,
 .staticContent .history .jspHorizontalBar .jspDrag {
   float: left;
   height: 100%;
 }
-/* line 133, sass/partials/modules/_static-history.scss */
+/* line 132, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspArrow {
   background: #50506d;
   text-indent: -20000px;
@@ -11020,32 +11019,32 @@ p.subtext {
   padding: 0;
   margin: 0;
 }
-/* line 142, sass/partials/modules/_static-history.scss */
+/* line 141, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspArrow.jspDisabled {
   cursor: default;
   background: #80808d;
 }
-/* line 147, sass/partials/modules/_static-history.scss */
+/* line 146, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspVerticalBar .jspArrow {
   height: 16px;
 }
-/* line 151, sass/partials/modules/_static-history.scss */
+/* line 150, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspHorizontalBar .jspArrow {
   width: 16px;
   float: left;
   height: 100%;
 }
-/* line 157, sass/partials/modules/_static-history.scss */
+/* line 156, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspVerticalBar .jspArrow:focus {
   outline: none;
 }
-/* line 161, sass/partials/modules/_static-history.scss */
+/* line 160, sass/partials/modules/_static-history.scss */
 .staticContent .history .jspCorner {
   background: #eeeef4;
   float: left;
   height: 100%;
 }
-/* line 168, sass/partials/modules/_static-history.scss */
+/* line 167, sass/partials/modules/_static-history.scss */
 .staticContent .history * html .jspCorner {
   margin: 0 -3px 0 0;
 }

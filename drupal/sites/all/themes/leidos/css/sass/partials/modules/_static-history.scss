@@ -7,11 +7,9 @@
     &__list {
         @include clearfix;
         color: #fff;
+        font-size: 0;
         height: 460px;
         white-space: nowrap;
-        max-width: 3688px;
-        min-width: 2255px;
-        width: 600vw;
     }
     &__listInner {
         bottom: 80px;
@@ -20,7 +18,8 @@
         width: 70%;
     }
     &__event {
-        float: left;
+        display: inline-block;
+        font-size: 13px;
         height: 458px;
         position: relative;
         white-space: normal;
