@@ -10888,9 +10888,9 @@ p.subtext {
   color: #fff;
   height: 460px;
   white-space: nowrap;
-  max-width: 3688px;
+  max-width: 4298px;
   min-width: 2255px;
-  width: 600vw;
+  width: 700vw;
 }
 /* line 11, sass/_mixins.scss */
 .staticContent .history__list:after {
