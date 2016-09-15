@@ -195,7 +195,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   else {
     $variables['classes_array'][] = 'flex-template-module-no-title';
   }
-
+  
   // Set background color.
   if (isset($content['field_background_color'])) {
     if (!isset($content['field_background_image']) && !isset($content['field_background_video'])) {
@@ -321,7 +321,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   // @see rotator_hero
   //
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'rotator_hero') {
-
+    
     // Add empty field for all slides.
     if (!isset($content['field_rotator_slide_hero'])) {
       $content['field_rotator_slide_hero'] = array(
@@ -339,6 +339,17 @@ function flexible_template_preprocess_panels_pane(&$variables) {
         '#bundle' => 'rotator_hero',
         '#items' => array()
       );
+    }
+    else{
+      foreach($content['field_rotator_slide_hero'] as $slide_key => $rotator){
+        if(is_int($slide_key)){
+          $language = $rotator['#node']->language;
+          // Add class to hide title if option is not selected
+          if(isset($rotator['#node']->field_display_title) && $rotator['#node']->field_display_title[$language][0]['value'] == '0'){
+            $variables['classes_array'][] = 'flex-template-module-hide-title';
+          }
+        }
+      }
     }
 
     // Add custom class that identifies the Module Height (short/tall) and remove field.
