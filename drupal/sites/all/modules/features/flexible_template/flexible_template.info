@@ -245,6 +245,7 @@ features[variable][] = panelizer_node:flexible_template:default_selection
 features[variable][] = panelizer_node:flexible_template:page_manager_selection
 features[variable][] = panelizer_node:flexible_template_allowed_layouts
 features[variable][] = panelizer_node:flexible_template_allowed_layouts_default
+features[variable][] = panelizer_node:flexible_template_allowed_types
 features[variable][] = panelizer_node:flexible_template_allowed_types_default
 features[variable][] = panelizer_node:flexible_template_default
 features[variable][] = panels_curator_display_flexible_template

@@ -65,7 +65,10 @@ function leidos_preprocess_page(&$variables) {
   $parsed_url = parse_url($_SERVER['HTTP_REFERER']);
   $variables['lightbox'] = (in_array($_SERVER['HTTP_REFERER'], $referer_urls) || 
           in_array($parsed_url['host'], $referer_urls)) ? TRUE : FALSE ;
-
+  if(isset($_GET['host']) && $_GET['host'] == 'h'){
+    $variables['lightbox'] = TRUE;
+  }
+  // End Popup modal
   $display = panels_get_current_page_display();
   if (isset($display->panels)) {
     $vertices = 'no-vertices';

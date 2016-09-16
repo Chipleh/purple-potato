@@ -74,4 +74,5 @@ features[variable][] = panelizer_node:announcement_allowed_layouts
 features[variable][] = panelizer_node:announcement_allowed_layouts_default
 features[variable][] = panelizer_node:announcement_allowed_types_default
 features[variable][] = panelizer_node:announcement_default
+features[variable][] = pathauto_taxonomy_term_announcement_type_pattern
 features[views_view][] = announcements

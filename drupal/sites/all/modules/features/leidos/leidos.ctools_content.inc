@@ -20,9 +20,13 @@ function leidos_default_ctools_custom_content() {
   $content->settings = array(
     'admin_title' => 'Vertices',
     'title' => '',
-    'body' => '<div id="theme-banner-div-left"></div><div id="theme-banner-div-right"></div>',
+    'body' => '<div id="theme-banner-div-left">&nbsp;</div>
+
+<div id="theme-banner-div-right">&nbsp;</div>
+',
     'format' => 'full_html',
     'substitute' => 1,
+    'title_heading' => 'h2',
   );
   $export['theme_banner'] = $content;
 
