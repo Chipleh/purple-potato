@@ -43,6 +43,25 @@ function flexible_template_panelizer_defaults() {
   $display->uuid = '3bb57fcb-06bb-4424-818b-9eda725cef18';
   $display->content = array();
   $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-48ec322b-8c57-484f-9111-69892da8f159';
+  $pane->panel = 'center';
+  $pane->type = 'fieldable_panels_pane';
+  $pane->subtype = 'fpid:3681';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'view_mode' => 'full',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '48ec322b-8c57-484f-9111-69892da8f159';
+  $display->content['new-48ec322b-8c57-484f-9111-69892da8f159'] = $pane;
+  $display->panels['center'][0] = 'new-48ec322b-8c57-484f-9111-69892da8f159';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

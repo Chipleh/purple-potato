@@ -3069,7 +3069,7 @@ function flexible_template_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3091,7 +3091,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_default_widget',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -3175,7 +3175,7 @@ function flexible_template_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -3258,7 +3258,7 @@ function flexible_template_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -3316,7 +3316,50 @@ function flexible_template_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 6,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-rotator_hero-field_display_title'
+  $field_instances['node-rotator_hero-field_display_title'] = array(
+    'bundle' => 'rotator_hero',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_display_title',
+    'label' => 'Display Title',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
     ),
   );
 
@@ -3374,7 +3417,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -3445,7 +3488,7 @@ function flexible_template_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -3460,7 +3503,7 @@ function flexible_template_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3482,7 +3525,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_default_widget',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -3504,7 +3547,7 @@ function flexible_template_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3526,7 +3569,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -3541,7 +3584,7 @@ function flexible_template_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3563,7 +3606,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_default_widget',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -3585,7 +3628,7 @@ function flexible_template_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3607,7 +3650,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -3676,7 +3719,7 @@ function flexible_template_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -3750,6 +3793,7 @@ function flexible_template_field_default_field_instances() {
   t('Comment');
   t('Content limited to 160 characters total.');
   t('Disable lightbox on click');
+  t('Display Title');
   t('Display footer');
   t('Display header');
   t('Enable Drop Cap');
