@@ -337,6 +337,12 @@
 			}
 		}
 	}
+
+    &.flex-template-module-hide-title {
+        .views-field-title {
+            opacity: 0;
+        }
+    }
 }
 
 

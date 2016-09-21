@@ -6530,16 +6530,20 @@ p.subtext {
 .pane-bundle-rotator-hero.flex-template-module-no-title.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .field-name-field-subhead h5 {
   margin-top: calc(0.643vw * 13);
 }
+/* line 342, sass/partials/modules/_flex-hero-rotator.scss */
+.pane-bundle-rotator-hero.flex-template-module-hide-title .views-field-title {
+  opacity: 0;
+}
 
 /*  tablet & mobile
 **************************************************/
 @media only screen and (max-width: 960px) {
-  /* line 347, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 353, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero .flexible-template-content {
     /* shared */
     /* cta */
   }
-  /* line 350, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 356, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero .flexible-template-content .views-field-title,
   .pane-bundle-rotator-hero .flexible-template-content .views-field-field-subhead,
   .pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta,
@@ -6547,20 +6551,20 @@ p.subtext {
   .pane-bundle-rotator-hero .flexible-template-content .views-field-field-video-tout {
     width: 80%;
   }
-  /* line 360, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 366, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta a {
     padding: 2.5vw 13vw;
     font-size: 6.6vw;
   }
-  /* line 369, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 375, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer {
     /* title */
   }
-  /* line 370, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 376, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer:before {
     padding-top: 133.263%;
   }
-  /* line 376, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 382, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer .views-field-title h1 {
     font-size: 10vw;
     height: calc(0.643vw * 32);
@@ -6568,7 +6572,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 384, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 390, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer .views-field-title h2 {
     font-size: 8vw;
     height: calc(0.643vw * 32);
@@ -6576,7 +6580,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 394, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 400, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer .views-field-field-subhead h3 {
     font-size: 6.6vw;
     height: calc(0.643vw * 36);
@@ -6584,7 +6588,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 28);
     margin-top: calc(0.643vw * 0);
   }
-  /* line 402, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 408, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer .views-field-field-subhead h4 {
     font-size: 4vw;
     height: calc(0.643vw * 36);
@@ -6592,7 +6596,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 28);
     margin-top: calc(0.643vw * 0);
   }
-  /* line 410, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 416, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer .views-field-field-subhead h5 {
     font-size: 3vw;
     height: calc(0.643vw * 36);
@@ -6600,19 +6604,19 @@ p.subtext {
     margin-bottom: calc(0.643vw * 28);
     margin-top: calc(0.643vw * 0);
   }
-  /* line 419, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 425, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer .button-play {
     margin-bottom: calc(0.643vw * 20);
   }
-  /* line 428, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 434, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer {
     /* title */
   }
-  /* line 429, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 435, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer:before {
     padding-top: 106.611%;
   }
-  /* line 435, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 441, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .views-field-title h1 {
     font-size: 10vw;
     height: calc(0.643vw * 32);
@@ -6620,7 +6624,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 443, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 449, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .views-field-title h2 {
     font-size: 8vw;
     height: calc(0.643vw * 32);
@@ -6628,7 +6632,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 453, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 459, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .views-field-field-subhead h3 {
     font-size: 6.6vw;
     height: calc(0.643vw * 36);
@@ -6636,7 +6640,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 10);
     margin-top: calc(0.643vw * 0);
   }
-  /* line 461, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 467, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .views-field-field-subhead h4 {
     font-size: 4vw;
     height: calc(0.643vw * 36);
@@ -6644,7 +6648,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 10);
     margin-top: calc(0.643vw * 0);
   }
-  /* line 469, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 475, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .views-field-field-subhead h5 {
     font-size: 3vw;
     height: calc(0.643vw * 36);
@@ -6652,20 +6656,20 @@ p.subtext {
     margin-bottom: calc(0.643vw * 10);
     margin-top: calc(0.643vw * 0);
   }
-  /* line 478, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 484, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .button-play {
     font-size: 6.6vw !important;
     width: 90% !important;
     text-align: center !important;
     margin-bottom: calc(0.643vw * 24);
   }
-  /* line 493, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 499, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.flex-template-module-no-title.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer .field-name-field-subhead h3,
   .pane-bundle-rotator-hero.flex-template-module-no-title.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer .field-name-field-subhead h4,
   .pane-bundle-rotator-hero.flex-template-module-no-title.rotator-slide-module-height-tall .flexible-template-content .hero-rotator-outer .field-name-field-subhead h5 {
     margin-top: calc(0.643vw * 52);
   }
-  /* line 507, sass/partials/modules/_flex-hero-rotator.scss */
+  /* line 513, sass/partials/modules/_flex-hero-rotator.scss */
   .pane-bundle-rotator-hero.flex-template-module-no-title.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .field-name-field-subhead h3,
   .pane-bundle-rotator-hero.flex-template-module-no-title.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .field-name-field-subhead h4,
   .pane-bundle-rotator-hero.flex-template-module-no-title.rotator-slide-module-height-short .flexible-template-content .hero-rotator-outer .field-name-field-subhead h5 {
