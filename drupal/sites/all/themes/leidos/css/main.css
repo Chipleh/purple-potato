@@ -6019,6 +6019,7 @@ p.subtext {
   /* subhead */
   /* video */
   /* cta */
+  /* move cta down */
 }
 /* line 44, sass/partials/modules/_flex-featured-video.scss */
 .pane-bundle-feature-video .flexible-template-content .pane-title,
@@ -6149,7 +6150,19 @@ p.subtext {
   opacity: .45;
   transition: all .5s ease;
 }
-/* line 180, sass/partials/modules/_flex-featured-video.scss */
+/* line 178, sass/partials/modules/_flex-featured-video.scss */
+.pane-bundle-feature-video .flexible-template-content .view-mode-full {
+  height: 100%;
+  position: relative;
+}
+/* line 182, sass/partials/modules/_flex-featured-video.scss */
+.pane-bundle-feature-video .flexible-template-content .view-mode-full .field-name-field-cta {
+  bottom: 20%;
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+/* line 193, sass/partials/modules/_flex-featured-video.scss */
 .pane-bundle-feature-video.flex-template-module-no-title .flexible-template-content h3,
 .pane-bundle-feature-video.flex-template-module-no-title .flexible-template-content h4,
 .pane-bundle-feature-video.flex-template-module-no-title .flexible-template-content h5 {
@@ -6159,17 +6172,17 @@ p.subtext {
 /*  tablet & mobile
 **************************************************/
 @media only screen and (max-width: 960px) {
-  /* line 194, sass/partials/modules/_flex-featured-video.scss */
+  /* line 207, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video:before {
     padding-top: 133.263%;
   }
-  /* line 198, sass/partials/modules/_flex-featured-video.scss */
+  /* line 211, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content {
     /* header */
     /* video */
     /* cta */
   }
-  /* line 201, sass/partials/modules/_flex-featured-video.scss */
+  /* line 214, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content h1,
   .pane-bundle-feature-video .flexible-template-content h2,
   .pane-bundle-feature-video .flexible-template-content h3,
@@ -6177,7 +6190,7 @@ p.subtext {
   .pane-bundle-feature-video .flexible-template-content h5 {
     width: 90%;
   }
-  /* line 209, sass/partials/modules/_flex-featured-video.scss */
+  /* line 222, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content h1 {
     font-size: 10vw;
     height: calc(0.643vw * 34);
@@ -6185,7 +6198,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 217, sass/partials/modules/_flex-featured-video.scss */
+  /* line 230, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content h2 {
     font-size: 8vw;
     height: calc(0.643vw * 34);
@@ -6193,7 +6206,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 4);
     margin-top: calc(0.643vw * 16);
   }
-  /* line 225, sass/partials/modules/_flex-featured-video.scss */
+  /* line 238, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content h3 {
     font-size: 7.6vw;
     height: calc(0.643vw * 97);
@@ -6201,7 +6214,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 18);
     margin-top: calc(0.643vw * 0);
   }
-  /* line 233, sass/partials/modules/_flex-featured-video.scss */
+  /* line 246, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content h4 {
     font-size: 4vw;
     height: calc(0.643vw * 99);
@@ -6209,7 +6222,7 @@ p.subtext {
     margin-bottom: calc(0.643vw * 18);
     margin-top: calc(0.643vw * 0);
   }
-  /* line 241, sass/partials/modules/_flex-featured-video.scss */
+  /* line 254, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content h5 {
     font-size: 3vw;
     height: calc(0.643vw * 99);
@@ -6217,16 +6230,16 @@ p.subtext {
     margin-bottom: calc(0.643vw * 18);
     margin-top: calc(0.643vw * 0);
   }
-  /* line 250, sass/partials/modules/_flex-featured-video.scss */
+  /* line 263, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content .field-name-field-background-video {
     display: none;
   }
-  /* line 256, sass/partials/modules/_flex-featured-video.scss */
+  /* line 269, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video .flexible-template-content .field-name-field-cta a {
     padding: 2.5vw 13vw;
     font-size: 6.6vw;
   }
-  /* line 265, sass/partials/modules/_flex-featured-video.scss */
+  /* line 278, sass/partials/modules/_flex-featured-video.scss */
   .pane-bundle-feature-video.flex-template-module-no-title .flexible-template-content h3,
   .pane-bundle-feature-video.flex-template-module-no-title .flexible-template-content h4,
   .pane-bundle-feature-video.flex-template-module-no-title .flexible-template-content h5 {

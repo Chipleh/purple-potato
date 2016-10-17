@@ -173,6 +173,19 @@
 				}
 			}
 		}
+
+        /* move cta down */
+        .view-mode-full {
+            height: 100%;
+            position: relative;
+
+            .field-name-field-cta {
+                bottom: 20%;
+                display: block;
+                position: absolute;
+                width: 100%;
+            }
+        }
 	}
 
 	&.flex-template-module-no-title {
