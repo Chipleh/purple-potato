@@ -11,7 +11,7 @@ function flexible_template_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'comment-comment_node_flexible_template-comment_body'
+  // 'comment-comment_node_flexible_template-comment_body'.
   $field_instances['comment-comment_node_flexible_template-comment_body'] = array(
     'bundle' => 'comment_node_flexible_template',
     'default_value' => NULL,
@@ -44,7 +44,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_rotator_hero-comment_body'
+  // Exported field_instance: 'comment-comment_node_rotator_hero-comment_body'.
   $field_instances['comment-comment_node_rotator_hero-comment_body'] = array(
     'bundle' => 'comment_node_rotator_hero',
     'default_value' => NULL,
@@ -78,7 +78,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_background_color'
+  // 'field_collection_item-field_columns_multi-field_background_color'.
   $field_instances['field_collection_item-field_columns_multi-field_background_color'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
@@ -111,7 +111,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_background_image'
+  // 'field_collection_item-field_columns_multi-field_background_image'.
   $field_instances['field_collection_item-field_columns_multi-field_background_image'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
@@ -189,7 +189,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_background_image_url'
+  // 'field_collection_item-field_columns_multi-field_background_image_url'.
   $field_instances['field_collection_item-field_columns_multi-field_background_image_url'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
@@ -242,7 +242,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_background_mobile_image'
+  // 'field_collection_item-field_columns_multi-field_background_mobile_image'.
   $field_instances['field_collection_item-field_columns_multi-field_background_mobile_image'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
@@ -311,7 +311,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_cta'
+  // 'field_collection_item-field_columns_multi-field_cta'.
   $field_instances['field_collection_item-field_columns_multi-field_cta'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
@@ -364,7 +364,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_subhead'
+  // 'field_collection_item-field_columns_multi-field_subhead'.
   $field_instances['field_collection_item-field_columns_multi-field_subhead'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
@@ -434,7 +434,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_subhead_color'
+  // 'field_collection_item-field_columns_multi-field_subhead_color'.
   $field_instances['field_collection_item-field_columns_multi-field_subhead_color'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
@@ -467,7 +467,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_subhead_size'
+  // 'field_collection_item-field_columns_multi-field_subhead_size'.
   $field_instances['field_collection_item-field_columns_multi-field_subhead_size'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => array(
@@ -527,7 +527,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_title_color'
+  // 'field_collection_item-field_columns_multi-field_title_color'.
   $field_instances['field_collection_item-field_columns_multi-field_title_color'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
@@ -560,7 +560,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_title_item'
+  // 'field_collection_item-field_columns_multi-field_title_item'.
   $field_instances['field_collection_item-field_columns_multi-field_title_item'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => NULL,
@@ -628,7 +628,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_title_size'
+  // 'field_collection_item-field_columns_multi-field_title_size'.
   $field_instances['field_collection_item-field_columns_multi-field_title_size'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => array(
@@ -688,7 +688,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_video_full_screen'
+  // 'field_collection_item-field_columns_multi-field_video_full_screen'.
   $field_instances['field_collection_item-field_columns_multi-field_video_full_screen'] = array(
     'bundle' => 'field_columns_multi',
     'default_value' => array(
@@ -727,7 +727,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_multi-field_video_tout'
+  // 'field_collection_item-field_columns_multi-field_video_tout'.
   $field_instances['field_collection_item-field_columns_multi-field_video_tout'] = array(
     'bundle' => 'field_columns_multi',
     'deleted' => 0,
@@ -784,7 +784,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_icon_item-field_image'
+  // 'field_collection_item-field_icon_item-field_image'.
   $field_instances['field_collection_item-field_icon_item-field_image'] = array(
     'bundle' => 'field_icon_item',
     'deleted' => 0,
@@ -855,7 +855,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_icon_item-field_image_hover'
+  // 'field_collection_item-field_icon_item-field_image_hover'.
   $field_instances['field_collection_item-field_icon_item-field_image_hover'] = array(
     'bundle' => 'field_icon_item',
     'deleted' => 0,
@@ -926,7 +926,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_icon_item-field_image_link'
+  // 'field_collection_item-field_icon_item-field_image_link'.
   $field_instances['field_collection_item-field_icon_item-field_image_link'] = array(
     'bundle' => 'field_icon_item',
     'default_value' => NULL,
@@ -979,7 +979,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_disable_lightbox_on_event'
+  // 'field_collection_item-field_thumbnail_image_item-field_disable_lightbox_on_event'.
   $field_instances['field_collection_item-field_thumbnail_image_item-field_disable_lightbox_on_event'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => NULL,
@@ -1012,7 +1012,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_image'
+  // 'field_collection_item-field_thumbnail_image_item-field_image'.
   $field_instances['field_collection_item-field_thumbnail_image_item-field_image'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'deleted' => 0,
@@ -1087,7 +1087,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_image_hover'
+  // 'field_collection_item-field_thumbnail_image_item-field_image_hover'.
   $field_instances['field_collection_item-field_thumbnail_image_item-field_image_hover'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'deleted' => 0,
@@ -1154,7 +1154,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_subhead'
+  // 'field_collection_item-field_thumbnail_image_item-field_subhead'.
   $field_instances['field_collection_item-field_thumbnail_image_item-field_subhead'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => NULL,
@@ -1220,7 +1220,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_subhead_color'
+  // 'field_collection_item-field_thumbnail_image_item-field_subhead_color'.
   $field_instances['field_collection_item-field_thumbnail_image_item-field_subhead_color'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => NULL,
@@ -1253,7 +1253,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_subhead_size'
+  // 'field_collection_item-field_thumbnail_image_item-field_subhead_size'.
   $field_instances['field_collection_item-field_thumbnail_image_item-field_subhead_size'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => array(
@@ -1290,7 +1290,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_title_color'
+  // 'field_collection_item-field_thumbnail_image_item-field_title_color'.
   $field_instances['field_collection_item-field_thumbnail_image_item-field_title_color'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => NULL,
@@ -1323,7 +1323,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_title_item'
+  // 'field_collection_item-field_thumbnail_image_item-field_title_item'.
   $field_instances['field_collection_item-field_thumbnail_image_item-field_title_item'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => NULL,
@@ -1389,7 +1389,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_thumbnail_image_item-field_title_size'
+  // 'field_collection_item-field_thumbnail_image_item-field_title_size'.
   $field_instances['field_collection_item-field_thumbnail_image_item-field_title_size'] = array(
     'bundle' => 'field_thumbnail_image_item',
     'default_value' => array(
@@ -1426,7 +1426,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_background_mobile_image'
+  // 'fieldable_panels_pane-feature_video-field_background_mobile_image'.
   $field_instances['fieldable_panels_pane-feature_video-field_background_mobile_image'] = array(
     'bundle' => 'feature_video',
     'deleted' => 0,
@@ -1500,12 +1500,12 @@ function flexible_template_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_background_video'
+  // 'fieldable_panels_pane-feature_video-field_background_video'.
   $field_instances['fieldable_panels_pane-feature_video-field_background_video'] = array(
     'bundle' => 'feature_video',
     'deleted' => 0,
@@ -1584,7 +1584,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-feature_video-field_cta'
+  // Exported field_instance: 'fieldable_panels_pane-feature_video-field_cta'.
   $field_instances['fieldable_panels_pane-feature_video-field_cta'] = array(
     'bundle' => 'feature_video',
     'default_value' => NULL,
@@ -1639,12 +1639,12 @@ function flexible_template_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_subhead'
+  // 'fieldable_panels_pane-feature_video-field_subhead'.
   $field_instances['fieldable_panels_pane-feature_video-field_subhead'] = array(
     'bundle' => 'feature_video',
     'default_value' => NULL,
@@ -1721,7 +1721,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_subhead_color'
+  // 'fieldable_panels_pane-feature_video-field_subhead_color'.
   $field_instances['fieldable_panels_pane-feature_video-field_subhead_color'] = array(
     'bundle' => 'feature_video',
     'default_value' => NULL,
@@ -1761,7 +1761,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_subhead_size'
+  // 'fieldable_panels_pane-feature_video-field_subhead_size'.
   $field_instances['fieldable_panels_pane-feature_video-field_subhead_size'] = array(
     'bundle' => 'feature_video',
     'default_value' => array(
@@ -1808,7 +1808,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_title_color'
+  // 'fieldable_panels_pane-feature_video-field_title_color'.
   $field_instances['fieldable_panels_pane-feature_video-field_title_color'] = array(
     'bundle' => 'feature_video',
     'default_value' => NULL,
@@ -1848,7 +1848,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-feature_video-field_title_size'
+  // 'fieldable_panels_pane-feature_video-field_title_size'.
   $field_instances['fieldable_panels_pane-feature_video-field_title_size'] = array(
     'bundle' => 'feature_video',
     'default_value' => array(
@@ -1895,7 +1895,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-icons-field_background_color'
+  // 'fieldable_panels_pane-icons-field_background_color'.
   $field_instances['fieldable_panels_pane-icons-field_background_color'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
@@ -1927,7 +1927,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-icons-field_icon_item'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_icon_item'.
   $field_instances['fieldable_panels_pane-icons-field_icon_item'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
@@ -1965,7 +1965,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead'.
   $field_instances['fieldable_panels_pane-icons-field_subhead'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
@@ -2030,7 +2030,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead_color'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead_color'.
   $field_instances['fieldable_panels_pane-icons-field_subhead_color'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
@@ -2062,7 +2062,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead_size'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_subhead_size'.
   $field_instances['fieldable_panels_pane-icons-field_subhead_size'] = array(
     'bundle' => 'icons',
     'default_value' => array(
@@ -2098,7 +2098,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-icons-field_title_color'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_title_color'.
   $field_instances['fieldable_panels_pane-icons-field_title_color'] = array(
     'bundle' => 'icons',
     'default_value' => NULL,
@@ -2130,7 +2130,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-icons-field_title_size'
+  // Exported field_instance: 'fieldable_panels_pane-icons-field_title_size'.
   $field_instances['fieldable_panels_pane-icons-field_title_size'] = array(
     'bundle' => 'icons',
     'default_value' => array(
@@ -2166,7 +2166,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-long_form_copy-field_body'
+  // Exported field_instance: 'fieldable_panels_pane-long_form_copy-field_body'.
   $field_instances['fieldable_panels_pane-long_form_copy-field_body'] = array(
     'bundle' => 'long_form_copy',
     'default_value' => NULL,
@@ -2236,7 +2236,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-long_form_copy-field_drop_cap'
+  // 'fieldable_panels_pane-long_form_copy-field_drop_cap'.
   $field_instances['fieldable_panels_pane-long_form_copy-field_drop_cap'] = array(
     'bundle' => 'long_form_copy',
     'default_value' => array(
@@ -2274,7 +2274,8 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-long_form_copy-field_image'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-long_form_copy-field_image'.
   $field_instances['fieldable_panels_pane-long_form_copy-field_image'] = array(
     'bundle' => 'long_form_copy',
     'deleted' => 0,
@@ -2345,7 +2346,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-long_form_copy-field_image_caption'
+  // 'fieldable_panels_pane-long_form_copy-field_image_caption'.
   $field_instances['fieldable_panels_pane-long_form_copy-field_image_caption'] = array(
     'bundle' => 'long_form_copy',
     'default_value' => NULL,
@@ -2413,7 +2414,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-long_form_copy-field_image_position'
+  // 'fieldable_panels_pane-long_form_copy-field_image_position'.
   $field_instances['fieldable_panels_pane-long_form_copy-field_image_position'] = array(
     'bundle' => 'long_form_copy',
     'default_value' => NULL,
@@ -2446,7 +2447,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-long_form_copy-field_title_size'
+  // 'fieldable_panels_pane-long_form_copy-field_title_size'.
   $field_instances['fieldable_panels_pane-long_form_copy-field_title_size'] = array(
     'bundle' => 'long_form_copy',
     'default_value' => array(
@@ -2486,7 +2487,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-multi_column-field_columns_multi'
+  // 'fieldable_panels_pane-multi_column-field_columns_multi'.
   $field_instances['fieldable_panels_pane-multi_column-field_columns_multi'] = array(
     'bundle' => 'multi_column',
     'default_value' => NULL,
@@ -2525,7 +2526,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-multi_column_parallax-field_columns_multi'
+  // 'fieldable_panels_pane-multi_column_parallax-field_columns_multi'.
   $field_instances['fieldable_panels_pane-multi_column_parallax-field_columns_multi'] = array(
     'bundle' => 'multi_column_parallax',
     'default_value' => NULL,
@@ -2564,7 +2565,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-rotator_hero-field_module_height'
+  // 'fieldable_panels_pane-rotator_hero-field_module_height'.
   $field_instances['fieldable_panels_pane-rotator_hero-field_module_height'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => array(
@@ -2607,7 +2608,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-rotator_hero-field_rotator_slide_hero'
+  // 'fieldable_panels_pane-rotator_hero-field_rotator_slide_hero'.
   $field_instances['fieldable_panels_pane-rotator_hero-field_rotator_slide_hero'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
@@ -2646,7 +2647,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_background_color'
+  // 'fieldable_panels_pane-thumbnail_gallery-field_background_color'.
   $field_instances['fieldable_panels_pane-thumbnail_gallery-field_background_color'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => NULL,
@@ -2679,7 +2680,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_grid_type'
+  // 'fieldable_panels_pane-thumbnail_gallery-field_grid_type'.
   $field_instances['fieldable_panels_pane-thumbnail_gallery-field_grid_type'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => array(
@@ -2716,7 +2717,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead'
+  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead'.
   $field_instances['fieldable_panels_pane-thumbnail_gallery-field_subhead'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => NULL,
@@ -2782,7 +2783,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead_color'
+  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead_color'.
   $field_instances['fieldable_panels_pane-thumbnail_gallery-field_subhead_color'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => NULL,
@@ -2815,7 +2816,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead_size'
+  // 'fieldable_panels_pane-thumbnail_gallery-field_subhead_size'.
   $field_instances['fieldable_panels_pane-thumbnail_gallery-field_subhead_size'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => array(
@@ -2852,7 +2853,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_thumbnail_image_item'
+  // 'fieldable_panels_pane-thumbnail_gallery-field_thumbnail_image_item'.
   $field_instances['fieldable_panels_pane-thumbnail_gallery-field_thumbnail_image_item'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => NULL,
@@ -2891,7 +2892,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_title_color'
+  // 'fieldable_panels_pane-thumbnail_gallery-field_title_color'.
   $field_instances['fieldable_panels_pane-thumbnail_gallery-field_title_color'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => NULL,
@@ -2924,7 +2925,7 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-thumbnail_gallery-field_title_size'
+  // 'fieldable_panels_pane-thumbnail_gallery-field_title_size'.
   $field_instances['fieldable_panels_pane-thumbnail_gallery-field_title_size'] = array(
     'bundle' => 'thumbnail_gallery',
     'default_value' => array(
@@ -2960,7 +2961,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-flexible_template-field_display_footer'
+  // Exported field_instance: 'node-flexible_template-field_display_footer'.
   $field_instances['node-flexible_template-field_display_footer'] = array(
     'bundle' => 'flexible_template',
     'default_value' => array(
@@ -3009,7 +3010,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-flexible_template-field_display_header'
+  // Exported field_instance: 'node-flexible_template-field_display_header'.
   $field_instances['node-flexible_template-field_display_header'] = array(
     'bundle' => 'flexible_template',
     'default_value' => array(
@@ -3058,7 +3059,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_background_color'
+  // Exported field_instance: 'node-rotator_hero-field_background_color'.
   $field_instances['node-rotator_hero-field_background_color'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
@@ -3095,7 +3096,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_background_image'
+  // Exported field_instance: 'node-rotator_hero-field_background_image'.
   $field_instances['node-rotator_hero-field_background_image'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
@@ -3179,7 +3180,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_background_mobile_image'
+  // Exported field_instance: 'node-rotator_hero-field_background_mobile_image'.
   $field_instances['node-rotator_hero-field_background_mobile_image'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,
@@ -3262,7 +3263,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_cta'
+  // Exported field_instance: 'node-rotator_hero-field_cta'.
   $field_instances['node-rotator_hero-field_cta'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
@@ -3320,7 +3321,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_display_title'
+  // Exported field_instance: 'node-rotator_hero-field_display_title'.
   $field_instances['node-rotator_hero-field_display_title'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => array(
@@ -3363,7 +3364,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_secondary_cta'
+  // Exported field_instance: 'node-rotator_hero-field_secondary_cta'.
   $field_instances['node-rotator_hero-field_secondary_cta'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
@@ -3421,7 +3422,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_subhead'
+  // Exported field_instance: 'node-rotator_hero-field_subhead'.
   $field_instances['node-rotator_hero-field_subhead'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
@@ -3492,7 +3493,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_subhead_color'
+  // Exported field_instance: 'node-rotator_hero-field_subhead_color'.
   $field_instances['node-rotator_hero-field_subhead_color'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
@@ -3529,7 +3530,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_subhead_size'
+  // Exported field_instance: 'node-rotator_hero-field_subhead_size'.
   $field_instances['node-rotator_hero-field_subhead_size'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => array(
@@ -3573,7 +3574,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_title_color'
+  // Exported field_instance: 'node-rotator_hero-field_title_color'.
   $field_instances['node-rotator_hero-field_title_color'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => NULL,
@@ -3610,7 +3611,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_title_size'
+  // Exported field_instance: 'node-rotator_hero-field_title_size'.
   $field_instances['node-rotator_hero-field_title_size'] = array(
     'bundle' => 'rotator_hero',
     'default_value' => array(
@@ -3654,7 +3655,7 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator_hero-field_video_tout'
+  // Exported field_instance: 'node-rotator_hero-field_video_tout'.
   $field_instances['node-rotator_hero-field_video_tout'] = array(
     'bundle' => 'rotator_hero',
     'deleted' => 0,

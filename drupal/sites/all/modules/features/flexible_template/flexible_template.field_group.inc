@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function flexible_template_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -27,11 +27,12 @@ function flexible_template_field_group_info() {
       1 => 'field_background_video',
       2 => 'field_cta',
       3 => 'field_subhead',
-      4 => 'field_subhead_size',
-      5 => 'field_title_size',
-      6 => 'field_subhead_color',
-      7 => 'field_title_color',
-      8 => 'title',
+      4 => 'field_subhead_color',
+      5 => 'field_subhead_size',
+      6 => 'field_title_color',
+      7 => 'field_title_size',
+      8 => 'field_background_image_url',
+      9 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -43,7 +44,7 @@ function flexible_template_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|feature_video|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|feature_video|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -78,7 +79,7 @@ function flexible_template_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|icons|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|icons|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -111,7 +112,7 @@ function flexible_template_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|long_form_copy|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|long_form_copy|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -139,7 +140,7 @@ function flexible_template_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|multi_column_parallax|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|multi_column_parallax|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -167,7 +168,7 @@ function flexible_template_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|multi_column|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|multi_column|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -197,7 +198,7 @@ function flexible_template_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|rotator_hero|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|rotator_hero|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -232,7 +233,7 @@ function flexible_template_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|thumbnail_gallery|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|thumbnail_gallery|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -272,7 +273,11 @@ function flexible_template_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_general|node|rotator_hero|form'] = $field_group;
+  $field_groups['group_general|node|rotator_hero|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('General Info');
+
+  return $field_groups;
 }

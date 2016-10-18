@@ -29,7 +29,7 @@ function flexible_template_theme() {
   return array(
     'flexible_template_url_field_collection_view' => array(
         'render element' => 'element'
-     )
+     )  
   );
 }
 
@@ -49,7 +49,7 @@ function flexible_template_preprocess_entity(&$variables, $hook) {
  * Implements template_preprocess_field().
  */
 function flexible_template_preprocess_field(&$variables) {
-
+   
   //
   // Icons
   //
@@ -64,7 +64,7 @@ function flexible_template_preprocess_field(&$variables) {
       );
     }
   }
-
+  
   //
   // Multi-column
   //
@@ -245,8 +245,16 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   //
   // @see feature_video
   //
-  if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {
-
+  if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {  
+    // Wrap Content in url if background url is provided with title and cta.
+    if (isset($content['field_background_image_url'])) {
+      if(isset($content['field_background_video']) && !isset($content['title']) && !isset($content['field_subhead'])) {
+        $variables['display_background_url'] = 'yes';
+        $variables['background_url'] = $variables['content']['field_background_image_url'][0]['#element']['display_url'];
+        unset($variables['content']['field_background_image_url']);
+      }
+    }
+  
     // Append mobile background image to collection wrapper.
     if (isset($content['field_background_mobile_image'])) {
       $background_image = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']);
@@ -254,7 +262,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
       unset($content['field_background_mobile_image']);
     }
   }
-
+  
   //
   // Icons
   //
@@ -446,4 +454,8 @@ function flexible_template_field_widget_form_alter(&$element, &$form_state, $con
       unset($element['field_image_position'][LANGUAGE_NONE]['#options']['_none']);
     }
   }
+}
+
+function flexible_template_fieldable_panels_pane_bundle_feature_video($variables){
+  $monica = 'test';
 }
