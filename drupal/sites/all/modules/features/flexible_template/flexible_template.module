@@ -246,13 +246,18 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   // @see feature_video
   //
   if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {  
+    
+    // If there is no title or subtitle add a class to move cta in correct position
+    if(!isset($content['title']) && !isset($content['field_subhead'])) {
+      $variables['classes_array'][] = 'has-no-text';
+    }
+
     // Wrap Content in url if background url is provided with title and cta.
     if (isset($content['field_background_image_url'])) {
       if(isset($content['field_background_video']) && !isset($content['title']) && !isset($content['field_subhead'])) {
         $variables['display_background_url'] = 'yes';
         $variables['background_url'] = $variables['content']['field_background_image_url'][0]['#element']['display_url'];
         unset($variables['content']['field_background_image_url']);
-        $variables['classes_array'][] = 'has-no-text';
       }
     }
   
