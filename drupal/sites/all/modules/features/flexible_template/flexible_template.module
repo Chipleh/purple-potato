@@ -253,6 +253,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
         $variables['background_url'] = $variables['content']['field_background_image_url'][0]['#element']['display_url'];
         unset($variables['content']['field_background_image_url']);
       }
+      elseif(isset($content['title']) || isset($content['field_subhead'])){
+        $variables['classes_array'][] = 'has-text';
+      }
     }
   
     // Append mobile background image to collection wrapper.
