@@ -112,10 +112,10 @@ function news_release_import($item) {
   $node->status = 1;
 
   // Date.
-  $xml_date = $item['Date'] . ' EST';
-  $date = date('Y-m-d H:i:s', strtotime($xml_date));
+  $xml_date = new DateTime($item['Date'], new DateTimeZone('America/New_York'));
+  $formatted_date = $xml_date->format('Y-m-d H:i');
   $node->field_announcement_date[$node->language][] = array(
-    'value' => $date
+    'value' => $formatted_date
   );
   // ID.
   $node->field_id[$node->language][] = array(
