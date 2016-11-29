@@ -69,13 +69,13 @@ function news_release_cron() {
       $filename
     );
   }
-  
+
   $arrContextOptions=array(
     "ssl"=>array(
         "verify_peer"=>false,
         "verify_peer_name"=>false,
     ),
-  );  
+  );
 
   $response = file_get_contents($filename, false, stream_context_create($arrContextOptions));
   $xml = simplexml_load_string($response);
@@ -102,28 +102,37 @@ function news_release_cron() {
  * Import items from the feed into drupal nodes.
  */
 function news_release_import($item) {
-  // Create a new node.
-  $node = new stdClass();
-  $node->title = $item['Title'];
-  $node->type = 'news_release';
-  node_object_prepare($node);
-  $node->language = LANGUAGE_NONE;
-  $node->uid = 1;
-  $node->status = 1;
+  $result = db_select('field_data_field_id', 'f')
+  ->fields('n', array('entity_id'))
+  ->condition('entity_type', 'node')
+  ->condition('bundle', 'news_release')
+  ->condition('field_id_value', $item['@attributes']['ReleaseID'])
+  ->execute()
+  ->fetchAssoc();
+  if (empty($result)) {
+    // Create a new node.
+    $node = new stdClass();
+    $node->title = $item['Title'];
+    $node->type = 'news_release';
+    node_object_prepare($node);
+    $node->language = LANGUAGE_NONE;
+    $node->uid = 1;
+    $node->status = 1;
 
-  // Date.
-  $xml_date = new DateTime($item['Date'], new DateTimeZone('America/New_York'));
-  $formatted_date = $xml_date->format('Y-m-d H:i');
-  $node->field_announcement_date[$node->language][] = array(
-    'value' => $formatted_date
-  );
-  // ID.
-  $node->field_id[$node->language][] = array(
-    'value' => $item['@attributes']['ReleaseID'],
-  );
+    // Date.
+    $xml_date = new DateTime($item['Date'], new DateTimeZone('America/New_York'));
+    $formatted_date = $xml_date->format('Y-m-d H:i');
+    $node->field_announcement_date[$node->language][] = array(
+      'value' => $formatted_date
+    );
+    // ID.
+    $node->field_id[$node->language][] = array(
+      'value' => $item['@attributes']['ReleaseID'],
+    );
 
-  $node = node_submit($node);
-  node_save($node);
+    $node = node_submit($node);
+    node_save($node);
+  }
 }
 
 /**
