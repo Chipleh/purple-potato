@@ -103,7 +103,7 @@ function news_release_cron() {
  */
 function news_release_import($item) {
   $result = db_select('field_data_field_id', 'f')
-  ->fields('n', array('entity_id'))
+  ->fields('f', array('entity_id'))
   ->condition('entity_type', 'node')
   ->condition('bundle', 'news_release')
   ->condition('field_id_value', $item['@attributes']['ReleaseID'])
