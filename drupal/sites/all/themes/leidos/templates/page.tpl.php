@@ -7,7 +7,7 @@
       </a>
     <?php endif; ?>
 
-    <?php if ($lightbox): ?>      
+    <?php if ($it_lightbox): ?>      
       <div id="lightbox" class="lightbox">
         <div class="lb-box">
           <span class="lb-close">Close<span class="x-icon"></span></span>
@@ -19,6 +19,18 @@
         </div>
       </div>
     <?php endif; ?>
+     <?php if ($health_lightbox): ?>      
+      <div id="lightbox" class="lightbox">
+        <div class="lb-box">
+          <span class="lb-close">Close<span class="x-icon"></span></span>
+          <div class="lb-box-content">
+            <h3 class="lb-title">Health Solutions</h3>
+            <a href="#" class="lb-continue-link">Continue to your requested page</a>
+            <span class="lb-info-msg">For more information about health the company visit <a href="http://leidos.com/transform" target="_blank">leidos.com/transform</a>.</span>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>      
 
     <?php if ($site_name || $site_slogan): ?>
       <div id="name-and-slogan"<?php print ($hide_site_name && $hide_site_slogan) ? ' class="element-invisible"' : ''; ?>>
