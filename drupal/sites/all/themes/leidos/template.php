@@ -67,12 +67,11 @@ function leidos_preprocess_page(&$variables) {
           in_array($parsed_url['host'], $referer_urls)) ? TRUE : FALSE ;
   if(isset($_GET['host'])){
     if($_GET['host'] == 'h'){
-      $variables['lightbox'] = TRUE;
+      $variables['it_lightbox'] = TRUE;
     }
     elseif($_GET['host'] == 'health'){
-      $variables['lightbox'] = TRUE;
-    }
-    
+      $variables['health_lightbox'] = TRUE;
+    }  
   }
   // End Popup modal
   $display = panels_get_current_page_display();
