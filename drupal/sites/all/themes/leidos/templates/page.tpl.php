@@ -24,7 +24,7 @@
         <div class="lb-box">
           <span class="lb-close">Close<span class="x-icon"></span></span>
           <div class="lb-box-content">
-            <h3 class="lb-title">Health Solutions</h3>
+            <h3 class="lb-title">The information you requested is now located under Hospitals and Health Systems on Leidos.com</h3>
             <a href="#" class="lb-continue-link">Continue to your requested page</a>
           </div>
         </div>
