@@ -261,19 +261,21 @@
             var $parallax = $('.parallax-window');
 
             if ($parallax.length && window.innerWidth > 960) {
-                $(window).smartresize(function() {
-                    $(window).trigger('resize').trigger('scroll');
-                });
-
-                // Add body class to enable application of needed background transparency to parent page elements.
-                $('body').addClass('hasParallax');
-
                 $parallax.each(function () {
                     var src = $(this).data('image-src');
 
                     $(this).parallax({imageSrc: src});
                 });
             }
+
+            $(window).smartresize(function() {
+                if ($parallax.length && window.innerWidth > 960) {
+                    $(window).trigger('resize').trigger('scroll');
+
+                    // Add body class to enable application of needed background transparency to parent page elements.
+                    $('body').addClass('hasParallax');
+                }
+            });
         }
     };
 })(jQuery);
