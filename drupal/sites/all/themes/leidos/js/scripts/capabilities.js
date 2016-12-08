@@ -274,6 +274,8 @@
 
                     // Add body class to enable application of needed background transparency to parent page elements.
                     $('body').addClass('hasParallax');
+                } else {
+                    $('body').removeClass('hasParallax');
                 }
             });
         }
