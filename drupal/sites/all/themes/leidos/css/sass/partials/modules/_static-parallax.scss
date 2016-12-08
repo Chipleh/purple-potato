@@ -1,18 +1,20 @@
-body.hasParallax {
-    #page-wrapper,
-    #page,
-    &.node-type-flexible-template #main-wrapper,
-    &.node-type-flexible-template #main,
-    &.node-type-flexible-template #content {
-        background: transparent !important;
-    }
+body {
+    &.hasParallax {
+        #page-wrapper,
+        #page,
+        &.node-type-flexible-template #main-wrapper,
+        &.node-type-flexible-template #main,
+        &.node-type-flexible-template #content {
+            background: transparent !important;
+        }
 
-    .parallax-window {
-        height: 550px;
-    }
+        .parallax-window {
+            height: 550px;
+        }
 
-    .parallax-mobile {
-        display: none;
+        .parallax-mobile {
+            display: none;
+        }
     }
 
     /*  tablet & mobile
