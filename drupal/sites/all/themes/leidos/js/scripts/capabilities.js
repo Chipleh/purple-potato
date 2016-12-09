@@ -266,6 +266,8 @@
 
                     $(this).parallax({imageSrc: src});
                 });
+
+                $('body').addClass('hasParallax');
             }
 
             $(window).smartresize(function() {
