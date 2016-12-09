@@ -260,6 +260,14 @@
         attach: function(context, settings) {
             var $parallax = $('.parallax-window');
 
+            if ($parallax.length && window.innerWidth > 960) {
+                $parallax.each(function () {
+                    var src = $(this).data('image-src');
+
+                    $(this).parallax({imageSrc: src});
+                });
+            }
+
             $(window).smartresize(function() {
                 if ($parallax.length && window.innerWidth > 960) {
                     $parallax.each(function () {
