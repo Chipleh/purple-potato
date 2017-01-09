@@ -230,9 +230,6 @@ function leidos_preprocess_block(&$variables) {
  * Implements theme_menu_tree().
  */
 function leidos_menu_tree($variables) {
-  if($variables['theme_hook_original'] == 'menu_tree__main_menu'){
-    $monica = 'test';
-  }
   // Check for children menus and assign 'parent' or 'no-children'.
   $parent = (strpos($variables['tree'], '<ul')) ? 'parent-menu' : 'no-children';
   $active_parent = (strpos($variables['tree'], 'active') && strpos($variables['tree'], 'open-tree') === FALSE) ? 'open-tree' : '';
