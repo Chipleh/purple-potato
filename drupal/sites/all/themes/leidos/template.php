@@ -210,7 +210,7 @@ function leidos_preprocess_node(&$variables) {
  */
 function leidos_preprocess_block(&$variables) {
   // In the header region visually hide block titles.
-  if ($variables['block']->region == 'header') {
+  if ($variables['block']->region == 'header' && $variables['block']->delta == 'main-menu') {
     $variables['title_attributes_array']['class'][] = 'element-invisible';
     $variables['content'] = '
     <span class="search" title="Search leidos.com"></span>
