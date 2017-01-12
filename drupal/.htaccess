@@ -109,6 +109,11 @@ DirectoryIndex index.php index.html index.htm
   # uncomment the following line:
   # RewriteBase /
 
+  # Rule to redirect old search urls to new ones.
+  RewriteCond %{THE_REQUEST} search\?q=([^\&\ ]+)
+  RewriteRule ^/?search$ /search/gss/%1? [L,R=301]
+  
+  
   # Pass all requests not referring directly to files in the filesystem to
   # index.php. Clean URLs are handled in drupal_environment_initialize().
   RewriteCond %{REQUEST_FILENAME} !-f

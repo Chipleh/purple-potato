@@ -63,7 +63,7 @@ function leidos_preprocess_page(&$variables) {
   // Popup modal light box from specific lockheed martin pages
   $referer_urls = explode(',', variable_get('lightbox_referer_urls'));
   $parsed_url = parse_url($_SERVER['HTTP_REFERER']);
-  $variables['lightbox'] = (in_array($_SERVER['HTTP_REFERER'], $referer_urls) || 
+  $variables['lightbox'] = (in_array($_SERVER['HTTP_REFERER'], $referer_urls) ||
           in_array($parsed_url['host'], $referer_urls)) ? TRUE : FALSE ;
   if(isset($_GET['host'])){
     if($_GET['host'] == 'h'){
@@ -71,7 +71,7 @@ function leidos_preprocess_page(&$variables) {
     }
     elseif($_GET['host'] == 'health'){
       $variables['health_lightbox'] = TRUE;
-    }  
+    }
   }
   // End Popup modal
   $display = panels_get_current_page_display();
@@ -214,7 +214,7 @@ function leidos_preprocess_block(&$variables) {
     $variables['title_attributes_array']['class'][] = 'element-invisible';
     $variables['content'] = '
     <span class="search" title="Search leidos.com"></span>
-    <a href="http://leidos.com" class="logo" title="home">Leidos</a>' . $variables['content'];        
+    <a href="http://leidos.com" class="logo" title="home">Leidos</a>' . $variables['content'];
   }
   // Add the footer logo div to the first block in the 'Footer - First column' region.
   if ($variables['block']->region == 'footer_firstcolumn' && $variables['block']->delta == 1) {
@@ -522,7 +522,7 @@ function leidos_menu_link(array $variables) {
   $i=0;
   $main_menu_items = menu_build_tree('main-menu');
   $current_path = current_path();
-  
+
   foreach($main_menu_items as $parent){
     $menu_parents[] = $parent['link']['link_path'];
   }
@@ -535,7 +535,7 @@ function leidos_menu_link(array $variables) {
     if (empty($element['#localized_options']['attributes']['title'])) {
       $element['#localized_options']['attributes']['title'] = $element['#title'];
     }
-    if ($element['#href'] == $current_path && !(in_array($current_path, $menu_parents)) && !isset($element['#below'])) {    
+    if ($element['#href'] == $current_path && !(in_array($current_path, $menu_parents)) && !isset($element['#below'])) {
       $element['#attributes']['class'][] = 'active-trail-selected';
       $element['#localized_options']['attributes']['class'] = array();
       $element['#localized_options']['attributes']['class'][] = 'active-trail';
@@ -572,4 +572,14 @@ function leidos_menu_link(array $variables) {
   }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+/**
+ * Implements hook_gss_search_extraparams_alter().
+ * @param array $extra
+ */
+function leidos_gss_search_extraparams_alter(&$extra) {
+  if(isset($_GET['sort']) && $_GET['sort'] == 'date') {
+    $extra['sort'] = 'date:d';
+  }
 }
