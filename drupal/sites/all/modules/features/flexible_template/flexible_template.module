@@ -7,7 +7,7 @@
 include_once 'flexible_template.inc';
 include_once 'flexible_template.features.inc';
 
-define('WHITE_BUTTON_CLASS', 'white-button');
+define('CTA_COLOR_CLASS', 'cta-color-button');
 
 /**
  * Implements hook_view_mode_templates().
@@ -97,9 +97,9 @@ function flexible_template_preprocess_field(&$variables) {
         unset($item['entity']['field_collection_item'][key($item['entity']['field_collection_item'])]['field_background_image_url']);
       }
 
-      if (isset($content['field_cta_white']) && !empty($content['field_cta_white']['#items'][0]['value'])) {
-        $item['#attributes']['class'][] = WHITE_BUTTON_CLASS;
-        unset($content['field_cta_white']);
+      if (isset($content['field_cta_color']) && !empty($content['field_cta_color']['#items'][0]['value'])) {
+        $item['#attributes']['class'][] = CTA_COLOR_CLASS;
+        unset($content['field_cta_color']);
       }
 
     }
@@ -178,9 +178,9 @@ function flexible_template_preprocess_field(&$variables) {
  */
 function flexible_template_preprocess_node(&$vars) {
   if ($vars['type'] == 'rotator_hero') {
-    if (!empty($vars['field_cta_white']) && !empty($vars['field_cta_white'][0]['value'])) {
-      $vars['classes_array'][] = WHITE_BUTTON_CLASS;
-      unset($vars['field_cta_white']);
+    if (!empty($vars['field_cta_color']) && !empty($vars['field_cta_color'][0]['value'])) {
+      $vars['classes_array'][] = CTA_COLOR_CLASS;
+      unset($vars['field_cta_color']);
     }
   }
 }
@@ -286,9 +286,9 @@ function flexible_template_preprocess_panels_pane(&$variables) {
       unset($content['field_background_mobile_image']);
     }
 
-    if (isset($content['field_cta_white']) && !empty($content['field_cta_white']['#items'][0]['value'])) {
-      $variables['classes_array'][] = WHITE_BUTTON_CLASS;
-      unset($content['field_cta_white']);
+    if (isset($content['field_cta_color']) && !empty($content['field_cta_color']['#items'][0]['value'])) {
+      $variables['classes_array'][] = CTA_COLOR_CLASS;
+      unset($content['field_cta_color']);
     }
   }
 
