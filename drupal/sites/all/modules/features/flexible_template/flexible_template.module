@@ -7,6 +7,8 @@
 include_once 'flexible_template.inc';
 include_once 'flexible_template.features.inc';
 
+define('WHITE_BUTTON_CLASS', 'white-button');
+
 /**
  * Implements hook_view_mode_templates().
  */
@@ -29,7 +31,7 @@ function flexible_template_theme() {
   return array(
     'flexible_template_url_field_collection_view' => array(
         'render element' => 'element'
-     )  
+     )
   );
 }
 
@@ -49,7 +51,7 @@ function flexible_template_preprocess_entity(&$variables, $hook) {
  * Implements template_preprocess_field().
  */
 function flexible_template_preprocess_field(&$variables) {
-   
+
   //
   // Icons
   //
@@ -64,7 +66,7 @@ function flexible_template_preprocess_field(&$variables) {
       );
     }
   }
-  
+
   //
   // Multi-column
   //
@@ -93,6 +95,11 @@ function flexible_template_preprocess_field(&$variables) {
           $item['#field_background_image_url'] = $content['field_background_image_url']['#items'][0]['url'];
         }
         unset($item['entity']['field_collection_item'][key($item['entity']['field_collection_item'])]['field_background_image_url']);
+      }
+
+      if (isset($content['field_cta_white']) && !empty($content['field_cta_white']['#items'][0]['value'])) {
+        $item['#attributes']['class'][] = WHITE_BUTTON_CLASS;
+        unset($content['field_cta_white']);
       }
 
     }
@@ -167,6 +174,18 @@ function flexible_template_preprocess_field(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_node().
+ */
+function flexible_template_preprocess_node(&$vars) {
+  if ($vars['type'] == 'rotator_hero') {
+    if (!empty($vars['field_cta_white']) && !empty($vars['field_cta_white'][0]['value'])) {
+      $vars['classes_array'][] = WHITE_BUTTON_CLASS;
+      unset($vars['field_cta_white']);
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_page().
  */
 function flexible_template_preprocess_page(&$vars) {
@@ -195,7 +214,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   else {
     $variables['classes_array'][] = 'flex-template-module-no-title';
   }
-  
+
   // Set background color.
   if (isset($content['field_background_color'])) {
     if (!isset($content['field_background_image']) && !isset($content['field_background_video'])) {
@@ -245,8 +264,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   //
   // @see feature_video
   //
-  if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {  
-    
+  if (isset($content['#bundle']) && $content['#bundle'] == 'feature_video') {
     // If there is no title or subtitle add a class to move cta in correct position
     if(!isset($content['title']) && !isset($content['field_subhead'])) {
       $variables['classes_array'][] = 'has-no-text';
@@ -260,15 +278,20 @@ function flexible_template_preprocess_panels_pane(&$variables) {
         unset($variables['content']['field_background_image_url']);
       }
     }
-  
+
     // Append mobile background image to collection wrapper.
     if (isset($content['field_background_mobile_image'])) {
       $background_image = file_create_url($content['field_background_mobile_image'][0]['#item']['uri']);
       $variables['attributes_array']['data-background-mobile'] = $background_image;
       unset($content['field_background_mobile_image']);
     }
+
+    if (isset($content['field_cta_white']) && !empty($content['field_cta_white']['#items'][0]['value'])) {
+      $variables['classes_array'][] = WHITE_BUTTON_CLASS;
+      unset($content['field_cta_white']);
+    }
   }
-  
+
   //
   // Icons
   //
@@ -335,7 +358,7 @@ function flexible_template_preprocess_panels_pane(&$variables) {
   // @see rotator_hero
   //
   elseif (isset($content['#bundle']) && $content['#bundle'] == 'rotator_hero') {
-    
+
     // Add empty field for all slides.
     if (!isset($content['field_rotator_slide_hero'])) {
       $content['field_rotator_slide_hero'] = array(
