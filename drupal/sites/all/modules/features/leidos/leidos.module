@@ -148,3 +148,32 @@ function leidos_sort_capabilities($arguments = array()) {
   // Return the map for use by the capabilities view.
   return $sort_map;
 }
+
+/**
+ * Implements hook_block_info().
+ */
+function leidos_block_info() {
+  if (module_exists('search'))  {
+    $blocks['leidos_search'] = array(
+      'info'  => t('Leidos Search'),
+    );
+  }
+  return $blocks;
+}
+
+/**
+* Implements hook_block_view().
+*/
+function leidos_block_view($delta = '') {
+  switch ($delta) {
+    case 'leidos_search':
+      if (arg(0) == 'search') {
+        module_load_include('inc', 'search', 'search.pages');
+        $result = search_view(arg(1), arg(2));
+        $block['title'] = '';
+        $block['content'] = $result['search_results'];
+      }
+      break;
+  }
+  return $block;
+}
