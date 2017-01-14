@@ -60,7 +60,7 @@ class GoogleSiteSearch {
    * @var SimpleXml
    */
   private $searchResultsXml = NULL;
-  
+
   /**
    * The allowed tags in results from Google.
    * @var array
@@ -231,12 +231,12 @@ class GoogleSiteSearch {
         'q' => $this->query,
       )
     );
-    
+
     // Add language parameter if is set.
     if ($this->language) {
       $params['query']['hl'] = $this->language;
     }
-     
+
     // prepare query parameters for URL assembly
     if (count($this->extraParams) > 0) {
       $params['query']  = array_merge($params['query'], $this->extraParams);
@@ -277,7 +277,7 @@ class GoogleSiteSearch {
           }
           $this->categories = $categories;
         }
-        
+
         // init results array
         $arr = array();
 
@@ -443,7 +443,7 @@ class GoogleSiteSearch {
     }
 
     if(variable_get('gss_number_of_results', TRUE) == 1 && $totalResults !== 0) {
-      $html .= t('Shows @show_start to @show_end of approximately @totalResults hits', array('@show_start' => $show_start, '@show_end' => $show_end, '@totalResults' => $totalResults));
+      $html .= t(variable_get('gss_number_of_results_message', 'Shows @show_start to @show_end of approximately @totalResults hits of @query'), array('@show_start' => $show_start, '@show_end' => $show_end, '@totalResults' => $totalResults, '@query' => $this->query));
     }
 
     $html .= '</div>';
