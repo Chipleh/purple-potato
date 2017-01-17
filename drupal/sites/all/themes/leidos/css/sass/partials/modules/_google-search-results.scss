@@ -1,0 +1,50 @@
+/*************************
+*   Google Search Styles
+*   Rhino Hooton
+*   1/17/17
+/************************/
+
+
+/*  elements
+**************************************************/
+.google-search-results-head {
+    display: block;
+    margin: 1em 0;
+    padding: 0 0 0 2.5em;
+}
+
+.google-search-results {
+    display: block;
+
+    .gss { // bem parent
+        &-result {
+        }
+
+        &-title {
+            background: yellow;
+        }
+
+        &-thumbnail-image {
+            background: gold;
+        }
+
+        &-search-snippet-info {
+            background: red;
+        }
+
+        &-search-snippet {
+            background: green;
+        }
+
+        &-search-url {
+            background: blue;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 960px) {
+    .google-search-results {
+
+    }
+}
