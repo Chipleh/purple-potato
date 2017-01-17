@@ -25,6 +25,7 @@
 <?php
   $attributes1 = array();
   $attributes2 = array();
+  $outer_class = "";
 
   // Append background color to outer wrapper.
   if (isset($row->field_field_background_color[0]['raw']['rgb'])) {
@@ -33,6 +34,12 @@
     $attributes1[] = 'style="background-color: ' . $background_color . '"';
 
     unset($fields['field_background_color']);
+  }
+
+  // Append cta color class
+  if (!empty($row->field_field_cta_color[0]['raw']['value'])) {
+    $outer_class = " " . CTA_COLOR_CLASS;
+    unset($fields['field_cta_color']);
   }
 
   // Append desktop background image to custom inner/outer wrapper.
@@ -54,7 +61,7 @@
   }
 ?>
 
-<div class="hero-rotator-outer" <?php print implode(' ', $attributes1); ?>>
+<div class="hero-rotator-outer<?php print $outer_class ?>" <?php print implode(' ', $attributes1); ?>>
 <div class="hero-rotator-inner" <?php print implode(' ', $attributes2); ?>>
 
 <?php foreach ($fields as $id => $field): ?>
