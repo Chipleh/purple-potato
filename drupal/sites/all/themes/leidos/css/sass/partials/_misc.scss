@@ -230,7 +230,8 @@ p {
 
 
 /* new CTA */
-.flexible-template-content {
+.flexible-template-content,
+.entity-field-collection-item {
     .field-name-field-cta,
     .views-field-field-cta {
         text-align: center;
@@ -270,7 +271,8 @@ p {
 }
 
 .cta-color-button {
-    .flexible-template-content {
+    .flexible-template-content,
+    .entity-field-collection-item {
         .field-name-field-cta,
         .views-field-field-cta {
             text-align: center;
