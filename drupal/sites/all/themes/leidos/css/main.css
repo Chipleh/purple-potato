@@ -1111,21 +1111,67 @@ p.subtext {
   color: #dfd1e0;
 }
 
-/* line 232, sass/partials/_misc.scss */
-.field-name-field-cta a {
-  border: 1px solid #3B1363;
+/* new CTA */
+/* line 234, sass/partials/_misc.scss */
+.flexible-template-content .field-name-field-cta,
+.flexible-template-content .views-field-field-cta {
+  text-align: center;
+}
+/* line 238, sass/partials/_misc.scss */
+.flexible-template-content .field-name-field-cta a,
+.flexible-template-content .views-field-field-cta a {
+  border: 1px solid #fff;
   color: #fff;
   display: inline-block;
-  font-size: 1.229vw;
-  font-weight: 100;
+  font-size: 19px;
   margin: 0 auto;
-  padding: 0.643vw 2.85vw;
+  padding: 1.15vw 2.85vw;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
-/* line 243, sass/partials/_misc.scss */
-.field-name-field-cta a:before {
-  background-color: #3B1363;
+/* line 248, sass/partials/_misc.scss */
+.flexible-template-content .field-name-field-cta a:before,
+.flexible-template-content .views-field-field-cta a:before {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: .15;
+  position: absolute;
+  top: 0;
+  transition: all .5s ease;
+  width: 100%;
+  z-index: -1;
+}
+/* line 263, sass/partials/_misc.scss */
+.flexible-template-content .field-name-field-cta a:hover:before,
+.flexible-template-content .views-field-field-cta a:hover:before {
+  opacity: .45;
+  transition: all .5s ease;
+}
+
+/* line 274, sass/partials/_misc.scss */
+.cta-color-button .flexible-template-content .field-name-field-cta,
+.cta-color-button .flexible-template-content .views-field-field-cta {
+  text-align: center;
+}
+/* line 278, sass/partials/_misc.scss */
+.cta-color-button .flexible-template-content .field-name-field-cta a,
+.cta-color-button .flexible-template-content .views-field-field-cta a {
+  border: 1px solid transparent;
+  color: #fff;
+  display: inline-block;
+  font-size: 19px;
+  margin: 0 auto;
+  padding: 1.15vw 2.85vw;
+  position: relative;
+  z-index: 1;
+}
+/* line 288, sass/partials/_misc.scss */
+.cta-color-button .flexible-template-content .field-name-field-cta a:before,
+.cta-color-button .flexible-template-content .views-field-field-cta a:before {
+  background: #3B1363;
   background-image: linear-gradient(to left, #3b1363 0%, #3b1363 100%);
   content: '';
   display: block;
@@ -1136,30 +1182,19 @@ p.subtext {
   top: 0;
   transition: all .5s ease;
   width: 100%;
+  z-index: -1;
 }
-/* line 260, sass/partials/_misc.scss */
-.field-name-field-cta a:hover:before {
-  background-image: linear-gradient(to left, #7b1f7f 0%, #3b1363 100%);
+/* line 303, sass/partials/_misc.scss */
+.cta-color-button .flexible-template-content .field-name-field-cta a:hover,
+.cta-color-button .flexible-template-content .views-field-field-cta a:hover {
   color: #dfd1e0;
-  transition: all .5s ease;
 }
-/* line 271, sass/partials/_misc.scss */
-.field-name-field-cta.scheme-white a {
-  border: 1px solid #fff;
-}
-/* line 274, sass/partials/_misc.scss */
-.field-name-field-cta.scheme-white a:before {
-  background-color: #fff;
-  background: #fff;
-  opacity: .15;
-  transition: all .5s ease;
-}
-/* line 282, sass/partials/_misc.scss */
-.field-name-field-cta.scheme-white a:hover:before {
-  background-color: #fff;
-  background: #fff;
-  color: #fff;
-  opacity: .45;
+/* line 306, sass/partials/_misc.scss */
+.cta-color-button .flexible-template-content .field-name-field-cta a:hover:before,
+.cta-color-button .flexible-template-content .views-field-field-cta a:hover:before {
+  background: #7B1F7F;
+  background-image: linear-gradient(to left, #7b1f7f 0%, #3b1363 100%);
+  opacity: 1;
   transition: all .5s ease;
 }
 
@@ -6196,40 +6231,6 @@ p.subtext {
           transform: translateX(-50%) translateY(-50%);
   width: auto;
 }
-/* line 141, sass/partials/modules/_flex-featured-video.scss */
-.pane-bundle-feature-video .flexible-template-content .field-name-field-cta {
-  text-align: center;
-}
-/* line 144, sass/partials/modules/_flex-featured-video.scss */
-.pane-bundle-feature-video .flexible-template-content .field-name-field-cta a {
-  border: 1px solid #fff;
-  color: #fff;
-  display: inline-block;
-  font-size: 19px;
-  margin: 0 auto;
-  padding: 1.15vw 2.85vw;
-  position: relative;
-  z-index: 2;
-}
-/* line 154, sass/partials/modules/_flex-featured-video.scss */
-.pane-bundle-feature-video .flexible-template-content .field-name-field-cta a:before {
-  background: #fff;
-  content: '';
-  display: block;
-  height: 100%;
-  left: 0;
-  opacity: .15;
-  position: absolute;
-  top: 0;
-  transition: all .5s ease;
-  width: 100%;
-  z-index: 1;
-}
-/* line 169, sass/partials/modules/_flex-featured-video.scss */
-.pane-bundle-feature-video .flexible-template-content .field-name-field-cta a:hover:before {
-  opacity: .45;
-  transition: all .5s ease;
-}
 /* line 180, sass/partials/modules/_flex-featured-video.scss */
 .pane-bundle-feature-video.flex-template-module-no-title .flexible-template-content h3,
 .pane-bundle-feature-video.flex-template-module-no-title .flexible-template-content h4,
@@ -6430,37 +6431,6 @@ p.subtext {
   margin: 0 auto;
   text-align: center;
   width: 62%;
-}
-/* line 104, sass/partials/modules/_flex-hero-rotator.scss */
-.pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta a {
-  border: 1px solid #fff;
-  color: #fff;
-  display: inline-block;
-  font-size: 1.229vw;
-  font-weight: 100;
-  margin: 0 auto;
-  padding: 0.643vw 2.85vw;
-  position: relative;
-  z-index: 2;
-}
-/* line 115, sass/partials/modules/_flex-hero-rotator.scss */
-.pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta a:before {
-  background: #fff;
-  content: '';
-  display: block;
-  height: 100%;
-  left: 0;
-  opacity: .15;
-  position: absolute;
-  top: 0;
-  transition: all .5s ease;
-  width: 100%;
-  z-index: 1;
-}
-/* line 130, sass/partials/modules/_flex-hero-rotator.scss */
-.pane-bundle-rotator-hero .flexible-template-content .views-field-field-cta a:hover:before {
-  opacity: .45;
-  transition: all .5s ease;
 }
 /* line 138, sass/partials/modules/_flex-hero-rotator.scss */
 .pane-bundle-rotator-hero .flexible-template-content .flex-control-nav {
@@ -7059,36 +7029,6 @@ p.subtext {
 .pane-bundle-multi-column .flexible-template-content h4 p,
 .pane-bundle-multi-column .flexible-template-content h5 p {
   margin: 0;
-}
-/* line 96, sass/partials/modules/_flex-multi-column.scss */
-.pane-bundle-multi-column .flexible-template-content .field-name-field-cta a {
-  border: 1px solid #fff;
-  color: #fff;
-  display: inline-block;
-  font-size: 1.229vw;
-  font-weight: 100;
-  margin: 0 auto;
-  padding: 0.643vw 2.85vw;
-  position: relative;
-  z-index: 2;
-}
-/* line 107, sass/partials/modules/_flex-multi-column.scss */
-.pane-bundle-multi-column .flexible-template-content .field-name-field-cta a:before {
-  background: #fff;
-  content: '';
-  display: block;
-  height: 100%;
-  left: 0;
-  opacity: .15;
-  position: absolute;
-  top: 0;
-  transition: all .5s ease;
-  width: 100%;
-}
-/* line 122, sass/partials/modules/_flex-multi-column.scss */
-.pane-bundle-multi-column .flexible-template-content .field-name-field-cta a:hover:before {
-  opacity: .45;
-  transition: all .5s ease;
 }
 /* line 138, sass/partials/modules/_flex-multi-column.scss */
 .pane-bundle-multi-column.multi-column-1 .column-0,

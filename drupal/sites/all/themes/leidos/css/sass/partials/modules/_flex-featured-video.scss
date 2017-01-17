@@ -138,41 +138,41 @@
         }
 
         /* cta */
-        .field-name-field-cta {
-            text-align: center;
+        // .field-name-field-cta {
+        //     text-align: center;
 
-            a {
-                border: 1px solid $color-white;
-                color: $color-white;
-                display: inline-block;
-                font-size: 19px;
-                margin: 0 auto;
-                padding: 1.15vw 2.85vw;
-                position: relative;
-                z-index: 2;
+        //     a {
+        //         border: 1px solid $color-white;
+        //         color: $color-white;
+        //         display: inline-block;
+        //         font-size: 19px;
+        //         margin: 0 auto;
+        //         padding: 1.15vw 2.85vw;
+        //         position: relative;
+        //         z-index: 2;
 
-                &:before {
-                    background: $color-white;
-                    content: '';
-                    display: block;
-                    height: 100%;
-                    left: 0;
-                    opacity: .15;
-                    position: absolute;
-                    top: 0;
-                    transition: all .5s ease;
-                    width: 100%;
-                    z-index: 1;
-                }
+        //         &:before {
+        //             background: $color-white;
+        //             content: '';
+        //             display: block;
+        //             height: 100%;
+        //             left: 0;
+        //             opacity: .15;
+        //             position: absolute;
+        //             top: 0;
+        //             transition: all .5s ease;
+        //             width: 100%;
+        //             z-index: 1;
+        //         }
 
-                &:hover {
-                    &:before {
-                        opacity: .45;
-                        transition: all .5s ease;
-                    }
-                }
-            }
-        }
+        //         &:hover {
+        //             &:before {
+        //                 opacity: .45;
+        //                 transition: all .5s ease;
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     &.flex-template-module-no-title {
