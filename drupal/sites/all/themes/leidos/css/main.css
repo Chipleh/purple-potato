@@ -1115,15 +1115,19 @@ p.subtext {
 /* line 235, sass/partials/_misc.scss */
 .flexible-template-content .field-name-field-cta,
 .flexible-template-content .views-field-field-cta,
+.flexible-template-content .hero-rotator-inner,
 .entity-field-collection-item .field-name-field-cta,
-.entity-field-collection-item .views-field-field-cta {
+.entity-field-collection-item .views-field-field-cta,
+.entity-field-collection-item .hero-rotator-inner {
   text-align: center;
 }
-/* line 239, sass/partials/_misc.scss */
+/* line 240, sass/partials/_misc.scss */
 .flexible-template-content .field-name-field-cta a,
 .flexible-template-content .views-field-field-cta a,
+.flexible-template-content .hero-rotator-inner a,
 .entity-field-collection-item .field-name-field-cta a,
-.entity-field-collection-item .views-field-field-cta a {
+.entity-field-collection-item .views-field-field-cta a,
+.entity-field-collection-item .hero-rotator-inner a {
   border: 1px solid #fff;
   color: #fff;
   display: inline-block;
@@ -1133,11 +1137,13 @@ p.subtext {
   position: relative;
   z-index: 1;
 }
-/* line 249, sass/partials/_misc.scss */
+/* line 250, sass/partials/_misc.scss */
 .flexible-template-content .field-name-field-cta a:before,
 .flexible-template-content .views-field-field-cta a:before,
+.flexible-template-content .hero-rotator-inner a:before,
 .entity-field-collection-item .field-name-field-cta a:before,
-.entity-field-collection-item .views-field-field-cta a:before {
+.entity-field-collection-item .views-field-field-cta a:before,
+.entity-field-collection-item .hero-rotator-inner a:before {
   background: #fff;
   content: '';
   display: block;
@@ -1150,27 +1156,33 @@ p.subtext {
   width: 100%;
   z-index: -1;
 }
-/* line 264, sass/partials/_misc.scss */
+/* line 265, sass/partials/_misc.scss */
 .flexible-template-content .field-name-field-cta a:hover:before,
 .flexible-template-content .views-field-field-cta a:hover:before,
+.flexible-template-content .hero-rotator-inner a:hover:before,
 .entity-field-collection-item .field-name-field-cta a:hover:before,
-.entity-field-collection-item .views-field-field-cta a:hover:before {
+.entity-field-collection-item .views-field-field-cta a:hover:before,
+.entity-field-collection-item .hero-rotator-inner a:hover:before {
   opacity: .45;
   transition: all .5s ease;
 }
 
-/* line 276, sass/partials/_misc.scss */
+/* line 277, sass/partials/_misc.scss */
 .cta-color-button .flexible-template-content .field-name-field-cta,
 .cta-color-button .flexible-template-content .views-field-field-cta,
+.cta-color-button .flexible-template-content .hero-rotator-inner,
 .cta-color-button .entity-field-collection-item .field-name-field-cta,
-.cta-color-button .entity-field-collection-item .views-field-field-cta {
+.cta-color-button .entity-field-collection-item .views-field-field-cta,
+.cta-color-button .entity-field-collection-item .hero-rotator-inner {
   text-align: center;
 }
-/* line 280, sass/partials/_misc.scss */
+/* line 282, sass/partials/_misc.scss */
 .cta-color-button .flexible-template-content .field-name-field-cta a,
 .cta-color-button .flexible-template-content .views-field-field-cta a,
+.cta-color-button .flexible-template-content .hero-rotator-inner a,
 .cta-color-button .entity-field-collection-item .field-name-field-cta a,
-.cta-color-button .entity-field-collection-item .views-field-field-cta a {
+.cta-color-button .entity-field-collection-item .views-field-field-cta a,
+.cta-color-button .entity-field-collection-item .hero-rotator-inner a {
   border: 1px solid transparent;
   color: #fff;
   display: inline-block;
@@ -1180,11 +1192,13 @@ p.subtext {
   position: relative;
   z-index: 1;
 }
-/* line 290, sass/partials/_misc.scss */
+/* line 292, sass/partials/_misc.scss */
 .cta-color-button .flexible-template-content .field-name-field-cta a:before,
 .cta-color-button .flexible-template-content .views-field-field-cta a:before,
+.cta-color-button .flexible-template-content .hero-rotator-inner a:before,
 .cta-color-button .entity-field-collection-item .field-name-field-cta a:before,
-.cta-color-button .entity-field-collection-item .views-field-field-cta a:before {
+.cta-color-button .entity-field-collection-item .views-field-field-cta a:before,
+.cta-color-button .entity-field-collection-item .hero-rotator-inner a:before {
   background: #3B1363;
   background-image: linear-gradient(to left, #3b1363 0%, #3b1363 100%);
   content: '';
@@ -1198,18 +1212,22 @@ p.subtext {
   width: 100%;
   z-index: -1;
 }
-/* line 305, sass/partials/_misc.scss */
+/* line 307, sass/partials/_misc.scss */
 .cta-color-button .flexible-template-content .field-name-field-cta a:hover,
 .cta-color-button .flexible-template-content .views-field-field-cta a:hover,
+.cta-color-button .flexible-template-content .hero-rotator-inner a:hover,
 .cta-color-button .entity-field-collection-item .field-name-field-cta a:hover,
-.cta-color-button .entity-field-collection-item .views-field-field-cta a:hover {
+.cta-color-button .entity-field-collection-item .views-field-field-cta a:hover,
+.cta-color-button .entity-field-collection-item .hero-rotator-inner a:hover {
   color: #dfd1e0;
 }
-/* line 308, sass/partials/_misc.scss */
+/* line 310, sass/partials/_misc.scss */
 .cta-color-button .flexible-template-content .field-name-field-cta a:hover:before,
 .cta-color-button .flexible-template-content .views-field-field-cta a:hover:before,
+.cta-color-button .flexible-template-content .hero-rotator-inner a:hover:before,
 .cta-color-button .entity-field-collection-item .field-name-field-cta a:hover:before,
-.cta-color-button .entity-field-collection-item .views-field-field-cta a:hover:before {
+.cta-color-button .entity-field-collection-item .views-field-field-cta a:hover:before,
+.cta-color-button .entity-field-collection-item .hero-rotator-inner a:hover:before {
   background: #7B1F7F;
   background-image: linear-gradient(to left, #7b1f7f 0%, #3b1363 100%);
   opacity: 1;
