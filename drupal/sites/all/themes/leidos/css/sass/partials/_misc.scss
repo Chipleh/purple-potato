@@ -231,10 +231,10 @@ p {
 
 /* new CTA */
 .flexible-template-content,
-.entity-field-collection-item {
+.entity-field-collection-item,
+.hero-rotator-inner {
     .field-name-field-cta,
-    .views-field-field-cta,
-    .hero-rotator-inner {
+    .views-field-field-cta {
         text-align: center;
 
         a {
@@ -273,10 +273,10 @@ p {
 
 .cta-color-button {
     .flexible-template-content,
-    .entity-field-collection-item {
+    .entity-field-collection-item,
+    .hero-rotator-inner {
         .field-name-field-cta,
-        .views-field-field-cta,
-        .hero-rotator-inner {
+        .views-field-field-cta {
             text-align: center;
 
             a {

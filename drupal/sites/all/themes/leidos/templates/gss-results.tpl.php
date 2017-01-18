@@ -19,7 +19,7 @@
  */
 ?>
 
-<span>
+<span class="google-search-results-head">
   <?php print $head; ?>
   <div class="sorting-filters">
   <label>Sort by:</label>
