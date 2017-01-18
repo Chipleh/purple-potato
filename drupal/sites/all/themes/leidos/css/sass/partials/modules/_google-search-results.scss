@@ -8,36 +8,76 @@
 /*  elements
 **************************************************/
 .google-search-results-head {
+    border-bottom: 1px solid $color-gray-medium-light;
     display: block;
-    margin: 1em 0;
-    padding: 0 0 0 2.5em;
+    margin: 1em 0 1em 2.5em;
+    overflow: hidden;
+    padding: 0 0 1em 0;
+
+    .searchhead {
+        float: left;
+        font-weight: 100;
+        margin: 0;
+
+        b {
+            font-weight: 600;
+        }
+    }
+
+    .sorting-filters {
+        clear: right;
+        float: right;
+
+        label {
+            display: inline-block;
+            font-weight: 100;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
 }
 
 .google-search-results {
     display: block;
 
-    .gss { // bem parent
+    .gss { // bem parent - unused by itself
         &-result {
         }
 
         &-title {
-            background: yellow;
+            font-size: 16px;
+
+            a {
+                color: $color-gray-medium-dark;
+                font-size: 16px;
+                font-weight: 600;
+
+                &:hover {
+                    color: $color-leidos-purple-light;
+                }
+            }
         }
 
         &-thumbnail-image {
-            background: gold;
+            display: none;
         }
 
         &-search-snippet-info {
-            background: red;
+            display: block;
+        }
+
+        &-search-snippet,
+        &-search-url {
+            line-height: 24px;
+            margin: 0 !important;
         }
 
         &-search-snippet {
-            background: green;
         }
 
         &-search-url {
-            background: blue;
         }
     }
 }

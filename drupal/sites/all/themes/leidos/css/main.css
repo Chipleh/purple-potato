@@ -8069,34 +8069,67 @@ p.subtext {
 **************************************************/
 /* line 10, sass/partials/modules/_google-search-results.scss */
 .google-search-results-head {
+  border-bottom: 1px solid #D0D0D0;
   display: block;
-  margin: 1em 0;
-  padding: 0 0 0 2.5em;
+  margin: 1em 0 1em 2.5em;
+  overflow: hidden;
+  padding: 0 0 1em 0;
+}
+/* line 17, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .searchhead {
+  float: left;
+  font-weight: 100;
+  margin: 0;
+}
+/* line 22, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .searchhead b {
+  font-weight: 600;
+}
+/* line 27, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .sorting-filters {
+  clear: right;
+  float: right;
+}
+/* line 31, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .sorting-filters label {
+  display: inline-block;
+  font-weight: 100;
+}
+/* line 36, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .sorting-filters span {
+  font-weight: 600;
 }
 
-/* line 16, sass/partials/modules/_google-search-results.scss */
+/* line 42, sass/partials/modules/_google-search-results.scss */
 .google-search-results {
   display: block;
 }
-/* line 23, sass/partials/modules/_google-search-results.scss */
+/* line 49, sass/partials/modules/_google-search-results.scss */
 .google-search-results .gss-title {
-  background: yellow;
+  font-size: 16px;
 }
-/* line 27, sass/partials/modules/_google-search-results.scss */
+/* line 52, sass/partials/modules/_google-search-results.scss */
+.google-search-results .gss-title a {
+  color: #646464;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* line 57, sass/partials/modules/_google-search-results.scss */
+.google-search-results .gss-title a:hover {
+  color: #850F88;
+}
+/* line 63, sass/partials/modules/_google-search-results.scss */
 .google-search-results .gss-thumbnail-image {
-  background: gold;
+  display: none;
 }
-/* line 31, sass/partials/modules/_google-search-results.scss */
+/* line 67, sass/partials/modules/_google-search-results.scss */
 .google-search-results .gss-search-snippet-info {
-  background: red;
+  display: block;
 }
-/* line 35, sass/partials/modules/_google-search-results.scss */
-.google-search-results .gss-search-snippet {
-  background: green;
-}
-/* line 39, sass/partials/modules/_google-search-results.scss */
-.google-search-results .gss-search-url {
-  background: blue;
+/* line 71, sass/partials/modules/_google-search-results.scss */
+.google-search-results .gss-search-snippet, .google-search-results .gss-search-url {
+  line-height: 24px;
+  margin: 0 !important;
 }
 
 /*************************

@@ -8,7 +8,7 @@
     		jQuery(this).addClass("hover");
     	}).on("mouseleave", function() {
     		jQuery(this).removeClass("hover");
-		}); 
+		});
     }
   };
 })(jQuery);

@@ -34,4 +34,3 @@
   <?php print $search_results; ?>
 </ol>
 <?php print $pager; ?>
-

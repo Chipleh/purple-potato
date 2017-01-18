@@ -27,7 +27,6 @@
 	};
 })(jQuery);
 
-
 //  Static pages - Smart (debounced) resize
 //  Monte Greene
 //  6/22/16
@@ -784,36 +783,53 @@
     		jQuery(this).addClass("hover");
     	}).on("mouseleave", function() {
     		jQuery(this).removeClass("hover");
-		}); 
+		});
     }
   };
 })(jQuery);
-//	Search Box JS
-//	Rhino Hooton
-//	6/29/15
+
+//  Search Box JS
+//  Rhino Hooton
+//  6/29/15
+(function($) {
+    Drupal.behaviors.leidosSearch = {
+        attach: function(context, settings) {
+
+            var searchBox = jQuery('li.last span.nolink, .search');
+            var cancelButton = jQuery('#search_leidos_website span');
+            var searchForm = jQuery('div.block-leidos-custom-search');
+
+            // search click
+            jQuery(searchBox).on('click', function() {
+                jQuery(searchBox).toggleClass('search-active');
+                jQuery(searchForm).toggleClass('search-active');
+                jQuery('.mobile-drop-active').removeClass('mobile-drop-active');
+                jQuery('#block-system-main-menu').removeClass('show');
+            });
+
+            // cancel click
+            jQuery(cancelButton).on('click', function(e) {
+                jQuery(searchBox).toggleClass('search-active');
+                jQuery(searchForm).toggleClass('search-active');
+                e.preventDefault();
+            });
+
+        }
+    };
+})(jQuery);
+
+//  Search Page URL Hoist
+//  Rhino Hooton
+//  1/17/17
 (function ($) {
-  Drupal.behaviors.leidosSearch = {
-    attach: function (context, settings) {
-
-			var searchBox = jQuery('li.last span.nolink, .search');
-			var cancelButton = jQuery('#search_leidos_website span');
-			var searchForm = jQuery('div.block-leidos-custom-search');
-
-			// search click
-			jQuery(searchBox).on('click', function() {
-				jQuery(searchBox).toggleClass('search-active');
-				jQuery(searchForm).toggleClass('search-active');
-				jQuery('.mobile-drop-active').removeClass('mobile-drop-active');
-        jQuery('#block-system-main-menu').removeClass('show');
-			});
-
-			//search click
-			jQuery(cancelButton).on('click', function(e) {
-				jQuery(searchBox).toggleClass('search-active');
-				jQuery(searchForm).toggleClass('search-active');
-				e.preventDefault();
-			});
-
-    }
-  };
+    Drupal.behaviors.leidosSearchResultsPage = {
+        attach: function (context, settings) {
+            if (jQuery('.google-search-results-head').length > 0) {
+                jQuery(document).ready(function() {
+                    var searchQuery = jQuery(".searchhead b:nth-child(2)").text();;
+                    window.history.replaceState(null, null, "/search/gss/" + searchQuery);
+                });
+            }
+        }
+    };
 })(jQuery);
