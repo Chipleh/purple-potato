@@ -169,9 +169,13 @@ function leidos_block_view($delta = '') {
     case 'leidos_search':
       if (arg(0) == 'search') {
         module_load_include('inc', 'search', 'search.pages');
-        $result = search_view(arg(1), arg(2));
-        $block['title'] = '';
-        $block['content'] = $result['search_results'];
+        if (!empty(arg(2))) {
+          $result = search_view(arg(1), arg(2));
+          $block['title'] = '';
+          $block['content'] = $result['search_results'];
+        } else {
+          $block['content'] = t('Please type a keyword in the search box, and then press Enter.');
+        }
       }
       break;
   }
