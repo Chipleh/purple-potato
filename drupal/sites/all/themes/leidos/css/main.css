@@ -8166,11 +8166,16 @@ p.subtext {
 /* line 115, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous a,
 .google-search-pager .pager .pager-next a {
+  display: block;
   font-size: 0 !important;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  width: 22px;
 }
-/* line 119, sass/partials/modules/_google-search-results.scss */
-.google-search-pager .pager .pager-previous:before,
-.google-search-pager .pager .pager-next:before {
+/* line 123, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager .pager-previous a:before,
+.google-search-pager .pager .pager-next a:before {
   font-size: 18px;
   height: 30px;
   left: 0;
@@ -8179,39 +8184,39 @@ p.subtext {
   width: 22px;
 }
 /* line 137, sass/partials/modules/_google-search-results.scss */
-.google-search-pager .pager .pager-previous:before {
+.google-search-pager .pager .pager-previous a:before {
   content: "\00AB";
 }
-/* line 143, sass/partials/modules/_google-search-results.scss */
-.google-search-pager .pager .pager-next:before {
+/* line 145, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager .pager-next a:before {
   content: "\00BB";
 }
-/* line 148, sass/partials/modules/_google-search-results.scss */
+/* line 151, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-current {
   background: transparent !important;
   color: #646464 !important;
 }
-/* line 153, sass/partials/modules/_google-search-results.scss */
+/* line 156, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-ellipsis {
   display: none;
 }
 
 @media only screen and (max-width: 960px) {
-  /* line 161, sass/partials/modules/_google-search-results.scss */
+  /* line 164, sass/partials/modules/_google-search-results.scss */
   .google-search-results-head {
     margin: 1em 0;
   }
-  /* line 164, sass/partials/modules/_google-search-results.scss */
+  /* line 167, sass/partials/modules/_google-search-results.scss */
   .google-search-results-head .searchhead {
     float: none;
     margin: 0 0 1em;
   }
-  /* line 169, sass/partials/modules/_google-search-results.scss */
+  /* line 172, sass/partials/modules/_google-search-results.scss */
   .google-search-results-head .sorting-filters {
     float: none;
   }
 
-  /* line 174, sass/partials/modules/_google-search-results.scss */
+  /* line 177, sass/partials/modules/_google-search-results.scss */
   .google-search-results {
     padding: 0 0 0.25em 0 !important;
   }
