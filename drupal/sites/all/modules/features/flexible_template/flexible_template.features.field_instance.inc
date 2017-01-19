@@ -364,6 +364,45 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_cta_color'.
+  $field_instances['field_collection_item-field_columns_multi-field_cta_color'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'By default the CTAs will be light in color. Check this box to make the CTA purple.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 13,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_cta_color',
+    'label' => 'CTA Color',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_columns_multi-field_subhead'.
   $field_instances['field_collection_item-field_columns_multi-field_subhead'] = array(
     'bundle' => 'field_columns_multi',
@@ -3321,6 +3360,50 @@ function flexible_template_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-rotator_hero-field_cta_color'.
+  $field_instances['node-rotator_hero-field_cta_color'] = array(
+    'bundle' => 'rotator_hero',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'By default the CTAs will be light in color. Check this box to make the CTA purple.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_cta_color',
+    'label' => 'CTA Color',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-rotator_hero-field_display_title'.
   $field_instances['node-rotator_hero-field_display_title'] = array(
     'bundle' => 'rotator_hero',
@@ -3361,64 +3444,6 @@ function flexible_template_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'node-rotator_hero-field_secondary_cta'.
-  $field_instances['node-rotator_hero-field_secondary_cta'] = array(
-    'bundle' => 'rotator_hero',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_secondary_cta',
-    'label' => 'Secondary CTA',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'required',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 17,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 8,
     ),
   );
 
@@ -3789,7 +3814,9 @@ function flexible_template_field_default_field_instances() {
   t('Background Mobile Image');
   t('Background Video');
   t('Body');
+  t('By default the CTAs will be light in color. Check this box to make the CTA purple.');
   t('CTA');
+  t('CTA Color');
   t('Columns');
   t('Comment');
   t('Content limited to 160 characters total.');
@@ -3844,7 +3871,6 @@ function flexible_template_field_default_field_instances() {
   t('Module Height');
   t('Recommended video dimensions: 1400 x 405');
   t('Rotator Slide / Hero');
-  t('Secondary CTA');
   t('Selection dimensions:
 <ul>
 <li>short = 1400 x 405</li>
