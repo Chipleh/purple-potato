@@ -113,35 +113,38 @@
             position: relative;
 
             a {
+                display: block;
                 font-size: 0 !important;
-            }
-
-            &:before {
-                // color: $color-leidos-purple-light;
-                font-size: 18px;
                 height: 30px;
-                left: 0;
-                position: absolute;
-                top: 0;
+                overflow: hidden;
+                position: relative;
                 width: 22px;
-            }
 
-            &:hover {
                 &:before {
-                    // color: $color-leidos-purple-soft-dark;
+                    // color: $color-leidos-purple-light;
+                    font-size: 18px;
+                    height: 30px;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 22px;
                 }
             }
         }
 
         .pager-previous {
-            &:before {
-                content: "\00AB";
+            a {
+                &:before {
+                    content: "\00AB";
+                }
             }
         }
 
         .pager-next {
-            &:before {
-                content: "\00BB";
+            a {
+                &:before {
+                    content: "\00BB";
+                }
             }
         }
 
