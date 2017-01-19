@@ -27,7 +27,6 @@
 	};
 })(jQuery);
 
-
 //  Static pages - Smart (debounced) resize
 //  Monte Greene
 //  6/22/16

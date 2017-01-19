@@ -8069,36 +8069,153 @@ p.subtext {
 **************************************************/
 /* line 10, sass/partials/modules/_google-search-results.scss */
 .google-search-results-head {
+  border-bottom: 1px solid #D0D0D0;
   display: block;
-  margin: 1em 0;
-  padding: 0 0 0 2.5em;
+  margin: 1em 0 1em 2.5em;
+  overflow: hidden;
+  padding: 0 0 1em 0;
+}
+/* line 17, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .searchhead {
+  float: left;
+  font-weight: 100;
+  margin: 0;
+}
+/* line 22, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .searchhead b {
+  font-weight: 600;
+}
+/* line 27, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .sorting-filters {
+  clear: right;
+  float: right;
+}
+/* line 31, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .sorting-filters label {
+  display: inline-block;
+  font-weight: 100;
+}
+/* line 36, sass/partials/modules/_google-search-results.scss */
+.google-search-results-head .sorting-filters span {
+  font-weight: 600;
 }
 
-/* line 16, sass/partials/modules/_google-search-results.scss */
+/* line 42, sass/partials/modules/_google-search-results.scss */
 .google-search-results {
   display: block;
 }
-/* line 23, sass/partials/modules/_google-search-results.scss */
+/* line 49, sass/partials/modules/_google-search-results.scss */
 .google-search-results .gss-title {
-  background: yellow;
+  font-size: 16px;
 }
-/* line 27, sass/partials/modules/_google-search-results.scss */
+/* line 52, sass/partials/modules/_google-search-results.scss */
+.google-search-results .gss-title a {
+  color: #646464;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* line 57, sass/partials/modules/_google-search-results.scss */
+.google-search-results .gss-title a:hover {
+  color: #850F88;
+}
+/* line 63, sass/partials/modules/_google-search-results.scss */
 .google-search-results .gss-thumbnail-image {
-  background: gold;
+  display: none;
 }
-/* line 31, sass/partials/modules/_google-search-results.scss */
+/* line 67, sass/partials/modules/_google-search-results.scss */
 .google-search-results .gss-search-snippet-info {
-  background: red;
+  display: block;
 }
-/* line 35, sass/partials/modules/_google-search-results.scss */
-.google-search-results .gss-search-snippet {
-  background: green;
-}
-/* line 39, sass/partials/modules/_google-search-results.scss */
-.google-search-results .gss-search-url {
-  background: blue;
+/* line 71, sass/partials/modules/_google-search-results.scss */
+.google-search-results .gss-search-snippet, .google-search-results .gss-search-url {
+  line-height: 24px;
+  margin: 0 !important;
 }
 
+/* line 86, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager {
+  clear: both;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+/* line 93, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager li {
+  color: #646464;
+  display: inline-block;
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  padding: 0 !important;
+  width: 22px;
+}
+/* line 103, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager li a {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+}
+/* line 110, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager .pager-previous,
+.google-search-pager .pager .pager-next {
+  font-size: 0 !important;
+  position: relative;
+}
+/* line 115, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager .pager-previous a,
+.google-search-pager .pager .pager-next a {
+  font-size: 0 !important;
+}
+/* line 119, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager .pager-previous:before,
+.google-search-pager .pager .pager-next:before {
+  font-size: 18px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+/* line 137, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager .pager-previous:before {
+  content: "\00AB";
+}
+/* line 143, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager .pager-next:before {
+  content: "\00BB";
+}
+/* line 148, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager .pager-current {
+  background: transparent !important;
+  color: #646464 !important;
+}
+/* line 153, sass/partials/modules/_google-search-results.scss */
+.google-search-pager .pager .pager-ellipsis {
+  display: none;
+}
+
+@media only screen and (max-width: 960px) {
+  /* line 161, sass/partials/modules/_google-search-results.scss */
+  .google-search-results-head {
+    margin: 1em 0;
+  }
+  /* line 164, sass/partials/modules/_google-search-results.scss */
+  .google-search-results-head .searchhead {
+    float: none;
+    margin: 0 0 1em;
+  }
+  /* line 169, sass/partials/modules/_google-search-results.scss */
+  .google-search-results-head .sorting-filters {
+    float: none;
+  }
+
+  /* line 174, sass/partials/modules/_google-search-results.scss */
+  .google-search-results {
+    padding: 0 0 0.25em 0 !important;
+  }
+}
 /*************************
 *   Links Styles
 *   Rhino Hooton

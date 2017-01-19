@@ -27,7 +27,6 @@
 	};
 })(jQuery);
 
-
 //  Static pages - Smart (debounced) resize
 //  Monte Greene
 //  6/22/16
@@ -784,36 +783,51 @@
     		jQuery(this).addClass("hover");
     	}).on("mouseleave", function() {
     		jQuery(this).removeClass("hover");
-		}); 
+		});
     }
   };
 })(jQuery);
-//	Search Box JS
-//	Rhino Hooton
-//	6/29/15
+
+//  Search Box JS
+//  Rhino Hooton
+//  6/29/15
+(function($) {
+    Drupal.behaviors.leidosSearch = {
+        attach: function(context, settings) {
+
+            var searchBox = jQuery('li.last span.nolink, .search');
+            var cancelButton = jQuery('#search_leidos_website span');
+            var searchForm = jQuery('div.block-leidos-custom-search');
+
+            // search click
+            jQuery(searchBox).on('click', function() {
+                jQuery(searchBox).toggleClass('search-active');
+                jQuery(searchForm).toggleClass('search-active');
+                jQuery('.mobile-drop-active').removeClass('mobile-drop-active');
+                jQuery('#block-system-main-menu').removeClass('show');
+            });
+
+            // cancel click
+            jQuery(cancelButton).on('click', function(e) {
+                jQuery(searchBox).toggleClass('search-active');
+                jQuery(searchForm).toggleClass('search-active');
+                e.preventDefault();
+            });
+
+        }
+    };
+})(jQuery);
+
+//  Search Page URL Hoist
+//  Rhino Hooton
+//  1/17/17
 (function ($) {
-  Drupal.behaviors.leidosSearch = {
-    attach: function (context, settings) {
-
-			var searchBox = jQuery('li.last span.nolink, .search');
-			var cancelButton = jQuery('#search_leidos_website span');
-			var searchForm = jQuery('div.block-leidos-custom-search');
-
-			// search click
-			jQuery(searchBox).on('click', function() {
-				jQuery(searchBox).toggleClass('search-active');
-				jQuery(searchForm).toggleClass('search-active');
-				jQuery('.mobile-drop-active').removeClass('mobile-drop-active');
-        jQuery('#block-system-main-menu').removeClass('show');
-			});
-
-			//search click
-			jQuery(cancelButton).on('click', function(e) {
-				jQuery(searchBox).toggleClass('search-active');
-				jQuery(searchForm).toggleClass('search-active');
-				e.preventDefault();
-			});
-
-    }
-  };
+    Drupal.behaviors.leidosSearchResultsPage = {
+        attach: function (context, settings) {
+          var $formAction = $('#search_leidos_website').attr('action');
+      	  $("#search_leidos_website input:text").keyup(function() {
+      	    $('#search_leidos_website').attr('action', $formAction + "/" + $(this).val());
+      	  });
+        }
+    };
 })(jQuery);
