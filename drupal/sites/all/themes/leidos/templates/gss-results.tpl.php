@@ -26,7 +26,7 @@
   <?php if (isset($_GET['sort'])): ?>
     <?php print l('Best Match', current_path()) ?> | <span>Recently Updated</span>
   <?php else: ?>
-    <span>Best Match</span> | <?php print l('Recently Updated', current_path(), array('query' => array('sort' => 'date'))) ?>
+    <span>Best Match</span> | <?php print l('Recently Updated', current_path() . (!empty($_REQUEST['keys'])? '/' . $_REQUEST['keys']: '') , array('query' => array('sort' => 'date'))) ?>
   <?php endif; ?>
   </div>
 </span>
