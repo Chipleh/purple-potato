@@ -824,12 +824,10 @@
 (function ($) {
     Drupal.behaviors.leidosSearchResultsPage = {
         attach: function (context, settings) {
-            if (jQuery('.google-search-results-head').length > 0) {
-                jQuery(document).ready(function() {
-                    var searchQuery = jQuery(".searchhead b:nth-child(2)").text();;
-                    window.history.replaceState(null, null, "/search/gss/" + searchQuery);
-                });
-            }
+          var $formAction = $('#search_leidos_website').attr('action');
+      	  $("#search_leidos_website input:text").keyup(function() {
+      	    $('#search_leidos_website').attr('action', $formAction + "/" + $(this).val());
+      	  });
         }
     };
 })(jQuery);

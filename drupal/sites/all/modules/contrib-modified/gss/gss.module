@@ -223,7 +223,13 @@ function gss_search_results($query) {
   // Get searrch head.
   $output['head'] = $gss->GetSearchHead();
   // Get pager.
-  $output['pager'] = $gss->GetPager();
+  $query_string = drupal_get_query_parameters($_GET, array('q', 'page'));
+  if (!empty($query_string)) {
+    $query_string = '?' . http_build_query($query_string). '&page=';
+  } else {
+    $query_string = '?page=';
+  }
+  $output['pager'] = $gss->GetPager($query_string);
 
   return $output;
 }
