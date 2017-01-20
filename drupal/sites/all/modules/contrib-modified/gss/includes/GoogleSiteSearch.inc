@@ -338,7 +338,7 @@ class GoogleSiteSearch {
     $html = "<div class=\"item-list google-search-pager\"><ul class=\"pager\">\n";
 
     // Limit the number of pages to 50
-    $totalPages = $totalPages > 50 ? 50 : $totalPages;
+    // $totalPages = $totalPages > 50 ? 50 : $totalPages;
 
     if ($currentPage > 1) {
       $link_page = $link . ($currentPage - 1);
