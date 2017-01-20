@@ -225,10 +225,14 @@ function gss_search_results($query) {
   // Get pager.
   $query_string = drupal_get_query_parameters($_GET, array('q', 'page'));
   if (!empty($query_string)) {
-    $query_string = '?' . http_build_query($query_string). '&page=';
+    $query_string = http_build_query($query_string). '&page=';
   } else {
-    $query_string = '?page=';
+    $query_string = 'page=';
   }
+  if ($_SERVER['REDIRECT_URL'] == '/search' && !empty(arg(2))) {
+    $query_string = 'q=' . arg(2) .'&'. $query_string;
+  }
+  $query_string = '?' . $query_string;
   $output['pager'] = $gss->GetPager($query_string);
 
   return $output;

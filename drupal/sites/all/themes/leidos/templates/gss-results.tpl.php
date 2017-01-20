@@ -23,10 +23,18 @@
   <?php print $head; ?>
   <div class="sorting-filters">
   <label>Sort by:</label>
-  <?php if (isset($_GET['sort'])): ?>
-    <?php print l('Best Match', current_path()) ?> | <span>Recently Updated</span>
+  <?php if ($_SERVER['REDIRECT_URL'] == '/search' && !empty(arg(2))): ?>
+    <?php if (isset($_GET['sort'])): ?>
+      <?php print l('Best Match', 'search', array('query' => array('q' => arg(2)))) ?> | <span>Recently Updated</span>
+    <?php else: ?>
+      <span>Best Match</span> | <?php print l('Recently Updated', 'search', array('query' => array('q' => arg(2), 'sort' => 'date'))) ?>
+    <?php endif; ?>
   <?php else: ?>
-    <span>Best Match</span> | <?php print l('Recently Updated', current_path(), array('query' => array('sort' => 'date'))) ?>
+    <?php if (isset($_GET['sort'])): ?>
+      <?php print l('Best Match', current_path()) ?> | <span>Recently Updated</span>
+    <?php else: ?>
+      <span>Best Match</span> | <?php print l('Recently Updated', current_path(), array('query' => array('sort' => 'date'))) ?>
+    <?php endif; ?>
   <?php endif; ?>
   </div>
 </span>
