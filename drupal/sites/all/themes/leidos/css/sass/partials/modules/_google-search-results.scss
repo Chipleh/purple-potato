@@ -28,6 +28,11 @@
         clear: right;
         float: right;
 
+        //  prevent copy from being hidden under verticies
+        @media only screen and (min-width:960px) and (max-width: 1400px)  {
+            padding-right: 45px;
+        }
+
         label {
             display: inline-block;
             font-weight: 100;
