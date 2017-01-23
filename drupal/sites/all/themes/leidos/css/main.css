@@ -8161,7 +8161,7 @@ p.subtext {
   overflow: hidden;
   padding: 0 !important;
   vertical-align: top;
-  width: 22px;
+  width: 25px;
 }
 /* line 114, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager li a {
@@ -8172,7 +8172,7 @@ p.subtext {
   line-height: 30px;
   overflow: hidden;
   position: relative;
-  width: 22px;
+  width: 25px;
 }
 /* line 126, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous,
@@ -8194,7 +8194,7 @@ p.subtext {
   left: 0;
   position: absolute;
   top: 0;
-  width: 22px;
+  width: 25px;
 }
 /* line 149, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous a:before {
