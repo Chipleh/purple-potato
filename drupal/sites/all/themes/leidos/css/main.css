@@ -8165,26 +8165,26 @@ p.subtext {
 }
 /* line 114, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager li a {
+  display: block;
   font-size: 18px;
-  line-height: 30px;
   font-weight: 600;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  position: relative;
+  width: 22px;
 }
-/* line 121, sass/partials/modules/_google-search-results.scss */
+/* line 126, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous,
 .google-search-pager .pager .pager-next {
   font-size: 0 !important;
   position: relative;
   vertical-align: top;
 }
-/* line 127, sass/partials/modules/_google-search-results.scss */
+/* line 132, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous a,
 .google-search-pager .pager .pager-next a {
-  display: block;
   font-size: 0 !important;
-  height: 30px;
-  overflow: hidden;
-  position: relative;
-  width: 22px;
 }
 /* line 135, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous a:before,

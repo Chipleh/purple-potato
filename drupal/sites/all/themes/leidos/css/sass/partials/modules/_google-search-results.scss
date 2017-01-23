@@ -112,9 +112,14 @@
             width: 22px;
 
             a {
+                display: block;
                 font-size: 18px;
-                line-height: 30px;
                 font-weight: 600;
+                height: 30px;
+                line-height: 30px;
+                overflow: hidden;
+                position: relative;
+                width: 22px;
             }
         }
 
@@ -125,12 +130,7 @@
             vertical-align: top;
 
             a {
-                display: block;
                 font-size: 0 !important;
-                height: 30px;
-                overflow: hidden;
-                position: relative;
-                width: 22px;
 
                 &:before {
                     // color: $color-leidos-purple-light;
