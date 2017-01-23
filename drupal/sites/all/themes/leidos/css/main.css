@@ -8160,22 +8160,23 @@ p.subtext {
   line-height: 30px;
   overflow: hidden;
   padding: 0 !important;
+  vertical-align: top;
   width: 22px;
 }
-/* line 113, sass/partials/modules/_google-search-results.scss */
+/* line 114, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager li a {
   font-size: 18px;
   line-height: 30px;
   font-weight: 600;
 }
-/* line 120, sass/partials/modules/_google-search-results.scss */
+/* line 121, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous,
 .google-search-pager .pager .pager-next {
   font-size: 0 !important;
   position: relative;
   vertical-align: top;
 }
-/* line 126, sass/partials/modules/_google-search-results.scss */
+/* line 127, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous a,
 .google-search-pager .pager .pager-next a {
   display: block;
@@ -8185,7 +8186,7 @@ p.subtext {
   position: relative;
   width: 22px;
 }
-/* line 134, sass/partials/modules/_google-search-results.scss */
+/* line 135, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous a:before,
 .google-search-pager .pager .pager-next a:before {
   font-size: 18px;
@@ -8195,40 +8196,40 @@ p.subtext {
   top: 0;
   width: 22px;
 }
-/* line 148, sass/partials/modules/_google-search-results.scss */
+/* line 149, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-previous a:before {
   content: "\00AB";
 }
-/* line 156, sass/partials/modules/_google-search-results.scss */
+/* line 157, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-next a:before {
   content: "\00BB";
 }
-/* line 162, sass/partials/modules/_google-search-results.scss */
+/* line 163, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-current {
   background: transparent !important;
   color: #646464 !important;
 }
-/* line 167, sass/partials/modules/_google-search-results.scss */
+/* line 168, sass/partials/modules/_google-search-results.scss */
 .google-search-pager .pager .pager-ellipsis {
   display: none;
 }
 
 @media only screen and (max-width: 960px) {
-  /* line 175, sass/partials/modules/_google-search-results.scss */
+  /* line 176, sass/partials/modules/_google-search-results.scss */
   .google-search-results-head {
     margin: 1em 0;
   }
-  /* line 178, sass/partials/modules/_google-search-results.scss */
+  /* line 179, sass/partials/modules/_google-search-results.scss */
   .google-search-results-head .searchhead {
     float: none;
     margin: 0 0 1em;
   }
-  /* line 183, sass/partials/modules/_google-search-results.scss */
+  /* line 184, sass/partials/modules/_google-search-results.scss */
   .google-search-results-head .sorting-filters {
     float: none;
   }
 
-  /* line 188, sass/partials/modules/_google-search-results.scss */
+  /* line 189, sass/partials/modules/_google-search-results.scss */
   .google-search-results {
     padding: 0 0 0.25em 0 !important;
   }
