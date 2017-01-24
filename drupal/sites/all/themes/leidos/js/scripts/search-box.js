@@ -16,6 +16,12 @@
                 jQuery('.mobile-drop-active').removeClass('mobile-drop-active');
                 jQuery('#block-system-main-menu').removeClass('show');
                 jQuery('#search_leidos_website input[type=text]').focus();
+
+                // delay clear timer
+                setTimeout(function () {
+                    jQuery('#search_leidos_website input[type=text]').val('');
+                }, 500);
+                e.preventDefault();
             });
 
             // cancel click
