@@ -11,7 +11,7 @@ function news_release_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-news_releases-field_releases_count'
+  // 'fieldable_panels_pane-news_releases-field_releases_count'.
   $field_instances['fieldable_panels_pane-news_releases-field_releases_count'] = array(
     'bundle' => 'news_releases',
     'default_value' => array(
@@ -47,7 +47,7 @@ function news_release_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news_release-field_announcement_date'
+  // Exported field_instance: 'node-news_release-field_announcement_date'.
   $field_instances['node-news_release-field_announcement_date'] = array(
     'bundle' => 'news_release',
     'deleted' => 0,
@@ -82,7 +82,7 @@ function news_release_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'Y-m-d H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -94,7 +94,7 @@ function news_release_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news_release-field_id'
+  // Exported field_instance: 'node-news_release-field_id'.
   $field_instances['node-news_release-field_id'] = array(
     'bundle' => 'news_release',
     'default_value' => NULL,

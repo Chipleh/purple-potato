@@ -33,7 +33,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Taxonomy term: Color Scheme (field_color_scheme) */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['field_color_scheme_tid']['id'] = 'field_color_scheme_tid';
   $handler->display->display_options['relationships']['field_color_scheme_tid']['table'] = 'field_data_field_color_scheme';
   $handler->display->display_options['relationships']['field_color_scheme_tid']['field'] = 'field_color_scheme_tid';
@@ -464,7 +464,7 @@ function leidos_views_default_views() {
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'capabilities';
   $handler->display->display_options['filters']['tid']['error_message'] = FALSE;
-  /* Filter criterion: Content: Market (field_market) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_market_tid']['id'] = 'field_market_tid';
   $handler->display->display_options['filters']['field_market_tid']['table'] = 'field_data_field_market';
   $handler->display->display_options['filters']['field_market_tid']['field'] = 'field_market_tid';
@@ -478,8 +478,6 @@ function leidos_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_market_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_market_tid']['vocabulary'] = 'market';
 
   /* Display: Featured Projects */
   $handler = $view->new_display('panel_pane', 'Featured Projects', 'featured_projects_pane');

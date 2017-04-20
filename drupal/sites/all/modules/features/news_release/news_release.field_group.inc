@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function news_release_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function news_release_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|news_releases|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|news_releases|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -65,7 +65,12 @@ function news_release_field_group_info() {
       ),
     ),
   );
-  $export['group_general|node|news_release|form'] = $field_group;
+  $field_groups['group_general|node|news_release|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('General Info');
+  t('General info');
+
+  return $field_groups;
 }

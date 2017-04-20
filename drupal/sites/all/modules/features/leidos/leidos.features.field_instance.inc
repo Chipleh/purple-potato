@@ -11,7 +11,7 @@ function leidos_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'field_collection_item-field_about_content_item-field_header_title'
+  // 'field_collection_item-field_about_content_item-field_header_title'.
   $field_instances['field_collection_item-field_about_content_item-field_header_title'] = array(
     'bundle' => 'field_about_content_item',
     'default_value' => NULL,
@@ -47,7 +47,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_about_content_item-field_image'
+  // 'field_collection_item-field_about_content_item-field_image'.
   $field_instances['field_collection_item-field_about_content_item-field_image'] = array(
     'bundle' => 'field_about_content_item',
     'deleted' => 0,
@@ -100,7 +100,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_about_content_item-field_text'
+  // 'field_collection_item-field_about_content_item-field_text'.
   $field_instances['field_collection_item-field_about_content_item-field_text'] = array(
     'bundle' => 'field_about_content_item',
     'default_value' => NULL,
@@ -136,7 +136,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_column_links-field_column_link'
+  // 'field_collection_item-field_column_links-field_column_link'.
   $field_instances['field_collection_item-field_column_links-field_column_link'] = array(
     'bundle' => 'field_column_links',
     'default_value' => NULL,
@@ -195,7 +195,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_column_links-field_title_link'
+  // 'field_collection_item-field_column_links-field_title_link'.
   $field_instances['field_collection_item-field_column_links-field_title_link'] = array(
     'bundle' => 'field_column_links',
     'default_value' => NULL,
@@ -254,7 +254,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns-field_column_links'
+  // 'field_collection_item-field_columns-field_column_links'.
   $field_instances['field_collection_item-field_columns-field_column_links'] = array(
     'bundle' => 'field_columns',
     'default_value' => NULL,
@@ -305,7 +305,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_list-field_cta'
+  // 'field_collection_item-field_columns_list-field_cta'.
   $field_instances['field_collection_item-field_columns_list-field_cta'] = array(
     'bundle' => 'field_columns_list',
     'default_value' => array(
@@ -369,7 +369,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_list-field_list_items'
+  // 'field_collection_item-field_columns_list-field_list_items'.
   $field_instances['field_collection_item-field_columns_list-field_list_items'] = array(
     'bundle' => 'field_columns_list',
     'default_value' => NULL,
@@ -411,7 +411,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_columns_list-field_title_link'
+  // 'field_collection_item-field_columns_list-field_title_link'.
   $field_instances['field_collection_item-field_columns_list-field_title_link'] = array(
     'bundle' => 'field_columns_list',
     'default_value' => NULL,
@@ -469,7 +469,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_ranking-field_cta'
+  // Exported field_instance: 'field_collection_item-field_ranking-field_cta'.
   $field_instances['field_collection_item-field_ranking-field_cta'] = array(
     'bundle' => 'field_ranking',
     'default_value' => NULL,
@@ -522,7 +522,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_ranking-field_ranking_number'
+  // 'field_collection_item-field_ranking-field_ranking_number'.
   $field_instances['field_collection_item-field_ranking-field_ranking_number'] = array(
     'bundle' => 'field_ranking',
     'default_value' => NULL,
@@ -564,7 +564,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_ranking-field_title_color'
+  // 'field_collection_item-field_ranking-field_title_color'.
   $field_instances['field_collection_item-field_ranking-field_title_color'] = array(
     'bundle' => 'field_ranking',
     'default_value' => NULL,
@@ -597,7 +597,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_ranking-field_title_item'
+  // 'field_collection_item-field_ranking-field_title_item'.
   $field_instances['field_collection_item-field_ranking-field_title_item'] = array(
     'bundle' => 'field_ranking',
     'default_value' => NULL,
@@ -663,7 +663,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-capabilities-field_capabilities'
+  // 'fieldable_panels_pane-capabilities-field_capabilities'.
   $field_instances['fieldable_panels_pane-capabilities-field_capabilities'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -672,16 +672,14 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'ds',
+        'module' => 'entityreference',
         'settings' => array(
-          'taxonomy_term_reference_view_mode' => 'full',
-          'use_content_language' => TRUE,
+          'link' => TRUE,
         ),
-        'type' => 'ds_taxonomy_view_mode',
+        'type' => 'entityreference_label',
         'weight' => 0,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_capabilities',
     'label' => 'Grid items',
@@ -690,16 +688,20 @@ function leidos_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy_single_tag',
-      'settings' => array(),
-      'type' => 'taxonomy_single_tag_autocomplete',
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
       'weight' => 2,
     ),
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-content-field_freeform_html'
+  // 'fieldable_panels_pane-content-field_freeform_html'.
   $field_instances['fieldable_panels_pane-content-field_freeform_html'] = array(
     'bundle' => 'content',
     'default_value' => NULL,
@@ -737,7 +739,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-custom_breadcrumbs-field_breadcrumb_link'
+  // 'fieldable_panels_pane-custom_breadcrumbs-field_breadcrumb_link'.
   $field_instances['fieldable_panels_pane-custom_breadcrumbs-field_breadcrumb_link'] = array(
     'bundle' => 'custom_breadcrumbs',
     'default_value' => NULL,
@@ -790,7 +792,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-elements_panel_pane-field_about_content_item'
+  // 'fieldable_panels_pane-elements_panel_pane-field_about_content_item'.
   $field_instances['fieldable_panels_pane-elements_panel_pane-field_about_content_item'] = array(
     'bundle' => 'elements_panel_pane',
     'default_value' => NULL,
@@ -829,7 +831,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-featured_news_panel-field_announcement'
+  // 'fieldable_panels_pane-featured_news_panel-field_announcement'.
   $field_instances['fieldable_panels_pane-featured_news_panel-field_announcement'] = array(
     'bundle' => 'featured_news_panel',
     'default_value' => NULL,
@@ -838,15 +840,16 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'node_reference',
+        'module' => 'entityreference',
         'settings' => array(
-          'node_reference_view_mode' => 'teaser',
+          'links' => TRUE,
+          'use_content_language' => TRUE,
+          'view_mode' => 'teaser',
         ),
-        'type' => 'node_reference_node',
+        'type' => 'entityreference_entity_view',
         'weight' => 2,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_announcement',
     'label' => 'Announcement',
@@ -856,19 +859,19 @@ function leidos_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'entityreference',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
         'size' => 60,
       ),
-      'type' => 'node_reference_autocomplete',
+      'type' => 'entityreference_autocomplete',
       'weight' => 3,
     ),
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-featured_news_panel-field_title_link'
+  // 'fieldable_panels_pane-featured_news_panel-field_title_link'.
   $field_instances['fieldable_panels_pane-featured_news_panel-field_title_link'] = array(
     'bundle' => 'featured_news_panel',
     'default_value' => NULL,
@@ -921,7 +924,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-featured_projects_panel-field_project'
+  // 'fieldable_panels_pane-featured_projects_panel-field_project'.
   $field_instances['fieldable_panels_pane-featured_projects_panel-field_project'] = array(
     'bundle' => 'featured_projects_panel',
     'default_value' => NULL,
@@ -930,15 +933,16 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'node_reference',
+        'module' => 'entityreference',
         'settings' => array(
-          'node_reference_view_mode' => 'teaser',
+          'links' => TRUE,
+          'use_content_language' => TRUE,
+          'view_mode' => 'teaser',
         ),
-        'type' => 'node_reference_node',
+        'type' => 'entityreference_entity_view',
         'weight' => 2,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_project',
     'label' => 'Project',
@@ -948,19 +952,19 @@ function leidos_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'entityreference',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
         'size' => 60,
       ),
-      'type' => 'node_reference_autocomplete',
+      'type' => 'entityreference_autocomplete',
       'weight' => 3,
     ),
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-featured_projects_panel-field_title_link'
+  // 'fieldable_panels_pane-featured_projects_panel-field_title_link'.
   $field_instances['fieldable_panels_pane-featured_projects_panel-field_title_link'] = array(
     'bundle' => 'featured_projects_panel',
     'default_value' => NULL,
@@ -1013,7 +1017,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-left_navigation-field_left_menu'
+  // 'fieldable_panels_pane-left_navigation-field_left_menu'.
   $field_instances['fieldable_panels_pane-left_navigation-field_left_menu'] = array(
     'bundle' => 'left_navigation',
     'default_value' => NULL,
@@ -1052,7 +1056,8 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-link_columns-field_columns'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-link_columns-field_columns'.
   $field_instances['fieldable_panels_pane-link_columns-field_columns'] = array(
     'bundle' => 'link_columns',
     'default_value' => NULL,
@@ -1103,7 +1108,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-list_columns-field_columns_list'
+  // 'fieldable_panels_pane-list_columns-field_columns_list'.
   $field_instances['fieldable_panels_pane-list_columns-field_columns_list'] = array(
     'bundle' => 'list_columns',
     'default_value' => NULL,
@@ -1153,7 +1158,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-page_header-field_summary'
+  // Exported field_instance: 'fieldable_panels_pane-page_header-field_summary'.
   $field_instances['fieldable_panels_pane-page_header-field_summary'] = array(
     'bundle' => 'page_header',
     'default_value' => NULL,
@@ -1189,7 +1194,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-page_header-field_summary_cta'
+  // 'fieldable_panels_pane-page_header-field_summary_cta'.
   $field_instances['fieldable_panels_pane-page_header-field_summary_cta'] = array(
     'bundle' => 'page_header',
     'default_value' => NULL,
@@ -1242,7 +1247,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-ranking_promo-field_ranking'
+  // 'fieldable_panels_pane-ranking_promo-field_ranking'.
   $field_instances['fieldable_panels_pane-ranking_promo-field_ranking'] = array(
     'bundle' => 'ranking_promo',
     'default_value' => NULL,
@@ -1281,7 +1286,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-ranking_promo-field_ranking_columns'
+  // 'fieldable_panels_pane-ranking_promo-field_ranking_columns'.
   $field_instances['fieldable_panels_pane-ranking_promo-field_ranking_columns'] = array(
     'bundle' => 'ranking_promo',
     'default_value' => array(
@@ -1318,7 +1323,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-rotator-field_rotator_slide'
+  // 'fieldable_panels_pane-rotator-field_rotator_slide'.
   $field_instances['fieldable_panels_pane-rotator-field_rotator_slide'] = array(
     'bundle' => 'rotator',
     'default_value' => NULL,
@@ -1327,15 +1332,16 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'node_reference',
+        'module' => 'entityreference',
         'settings' => array(
-          'node_reference_view_mode' => 'full',
+          'links' => TRUE,
+          'use_content_language' => TRUE,
+          'view_mode' => 'full',
         ),
-        'type' => 'node_reference_node',
+        'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_rotator_slide',
     'label' => 'Rotator slide',
@@ -1345,18 +1351,18 @@ function leidos_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'entityreference',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
         'size' => 60,
       ),
-      'type' => 'node_reference_autocomplete',
+      'type' => 'entityreference_autocomplete',
       'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-webform-field_webform'
+  // Exported field_instance: 'fieldable_panels_pane-webform-field_webform'.
   $field_instances['fieldable_panels_pane-webform-field_webform'] = array(
     'bundle' => 'webform',
     'default_value' => NULL,
@@ -1365,15 +1371,16 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'node_reference',
+        'module' => 'entityreference',
         'settings' => array(
-          'node_reference_view_mode' => 'full',
+          'links' => TRUE,
+          'use_content_language' => TRUE,
+          'view_mode' => 'full',
         ),
-        'type' => 'node_reference_node',
+        'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_webform',
     'label' => 'Webform',
@@ -1383,18 +1390,18 @@ function leidos_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'entityreference',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
         'size' => 60,
       ),
-      'type' => 'node_reference_autocomplete',
+      'type' => 'entityreference_autocomplete',
       'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'node-project-body'
+  // Exported field_instance: 'node-project-body'.
   $field_instances['node-project-body'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1435,7 +1442,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_capabilities'
+  // Exported field_instance: 'node-project-field_capabilities'.
   $field_instances['node-project-field_capabilities'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1444,19 +1451,21 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => TRUE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
+        'module' => 'entityreference',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 30,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_capabilities',
     'label' => 'Capabilities',
@@ -1467,13 +1476,17 @@ function leidos_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
       'type' => 'options_buttons',
       'weight' => 31,
     ),
   );
 
-  // Exported field_instance: 'node-project-field_contact_us'
+  // Exported field_instance: 'node-project-field_contact_us'.
   $field_instances['node-project-field_contact_us'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1520,7 +1533,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_customer_name'
+  // Exported field_instance: 'node-project-field_customer_name'.
   $field_instances['node-project-field_customer_name'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1561,7 +1574,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_featured'
+  // Exported field_instance: 'node-project-field_featured'.
   $field_instances['node-project-field_featured'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1608,7 +1621,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_google_earth_link'
+  // Exported field_instance: 'node-project-field_google_earth_link'.
   $field_instances['node-project-field_google_earth_link'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1666,7 +1679,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_hover_cta'
+  // Exported field_instance: 'node-project-field_hover_cta'.
   $field_instances['node-project-field_hover_cta'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1725,7 +1738,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_hover_summary'
+  // Exported field_instance: 'node-project-field_hover_summary'.
   $field_instances['node-project-field_hover_summary'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1769,7 +1782,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_hover_title'
+  // Exported field_instance: 'node-project-field_hover_title'.
   $field_instances['node-project-field_hover_title'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1828,7 +1841,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_image_description'
+  // Exported field_instance: 'node-project-field_image_description'.
   $field_instances['node-project-field_image_description'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1869,7 +1882,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_industry_rankings_awards'
+  // Exported field_instance: 'node-project-field_industry_rankings_awards'.
   $field_instances['node-project-field_industry_rankings_awards'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1910,7 +1923,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_intro_text'
+  // Exported field_instance: 'node-project-field_intro_text'.
   $field_instances['node-project-field_intro_text'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1951,7 +1964,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_lower_body_text'
+  // Exported field_instance: 'node-project-field_lower_body_text'.
   $field_instances['node-project-field_lower_body_text'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1992,7 +2005,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_main_image'
+  // Exported field_instance: 'node-project-field_main_image'.
   $field_instances['node-project-field_main_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -2061,7 +2074,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_market'
+  // Exported field_instance: 'node-project-field_market'.
   $field_instances['node-project-field_market'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2070,19 +2083,21 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => TRUE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
+        'module' => 'entityreference',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 33,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_market',
     'label' => 'Market',
@@ -2093,13 +2108,17 @@ function leidos_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
       'type' => 'options_buttons',
       'weight' => 30,
     ),
   );
 
-  // Exported field_instance: 'node-project-field_overview'
+  // Exported field_instance: 'node-project-field_overview'.
   $field_instances['node-project-field_overview'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2140,7 +2159,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_overview_header'
+  // Exported field_instance: 'node-project-field_overview_header'.
   $field_instances['node-project-field_overview_header'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2181,7 +2200,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_point_of_contact'
+  // Exported field_instance: 'node-project-field_point_of_contact'.
   $field_instances['node-project-field_point_of_contact'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2222,7 +2241,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_private_tag'
+  // Exported field_instance: 'node-project-field_private_tag'.
   $field_instances['node-project-field_private_tag'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2263,7 +2282,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_project_date'
+  // Exported field_instance: 'node-project-field_project_date'.
   $field_instances['node-project-field_project_date'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -2317,7 +2336,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_project_facts'
+  // Exported field_instance: 'node-project-field_project_facts'.
   $field_instances['node-project-field_project_facts'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2358,7 +2377,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_project_image'
+  // Exported field_instance: 'node-project-field_project_image'.
   $field_instances['node-project-field_project_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -2416,7 +2435,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_project_value'
+  // Exported field_instance: 'node-project-field_project_value'.
   $field_instances['node-project-field_project_value'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2457,7 +2476,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_proof_point'
+  // Exported field_instance: 'node-project-field_proof_point'.
   $field_instances['node-project-field_proof_point'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2498,7 +2517,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_quick_links'
+  // Exported field_instance: 'node-project-field_quick_links'.
   $field_instances['node-project-field_quick_links'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2539,7 +2558,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_tags'
+  // Exported field_instance: 'node-project-field_tags'.
   $field_instances['node-project-field_tags'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2548,19 +2567,21 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => TRUE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
+        'module' => 'entityreference',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 18,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_tags',
     'label' => 'Tags',
@@ -2571,13 +2592,17 @@ function leidos_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
       'type' => 'options_select',
       'weight' => 36,
     ),
   );
 
-  // Exported field_instance: 'node-project-field_title_override'
+  // Exported field_instance: 'node-project-field_title_override'.
   $field_instances['node-project-field_title_override'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -2618,7 +2643,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator-body'
+  // Exported field_instance: 'node-rotator-body'.
   $field_instances['node-rotator-body'] = array(
     'bundle' => 'rotator',
     'default_value' => NULL,
@@ -2662,7 +2687,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator-field_hide_information_box'
+  // Exported field_instance: 'node-rotator-field_hide_information_box'.
   $field_instances['node-rotator-field_hide_information_box'] = array(
     'bundle' => 'rotator',
     'default_value' => array(
@@ -2706,7 +2731,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator-field_rotator_image'
+  // Exported field_instance: 'node-rotator-field_rotator_image'.
   $field_instances['node-rotator-field_rotator_image'] = array(
     'bundle' => 'rotator',
     'deleted' => 0,
@@ -2771,7 +2796,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-rotator-field_rotator_link'
+  // Exported field_instance: 'node-rotator-field_rotator_link'.
   $field_instances['node-rotator-field_rotator_link'] = array(
     'bundle' => 'rotator',
     'default_value' => NULL,
@@ -2823,7 +2848,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_color_scheme'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_color_scheme'.
   $field_instances['taxonomy_term-capabilities-field_color_scheme'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -2832,13 +2857,14 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => TRUE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 10,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_color_scheme',
     'label' => 'Color Scheme',
@@ -2849,13 +2875,17 @@ function leidos_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
       'type' => 'options_select',
       'weight' => 11,
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_content'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_content'.
   $field_instances['taxonomy_term-capabilities-field_content'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -2890,7 +2920,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_cta'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_cta'.
   $field_instances['taxonomy_term-capabilities-field_cta'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -2943,7 +2973,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-capabilities-field_featured_subcategories'
+  // 'taxonomy_term-capabilities-field_featured_subcategories'.
   $field_instances['taxonomy_term-capabilities-field_featured_subcategories'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -2952,13 +2982,14 @@ function leidos_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => TRUE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 6,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_featured_subcategories',
     'label' => 'Featured subcapabilities',
@@ -2969,13 +3000,17 @@ function leidos_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
       'type' => 'options_select',
       'weight' => 11,
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_hide_hover'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_hide_hover'.
   $field_instances['taxonomy_term-capabilities-field_hide_hover'] = array(
     'bundle' => 'capabilities',
     'default_value' => array(
@@ -3014,7 +3049,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-capabilities-field_hide_preview_box'
+  // 'taxonomy_term-capabilities-field_hide_preview_box'.
   $field_instances['taxonomy_term-capabilities-field_hide_preview_box'] = array(
     'bundle' => 'capabilities',
     'default_value' => array(
@@ -3052,7 +3087,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_hover_shape'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_hover_shape'.
   $field_instances['taxonomy_term-capabilities-field_hover_shape'] = array(
     'bundle' => 'capabilities',
     'default_value' => array(
@@ -3088,7 +3123,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_hover_text'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_hover_text'.
   $field_instances['taxonomy_term-capabilities-field_hover_text'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -3123,7 +3158,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_preview_image'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_preview_image'.
   $field_instances['taxonomy_term-capabilities-field_preview_image'] = array(
     'bundle' => 'capabilities',
     'deleted' => 0,
@@ -3186,7 +3221,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-capabilities-field_preview_image_hover_sub'
+  // 'taxonomy_term-capabilities-field_preview_image_hover_sub'.
   $field_instances['taxonomy_term-capabilities-field_preview_image_hover_sub'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -3222,7 +3257,7 @@ function leidos_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-capabilities-field_preview_image_hover_text'
+  // 'taxonomy_term-capabilities-field_preview_image_hover_text'.
   $field_instances['taxonomy_term-capabilities-field_preview_image_hover_text'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -3257,7 +3292,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_redirect'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_redirect'.
   $field_instances['taxonomy_term-capabilities-field_redirect'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -3309,7 +3344,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_short_summary'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_short_summary'.
   $field_instances['taxonomy_term-capabilities-field_short_summary'] = array(
     'bundle' => 'capabilities',
     'default_value' => NULL,
@@ -3344,7 +3379,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-capabilities-field_taxonomy_image'
+  // Exported field_instance: 'taxonomy_term-capabilities-field_taxonomy_image'.
   $field_instances['taxonomy_term-capabilities-field_taxonomy_image'] = array(
     'bundle' => 'capabilities',
     'deleted' => 0,
@@ -3406,7 +3441,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-theme_colors-field_bottom_color'
+  // Exported field_instance: 'taxonomy_term-theme_colors-field_bottom_color'.
   $field_instances['taxonomy_term-theme_colors-field_bottom_color'] = array(
     'bundle' => 'theme_colors',
     'default_value' => NULL,
@@ -3441,7 +3476,7 @@ function leidos_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-theme_colors-field_top_color'
+  // Exported field_instance: 'taxonomy_term-theme_colors-field_top_color'.
   $field_instances['taxonomy_term-theme_colors-field_top_color'] = array(
     'bundle' => 'theme_colors',
     'default_value' => NULL,

@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function leidos_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|capabilities|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|capabilities|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -64,7 +64,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|content|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|content|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -93,7 +93,7 @@ function leidos_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_general|fieldable_panels_pane|custom_breadcrumbs|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|custom_breadcrumbs|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -121,7 +121,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|elements_panel_pane|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|elements_panel_pane|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -150,7 +150,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|featured_news_panel|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|featured_news_panel|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -179,7 +179,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|featured_projects_panel|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|featured_projects_panel|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -208,7 +208,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|left_navigation|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|left_navigation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -236,7 +236,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|link_columns|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|link_columns|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -264,7 +264,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|list_columns|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|list_columns|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -293,7 +293,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|page_header|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|page_header|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -322,7 +322,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|ranking_promo|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|ranking_promo|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -350,7 +350,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|rotator|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|rotator|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -378,7 +378,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|fieldable_panels_pane|webform|form'] = $field_group;
+  $field_groups['group_general|fieldable_panels_pane|webform|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -429,7 +429,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|node|project|form'] = $field_group;
+  $field_groups['group_general|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -460,7 +460,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|node|rotator|form'] = $field_group;
+  $field_groups['group_general|node|rotator|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -492,7 +492,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|taxonomy_term|capabilities|form'] = $field_group;
+  $field_groups['group_general|taxonomy_term|capabilities|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -522,7 +522,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_general|taxonomy_term|theme_colors|form'] = $field_group;
+  $field_groups['group_general|taxonomy_term|theme_colors|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -551,7 +551,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_hover_info|taxonomy_term|capabilities|form'] = $field_group;
+  $field_groups['group_hover_info|taxonomy_term|capabilities|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -580,7 +580,7 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_hover|node|project|form'] = $field_group;
+  $field_groups['group_hover|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -613,7 +613,16 @@ function leidos_field_group_info() {
       ),
     ),
   );
-  $export['group_preview_box|taxonomy_term|capabilities|form'] = $field_group;
+  $field_groups['group_preview_box|taxonomy_term|capabilities|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('General');
+  t('General Info');
+  t('General info');
+  t('Hover Info');
+  t('Hover Information');
+  t('Preview Box Info');
+
+  return $field_groups;
 }

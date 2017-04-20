@@ -198,7 +198,7 @@ function announcements_views_default_views() {
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Industry */
+  /* Contextual filter: Broken/missing handler */
   $handler->display->display_options['arguments']['field_industry_tid']['id'] = 'field_industry_tid';
   $handler->display->display_options['arguments']['field_industry_tid']['table'] = 'field_data_field_industry';
   $handler->display->display_options['arguments']['field_industry_tid']['field'] = 'field_industry_tid';
@@ -207,7 +207,6 @@ function announcements_views_default_views() {
   $handler->display->display_options['arguments']['field_industry_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_industry_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_industry_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_industry_tid']['break_phrase'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -286,7 +285,7 @@ function announcements_views_default_views() {
   $handler->display->display_options['pager']['options']['advance']['pager_selector'] = '.pager-load-more';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Industry */
+  /* Contextual filter: Broken/missing handler */
   $handler->display->display_options['arguments']['field_industry_tid']['id'] = 'field_industry_tid';
   $handler->display->display_options['arguments']['field_industry_tid']['table'] = 'field_data_field_industry';
   $handler->display->display_options['arguments']['field_industry_tid']['field'] = 'field_industry_tid';
@@ -295,7 +294,6 @@ function announcements_views_default_views() {
   $handler->display->display_options['arguments']['field_industry_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_industry_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_industry_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_industry_tid']['break_phrase'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

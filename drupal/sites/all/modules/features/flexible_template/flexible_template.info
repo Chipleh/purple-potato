@@ -9,6 +9,7 @@ dependencies[] = color_field
 dependencies[] = colorbox
 dependencies[] = ctools
 dependencies[] = ds
+dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = field_group

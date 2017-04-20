@@ -2656,15 +2656,16 @@ function flexible_template_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'node_reference',
+        'module' => 'entityreference',
         'settings' => array(
-          'node_reference_view_mode' => 'full',
+          'links' => TRUE,
+          'use_content_language' => TRUE,
+          'view_mode' => 'full',
         ),
-        'type' => 'node_reference_node',
+        'type' => 'entityreference_entity_view',
         'weight' => 1,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_rotator_slide_hero',
     'label' => 'Rotator Slide / Hero',
@@ -2674,13 +2675,13 @@ function flexible_template_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'entityreference',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
         'size' => 60,
       ),
-      'type' => 'node_reference_autocomplete',
+      'type' => 'entityreference_autocomplete',
       'weight' => 9,
     ),
   );

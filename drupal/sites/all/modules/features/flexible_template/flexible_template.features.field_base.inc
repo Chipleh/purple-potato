@@ -534,32 +534,27 @@ function flexible_template_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_rotator_slide_hero',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'announcement' => 0,
-        'article' => 0,
-        'flexible_page' => 0,
-        'flexible_template' => 0,
-        'page' => 0,
-        'panel' => 0,
-        'project' => 0,
-        'rotator' => 0,
-        'rotator_hero' => 'rotator_hero',
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'rotator_hero' => 'rotator_hero',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_subhead'.

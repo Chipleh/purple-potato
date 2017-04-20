@@ -10,7 +10,7 @@
 function leidos_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'comment_body'
+  // Exported field_base: 'comment_body'.
   $field_bases['comment_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -52,7 +52,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_about_content_item'
+  // Exported field_base: 'field_about_content_item'.
   $field_bases['field_about_content_item'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -74,7 +74,7 @@ function leidos_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_announcement'
+  // Exported field_base: 'field_announcement'.
   $field_bases['field_announcement'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -82,32 +82,30 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_announcement',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'announcement' => 'announcement',
-        'article' => 0,
-        'page' => 0,
-        'panel' => 0,
-        'project' => 0,
-        'rotator' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'announcement' => 'announcement',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_bottom_color'
+  // Exported field_base: 'field_bottom_color'.
   $field_bases['field_bottom_color'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -128,7 +126,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_breadcrumb_link'
+  // Exported field_base: 'field_breadcrumb_link'.
   $field_bases['field_breadcrumb_link'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -157,7 +155,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_capabilities'
+  // Exported field_base: 'field_capabilities'.
   $field_bases['field_capabilities'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -165,25 +163,30 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_capabilities',
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'entityreference',
     'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'capabilities',
-          'parent' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'capabilities' => 'capabilities',
         ),
       ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_color_scheme'
+  // Exported field_base: 'field_color_scheme'.
   $field_bases['field_color_scheme'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -191,25 +194,30 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_color_scheme',
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'entityreference',
     'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'theme_colors',
-          'parent' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'theme_colors' => 'theme_colors',
         ),
       ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_column_link'
+  // Exported field_base: 'field_column_link'.
   $field_bases['field_column_link'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -238,7 +246,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_column_links'
+  // Exported field_base: 'field_column_links'.
   $field_bases['field_column_links'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -260,7 +268,7 @@ function leidos_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_columns'
+  // Exported field_base: 'field_columns'.
   $field_bases['field_columns'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -282,7 +290,7 @@ function leidos_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_columns_list'
+  // Exported field_base: 'field_columns_list'.
   $field_bases['field_columns_list'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -304,7 +312,7 @@ function leidos_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_contact_us'
+  // Exported field_base: 'field_contact_us'.
   $field_bases['field_contact_us'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -319,7 +327,7 @@ function leidos_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_content'
+  // Exported field_base: 'field_content'.
   $field_bases['field_content'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -338,7 +346,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_cta'
+  // Exported field_base: 'field_cta'.
   $field_bases['field_cta'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -367,7 +375,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_customer_name'
+  // Exported field_base: 'field_customer_name'.
   $field_bases['field_customer_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -388,7 +396,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_featured'
+  // Exported field_base: 'field_featured'.
   $field_bases['field_featured'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -403,7 +411,7 @@ function leidos_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_featured_subcategories'
+  // Exported field_base: 'field_featured_subcategories'.
   $field_bases['field_featured_subcategories'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -411,25 +419,30 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_featured_subcategories',
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'entityreference',
     'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'capabilities',
-          'parent' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'capabilities' => 'capabilities',
         ),
       ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_freeform_html'
+  // Exported field_base: 'field_freeform_html'.
   $field_bases['field_freeform_html'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -448,7 +461,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_google_earth_link'
+  // Exported field_base: 'field_google_earth_link'.
   $field_bases['field_google_earth_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -477,7 +490,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_header_title'
+  // Exported field_base: 'field_header_title'.
   $field_bases['field_header_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -496,7 +509,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_hide_hover'
+  // Exported field_base: 'field_hide_hover'.
   $field_bases['field_hide_hover'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -521,7 +534,7 @@ function leidos_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_hide_information_box'
+  // Exported field_base: 'field_hide_information_box'.
   $field_bases['field_hide_information_box'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -546,7 +559,7 @@ function leidos_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_hide_preview_box'
+  // Exported field_base: 'field_hide_preview_box'.
   $field_bases['field_hide_preview_box'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -571,7 +584,7 @@ function leidos_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_hover_cta'
+  // Exported field_base: 'field_hover_cta'.
   $field_bases['field_hover_cta'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -600,7 +613,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_hover_shape'
+  // Exported field_base: 'field_hover_shape'.
   $field_bases['field_hover_shape'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -625,7 +638,7 @@ function leidos_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_hover_summary'
+  // Exported field_base: 'field_hover_summary'.
   $field_bases['field_hover_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -644,7 +657,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_hover_text'
+  // Exported field_base: 'field_hover_text'.
   $field_bases['field_hover_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -663,7 +676,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_hover_title'
+  // Exported field_base: 'field_hover_title'.
   $field_bases['field_hover_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -692,7 +705,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_image'
+  // Exported field_base: 'field_image'.
   $field_bases['field_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -714,7 +727,7 @@ function leidos_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_image_description'
+  // Exported field_base: 'field_image_description'.
   $field_bases['field_image_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -733,7 +746,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_industry'
+  // Exported field_base: 'field_industry'.
   $field_bases['field_industry'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -741,25 +754,30 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_industry',
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'entityreference',
     'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'industry',
-          'parent' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'industry' => 'industry',
         ),
       ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_industry_rankings_awards'
+  // Exported field_base: 'field_industry_rankings_awards'.
   $field_bases['field_industry_rankings_awards'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -778,7 +796,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_intro_text'
+  // Exported field_base: 'field_intro_text'.
   $field_bases['field_intro_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -797,7 +815,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_left_menu'
+  // Exported field_base: 'field_left_menu'.
   $field_bases['field_left_menu'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -816,7 +834,7 @@ function leidos_field_default_field_bases() {
     'type' => 'menufield_menureference',
   );
 
-  // Exported field_base: 'field_link'
+  // Exported field_base: 'field_link'.
   $field_bases['field_link'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -845,7 +863,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_list_items'
+  // Exported field_base: 'field_list_items'.
   $field_bases['field_list_items'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -866,7 +884,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_lower_body_text'
+  // Exported field_base: 'field_lower_body_text'.
   $field_bases['field_lower_body_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -885,7 +903,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_main_image'
+  // Exported field_base: 'field_main_image'.
   $field_bases['field_main_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -907,7 +925,7 @@ function leidos_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_market'
+  // Exported field_base: 'field_market'.
   $field_bases['field_market'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -915,25 +933,30 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_market',
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'entityreference',
     'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'market',
-          'parent' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'market' => 'market',
         ),
       ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_media_placement'
+  // Exported field_base: 'field_media_placement'.
   $field_bases['field_media_placement'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -958,7 +981,7 @@ function leidos_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_overview'
+  // Exported field_base: 'field_overview'.
   $field_bases['field_overview'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -977,7 +1000,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_overview_header'
+  // Exported field_base: 'field_overview_header'.
   $field_bases['field_overview_header'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -998,7 +1021,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_point_of_contact'
+  // Exported field_base: 'field_point_of_contact'.
   $field_bases['field_point_of_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1019,7 +1042,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_preview_image'
+  // Exported field_base: 'field_preview_image'.
   $field_bases['field_preview_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1041,7 +1064,7 @@ function leidos_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_preview_image_hover_sub'
+  // Exported field_base: 'field_preview_image_hover_sub'.
   $field_bases['field_preview_image_hover_sub'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1060,7 +1083,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_preview_image_hover_text'
+  // Exported field_base: 'field_preview_image_hover_text'.
   $field_bases['field_preview_image_hover_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1079,7 +1102,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_private_tag'
+  // Exported field_base: 'field_private_tag'.
   $field_bases['field_private_tag'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1100,7 +1123,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_project'
+  // Exported field_base: 'field_project'.
   $field_bases['field_project'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -1108,32 +1131,30 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_project',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'announcement' => 0,
-        'article' => 0,
-        'page' => 0,
-        'panel' => 0,
-        'project' => 'project',
-        'rotator' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'project' => 'project',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_project_date'
+  // Exported field_base: 'field_project_date'.
   $field_bases['field_project_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1162,7 +1183,7 @@ function leidos_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_project_facts'
+  // Exported field_base: 'field_project_facts'.
   $field_bases['field_project_facts'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1181,7 +1202,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_project_image'
+  // Exported field_base: 'field_project_image'.
   $field_bases['field_project_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1203,7 +1224,7 @@ function leidos_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_project_value'
+  // Exported field_base: 'field_project_value'.
   $field_bases['field_project_value'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1224,7 +1245,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_proof_point'
+  // Exported field_base: 'field_proof_point'.
   $field_bases['field_proof_point'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1245,7 +1266,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_quick_links'
+  // Exported field_base: 'field_quick_links'.
   $field_bases['field_quick_links'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1264,7 +1285,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ranking'
+  // Exported field_base: 'field_ranking'.
   $field_bases['field_ranking'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -1286,7 +1307,7 @@ function leidos_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_ranking_columns'
+  // Exported field_base: 'field_ranking_columns'.
   $field_bases['field_ranking_columns'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1311,7 +1332,7 @@ function leidos_field_default_field_bases() {
     'type' => 'list_integer',
   );
 
-  // Exported field_base: 'field_ranking_number'
+  // Exported field_base: 'field_ranking_number'.
   $field_bases['field_ranking_number'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1326,7 +1347,7 @@ function leidos_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_redirect'
+  // Exported field_base: 'field_redirect'.
   $field_bases['field_redirect'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1355,7 +1376,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_rotator_image'
+  // Exported field_base: 'field_rotator_image'.
   $field_bases['field_rotator_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1377,7 +1398,7 @@ function leidos_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_rotator_link'
+  // Exported field_base: 'field_rotator_link'.
   $field_bases['field_rotator_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1406,7 +1427,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_rotator_slide'
+  // Exported field_base: 'field_rotator_slide'.
   $field_bases['field_rotator_slide'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -1414,32 +1435,30 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_rotator_slide',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'announcement' => 0,
-        'article' => 0,
-        'page' => 0,
-        'panel' => 0,
-        'project' => 0,
-        'rotator' => 'rotator',
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'rotator' => 'rotator',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_short_summary'
+  // Exported field_base: 'field_short_summary'.
   $field_bases['field_short_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1458,7 +1477,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_summary'
+  // Exported field_base: 'field_summary'.
   $field_bases['field_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1477,7 +1496,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_summary_cta'
+  // Exported field_base: 'field_summary_cta'.
   $field_bases['field_summary_cta'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1506,7 +1525,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_tags'
+  // Exported field_base: 'field_tags'.
   $field_bases['field_tags'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -1514,25 +1533,30 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_tags',
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'entityreference',
     'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'tags',
-          'parent' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'tags' => 'tags',
         ),
       ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_taxonomy_image'
+  // Exported field_base: 'field_taxonomy_image'.
   $field_bases['field_taxonomy_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1554,7 +1578,7 @@ function leidos_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_text'
+  // Exported field_base: 'field_text'.
   $field_bases['field_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1573,7 +1597,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_title'
+  // Exported field_base: 'field_title'.
   $field_bases['field_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1594,7 +1618,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_title_link'
+  // Exported field_base: 'field_title_link'.
   $field_bases['field_title_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1623,7 +1647,7 @@ function leidos_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_title_override'
+  // Exported field_base: 'field_title_override'.
   $field_bases['field_title_override'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1644,7 +1668,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_top_color'
+  // Exported field_base: 'field_top_color'.
   $field_bases['field_top_color'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1665,7 +1689,7 @@ function leidos_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_webform'
+  // Exported field_base: 'field_webform'.
   $field_bases['field_webform'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1673,33 +1697,27 @@ function leidos_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_webform',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_entity' => array(
+        0 => 'target_id',
+      ),
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'announcement' => 0,
-        'article' => 0,
-        'flexible_page' => 0,
-        'flexible_template' => 0,
-        'page' => 0,
-        'panel' => 0,
-        'project' => 0,
-        'rotator' => 0,
-        'rotator_hero' => 0,
-        'webform' => 'webform',
+      'handler' => 'base',
+      'handler_settings' => array(
+        'target_bundles' => array(
+          'webform' => 'webform',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'handler_submit' => 'Change handler',
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
   return $field_bases;

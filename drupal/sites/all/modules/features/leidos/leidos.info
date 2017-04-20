@@ -10,6 +10,7 @@ dependencies[] = date
 dependencies[] = draggableviews
 dependencies[] = ds
 dependencies[] = ds_extras
+dependencies[] = entityreference
 dependencies[] = epsacrop
 dependencies[] = features
 dependencies[] = field_collection
