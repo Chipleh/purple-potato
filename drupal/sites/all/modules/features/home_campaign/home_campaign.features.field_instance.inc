@@ -371,7 +371,7 @@ function home_campaign_field_default_field_instances() {
           ),
         ),
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

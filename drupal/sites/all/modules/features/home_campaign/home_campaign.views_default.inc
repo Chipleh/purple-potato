@@ -78,6 +78,8 @@ function home_campaign_views_default_views() {
   $handler->display->display_options['fields']['field_h1']['field'] = 'field_h1';
   $handler->display->display_options['fields']['field_h1']['label'] = '';
   $handler->display->display_options['fields']['field_h1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_h1']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_h1']['alter']['preserve_tags'] = '<br>';
   $handler->display->display_options['fields']['field_h1']['element_label_colon'] = FALSE;
   /* Field: Content: H1 style */
   $handler->display->display_options['fields']['field_h1_style']['id'] = 'field_h1_style';
@@ -118,6 +120,10 @@ function home_campaign_views_default_views() {
 				<a class="cta cta__secondary" href="/doe" onClick="ga(\'send\', \'event\', \'HP-Slide\', \'click\', \'DOE\');">Learn More</a></div>
 		</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Content: ga code */
+  $handler->display->display_options['fields']['field_ga_code']['id'] = 'field_ga_code';
+  $handler->display->display_options['fields']['field_ga_code']['table'] = 'field_data_field_ga_code';
+  $handler->display->display_options['fields']['field_ga_code']['field'] = 'field_ga_code';
   /* Sort criterion: Content: Sort (field_sort) */
   $handler->display->display_options['sorts']['field_sort_value']['id'] = 'field_sort_value';
   $handler->display->display_options['sorts']['field_sort_value']['table'] = 'field_data_field_sort';
@@ -139,6 +145,9 @@ function home_campaign_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $export['home_campaign'] = $view;
 
   return $export;
