@@ -30,7 +30,7 @@
             ?>
             <h1 style="<?php print $h1style ?>"><?php print $h1 ?></h1>
 
-            <p style="<?php $slide->field_field_body_style[0]['rendered']['#markup'] ?>"><?php print $slide->field_body[0]['rendered']['#markup'] ?></p>
+            <p style="<?php print $slide->field_field_body_style[0]['rendered']['#markup'] ?>"><?php print $slide->field_body[0]['rendered']['#markup'] ?></p>
 
             <a class="cta cta__secondary" href="<?php print $slide->field_field_cta[0]['raw']['display_url']; ?>" onClick="<?php print $slide->field_field_ga_code[0]['rendered']['#markup']; ?>">Learn
                 More</a></div>
