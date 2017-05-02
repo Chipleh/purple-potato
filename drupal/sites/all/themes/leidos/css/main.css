@@ -10762,6 +10762,23 @@ p.subtext {
   padding-top: 9%;
   width: 50%;
 }
+/* line 101, sass/partials/modules/_static-hero-carousel.scss */
+.staticContent .heroCarousel__item--v3 .heroCarousel__inner-full-width-center {
+    line-height: normal;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 9%;
+    width: 100%;
+    text-align: center;
+}
+/* line 101, sass/partials/modules/_static-hero-carousel.scss */
+.staticContent .heroCarousel__item--v3 .heroCarousel__inner-full-width-right {
+    line-height: normal;
+    padding-right: 6%;
+    padding-top: 9%;
+    width: 100%;
+    text-align: right;
+}
 /* line 107, sass/partials/modules/_static-hero-carousel.scss */
 .staticContent .heroCarousel__item--v3 h1 {
   color: #850f88;
@@ -12590,3 +12607,11 @@ form.webform-client-form .form-type-radio label {
 **************************************************/
 
 /*# sourceMappingURL=main.css.map */
+
+@media only screen and (max-width: 720px) {
+    /* header */
+    /* line 66, sass/_extends.scss */
+    #block-system-main-menu, #block-system-main-menu:before, #block-system-main-menu .content, #block-system-main-menu .content .parent-menu li a, #block-system-main-menu .content .parent-menu li.last span:not(.additional-info):not(.additional-control) {
+        height: 78px;
+    }
+}

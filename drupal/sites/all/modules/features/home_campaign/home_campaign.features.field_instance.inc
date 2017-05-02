@@ -185,6 +185,55 @@ function home_campaign_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-home_campaign-field_campaign_image_mobile'.
+  $field_instances['node-home_campaign-field_campaign_image_mobile'] = array(
+    'bundle' => 'home_campaign',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_campaign_image_mobile',
+    'label' => 'Campaign Image Mobile',
+    'required' => FALSE,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-home_campaign-field_cta'.
   $field_instances['node-home_campaign-field_cta'] = array(
     'bundle' => 'home_campaign',
@@ -240,6 +289,44 @@ function home_campaign_field_default_field_instances() {
       'settings' => array(),
       'type' => 'link_field',
       'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-home_campaign-field_full_width_text_area'.
+  $field_instances['node-home_campaign-field_full_width_text_area'] = array(
+    'bundle' => 'home_campaign',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_full_width_text_area',
+    'label' => 'Full Width Text Area',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 14,
     ),
   );
 
@@ -509,6 +596,8 @@ function home_campaign_field_default_field_instances() {
   t('Body style');
   t('CTA');
   t('Campaign Image');
+  t('Campaign Image Mobile');
+  t('Full Width Text Area');
   t('H1');
   t('H1 style');
   t('Sort');

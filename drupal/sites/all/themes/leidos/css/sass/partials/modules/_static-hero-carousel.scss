@@ -104,6 +104,22 @@
                 padding-top: 9%;
                 width: 50%;
             }
+          .#{heroCarousel}__inner-full-width-center {
+            line-height: normal;
+            padding-left: 6%;
+			padding-right: 6%;
+            padding-top: 9%;
+            width: 100%;
+			text-align: center;
+          }
+		  .#{heroCarousel}__inner-full-width-right {
+            line-height: normal;
+            padding-left: 6%;
+			padding-right: 6%;
+            padding-top: 9%;
+            width: 100%;
+			text-align: right;
+          }
             h1 {
                 color: #850f88;
                 margin: 0 0 20px 0;

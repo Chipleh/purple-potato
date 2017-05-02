@@ -124,6 +124,25 @@ function home_campaign_views_default_views() {
   $handler->display->display_options['fields']['field_ga_code']['id'] = 'field_ga_code';
   $handler->display->display_options['fields']['field_ga_code']['table'] = 'field_data_field_ga_code';
   $handler->display->display_options['fields']['field_ga_code']['field'] = 'field_ga_code';
+  /* Field: Content: Full Width Text Area */
+  $handler->display->display_options['fields']['field_full_width_text_area']['id'] = 'field_full_width_text_area';
+  $handler->display->display_options['fields']['field_full_width_text_area']['table'] = 'field_data_field_full_width_text_area';
+  $handler->display->display_options['fields']['field_full_width_text_area']['field'] = 'field_full_width_text_area';
+  $handler->display->display_options['fields']['field_full_width_text_area']['label'] = '';
+  $handler->display->display_options['fields']['field_full_width_text_area']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_full_width_text_area']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_full_width_text_area']['delta_offset'] = '0';
+  /* Field: Content: Campaign Image Mobile */
+  $handler->display->display_options['fields']['field_campaign_image_mobile']['id'] = 'field_campaign_image_mobile';
+  $handler->display->display_options['fields']['field_campaign_image_mobile']['table'] = 'field_data_field_campaign_image_mobile';
+  $handler->display->display_options['fields']['field_campaign_image_mobile']['field'] = 'field_campaign_image_mobile';
+  $handler->display->display_options['fields']['field_campaign_image_mobile']['label'] = '';
+  $handler->display->display_options['fields']['field_campaign_image_mobile']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_campaign_image_mobile']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_campaign_image_mobile']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
   /* Sort criterion: Content: Sort (field_sort) */
   $handler->display->display_options['sorts']['field_sort_value']['id'] = 'field_sort_value';
   $handler->display->display_options['sorts']['field_sort_value']['table'] = 'field_data_field_sort';
