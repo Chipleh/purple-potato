@@ -520,6 +520,7 @@ function leidos_preprocess_panels_pane(&$variables) {
 function leidos_menu_link(array $variables) {
   $element = $variables['element'];
   $i=0;
+    drupal_static_reset('_menu_build_tree');
   $main_menu_items = menu_build_tree('main-menu');
   $current_path = current_path();
 
