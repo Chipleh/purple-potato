@@ -835,12 +835,12 @@
 
 
     jQuery('.heroCarousel__item').each(function(){
-            var desktopback = jQuery(this).attr('background-image');
+            var desktopback = jQuery(this).attr('style');
         console_log(desktopback);
             var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
             if(mobilewidth > 720){
-                jQuery(this).attr('style','background-image:' + desktopback +';width:' + mobilewidth + ';');
+                jQuery(this).attr('style',desktopback);
             } else {
                 jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
             }
@@ -851,7 +851,7 @@
 
             var mobilewidth = jQuery( window ).width();
             if(mobilewidth > 720){
-                jQuery(this).attr('style','background-image:' + desktopback +';width:' + mobilewidth + ';');
+                jQuery(this).attr('style',desktopback);
             } else {
                 jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
             }
