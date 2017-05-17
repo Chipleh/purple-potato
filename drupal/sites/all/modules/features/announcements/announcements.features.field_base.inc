@@ -10,7 +10,7 @@
 function announcements_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_announcement_date'
+  // Exported field_base: 'field_announcement_date'.
   $field_bases['field_announcement_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,15 +31,15 @@ function announcements_field_default_field_bases() {
         'second' => 0,
         'year' => 'year',
       ),
-      'timezone_db' => 'UTC',
+      'timezone_db' => '',
       'todate' => '',
-      'tz_handling' => 'site',
+      'tz_handling' => 'none',
     ),
     'translatable' => 0,
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_announcement_type'
+  // Exported field_base: 'field_announcement_type'.
   $field_bases['field_announcement_type'] = array(
     'active' => 1,
     'cardinality' => 1,

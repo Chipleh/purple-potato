@@ -45,6 +45,8 @@ function announcements_panelizer_defaults() {
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = '7683a2ef-1ce9-4f89-9331-b15db05ab595';
+  $display->storage_type = 'panelizer_default';
+  $display->storage_id = 'node:announcement:default';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -175,6 +177,8 @@ function announcements_panelizer_defaults() {
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = '0b96fd02-7a55-45d6-bd10-832e72be26a0';
+  $display->storage_type = 'panelizer_default';
+  $display->storage_id = 'node:announcement:default:default';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
