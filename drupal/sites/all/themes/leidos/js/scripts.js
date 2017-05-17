@@ -845,10 +845,13 @@
         });
     }
     jQuery( window ).resize(function() {
-        var mobileback = jQuery(this).find('.hero-mobile-background').text();
-        var mobilewidth = jQuery( window ).width();
-        jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
+        jQuery('.heroCarousel__item').each(function(){
 
+            var mobileback = jQuery(this).find('.hero-mobile-background').text();
+            var mobilewidth = jQuery( window ).width();
+            jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
+
+        });
     });
 
 })(jQuery);
