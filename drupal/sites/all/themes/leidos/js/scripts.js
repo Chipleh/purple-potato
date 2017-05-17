@@ -848,6 +848,9 @@
 
     jQuery( window ).resize(function() {
         jQuery('.heroCarousel__item').each(function(){
+            var desktopback = jQuery(this).attr('style');
+            console.log(desktopback);
+            var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
             if(mobilewidth > 720){
                 jQuery(this).attr('style',desktopback);
