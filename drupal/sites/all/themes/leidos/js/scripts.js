@@ -834,23 +834,27 @@
     //alert(mobilewidth);
 
 
-    if(mobilewidth < 720){
-
-        jQuery('.heroCarousel__item').each(function(){
-
+    jQuery('.heroCarousel__item').each(function(){
+            var desktopback = jQuery(this).attr('background-image');
             var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
-            jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
+            if(mobilewidth > 720){
+                jQuery(this).attr('style','background-image:url("' + desktopback +'");width:' + mobilewidth + ';');
+            } else {
+                jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
+            }
+    });
 
-        });
-    }
     jQuery( window ).resize(function() {
         jQuery('.heroCarousel__item').each(function(){
-
+            var desktopback = jQuery(this).attr('background-image');
             var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
-            jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
-
+            if(mobilewidth > 720){
+                jQuery(this).attr('style','background-image:url("' + desktopback +'");width:' + mobilewidth + ';');
+            } else {
+                jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
+            }
         });
     });
 
