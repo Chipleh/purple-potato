@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Home Campaign feature.
+ */
+
+include_once 'home_campaign.features.inc';
