@@ -44,6 +44,9 @@ function leidos_preprocess_html(&$variables) {
 
   //Leidos theme modifications
   drupal_add_js(path_to_theme() . '/js/leidos_theme.js', array('group' => JS_LIBRARY, 'weight' => 50));
+
+    //Be Lazy plugin
+    drupal_add_js(path_to_theme() . '/js/blazy.js', array('group' => JS_LIBRARY, 'weight' => 51));
 }
 
 /**

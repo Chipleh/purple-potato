@@ -859,5 +859,13 @@
             }
         });
     });
+	
+	//add b-lazy css class to all images and background images
+	jQuery('img').addClass('b-lazy');
+    //add b-lazy css class to parallax window
+    jQuery('parallax-window').addClass('b-lazy');
+
+	
+	
 
 })(jQuery);
