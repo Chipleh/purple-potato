@@ -864,6 +864,8 @@
 	jQuery('img').addClass('b-lazy');
     //add b-lazy css class to parallax window
     jQuery('.parallax-window').addClass('b-lazy');
+    //add b-lazy css class to mobile parallax
+    jQuery('.parallax-mobile').addClass('b-lazy');
 
 	
 	
