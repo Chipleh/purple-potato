@@ -28,7 +28,7 @@
     float:left;
     background-size: cover!important;
     display:block;
-    height:360px;
+    position:relative;
 }
 [class*="col-"]:before {
     padding-top: 57.858%;
