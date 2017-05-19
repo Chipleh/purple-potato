@@ -26,6 +26,8 @@
 }
 [class*="col-"] {
     float:left;
+    height:360px;
+    background-size: cover!important;
 }
 
 
