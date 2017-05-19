@@ -88,7 +88,7 @@ function flexible_template_preprocess_field(&$variables) {
         dsm($content);
       // Append custom classes for field collection items.
         if(isset($content['field_column_size'][0]['#title'])){
-            $item['#attributes']['class'] = array($content['field_column_size'][0]['#title'],'column', 'column-' . $key, 'columns-total-' . count($variables['items']));
+            $item['#attributes']['class'] = array($content['field_column_size'][0]['#title']);
         } else {
             $item['#attributes']['class'] = array('column', 'column-' . $key, 'columns-total-' . count($variables['items']));
         }
