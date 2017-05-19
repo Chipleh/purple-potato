@@ -10,18 +10,18 @@
 
 @media only screen and (min-width: 720px) {
     /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+    .col-1 {width: 8.33%; padding-top:120%;}
+    .col-2 {width: 16.66%; padding-top:110%;}
+    .col-3 {width: 25%; padding-top:100%;}
+    .col-4 {width: 33.33%; padding-top:90%;}
+    .col-5 {width: 41.66%; padding-top:80%;}
+    .col-6 {width: 50%; padding-top:70%;}
+    .col-7 {width: 58.33%; padding-top:60%;}
+    .col-8 {width: 66.66%; padding-top:50%;}
+    .col-9 {width: 75%; padding-top:40%;}
+    .col-10 {width: 83.33%; padding-top:30%;}
+    .col-11 {width: 91.66%; padding-top:20%;}
+    .col-12 {width: 100%; padding-top:10%;}
 
 }
 [class*="col-"] {
@@ -30,12 +30,7 @@
     display:block;
     position:relative;
 }
-[class*="col-"]:before {
-    padding-top: 57.858%;
-    content:" ";
-    height:0;
-    display:block;
-}
+
 [class*="col-"] .entity-field-collection-item {
     position:absolute;
     top:0;
