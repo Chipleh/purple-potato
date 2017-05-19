@@ -32,8 +32,15 @@
 }
 [class*="col-"]:before {
     padding-top: 57.858%;
+    content:" ";
+    height:0;
+    display:block;
 }
-
+[class*="col-"] .entity-field-collection-item {
+    position:absolute;
+    top:0;
+    left:0;
+}
 
 /* homepage slider */
 .staticContent .heroCarousel__item--v3 .heroCarousel__inner-full-width-center {
