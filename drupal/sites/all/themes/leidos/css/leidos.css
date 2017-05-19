@@ -27,3 +27,22 @@
 [class*="col-"] {
     float:left;
 }
+
+
+/* homepage slider */
+.staticContent .heroCarousel__item--v3 .heroCarousel__inner-full-width-center {
+    line-height: normal;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 9%;
+    width: 100%;
+    text-align: center;
+}
+
+.staticContent .heroCarousel__item--v3 .heroCarousel__inner-full-width-right {
+    line-height: normal;
+    padding-right: 6%;
+    padding-top: 9%;
+    width: 100%;
+    text-align: right;
+}
