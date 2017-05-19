@@ -85,7 +85,7 @@ function flexible_template_preprocess_field(&$variables) {
         }
         unset($content['field_background_color']);
       }
-        dsm($content);
+        //dsm($content);
       // Append custom classes for field collection items.
         if(isset($content['field_column_size'][0]['#title'])){
             $item['#attributes']['class'] = array($content['field_column_size'][0]['#title']);
