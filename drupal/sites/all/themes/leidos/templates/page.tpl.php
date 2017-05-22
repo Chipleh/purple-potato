@@ -7,7 +7,7 @@
       </a>
     <?php endif; ?>
 
-    <?php if ($it_lightbox): ?>
+    <?php if (isset($it_lightbox)): ?>
       <div id="lightbox" class="lightbox">
         <div class="lb-box">
           <span class="lb-close">Close<span class="x-icon"></span></span>
@@ -19,7 +19,7 @@
         </div>
       </div>
     <?php endif; ?>
-     <?php if ($health_lightbox): ?>
+     <?php if (isset($health_lightbox)): ?>
       <div id="lightbox" class="lightbox">
         <div class="lb-box">
           <span class="lb-close">Close<span class="x-icon"></span></span>
