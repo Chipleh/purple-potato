@@ -7,15 +7,17 @@
 include_once 'leidos.features.inc';
 
 function leidos_init() {
-  if ($_SERVER['REDIRECT_URL'] == '/search') {
-    $info = search_get_default_module_info();
-    $path = 'search/' . $info['path'];
-    if (!empty($_GET['q']) && isset($_SERVER['REDIRECT_QUERY_STRING'])) {
-      $_GET['q'] = $path . '/' . $_GET['q'];
-    } else {
-      $_GET['q'] = $path;
+    if(isset($_SERVER['REDIRECT_URL'])) {
+        if ($_SERVER['REDIRECT_URL'] == '/search') {
+            $info = search_get_default_module_info();
+            $path = 'search/' . $info['path'];
+            if (!empty($_GET['q']) && isset($_SERVER['REDIRECT_QUERY_STRING'])) {
+                $_GET['q'] = $path . '/' . $_GET['q'];
+            } else {
+                $_GET['q'] = $path;
+            }
+        }
     }
-  }
 }
 
 /**
