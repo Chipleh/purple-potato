@@ -59,12 +59,15 @@ function leidos_process_html(&$variables) {
 /**
  * Override or insert variables into the page template.
  */
-function leidos_preprocess_page(&$variables) {
-  // Popup modal light box from specific lockheed martin pages
-  $referer_urls = explode(',', variable_get('lightbox_referer_urls'));
-  $parsed_url = parse_url($_SERVER['HTTP_REFERER']);
-  $variables['lightbox'] = (in_array($_SERVER['HTTP_REFERER'], $referer_urls) ||
-          in_array($parsed_url['host'], $referer_urls)) ? TRUE : FALSE ;
+function leidos_preprocess_page(&$variables)
+{
+    // Popup modal light box from specific lockheed martin pages
+    $referer_urls = explode(',', variable_get('lightbox_referer_urls'));
+    $parsed_url = parse_url($_SERVER['HTTP_REFERER']);
+    if (isset($parsed_url['host'])) {
+    $variables['lightbox'] = (in_array($_SERVER['HTTP_REFERER'], $referer_urls) ||
+        in_array($parsed_url['host'], $referer_urls)) ? TRUE : FALSE;
+    }
   if(isset($_GET['host'])){
     if($_GET['host'] == 'h'){
       $variables['it_lightbox'] = TRUE;
