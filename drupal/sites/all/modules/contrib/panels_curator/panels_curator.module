@@ -229,7 +229,8 @@ function panels_curator_panel_view($node) {
   }
 
   // Otherwise, fall back.
-  return drupal_render(node_view($node));
+    $nodeview = node_view($node);
+  return drupal_render($nodeview);
 }
 
 /**
