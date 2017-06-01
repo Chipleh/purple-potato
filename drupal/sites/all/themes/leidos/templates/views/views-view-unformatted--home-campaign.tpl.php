@@ -20,7 +20,7 @@
     <?php endif; ?>
     <?php //check for full width page setting on node
     //dpm($slide);
-    //dpm($slide->field_field_full_width_area[0]['rendered']['#markup']);
+    dpm($slide->field_field_full_width_area[0]['rendered']['#markup']);
     if(isset($slide->field_field_full_width_text_area) && $slide->field_field_full_width_text_area[0]['rendered']['#markup'] == "Center"):
     ?>
     <div class="heroCarousel__inner-full-width-center">
