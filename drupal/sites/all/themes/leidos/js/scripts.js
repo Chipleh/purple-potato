@@ -828,6 +828,6 @@
         }
     };
     $(document).ready(function(){
-        $('.click-box-close').click(function(){ var offbox = $(this).parent().parent().parent().offset().top; console.log(offbox); offbox = offbox + 400; $('body').animate({scrollTop:1000}, 'slow'); });
+        $('.click-box-close').click(function(){ var offbox = $(this).parent().parent().parent().offset().top; console.log(offbox); offbox = offbox + 400; $('body').animate({scrollTop:offbox}, 'slow'); });
     });
 })(jQuery);
