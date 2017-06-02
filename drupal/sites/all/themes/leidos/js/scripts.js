@@ -828,6 +828,8 @@
         }
     };
     $(document).ready(function(){
-        $('.click-box-close').click(function(){ var offbox = $(this).parent().parent().parent().offset().top; console.log(offbox); offbox = offbox - 60; $('body').animate({scrollTop:offbox}, 'slow'); });
+        $('.click-box-close').click(function(){ var offbox = $(this).parent().parent().parent().offset().top; offbox = offbox - 60; $('body').animate({scrollTop:offbox}, 'slow'); });
+        $('.sliding-box').click(function(){ var offbox = $(this).offset().top; offbox = offbox - 60; $('body').animate({scrollTop:offbox}, 'slow'); });
+
     });
 })(jQuery);
