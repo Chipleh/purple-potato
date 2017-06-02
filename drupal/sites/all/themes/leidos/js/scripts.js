@@ -829,7 +829,7 @@
     };
     $(document).ready(function(){
         $('.click-box-close').click(function(){ var offbox = $(this).parent().parent().parent().offset().top; offbox = offbox - 60; $('body').animate({scrollTop:offbox}, 'slow'); });
-        $('.sliding-box').click(function(){ function movetobox(){ var offbox = $(this).offset().top; offbox = offbox - 60; $('body').animate({scrollTop:offbox}, 'slow');} setTimeout(movetobox,1000); });
+        $('.sliding-box').click(function(){ function movetobox(){ var offbox = $(this).offset().top; offbox = offbox - 60; $('body').animate({scrollTop:offbox}, 'slow');} setTimeout(movetobox(this),1000); });
 
     });
 })(jQuery);
