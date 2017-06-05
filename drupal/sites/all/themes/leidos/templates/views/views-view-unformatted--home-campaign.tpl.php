@@ -49,7 +49,7 @@
 
                 <p style="<?php print $slide->field_field_body_style[0]['rendered']['#markup'] ?>"><?php print $slide->field_body[0]['rendered']['#markup'] ?></p>
 
-                <a class="cta cta__secondary" href="<?php print $slide->field_field_cta[0]['raw']['display_url']; ?>" onClick="<?php $gacode = htmlspecialchars( $slide->field_field_ga_code[0]['rendered']['#markup'], ENT_NOQUOTES);  print $gacode; ?>"><?php print $slide->field_field_cta[0]['raw']['title']; ?></a></div>
+                <a class="cta cta__secondary" href="<?php print $slide->field_field_cta[0]['raw']['display_url']; ?>" onClick="<?php $gacode = htmlspecialchars_decode( $slide->field_field_ga_code[0]['rendered']['#markup']);  print $gacode; ?>"><?php print $slide->field_field_cta[0]['raw']['title']; ?></a></div>
         </div>
         <?php endforeach; ?>
 
