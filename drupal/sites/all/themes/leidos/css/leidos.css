@@ -29,7 +29,11 @@
     transition: all .5s ease;
     width: 100%;
     z-index: -1;
+
  }
+.field-name-field-cta a:hover {
+    color: #FFF;
+}
 .field-name-field-cta a:hover:before {
     background: #7B1F7F;
     background-image: linear-gradient(to left, #7b1f7f 0%, #3b1363 100%);
