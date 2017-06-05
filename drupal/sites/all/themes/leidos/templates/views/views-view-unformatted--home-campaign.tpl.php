@@ -48,7 +48,7 @@
                 <h1 style="<?php print $h1style ?>"><?php print $h1 ?></h1>
 
                 <p style="<?php print $slide->field_field_body_style[0]['rendered']['#markup'] ?>"><?php print $slide->field_body[0]['rendered']['#markup'] ?></p>
-
+                <?php dpm($slide->field_field_ga_code[0]); ?>
                 <a class="cta cta__secondary" href="<?php print $slide->field_field_cta[0]['raw']['display_url']; ?>" onClick="<?php $gacode = htmlspecialchars_decode( $slide->field_field_ga_code[0]['rendered']['#markup']);  print $gacode; ?>"><?php print $slide->field_field_cta[0]['raw']['title']; ?></a></div>
         </div>
         <?php endforeach; ?>
