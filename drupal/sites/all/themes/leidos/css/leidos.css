@@ -2,3 +2,36 @@
     position: relative;
     font-family: "AvenirLT-Book", Arial, sans-serif;
 }
+.field-name-field-cta .field-items {
+    text-align:center;
+}
+.field-name-field-cta a {
+    border: 1px solid transparent;
+    color: #fff;
+    display: inline-block;
+    font-size: 19px;
+    margin: 0 auto;
+    padding: 1.15vw 2.85vw;
+    position: relative;
+    z-index: 1;
+}
+.field-name-field-cta a:before {
+    background: #3B1363;
+    background-image: linear-gradient(to left, #3b1363 0%, #3b1363 100%);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    transition: all .5s ease;
+    width: 100%;
+    z-index: -1;
+ }
+.field-name-field-cta a:before:hover {
+    background: #7B1F7F;
+    background-image: linear-gradient(to left, #7b1f7f 0%, #3b1363 100%);
+    opacity: 1;
+    transition: all .5s ease;
+}
