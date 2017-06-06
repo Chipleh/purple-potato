@@ -835,7 +835,7 @@
 
 
     jQuery('.heroCarousel__item').each(function(){
-            var desktopback = jQuery(this).find('.desktop-mobile-background').text();
+            var desktopback = jQuery(this).find('.hero-desktop-background').text();
         console.log(desktopback);
             var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
@@ -848,7 +848,7 @@
 
     jQuery( window ).resize(function() {
         jQuery('.heroCarousel__item').each(function(){
-            var desktopback = jQuery(this).find('.desktop-mobile-background').text();
+            var desktopback = jQuery(this).find('.hero-desktop-background').text();
             console.log(desktopback);
             var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
