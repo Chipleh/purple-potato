@@ -55,12 +55,12 @@
                         else if (execAsap)
                             func.apply(obj, args);
 
-                        timeout = setTimeout(delayed, threshold || 100000);
+                        timeout = setTimeout(delayed, threshold || 100);
                     };
                 };
                 // smartresize
             jQuery.fn[sr] = function(fn) {
-                return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
+                return fn ? this.bind('', debounce(fn)) : this.trigger(sr);
             };
 
         })(jQuery, 'smartresize');
