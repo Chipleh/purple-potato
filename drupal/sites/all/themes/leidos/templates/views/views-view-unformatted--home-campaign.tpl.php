@@ -14,10 +14,11 @@
      style="background-image: url('<?php print file_create_url($slide->field_field_campaign_image[0]['rendered']['#item']['uri']); ?>');">
     <?php //check if there is a mobile image
     if(isset($slide->field_field_campaign_image_mobile[0]['rendered']['#item']['uri'])): ?>
-        <div class="hero-mobile-background" style="background-image:<?php print file_create_url($slide->field_field_campaign_image_mobile[0]['rendered']['#item']['uri']); ?>; display:none;"><?php print file_create_url($slide->field_field_campaign_image_mobile[0]['rendered']['#item']['uri']); ?></div>
+        <div class="hero-mobile-background" style="display:none;"><?php print file_create_url($slide->field_field_campaign_image_mobile[0]['rendered']['#item']['uri']); ?></div>
     <?php else: ?>
-        <div class="hero-mobile-background" style="background-image:<?php print file_create_url($slide->field_field_campaign_image[0]['rendered']['#item']['uri']); ?>; display:none;"><?php print file_create_url($slide->field_field_campaign_image[0]['rendered']['#item']['uri']); ?></div>
+        <div class="hero-mobile-background" style="display:none;"><?php print file_create_url($slide->field_field_campaign_image[0]['rendered']['#item']['uri']); ?></div>
     <?php endif; ?>
+        <div class="hero-desktop-background" style="display:none;"><?php print file_create_url($slide->field_field_campaign_image[0]['rendered']['#item']['uri']); ?></div>
     <?php //check for full width page setting on node
     //dpm($slide);
     dpm($slide->field_field_full_width_area[0]['rendered']['#markup']);

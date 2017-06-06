@@ -835,12 +835,12 @@
 
 
     jQuery('.heroCarousel__item').each(function(){
-            var desktopback = jQuery(this).attr('style');
+            var desktopback = jQuery(this).find('.desktop-mobile-background').text();
         console.log(desktopback);
             var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
             if(mobilewidth > 720){
-                jQuery(this).attr('style',desktopback);
+                jQuery(this).attr('style','background-image:url("' + desktopback +'");width:' + mobilewidth + ';');
             } else {
                 jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
             }
@@ -848,12 +848,12 @@
 
     jQuery( window ).resize(function() {
         jQuery('.heroCarousel__item').each(function(){
-            var desktopback = jQuery(this).attr('style');
+            var desktopback = jQuery(this).find('.desktop-mobile-background').text();
             console.log(desktopback);
             var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
             if(mobilewidth > 720){
-                jQuery(this).attr('style',desktopback);
+                jQuery(this).attr('style','background-image:url("' + desktopback +'");width:' + mobilewidth + ';');
             } else {
                 jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
             }
