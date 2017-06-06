@@ -67,3 +67,7 @@
     width: 100%;
     text-align: right;
 }
+.staticContent .heroCarousel h1 {
+    font-size: 40px;
+    padding-top:30px;
+}
