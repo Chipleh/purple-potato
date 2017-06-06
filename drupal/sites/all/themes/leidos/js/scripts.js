@@ -840,9 +840,9 @@
             var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
             if(mobilewidth > 720){
-                jQuery(this).attr('style','background-image:url("' + desktopback +'");width:' + mobilewidth + ';');
+                jQuery(this).attr('style','background-image:url(' + desktopback +'); width:' + mobilewidth + ';');
             } else {
-                jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
+                jQuery(this).attr('style','background-image:url(' + mobileback +'); width:' + mobilewidth + ';');
             }
     });
 
@@ -853,9 +853,9 @@
             var mobileback = jQuery(this).find('.hero-mobile-background').text();
             var mobilewidth = jQuery( window ).width();
             if(mobilewidth > 720){
-                jQuery(this).attr('style','background-image:url("' + desktopback +'");width:' + mobilewidth + ';');
+                jQuery(this).attr('style','background-image:url(' + desktopback +'); width:' + mobilewidth + ';');
             } else {
-                jQuery(this).attr('style','background-image:url("' + mobileback +'");width:' + mobilewidth + ';');
+                jQuery(this).attr('style','background-image:url(' + mobileback +'); width:' + mobilewidth + ';');
             }
         });
     });
