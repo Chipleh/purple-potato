@@ -40,3 +40,21 @@
     opacity: 1;
     transition: all .5s ease;
 }
+
+/* grid full width overlay fix */
+.pane-bundle-capabilities .sliding-box .inner .slide-box-content .slide-box-content-bg {
+    background: #00778b;
+    content: '';
+    display: block;
+    height: 400px;
+    left: 0;
+    opacity: .75;
+    position: absolute;
+    top: -162px;
+    -ms-transform: rotate(-22deg);
+    transform: rotate(-22deg);
+    -webkit-transform: rotate(0deg);
+    transition: all .25s ease 0s;
+    width: 100%;
+    z-index: 1;
+}
