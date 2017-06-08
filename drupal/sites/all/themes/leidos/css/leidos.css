@@ -71,3 +71,7 @@
     font-size: 40px;
     padding-top:30px;
 }
+img.lazyloader-icon {
+    height: 24px;
+    width: 24px;
+}

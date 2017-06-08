@@ -865,7 +865,6 @@
         jQuery('.parallax-mobile').addClass('b-lazy');
     });
 
-
 	
 	
 
