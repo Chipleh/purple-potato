@@ -587,3 +587,11 @@ function leidos_gss_search_extraparams_alter(&$extra) {
     $extra['sort'] = 'date:d';
   }
 }
+
+//add class to panel pane
+/**
+ * Preprocess variables for panels_pane.tpl.php
+ */
+function leidos_preprocess_panels_pane(&$vars) {
+    $vars['content_attributes_array']['class'][] = 'test-panel-pane-leidos-class';
+}
