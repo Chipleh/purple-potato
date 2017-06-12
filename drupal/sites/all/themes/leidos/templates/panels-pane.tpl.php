@@ -21,7 +21,7 @@
   <?php print $pane_prefix; ?>
 <?php endif; ?>
 <?php dsm($pane); ?>
-<?php $paneldid = $pane->did; $panelarray = panels_load_display($paneldid); dsm($panelarray); ?>
+<?php $paneldid = $pane->did; $panelarray = panels_load_display($paneldid); dsm($panelarray); dsm($display);?>
 <div class="<?php print $classes; ?> fixed-width" <?php print $id; ?> <?php print $attributes; ?>>
   <?php if ($admin_links): ?>
     <?php print $admin_links; ?>
@@ -42,6 +42,7 @@
   <?php endif; ?>
 
   <div class="pane-content">
+      <h2>CONTENT</h2>
     <?php print render($content); ?>
   </div>
 

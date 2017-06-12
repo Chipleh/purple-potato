@@ -76,4 +76,15 @@ img.lazyloader-icon {
     margin-right: auto !important;
     position: absolute !important;
 }
-
+/* fixed width multicolumn mobile */
+.pane-bundle-multi-column.fixed-width {
+    width: 100%;
+    margin: 0;
+}
+/* fixed width multicolumn */
+@media only screen and (min-width: 720px) {
+    .pane-bundle-multi-column.fixed-width {
+        width: 74%;
+        margin: 0 auto;
+    }
+}
