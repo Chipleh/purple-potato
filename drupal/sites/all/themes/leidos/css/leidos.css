@@ -96,7 +96,7 @@ img.lazyloader-icon {
     margin: 0;
 }
 /* fixed width multicolumn */
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 960px) {
     .pane-bundle-multi-column.fixed-width {
         width: 74%;
         margin: 0 auto;
