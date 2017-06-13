@@ -865,7 +865,36 @@
         jQuery('.parallax-mobile').addClass('b-lazy');
     });
 
-	
-	
+	//resize height of multi-column
+    jQuery(".pane-bundle-multi-column").each(function(){
+        //find padding-top of each element
+        paddingmap = jQuery(this).find("div[class^='col-']").map(function(){
+            var paddingtop = jQuery(this).css('padding-top');
+            return Number(paddingtop.replace('px',''));
+        })
+            .get();
+
+        var maxheight = Math.max.apply(Math, paddingmap);
+        jQuery(this).find("div[class^='col-']").each(function(){
+            jQuery(this).css('padding-top',maxheight);
+        });
+    });
+
+    //resize multicolumn on resize
+    jQuery( window ).resize(function() {
+        jQuery(".pane-bundle-multi-column").each(function () {
+            //find padding-top of each element
+            paddingmap = jQuery(this).find("div[class^='col-']").map(function () {
+                var paddingtop = jQuery(this).css('padding-top');
+                return Number(paddingtop.replace('px', ''));
+            })
+                .get();
+
+            var maxheight = Math.max.apply(Math, paddingmap);
+            jQuery(this).find("div[class^='col-']").each(function () {
+                jQuery(this).css('padding-top', maxheight);
+            });
+        });
+    }
 
 })(jQuery);
