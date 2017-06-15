@@ -311,6 +311,39 @@ function flexible_template_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_columns_multi-field_column_size'.
+  $field_instances['field_collection_item-field_columns_multi-field_column_size'] = array(
+    'bundle' => 'field_columns_multi',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 14,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_column_size',
+    'label' => 'Column Size',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_columns_multi-field_cta'.
   $field_instances['field_collection_item-field_columns_multi-field_cta'] = array(
     'bundle' => 'field_columns_multi',
@@ -2560,7 +2593,7 @@ function flexible_template_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -3817,6 +3850,7 @@ function flexible_template_field_default_field_instances() {
   t('By default the CTAs will be light in color. Check this box to make the CTA purple.');
   t('CTA');
   t('CTA Color');
+  t('Column Size');
   t('Columns');
   t('Comment');
   t('Content limited to 160 characters total.');
