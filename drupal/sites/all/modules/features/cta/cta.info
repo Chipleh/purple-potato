@@ -1,0 +1,10 @@
+name = CTA
+description = adds cta fieldable panel pane
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = fieldable_panels_panes
+dependencies[] = strongarm
+features[ctools][] = fieldable_panels_panes:fieldable_panels_pane_type:1
+features[features_api][] = api:2
+features[fieldable_panels_pane_type][] = cta
