@@ -57,9 +57,13 @@ function home_campaign_field_default_field_instances() {
   // Exported field_instance: 'node-home_campaign-field_body_style'.
   $field_instances['node-home_campaign-field_body_style'] = array(
     'bundle' => 'home_campaign',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'font-size:17px; color:#fff; padding: 15px 0 0 0;',
+      ),
+    ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Default Style: font-size:17px; color:#fff; padding: 15px 0 0 0;',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -129,7 +133,7 @@ function home_campaign_field_default_field_instances() {
   $field_instances['node-home_campaign-field_campaign_image'] = array(
     'bundle' => 'home_campaign',
     'deleted' => 0,
-    'description' => '',
+    'description' => '1600 × 770 pixels',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -175,12 +179,19 @@ function home_campaign_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => 1,
     ),
   );
@@ -189,7 +200,7 @@ function home_campaign_field_default_field_instances() {
   $field_instances['node-home_campaign-field_campaign_image_mobile'] = array(
     'bundle' => 'home_campaign',
     'deleted' => 0,
-    'description' => '',
+    'description' => '640 x 760px',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -208,13 +219,23 @@ function home_campaign_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_campaign_image_mobile',
     'label' => 'Campaign Image Mobile',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'flexible_template_desktop' => 0,
+          'flexible_template_mobile' => 0,
+          'rotator' => 0,
+          'rotator_mobile' => 0,
+          'rotator_tablet' => 0,
+        ),
+      ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -224,12 +245,20 @@ function home_campaign_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'image',
+      'active' => 1,
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => 2,
     ),
   );
@@ -239,7 +268,7 @@ function home_campaign_field_default_field_instances() {
     'bundle' => 'home_campaign',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'add CTA button copy and URL use relative URL\'s for leidos.com links like "/about" use the full URL for external links like "https://google.com"',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -316,8 +345,8 @@ function home_campaign_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_full_width_text_area',
-    'label' => 'Full Width Text Area',
-    'required' => 0,
+    'label' => 'Align Copy',
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -475,9 +504,13 @@ function home_campaign_field_default_field_instances() {
   // Exported field_instance: 'node-home_campaign-field_h1_style'.
   $field_instances['node-home_campaign-field_h1_style'] = array(
     'bundle' => 'home_campaign',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'font-size:60px; line-height:1.1em; color:#fff; margin: -40px 0 0 0 ; text-shadow:none; padding: -25px 0 0 0;',
+      ),
+    ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Default Style: font-size:60px; line-height:1.1em; color:#fff; margin: -40px 0 0 0 ; text-shadow:none; padding: -25px 0 0 0;',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -592,17 +625,22 @@ function home_campaign_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('1600 × 770 pixels');
+  t('640 x 760px');
+  t('Align Copy');
   t('Body');
   t('Body style');
   t('CTA');
   t('Campaign Image');
   t('Campaign Image Mobile');
-  t('Full Width Text Area');
+  t('Default Style: font-size:17px; color:#fff; padding: 15px 0 0 0;');
+  t('Default Style: font-size:60px; line-height:1.1em; color:#fff; margin: -40px 0 0 0 ; text-shadow:none; padding: -25px 0 0 0;');
   t('H1');
   t('H1 style');
   t('Sort');
   t('The H1 on the home campaign is typically 2 lines with a <br> like "The Next Chapter of<br>DOE Support"');
   t('This will be the onclick action on "Learn More" example: ga(\'send\', \'event\', \'HP-Slide\', \'click\', \'DOE\');');
+  t('add CTA button copy and URL use relative URL\'s for leidos.com links like "/about" use the full URL for external links like "https://google.com"');
   t('ga code');
 
   return $field_instances;

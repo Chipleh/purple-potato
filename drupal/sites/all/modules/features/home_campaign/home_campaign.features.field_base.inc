@@ -92,7 +92,7 @@ function home_campaign_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => 'Left',
-        1 => 'Full Width Center',
+        1 => 'Center',
         2 => 'Right',
       ),
       'allowed_values_function' => '',

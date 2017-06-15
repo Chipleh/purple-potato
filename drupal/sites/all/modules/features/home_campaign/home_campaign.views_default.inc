@@ -124,7 +124,7 @@ function home_campaign_views_default_views() {
   $handler->display->display_options['fields']['field_ga_code']['id'] = 'field_ga_code';
   $handler->display->display_options['fields']['field_ga_code']['table'] = 'field_data_field_ga_code';
   $handler->display->display_options['fields']['field_ga_code']['field'] = 'field_ga_code';
-  /* Field: Content: Full Width Text Area */
+  /* Field: Content: Align Copy */
   $handler->display->display_options['fields']['field_full_width_text_area']['id'] = 'field_full_width_text_area';
   $handler->display->display_options['fields']['field_full_width_text_area']['table'] = 'field_data_field_full_width_text_area';
   $handler->display->display_options['fields']['field_full_width_text_area']['field'] = 'field_full_width_text_area';
