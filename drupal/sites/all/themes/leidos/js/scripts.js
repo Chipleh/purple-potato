@@ -895,6 +895,6 @@
                 jQuery(this).css('padding-top', maxheight);
             });
         });
-    }
+    });
 
 })(jQuery);
