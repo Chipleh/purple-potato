@@ -44,6 +44,9 @@ function leidos_preprocess_html(&$variables) {
 
   //Leidos theme modifications
   drupal_add_js(path_to_theme() . '/js/leidos_theme.js', array('group' => JS_LIBRARY, 'weight' => 50));
+
+    //Be Lazy plugin
+    drupal_add_js(path_to_theme() . '/js/blazy.js', array('group' => JS_LIBRARY, 'weight' => 51));
 }
 
 /**
@@ -587,3 +590,11 @@ function leidos_gss_search_extraparams_alter(&$extra) {
     $extra['sort'] = 'date:d';
   }
 }
+
+//add class to panel pane
+/**
+ * Preprocess variables for panels_pane.tpl.php
+ */
+//function leidos_preprocess_panels_pane(&$vars) {
+    //$vars['content_attributes_array']['class'][] = 'test-panel-pane-leidos-class';
+//}

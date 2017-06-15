@@ -60,7 +60,7 @@
                 };
                 // smartresize
             jQuery.fn[sr] = function(fn) {
-                return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
+                return fn ? this.bind('', debounce(fn)) : this.trigger(sr);
             };
 
         })(jQuery, 'smartresize');
@@ -827,4 +827,74 @@
             });
         }
     };
+
+
+    //update homepage slider mobile images
+    var mobilewidth = jQuery( window ).width();
+    //alert(mobilewidth);
+
+
+    jQuery('.heroCarousel__item').each(function(){
+            var mobileback = jQuery(this).find('.hero-mobile-background').text();
+            var mobilewidth = jQuery( window ).width();
+            if(mobilewidth > 720){
+                jQuery(this).attr('style','background-image:url(' + desktopback +'); width:' + mobilewidth + ';');
+            }
+    });
+
+    jQuery( window ).resize(function() {
+        jQuery('.heroCarousel__item').each(function(){
+            var desktopback = jQuery(this).find('.hero-desktop-background').text();
+            console.log(desktopback);
+            var mobileback = jQuery(this).find('.hero-mobile-background').text();
+            var mobilewidth = jQuery( window ).width();
+            if(mobilewidth > 720){
+                jQuery(this).attr('style','background-image:url(' + desktopback +'); width:' + mobilewidth + ';');
+            } else {
+                jQuery(this).attr('style','background-image:url(' + mobileback +'); width:' + mobilewidth + ';');
+            }
+        });
+    });
+
+    jQuery(document).ready(function(){
+        //add b-lazy css class to all images and background images
+        jQuery('img').addClass('b-lazy');
+        //add b-lazy css class to parallax window
+        jQuery('.parallax-window').addClass('b-lazy');
+        //add b-lazy css class to mobile parallax
+        jQuery('.parallax-mobile').addClass('b-lazy');
+    });
+
+	//resize height of multi-column
+    jQuery(".pane-bundle-multi-column").each(function(){
+        //find padding-top of each element
+        paddingmap = jQuery(this).find("div[class^='col-']").map(function(){
+            var paddingtop = jQuery(this).css('padding-top');
+            return Number(paddingtop.replace('px',''));
+        })
+            .get();
+
+        var maxheight = Math.max.apply(Math, paddingmap);
+        jQuery(this).find("div[class^='col-']").each(function(){
+            jQuery(this).css('padding-top',maxheight);
+        });
+    });
+
+    //resize multicolumn on resize
+    jQuery( window ).resize(function() {
+        jQuery(".pane-bundle-multi-column").each(function () {
+            //find padding-top of each element
+            paddingmap = jQuery(this).find("div[class^='col-']").map(function () {
+                var paddingtop = jQuery(this).css('padding-top');
+                return Number(paddingtop.replace('px', ''));
+            })
+                .get();
+
+            var maxheight = Math.max.apply(Math, paddingmap);
+            jQuery(this).find("div[class^='col-']").each(function () {
+                jQuery(this).css('padding-top', maxheight);
+            });
+        });
+    });
+
 })(jQuery);

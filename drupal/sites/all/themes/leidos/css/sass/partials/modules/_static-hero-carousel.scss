@@ -343,6 +343,9 @@
                 }
             }
             &--v3 {
+                h1 {
+                  font-size:30px !important;
+                }
                 .#{heroCarousel}__inner {
                     width: 90%;
                 }
