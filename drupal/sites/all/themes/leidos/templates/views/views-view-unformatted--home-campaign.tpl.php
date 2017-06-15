@@ -20,7 +20,7 @@
     <?php endif; ?>
         <div class="hero-desktop-background" style="display:none;"><?php print file_create_url($slide->field_field_campaign_image[0]['rendered']['#item']['uri']); ?></div>
     <?php //check for full width page setting on node
-    
+
     if(isset($slide->field_field_full_width_text_area) && $slide->field_field_full_width_text_area[0]['rendered']['#markup'] == "Center"):
     ?>
     <div class="heroCarousel__inner-full-width-center">
